@@ -11,7 +11,7 @@ Writes under threatwatch/data/:
   validation/reviews.json       Aegis-curated reviews (hand-edited)
 
 Env: NVD_API_KEY (optional), TW_NUCLEI_DIR + TW_NUCLEI_COMMIT (optional checkout),
-     TW_NVD_BACKFILL_DAYS (30), TW_RETAIN_DAYS (120), TW_NVD_LOOKUPS (auto).
+     TW_NVD_BACKFILL_DAYS (14), TW_RETAIN_DAYS (120), TW_NVD_LOOKUPS (auto).
 """
 from __future__ import annotations
 
@@ -31,7 +31,7 @@ from tw.sources import NVD_URL, collect_epss, collect_kev  # noqa: E402
 
 CVE_DIR = DATA_DIR / "cves"
 VAL_DIR = DATA_DIR / "validation"
-BACKFILL_DAYS = int(os.environ.get("TW_NVD_BACKFILL_DAYS", "30"))
+BACKFILL_DAYS = int(os.environ.get("TW_NVD_BACKFILL_DAYS", "14"))
 RETAIN_DAYS = int(os.environ.get("TW_RETAIN_DAYS", "120"))
 
 
@@ -117,6 +117,8 @@ def build(now, warnings: list[str]) -> dict:
     # ---- detections
     nuclei_dir = os.environ.get("TW_NUCLEI_DIR")
     commit = os.environ.get("TW_NUCLEI_COMMIT") or None
+    if not nuclei_dir and not os.environ.get("TW_FIXTURES") and os.environ.get("TW_NUCLEI_FETCH", "1") == "1":
+        nuclei_dir, commit = fetch_nuclei_templates(warnings)
     if nuclei_dir and Path(nuclei_dir).is_dir():
         nuclei = index_nuclei(Path(nuclei_dir), commit)
         write_json(VAL_DIR / "nuclei-index.json",
@@ -191,6 +193,25 @@ def build(now, warnings: list[str]) -> dict:
                     "nucleiIndexedAt": nuclei_meta.get("indexedAt"),
                     "nvdSyncOk": nvd_ok},
     }
+
+
+def fetch_nuclei_templates(warnings: list[str]) -> tuple[str | None, str | None]:
+    """Sparse, shallow clone of template *metadata* (CVE YAML files only). Nothing is executed."""
+    import subprocess
+    import tempfile
+    dest = Path(tempfile.mkdtemp(prefix="nuclei-")) / "nuclei-templates"
+    cmds = [["git", "clone", "-q", "--depth", "1", "--filter=blob:none", "--sparse",
+             "https://github.com/projectdiscovery/nuclei-templates.git", str(dest)],
+            ["git", "-C", str(dest), "sparse-checkout", "set", "--no-cone", "/*/cves/**"]]
+    try:
+        for c in cmds:
+            subprocess.run(c, check=True, timeout=600, capture_output=True)
+        commit = subprocess.run(["git", "-C", str(dest), "rev-parse", "--short", "HEAD"], check=True,
+                                capture_output=True, text=True, timeout=30).stdout.strip()
+        return str(dest), commit
+    except (OSError, subprocess.SubprocessError) as exc:
+        warnings.append(f"Could not fetch Nuclei templates; using cached index ({type(exc).__name__})")
+        return None, None
 
 
 def brief_appearances() -> tuple[set[str], dict[str, dict]]:

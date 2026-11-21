@@ -108,8 +108,15 @@
       return;
     }
     document.title = cve + " — Vulnerability Validation | Aegis ThreatWatch";
-    var inIndex = idx && idx.items.some(function (r) { return r[0] === cve; });
-    if (idx && !inIndex) { notFound(d, cve); return; }
+    if (!idx) {
+      d.appendChild(el("h2", { text: cve }));
+      d.appendChild(el("p", { cls: "notice", text: "The CVE catalog hasn’t been built yet, so no CVE can be looked up here at the moment. It is generated automatically after the next published daily brief." }));
+      d.appendChild(el("p", null, ["Meanwhile, see the official record on ", link("https://nvd.nist.gov/vuln/detail/" + cve, "NVD"),
+        " or ", link("https://www.cve.org/CVERecord?id=" + cve, "CVE.org"), ", or today’s ", el("a", { href: "./", text: "daily brief" }), "."]));
+      return;
+    }
+    var inIndex = idx.items.some(function (r) { return r[0] === cve; });
+    if (!inIndex) { notFound(d, cve); return; }
     d.appendChild(el("p", { cls: "muted", text: "Loading " + cve + "…" }));
     getJSON("data/cves/" + cve.split("-")[1] + "/" + cve + ".json").then(function (r) {
       d.removeChild(d.lastChild); renderRecord(d, r);

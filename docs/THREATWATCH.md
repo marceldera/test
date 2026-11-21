@@ -87,10 +87,10 @@ Public, read-only CVE lookup. It never scans and has no scan button. Phase 2 (au
 
 **Coverage:** every CISA KEV CVE, CVEs with CVSS ≥ 7.0 published in the last 120 days (`TW_RETAIN_DAYS`), and every CVE featured in a brief. Unknown CVEs show a "not in catalog" page linking to NVD and CVE.org.
 
-**Pipeline** (`scripts/build_catalog.py`, runs after each published edition):
+**Pipeline** (`scripts/build_catalog.py`, run automatically by `build_brief.py` right after each published edition; set `TW_SKIP_CATALOG=1` to disable). It fetches Nuclei template metadata itself with a sparse git clone, so the workflow needs no extra step:
 
 1. CISA KEV (required — failure blocks the catalog run).
-2. NVD incremental sync by `lastModified` window from the cursor in `data/cves/state.json`. The first run backfills 30 days (`TW_NVD_BACKFILL_DAYS`). If NVD fails, cached records are kept and a warning is shown.
+2. NVD incremental sync by `lastModified` window from the cursor in `data/cves/state.json`. The first run backfills 14 days (`TW_NVD_BACKFILL_DAYS`). If NVD fails, cached records are kept and a warning is shown.
 3. Per-CVE NVD lookups for KEV CVEs not yet enriched: 40 per run without a key, 400 with `NVD_API_KEY`. The backlog clears over a few runs. Records awaiting NVD show "NVD details not yet collected".
 4. EPSS for every catalog CVE, stored in one file, `data/cves/epss.json`. A missing score shows as Unknown, never 0.
 5. Nuclei template **metadata** indexed from a sparse checkout of `projectdiscovery/nuclei-templates`. Nothing is executed. The commit is recorded in `data/cves/status.json`.

@@ -108,6 +108,15 @@ def main() -> int:
     write_json(status_path, status)
     print(f"Published edition {edition}: {brief['executive']['counts']}")
     gh_output(published="true", edition=edition)
+    # Vulnerability Validation catalog: built right after each published edition, so the
+    # existing workflow needs no extra step. Set TW_SKIP_CATALOG=1 to disable.
+    if os.environ.get("TW_SKIP_CATALOG") != "1":
+        import build_catalog
+        print("Building Vulnerability Validation catalog…")
+        if build_catalog.main() != 0:
+            print("Catalog build failed — see threatwatch/data/cves/status.json. "
+                  "The brief was published; the last good catalog stays live.", file=sys.stderr)
+            return 1
     return 0
 
 

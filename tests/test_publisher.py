@@ -64,7 +64,7 @@ class PublisherTests(unittest.TestCase):
         (self.fx / name).write_text(json.dumps(obj))
 
     def run_pub(self, now, *extra, fixtures=True):
-        env = {**os.environ, "TW_DATA_DIR": str(self.data), "TW_NOW": now}
+        env = {**os.environ, "TW_DATA_DIR": str(self.data), "TW_NOW": now, "TW_SKIP_CATALOG": "1"}
         if fixtures:
             env["TW_FIXTURES"] = str(self.fx)
         return subprocess.run([sys.executable, str(SCRIPT), *extra], env=env, capture_output=True, text=True)
@@ -136,6 +136,21 @@ class PublisherTests(unittest.TestCase):
         r = self.run_pub("2026-11-21T12:10:00+00:00")
         self.assertEqual(r.returncode, 1)
         self.assertIn("no https source", r.stderr)
+
+
+class BriefBuildsCatalogTest(PublisherTests):
+    def test_catalog_built_after_publish(self):
+        env = {**os.environ, "TW_DATA_DIR": str(self.data), "TW_NOW": "2026-11-21T12:10:00+00:00",
+               "TW_FIXTURES": str(self.fx)}
+        (self.fx / "nvd-bulk-0.json").write_text(json.dumps({"totalResults": 0, "vulnerabilities": []}))
+        r = subprocess.run([sys.executable, str(SCRIPT)], env=env, capture_output=True, text=True)
+        self.assertEqual(r.returncode, 0, r.stderr)
+        idx = json.loads((self.data / "cves" / "index.json").read_text())
+        ids = {row[0] for row in idx["items"]}
+        self.assertTrue({"CVE-2099-0001", "CVE-2099-0002", "CVE-2099-0003"} <= ids)
+        rec = json.loads((self.data / "cves" / "2099" / "CVE-2099-0001.json").read_text())
+        self.assertEqual(rec["cvss"]["score"], 9.8)  # per-CVE NVD lookup for a brief CVE
+        self.assertEqual(rec["appearsIn"]["briefs"], ["2026-11-21"])
 
 
 class RelationshipTests(unittest.TestCase):
