@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vulnerability Validation | Aegis ThreatWatch</title>
+<meta name="description" content="Free CVE lookup with cited CVSS, EPSS and CISA KEV evidence, public detection references and safe validation guidance. No account required.">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/tw.css">
+<link rel="stylesheet" href="assets/tw-validate.css">
+<script src="assets/tw-validate.js" defer></script>
+</head>
+<body class="wide">
+<a class="skip" href="#main">Skip to CVE search</a>
+<header class="tw-head">
+  <div class="tw-head-in">
+    <a class="brand" href="../" aria-label="Aegis Cyber Solutions — main website">
+      <svg width="28" height="32" viewBox="0 0 42 48" fill="none" aria-hidden="true">
+        <path d="M21 2L4 9V22C4 33 12 43 21 46C30 43 38 33 38 22V9L21 2Z" fill="url(#twsg)" stroke="rgba(47,127,255,0.5)" stroke-width="0.5"/>
+        <text x="21" y="31" text-anchor="middle" font-family="Exo 2" font-weight="800" font-size="18" fill="white">A</text>
+        <defs><linearGradient id="twsg" x1="21" y1="2" x2="21" y2="46" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#2f7fff"/><stop offset="100%" stop-color="#0a2060"/></linearGradient></defs>
+      </svg>
+      <span class="brand-txt"><b>AEGIS</b><span>Cyber Solutions · <em>ThreatWatch</em></span></span>
+    </a>
+    <nav aria-label="ThreatWatch">
+      <ul class="tw-nav">
+        <li><a class="home" href="../">← Aegis Home</a></li>
+        <li><a href="./">Daily Brief</a></li>
+        <li><a href="./#monthly">Monthly Summary</a></li>
+        <li><a href="map.html">Threat Map</a></li>
+        <li><a href="validate.html" aria-current="page">Vulnerability Validation</a></li>
+        <li><a href="./#subscribe">Subscribe</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="wide">
+  <section class="vv-hero" aria-labelledby="vv-title">
+    <div class="eyebrow">Vulnerability Validation</div>
+    <h1 id="vv-title">Validate exposure, not just severity</h1>
+    <p class="lead">Look up a CVE to see cited CVSS, EPSS and CISA KEV evidence, which products and versions are affected, whether a public detection check exists, and how to confirm exposure safely.</p>
+    <form id="vv-search" class="vv-search" role="search" aria-label="Search CVEs">
+      <label class="sr-only" for="vv-q">CVE ID, vendor or product</label>
+      <input type="search" id="vv-q" placeholder="CVE-2024-3400, Ivanti, Fortinet…" autocomplete="off" spellcheck="false">
+      <button class="btn" type="submit">Search</button>
+    </form>
+    <p class="notice info vv-disclaimer"><strong>Only test systems you own or are explicitly authorized to assess.</strong> This page is public intelligence and guidance. It does not scan anything, and a severity score, a KEV listing or a detection template alone never proves a specific system is exploitable. <a href="#disclaimer">Read the full disclaimer</a>.</p>
+    <p class="meta" id="vv-status" role="status">Loading catalog…</p>
+    <p><a class="btn secondary" href="#plan" id="plan-jump">Controlled test plan (0)</a></p>
+  </section>
+
+  <div id="vv-search-view">
+    <form id="vv-filters" class="filters" aria-label="Filter CVEs">
+      <label>Severity (CVSS)
+        <select id="vf-sev"><option value="">Any</option><option value="CRITICAL">Critical</option><option value="HIGH">High</option><option value="MEDIUM">Medium</option><option value="LOW">Low</option><option value="NONE">Not scored</option></select>
+      </label>
+      <label>EPSS percentile
+        <select id="vf-epss"><option value="0">Any</option><option value="0.5">≥ 50th</option><option value="0.9">≥ 90th</option><option value="0.95">≥ 95th</option><option value="0.99">≥ 99th</option></select>
+      </label>
+      <label class="chk"><input type="checkbox" id="vf-kev"> CISA KEV-listed</label>
+      <label class="chk"><input type="checkbox" id="vf-det"> Public detection check</label>
+      <label class="chk"><input type="checkbox" id="vf-exp"> Exploit reference</label>
+      <button type="button" class="btn secondary" id="vf-reset">Reset</button>
+    </form>
+    <p class="muted" id="vv-count" aria-live="polite"></p>
+    <div class="tbl-wrap">
+      <table id="vv-results">
+        <caption class="sr-only">CVE search results</caption>
+        <thead><tr>
+          <th scope="col"><span class="sr-only">Add to test plan</span>Plan</th><th scope="col">CVE</th><th scope="col">Vendor / product</th><th scope="col">CVSS</th>
+          <th scope="col">EPSS pct</th><th scope="col">Evidence</th><th scope="col">Published</th>
+        </tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <div class="vv-pager" id="vv-pager"></div>
+  </div>
+
+  <article id="vv-detail" hidden aria-live="polite"></article>
+
+  <section id="plan" aria-labelledby="plan-title" class="vv-section">
+    <h2 id="plan-title">Controlled test plan</h2>
+    <p>Choose the exact CVEs you want to test, one or a group of up to 25. The plan produces a <a href="https://github.com/projectdiscovery/nuclei" rel="noopener noreferrer">Nuclei</a> command locked to those CVEs only. <strong>You run it yourself, on your own machine, against systems you are authorized to test.</strong> Aegis does not run the test and receives nothing: no targets, no results, no personal data.</p>
+    <div id="plan-body"></div>
+  </section>
+
+  <section id="safe" aria-labelledby="safe-title" class="vv-section">
+    <h2 id="safe-title">How to validate safely</h2>
+    <ol class="vv-steps">
+      <li><strong>Confirm authorization first.</strong> Test only assets you own or have written permission to assess, within an agreed scope and time window.</li>
+      <li><strong>Start with inventory, not probes.</strong> Check installed versions through the asset owner, package manager, management console or SBOM, and compare them with the vendor’s fixed versions.</li>
+      <li><strong>Prefer passive and authenticated checks.</strong> Version and configuration checks run as an authorized user are more accurate and less disruptive than network probes.</li>
+      <li><strong>Treat banner or version matches as “suspected”.</strong> Backported patches and mitigations often make a version string look vulnerable when it isn’t.</li>
+      <li><strong>Use reviewed detection checks only where approved.</strong> Templates tagged intrusive or using out-of-band callbacks need change approval and a maintenance window.</li>
+      <li><strong>Confirm with a human before calling it exploitable.</strong> Record the method, evidence, time and who confirmed it.</li>
+      <li><strong>Re-check after remediation.</strong> Verify the fixed version or mitigation is in place, using the same method that found the issue.</li>
+    </ol>
+  </section>
+
+  <section id="disclaimer" aria-labelledby="disc-title" class="vv-section">
+    <h2 id="disc-title">Disclaimer</h2>
+    <div class="card disclaimer">
+      <p><strong>Authorized use only.</strong> Only test systems you own or have explicit written permission to assess, within an agreed scope and time window. Scanning systems without authorization may be illegal, including under the U.S. Computer Fraud and Abuse Act and similar laws elsewhere. You are solely responsible for how you use this information and any command it generates.</p>
+      <p><strong>No scanning by Aegis.</strong> This site does not scan, probe or connect to any target. Test plans are built in your browser. Targets you type are never sent to Aegis or stored anywhere except, if you choose, your own downloaded plan file.</p>
+      <p><strong>Operational risk.</strong> Detection checks send real network requests. Even checks not tagged intrusive can trigger alerts, lock accounts or affect fragile systems. Intrusive and out-of-band checks are excluded unless you explicitly include them. Run tests in an approved maintenance window and tell the system owner and security operations first.</p>
+      <p><strong>Results are signals, not conclusions.</strong> A positive result means “suspected” until a qualified person confirms it. No result does not mean a system is not vulnerable: templates can miss configurations, versions and backported fixes.</p>
+      <p><strong>Third-party content.</strong> Detection templates are published by the open-source community (ProjectDiscovery nuclei-templates), not by Aegis, unless marked “Reviewed by Aegis”. Templates can change after Aegis indexes them. Review any template before running it.</p>
+      <p><strong>No warranty.</strong> ThreatWatch is provided “as is” for information only, without warranty of accuracy, completeness or fitness for a purpose, and is not legal or professional advice. Aegis Cyber Solutions LLC is not liable for any loss or damage arising from its use.</p>
+    </div>
+  </section>
+
+  <section id="assessments" aria-labelledby="assess-title" class="vv-section">
+    <h2 id="assess-title">Authorized assessments</h2>
+    <p>Aegis does not run scans from this site. Any future assessment service will require verified ownership, written authorization and an agreed scope before anything is tested. To discuss an authorized assessment, email <a href="mailto:info@aegisdefensecyber.com?subject=Authorized%20assessment%20inquiry">info@aegisdefensecyber.com</a>.</p>
+  </section>
+</main>
+
+<footer class="tw-foot">
+  <div class="tw-foot-in">
+    <span>© 2026 Aegis Cyber Solutions LLC · ThreatWatch is free and public.</span>
+    <nav aria-label="Footer"><ul>
+      <li><a href="../">Return to main website</a></li>
+      <li><a href="./">Daily Brief</a></li>
+      <li><a href="./#methodology">Methodology</a></li>
+      <li><a href="mailto:info@aegisdefensecyber.com">Contact</a></li>
+    </ul></nav>
+  </div>
+</footer>
+</body>
+</html>

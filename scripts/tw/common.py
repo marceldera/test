@@ -78,6 +78,9 @@ def _fixture_for(url: str, fixture_dir: Path) -> Any:
         name = "kev.json"
     elif "api.first.org" in url:
         name = "epss.json"
+    elif "services.nvd.nist.gov" in url and "lastModStartDate" in url:
+        m = re.search(r"startIndex=(\d+)", url)
+        name = f"nvd-bulk-{m.group(1) if m else 0}.json"
     elif "services.nvd.nist.gov" in url:
         m = re.search(r"cveId=(CVE-\d{4}-\d+)", url)
         name = f"nvd-{m.group(1)}.json" if m else "nvd.json"

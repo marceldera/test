@@ -1,0 +1,4 @@
+{
+  "note": "Aegis-curated detection reviews. Each entry: cve, method (nuclei|nmap-nse|vendor-script|config-check|authenticated-check|manual), reviewStatus (reviewed|unreviewed|rejected), invasiveness (passive|safe-probe|intrusive), lastReviewed (YYYY-MM-DD), reviewer, optional path (for nuclei), name, url (https), note. See docs/THREATWATCH.md.",
+  "entries": []
+}

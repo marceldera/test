@@ -29,7 +29,9 @@ a:hover { color: #8fd1ff; }
 .tw-nav .home { color: var(--accent); }
 @media (max-width: 720px) {
   .tw-head-in { padding: 8px 20px; }
-  .tw-nav { width: 100%; overflow-x: auto; flex-wrap: nowrap; margin: 0 -10px; }
+  .tw-head-in > nav { width: 100%; min-width: 0; }
+  .tw-nav { width: 100%; overflow-x: auto; flex-wrap: nowrap; -webkit-overflow-scrolling: touch; scrollbar-width: thin; }
+  .tw-nav a { padding: 0 8px; }
   .tw-nav a { white-space: nowrap; }
 }
 

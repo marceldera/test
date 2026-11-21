@@ -168,7 +168,8 @@
         v.description ? el("p", { text: v.description }) : null,
         el("div", { cls: "why" }, [el("strong", { text: "Why it matters: " }), v.rationale]),
         dl,
-        el("div", { cls: "srcs" }, ["Sources: "].concat(v.sources.map(function (s) { return link(s.url, s.label); })))
+        el("div", { cls: "srcs" }, ["Sources: "].concat(v.sources.map(function (s) { return link(s.url, s.label); }))),
+        el("p", null, [el("a", { href: "validate.html?cve=" + encodeURIComponent(v.cve), text: "Validation guidance for " + v.cve + " →" })])
       ])
     ]);
   }
@@ -225,7 +226,7 @@
 
   function monthCard(d) {
     var rows = d.events.map(function (e) {
-      return el("tr", null, [el("td", { cls: "mono", text: e.date }), el("td", { cls: "mono", text: e.cve }),
+      return el("tr", null, [el("td", { cls: "mono", text: e.date }), el("td", { cls: "mono" }, [el("a", { href: "validate.html?cve=" + encodeURIComponent(e.cve), text: e.cve })]),
         el("td", { text: e.vendor + " " + e.product }), el("td", { text: e.concern + (e.ransomware === "known" ? " (ransomware use known)" : "") }),
         el("td", { text: e.confidence }), el("td", null, [link(e.source, "CISA KEV")])]);
     });

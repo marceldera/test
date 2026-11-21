@@ -7,6 +7,8 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from tw.common import DATA_DIR, REPO_ROOT, safe_url  # noqa: E402
 from tw.validate import validate_brief, validate_month, validate_relationships  # noqa: E402
+from tw.catalog import validate_record  # noqa: E402
+from tw.detections import load_reviews  # noqa: E402
 
 
 def main() -> int:
@@ -18,6 +20,19 @@ def main() -> int:
         errs += [f"latest: {e}" for e in validate_brief(json.loads(latest.read_text()))]
     for p in sorted((DATA_DIR / "monthly").glob("????-??.json")):
         errs += [f"{p.name}: {e}" for e in validate_month(json.loads(p.read_text()))]
+    idx = DATA_DIR / "cves" / "index.json"
+    if idx.exists():
+        index = json.loads(idx.read_text())
+        ids = {row[0] for row in index["items"]}
+        files = {p.stem: p for p in (DATA_DIR / "cves").glob("[0-9][0-9][0-9][0-9]/CVE-*.json")}
+        if ids != set(files):
+            errs.append(f"cves: index has {len(ids)} ids but {len(files)} record files")
+        for p in files.values():
+            errs += [f"cves: {e}" for e in validate_record(json.loads(p.read_text()))]
+    try:
+        load_reviews(json.loads((DATA_DIR / "validation" / "reviews.json").read_text()))
+    except (ValueError, FileNotFoundError) as exc:
+        errs.append(f"reviews.json: {exc}")
     cfg = json.loads((REPO_ROOT / "threatwatch" / "subscription-config.json").read_text())
     if set(cfg) - {"enabled", "signupUrl", "provider", "note"}:
         errs.append("subscription-config.json contains unexpected keys (no secrets allowed)")
