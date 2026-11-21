@@ -1,0 +1,26 @@
+{
+  "lastAttemptAt": "2026-11-21T17:28:10Z",
+  "ok": true,
+  "lastError": null,
+  "lastSuccessAt": "2026-11-21T17:28:10Z",
+  "warnings": [
+    "1358 KEV CVEs awaiting NVD enrichment (filled over the next runs)"
+  ],
+  "coverage": "All CISA KEV CVEs, CVEs with CVSS ≥ 7.0 published in the last 120 days, and every CVE featured in a ThreatWatch brief.",
+  "counts": {
+    "total": 8158,
+    "kev": 1790,
+    "withDetection": 580,
+    "nvdPending": 1358,
+    "nvdSynced": 16054,
+    "nvdLookups": 400,
+    "written": 8158,
+    "removed": 0
+  },
+  "sources": {
+    "kevCatalogVersion": "2026.11.20",
+    "nucleiCommit": "1ad2589",
+    "nucleiIndexedAt": "2026-11-21T17:28:10Z",
+    "nvdSyncOk": true
+  }
+}
