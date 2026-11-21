@@ -1,0 +1,34 @@
+{
+  "months": [
+    {
+      "month": "2026-11",
+      "kevAdded": 24,
+      "complete": false
+    },
+    {
+      "month": "2026-10",
+      "kevAdded": 36,
+      "complete": true
+    },
+    {
+      "month": "2026-09",
+      "kevAdded": 43,
+      "complete": true
+    },
+    {
+      "month": "2026-08",
+      "kevAdded": 31,
+      "complete": true
+    },
+    {
+      "month": "2026-07",
+      "kevAdded": 26,
+      "complete": true
+    },
+    {
+      "month": "2026-06",
+      "kevAdded": 23,
+      "complete": true
+    }
+  ]
+}

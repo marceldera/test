@@ -1,0 +1,388 @@
+{
+  "schemaVersion": 1,
+  "month": "2026-08",
+  "complete": true,
+  "updatedAt": "2026-11-21T15:58:15Z",
+  "metrics": [
+    {
+      "id": "kev_added",
+      "label": "New KEV entries",
+      "value": 31,
+      "rule": "CVE entries whose CISA dateAdded falls in the month.",
+      "source": "CISA KEV",
+      "window": "2026-08-01 to 2026-08-31 (dateAdded, ET calendar)",
+      "updatedAt": "2026-11-21T15:58:15Z"
+    },
+    {
+      "id": "vendors",
+      "label": "Distinct vendors",
+      "value": 23,
+      "rule": "Unique vendorProject values among the month’s KEV entries.",
+      "source": "CISA KEV",
+      "window": "2026-08-01 to 2026-08-31 (dateAdded, ET calendar)",
+      "updatedAt": "2026-11-21T15:58:15Z"
+    },
+    {
+      "id": "ransomware",
+      "label": "Known ransomware use",
+      "value": 2,
+      "rule": "Month’s KEV entries where CISA sets knownRansomwareCampaignUse = Known.",
+      "source": "CISA KEV",
+      "window": "2026-08-01 to 2026-08-31 (dateAdded, ET calendar)",
+      "updatedAt": "2026-11-21T15:58:15Z"
+    },
+    {
+      "id": "epss90",
+      "label": "EPSS ≥ 90th percentile",
+      "value": 25,
+      "rule": "Month’s KEV entries with EPSS percentile ≥ 0.90 (scores as of 2026-11-21).",
+      "source": "FIRST EPSS",
+      "window": "2026-08-01 to 2026-08-31 (dateAdded, ET calendar)",
+      "updatedAt": "2026-11-21T15:58:15Z"
+    }
+  ],
+  "notice": "These are CISA KEV catalog counts, not a count of total cyber incidents.",
+  "events": [
+    {
+      "date": "2026-08-03",
+      "cve": "CVE-2026-18577",
+      "vendor": "N-able",
+      "product": "N-central",
+      "concern": "N-able N-central Authentication Bypass Using an Alternate Path or Channel Vulnerability",
+      "ransomware": "unknown",
+      "epssPercentile": 0.96738,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-08-04",
+      "cve": "CVE-2026-18556",
+      "vendor": "N-able",
+      "product": "N-central",
+      "concern": "N-able N-central Authentication Bypass Using an Alternate Path or Channel Vulnerability",
+      "ransomware": "unknown",
+      "epssPercentile": 0.98779,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-08-04",
+      "cve": "CVE-2026-34486",
+      "vendor": "Apache",
+      "product": "Tomcat",
+      "concern": "Apache Tomcat Missing Encryption of Sensitive Data Vulnerability",
+      "ransomware": "unknown",
+      "epssPercentile": 0.99921,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-08-04",
+      "cve": "CVE-2026-9198",
+      "vendor": "IBM",
+      "product": "Langflow",
+      "concern": "IBM Langflow Code Injection Vulnerability",
+      "ransomware": "unknown",
+      "epssPercentile": 0.98182,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-08-05",
+      "cve": "CVE-2026-63077",
+      "vendor": "JetBrains",
+      "product": "TeamCity",
+      "concern": "JetBrains TeamCity Deserialization of Untrusted Data Vulnerability",
+      "ransomware": "known",
+      "epssPercentile": 0.99848,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-08-07",
+      "cve": "CVE-2026-8037",
+      "vendor": "Progress",
+      "product": "LoadMaster",
+      "concern": "Progress LoadMaster Command Injection Vulnerability",
+      "ransomware": "unknown",
+      "epssPercentile": 0.99957,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-08-11",
+      "cve": "CVE-2026-20349",
+      "vendor": "Cisco",
+      "product": "Secure Firewall Adaptive Security Appliance (ASA) and Secure Firewall Threat Defense (FTD)",
+      "concern": "Cisco Secure Firewall Adaptive Security Appliance (ASA) and Secure Firewall Threat Defense (FTD) Heap Inspection Vulnerability",
+      "ransomware": "unknown",
+      "epssPercentile": 0.63988,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-08-11",
+      "cve": "CVE-2026-68820",
+      "vendor": "Microsoft",
+      "product": "Windows Ancillary Function Driver for WinSock",
+      "concern": "Microsoft Windows Ancillary Function Driver for WinSock Use-After-Free Vulnerability",
+      "ransomware": "unknown",
+      "epssPercentile": 0.95198,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-08-11",
+      "cve": "CVE-2026-72898",
+      "vendor": "Metabase",
+      "product": "Metabase",
+      "concern": "Metabase SQL Injection Vulnerability",
+      "ransomware": "unknown",
+      "epssPercentile": 0.99922,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-08-17",
+      "cve": "CVE-2025-62593",
+      "vendor": "Ray-Project",
+      "product": "Ray",
+      "concern": "Ray-Project Ray Code Injection Vulnerability",
+      "ransomware": "unknown",
+      "epssPercentile": 0.99157,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-08-18",
+      "cve": "CVE-2026-33824",
+      "vendor": "Microsoft",
+      "product": "Internet Key Exchange (IKE) Service Extensions",
+      "concern": "Microsoft Internet Key Exchange (IKE) Service Extensions Double Free Vulnerability",
+      "ransomware": "unknown",
+      "epssPercentile": 0.99566,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-08-18",
+      "cve": "CVE-2026-55040",
+      "vendor": "Microsoft",
+      "product": "SharePoint",
+      "concern": "Microsoft SharePoint Weak Authentication Vulnerability",
+      "ransomware": "unknown",
+      "epssPercentile": 0.99377,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-08-18",
+      "cve": "CVE-2026-59310",
+      "vendor": "Broadcom",
+      "product": "VMware vCenter",
+      "concern": "Broadcom VMware vCenter Path Traversal Vulnerability",
+      "ransomware": "known",
+      "epssPercentile": 0.9919,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-08-18",
+      "cve": "CVE-2026-65400",
+      "vendor": "Apple",
+      "product": "macOS",
+      "concern": "Apple macOS Improper Authentication Vulnerability",
+      "ransomware": "unknown",
+      "epssPercentile": 0.97264,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-08-19",
+      "cve": "CVE-2026-64849",
+      "vendor": "MLflow",
+      "product": "MLflow",
+      "concern": "MLflow Server-Side Request Forgery Vulnerability",
+      "ransomware": "unknown",
+      "epssPercentile": 0.95987,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-08-20",
+      "cve": "CVE-2026-72529",
+      "vendor": "TrueConf",
+      "product": "Server",
+      "concern": "TrueConf Server Missing Authentication for Critical Function Vulnerability",
+      "ransomware": "unknown",
+      "epssPercentile": 0.74303,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-08-20",
+      "cve": "CVE-2026-72530",
+      "vendor": "TrueConf",
+      "product": "Server",
+      "concern": "TrueConf Server Code Injection Vulnerability",
+      "ransomware": "unknown",
+      "epssPercentile": 0.77602,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-08-21",
+      "cve": "CVE-2026-73570",
+      "vendor": "Synacor",
+      "product": "Zimbra Collaboration Suite (ZCS)",
+      "concern": "Zimbra Collaboration Suite (ZCS) OS Command Injection Vulnerability",
+      "ransomware": "unknown",
+      "epssPercentile": 0.99552,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-08-24",
+      "cve": "CVE-2026-21962",
+      "vendor": "Oracle",
+      "product": "HTTP Server and Oracle Weblogic Server Proxy Plug-in",
+      "concern": "Oracle HTTP Server and Oracle Weblogic Server Proxy Plug-in Improper Access Control Vulnerability",
+      "ransomware": "unknown",
+      "epssPercentile": 0.99468,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-08-25",
+      "cve": "CVE-2026-60004",
+      "vendor": "Gitea",
+      "product": "Gitea",
+      "concern": "Gitea Code Injection Vulnerability",
+      "ransomware": "unknown",
+      "epssPercentile": 0.97888,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-08-26",
+      "cve": "CVE-2015-3246",
+      "vendor": "Red Hat",
+      "product": "Libuser",
+      "concern": "Red Hat Libuser Race Condition Vulnerability",
+      "ransomware": "unknown",
+      "epssPercentile": 0.95166,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-08-26",
+      "cve": "CVE-2015-5287",
+      "vendor": "Red Hat",
+      "product": "Automatic Bug Reporting Tool",
+      "concern": "Red Hat Automatic Bug Reporting Tool Privilege Escalation Vulnerability",
+      "ransomware": "unknown",
+      "epssPercentile": 0.92437,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-08-26",
+      "cve": "CVE-2019-1068",
+      "vendor": "Microsoft",
+      "product": "SQL Server",
+      "concern": "Microsoft SQL Server Remote Code Execution Vulnerability",
+      "ransomware": "unknown",
+      "epssPercentile": 0.99094,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-08-26",
+      "cve": "CVE-2021-23758",
+      "vendor": "Ajax.NET Professional",
+      "product": "Ajax.NET Professional",
+      "concern": "Ajax.NET Professional Deserialization of Untrusted Data Vulnerability",
+      "ransomware": "unknown",
+      "epssPercentile": 0.99673,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-08-26",
+      "cve": "CVE-2022-0995",
+      "vendor": "Linux",
+      "product": "Kernel",
+      "concern": "Linux Kernel Out-of-Bounds Write Vulnerability",
+      "ransomware": "unknown",
+      "epssPercentile": 0.95332,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-08-26",
+      "cve": "CVE-2026-8452",
+      "vendor": "Citrix",
+      "product": "NetScaler ADC and NetScaler Gateway",
+      "concern": "Citrix NetScaler ADC and NetScaler Gateway Improper Restriction of Operations within the Bounds of a Memory Buffer Vulnerability",
+      "ransomware": "unknown",
+      "epssPercentile": 0.89681,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-08-27",
+      "cve": "CVE-2023-49105",
+      "vendor": "ownCloud",
+      "product": "ownCloud",
+      "concern": "ownCloud Improper Authentication Vulnerability",
+      "ransomware": "unknown",
+      "epssPercentile": 0.98755,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-08-27",
+      "cve": "CVE-2026-53362",
+      "vendor": "Linux",
+      "product": "Kernel",
+      "concern": "Linux Kernel Unspecified Vulnerability",
+      "ransomware": "unknown",
+      "epssPercentile": 0.72029,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-08-27",
+      "cve": "CVE-2026-66384",
+      "vendor": "JFrog",
+      "product": "Artifactory",
+      "concern": "JFrog Artifactory Improper Limitation of a Pathname to a Restricted Directory Vulnerability",
+      "ransomware": "unknown",
+      "epssPercentile": 0.52709,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-08-31",
+      "cve": "CVE-2026-81578",
+      "vendor": "PaperCut",
+      "product": "NG/MF",
+      "concern": "PaperCut NG/MF Missing Authentication for Critical Function Vulnerability",
+      "ransomware": "unknown",
+      "epssPercentile": 0.99705,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-08-31",
+      "cve": "CVE-2026-82078",
+      "vendor": "PaperCut",
+      "product": "NG/MF",
+      "concern": "PaperCut NG/MF Unsafe Reflection Vulnerability",
+      "ransomware": "unknown",
+      "epssPercentile": 0.99173,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    }
+  ]
+}

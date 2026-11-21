@@ -1,0 +1,333 @@
+{
+  "schemaVersion": 1,
+  "month": "2026-07",
+  "complete": true,
+  "updatedAt": "2026-11-21T15:58:15Z",
+  "metrics": [
+    {
+      "id": "kev_added",
+      "label": "New KEV entries",
+      "value": 26,
+      "rule": "CVE entries whose CISA dateAdded falls in the month.",
+      "source": "CISA KEV",
+      "window": "2026-07-01 to 2026-07-31 (dateAdded, ET calendar)",
+      "updatedAt": "2026-11-21T15:58:15Z"
+    },
+    {
+      "id": "vendors",
+      "label": "Distinct vendors",
+      "value": 16,
+      "rule": "Unique vendorProject values among the month’s KEV entries.",
+      "source": "CISA KEV",
+      "window": "2026-07-01 to 2026-07-31 (dateAdded, ET calendar)",
+      "updatedAt": "2026-11-21T15:58:15Z"
+    },
+    {
+      "id": "ransomware",
+      "label": "Known ransomware use",
+      "value": 4,
+      "rule": "Month’s KEV entries where CISA sets knownRansomwareCampaignUse = Known.",
+      "source": "CISA KEV",
+      "window": "2026-07-01 to 2026-07-31 (dateAdded, ET calendar)",
+      "updatedAt": "2026-11-21T15:58:15Z"
+    },
+    {
+      "id": "epss90",
+      "label": "EPSS ≥ 90th percentile",
+      "value": 21,
+      "rule": "Month’s KEV entries with EPSS percentile ≥ 0.90 (scores as of 2026-11-21).",
+      "source": "FIRST EPSS",
+      "window": "2026-07-01 to 2026-07-31 (dateAdded, ET calendar)",
+      "updatedAt": "2026-11-21T15:58:15Z"
+    }
+  ],
+  "notice": "These are CISA KEV catalog counts, not a count of total cyber incidents.",
+  "events": [
+    {
+      "date": "2026-07-01",
+      "cve": "CVE-2026-45659",
+      "vendor": "Microsoft",
+      "product": "SharePoint Server",
+      "concern": "Microsoft SharePoint Server Deserialization of Untrusted Data Vulnerability",
+      "ransomware": "known",
+      "epssPercentile": 0.99626,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-07-07",
+      "cve": "CVE-2026-48282",
+      "vendor": "Adobe",
+      "product": "ColdFusion",
+      "concern": "Adobe ColdFusion Path Traversal Vulnerability",
+      "ransomware": "unknown",
+      "epssPercentile": 0.98733,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-07-07",
+      "cve": "CVE-2026-48908",
+      "vendor": "JoomShaper",
+      "product": "SP Page Builder",
+      "concern": "JoomShaper SP Page Builder Unrestricted Upload of File with Dangerous Type Vulnerability",
+      "ransomware": "unknown",
+      "epssPercentile": 0.99776,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-07-07",
+      "cve": "CVE-2026-55255",
+      "vendor": "Langflow",
+      "product": "Langflow",
+      "concern": "Langflow Authorization Bypass Through User-Controlled Key Vulnerability",
+      "ransomware": "unknown",
+      "epssPercentile": 0.6016,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-07-07",
+      "cve": "CVE-2026-56290",
+      "vendor": "Joomlack",
+      "product": "Page Builder",
+      "concern": "Joomlack Page Builder Improper Access Control Vulnerability",
+      "ransomware": "unknown",
+      "epssPercentile": 0.98293,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-07-10",
+      "cve": "CVE-2026-48939",
+      "vendor": "iCagenda",
+      "product": "iCagenda",
+      "concern": "iCagenda Unrestricted Upload of File with Dangerous Type Vulnerability",
+      "ransomware": "unknown",
+      "epssPercentile": 0.9751,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-07-10",
+      "cve": "CVE-2026-56291",
+      "vendor": "Balbooa",
+      "product": "Forms",
+      "concern": "Balbooa Forms Unrestricted Upload of File with Dangerous Type Vulnerability",
+      "ransomware": "unknown",
+      "epssPercentile": 0.96775,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-07-13",
+      "cve": "CVE-2008-4128",
+      "vendor": "Cisco",
+      "product": "IOS",
+      "concern": "Cisco IOS Cross-Site Request Forgery Vulnerability",
+      "ransomware": "unknown",
+      "epssPercentile": 0.98429,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-07-14",
+      "cve": "CVE-2026-15409",
+      "vendor": "SonicWall",
+      "product": "SMA1000 Appliances",
+      "concern": "SonicWall SMA1000 Appliances Server-Side Request Forgery Vulnerability",
+      "ransomware": "known",
+      "epssPercentile": 0.94148,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-07-14",
+      "cve": "CVE-2026-15410",
+      "vendor": "SonicWall",
+      "product": "SMA1000 Appliances",
+      "concern": "SonicWall SMA1000 Appliances Code Injection Vulnerability",
+      "ransomware": "known",
+      "epssPercentile": 0.96183,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-07-14",
+      "cve": "CVE-2026-56155",
+      "vendor": "Microsoft",
+      "product": "Active Directory Federation Services",
+      "concern": "Microsoft Active Directory Federation Services Insufficient Granularity of Access Control Vulnerability",
+      "ransomware": "unknown",
+      "epssPercentile": 0.28767,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-07-14",
+      "cve": "CVE-2026-56164",
+      "vendor": "Microsoft",
+      "product": "SharePoint Server",
+      "concern": "Microsoft SharePoint Server Missing Authentication for Critical Function Vulnerability",
+      "ransomware": "unknown",
+      "epssPercentile": 0.98104,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-07-15",
+      "cve": "CVE-2023-4346",
+      "vendor": "KNX Association",
+      "product": "KNX Protocol Connection Authorization Option 1",
+      "concern": "KNX Association KNX Protocol Connection Authorization Option 1 Overly Restrictive Account Lockout Mechanism Vulnerability",
+      "ransomware": "unknown",
+      "epssPercentile": 0.72479,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-07-15",
+      "cve": "CVE-2026-46817",
+      "vendor": "Oracle",
+      "product": "E-Business Suite",
+      "concern": "Oracle E-Business Suite Improper Privilege Management Vulnerability",
+      "ransomware": "unknown",
+      "epssPercentile": 0.96287,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-07-16",
+      "cve": "CVE-2026-25089",
+      "vendor": "Fortinet",
+      "product": "FortiSandbox",
+      "concern": "Fortinet FortiSandbox OS Command Injection Vulnerability",
+      "ransomware": "unknown",
+      "epssPercentile": 0.99541,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-07-16",
+      "cve": "CVE-2026-39808",
+      "vendor": "Fortinet",
+      "product": "FortiSandbox",
+      "concern": "Fortinet FortiSandbox OS Command Injection Vulnerability",
+      "ransomware": "unknown",
+      "epssPercentile": 0.99839,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-07-16",
+      "cve": "CVE-2026-58644",
+      "vendor": "Microsoft",
+      "product": "SharePoint",
+      "concern": "Microsoft SharePoint Deserialization of Untrusted Data Vulnerability",
+      "ransomware": "unknown",
+      "epssPercentile": 0.96962,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-07-21",
+      "cve": "CVE-2021-27137",
+      "vendor": "DD-WRT",
+      "product": "DD-WRT",
+      "concern": "DD-WRT Stack-Based Buffer Overflow Vulnerability",
+      "ransomware": "unknown",
+      "epssPercentile": 0.90771,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-07-21",
+      "cve": "CVE-2026-0770",
+      "vendor": "Langflow",
+      "product": "Langflow",
+      "concern": "Langflow Inclusion of Functionality from Untrusted Control Sphere Vulnerability",
+      "ransomware": "unknown",
+      "epssPercentile": 0.99209,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-07-21",
+      "cve": "CVE-2026-60137",
+      "vendor": "WordPress",
+      "product": "Core",
+      "concern": "WordPress Core SQL Injection Vulnerability",
+      "ransomware": "unknown",
+      "epssPercentile": 0.92801,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-07-21",
+      "cve": "CVE-2026-63030",
+      "vendor": "WordPress",
+      "product": "Core",
+      "concern": "WordPress Core Interpretation Conflict Vulnerability",
+      "ransomware": "unknown",
+      "epssPercentile": 0.95912,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-07-22",
+      "cve": "CVE-2026-16232",
+      "vendor": "Check Point",
+      "product": "SmartConsole",
+      "concern": "Check Point SmartConsole Improper Authentication Vulnerability",
+      "ransomware": "unknown",
+      "epssPercentile": 0.89501,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-07-22",
+      "cve": "CVE-2026-50522",
+      "vendor": "Microsoft",
+      "product": "SharePoint",
+      "concern": "Microsoft SharePoint Deserialization of Untrusted Data Vulnerability",
+      "ransomware": "unknown",
+      "epssPercentile": 0.99657,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-07-27",
+      "cve": "CVE-2025-68686",
+      "vendor": "Fortinet",
+      "product": "FortiOS",
+      "concern": "Fortinet FortiOS Exposure of Sensitive Information to an Unauthorized Actor Vulnerability",
+      "ransomware": "unknown",
+      "epssPercentile": 0.98227,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-07-27",
+      "cve": "CVE-2026-16812",
+      "vendor": "Arista",
+      "product": "VeloCloud Orchestrator",
+      "concern": "Arista VeloCloud Orchestrator On-Prem OS Command Injection Vulnerability",
+      "ransomware": "unknown",
+      "epssPercentile": 0.78567,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-07-29",
+      "cve": "CVE-2026-20316",
+      "vendor": "Cisco",
+      "product": "Secure Firewall Management Center (FMC)",
+      "concern": "Cisco Secure Firewall Management Center Use of Hard-coded Password Vulnerability",
+      "ransomware": "known",
+      "epssPercentile": 0.98476,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    }
+  ]
+}

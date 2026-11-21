@@ -1,0 +1,300 @@
+{
+  "schemaVersion": 1,
+  "month": "2026-06",
+  "complete": true,
+  "updatedAt": "2026-11-21T15:58:15Z",
+  "metrics": [
+    {
+      "id": "kev_added",
+      "label": "New KEV entries",
+      "value": 23,
+      "rule": "CVE entries whose CISA dateAdded falls in the month.",
+      "source": "CISA KEV",
+      "window": "2026-06-01 to 2026-06-30 (dateAdded, ET calendar)",
+      "updatedAt": "2026-11-21T15:58:15Z"
+    },
+    {
+      "id": "vendors",
+      "label": "Distinct vendors",
+      "value": 18,
+      "rule": "Unique vendorProject values among the month’s KEV entries.",
+      "source": "CISA KEV",
+      "window": "2026-06-01 to 2026-06-30 (dateAdded, ET calendar)",
+      "updatedAt": "2026-11-21T15:58:15Z"
+    },
+    {
+      "id": "ransomware",
+      "label": "Known ransomware use",
+      "value": 3,
+      "rule": "Month’s KEV entries where CISA sets knownRansomwareCampaignUse = Known.",
+      "source": "CISA KEV",
+      "window": "2026-06-01 to 2026-06-30 (dateAdded, ET calendar)",
+      "updatedAt": "2026-11-21T15:58:15Z"
+    },
+    {
+      "id": "epss90",
+      "label": "EPSS ≥ 90th percentile",
+      "value": 19,
+      "rule": "Month’s KEV entries with EPSS percentile ≥ 0.90 (scores as of 2026-11-21).",
+      "source": "FIRST EPSS",
+      "window": "2026-06-01 to 2026-06-30 (dateAdded, ET calendar)",
+      "updatedAt": "2026-11-21T15:58:15Z"
+    }
+  ],
+  "notice": "These are CISA KEV catalog counts, not a count of total cyber incidents.",
+  "events": [
+    {
+      "date": "2026-06-01",
+      "cve": "CVE-2024-21182",
+      "vendor": "Oracle",
+      "product": "WebLogic Server",
+      "concern": "Oracle WebLogic Server Unspecified Vulnerability",
+      "ransomware": "unknown",
+      "epssPercentile": 0.99494,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-06-02",
+      "cve": "CVE-2022-0492",
+      "vendor": "Linux",
+      "product": "Kernel",
+      "concern": "Linux Kernel Improper Authentication Vulnerability",
+      "ransomware": "unknown",
+      "epssPercentile": 0.93006,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-06-02",
+      "cve": "CVE-2025-48595",
+      "vendor": "Android",
+      "product": "Framework",
+      "concern": "Android Framework Integer Overflow Vulnerability",
+      "ransomware": "unknown",
+      "epssPercentile": 0.8121,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-06-03",
+      "cve": "CVE-2026-45247",
+      "vendor": "Mirasvit",
+      "product": "Mirasvit Full Page Cache Warmer",
+      "concern": "Mirasvit Full Page Cache Warmer Deserialization of Untrusted Data Vulnerability",
+      "ransomware": "unknown",
+      "epssPercentile": 0.9967,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-06-05",
+      "cve": "CVE-2026-28318",
+      "vendor": "SolarWinds",
+      "product": "Serv-U",
+      "concern": "SolarWinds Serv-U Uncontrolled Resource Consumption Vulnerability",
+      "ransomware": "unknown",
+      "epssPercentile": 0.99757,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-06-08",
+      "cve": "CVE-2026-42271",
+      "vendor": "BerriAI",
+      "product": "LiteLLM",
+      "concern": "BerriAI LiteLLM Command Injection Vulnerability",
+      "ransomware": "unknown",
+      "epssPercentile": 0.99817,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-06-08",
+      "cve": "CVE-2026-50751",
+      "vendor": "Check Point",
+      "product": "Security Gateway",
+      "concern": "Check Point Security Gateway Improper Authentication Vulnerability",
+      "ransomware": "known",
+      "epssPercentile": 0.99724,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-06-09",
+      "cve": "CVE-2026-11645",
+      "vendor": "Google",
+      "product": "Chromium V8",
+      "concern": "Google Chromium V8 Out-of-Bounds Read and Write Vulnerability",
+      "ransomware": "unknown",
+      "epssPercentile": 0.847,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-06-09",
+      "cve": "CVE-2026-20245",
+      "vendor": "Cisco",
+      "product": "Catalyst SD-WAN Manager",
+      "concern": "Cisco Catalyst SD-WAN Manager Improper Encoding or Escaping of Output Vulnerability",
+      "ransomware": "unknown",
+      "epssPercentile": 0.97987,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-06-09",
+      "cve": "CVE-2026-7473",
+      "vendor": "Arista",
+      "product": "Extensible Operating System",
+      "concern": "Arista Extensible Operating System Incomplete Comparison with Missing Factors Vulnerability",
+      "ransomware": "unknown",
+      "epssPercentile": 0.66684,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-06-11",
+      "cve": "CVE-2026-10520",
+      "vendor": "Ivanti",
+      "product": "Sentry",
+      "concern": "Ivanti Sentry OS Command Injection Vulnerability",
+      "ransomware": "unknown",
+      "epssPercentile": 0.99969,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-06-12",
+      "cve": "CVE-2026-35273",
+      "vendor": "Oracle",
+      "product": "PeopleSoft Enterprise PeopleTools",
+      "concern": "Oracle PeopleSoft Enterprise PeopleTools Missing Authentication for Critical Function Vulnerability",
+      "ransomware": "known",
+      "epssPercentile": 0.99885,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-06-15",
+      "cve": "CVE-2026-20262",
+      "vendor": "Cisco",
+      "product": "Catalyst SD-WAN Manager",
+      "concern": "Cisco Catalyst SD-WAN Manager Directory or Path Traversal Vulnerability",
+      "ransomware": "unknown",
+      "epssPercentile": 0.98209,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-06-15",
+      "cve": "CVE-2026-54420",
+      "vendor": "LiteSpeed",
+      "product": "cPanel Plugin",
+      "concern": "LiteSpeed cPanel Plugin UNIX Symbolic Link (Symlink) Following Vulnerability",
+      "ransomware": "unknown",
+      "epssPercentile": 0.73829,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-06-16",
+      "cve": "CVE-2026-48907",
+      "vendor": "Widget Factory",
+      "product": "Joomla Content Editor",
+      "concern": "Widget Factory Joomla Content Editor Improper Access Control Vulnerability",
+      "ransomware": "unknown",
+      "epssPercentile": 0.99726,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-06-18",
+      "cve": "CVE-2026-20253",
+      "vendor": "Splunk",
+      "product": "Enterprise",
+      "concern": "Splunk Enterprise Missing Authentication for Critical Function Vulnerability",
+      "ransomware": "unknown",
+      "epssPercentile": 0.9989,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-06-23",
+      "cve": "CVE-2025-67038",
+      "vendor": "Lantronix",
+      "product": "EDS5000",
+      "concern": "Lantronix EDS5000 Code Injection Vulnerability",
+      "ransomware": "unknown",
+      "epssPercentile": 0.97642,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-06-23",
+      "cve": "CVE-2026-34908",
+      "vendor": "Ubiquiti",
+      "product": "UniFi OS",
+      "concern": "Ubiquiti UniFi OS Improper Access Control Vulnerability",
+      "ransomware": "unknown",
+      "epssPercentile": 0.99782,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-06-23",
+      "cve": "CVE-2026-34909",
+      "vendor": "Ubiquiti",
+      "product": "UniFi OS",
+      "concern": "Ubiquiti UniFi OS Path Traversal Vulnerability",
+      "ransomware": "unknown",
+      "epssPercentile": 0.99369,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-06-23",
+      "cve": "CVE-2026-34910",
+      "vendor": "Ubiquiti",
+      "product": "UniFi OS",
+      "concern": "Ubiquiti UniFi OS Improper Input Validation Vulnerability",
+      "ransomware": "unknown",
+      "epssPercentile": 0.99798,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-06-25",
+      "cve": "CVE-2026-12569",
+      "vendor": "PTC",
+      "product": "Windchill and FlexPLM",
+      "concern": "PTC Windchill and FlexPLM Improper Input Validation Vulnerability",
+      "ransomware": "known",
+      "epssPercentile": 0.98839,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-06-25",
+      "cve": "CVE-2026-20230",
+      "vendor": "Cisco",
+      "product": "Unified Communications Manager",
+      "concern": "Cisco Unified Communications Manager Server-Side Request Forgery (SSRF) Vulnerability",
+      "ransomware": "unknown",
+      "epssPercentile": 0.99777,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-06-29",
+      "cve": "CVE-2026-48558",
+      "vendor": "SimpleHelp",
+      "product": "SimpleHelp",
+      "concern": "SimpleHelp Authentication Bypass Vulnerability",
+      "ransomware": "unknown",
+      "epssPercentile": 0.99627,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    }
+  ]
+}
