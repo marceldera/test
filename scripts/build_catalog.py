@@ -26,7 +26,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from tw import catalog as C  # noqa: E402
 from tw.common import DATA_DIR, SourceError, fetch_json, iso, now_utc, read_json, write_json  # noqa: E402
-from tw.detections import index_nuclei, load_reviews, merge  # noqa: E402
+from tw.detections import combine, index_nmap, index_nuclei, load_reviews, merge  # noqa: E402
+from tw.playbooks import load_playbooks, load_products  # noqa: E402
 from tw.sources import NVD_URL, collect_epss, collect_kev  # noqa: E402
 
 CVE_DIR = DATA_DIR / "cves"
@@ -117,8 +118,10 @@ def build(now, warnings: list[str]) -> dict:
     # ---- detections
     nuclei_dir = os.environ.get("TW_NUCLEI_DIR")
     commit = os.environ.get("TW_NUCLEI_COMMIT") or None
-    if not nuclei_dir and not os.environ.get("TW_FIXTURES") and os.environ.get("TW_NUCLEI_FETCH", "1") == "1":
-        nuclei_dir, commit = fetch_nuclei_templates(warnings)
+    live_fetch = not os.environ.get("TW_FIXTURES") and os.environ.get("TW_NUCLEI_FETCH", "1") == "1"
+    if not nuclei_dir and live_fetch:
+        nuclei_dir, commit = sparse_fetch("https://github.com/projectdiscovery/nuclei-templates.git",
+                                          "/*/cves/**", "Nuclei templates", warnings)
     if nuclei_dir and Path(nuclei_dir).is_dir():
         nuclei = index_nuclei(Path(nuclei_dir), commit)
         write_json(VAL_DIR / "nuclei-index.json",
@@ -131,8 +134,24 @@ def build(now, warnings: list[str]) -> dict:
         nuclei_meta = {"commit": cached.get("commit"), "indexedAt": cached.get("indexedAt")}
         if nuclei_dir:
             warnings.append("Nuclei template checkout unavailable; using cached index")
+    nmap_dir = os.environ.get("TW_NMAP_DIR")
+    nmap_commit = os.environ.get("TW_NMAP_COMMIT") or None
+    if not nmap_dir and live_fetch:
+        nmap_dir, nmap_commit = sparse_fetch("https://github.com/nmap/nmap.git", "scripts",
+                                             "Nmap NSE scripts", warnings)
+    if nmap_dir and Path(nmap_dir).is_dir():
+        nmap = index_nmap(Path(nmap_dir))
+        write_json(VAL_DIR / "nmap-index.json", {"repo": "nmap/nmap", "commit": nmap_commit, "indexedAt": iso(now),
+                                                 "count": sum(map(len, nmap.values())), "scripts": nmap})
+        nuclei_meta["nmapCommit"] = nmap_commit
+    else:
+        cached_n = read_json(VAL_DIR / "nmap-index.json", {}) or {}
+        nmap = cached_n.get("scripts", {})
+        nuclei_meta["nmapCommit"] = cached_n.get("commit")
     reviews = load_reviews(read_json(VAL_DIR / "reviews.json", {"entries": []}))
-    detections = merge(nuclei, reviews)
+    detections = merge(combine(nuclei, nmap), reviews)
+    playbooks = load_playbooks(read_json(VAL_DIR / "playbooks.json", {"playbooks": []}))
+    load_products(read_json(VAL_DIR / "products.json", {"products": []}))
 
     # ---- EPSS (single file)
     epss_path = CVE_DIR / "epss.json"
@@ -153,9 +172,10 @@ def build(now, warnings: list[str]) -> dict:
             "nvd": {"url": f"https://nvd.nist.gov/vuln/detail/{cid}", "lastModified": (nvd or {}).get("lastModified")} if nvd else None,
             "kev": {"url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
                     "catalogVersion": kev.get("catalogVersion"), "fetchedAt": kev["fetchedAt"]} if cid in kev_by else None,
-            "detections": {"source": "projectdiscovery/nuclei-templates", "commitInStatus": True} if cid in nuclei else None,
+            "detections": {"source": "nuclei-templates / nmap", "commitInStatus": True} if cid in detections else None,
         }
         r = C.build_record(cid, nvd, kev_by.get(cid), detections.get(cid, []), appears.get(cid, {}), prov)
+        r["curatedPlaybook"] = cid in playbooks
         errs += C.validate_record(r)
         records[cid] = r
     if errs:
@@ -190,19 +210,19 @@ def build(now, warnings: list[str]) -> dict:
                    "nvdPending": pending, "nvdSynced": synced, "nvdLookups": looked,
                    "written": written, "removed": removed},
         "sources": {"kevCatalogVersion": kev.get("catalogVersion"), "nucleiCommit": nuclei_meta.get("commit"),
-                    "nucleiIndexedAt": nuclei_meta.get("indexedAt"),
+                    "nucleiIndexedAt": nuclei_meta.get("indexedAt"), "nmapCommit": nuclei_meta.get("nmapCommit"),
+                    "curatedPlaybooks": len(playbooks),
                     "nvdSyncOk": nvd_ok},
     }
 
 
-def fetch_nuclei_templates(warnings: list[str]) -> tuple[str | None, str | None]:
-    """Sparse, shallow clone of template *metadata* (CVE YAML files only). Nothing is executed."""
+def sparse_fetch(repo: str, pattern: str, label: str, warnings: list[str]) -> tuple[str | None, str | None]:
+    """Shallow sparse clone of public *metadata* (templates/scripts are indexed, never executed)."""
     import subprocess
     import tempfile
-    dest = Path(tempfile.mkdtemp(prefix="nuclei-")) / "nuclei-templates"
-    cmds = [["git", "clone", "-q", "--depth", "1", "--filter=blob:none", "--sparse",
-             "https://github.com/projectdiscovery/nuclei-templates.git", str(dest)],
-            ["git", "-C", str(dest), "sparse-checkout", "set", "--no-cone", "/*/cves/**"]]
+    dest = Path(tempfile.mkdtemp(prefix="twsrc-")) / "repo"
+    cmds = [["git", "clone", "-q", "--depth", "1", "--filter=blob:none", "--sparse", repo, str(dest)],
+            ["git", "-C", str(dest), "sparse-checkout", "set", "--no-cone", pattern]]
     try:
         for c in cmds:
             subprocess.run(c, check=True, timeout=600, capture_output=True)
@@ -210,7 +230,7 @@ def fetch_nuclei_templates(warnings: list[str]) -> tuple[str | None, str | None]
                                 capture_output=True, text=True, timeout=30).stdout.strip()
         return str(dest), commit
     except (OSError, subprocess.SubprocessError) as exc:
-        warnings.append(f"Could not fetch Nuclei templates; using cached index ({type(exc).__name__})")
+        warnings.append(f"Could not fetch {label}; using cached index ({type(exc).__name__})")
         return None, None
 
 

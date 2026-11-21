@@ -1,0 +1,690 @@
+{
+  "note": "Aegis product library: read-only commands that identify installed versions and exposure. {host} is replaced with the analyst's target in the page. Edit with care; validated on every run.",
+  "products": [
+    {
+      "id": "nginx-oss",
+      "label": "NGINX Open Source",
+      "cpe": [
+        "f5:nginx_open_source",
+        "f5:nginx",
+        "nginx:nginx"
+      ],
+      "kind": "web server / reverse proxy",
+      "ports": [
+        80,
+        443
+      ],
+      "checks": [
+        {
+          "platform": "linux",
+          "label": "Running binary version",
+          "cmd": "nginx -v 2>&1",
+          "extract": "nginx/[0-9]+(\\.[0-9]+)+"
+        },
+        {
+          "platform": "linux",
+          "label": "Build options (confirm HTTP/2 module)",
+          "cmd": "nginx -V 2>&1 | tr ' ' '\\n' | grep -E 'http_v2|^nginx version'"
+        },
+        {
+          "platform": "linux",
+          "label": "Installed packages (Debian/Ubuntu)",
+          "cmd": "dpkg-query -W -f='${Package} ${Version}\\n' 'nginx*' 2>/dev/null"
+        },
+        {
+          "platform": "linux",
+          "label": "Installed packages (RHEL/Fedora/SUSE)",
+          "cmd": "rpm -qa 'nginx*' 2>/dev/null"
+        },
+        {
+          "platform": "linux",
+          "label": "Installed packages (Alpine)",
+          "cmd": "apk info -v 2>/dev/null | grep -iE '^nginx'"
+        },
+        {
+          "platform": "container",
+          "label": "Container images on this host",
+          "cmd": "docker ps --format '{{.Names}}\\t{{.Image}}' | grep -i nginx"
+        },
+        {
+          "platform": "kubernetes",
+          "label": "Images running in the cluster",
+          "cmd": "kubectl get pods -A -o jsonpath='{range .items[*]}{.metadata.namespace}{\"\\t\"}{.metadata.name}{\"\\t\"}{range .spec.containers[*]}{.image}{\" \"}{end}{\"\\n\"}{end}' | grep -iE 'nginx'"
+        },
+        {
+          "platform": "network",
+          "label": "Service fingerprint (banner may hide version)",
+          "cmd": "nmap -sV -Pn -p 80,443 --script http-server-header {host}"
+        }
+      ],
+      "notes": [
+        "Distribution packages (RHEL, Ubuntu, Debian) often backport fixes without changing the upstream version number. Check the distribution's advisory for the fixed package release before concluding a host is vulnerable.",
+        "server_tokens off hides the version in banners, so a missing version in a network scan proves nothing."
+      ]
+    },
+    {
+      "id": "nginx-plus",
+      "label": "F5 NGINX Plus",
+      "cpe": [
+        "f5:nginx_plus"
+      ],
+      "kind": "web server / reverse proxy",
+      "ports": [
+        80,
+        443
+      ],
+      "checks": [
+        {
+          "platform": "linux",
+          "label": "Running binary version (shows nginx-plus-rNN or release)",
+          "cmd": "nginx -v 2>&1",
+          "extract": "nginx-plus-r?[0-9]+(\\.[0-9]+)*(-p[0-9]+)?"
+        },
+        {
+          "platform": "linux",
+          "label": "Installed packages (Debian/Ubuntu)",
+          "cmd": "dpkg-query -W -f='${Package} ${Version}\\n' 'nginx-plus*' 2>/dev/null"
+        },
+        {
+          "platform": "linux",
+          "label": "Installed packages (RHEL)",
+          "cmd": "rpm -qa 'nginx-plus*' 2>/dev/null"
+        },
+        {
+          "platform": "kubernetes",
+          "label": "Images running in the cluster",
+          "cmd": "kubectl get pods -A -o jsonpath='{range .items[*]}{.metadata.namespace}{\"\\t\"}{.metadata.name}{\"\\t\"}{range .spec.containers[*]}{.image}{\" \"}{end}{\"\\n\"}{end}' | grep -iE 'nginx-plus|nginx/nginx-plus'"
+        }
+      ],
+      "notes": [
+        "NGINX Plus releases are named rNN or by release number; compare with the F5 advisory's fixed release, not the embedded open-source version."
+      ]
+    },
+    {
+      "id": "nginx-ingress",
+      "label": "F5 NGINX Ingress Controller",
+      "cpe": [
+        "f5:nginx_ingress_controller"
+      ],
+      "kind": "Kubernetes ingress",
+      "ports": [
+        80,
+        443
+      ],
+      "checks": [
+        {
+          "platform": "kubernetes",
+          "label": "Controller image tags in the cluster",
+          "cmd": "kubectl get pods -A -o jsonpath='{range .items[*]}{.metadata.namespace}{\"\\t\"}{.metadata.name}{\"\\t\"}{range .spec.containers[*]}{.image}{\" \"}{end}{\"\\n\"}{end}' | grep -iE 'nginx-ingress|nginx-plus-ingress'",
+          "extract": ":[0-9]+(\\.[0-9]+)+"
+        },
+        {
+          "platform": "kubernetes",
+          "label": "Helm releases",
+          "cmd": "helm list -A 2>/dev/null | grep -iE 'nginx-ingress|ingress'"
+        }
+      ],
+      "notes": [
+        "F5's NGINX Ingress Controller (nginx/nginx-ingress image) is a different product from the community ingress-nginx (registry.k8s.io/ingress-nginx/controller). Identify which one you run before comparing versions."
+      ]
+    },
+    {
+      "id": "nginx-gateway-fabric",
+      "label": "F5 NGINX Gateway Fabric",
+      "cpe": [
+        "f5:nginx_gateway_fabric"
+      ],
+      "kind": "Kubernetes Gateway API",
+      "ports": [
+        80,
+        443
+      ],
+      "checks": [
+        {
+          "platform": "kubernetes",
+          "label": "Gateway Fabric image tags",
+          "cmd": "kubectl get pods -A -o jsonpath='{range .items[*]}{.metadata.namespace}{\"\\t\"}{.metadata.name}{\"\\t\"}{range .spec.containers[*]}{.image}{\" \"}{end}{\"\\n\"}{end}' | grep -iE 'nginx-gateway-fabric'",
+          "extract": ":[0-9]+(\\.[0-9]+)+"
+        }
+      ]
+    },
+    {
+      "id": "nginx-instance-manager",
+      "label": "F5 NGINX Instance Manager",
+      "cpe": [
+        "f5:nginx_instance_manager"
+      ],
+      "kind": "management plane",
+      "checks": [
+        {
+          "platform": "linux",
+          "label": "Installed package (Debian/Ubuntu)",
+          "cmd": "dpkg-query -W -f='${Package} ${Version}\\n' 'nms-instance-manager' 2>/dev/null"
+        },
+        {
+          "platform": "linux",
+          "label": "Installed package (RHEL)",
+          "cmd": "rpm -qa 'nms-instance-manager*' 2>/dev/null"
+        },
+        {
+          "platform": "web-ui",
+          "label": "Version in the NGINX Instance Manager UI",
+          "cmd": "Settings → About (or the product footer) shows the installed version."
+        }
+      ]
+    },
+    {
+      "id": "nginx-app-protect-waf",
+      "label": "F5 NGINX App Protect WAF",
+      "cpe": [
+        "f5:waf",
+        "f5:nginx_app_protect_waf",
+        "f5:nginx_app_protect"
+      ],
+      "kind": "web application firewall",
+      "checks": [
+        {
+          "platform": "linux",
+          "label": "App Protect WAF v4 package (Debian/Ubuntu)",
+          "cmd": "dpkg-query -W -f='${Package} ${Version}\\n' 'app-protect*' 2>/dev/null"
+        },
+        {
+          "platform": "linux",
+          "label": "App Protect WAF v4 package (RHEL)",
+          "cmd": "rpm -qa 'app-protect*' 2>/dev/null"
+        },
+        {
+          "platform": "kubernetes",
+          "label": "App Protect WAF v5 images (waf-enforcer / waf-config-mgr)",
+          "cmd": "kubectl get pods -A -o jsonpath='{range .items[*]}{.metadata.namespace}{\"\\t\"}{.metadata.name}{\"\\t\"}{range .spec.containers[*]}{.image}{\" \"}{end}{\"\\n\"}{end}' | grep -iE 'waf-enforcer|waf-config-mgr|app-protect'"
+        },
+        {
+          "platform": "container",
+          "label": "App Protect WAF v5 containers on this host",
+          "cmd": "docker ps --format '{{.Names}}\\t{{.Image}}' | grep -iE 'waf-enforcer|waf-config-mgr'"
+        }
+      ]
+    },
+    {
+      "id": "nginx-app-protect-dos",
+      "label": "F5 NGINX App Protect DoS",
+      "cpe": [
+        "f5:dos",
+        "f5:nginx_app_protect_dos"
+      ],
+      "kind": "DoS protection module",
+      "checks": [
+        {
+          "platform": "linux",
+          "label": "Installed package (Debian/Ubuntu)",
+          "cmd": "dpkg-query -W -f='${Package} ${Version}\\n' 'app-protect-dos*' 2>/dev/null"
+        },
+        {
+          "platform": "linux",
+          "label": "Installed package (RHEL)",
+          "cmd": "rpm -qa 'app-protect-dos*' 2>/dev/null"
+        }
+      ]
+    },
+    {
+      "id": "apache-httpd",
+      "label": "Apache HTTP Server",
+      "cpe": [
+        "apache:http_server"
+      ],
+      "kind": "web server",
+      "ports": [
+        80,
+        443
+      ],
+      "checks": [
+        {
+          "platform": "linux",
+          "label": "Binary version",
+          "cmd": "(apachectl -v || httpd -v || apache2 -v) 2>/dev/null",
+          "extract": "Apache/[0-9]+(\\.[0-9]+)+"
+        },
+        {
+          "platform": "linux",
+          "label": "Installed packages (Debian/Ubuntu)",
+          "cmd": "dpkg-query -W -f='${Package} ${Version}\\n' 'apache2*' 2>/dev/null"
+        },
+        {
+          "platform": "linux",
+          "label": "Installed packages (RHEL)",
+          "cmd": "rpm -qa 'httpd*' 2>/dev/null"
+        },
+        {
+          "platform": "network",
+          "label": "Service fingerprint",
+          "cmd": "nmap -sV -Pn -p 80,443 --script http-server-header {host}"
+        }
+      ],
+      "notes": [
+        "Distribution packages backport fixes; check the distribution advisory."
+      ]
+    },
+    {
+      "id": "openssh",
+      "label": "OpenSSH",
+      "cpe": [
+        "openbsd:openssh"
+      ],
+      "kind": "remote access",
+      "ports": [
+        22
+      ],
+      "checks": [
+        {
+          "platform": "linux",
+          "label": "Client/server version",
+          "cmd": "ssh -V 2>&1",
+          "extract": "OpenSSH_[0-9]+\\.[0-9]+(p[0-9]+)?"
+        },
+        {
+          "platform": "linux",
+          "label": "Installed server package (Debian/Ubuntu)",
+          "cmd": "dpkg-query -W -f='${Package} ${Version}\\n' 'openssh-server' 2>/dev/null"
+        },
+        {
+          "platform": "linux",
+          "label": "Installed server package (RHEL)",
+          "cmd": "rpm -qa 'openssh-server*' 2>/dev/null"
+        },
+        {
+          "platform": "windows",
+          "label": "Windows OpenSSH version",
+          "cmd": "(Get-Command sshd.exe -ErrorAction SilentlyContinue).Version; ssh -V"
+        },
+        {
+          "platform": "network",
+          "label": "SSH banner",
+          "cmd": "nmap -sV -Pn -p 22 {host}"
+        }
+      ],
+      "notes": [
+        "The SSH banner shows the upstream version; distributions backport fixes, so a 'vulnerable' banner is only suspected until the package release is checked."
+      ]
+    },
+    {
+      "id": "openssl",
+      "label": "OpenSSL",
+      "cpe": [
+        "openssl:openssl"
+      ],
+      "kind": "cryptographic library",
+      "checks": [
+        {
+          "platform": "linux",
+          "label": "CLI/library version",
+          "cmd": "openssl version -a 2>/dev/null | head -2",
+          "extract": "OpenSSL [0-9]+(\\.[0-9]+)+[a-z]?"
+        },
+        {
+          "platform": "linux",
+          "label": "Installed packages (Debian/Ubuntu)",
+          "cmd": "dpkg-query -W -f='${Package} ${Version}\\n' 'libssl*' 2>/dev/null"
+        },
+        {
+          "platform": "linux",
+          "label": "Installed packages (RHEL)",
+          "cmd": "rpm -qa 'openssl*' 2>/dev/null"
+        },
+        {
+          "platform": "linux",
+          "label": "Processes still using an old libssl after patching",
+          "cmd": "sudo lsof -n 2>/dev/null | grep -E 'libssl.*(deleted)' | awk '{print $1, $2}' | sort -u"
+        }
+      ],
+      "notes": [
+        "Applications can bundle or statically link their own OpenSSL; check vendor SBOMs as well as the system package."
+      ]
+    },
+    {
+      "id": "tomcat",
+      "label": "Apache Tomcat",
+      "cpe": [
+        "apache:tomcat"
+      ],
+      "kind": "Java application server",
+      "ports": [
+        8080,
+        8443
+      ],
+      "checks": [
+        {
+          "platform": "linux",
+          "label": "Version script",
+          "cmd": "\"${CATALINA_HOME:-/opt/tomcat}\"/bin/version.sh 2>/dev/null | grep -i 'Server number'",
+          "extract": "[0-9]+(\\.[0-9]+)+"
+        },
+        {
+          "platform": "linux",
+          "label": "Installed packages",
+          "cmd": "(dpkg-query -W 'tomcat*' 2>/dev/null; rpm -qa 'tomcat*' 2>/dev/null)"
+        },
+        {
+          "platform": "network",
+          "label": "Service fingerprint",
+          "cmd": "nmap -sV -Pn -p 8080,8443 {host}"
+        }
+      ]
+    },
+    {
+      "id": "php",
+      "label": "PHP",
+      "cpe": [
+        "php:php"
+      ],
+      "kind": "language runtime",
+      "checks": [
+        {
+          "platform": "linux",
+          "label": "CLI version",
+          "cmd": "php -v 2>/dev/null | head -1",
+          "extract": "PHP [0-9]+(\\.[0-9]+)+"
+        },
+        {
+          "platform": "linux",
+          "label": "Installed packages",
+          "cmd": "(dpkg-query -W 'php*' 2>/dev/null; rpm -qa 'php*' 2>/dev/null) | head -20"
+        }
+      ],
+      "notes": [
+        "Web servers may run a different PHP build (php-fpm) than the CLI; check php-fpm -v too."
+      ]
+    },
+    {
+      "id": "linux-kernel",
+      "label": "Linux kernel",
+      "cpe": [
+        "linux:linux_kernel"
+      ],
+      "kind": "operating system kernel",
+      "checks": [
+        {
+          "platform": "linux",
+          "label": "Running kernel",
+          "cmd": "uname -r",
+          "extract": "[0-9]+(\\.[0-9]+)+"
+        },
+        {
+          "platform": "linux",
+          "label": "Installed kernel packages",
+          "cmd": "(dpkg-query -W 'linux-image*' 2>/dev/null; rpm -q kernel 2>/dev/null)"
+        }
+      ],
+      "notes": [
+        "Distribution kernels carry backports; use the distribution's advisory and a reboot check (running vs installed kernel)."
+      ]
+    },
+    {
+      "id": "windows",
+      "label": "Microsoft Windows",
+      "cpe": [
+        "microsoft:windows_*"
+      ],
+      "kind": "operating system",
+      "checks": [
+        {
+          "platform": "windows",
+          "label": "OS edition, version and build",
+          "cmd": "Get-ComputerInfo -Property OsName,OsVersion,OsBuildNumber,OsHardwareAbstractionLayer"
+        },
+        {
+          "platform": "windows",
+          "label": "UBR (patch level) of the build",
+          "cmd": "(Get-ItemProperty 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion').UBR"
+        },
+        {
+          "platform": "windows",
+          "label": "Installed updates (newest first)",
+          "cmd": "Get-HotFix | Sort-Object InstalledOn -Descending | Select-Object -First 15 HotFixID,InstalledOn,Description"
+        }
+      ],
+      "notes": [
+        "Compare the build and UBR, or the installed KB, with the fixed build in the Microsoft Security Update Guide for this CVE."
+      ]
+    },
+    {
+      "id": "exchange",
+      "label": "Microsoft Exchange Server",
+      "cpe": [
+        "microsoft:exchange_server"
+      ],
+      "kind": "mail server",
+      "ports": [
+        443
+      ],
+      "checks": [
+        {
+          "platform": "windows",
+          "label": "Exchange build (Exchange Management Shell)",
+          "cmd": "Get-ExchangeServer | Format-List Name,Edition,AdminDisplayVersion"
+        },
+        {
+          "platform": "windows",
+          "label": "Microsoft HealthChecker (patch and config report)",
+          "cmd": "# Download HealthChecker.ps1 from https://aka.ms/ExchangeHealthChecker then:\n.\\HealthChecker.ps1"
+        }
+      ],
+      "notes": [
+        "Map AdminDisplayVersion to a CU/SU with Microsoft's Exchange build numbers page."
+      ]
+    },
+    {
+      "id": "fortios",
+      "label": "Fortinet FortiOS",
+      "cpe": [
+        "fortinet:fortios"
+      ],
+      "kind": "firewall / VPN appliance",
+      "ports": [
+        443,
+        10443
+      ],
+      "checks": [
+        {
+          "platform": "appliance-cli",
+          "label": "Firmware version (CLI)",
+          "cmd": "get system status",
+          "extract": "v[0-9]+(\\.[0-9]+)+"
+        }
+      ]
+    },
+    {
+      "id": "panos",
+      "label": "Palo Alto Networks PAN-OS",
+      "cpe": [
+        "paloaltonetworks:pan-os"
+      ],
+      "kind": "firewall / VPN appliance",
+      "ports": [
+        443
+      ],
+      "checks": [
+        {
+          "platform": "appliance-cli",
+          "label": "Software version (CLI)",
+          "cmd": "show system info | match sw-version",
+          "extract": "[0-9]+(\\.[0-9]+)+"
+        }
+      ]
+    },
+    {
+      "id": "ios-xe",
+      "label": "Cisco IOS XE",
+      "cpe": [
+        "cisco:ios_xe"
+      ],
+      "kind": "network operating system",
+      "checks": [
+        {
+          "platform": "appliance-cli",
+          "label": "Software version (CLI)",
+          "cmd": "show version | include Version",
+          "extract": "[0-9]+(\\.[0-9]+)+"
+        }
+      ],
+      "notes": [
+        "Cisco's Software Checker (sec.cloudapps.cisco.com/security/center/softwarechecker.x) maps a release to the advisories that affect it."
+      ]
+    },
+    {
+      "id": "netscaler",
+      "label": "Citrix NetScaler ADC / Gateway",
+      "cpe": [
+        "citrix:netscaler_application_delivery_controller",
+        "citrix:netscaler_gateway",
+        "citrix:application_delivery_controller",
+        "citrix:gateway"
+      ],
+      "kind": "ADC / VPN appliance",
+      "ports": [
+        443
+      ],
+      "checks": [
+        {
+          "platform": "appliance-cli",
+          "label": "Firmware version (CLI)",
+          "cmd": "show ns version",
+          "extract": "NS[0-9]+\\.[0-9]+: Build [0-9.]+"
+        }
+      ]
+    },
+    {
+      "id": "ivanti-cs",
+      "label": "Ivanti Connect Secure / Policy Secure",
+      "cpe": [
+        "ivanti:connect_secure",
+        "ivanti:policy_secure",
+        "pulsesecure:pulse_connect_secure"
+      ],
+      "kind": "VPN appliance",
+      "ports": [
+        443
+      ],
+      "checks": [
+        {
+          "platform": "web-ui",
+          "label": "Version in the admin console",
+          "cmd": "System → Maintenance → Platform shows the running version."
+        },
+        {
+          "platform": "web-ui",
+          "label": "Ivanti Integrity Checker Tool (ICT)",
+          "cmd": "Run the latest ICT from the Ivanti support portal and review its result for unexpected or modified files."
+        }
+      ]
+    },
+    {
+      "id": "esxi",
+      "label": "VMware ESXi",
+      "cpe": [
+        "vmware:esxi"
+      ],
+      "kind": "hypervisor",
+      "checks": [
+        {
+          "platform": "appliance-cli",
+          "label": "Version and build (ESXi shell)",
+          "cmd": "vmware -vl",
+          "extract": "ESXi [0-9]+(\\.[0-9]+)+"
+        },
+        {
+          "platform": "appliance-cli",
+          "label": "Version (esxcli)",
+          "cmd": "esxcli system version get"
+        }
+      ]
+    },
+    {
+      "id": "vcenter",
+      "label": "VMware vCenter Server",
+      "cpe": [
+        "vmware:vcenter_server"
+      ],
+      "kind": "virtualization management",
+      "ports": [
+        443
+      ],
+      "checks": [
+        {
+          "platform": "appliance-cli",
+          "label": "vpxd version (appliance shell)",
+          "cmd": "vpxd -v",
+          "extract": "[0-9]+(\\.[0-9]+)+"
+        },
+        {
+          "platform": "web-ui",
+          "label": "Version in the VAMI",
+          "cmd": "https://<vcenter>:5480 → Summary shows the version and build."
+        }
+      ]
+    },
+    {
+      "id": "jenkins",
+      "label": "Jenkins",
+      "cpe": [
+        "jenkins:jenkins"
+      ],
+      "kind": "CI server",
+      "ports": [
+        8080,
+        443
+      ],
+      "checks": [
+        {
+          "platform": "network",
+          "label": "Version header",
+          "cmd": "curl -skI https://{host}/login | grep -i '^x-jenkins:'",
+          "extract": "[0-9]+\\.[0-9]+(\\.[0-9]+)?"
+        }
+      ]
+    },
+    {
+      "id": "gitlab",
+      "label": "GitLab",
+      "cpe": [
+        "gitlab:gitlab"
+      ],
+      "kind": "DevOps platform",
+      "ports": [
+        443
+      ],
+      "checks": [
+        {
+          "platform": "linux",
+          "label": "Version (Omnibus install)",
+          "cmd": "sudo gitlab-rake gitlab:env:info 2>/dev/null | grep -A2 'GitLab information'"
+        },
+        {
+          "platform": "web-ui",
+          "label": "Version in the UI",
+          "cmd": "Help (?) menu → Help shows the version to signed-in users."
+        }
+      ]
+    },
+    {
+      "id": "confluence",
+      "label": "Atlassian Confluence",
+      "cpe": [
+        "atlassian:confluence_data_center",
+        "atlassian:confluence_server",
+        "atlassian:confluence"
+      ],
+      "kind": "wiki",
+      "ports": [
+        8090,
+        443
+      ],
+      "checks": [
+        {
+          "platform": "web-ui",
+          "label": "Version in administration",
+          "cmd": "Administration → General Configuration → System Information shows the version."
+        }
+      ]
+    }
+  ]
+}

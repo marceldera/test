@@ -82,3 +82,18 @@
 .plan-cmd { background: #050f1b; border: 1px solid var(--border); border-radius: 6px; padding: 14px 16px; overflow-x: auto; font: 14px/1.55 var(--mono); color: #d6e6f7; white-space: pre; }
 .disclaimer p { font-size: 15px; }
 #vv-results td:first-child input { width: 20px; height: 20px; accent-color: var(--corp); }
+
+.playbook { margin-top: 18px; }
+.playbook h3 { font-size: 20px; }
+.pbk-target { display: grid; gap: 6px; margin: 12px 0 6px; font-size: 14px; color: var(--muted); }
+.pbk-target input { min-height: 44px; background: var(--panel); color: var(--text); border: 1px solid var(--border); border-radius: 4px; padding: 0 12px; font: 15px var(--mono); max-width: 520px; }
+.stage { border-top: 1px solid var(--border); padding-top: 14px; margin-top: 16px; }
+.stage h4 { font-size: 17px; margin: 0 0 2px; color: var(--accent); }
+.step { background: var(--panel); border: 1px solid var(--border); border-radius: 6px; padding: 12px 14px; margin: 10px 0; }
+.step .chips { margin: 6px 0 8px; }
+.cmdrow { display: flex; gap: 8px; align-items: flex-start; }
+.cmdrow pre { flex: 1; margin: 0; white-space: pre-wrap; word-break: break-word; }
+.pn { font-size: 14px; margin: 6px 0 0; color: var(--muted); }
+.pn b { color: var(--text); }
+.dl-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+@media (max-width: 600px) { .cmdrow { flex-direction: column; } }

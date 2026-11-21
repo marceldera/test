@@ -176,6 +176,7 @@
       ])
     ]));
 
+    d.appendChild(renderPlaybook(r));
     var left = el("div"), right = el("div");
     d.appendChild(el("div", { cls: "vv-grid" }, [left, right]));
 
@@ -205,35 +206,6 @@
       aff.appendChild(el("p", { cls: "muted", text: "“< X” means versions before X are listed as vulnerable. Confirm the fixed version in the vendor advisory — backports can differ." }));
     }
     left.appendChild(aff);
-
-    // validation panel
-    var vp = el("section", { cls: "card", "aria-labelledby": "vp-h" }, [el("h3", { id: "vp-h", text: "Validation methods" })]);
-    if (!r.detections.length) {
-      vp.appendChild(el("p", { text: "No reliable public detection check is indexed for this CVE." }));
-      vp.appendChild(el("p", { cls: "muted", text: "Validate through inventory: compare installed versions (from the asset owner, package manager or management console) with the vendor’s fixed versions." }));
-    }
-    r.detections.forEach(function (x) {
-      var chips = [
-        el("span", { cls: "chip" + (x.reviewStatus === "reviewed" ? " det" : x.reviewStatus === "rejected" ? " kev" : ""),
-          text: x.reviewStatus === "reviewed" ? "Reviewed by Aegis " + (x.lastReviewed || "") : x.reviewStatus === "rejected" ? "Rejected by Aegis" : "Not reviewed by Aegis" }),
-        el("span", { cls: "chip" + (x.invasiveness === "intrusive" ? " kev" : ""), text: x.invasiveness === "intrusive" ? "Intrusive — needs approval" :
-          x.invasiveness === "passive" ? "Passive" : "Active request · not tagged intrusive" }),
-        x.outOfBand ? el("span", { cls: "chip exp", text: "Out-of-band callback" }) : null,
-        x.upstreamVerified ? el("span", { cls: "chip", text: "Publisher-verified" }) : null,
-        x.protocol ? el("span", { cls: "chip", text: x.protocol }) : null
-      ];
-      var title = { nuclei: "Nuclei template", "nmap-nse": "Nmap NSE script", "vendor-script": "Vendor detection script",
-        "config-check": "Configuration check", "authenticated-check": "Authenticated check", manual: "Manual verification" }[x.method] || x.method;
-      vp.appendChild(el("div", { cls: "det" }, [
-        el("h4", { text: title + (x.name ? " — " + x.name : "") }),
-        el("div", { cls: "chips" }, chips),
-        x.path ? el("p", { cls: "mono muted", text: x.path }) : null,
-        x.reviewNote ? el("p", { text: x.reviewNote }) : null,
-        el("p", { cls: "muted" }, [x.publisher || "", x.url ? " · " : "", x.url ? link(x.url, "View source") : null])
-      ]));
-    });
-    vp.appendChild(el("p", { cls: "muted" }, ["Only run checks against systems you own or are authorized to assess. ", el("a", { href: "#safe", text: "How to validate safely" })]));
-    left.appendChild(vp);
 
     // priority calculator (right)
     var expSel = el("select", { id: "pc-exp" }, [["unknown", "Unknown"], ["internet", "Internet-facing"], ["internal", "Internal only"], ["none", "Not deployed"]]
@@ -325,6 +297,100 @@
     var done = function () { btn.textContent = "Copied"; setTimeout(function () { btn.textContent = "Copy"; }, 1500); };
     if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(done, function () { btn.textContent = "Copy failed"; });
     else btn.textContent = "Copy unavailable";
+  }
+
+  // ------------------------------------------------------------------ validation playbook
+  var ctx = { products: [], playbooks: {} };
+  function download(name, text, type) {
+    var blob = new Blob([text], { type: type || "text/plain" });
+    var u = URL.createObjectURL(blob), a = el("a", { href: u, download: name });
+    document.body.appendChild(a); a.click(); document.body.removeChild(a); setTimeout(function () { URL.revokeObjectURL(u); }, 1000);
+  }
+  function validTarget() { var t = (opts.target || "").trim(); return t && TARGET_RE.test(t) ? t : ""; }
+  function chip(text, cls) { return el("span", { cls: "chip" + (cls ? " " + cls : ""), text: text }); }
+
+  function renderPlaybook(r) {
+    var P = window.TWPlaybook, m = P.build(r, ctx);
+    var sec = el("section", { cls: "card playbook", id: "playbook", "aria-labelledby": "pbk-h" });
+    sec.appendChild(el("h3", { id: "pbk-h", text: "Validation playbook" }));
+    sec.appendChild(el("div", { cls: "chips" }, [
+      m.curated ? chip("Reviewed by " + m.curated.reviewedBy + " · " + m.curated.lastReviewed, "det") : chip("Generated — not CVE-specific review", ""),
+      chip(m.groups.length + " affected product" + (m.groups.length === 1 ? "" : "s"), ""),
+      chip(r.detections.length ? r.detections.length + " public detection check" + (r.detections.length > 1 ? "s" : "") : "No public detection check", r.detections.length ? "det" : "")
+    ]));
+    sec.appendChild(el("p", { cls: "muted", text: "Ordered from least to most invasive. Work top to bottom and stop when you have enough evidence. Version + configuration evidence from steps 1–2 usually validates a CVE without probing anything. Run only against systems you own or are authorized to test." }));
+    if (m.curated) {
+      sec.appendChild(el("p", { text: m.curated.summary }));
+      if (m.curated.conditions) sec.appendChild(el("div", null, [el("strong", { text: "Vulnerable when all of these are true:" }),
+        el("ul", { cls: "plain" }, m.curated.conditions.map(function (c) { return el("li", { text: c }); }))]));
+      if (m.curated.fixedVersions) sec.appendChild(el("div", { cls: "tbl-wrap" }, [el("table", null, [
+        el("caption", { text: "Affected and fixed versions" }),
+        el("thead", null, [el("tr", null, ["Product", "Affected", "Fixed"].map(function (h) { return el("th", { scope: "col", text: h }); }))]),
+        el("tbody", null, m.curated.fixedVersions.map(function (f) { return el("tr", null, [el("td", { text: f.product }), el("td", { cls: "mono", text: f.affected || "" }), el("td", { cls: "mono", text: f.fixed })]); }))])]));
+    } else {
+      sec.appendChild(el("p", { cls: "notice", text: "No Aegis-reviewed playbook for this CVE yet. The steps below come from the NVD affected-product data, the Aegis product library and public detection checks. Read the vendor advisory for configuration prerequisites and fixed versions." }));
+    }
+
+    // target (local only)
+    var tgt = el("input", { type: "text", id: "pbk-target", autocomplete: "off", spellcheck: "false", placeholder: "https://app.example.com or 203.0.113.10", value: opts.target });
+    var tmsg = el("span", { cls: "muted" });
+    sec.appendChild(el("div", { cls: "pbk-target" }, [el("label", { "for": "pbk-target", text: "Target for network steps (optional; stays in your browser and fills HOST/TARGET in the commands)" }), tgt, tmsg]));
+
+    if (m.others.length) sec.appendChild(el("p", { cls: "muted", text: "Also listed by NVD — check with the vendor or distribution advisory: " +
+      m.others.map(function (g) { return g.name + " (" + g.ranges.join("; ") + ")"; }).join(", ") + "." }));
+    var body = el("div");
+    sec.appendChild(body);
+    function draw() {
+      body.textContent = "";
+      var t = validTarget();
+      tmsg.textContent = opts.target && !t ? " Use a single hostname, IP or http(s) URL." : "";
+      P.STAGES.forEach(function (stg) {
+        var list = m.steps[stg[0]];
+        var box = el("div", { cls: "stage" }, [el("h4", { text: stg[1] }), el("p", { cls: "muted", text: stg[2] })]);
+        if (!list.length) box.appendChild(el("p", { cls: "muted", text: stg[0] === "configuration" ? "No CVE-specific condition is recorded. Check the vendor advisory for required features, modules or exposed interfaces." :
+          stg[0] === "detection" ? "No public Nuclei template or Nmap script is indexed for this CVE. Validate with version + configuration evidence." :
+          stg[0] === "mitigation" ? "Apply the vendor's fixed version (see the references); use vendor-documented workarounds only." : "No step." }));
+        list.forEach(function (st) {
+          var cmd = P.fill(st.cmd, t), isText = st.platform === "web-ui" || (st.platform === "appliance-cli" && /→/.test(st.cmd));
+          var cp = el("button", { type: "button", cls: "btn secondary copy", text: "Copy" });
+          cp.addEventListener("click", function () { copy(cmd, cp); });
+          var src = { curated: ["Reviewed by Aegis", "det"], library: ["Aegis product library", ""], generic: ["Generic search — adjust the name", "exp"],
+            nuclei: [st.reviewStatus === "reviewed" ? "Nuclei · reviewed by Aegis" : "Nuclei · community, not reviewed", st.reviewStatus === "reviewed" ? "det" : ""],
+            "nmap-nse": ["Nmap official script", ""] }[st.source] || ["", ""];
+          box.appendChild(el("div", { cls: "step" }, [
+            el("div", { cls: "step-h" }, [el("strong", { text: st.title })]),
+            el("div", { cls: "chips" }, [chip(P.PLATFORM[st.platform] || st.platform),
+              chip(st.invasiveness === "intrusive" ? "Intrusive — needs approval" : st.invasiveness === "passive" ? "Read-only" : "Non-intrusive probe", st.invasiveness === "intrusive" ? "kev" : ""),
+              src[0] ? chip(src[0], src[1]) : null, st.outOfBand ? chip("Out-of-band callback", "exp") : null]),
+            isText ? el("p", { text: cmd }) : el("div", { cls: "cmdrow" }, [el("pre", { cls: "plan-cmd" }, [el("code", { text: cmd })]), cp]),
+            el("p", { cls: "pn" }, [el("b", { text: "Positive: " }), st.positive]),
+            el("p", { cls: "pn" }, [el("b", { text: "Negative: " }), st.negative]),
+            st.url ? el("p", { cls: "muted" }, [link(st.url, "Review the check source before running it")]) : null
+          ]));
+        });
+        body.appendChild(box);
+      });
+      if (m.curated && m.curated.mitigations) body.appendChild(el("div", { cls: "stage" }, [el("h4", { text: "Mitigation notes" }),
+        el("ul", { cls: "plain" }, m.curated.mitigations.map(function (x) { return el("li", { text: x }); }))]));
+      if (m.curated && m.curated.notes) body.appendChild(el("ul", { cls: "plain muted" }, m.curated.notes.map(function (x) { return el("li", { text: x }); })));
+      body.appendChild(el("div", { cls: "stage" }, [el("h4", { text: "Decide and record" }), el("div", { cls: "tbl-wrap" }, [el("table", null, [
+        el("thead", null, [el("tr", null, [el("th", { scope: "col", text: "Finding" }), el("th", { scope: "col", text: "Status" })])]),
+        el("tbody", null, P.DECISION.map(function (x) { return el("tr", null, [el("td", { text: x[0] }), el("td", { text: x[1] })]); }))])])]));
+      if (m.curated) body.appendChild(el("p", { cls: "muted" }, ["Playbook sources: "].concat(m.curated.sources.map(function (u, i) { return el("span", null, [i ? " · " : "", link(u, u.replace(/^https:\/\//, "").split("/")[0])]); }))));
+    }
+    tgt.addEventListener("input", function () { opts.target = tgt.value; draw(); });
+    draw();
+
+    var dmd = el("button", { type: "button", cls: "btn", text: "Download playbook checklist (.md)" });
+    dmd.addEventListener("click", function () { download(r.cve + "-validation-playbook.md", P.md([m], { target: validTarget() }), "text/markdown"); });
+    var dsh = el("button", { type: "button", cls: "btn secondary", text: "Download Linux check script (.sh)" });
+    dsh.addEventListener("click", function () { download("aegis-validate-" + r.cve + ".sh", P.bash([m], {}), "text/x-shellscript"); });
+    var ps = P.ps1([m]);
+    var dps = ps ? el("button", { type: "button", cls: "btn secondary", text: "Download Windows check script (.ps1)" }) : null;
+    if (dps) dps.addEventListener("click", function () { download("aegis-validate-" + r.cve + ".ps1", ps, "text/plain"); });
+    sec.appendChild(el("p", { cls: "dl-row" }, [dmd, " ", dsh, dps ? " " : null, dps]));
+    sec.appendChild(el("p", { cls: "muted", text: "The check scripts are read-only: they run only local version, package and configuration queries, make no network connections and change nothing. Review them before running." }));
+    return sec;
   }
 
   // ------------------------------------------------------------------ controlled test plan
@@ -436,6 +502,18 @@
       .concat([el("label", { "for": "plan-op", text: "Tester name (required, for your record)" }), op,
                el("label", { "for": "plan-ref", text: "Authorization reference (optional)" }), ref])));
 
+    var models = rows.filter(function (x) { return !x.r.missing; }).map(function (x) { return window.TWPlaybook.build(x.r, ctx); });
+    if (models.length) {
+      var b1 = el("button", { type: "button", cls: "btn secondary", text: "Download combined playbook (.md)" });
+      b1.addEventListener("click", function () { download("aegis-validation-playbook-" + new Date().toISOString().slice(0, 10) + ".md", window.TWPlaybook.md(models, { target: validTarget(), tester: opts.operator.trim() }), "text/markdown"); });
+      var b2 = el("button", { type: "button", cls: "btn secondary", text: "Download combined Linux check script (.sh)" });
+      b2.addEventListener("click", function () { download("aegis-validate-plan.sh", window.TWPlaybook.bash(models, {}), "text/x-shellscript"); });
+      var ps = window.TWPlaybook.ps1(models), b3 = null;
+      if (ps) { b3 = el("button", { type: "button", cls: "btn secondary", text: "Download combined Windows script (.ps1)" }); b3.addEventListener("click", function () { download("aegis-validate-plan.ps1", ps); }); }
+      root.appendChild(el("div", { cls: "card" }, [el("h3", { text: "Validation playbooks for this plan" }),
+        el("p", { cls: "muted", text: "Step-by-step checklist for every selected CVE (inventory → configuration → exposure → detection → remediation → verification), plus read-only scripts that collect version and configuration evidence on each host." }),
+        el("p", { cls: "dl-row" }, [b1, " ", b2, b3 ? " " : null, b3])]));
+    }
     var out = el("div", { id: "plan-out", "aria-live": "polite" });
     root.appendChild(out);
 
@@ -517,9 +595,13 @@
     getJSON("data/cves/index.json").catch(function () { return null; }),
     getJSON("data/cves/epss.json").catch(function () { return { scores: {} }; }),
     getJSON("data/cves/status.json").catch(function () { return null; }),
-    getJSON("data/latest.json").catch(function () { return null; })
+    getJSON("data/latest.json").catch(function () { return null; }),
+    getJSON("data/validation/products.json").catch(function () { return { products: [] }; }),
+    getJSON("data/validation/playbooks.json").catch(function () { return { playbooks: [] }; })
   ]).then(function (res) {
     idx = res[0]; epss = res[1] || { scores: {} }; status = res[2];
+    ctx.products = (res[4] && res[4].products) || [];
+    (res[5] && res[5].playbooks || []).forEach(function (p) { ctx.playbooks[p.cve] = p; });
     if (status && res[3]) status.latestEdition = res[3].edition;
     if (idx) F = idx.fields;
     renderStatus();

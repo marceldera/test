@@ -9,6 +9,7 @@ from tw.common import DATA_DIR, REPO_ROOT, safe_url  # noqa: E402
 from tw.validate import validate_brief, validate_month, validate_relationships  # noqa: E402
 from tw.catalog import validate_record  # noqa: E402
 from tw.detections import load_reviews  # noqa: E402
+from tw.playbooks import load_playbooks, load_products  # noqa: E402
 
 
 def main() -> int:
@@ -33,6 +34,11 @@ def main() -> int:
         load_reviews(json.loads((DATA_DIR / "validation" / "reviews.json").read_text()))
     except (ValueError, FileNotFoundError) as exc:
         errs.append(f"reviews.json: {exc}")
+    for name, loader, key in (("products.json", load_products, "products"), ("playbooks.json", load_playbooks, "playbooks")):
+        try:
+            loader(json.loads((DATA_DIR / "validation" / name).read_text()))
+        except (ValueError, FileNotFoundError) as exc:
+            errs.append(f"{name}: {exc}")
     cfg = json.loads((REPO_ROOT / "threatwatch" / "subscription-config.json").read_text())
     if set(cfg) - {"enabled", "signupUrl", "provider", "note"}:
         errs.append("subscription-config.json contains unexpected keys (no secrets allowed)")

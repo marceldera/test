@@ -1,0 +1,163 @@
+{
+  "note": "Aegis-curated validation playbooks. Every playbook needs reviewedBy, lastReviewed and https sources. {host} is replaced with the analyst's target in the page.",
+  "playbooks": [
+    {
+      "cve": "CVE-2026-123007",
+      "reviewedBy": "Aegis Cyber Solutions",
+      "lastReviewed": "2026-11-21",
+      "summary": "HTTP/2 flow-control window overflow in NGINX (heap overflow in a worker process; possible remote code execution). Exposure requires an affected NGINX build AND HTTP/2 enabled on a listener reachable by the attacker. Data-plane only.",
+      "conditions": [
+        "An affected NGINX Open Source, NGINX Plus or NGINX-based F5 product version is running (see fixed versions).",
+        "HTTP/2 is enabled on at least one server block ('http2 on;' or 'listen … http2'), or via an ingress controller setting.",
+        "The HTTP/2 listener is reachable by an attacker (internet-facing raises priority, but internal exposure still counts)."
+      ],
+      "fixedVersions": [
+        {
+          "product": "NGINX Open Source 1.31.x (mainline)",
+          "affected": "1.31.0 – 1.31.8",
+          "fixed": "1.31.9"
+        },
+        {
+          "product": "NGINX Open Source 1.30.x and earlier",
+          "affected": "1.9.5 – 1.30.6",
+          "fixed": "1.30.7"
+        },
+        {
+          "product": "NGINX Plus 37.1.x – 37.2.x",
+          "affected": "37.1.0 – 37.2.0.1",
+          "fixed": "37.3.0.1"
+        },
+        {
+          "product": "NGINX Plus 37.0.x",
+          "affected": "37.0.0 – 37.0.7.1",
+          "fixed": "37.0.8.1"
+        },
+        {
+          "product": "NGINX Plus R34 – R36",
+          "affected": "R34, R35, R36",
+          "fixed": "No fixed release listed by Rapid7 — follow F5 K000163926"
+        },
+        {
+          "product": "F5 NGINX Ingress Controller",
+          "affected": "5.0.0 – <5.8.0 (and listed 3.7.x / 4.0.x builds)",
+          "fixed": "5.8.0 (first version outside the NVD range — confirm in F5 K000163926)"
+        },
+        {
+          "product": "F5 NGINX Gateway Fabric",
+          "affected": "2.0.0 – <2.9.0; 1.5.0 – 1.6.2",
+          "fixed": "2.9.0 (first version outside the NVD range — confirm in F5 K000163926)"
+        },
+        {
+          "product": "F5 NGINX App Protect WAF",
+          "affected": "5.9.0 – <5.16.2; 5.4.0 – 5.8.0; 4.12.0 – 4.16.0",
+          "fixed": "5.16.2 (first version outside the NVD range — confirm in F5 K000163926)"
+        },
+        {
+          "product": "Distribution packages (RHEL, Ubuntu, Debian)",
+          "affected": "Per distribution advisory",
+          "fixed": "Fixed package release in the Red Hat / Ubuntu advisory (backported; the upstream version string may not change)"
+        }
+      ],
+      "steps": [
+        {
+          "stage": "inventory",
+          "platform": "linux",
+          "invasiveness": "passive",
+          "title": "Find every running NGINX master process on the host",
+          "cmd": "ps -eo pid,user,args | grep -E '[n]ginx: master'",
+          "positive": "One line per NGINX instance. Check the version and config of each (containers included).",
+          "negative": "No NGINX master process on this host. Check containers and Kubernetes separately."
+        },
+        {
+          "stage": "configuration",
+          "platform": "linux",
+          "invasiveness": "passive",
+          "title": "Is HTTP/2 enabled in the effective configuration?",
+          "cmd": "sudo nginx -T 2>/dev/null | grep -nE '^[[:space:]]*http2[[:space:]]+on[[:space:]]*;|listen[[:space:]][^;]*[[:space:]]http2'",
+          "positive": "Matching lines mean HTTP/2 is enabled. With an affected version, record as Validated (version + configuration).",
+          "negative": "No output means HTTP/2 isn't enabled in this instance's configuration. Run it for every instance; nginx -T includes all included files."
+        },
+        {
+          "stage": "configuration",
+          "platform": "kubernetes",
+          "invasiveness": "passive",
+          "title": "Ingress controller HTTP/2 settings",
+          "cmd": "kubectl get configmap -A -o yaml | grep -nE '^[[:space:]]*(http2|use-http2):'",
+          "positive": "'http2: \"true\"' (F5 NGINX Ingress Controller) or 'use-http2: \"true\"' (community ingress-nginx) means HTTP/2 is on.",
+          "negative": "No key found: the controller default applies. Community ingress-nginx enables HTTP/2 by default; F5 NGINX Ingress Controller does not. Confirm in your controller's documentation."
+        },
+        {
+          "stage": "exposure",
+          "platform": "network",
+          "invasiveness": "safe-probe",
+          "title": "Does the listener negotiate HTTP/2? (curl)",
+          "cmd": "curl -sk -o /dev/null -w '%{http_version}\\n' --http2 https://{host}/",
+          "positive": "'2' means HTTP/2 is negotiated and reachable from where you ran it.",
+          "negative": "'1.1' means HTTP/2 isn't offered on this listener. Repeat for every HTTPS port and virtual host."
+        },
+        {
+          "stage": "exposure",
+          "platform": "network",
+          "invasiveness": "safe-probe",
+          "title": "Does the listener advertise h2 via TLS ALPN? (Nmap)",
+          "cmd": "nmap -Pn -p 443 --script tls-alpn {host}",
+          "positive": "'h2' in the tls-alpn output means HTTP/2 is offered.",
+          "negative": "Only http/1.1 is listed: HTTP/2 isn't offered on that port."
+        },
+        {
+          "stage": "exposure",
+          "platform": "network",
+          "invasiveness": "safe-probe",
+          "title": "Does the listener accept h2? (OpenSSL, no extra tools)",
+          "cmd": "openssl s_client -connect {host}:443 -servername {host} -alpn h2 </dev/null 2>/dev/null | grep -i 'ALPN protocol'",
+          "positive": "'ALPN protocol: h2' means HTTP/2 is accepted.",
+          "negative": "'No ALPN negotiated' means HTTP/2 isn't offered over TLS on this port."
+        },
+        {
+          "stage": "detection",
+          "platform": "linux",
+          "invasiveness": "passive",
+          "title": "Look for worker crashes that may indicate exploitation attempts",
+          "cmd": "sudo grep -hE 'worker process [0-9]+ exited on signal (6|11)' /var/log/nginx/error.log* 2>/dev/null | tail -20",
+          "positive": "Repeated worker crashes (signal 11 = segmentation fault) on an affected, HTTP/2-enabled build are a possible attack indicator. Escalate to incident response and preserve logs.",
+          "negative": "No crashes logged. This does not prove no attempt occurred (logs may rotate or go elsewhere)."
+        },
+        {
+          "stage": "mitigation",
+          "platform": "linux",
+          "invasiveness": "passive",
+          "title": "After upgrading or changing configuration, validate and reload",
+          "cmd": "sudo nginx -t && sudo systemctl reload nginx",
+          "positive": "'syntax is ok' / 'test is successful', then a clean reload. Upgrade to a fixed version per the table. If F5 K000163926 lists it as a mitigation, disabling HTTP/2 ('http2 off;' / removing 'http2' from listen) reduces exposure until you can patch.",
+          "negative": "A config test error means the reload was not applied. Fix the reported line first."
+        },
+        {
+          "stage": "verification",
+          "platform": "linux",
+          "invasiveness": "passive",
+          "title": "Confirm the fixed version is the one actually running",
+          "cmd": "nginx -v 2>&1; ps -eo pid,lstart,args | grep -E '[n]ginx: master'",
+          "positive": "A fixed version, and a master process started after the upgrade, means remediated. Re-run the HTTP/2 checks to record the final state.",
+          "negative": "An old version, or a master process older than the upgrade, means the new binary isn't running yet (restart required)."
+        }
+      ],
+      "mitigations": [
+        "Upgrade to the fixed release for each affected product (see table).",
+        "Until patched, reduce exposure: restrict access to HTTP/2 listeners where possible, and follow any interim mitigation in F5 K000163926.",
+        "Enable or keep ASLR on (default on modern Linux); the description notes code execution is easier where ASLR is disabled or bypassed."
+      ],
+      "notes": [
+        "No public Nuclei template or official Nmap script is indexed for this CVE. Rapid7 states InsightVM/Nexpose have an unauthenticated check (19 Nov 2026 content).",
+        "Aegis does not provide or reference exploit code. Version + configuration + exposure is enough to validate this CVE."
+      ],
+      "sources": [
+        "https://nginx.org/en/CHANGES",
+        "https://www.rapid7.com/blog/post/ve-cve-2026-123007-critical-nginx-http-2-integer-underflow-leads-to-rce-fixed/",
+        "https://my.f5.com/manage/s/article/K000163926",
+        "https://nvd.nist.gov/vuln/detail/CVE-2026-123007",
+        "https://ubuntu.com/security/CVE-2026-123007",
+        "https://access.redhat.com/security/cve/cve-2026-123007"
+      ]
+    }
+  ]
+}

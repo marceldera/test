@@ -128,6 +128,17 @@ High asset criticality raises one tier. Low criticality lowers one tier (never f
 
 **Disclaimer** (`validate.html#disclaimer`): authorized use only (CFAA), no scanning by Aegis, operational risk, results are signals, third-party templates, no warranty. Have counsel review it before the live launch.
 
+**Validation playbooks** (CVE pages and test plan). Every CVE page builds a six-stage playbook: 1 inventory → 2 configuration → 3 exposure → 4 detection → 5 mitigation → 6 verification. Each step shows a command, platform, invasiveness, and what a positive or negative result means. The page ends with a decision table using the addendum statuses (Not affected / Informational / Validated / Suspected / Escalate / Remediated / Accepted Risk). Sources of steps:
+
+- `threatwatch/data/validation/playbooks.json`: **Aegis-reviewed, CVE-specific** steps (conditions, fixed versions, config checks, exposure checks, log indicators, mitigations). Requires `reviewedBy`, `lastReviewed` and https `sources`. Stages: inventory|configuration|exposure|detection|mitigation|verification. Platforms: linux|windows|macos|kubernetes|container|appliance-cli|web-ui|network. `{host}` / `{target}` are filled from the analyst's target in the browser.
+- `threatwatch/data/validation/products.json`: **product library**, read-only version commands per CPE `vendor:product` (25 products, including the NGINX family, Apache, OpenSSH, OpenSSL, Windows, Exchange, FortiOS, PAN-OS, IOS XE, NetScaler, Ivanti, ESXi/vCenter, Jenkins, GitLab and Confluence). `extract` is a regex the Linux script uses to pull the version and compare it with NVD's affected ranges.
+- Public checks: Nuclei templates and **official Nmap NSE scripts** (indexed from `nmap/nmap` `scripts/*.nse` by declared CVE IDs; `intrusive`/`dos`/`exploit`/`brute` categories are marked intrusive).
+- Generic fallback for products not in the library (package or program name search, OS release). Suppressed when an Aegis-reviewed playbook exists.
+
+Downloads: checklist (`.md`), **read-only Linux script** (`.sh`: local version, package and config queries only; evaluates versions against affected ranges with `sort -V`; makes no network connections) and **read-only Windows script** (`.ps1`: OS build/UBR evaluated against the fixed build for the host's own release line). The test plan offers combined versions for all selected CVEs.
+
+To add a playbook: copy the CVE-2026-123007 entry in `playbooks.json`, write steps from the vendor advisory, test every command on a lab system, then commit. A malformed entry blocks the run and the last good data stays live.
+
 **Badges:** KEV-listed · High EPSS (≥ 95th percentile) · Critical CVSS (≥ 9.0) · Public exploit reported (NVD reference tagged *Exploit*) · Vendor fix/mitigation (NVD reference tagged *Patch* or *Mitigation*). Each is shown separately; none is treated as proof of another.
 
 ## Failure handling

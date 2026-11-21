@@ -70,7 +70,7 @@ def parse_nvd_full(rec: dict) -> dict:
                 parts = str(m.get("criteria", "")).split(":")
                 if len(parts) < 6:
                     continue
-                vendor, product, version = parts[3], parts[4], parts[5]
+                part, vendor, product, version = parts[2], parts[3], parts[4], parts[5]
                 rng = []
                 if m.get("versionStartIncluding"):
                     rng.append(f">= {m['versionStartIncluding']}")
@@ -82,7 +82,7 @@ def parse_nvd_full(rec: dict) -> dict:
                     rng.append(f"< {m['versionEndExcluding']}")
                 if not rng:
                     rng.append("all versions" if version in ("*", "-") else f"= {version}")
-                item = {"vendor": vendor, "product": product, "versions": ", ".join(rng)}
+                item = {"vendor": vendor, "product": product, "versions": ", ".join(rng), "part": part}
                 if item not in affected:
                     if len(affected) >= 25:
                         truncated = True
@@ -110,8 +110,7 @@ def build_record(cve: str, nvd: dict | None, kev: dict | None, detections: list[
     fix_refs = [r for r in refs if set(r["tags"]) & {"Patch", "Mitigation"}][:6]
     vendor_refs = [r for r in refs if "Vendor Advisory" in r["tags"]][:6]
     affected = nvd.get("affected") or []
-    vendor = kev["vendor"] if kev else (affected[0]["vendor"].replace("_", " ").title() if affected else None)
-    product = kev["product"] if kev else (affected[0]["product"].replace("_", " ").title() if affected else None)
+    vendor, product = (kev["vendor"], kev["product"]) if kev else _primary(affected)
     return {
         "schemaVersion": SCHEMA_VERSION,
         "cve": cve,
@@ -143,6 +142,18 @@ def build_record(cve: str, nvd: dict | None, kev: dict | None, detections: list[
         "appearsIn": appears,
         "provenance": prov,
     }
+
+
+def _primary(affected: list[dict]) -> tuple[str | None, str | None]:
+    """Most-listed vendor/product, plus how many other products are affected."""
+    if not affected:
+        return None, None
+    from collections import Counter
+    pairs = Counter((a["vendor"], a["product"]) for a in affected)
+    (v, p), _ = pairs.most_common(1)[0]
+    others = len(pairs) - 1
+    nice = lambda x: x.replace("_", " ").title()  # noqa: E731
+    return nice(v), nice(p) + (f" (+{others} other product{'s' if others > 1 else ''})" if others else "")
 
 
 def index_row(r: dict) -> list:

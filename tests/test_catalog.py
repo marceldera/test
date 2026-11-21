@@ -95,7 +95,7 @@ class CatalogTests(unittest.TestCase):
         a = self.rec("CVE-2099-0001")
         self.assertTrue(a["exploitStatus"]["kevListed"])
         self.assertFalse(a["exploitStatus"]["publicExploitReference"])  # javascript: ref discarded
-        self.assertEqual(a["affected"], [{"vendor": "examplecorp", "product": "gateway", "versions": ">= 1.0, < 1.4.2"}])
+        self.assertEqual(a["affected"], [{"vendor": "examplecorp", "product": "gateway", "versions": ">= 1.0, < 1.4.2", "part": "a"}])
         d = a["detections"][0]
         self.assertEqual((d["invasiveness"], d["outOfBand"], d["upstreamVerified"], d["reviewStatus"]),
                          ("intrusive", True, True, "unreviewed"))
@@ -153,6 +153,49 @@ class CatalogTests(unittest.TestCase):
         st = json.loads((self.data / "cves" / "status.json").read_text())
         self.assertTrue(any("NVD sync failed" in w for w in st["warnings"]))
         self.assertTrue((self.data / "cves" / "2099" / "CVE-2099-0010.json").exists())  # cache kept
+
+
+NSE = """description = [[Checks for CVE.]]
+categories = {"vuln", "safe"}
+action = function(host, port)
+  local vuln = { IDS = {CVE = 'CVE-2099-0010'} }
+end
+"""
+
+
+class PlaybookTests(unittest.TestCase):
+    def setUp(self):
+        sys.path.insert(0, str(ROOT / "scripts"))
+
+    def test_nmap_index(self):
+        from tw.detections import index_nmap
+        with tempfile.TemporaryDirectory() as t:
+            d = Path(t) / "scripts"
+            d.mkdir()
+            (d / "http-vuln-cve2099-0011.nse").write_text('categories = {"vuln", "intrusive"}\n')
+            (d / "example-check.nse").write_text(NSE)
+            (d / "unrelated.nse").write_text('categories = {"safe"}\n')
+            idx = index_nmap(Path(t))
+        self.assertEqual(sorted(idx), ["CVE-2099-0010", "CVE-2099-0011"])
+        self.assertEqual(idx["CVE-2099-0010"][0]["invasiveness"], "safe-probe")
+        self.assertEqual(idx["CVE-2099-0011"][0]["invasiveness"], "intrusive")
+
+    def test_shipped_library_and_playbooks_valid(self):
+        from tw.playbooks import load_playbooks, load_products
+        prods = load_products(json.loads((ROOT / "threatwatch/data/validation/products.json").read_text()))
+        self.assertTrue(any("f5:nginx_open_source" in p["cpe"] for p in prods))
+        pbs = load_playbooks(json.loads((ROOT / "threatwatch/data/validation/playbooks.json").read_text()))
+        self.assertIn("CVE-2026-123007", pbs)
+
+    def test_playbook_rejects_missing_source_and_bad_stage(self):
+        from tw.playbooks import load_playbooks
+        base = {"cve": "CVE-2099-0001", "reviewedBy": "x", "lastReviewed": "2026-11-21", "sources": ["https://example.com"],
+                "steps": [{"stage": "exploit", "platform": "linux", "invasiveness": "passive", "title": "t",
+                           "cmd": "true", "positive": "p", "negative": "n"}]}
+        with self.assertRaisesRegex(ValueError, "stage must be one of"):
+            load_playbooks({"playbooks": [base]})
+        with self.assertRaisesRegex(ValueError, "https source"):
+            load_playbooks({"playbooks": [{**base, "sources": ["http://insecure"]}]})
 
 
 if __name__ == "__main__":

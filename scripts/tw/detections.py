@@ -64,6 +64,62 @@ def index_nuclei(root: Path, commit: str | None) -> dict[str, list[dict]]:
     return out
 
 
+NMAP_REPO = "https://github.com/nmap/nmap"
+_NSE_CVE = re.compile(r"CVE\s*=\s*['\"](CVE-\d{4}-\d{4,})['\"]")
+_NSE_FILE_CVE = re.compile(r"cve(\d{4})-(\d{4,})")
+_NSE_CATS = re.compile(r"^categories\s*=\s*\{([^}]*)\}", re.M)
+NSE_RISKY = {"intrusive", "dos", "exploit", "brute", "fuzzer", "malware"}
+
+
+def index_nmap(root: Path) -> dict[str, list[dict]]:
+    """Map CVE -> official Nmap NSE scripts that declare that CVE."""
+    out: dict[str, list[dict]] = {}
+    if not root or not root.is_dir():
+        return out
+    for path in sorted((root / "scripts").glob("*.nse")):
+        try:
+            text = path.read_text(encoding="utf-8", errors="replace")
+        except OSError:
+            continue
+        ids = set(_NSE_CVE.findall(text))
+        m = _NSE_FILE_CVE.search(path.stem)
+        if m:
+            ids.add(f"CVE-{m.group(1)}-{m.group(2)}")
+        if not ids:
+            continue
+        cm = _NSE_CATS.search(text)
+        cats = sorted({c.strip().strip("'\"") for c in cm.group(1).split(",")} - {""}) if cm else []
+        entry = {
+            "method": "nmap-nse",
+            "id": path.stem,
+            "name": path.stem,
+            "path": f"scripts/{path.name}",
+            "protocol": None,
+            "publisher": "Nmap Project (official NSE script)",
+            "url": f"{NMAP_REPO}/blob/master/scripts/{path.name}",
+            "templateSeverity": None,
+            "upstreamVerified": False,
+            "categories": cats,
+            "invasiveness": "intrusive" if set(cats) & NSE_RISKY else "safe-probe",
+            "outOfBand": False,
+            "reviewStatus": "unreviewed",
+            "lastReviewed": None,
+            "reviewNote": None,
+        }
+        for cve in ids:
+            if is_cve(cve):
+                out.setdefault(cve, []).append(entry)
+    return out
+
+
+def combine(*indexes: dict[str, list[dict]]) -> dict[str, list[dict]]:
+    out: dict[str, list[dict]] = {}
+    for idx in indexes:
+        for k, v in idx.items():
+            out.setdefault(k, []).extend(v)
+    return out
+
+
 def load_reviews(raw: Any) -> list[dict]:
     """Validate the Aegis-curated reviews file. Raises ValueError on bad entries."""
     if raw is None:
@@ -100,8 +156,8 @@ def merge(index: dict[str, list[dict]], reviews: list[dict]) -> dict[str, list[d
     for r in reviews:
         rows = merged.setdefault(r["cve"], [])
         target = None
-        if r["method"] == "nuclei" and r.get("path"):
-            target = next((x for x in rows if x["method"] == "nuclei" and x["path"] == r["path"]), None)
+        if r["method"] in ("nuclei", "nmap-nse") and r.get("path"):
+            target = next((x for x in rows if x["method"] == r["method"] and x["path"] == r["path"]), None)
         if target is None:
             target = {"method": r["method"], "id": r.get("id"), "name": r.get("name"), "path": r.get("path"),
                       "protocol": r.get("protocol"), "publisher": r.get("publisher") or "Aegis curated",
