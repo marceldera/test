@@ -1,0 +1,6 @@
+{
+  "enabled": false,
+  "signupUrl": null,
+  "provider": null,
+  "note": "Set enabled=true and an https signupUrl only after end-to-end double opt-in testing. Never put API keys or subscriber data here."
+}

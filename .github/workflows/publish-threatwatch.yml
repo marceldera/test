@@ -1,0 +1,85 @@
+name: Publish ThreatWatch
+
+# Target publication: ~07:00 America/New_York, every day.
+# GitHub cron is UTC and best-effort (runs are often 5–30 min late), so we fire
+# at 10:50 and 11:50 UTC and let the publisher's ET gate decide:
+#   EDT (UTC-4): 10:50 UTC = 06:50 ET → publishes; 11:50 run is a no-op.
+#   EST (UTC-5): 10:50 UTC = 05:50 ET → skipped;   11:50 UTC = 06:50 ET → publishes.
+# 13:35 and 15:35 UTC are catch-up retries if earlier runs failed or were dropped.
+# The publisher is idempotent: one edition per ET calendar day.
+on:
+  schedule:
+    - cron: "50 10,11 * * *"
+    - cron: "35 13,15 * * *"
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Publish even if today's edition exists"
+        type: boolean
+        default: false
+  pull_request:
+    paths: ["scripts/**", "tests/**", "threatwatch/**", ".github/workflows/publish-threatwatch.yml"]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: threatwatch-publish
+  cancel-in-progress: false
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      # TODO before merge: pin these actions to full commit SHAs.
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Unit tests (offline fixtures)
+        run: python -m unittest discover -s tests -v
+      - name: Validate committed public data
+        run: python scripts/validate_data.py
+
+  publish:
+    if: github.event_name != 'pull_request'
+    needs: test
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Build brief
+        id: build
+        env:
+          NVD_API_KEY: ${{ secrets.NVD_API_KEY }}
+        run: |
+          set +e
+          if [ "${{ inputs.force }}" = "true" ]; then python scripts/build_brief.py --force; else python scripts/build_brief.py; fi
+          echo "exit=$?" >> "$GITHUB_OUTPUT"
+      - name: Commit generated data
+        run: |
+          git config user.name "aegis-threatwatch-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add threatwatch/data
+          if git diff --cached --quiet; then echo "No data changes."; exit 0; fi
+          git commit -m "ThreatWatch: edition ${{ steps.build.outputs.edition || 'status update' }}"
+          git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
+          git push
+      - name: Fail if the quality gate blocked publication
+        if: steps.build.outputs.exit != '0'
+        run: |
+          echo "::error::ThreatWatch publication blocked — see 'Build brief' log. Last good edition remains live."
+          exit 1
+      # Phase E hook: send the email digest ONLY when published == 'true'.
+      # - name: Send digest
+      #   if: steps.build.outputs.published == 'true'
+      #   run: python scripts/send_digest.py
+      #   env: { ESP_API_KEY: ${{ secrets.ESP_API_KEY }} }

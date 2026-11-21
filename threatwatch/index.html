@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daily Zero-Day Intelligence Brief | Aegis ThreatWatch</title>
+<meta name="description" content="Free, public daily cyber threat intelligence brief from Aegis Cyber Solutions: newly exploited vulnerabilities, prioritized actions and sources. No account required.">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/tw.css">
+<script src="assets/tw-brief.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to the brief</a>
+
+<header class="tw-head">
+  <div class="tw-head-in">
+    <a class="brand" href="../" aria-label="Aegis Cyber Solutions — main website">
+      <svg width="28" height="32" viewBox="0 0 42 48" fill="none" aria-hidden="true">
+        <path d="M21 2L4 9V22C4 33 12 43 21 46C30 43 38 33 38 22V9L21 2Z" fill="url(#twsg)" stroke="rgba(47,127,255,0.5)" stroke-width="0.5"/>
+        <text x="21" y="31" text-anchor="middle" font-family="Exo 2" font-weight="800" font-size="18" fill="white">A</text>
+        <defs><linearGradient id="twsg" x1="21" y1="2" x2="21" y2="46" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#2f7fff"/><stop offset="100%" stop-color="#0a2060"/></linearGradient></defs>
+      </svg>
+      <span class="brand-txt"><b>AEGIS</b><span>Cyber Solutions · <em>ThreatWatch</em></span></span>
+    </a>
+    <nav aria-label="ThreatWatch">
+      <ul class="tw-nav">
+        <li><a class="home" href="../">← Aegis Home</a></li>
+        <li><a href="#brief" aria-current="page">Daily Brief</a></li>
+        <li><a href="#monthly">Monthly Summary</a></li>
+        <li><a href="map.html">Threat Map</a></li>
+        <li><a href="#subscribe">Subscribe</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <article id="brief" aria-labelledby="brief-title">
+    <header>
+      <div class="eyebrow">Daily Zero-Day Intelligence Brief</div>
+      <h1 id="brief-title">Today’s exploited-vulnerability brief</h1>
+      <p class="meta" id="brief-meta">Loading the latest edition…</p>
+      <div id="freshness" role="status"></div>
+      <div id="notices"></div>
+    </header>
+    <noscript><p class="notice">This page needs JavaScript to display the brief. The raw edition is available at <a href="data/latest.json">data/latest.json</a>.</p></noscript>
+    <div id="brief-body" aria-live="polite"></div>
+  </article>
+
+  <section id="monthly" aria-labelledby="monthly-title">
+    <h2 id="monthly-title"><span class="num">M</span>Monthly Intelligence Summary</h2>
+    <div id="monthly-body"><p class="muted">Loading…</p></div>
+  </section>
+
+  <section id="subscribe" aria-labelledby="subscribe-title">
+    <h2 id="subscribe-title"><span class="num">@</span>Free email updates</h2>
+    <div class="subscribe" id="subscribe-body">
+      <p>Every brief on this page is free to read with no account. Email updates are optional and will be offered once a double opt-in subscription service is live.</p>
+    </div>
+  </section>
+
+  <section id="methodology" aria-labelledby="method-title">
+    <h2 id="method-title"><span class="num">i</span>Methodology &amp; disclaimer</h2>
+    <p>ThreatWatch is generated from public sources — CISA’s Known Exploited Vulnerabilities catalog, FIRST EPSS and the NVD — with each field linked to its source. Fields a source doesn’t provide are shown as <em>Unknown</em>; nothing is estimated. Campaign, threat actor and industry analysis appears only when it has been reviewed by an analyst and carries cited evidence.</p>
+    <p>Priorities and response windows are guidance, not a substitute for your own risk assessment or policy. ThreatWatch never connects to, scans, or requests access to your systems. Corrections: <a href="mailto:info@aegisdefensecyber.com?subject=ThreatWatch%20correction">info@aegisdefensecyber.com</a>.</p>
+  </section>
+</main>
+
+<footer class="tw-foot">
+  <div class="tw-foot-in">
+    <span>© 2026 Aegis Cyber Solutions LLC · ThreatWatch is free and public.</span>
+    <nav aria-label="Footer">
+      <ul>
+        <li><a href="../">Return to main website</a></li>
+        <li><a href="#brief">Daily Brief</a></li>
+        <li><a href="map.html">Threat Map</a></li>
+        <li><a href="#methodology">Methodology</a></li>
+        <li><a href="mailto:info@aegisdefensecyber.com">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>

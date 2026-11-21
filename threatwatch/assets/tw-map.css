@@ -1,0 +1,35 @@
+.filters { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 12px; align-items: end; margin: 18px 0; padding: 16px; background: var(--content); border: 1px solid var(--border); border-radius: 6px; }
+.filters label { display: grid; gap: 4px; font-size: 13px; color: var(--muted); }
+.filters label.chk { display: flex; gap: 8px; align-items: center; min-height: 44px; }
+.filters input[type="checkbox"] { width: 20px; height: 20px; accent-color: var(--corp); }
+.map-grid { display: grid; grid-template-columns: 1fr; gap: 16px; margin-bottom: 36px; }
+.graph-wrap { margin: 0; background: var(--content); border: 1px solid var(--border); border-radius: 6px; padding: 10px; overflow-x: auto; }
+#graph { display: block; width: 100%; min-width: 620px; height: auto; }
+@media (max-width: 640px) { .graph-wrap { display: none; } }
+.node { cursor: pointer; }
+.node rect { fill: var(--panel); stroke: var(--border); stroke-width: 1; }
+.node text { fill: var(--text); font: 600 12px var(--font); pointer-events: none; }
+.node .k { fill: var(--muted); font: 500 9px var(--mono); letter-spacing: .08em; text-transform: uppercase; }
+.node:hover rect, .node:focus rect { stroke: var(--accent); }
+.node:focus { outline: none; }
+.node:focus-visible rect { stroke: var(--accent); stroke-width: 3; }
+.node.sel rect { stroke: var(--accent); stroke-width: 2.5; fill: #143352; }
+.node.dim { opacity: .25; }
+.edge { fill: none; stroke: #5d86ad; }
+.edge.exposure { stroke-dasharray: 5 4; stroke: #8a9bb0; }
+.edge.dim { opacity: .1; }
+.edge.hi { stroke: var(--accent); }
+.col-h { fill: var(--muted); font: 500 10px var(--mono); letter-spacing: .14em; text-transform: uppercase; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 13px; color: var(--muted); padding: 8px 4px 2px; }
+.lg { display: inline-block; width: 26px; height: 0; border-top: 2px solid #5d86ad; vertical-align: middle; margin-right: 4px; }
+.lg.dashed { border-top-style: dashed; border-color: #8a9bb0; }
+.lg.thick { border-top-width: 4px; }
+.lg.thin { border-top-width: 1px; }
+.details { background: var(--content); border: 1px solid var(--border); border-radius: 6px; padding: 16px; align-self: start; }
+.details h2 { border: 0; padding-top: 0; font-size: 18px; }
+.details h3 { font-size: 15px; margin-top: 14px; }
+.details ul { padding-left: 18px; margin: 4px 0 8px; font-size: 14px; }
+.details li { margin-bottom: 8px; }
+#rel-table td:nth-child(5) { white-space: nowrap; }
+#rel-table tr.row-btn { cursor: pointer; }
+#rel-table tr.row-btn:hover td { background: var(--panel); }

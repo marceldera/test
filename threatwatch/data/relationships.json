@@ -1,0 +1,444 @@
+{
+  "schemaVersion": 1,
+  "dataset": {
+    "status": "demo",
+    "label": "DEMONSTRATION DATA \u2014 fictional actors, campaigns and CVE-2099 identifiers. Not real threat attribution.",
+    "updatedAt": "2026-11-21T00:00:00Z"
+  },
+  "nodes": [
+    {
+      "id": "a1",
+      "type": "actor",
+      "label": "DEMO Actor Alpha",
+      "aliases": [
+        "Sample-01"
+      ],
+      "classification": "Financially motivated (demo)",
+      "motivation": "Financial",
+      "origin": null,
+      "profile": "https://example.com/demo/actor-alpha"
+    },
+    {
+      "id": "a2",
+      "type": "actor",
+      "label": "DEMO Actor Bravo",
+      "aliases": [
+        "Sample-02",
+        "Placeholder Bear"
+      ],
+      "classification": "State-linked (demo)",
+      "motivation": "Espionage",
+      "origin": null,
+      "profile": "https://example.com/demo/actor-bravo"
+    },
+    {
+      "id": "k1",
+      "type": "campaign",
+      "label": "DEMO Campaign Edge-Gate",
+      "timeframe": "2026-09 to 2026-11"
+    },
+    {
+      "id": "k2",
+      "type": "campaign",
+      "label": "DEMO Campaign Quiet-Lantern",
+      "timeframe": "2026-06 to 2026-10"
+    },
+    {
+      "id": "k3",
+      "type": "campaign",
+      "label": "DEMO Campaign Night-Ledger",
+      "timeframe": "2026-10 to 2026-11"
+    },
+    {
+      "id": "c1",
+      "type": "cve",
+      "label": "CVE-2099-1001",
+      "product": "ExampleCorp Edge Gateway",
+      "exploitation": "confirmed",
+      "kev": true,
+      "epss": 0.97,
+      "cvss": 9.8
+    },
+    {
+      "id": "c2",
+      "type": "cve",
+      "label": "CVE-2099-1002",
+      "product": "ExampleCorp File Transfer",
+      "exploitation": "confirmed",
+      "kev": true,
+      "epss": 0.88,
+      "cvss": 8.6
+    },
+    {
+      "id": "c3",
+      "type": "cve",
+      "label": "CVE-2099-1003",
+      "product": "SampleSoft Mail Server",
+      "exploitation": "reported",
+      "kev": false,
+      "epss": 0.41,
+      "cvss": 7.2
+    },
+    {
+      "id": "i1",
+      "type": "industry",
+      "label": "Healthcare"
+    },
+    {
+      "id": "i2",
+      "type": "industry",
+      "label": "Manufacturing"
+    },
+    {
+      "id": "i3",
+      "type": "industry",
+      "label": "Government"
+    },
+    {
+      "id": "i4",
+      "type": "industry",
+      "label": "Energy"
+    },
+    {
+      "id": "i5",
+      "type": "industry",
+      "label": "Financial Services"
+    },
+    {
+      "id": "g1",
+      "type": "geography",
+      "label": "North America",
+      "scope": "victim geography"
+    },
+    {
+      "id": "g2",
+      "type": "geography",
+      "label": "Western Europe",
+      "scope": "victim geography"
+    },
+    {
+      "id": "t1",
+      "type": "technique",
+      "label": "T1190 Exploit Public-Facing Application",
+      "url": "https://attack.mitre.org/techniques/T1190/"
+    },
+    {
+      "id": "t2",
+      "type": "technique",
+      "label": "T1486 Data Encrypted for Impact",
+      "url": "https://attack.mitre.org/techniques/T1486/"
+    },
+    {
+      "id": "t3",
+      "type": "technique",
+      "label": "T1078 Valid Accounts",
+      "url": "https://attack.mitre.org/techniques/T1078/"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "source": "a1",
+      "target": "k1",
+      "relation": "attributed",
+      "confidence": "moderate",
+      "why": "Demo: vendor report links the actor to the campaign infrastructure.",
+      "evidence": {
+        "type": "vendor report",
+        "url": "https://example.com/demo/report-1",
+        "reportDate": "2026-11-12",
+        "firstObserved": "2026-09-04",
+        "lastObserved": "2026-11-12",
+        "provenance": "Synthetic demonstration record"
+      }
+    },
+    {
+      "id": "e2",
+      "source": "a1",
+      "target": "k3",
+      "relation": "attributed",
+      "confidence": "low",
+      "why": "Demo: one unverified vendor claim.",
+      "evidence": {
+        "type": "single vendor claim",
+        "url": "https://example.com/demo/report-2",
+        "reportDate": "2026-11-15",
+        "firstObserved": "2026-10-20",
+        "lastObserved": "2026-11-15",
+        "provenance": "Synthetic demonstration record"
+      }
+    },
+    {
+      "id": "e3",
+      "source": "a2",
+      "target": "k2",
+      "relation": "attributed",
+      "confidence": "high",
+      "why": "Demo: joint advisory attribution.",
+      "evidence": {
+        "type": "government advisory",
+        "url": "https://example.com/demo/report-3",
+        "reportDate": "2026-10-28",
+        "firstObserved": "2026-06-10",
+        "lastObserved": "2026-10-28",
+        "provenance": "Synthetic demonstration record"
+      }
+    },
+    {
+      "id": "e4",
+      "source": "k1",
+      "target": "c1",
+      "relation": "exploits",
+      "confidence": "high",
+      "why": "Demo: campaign exploited the gateway flaw for initial access.",
+      "evidence": {
+        "type": "government advisory",
+        "url": "https://example.com/demo/report-4",
+        "reportDate": "2026-11-12",
+        "firstObserved": "2026-09-04",
+        "lastObserved": "2026-11-12",
+        "provenance": "Synthetic demonstration record"
+      }
+    },
+    {
+      "id": "e5",
+      "source": "k1",
+      "target": "c2",
+      "relation": "exploits",
+      "confidence": "moderate",
+      "why": "Demo: follow-on exploitation observed by one vendor.",
+      "evidence": {
+        "type": "vendor report",
+        "url": "https://example.com/demo/report-5",
+        "reportDate": "2026-11-12",
+        "firstObserved": "2026-10-01",
+        "lastObserved": "2026-11-12",
+        "provenance": "Synthetic demonstration record"
+      }
+    },
+    {
+      "id": "e6",
+      "source": "k2",
+      "target": "c3",
+      "relation": "exploits",
+      "confidence": "moderate",
+      "why": "Demo: researcher telemetry.",
+      "evidence": {
+        "type": "researcher report",
+        "url": "https://example.com/demo/report-6",
+        "reportDate": "2026-09-30",
+        "firstObserved": "2026-06-10",
+        "lastObserved": "2026-09-30",
+        "provenance": "Synthetic demonstration record"
+      }
+    },
+    {
+      "id": "e7",
+      "source": "k3",
+      "target": "c2",
+      "relation": "exploits",
+      "confidence": "low",
+      "why": "Demo: overlap claimed, not independently verified.",
+      "evidence": {
+        "type": "single vendor claim",
+        "url": "https://example.com/demo/report-7",
+        "reportDate": "2026-11-15",
+        "firstObserved": "2026-10-20",
+        "lastObserved": "2026-11-15",
+        "provenance": "Synthetic demonstration record"
+      }
+    },
+    {
+      "id": "e8",
+      "source": "k1",
+      "target": "i1",
+      "relation": "observed_targeting",
+      "confidence": "high",
+      "why": "Demo: victims confirmed in sector.",
+      "evidence": {
+        "type": "incident response report",
+        "url": "https://example.com/demo/report-8",
+        "reportDate": "2026-11-12",
+        "firstObserved": "2026-09-04",
+        "lastObserved": "2026-11-12",
+        "provenance": "Synthetic demonstration record"
+      }
+    },
+    {
+      "id": "e9",
+      "source": "k1",
+      "target": "i2",
+      "relation": "observed_targeting",
+      "confidence": "moderate",
+      "why": "Demo: victims reported in sector.",
+      "evidence": {
+        "type": "vendor report",
+        "url": "https://example.com/demo/report-9",
+        "reportDate": "2026-11-12",
+        "firstObserved": "2026-10-01",
+        "lastObserved": "2026-11-12",
+        "provenance": "Synthetic demonstration record"
+      }
+    },
+    {
+      "id": "e10",
+      "source": "k2",
+      "target": "i3",
+      "relation": "observed_targeting",
+      "confidence": "high",
+      "why": "Demo: advisory names sector.",
+      "evidence": {
+        "type": "government advisory",
+        "url": "https://example.com/demo/report-10",
+        "reportDate": "2026-10-28",
+        "firstObserved": "2026-06-10",
+        "lastObserved": "2026-10-28",
+        "provenance": "Synthetic demonstration record"
+      }
+    },
+    {
+      "id": "e11",
+      "source": "k2",
+      "target": "i4",
+      "relation": "possible_exposure",
+      "confidence": "low",
+      "why": "Demo: sector runs the product; no victims observed.",
+      "evidence": {
+        "type": "product install base",
+        "url": "https://example.com/demo/report-11",
+        "reportDate": "2026-10-28",
+        "firstObserved": "2026-06-10",
+        "lastObserved": "2026-10-28",
+        "provenance": "Synthetic demonstration record"
+      }
+    },
+    {
+      "id": "e12",
+      "source": "k3",
+      "target": "i5",
+      "relation": "observed_targeting",
+      "confidence": "low",
+      "why": "Demo: unverified.",
+      "evidence": {
+        "type": "single vendor claim",
+        "url": "https://example.com/demo/report-12",
+        "reportDate": "2026-11-15",
+        "firstObserved": "2026-10-20",
+        "lastObserved": "2026-11-15",
+        "provenance": "Synthetic demonstration record"
+      }
+    },
+    {
+      "id": "e13",
+      "source": "k1",
+      "target": "g1",
+      "relation": "observed_targeting",
+      "confidence": "high",
+      "why": "Demo: victim geography.",
+      "evidence": {
+        "type": "incident response report",
+        "url": "https://example.com/demo/report-13",
+        "reportDate": "2026-11-12",
+        "firstObserved": "2026-09-04",
+        "lastObserved": "2026-11-12",
+        "provenance": "Synthetic demonstration record"
+      }
+    },
+    {
+      "id": "e14",
+      "source": "k2",
+      "target": "g2",
+      "relation": "observed_targeting",
+      "confidence": "moderate",
+      "why": "Demo: victim geography.",
+      "evidence": {
+        "type": "government advisory",
+        "url": "https://example.com/demo/report-14",
+        "reportDate": "2026-10-28",
+        "firstObserved": "2026-06-10",
+        "lastObserved": "2026-10-28",
+        "provenance": "Synthetic demonstration record"
+      }
+    },
+    {
+      "id": "e15",
+      "source": "k3",
+      "target": "g1",
+      "relation": "observed_targeting",
+      "confidence": "low",
+      "why": "Demo: victim geography.",
+      "evidence": {
+        "type": "single vendor claim",
+        "url": "https://example.com/demo/report-15",
+        "reportDate": "2026-11-15",
+        "firstObserved": "2026-10-20",
+        "lastObserved": "2026-11-15",
+        "provenance": "Synthetic demonstration record"
+      }
+    },
+    {
+      "id": "e16",
+      "source": "a1",
+      "target": "t1",
+      "relation": "uses",
+      "confidence": "high",
+      "why": "Demo technique mapping.",
+      "evidence": {
+        "type": "ATT&CK mapping",
+        "url": "https://example.com/demo/report-16",
+        "reportDate": "2026-11-12",
+        "firstObserved": "2026-09-04",
+        "lastObserved": "2026-11-12",
+        "provenance": "Synthetic demonstration record"
+      }
+    },
+    {
+      "id": "e17",
+      "source": "a1",
+      "target": "t2",
+      "relation": "uses",
+      "confidence": "moderate",
+      "why": "Demo technique mapping.",
+      "evidence": {
+        "type": "incident response report",
+        "url": "https://example.com/demo/report-17",
+        "reportDate": "2026-11-12",
+        "firstObserved": "2026-09-04",
+        "lastObserved": "2026-11-12",
+        "provenance": "Synthetic demonstration record"
+      }
+    },
+    {
+      "id": "e18",
+      "source": "a2",
+      "target": "t1",
+      "relation": "uses",
+      "confidence": "high",
+      "why": "Demo technique mapping.",
+      "evidence": {
+        "type": "government advisory",
+        "url": "https://example.com/demo/report-18",
+        "reportDate": "2026-10-28",
+        "firstObserved": "2026-06-10",
+        "lastObserved": "2026-10-28",
+        "provenance": "Synthetic demonstration record"
+      }
+    },
+    {
+      "id": "e19",
+      "source": "a2",
+      "target": "t3",
+      "relation": "uses",
+      "confidence": "high",
+      "why": "Demo technique mapping.",
+      "evidence": {
+        "type": "government advisory",
+        "url": "https://example.com/demo/report-19",
+        "reportDate": "2026-10-28",
+        "firstObserved": "2026-06-10",
+        "lastObserved": "2026-10-28",
+        "provenance": "Synthetic demonstration record"
+      }
+    }
+  ]
+}

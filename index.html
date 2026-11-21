@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aegis Cyber Solutions</title>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --s0: #0d1b2e;
+    --s1: #112238;
+    --s2: #162d48;
+    --s3: #1c3a5e;
+    --s4: #1e3f68;
+    --electric: #2f7fff;
+    --eb: #5fa3ff;
+    --edim: rgba(47,127,255,0.14);
+    --gold: #f5c842;
+    --gdim: rgba(245,200,66,0.12);
+    --white: #e8f0ff;
+    --wd: #9db3d4;
+    --muted: #5e7a9e;
+    --b0: rgba(47,127,255,0.14);
+    --b1: rgba(47,127,255,0.28);
+    --font: 'Exo 2', sans-serif;
+    --mono: 'IBM Plex Mono', monospace;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font); background: var(--s0); color: var(--white); overflow-x: hidden; }
+  body::before { content: ''; position: fixed; inset: 0; background-image: linear-gradient(rgba(47,127,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(47,127,255,0.03) 1px, transparent 1px); background-size: 44px 44px; pointer-events: none; z-index: 0; }
+
+  /* NAV */
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 0 40px; height: 56px; background: rgba(13,27,46,0.96); border-bottom: 1px solid var(--b1); backdrop-filter: blur(10px); }
+  .nav-logo { display: flex; align-items: center; gap: 10px; }
+  .logo-text span:first-child { display: block; font-size: 17px; font-weight: 800; letter-spacing: 0.14em; line-height: 1; color: var(--white); }
+  .logo-text span:last-child { display: block; font-size: 8px; letter-spacing: 0.22em; color: var(--eb); text-transform: uppercase; margin-top: 2px; }
+  .nav-links { display: flex; gap: 24px; list-style: none; align-items: center; }
+  .nav-links a { font-size: 11px; font-weight: 600; letter-spacing: 0.13em; text-transform: uppercase; color: var(--wd); text-decoration: none; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--white); }
+  .nav-cta { padding: 7px 18px; background: var(--electric); color: var(--white) !important; border-radius: 2px; transition: background 0.2s !important; }
+  .nav-cta:hover { background: var(--eb) !important; }
+
+  /* HERO — no min-height, just fits content */
+  #hero { position: relative; z-index: 1; padding: 88px 40px 40px; background: linear-gradient(135deg, var(--s0) 60%, var(--s2) 100%); }
+  .hero-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+  .hero-left {}
+  .hero-badge { display: inline-flex; align-items: center; gap: 7px; padding: 5px 12px; border: 1px solid var(--b1); border-radius: 2px; font-family: var(--mono); font-size: 10px; color: var(--eb); letter-spacing: 0.09em; margin-bottom: 18px; }
+  .hero-badge::before { content: ''; width: 5px; height: 5px; background: var(--eb); border-radius: 50%; animation: pulse 2s infinite; }
+  @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.4;transform:scale(0.6)} }
+  .hero-headline { font-size: clamp(24px, 2.8vw, 40px); font-weight: 800; line-height: 1.15; margin-bottom: 14px; }
+  .hero-headline .l1 { color: var(--wd); font-weight: 600; display: block; }
+  .hero-headline .l2 { color: var(--white); font-weight: 800; display: block; }
+  .hero-sub { font-size: 13px; font-weight: 300; color: var(--muted); max-width: 420px; line-height: 1.7; margin-bottom: 24px; }
+  .hero-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+  .btn-p { padding: 11px 26px; background: var(--electric); color: var(--white); font-family: var(--font); font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; border: none; border-radius: 2px; cursor: pointer; text-decoration: none; display: inline-block; transition: background 0.2s; }
+  .btn-p:hover { background: var(--eb); }
+  .btn-o { padding: 10px 22px; background: transparent; color: var(--wd); font-family: var(--font); font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; border: 1px solid var(--b1); border-radius: 2px; text-decoration: none; display: inline-block; transition: border-color 0.2s, color 0.2s; }
+  .btn-o:hover { border-color: var(--electric); color: var(--white); }
+
+  /* hero right — stat cards */
+  .hero-right { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
+  .hstat { background: var(--s1); border: 1px solid var(--b1); padding: 20px 18px; }
+  .hstat-num { font-size: 28px; font-weight: 800; letter-spacing: -0.02em; color: var(--white); line-height: 1; margin-bottom: 5px; }
+  .hstat-lbl { font-family: var(--mono); font-size: 9px; color: var(--muted); letter-spacing: 0.12em; text-transform: uppercase; }
+  .gold { color: var(--gold); }
+
+  /* CERT BAR */
+  #certs { position: relative; z-index: 1; padding: 12px 40px; background: var(--s1); border-top: 1px solid var(--b1); border-bottom: 1px solid var(--b1); display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+  .certs-lbl { font-family: var(--mono); font-size: 9px; color: var(--muted); letter-spacing: 0.16em; text-transform: uppercase; white-space: nowrap; flex-shrink: 0; }
+  .cdiv { width: 1px; height: 20px; background: var(--b1); flex-shrink: 0; }
+  .cbadges { display: flex; gap: 8px; flex-wrap: wrap; }
+  .cbadge { font-family: var(--mono); font-size: 10px; font-weight: 500; letter-spacing: 0.08em; color: var(--eb); padding: 3px 10px; border: 1px solid var(--b1); border-radius: 2px; background: var(--edim); white-space: nowrap; }
+
+  /* SECTION SHELL */
+  .sec { position: relative; z-index: 1; padding: 44px 40px; }
+  .sec1 { background: var(--s2); }
+  .sec2 { background: var(--s1); }
+  .sec3 { background: var(--s3); }
+  .sec-center { text-align: center; }
+  .sh { display: flex; align-items: baseline; gap: 14px; margin-bottom: 6px; }
+  .stag { font-family: var(--mono); font-size: 9px; color: var(--eb); letter-spacing: 0.2em; text-transform: uppercase; }
+  .stitle { font-size: clamp(20px, 2.4vw, 30px); font-weight: 800; line-height: 1.1; color: var(--white); }
+  .ssub { font-size: 12px; font-weight: 300; color: var(--muted); max-width: 540px; line-height: 1.65; margin-top: 8px; margin-bottom: 28px; }
+  .sec-center .ssub { margin-left: auto; margin-right: auto; }
+
+  /* SERVICE CARDS */
+  .sgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 2px; }
+  .sc { padding: 22px 20px; background: var(--s0); border: 1px solid var(--b0); position: relative; overflow: hidden; transition: border-color 0.2s; }
+  .sc::after { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--electric), transparent); opacity: 0; transition: opacity 0.2s; }
+  .sc:hover { border-color: var(--electric); }
+  .sc:hover::after { opacity: 1; }
+  .sc.feat { border-color: rgba(245,200,66,0.25); background: rgba(245,200,66,0.03); }
+  .sc.feat::after { background: linear-gradient(90deg, var(--gold), transparent); opacity: 0.6; }
+  .feat-lbl { font-family: var(--mono); font-size: 9px; color: var(--gold); letter-spacing: 0.13em; border: 1px solid rgba(245,200,66,0.3); border-radius: 2px; padding: 2px 8px; display: inline-block; margin-bottom: 10px; }
+  .sc-ico { font-size: 20px; margin-bottom: 10px; display: block; }
+  .sc-title { font-size: 14px; font-weight: 700; margin-bottom: 6px; color: var(--white); }
+  .sc-desc { font-size: 11px; color: var(--muted); line-height: 1.6; margin-bottom: 12px; font-weight: 300; }
+  .tags { display: flex; flex-wrap: wrap; gap: 5px; }
+  .tag { padding: 2px 8px; border: 1px solid var(--b1); border-radius: 2px; font-family: var(--mono); font-size: 9px; color: var(--eb); letter-spacing: 0.06em; }
+  .tg { border-color: rgba(245,200,66,0.28); color: var(--gold); }
+
+  /* FOCUS CARDS */
+  .fgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2px; }
+  .fc { padding: 22px 20px; border: 1px solid var(--b0); background: var(--s2); position: relative; overflow: hidden; transition: border-color 0.2s, background 0.2s; }
+  .fc:hover { border-color: var(--eb); background: rgba(47,127,255,0.06); }
+  .fc.ff { border-color: rgba(245,200,66,0.25); background: rgba(245,200,66,0.03); }
+  .fc.ff:hover { border-color: var(--gold); background: rgba(245,200,66,0.06); }
+  .fc-num { font-family: var(--mono); font-size: 9px; color: var(--eb); letter-spacing: 0.13em; margin-bottom: 8px; display: block; }
+  .fc.ff .fc-num { color: var(--gold); }
+  .fc-ico { font-size: 20px; margin-bottom: 8px; display: block; }
+  .fc h3 { font-size: 13px; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 7px; color: var(--white); }
+  .fc p { font-size: 11px; color: var(--muted); line-height: 1.6; font-weight: 300; margin-bottom: 12px; }
+  .fsubs { display: flex; flex-direction: column; gap: 4px; }
+  .fsub { font-family: var(--mono); font-size: 9px; color: var(--wd); letter-spacing: 0.06em; display: flex; align-items: center; gap: 6px; }
+  .fsub::before { content: ''; width: 3px; height: 3px; background: var(--eb); border-radius: 50%; flex-shrink: 0; }
+  .fc.ff .fsub::before { background: var(--gold); }
+  .fc-bar { position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--electric), transparent); opacity: 0; transition: opacity 0.2s; }
+  .fc:hover .fc-bar { opacity: 1; }
+  .fc.ff .fc-bar { background: linear-gradient(90deg, var(--gold), transparent); opacity: 0.4; }
+  .fc.ff:hover .fc-bar { opacity: 1; }
+
+  /* WHY CARDS */
+  .wgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; max-width: 860px; margin: 0 auto; }
+  .wc { padding: 20px 18px; border: 1px solid var(--b1); border-radius: 2px; text-align: left; position: relative; background: var(--s2); }
+  .wc-num { font-family: var(--mono); font-size: 26px; font-weight: 700; color: rgba(47,127,255,0.1); position: absolute; top: 10px; right: 12px; line-height: 1; }
+  .wc-ico { font-size: 18px; margin-bottom: 8px; }
+  .wc-title { font-size: 11px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; margin-bottom: 5px; color: var(--white); }
+  .wc-desc { font-size: 11px; color: var(--muted); line-height: 1.55; font-weight: 300; }
+
+  /* CTA */
+  #cta { text-align: center; padding: 52px 40px; background: var(--s4); border-top: 1px solid var(--b1); position: relative; z-index: 1; }
+  .cta-bar { width: 36px; height: 2px; background: var(--eb); margin: 0 auto 22px; }
+  #cta h2 { font-size: clamp(20px, 2.6vw, 34px); font-weight: 800; margin-bottom: 10px; color: var(--white); }
+  #cta p { font-size: 12px; color: var(--muted); font-weight: 300; margin-bottom: 24px; max-width: 400px; margin-left: auto; margin-right: auto; line-height: 1.65; }
+  .cta-btns { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+
+  /* FOOTER */
+  footer { position: relative; z-index: 1; padding: 18px 40px; border-top: 1px solid var(--b1); background: var(--s0); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+  .fcopy { font-family: var(--mono); font-size: 9px; color: var(--muted); letter-spacing: 0.07em; }
+  .flinks { display: flex; gap: 18px; list-style: none; }
+  .flinks a { font-family: var(--mono); font-size: 9px; color: var(--muted); text-decoration: none; letter-spacing: 0.11em; text-transform: uppercase; transition: color 0.2s; }
+  .flinks a:hover { color: var(--white); }
+
+  @media (max-width: 700px) {
+    nav, #hero, .sec, #certs, #cta, footer { padding-left: 16px; padding-right: 16px; }
+    .nav-links li:not(.ti-link) { display: none; }
+    .nav-links a { display: inline-flex; align-items: center; min-height: 44px; }
+    .hero-inner { grid-template-columns: 1fr; }
+    .hero-right { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">
+    <svg width="30" height="34" viewBox="0 0 42 48" fill="none">
+      <path d="M21 2L4 9V22C4 33 12 43 21 46C30 43 38 33 38 22V9L21 2Z" fill="url(#sg)" stroke="rgba(47,127,255,0.5)" stroke-width="0.5"/>
+      <text x="21" y="31" text-anchor="middle" font-family="Exo 2" font-weight="800" font-size="18" fill="white">A</text>
+      <defs><linearGradient id="sg" x1="21" y1="2" x2="21" y2="46" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#2f7fff"/><stop offset="100%" stop-color="#0a2060"/></linearGradient></defs>
+    </svg>
+    <div class="logo-text"><span>AEGIS</span><span>Cyber Solutions</span></div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#focus">Who We Serve</a></li>
+    <li><a href="#why">Why Aegis</a></li>
+    <li class="ti-link"><a href="threatwatch/">Threat Intelligence</a></li>
+    <li><a href="#cta" class="nav-cta">Contact Us</a></li>
+  </ul>
+</nav>
+
+<!-- HERO: two-column, no wasted height -->
+<section id="hero">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-badge">&#x25CF; Veteran-Owned &amp; Operated &nbsp;|&nbsp; VOSB Certified</div>
+      <h1 class="hero-headline">
+        <span class="l1">Your Mission Doesn't Stop.</span>
+        <span class="l2">Neither Do We.</span>
+      </h1>
+      <p class="hero-sub">Battle-tested cybersecurity for DOD, government at every level, Veterans Affairs, Army National Guard, and the contractors who support them.</p>
+      <div class="hero-actions">
+        <a href="#cta" class="btn-p">Request a Consultation</a>
+        <a href="#focus" class="btn-o">Who We Serve</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hstat"><div class="hstat-num">100%</div><div class="hstat-lbl">Veteran Leadership</div></div>
+      <div class="hstat"><div class="hstat-num">All 54</div><div class="hstat-lbl">ARNG States &amp; Territories</div></div>
+      <div class="hstat"><div class="hstat-num">NIST</div><div class="hstat-lbl">800-171 Aligned</div></div>
+      <div class="hstat"><div class="hstat-num gold">VOSB</div><div class="hstat-lbl">Set-Aside Eligible</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CERT BAR -->
+<div id="certs">
+  <span class="certs-lbl">Compliance Frameworks</span>
+  <div class="cdiv"></div>
+  <div class="cbadges">
+    <span class="cbadge">CMMC</span>
+    <span class="cbadge">NIST 800-171</span>
+    <span class="cbadge">RMF / FISMA</span>
+    <span class="cbadge">FedRAMP</span>
+    <span class="cbadge">DFARS</span>
+    <span class="cbadge">ITAR / EAR</span>
+    <span class="cbadge">SAM.gov</span>
+    <span class="cbadge">VA Handbook 6500</span>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<div id="services" class="sec sec1">
+  <div class="sh"><span class="stag">// What We Do</span></div>
+  <div class="stitle">Core Services</div>
+  <p class="ssub">End-to-end cybersecurity for government agencies and the private-sector contractors that serve them.</p>
+  <div class="sgrid">
+    <div class="sc">
+      <span class="sc-ico">&#x1F6E1;</span>
+      <div class="sc-title">Cybersecurity Consulting</div>
+      <p class="sc-desc">Security posture assessments, policy development, and implementation support across all government tiers and contractor environments.</p>
+      <div class="tags"><span class="tag">Zero Trust</span><span class="tag">Policy Dev</span><span class="tag">CISA Alignment</span></div>
+    </div>
+    <div class="sc">
+      <span class="sc-ico">&#x1F4CB;</span>
+      <div class="sc-title">Audit Preparation</div>
+      <p class="sc-desc">CMMC, FISMA, FedRAMP, and RMF readiness across government and contractor environments. We close gaps before auditors find them.</p>
+      <div class="tags"><span class="tag">CMMC</span><span class="tag">FedRAMP</span><span class="tag">FISMA</span><span class="tag">ATO Support</span></div>
+    </div>
+    <div class="sc">
+      <span class="sc-ico">&#x1F50D;</span>
+      <div class="sc-title">Vulnerability Assessment</div>
+      <p class="sc-desc">Technical vulnerability identification across networks, systems, and applications in classified and unclassified environments.</p>
+      <div class="tags"><span class="tag">Pen Testing</span><span class="tag">STIG Review</span><span class="tag">CVE Analysis</span></div>
+    </div>
+    <div class="sc feat">
+      <div class="feat-lbl">&#x2605; Also Serving Contractors</div>
+      <span class="sc-ico">&#x1F4BC;</span>
+      <div class="sc-title">Gov't Contractor Compliance</div>
+      <p class="sc-desc">Holding a government contract means inheriting government-grade obligations. We help you achieve and maintain FedRAMP, CMMC, DFARS, and ITAR requirements.</p>
+      <div class="tags"><span class="tag tg">FedRAMP</span><span class="tag tg">CMMC</span><span class="tag tg">DFARS</span><span class="tag tg">ITAR</span><span class="tag tg">CUI</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- FOCUS -->
+<div id="focus" class="sec sec2">
+  <div class="sh"><span class="stag">// Who We Serve</span></div>
+  <div class="stitle">Our Focus Areas</div>
+  <p class="ssub">From the Pentagon to city hall, and the contractors in between.</p>
+  <div class="fgrid">
+    <div class="fc">
+      <span class="fc-num">01 / DOD</span>
+      <span class="fc-ico">&#x2605;</span>
+      <h3>Department of Defense</h3>
+      <p>CMMC, DFARS, and DISA-aligned security for DOD contractors, prime vendors, and defense agencies across classified and unclassified environments.</p>
+      <div class="fsubs">
+        <span class="fsub">CMMC Level 2 &amp; 3 Compliance</span>
+        <span class="fsub">DFARS 252.204-7012</span>
+        <span class="fsub">DISA STIG Implementation</span>
+        <span class="fsub">Classified Network Security</span>
+      </div>
+      <div class="fc-bar"></div>
+    </div>
+    <div class="fc">
+      <span class="fc-num">02 / ALL GOV'T</span>
+      <span class="fc-ico">&#x1F3DB;</span>
+      <h3>Government at All Levels</h3>
+      <p>Federal, state, county, and municipal — every tier of government faces evolving threats. We bring federal-grade security to all of them.</p>
+      <div class="fsubs">
+        <span class="fsub">Federal Agency Security</span>
+        <span class="fsub">State Government Compliance</span>
+        <span class="fsub">County &amp; Municipal IT Security</span>
+        <span class="fsub">Critical Infrastructure Protection</span>
+      </div>
+      <div class="fc-bar"></div>
+    </div>
+    <div class="fc">
+      <span class="fc-num">03 / VA &amp; VETERAN AGENCIES</span>
+      <span class="fc-ico">&#x1F396;</span>
+      <h3>Veterans Affairs &amp; Veteran Agencies</h3>
+      <p>Protecting veteran data and VA systems under FISMA, RMF, and VA Handbook 6500 — from initial assessment through ATO.</p>
+      <div class="fsubs">
+        <span class="fsub">VA Handbook 6500 Compliance</span>
+        <span class="fsub">ATO &amp; RMF Support</span>
+        <span class="fsub">Veteran Data Protection</span>
+        <span class="fsub">FISMA Audit Readiness</span>
+      </div>
+      <div class="fc-bar"></div>
+    </div>
+    <div class="fc">
+      <span class="fc-num">04 / ARMY NATIONAL GUARD</span>
+      <span class="fc-ico">&#x1F4E1;</span>
+      <h3>Army National Guard — All States</h3>
+      <p>Cyber readiness for all 54 ARNG states and territories, aligned to Army standards with deep understanding of the dual federal-state mission.</p>
+      <div class="fsubs">
+        <span class="fsub">All 54 States &amp; Territories</span>
+        <span class="fsub">Army Cyber Standards Alignment</span>
+        <span class="fsub">Dual Mission Understanding</span>
+        <span class="fsub">Unit-Level Readiness Support</span>
+      </div>
+      <div class="fc-bar"></div>
+    </div>
+    <div class="fc ff">
+      <span class="fc-num">05 / PRIVATE SECTOR CONTRACTORS</span>
+      <span class="fc-ico">&#x1F4BC;</span>
+      <h3>Government Contractors &amp; Vendors</h3>
+      <p>Holding a government contract means inheriting government rules. We help businesses of all sizes meet FedRAMP, CMMC, DFARS, and ITAR compliance.</p>
+      <div class="fsubs">
+        <span class="fsub">FedRAMP Authorization Support</span>
+        <span class="fsub">CMMC Pre-Assessment &amp; Remediation</span>
+        <span class="fsub">CUI / ITAR Data Handling</span>
+        <span class="fsub">Subcontractor Compliance Readiness</span>
+        <span class="fsub">System Security Plan (SSP) Development</span>
+      </div>
+      <div class="fc-bar"></div>
+    </div>
+  </div>
+</div>
+
+<!-- WHY -->
+<div id="why" class="sec sec1 sec-center">
+  <div class="sh" style="justify-content:center;"><span class="stag">// Why Choose Aegis</span></div>
+  <div class="stitle">The Aegis Advantage</div>
+  <p class="ssub">We don't come from consulting — we come from service. That difference shows in every engagement.</p>
+  <div class="wgrid">
+    <div class="wc"><span class="wc-num">01</span><div class="wc-ico">&#x1F396;</div><div class="wc-title">Veteran-Led</div><p class="wc-desc">Founded by veterans with firsthand DOD and Guard experience. We speak mission-critical security.</p></div>
+    <div class="wc"><span class="wc-num">02</span><div class="wc-ico">&#x1F3AF;</div><div class="wc-title">Full Spectrum</div><p class="wc-desc">Federal to local, public agency to private contractor — every environment where compliance is required.</p></div>
+    <div class="wc"><span class="wc-num">03</span><div class="wc-ico">&#x1F4CA;</div><div class="wc-title">Set-Aside Eligible</div><p class="wc-desc">VOSB and SDVOSB eligible — giving agencies contracting flexibility with proven expertise.</p></div>
+    <div class="wc"><span class="wc-num">04</span><div class="wc-ico">&#x26A1;</div><div class="wc-title">Rapid Deployment</div><p class="wc-desc">Lean team, no bureaucracy. Fast mobilization without large-firm overhead.</p></div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div id="cta">
+  <div class="cta-bar"></div>
+  <h2>Ready to Secure Your Mission?</h2>
+  <p>Whether you're a government agency, National Guard unit, or contractor navigating compliance — talk to us. No sales pitch, just straight answers.</p>
+  <div class="cta-btns">
+    <a href="mailto:info@aegisdefensecyber.com" class="btn-p">Request a Consultation</a>
+    <a href="#focus" class="btn-o">View Who We Serve</a>
+  </div>
+</div>
+
+<footer>
+  <span class="fcopy">&#169; 2026 Aegis Cyber Solutions LLC &nbsp;|&nbsp; VOSB | SDVOSB Eligible</span>
+  <ul class="flinks">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#focus">Who We Serve</a></li>
+    <li><a href="threatwatch/">Threat Intelligence</a></li>
+    <li><a href="#cta">Contact</a></li>
+  </ul>
+</footer>
+
+</body>
+</html>
