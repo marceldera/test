@@ -57,7 +57,7 @@
 
   <div class="map-grid">
     <figure class="graph-wrap" aria-labelledby="graph-cap">
-      <figcaption id="graph-cap" class="sr-only">Relationship graph. Use Tab to move between nodes and Enter to pin details. The table below lists the same relationships.</figcaption>
+      <figcaption id="graph-cap" class="sr-only">Relationship graph. Use Tab to move between nodes and Enter to pin details. A table listing the same relationships follows for screen readers.</figcaption>
       <svg id="graph" role="group" aria-label="Threat relationship graph"></svg>
       <div class="legend" aria-label="Legend">
         <span><i class="lg solid"></i> Observed / attributed</span>
@@ -72,7 +72,8 @@
     </aside>
   </div>
 
-  <section aria-labelledby="list-title">
+  <!-- Relationship list: hidden on screen, kept for screen readers as the text alternative to the graph -->
+  <section class="sr-only" aria-labelledby="list-title">
     <h2 id="list-title">Relationship list</h2>
     <p class="muted" id="list-count"></p>
     <div class="tbl-wrap"><table id="rel-table">
