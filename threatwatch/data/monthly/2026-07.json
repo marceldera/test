@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "month": "2026-07",
   "complete": true,
-  "updatedAt": "2026-11-22T16:44:20Z",
+  "updatedAt": "2026-11-22T17:59:14Z",
   "metrics": [
     {
       "id": "kev_added",
@@ -11,7 +11,7 @@
       "rule": "CVE entries whose CISA dateAdded falls in the month.",
       "source": "CISA KEV",
       "window": "2026-07-01 to 2026-07-31 (dateAdded, ET calendar)",
-      "updatedAt": "2026-11-22T16:44:20Z"
+      "updatedAt": "2026-11-22T17:59:14Z"
     },
     {
       "id": "vendors",
@@ -20,7 +20,7 @@
       "rule": "Unique vendorProject values among the month’s KEV entries.",
       "source": "CISA KEV",
       "window": "2026-07-01 to 2026-07-31 (dateAdded, ET calendar)",
-      "updatedAt": "2026-11-22T16:44:20Z"
+      "updatedAt": "2026-11-22T17:59:14Z"
     },
     {
       "id": "ransomware",
@@ -29,7 +29,7 @@
       "rule": "Month’s KEV entries where CISA sets knownRansomwareCampaignUse = Known.",
       "source": "CISA KEV",
       "window": "2026-07-01 to 2026-07-31 (dateAdded, ET calendar)",
-      "updatedAt": "2026-11-22T16:44:20Z"
+      "updatedAt": "2026-11-22T17:59:14Z"
     },
     {
       "id": "epss90",
@@ -38,7 +38,7 @@
       "rule": "Month’s KEV entries with EPSS percentile ≥ 0.90 (scores as of 2026-11-22).",
       "source": "FIRST EPSS",
       "window": "2026-07-01 to 2026-07-31 (dateAdded, ET calendar)",
-      "updatedAt": "2026-11-22T16:44:20Z"
+      "updatedAt": "2026-11-22T17:59:14Z"
     }
   ],
   "notice": "These are CISA KEV catalog counts, not a count of total cyber incidents.",
@@ -329,5 +329,566 @@
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     }
-  ]
+  ],
+  "report": {
+    "version": 1,
+    "kind": "monthly",
+    "title": [
+      "MONTHLY ENTERPRISE CYBERSECURITY",
+      "THREAT INTELLIGENCE SUMMARY"
+    ],
+    "dateLabel": "July 2026",
+    "window": "Reporting period: July 1-31, 2026",
+    "prepared": "Final monthly summary",
+    "sourceNote": "Compiled automatically from CISA KEV, NVD, FIRST EPSS, Google Project Zero, ENISA EUVD, VulnCheck, Metasploit, Exploit-DB, PoC-in-GitHub and MITRE ATT&CK. Counts are catalog counts, not a count of cyber incidents; anything the sources do not establish is stated as not established.",
+    "sections": [
+      {
+        "id": "summary",
+        "num": 1,
+        "title": "Executive Intelligence Summary",
+        "source": "generated",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "CISA added **26 vulnerabilities** to the KEV catalog in July 2026, spanning 16 vendors. CISA flags known ransomware use for 4 of them. The highest-likelihood additions by EPSS were **CVE-2026-39808 (Fortinet FortiSandbox)** and **CVE-2026-48908 (JoomShaper SP Page Builder)**. Outside KEV, 1 further CVE was reported exploited or tracked as zero-days by Google Project Zero, ENISA EUVD or VulnCheck."
+          },
+          {
+            "type": "table",
+            "columns": [
+              "Metric",
+              "Value"
+            ],
+            "rows": [
+              [
+                "New KEV entries",
+                "26"
+              ],
+              [
+                "Distinct vendors",
+                "16"
+              ],
+              [
+                "Known ransomware use",
+                "4"
+              ],
+              [
+                "EPSS ≥ 90th percentile",
+                "21 of the month's KEV entries"
+              ],
+              [
+                "Exploited or zero-day outside KEV",
+                "1 (Project Zero, ENISA EUVD, VulnCheck)"
+              ],
+              [
+                "Public exploit code referenced",
+                "20 of the month's KEV entries"
+              ],
+              [
+                "CVEs published to NVD",
+                "Not retained (catalog keeps the last 90 days)"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "These are CISA KEV catalog counts, not a count of total cyber incidents."
+          },
+          {
+            "type": "p",
+            "text": "**Top five actions:** (1) Isolate or patch exposed Fortinet FortiSandbox (CVE-2026-39808); (2) isolate or patch exposed JoomShaper SP Page Builder (CVE-2026-48908); (3) isolate or patch exposed Microsoft SharePoint (CVE-2026-50522); (4) isolate or patch exposed Microsoft SharePoint Server (CVE-2026-45659); (5) examine Fortinet FortiSandbox hosts for unexpected child processes and outbound connections."
+          }
+        ]
+      },
+      {
+        "id": "critical",
+        "num": 2,
+        "title": "Most Significant Vulnerabilities",
+        "source": "generated",
+        "blocks": [
+          {
+            "type": "table",
+            "columns": [
+              "CVE",
+              "Product",
+              "Issue",
+              "Status"
+            ],
+            "rows": [
+              [
+                "CVE-2026-39808",
+                "Fortinet FortiSandbox",
+                "OS command injection",
+                "CISA KEV 2026-07-16; ENISA EUVD; EPSS 99th pct; public exploit"
+              ],
+              [
+                "CVE-2026-48908",
+                "JoomShaper SP Page Builder",
+                "unrestricted file upload",
+                "CISA KEV 2026-07-07; ENISA EUVD; EPSS 99th pct; public exploit"
+              ],
+              [
+                "CVE-2026-50522",
+                "Microsoft SharePoint",
+                "unsafe deserialization",
+                "CISA KEV 2026-07-22; ENISA EUVD; EPSS 99th pct; public exploit"
+              ],
+              [
+                "CVE-2026-45659",
+                "Microsoft SharePoint Server",
+                "unsafe deserialization",
+                "CISA KEV 2026-07-01; ENISA EUVD; EPSS 99th pct; public exploit"
+              ],
+              [
+                "CVE-2026-25089",
+                "Fortinet FortiSandbox",
+                "OS command injection",
+                "CISA KEV 2026-07-16; ENISA EUVD; EPSS 99th pct; public exploit"
+              ],
+              [
+                "CVE-2026-0770",
+                "Langflow",
+                "remote code execution",
+                "CISA KEV 2026-07-21; ENISA EUVD; EPSS 99th pct; public exploit"
+              ],
+              [
+                "CVE-2026-48282",
+                "Adobe ColdFusion",
+                "path traversal",
+                "CISA KEV 2026-07-07; ENISA EUVD; EPSS 98th pct; public exploit"
+              ],
+              [
+                "CVE-2026-20316",
+                "Cisco Secure Firewall Management Center (FMC)",
+                "vulnerability",
+                "CISA KEV 2026-07-29; ENISA EUVD; EPSS 98th pct; no public exploit identified"
+              ],
+              [
+                "CVE-2026-49049",
+                "Ollyo Helix3",
+                "improper access control",
+                "ENISA EUVD; EPSS 63rd pct; public exploit"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "**CVE-2026-39808 - Fortinet FortiSandbox OS command injection (CVSS 9.8).** A improper neutralization of special elements used in an os command ('os command injection') vulnerability in Fortinet FortiSandbox 4.4.0 through 4.4.8 may allow attacker to execute unauthorized code or commands via Fixed package release: not mapped in NVD ranges; 1 vendor patch or advisory reference available. Attack path: network-accessible; no authentication required; no user interaction required."
+          },
+          {
+            "type": "p",
+            "text": "**CVE-2026-48908 - JoomShaper SP Page Builder unrestricted file upload (CVSS 10).** A vulnerability in SP Page Builder for Joomla allows unauthenticated users to upload arbitrary files, ultimately resulting in the upload and execution of PHP code. Fixed version (first unaffected release per NVD ranges): sp page builder 6.6.2. Attack path: network-accessible; no authentication required; no user interaction required."
+          },
+          {
+            "type": "p",
+            "text": "**CVE-2026-50522 - Microsoft SharePoint unsafe deserialization (CVSS 9.8).** Deserialization of untrusted data in Microsoft Office SharePoint allows an unauthorized attacker to execute code over a network. Fixed version (first unaffected release per NVD ranges): sharepoint server 16.0.19725.20434. Attack path: network-accessible; no authentication required; no user interaction required."
+          }
+        ]
+      },
+      {
+        "id": "exploitation",
+        "num": 3,
+        "title": "Exploitation and Zero-Day Activity",
+        "source": "generated",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "KEV additions by week: week of Jun 29: 1; week of Jul 6: 6; week of Jul 13: 10; week of Jul 20: 6; week of Jul 27: 3."
+          },
+          {
+            "type": "p",
+            "text": "Known ransomware use (CISA): CVE-2026-45659 (Microsoft SharePoint Server), CVE-2026-15409 (SonicWall SMA1000 Appliances), CVE-2026-15410 (SonicWall SMA1000 Appliances) and CVE-2026-20316 (Cisco Secure Firewall Management Center (FMC))."
+          },
+          {
+            "type": "table",
+            "columns": [
+              "Date",
+              "CVE",
+              "Report"
+            ],
+            "rows": [
+              [
+                "2026-07-10",
+                "CVE-2026-49049 (Ollyo Helix3)",
+                "ENISA EUVD"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "No campaign-specific IP addresses, hashes or domains are collected by ThreatWatch's automated feeds. Victim counts and campaign scope are not established unless cited in section 5."
+          },
+          {
+            "type": "p",
+            "text": "**Defensive hunting focus:** unexpected child processes and outbound connections (8 CVEs); unexpected file writes and persistence (5 CVEs); unauthorized administrative access and configuration changes (5 CVEs)."
+          }
+        ]
+      },
+      {
+        "id": "industry",
+        "num": 4,
+        "title": "Vendor and Industry Concentration",
+        "source": "generated",
+        "blocks": [
+          {
+            "type": "table",
+            "columns": [
+              "Vendor",
+              "KEV entries",
+              "Products"
+            ],
+            "rows": [
+              [
+                "Microsoft",
+                "5",
+                "Active Directory Federation Services, SharePoint and SharePoint Server"
+              ],
+              [
+                "Fortinet",
+                "3",
+                "FortiOS and FortiSandbox"
+              ],
+              [
+                "Cisco",
+                "2",
+                "IOS and Secure Firewall Management Center (FMC)"
+              ],
+              [
+                "Langflow",
+                "2",
+                "Langflow"
+              ],
+              [
+                "SonicWall",
+                "2",
+                "SMA1000 Appliances"
+              ],
+              [
+                "WordPress",
+                "2",
+                "Core"
+              ],
+              [
+                "Adobe",
+                "1",
+                "ColdFusion"
+              ],
+              [
+                "Arista",
+                "1",
+                "VeloCloud Orchestrator"
+              ],
+              [
+                "Balbooa",
+                "1",
+                "Forms"
+              ],
+              [
+                "Check Point",
+                "1",
+                "SmartConsole"
+              ]
+            ]
+          },
+          {
+            "type": "table",
+            "columns": [
+              "Industry / market",
+              "Observed activity vs. possible exposure"
+            ],
+            "rows": [
+              [
+                "Healthcare / medical imaging",
+                "Possible Adobe ColdFusion, Cisco Secure Firewall Management Center (FMC) and Fortinet FortiSandbox exposure; targeting unknown"
+              ],
+              [
+                "Education / research",
+                "Possible Adobe ColdFusion, Cisco Secure Firewall Management Center (FMC) and Fortinet FortiSandbox exposure; targeting unknown"
+              ],
+              [
+                "Technology / software",
+                "Potential Adobe ColdFusion, Cisco Secure Firewall Management Center (FMC), Fortinet FortiSandbox and JoomShaper SP Page Builder dependency exposure"
+              ],
+              [
+                "Government / defense",
+                "Possible Adobe ColdFusion, Cisco Secure Firewall Management Center (FMC) and Fortinet FortiSandbox exposure; no new sector-specific targeting confirmed"
+              ],
+              [
+                "Financial services",
+                "Possible Adobe ColdFusion, Cisco Secure Firewall Management Center (FMC) and Fortinet FortiSandbox exposure; targeting unknown"
+              ],
+              [
+                "Manufacturing / energy / utilities",
+                "Possible Adobe ColdFusion, Cisco Secure Firewall Management Center (FMC) and Fortinet FortiSandbox exposure; targeting unknown"
+              ],
+              [
+                "Retail / transportation",
+                "Possible Adobe ColdFusion, Cisco Secure Firewall Management Center (FMC) and Fortinet FortiSandbox exposure; targeting unknown"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "Geography and organization-size targeting were not reliably established. Product use indicates possible exposure, not observed attacker selection."
+          }
+        ]
+      },
+      {
+        "id": "actors",
+        "num": 5,
+        "title": "Threat Actor Intelligence",
+        "source": "generated",
+        "blocks": [
+          {
+            "type": "table",
+            "columns": [
+              "Actor / cluster",
+              "Attribution and activity"
+            ],
+            "rows": [
+              [
+                "Remaining 27 exploited CVEs",
+                "Unknown; identity, motivation and geographic targeting not established in tracked sources."
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "**MITRE ATT&CK defensive mapping:** No ATT&CK technique mappings published yet for this month's CVEs. These mappings support defensive detection and do not establish actor attribution."
+          }
+        ]
+      },
+      {
+        "id": "remediation",
+        "num": 6,
+        "title": "Enterprise Risk and Remediation Decisions",
+        "source": "generated",
+        "blocks": [
+          {
+            "type": "table",
+            "columns": [
+              "Priority",
+              "Scenario",
+              "Suggested window"
+            ],
+            "rows": [
+              [
+                "Emergency",
+                "Unremediated internet-facing Adobe ColdFusion, Arista VeloCloud Orchestrator, Balbooa Forms, Check Point SmartConsole, Cisco IOS and Cisco Secure Firewall Management Center (FMC) and others",
+                "Immediate containment and applicable forensic triage"
+              ],
+              [
+                "Urgent",
+                "Products with exploitation reported outside KEV: Ollyo Helix3",
+                "Apply vendor fixes in 24-72 hours"
+              ],
+              [
+                "Urgent",
+                "Local or client-side KEV entries: Microsoft Active Directory Federation Services",
+                "Patch within 7 days"
+              ],
+              [
+                "Routine",
+                "Affected but effectively restricted software",
+                "Controlled maintenance window"
+              ],
+              [
+                "Monitor",
+                "Verified fixed or nonaffected software",
+                "Watch for material new evidence"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "Federal due dates apply to covered agencies under applicable requirements; they are not a universal private-sector mandate. Response windows are recommendations, not mandatory policy."
+          }
+        ]
+      },
+      {
+        "id": "chronology",
+        "num": 7,
+        "title": "Monthly Chronology",
+        "source": "generated",
+        "blocks": [
+          {
+            "type": "table",
+            "columns": [
+              "Date",
+              "CVE",
+              "Development"
+            ],
+            "rows": [
+              [
+                "2026-07-01",
+                "CVE-2026-45659",
+                "Microsoft SharePoint Server Deserialization of Untrusted Data Vulnerability; known ransomware use"
+              ],
+              [
+                "2026-07-07",
+                "CVE-2026-48282",
+                "Adobe ColdFusion Path Traversal Vulnerability"
+              ],
+              [
+                "2026-07-07",
+                "CVE-2026-48908",
+                "JoomShaper SP Page Builder Unrestricted Upload of File with Dangerous Type Vulnerability"
+              ],
+              [
+                "2026-07-07",
+                "CVE-2026-55255",
+                "Langflow Authorization Bypass Through User-Controlled Key Vulnerability"
+              ],
+              [
+                "2026-07-07",
+                "CVE-2026-56290",
+                "Joomlack Page Builder Improper Access Control Vulnerability"
+              ],
+              [
+                "2026-07-10",
+                "CVE-2026-48939",
+                "iCagenda Unrestricted Upload of File with Dangerous Type Vulnerability"
+              ],
+              [
+                "2026-07-10",
+                "CVE-2026-49049",
+                "Ollyo Helix3: exploitation reported by ENISA EUVD"
+              ],
+              [
+                "2026-07-10",
+                "CVE-2026-56291",
+                "Balbooa Forms Unrestricted Upload of File with Dangerous Type Vulnerability"
+              ],
+              [
+                "2026-07-13",
+                "CVE-2008-4128",
+                "Cisco IOS Cross-Site Request Forgery Vulnerability"
+              ],
+              [
+                "2026-07-14",
+                "CVE-2026-15409",
+                "SonicWall SMA1000 Appliances Server-Side Request Forgery Vulnerability; known ransomware use"
+              ],
+              [
+                "2026-07-14",
+                "CVE-2026-15410",
+                "SonicWall SMA1000 Appliances Code Injection Vulnerability; known ransomware use"
+              ],
+              [
+                "2026-07-14",
+                "CVE-2026-56155",
+                "Microsoft Active Directory Federation Services Insufficient Granularity of Access Control Vulnerability"
+              ],
+              [
+                "2026-07-14",
+                "CVE-2026-56164",
+                "Microsoft SharePoint Server Missing Authentication for Critical Function Vulnerability"
+              ],
+              [
+                "2026-07-15",
+                "CVE-2023-4346",
+                "KNX Association KNX Protocol Connection Authorization Option 1 Overly Restrictive Account Lockout Mechanism Vulnerability"
+              ],
+              [
+                "2026-07-15",
+                "CVE-2026-46817",
+                "Oracle E-Business Suite Improper Privilege Management Vulnerability"
+              ],
+              [
+                "2026-07-16",
+                "CVE-2026-25089",
+                "Fortinet FortiSandbox OS Command Injection Vulnerability"
+              ],
+              [
+                "2026-07-16",
+                "CVE-2026-39808",
+                "Fortinet FortiSandbox OS Command Injection Vulnerability"
+              ],
+              [
+                "2026-07-16",
+                "CVE-2026-58644",
+                "Microsoft SharePoint Deserialization of Untrusted Data Vulnerability"
+              ],
+              [
+                "2026-07-21",
+                "CVE-2021-27137",
+                "DD-WRT Stack-Based Buffer Overflow Vulnerability"
+              ],
+              [
+                "2026-07-21",
+                "CVE-2026-0770",
+                "Langflow Inclusion of Functionality from Untrusted Control Sphere Vulnerability"
+              ],
+              [
+                "2026-07-21",
+                "CVE-2026-60137",
+                "WordPress Core SQL Injection Vulnerability"
+              ],
+              [
+                "2026-07-21",
+                "CVE-2026-63030",
+                "WordPress Core Interpretation Conflict Vulnerability"
+              ],
+              [
+                "2026-07-22",
+                "CVE-2026-16232",
+                "Check Point SmartConsole Improper Authentication Vulnerability"
+              ],
+              [
+                "2026-07-22",
+                "CVE-2026-50522",
+                "Microsoft SharePoint Deserialization of Untrusted Data Vulnerability"
+              ],
+              [
+                "2026-07-27",
+                "CVE-2025-68686",
+                "Fortinet FortiOS Exposure of Sensitive Information to an Unauthorized Actor Vulnerability"
+              ],
+              [
+                "2026-07-27",
+                "CVE-2026-16812",
+                "Arista VeloCloud Orchestrator On-Prem OS Command Injection Vulnerability"
+              ],
+              [
+                "2026-07-29",
+                "CVE-2026-20316",
+                "Cisco Secure Firewall Management Center Use of Hard-coded Password Vulnerability; known ransomware use"
+              ]
+            ]
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "label": "Fortinet FortiSandbox vendor advisory",
+        "url": "https://fortiguard.fortinet.com/psirt/FG-IR-26-100"
+      },
+      {
+        "label": "Microsoft SharePoint vendor advisory",
+        "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50522"
+      },
+      {
+        "label": "Microsoft SharePoint Server vendor advisory",
+        "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45659"
+      },
+      {
+        "label": "Fortinet FortiSandbox vendor advisory",
+        "url": "https://fortiguard.fortinet.com/psirt/FG-IR-26-141"
+      },
+      {
+        "label": "CISA KEV catalog",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+      },
+      {
+        "label": "FIRST EPSS",
+        "url": "https://www.first.org/epss/"
+      },
+      {
+        "label": "Google Project Zero 0day In the Wild tracker",
+        "url": "https://docs.google.com/spreadsheets/d/1lkNJ0uQwbeC1ZTRrxdtuPLCIl7mlUreoKfSIgajnSyY"
+      }
+    ],
+    "footer": "Enterprise Cyber Threat Intelligence | July 2026",
+    "generatedAt": "2026-11-22T18:05:37Z"
+  }
 }
