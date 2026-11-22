@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "month": "2026-11",
   "complete": false,
-  "updatedAt": "2026-11-22T17:59:14Z",
+  "updatedAt": "2026-11-22T18:22:51Z",
   "metrics": [
     {
       "id": "kev_added",
@@ -11,7 +11,7 @@
       "rule": "CVE entries whose CISA dateAdded falls in the month.",
       "source": "CISA KEV",
       "window": "2026-11-01 to 2026-11-22 (dateAdded, ET calendar)",
-      "updatedAt": "2026-11-22T17:59:14Z"
+      "updatedAt": "2026-11-22T18:22:51Z"
     },
     {
       "id": "vendors",
@@ -20,7 +20,7 @@
       "rule": "Unique vendorProject values among the month’s KEV entries.",
       "source": "CISA KEV",
       "window": "2026-11-01 to 2026-11-22 (dateAdded, ET calendar)",
-      "updatedAt": "2026-11-22T17:59:14Z"
+      "updatedAt": "2026-11-22T18:22:51Z"
     },
     {
       "id": "ransomware",
@@ -29,7 +29,7 @@
       "rule": "Month’s KEV entries where CISA sets knownRansomwareCampaignUse = Known.",
       "source": "CISA KEV",
       "window": "2026-11-01 to 2026-11-22 (dateAdded, ET calendar)",
-      "updatedAt": "2026-11-22T17:59:14Z"
+      "updatedAt": "2026-11-22T18:22:51Z"
     },
     {
       "id": "epss90",
@@ -38,7 +38,7 @@
       "rule": "Month’s KEV entries with EPSS percentile ≥ 0.90 (scores as of 2026-11-22).",
       "source": "FIRST EPSS",
       "window": "2026-11-01 to 2026-11-22 (dateAdded, ET calendar)",
-      "updatedAt": "2026-11-22T17:59:14Z"
+      "updatedAt": "2026-11-22T18:22:51Z"
     }
   ],
   "notice": "These are CISA KEV catalog counts, not a count of total cyber incidents.",
@@ -878,6 +878,6 @@
       }
     ],
     "footer": "Enterprise Cyber Threat Intelligence | November 2026",
-    "generatedAt": "2026-11-22T18:05:37Z"
+    "generatedAt": "2026-11-22T18:24:41Z"
   }
 }
