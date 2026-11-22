@@ -23,9 +23,18 @@ def main() -> int:
         if "report" in lb:
             from tw.report import validate_report
             errs += [f"latest report: {e}" for e in validate_report(lb["report"])]
+    from tw.report import M_SECTION_IDS, validate_report as _vr
+    for p in sorted((DATA_DIR / "monthly").glob("20*.json")):
+        md = json.loads(p.read_text())
+        if "report" in md:
+            errs += [f"monthly/{p.name} report: {e}" for e in _vr(md["report"], M_SECTION_IDS)]
     from tw.brief import safe_editorial
     for p in sorted((DATA_DIR / "editorial").glob("*.json")):
         try:
+            if p.name.startswith("monthly-"):
+                from tw.report import safe_report_editorial
+                safe_report_editorial(json.loads(p.read_text()).get("report"), M_SECTION_IDS)
+                continue
             safe_editorial(json.loads(p.read_text()))
         except (ValueError, TypeError, AttributeError) as exc:
             errs.append(f"editorial/{p.name}: {exc}")

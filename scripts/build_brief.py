@@ -23,7 +23,8 @@ from tw.brief import build_daily, build_month, recent_months, safe_editorial  # 
 from tw.common import DATA_DIR, ET, SourceError, iso, now_utc, read_json, write_json  # noqa: E402
 from tw.sources import collect_epss, collect_kev, collect_nvd  # noqa: E402
 from tw.validate import validate_brief, validate_month  # noqa: E402
-from tw.report import Catalog, compose, validate_report  # noqa: E402
+from tw.report import (Catalog, M_SECTION_IDS, compose, compose_month, safe_report_editorial,  # noqa: E402
+                       validate_report)
 
 EARLIEST_ET = (6, 45)   # don't publish before 06:45 ET (target: brief live by 07:00 ET)
 REPORT_STATE = "report-state.json"
@@ -92,6 +93,9 @@ def main() -> int:
         monthlies = {m: build_month(kev, epss, m, now) for m in months}
         for m, doc in monthlies.items():
             errs += [f"{m}: {e}" for e in validate_month(doc)]
+        attach_month_reports(monthlies, now)
+        for m, doc in monthlies.items():
+            errs += [f"{m} report: {e}" for e in validate_report(doc["report"], M_SECTION_IDS)]
         if errs:
             raise SourceError("Quality gate failed:\n  - " + "\n  - ".join(errs))
     except (SourceError, ValueError) as exc:
@@ -139,6 +143,48 @@ def attach_report(brief: dict, editorial: dict | None, now) -> dict:
     return new_track
 
 
+def month_editorial(month: str) -> dict | None:
+    p = DATA_DIR / "editorial" / f"monthly-{month}.json"
+    if not p.exists():
+        return None
+    raw = read_json(p) or {}
+    return {"reviewedBy": raw.get("reviewedBy"),
+            "report": safe_report_editorial(raw.get("report"), M_SECTION_IDS)}
+
+
+def attach_month_reports(monthlies: dict, now) -> None:
+    cat = Catalog(DATA_DIR)
+    for m, doc in monthlies.items():
+        doc["report"] = compose_month(doc, cat, month_editorial(m), now)
+
+
+BACKFILL_DAYS = 7
+
+
+def backfill_reports(latest_edition: str, now) -> list[str]:
+    """Give the last 7 editions the document format if they were published before it existed."""
+    done = []
+    idx = read_json(DATA_DIR / "briefs" / "index.json", {}) or {}
+    cat = Catalog(DATA_DIR)
+    for e in [x["edition"] for x in idx.get("editions") or []][:BACKFILL_DAYS]:
+        if e == latest_edition:
+            continue
+        path = DATA_DIR / "briefs" / f"{e}.json"
+        b = read_json(path)
+        if not b or b.get("report"):
+            continue
+        ed_path = DATA_DIR / "editorial" / f"{e}.json"
+        editorial = safe_editorial(read_json(ed_path)) if ed_path.exists() else None
+        rep, _ = compose(b, cat, {}, editorial, now)  # throwaway tracking state
+        if not any(s["source"] == "editorial" for s in rep["sections"]):
+            rep["prepared"] = "Automated edition (reconstructed from catalog data)"
+        if not validate_report(rep):
+            b["report"] = rep
+            write_json(path, b)
+            done.append(e)
+    return done
+
+
 def refresh_report() -> int:
     """Re-compose the latest edition's report from the current catalog and editorial file."""
     latest = read_json(DATA_DIR / "latest.json", {}) or {}
@@ -161,6 +207,25 @@ def refresh_report() -> int:
     write_json(DATA_DIR / "briefs" / f"{edition}.json", latest)
     write_json(DATA_DIR / "latest.json", latest)
     write_json(DATA_DIR / REPORT_STATE, report_state)
+    now = now_utc()
+    try:
+        filled = backfill_reports(edition, now)
+        months = {}
+        for row in (read_json(DATA_DIR / "monthly" / "index.json", {}) or {}).get("months") or []:
+            doc = read_json(DATA_DIR / "monthly" / f"{row['month']}.json")
+            if doc:
+                months[row["month"]] = doc
+        attach_month_reports(months, now)
+        for m, doc in months.items():
+            errs = validate_report(doc["report"], M_SECTION_IDS)
+            if errs:
+                raise ValueError(f"{m} report: " + "; ".join(errs))
+        for m, doc in months.items():
+            write_json(DATA_DIR / "monthly" / f"{m}.json", doc)
+    except (ValueError, KeyError) as exc:
+        print(f"Monthly/backfill composition skipped: {exc}", file=sys.stderr)
+        return 1
+    print(f"Backfilled daily reports: {filled}; monthly summaries composed: {sorted(months)}")
     print(f"Report for {edition} composed: {len(latest['report']['prioritized'])} prioritized CVEs; "
           f"editorial sections: {[s['id'] for s in latest['report']['sections'] if s['source'] == 'editorial']}")
     return 0

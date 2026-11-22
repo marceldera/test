@@ -72,8 +72,7 @@
     }
     return null;
   }
-  function renderReport(b, status, body) {
-    var r = b.report;
+  function renderReport(r, body) {
     var paper = el("article", { cls: "paper", "aria-labelledby": "doc-title" }, [
       el("h1", { id: "doc-title", cls: "doc-title" }, r.title.map(function (line, i) {
         return el("span", { text: line });
@@ -102,31 +101,47 @@
     body.appendChild(paper);
   }
 
+  var DAY_MS = 864e5;
+  function isoDay(t) { return new Date(t).toISOString().slice(0, 10); }
+  function printButton() {
+    var btn = el("button", { type: "button", cls: "btn-print", text: "Print / Save as PDF" });
+    btn.addEventListener("click", function () { window.print(); });
+    return btn;
+  }
+  // Last 7 calendar days ending at the newest edition; days without an edition are shown disabled.
   function renderToolbar(b, status, editions) {
     var bar = document.getElementById("brief-toolbar");
     bar.textContent = "";
-    if (editions && editions.length > 1) {
-      var sel = el("select", { id: "edition-pick", "aria-label": "Choose edition" }, editions.map(function (e) {
-        var o = el("option", { value: e.edition, text: new Date(e.edition + "T12:00:00Z").toLocaleDateString("en-US",
-          { weekday: "short", month: "short", day: "numeric", year: "numeric", timeZone: "UTC" }) });
-        if (e.edition === b.edition) o.selected = true;
-        return o;
-      }));
-      sel.addEventListener("change", function () {
-        if (!/^\d{4}-\d{2}-\d{2}$/.test(sel.value)) return;
-        getJSON("data/briefs/" + sel.value + ".json").then(function (nb) { renderBrief(nb, status, editions); })
-          .catch(function () { document.getElementById("notices").appendChild(el("p", { cls: "notice", text: "That edition could not be loaded." })); });
-      });
-      bar.appendChild(el("label", { "for": "edition-pick", cls: "tb-label", text: "Edition" }));
-      bar.appendChild(sel);
+    var have = {};
+    (editions || []).forEach(function (e) { have[e.edition] = true; });
+    have[b.edition] = true;
+    var newest = (editions && editions.length ? editions[0].edition : b.edition);
+    var end = Date.parse(newest + "T12:00:00Z");
+    var strip = el("div", { cls: "day-strip", role: "group", "aria-label": "Editions from the last 7 days" });
+    for (var i = 6; i >= 0; i--) {
+      (function (day) {
+        var d = new Date(Date.parse(day + "T12:00:00Z"));
+        var wk = d.toLocaleDateString("en-US", { weekday: "short", timeZone: "UTC" });
+        var md = d.toLocaleDateString("en-US", { month: "short", day: "numeric", timeZone: "UTC" });
+        var on = day === b.edition;
+        var btn = el("button", { type: "button", cls: "day" + (on ? " on" : ""), "aria-pressed": on ? "true" : "false",
+          title: have[day] ? "Edition of " + md : "No edition published for " + md }, [el("span", { cls: "wk", text: wk }), el("span", { cls: "md", text: md })]);
+        if (!have[day]) btn.disabled = true;
+        else btn.addEventListener("click", function () {
+          if (day === b.edition) return;
+          getJSON("data/briefs/" + day + ".json").then(function (nb) { renderBrief(nb, status, editions); window.scrollTo(0, 0); })
+            .catch(function () { document.getElementById("notices").appendChild(el("p", { cls: "notice", text: "That edition could not be loaded." })); });
+        });
+        strip.appendChild(btn);
+      })(isoDay(end - i * DAY_MS));
     }
-    var btn = el("button", { type: "button", cls: "btn-print", text: "Print / Save as PDF" });
-    btn.addEventListener("click", function () { window.print(); });
-    bar.appendChild(btn);
+    bar.appendChild(strip);
+    bar.appendChild(printButton());
   }
 
   // ------------------------------------------------------------------ brief
   function renderBrief(b, status, editions) {
+    if (!window.__twNewest) window.__twNewest = (editions && editions.length) ? editions[0].edition : b.edition;
     var body = document.getElementById("brief-body");
     if (b.report && b.report.sections) {
       body.textContent = "";
@@ -136,7 +151,7 @@
         " · a new edition is issued every morning at 7:00 AM ET";
       freshness(b, status);
       renderToolbar(b, status, editions);
-      renderReport(b, status, body);
+      renderReport(b.report, body);
       return;
     }
     legacyBrief(b, status);
@@ -146,7 +161,7 @@
     var age = (Date.now() - Date.parse(b.publishedAt)) / 36e5;
     var fresh = document.getElementById("freshness");
     fresh.textContent = "";
-    var latest = !document.getElementById("edition-pick") || document.getElementById("edition-pick").selectedIndex <= 0;
+    var latest = !window.__twNewest || b.edition === window.__twNewest;
     var stale = age > STALE_HOURS && latest;
     fresh.appendChild(el("span", { cls: "fresh" + (stale ? " stale" : "") }, [
       el("span", { cls: "badge " + (stale ? "b-urgent" : "b-ok"), text: stale ? "Stale" : (latest ? "Current" : "Archive") }),
@@ -320,27 +335,46 @@
     return s;
   }
 
-  // ------------------------------------------------------------------ monthly
+  // ------------------------------------------------------------------ monthly page
   function renderMonthly(index) {
-    var root = document.getElementById("monthly-body");
-    root.textContent = "";
+    var body = document.getElementById("month-body");
+    var bar = document.getElementById("month-toolbar");
+    body.textContent = ""; bar.textContent = "";
     if (!index || !index.months || !index.months.length) {
-      root.appendChild(el("p", { cls: "muted", text: "The monthly summary will appear after the first edition is published." }));
+      document.getElementById("month-meta").textContent = "";
+      body.appendChild(el("p", { cls: "notice", text: "The monthly summary will appear after the first edition is published." }));
       return;
     }
-    var sel = el("select", { id: "month-pick", "aria-label": "Choose month" }, index.months.map(function (m) {
-      return el("option", { value: m.month, text: monthName(m.month) + (m.complete ? "" : " (month to date)") });
-    }));
-    var holder = el("div");
-    root.appendChild(el("p", null, [el("label", { "for": "month-pick", text: "Month: " }), sel]));
-    root.appendChild(holder);
+    var strip = el("div", { cls: "day-strip", role: "group", "aria-label": "Monthly summaries" });
+    var buttons = {};
+    index.months.slice().reverse().forEach(function (m) {
+      var d = new Date(m.month + "-15T12:00:00Z");
+      var btn = el("button", { type: "button", cls: "day", "aria-pressed": "false" }, [
+        el("span", { cls: "wk", text: d.toLocaleDateString("en-US", { year: "numeric", timeZone: "UTC" }) }),
+        el("span", { cls: "md", text: d.toLocaleDateString("en-US", { month: "short", timeZone: "UTC" }) + (m.complete ? "" : " · MTD") })]);
+      btn.addEventListener("click", function () { load(m.month); });
+      buttons[m.month] = btn;
+      strip.appendChild(btn);
+    });
+    bar.appendChild(strip);
+    bar.appendChild(printButton());
     function load(m) {
       if (!/^\d{4}-\d{2}$/.test(m)) return;
-      getJSON("data/monthly/" + m + ".json").then(function (d) { holder.textContent = ""; holder.appendChild(monthCard(d)); })
-        .catch(function () { holder.textContent = "Monthly data unavailable."; });
+      Object.keys(buttons).forEach(function (k) {
+        buttons[k].classList.toggle("on", k === m);
+        buttons[k].setAttribute("aria-pressed", k === m ? "true" : "false");
+      });
+      getJSON("data/monthly/" + m + ".json").then(function (d) {
+        body.textContent = "";
+        document.getElementById("month-title").textContent = "Monthly Threat Intelligence Summary — " + monthName(d.month);
+        document.getElementById("month-meta").textContent = (d.complete ? "Final summary" : "Month to date") +
+          " · updated " + fmtTime(d.updatedAt) + " · refreshed every morning at 7:00 AM ET";
+        if (d.report && d.report.sections) renderReport(d.report, body);
+        else body.appendChild(monthCard(d));
+      }).catch(function () { body.textContent = ""; body.appendChild(el("p", { cls: "notice", text: "Monthly data unavailable." })); });
     }
-    sel.addEventListener("change", function () { load(sel.value); });
-    load(index.months[0].month);
+    var want = (location.hash || "").replace("#", "");
+    load(buttons[want] ? want : index.months[0].month);
   }
   function monthName(m) { return new Date(m + "-15T12:00:00Z").toLocaleDateString("en-US", { month: "long", year: "numeric", timeZone: "UTC" }); }
 
@@ -380,6 +414,12 @@
   }
 
   // ------------------------------------------------------------------ boot
+  var subBody = document.getElementById("subscribe-body");
+  if (subBody) getJSON("subscription-config.json").then(renderSubscribe).catch(function () { renderSubscribe(null); });
+  if (document.getElementById("month-body")) {
+    getJSON("data/monthly/index.json").then(renderMonthly).catch(function () { renderMonthly(null); });
+    return;
+  }
   var statusP = getJSON("data/status.json").catch(function () { return null; });
   var editionsP = getJSON("data/briefs/index.json").then(function (d) { return d.editions || []; }).catch(function () { return []; });
   Promise.all([getJSON("data/latest.json"), statusP, editionsP]).then(function (r) { renderBrief(r[0], r[1], r[2]); })
@@ -388,6 +428,4 @@
       document.getElementById("brief-body").appendChild(el("p", { cls: "notice",
         text: "The daily brief is temporarily unavailable. No edition has passed verification yet, or the data could not be loaded. Please check back shortly." }));
     });
-  getJSON("data/monthly/index.json").then(renderMonthly).catch(function () { renderMonthly(null); });
-  getJSON("subscription-config.json").then(renderSubscribe).catch(function () { renderSubscribe(null); });
 })();

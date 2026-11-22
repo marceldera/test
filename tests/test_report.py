@@ -158,6 +158,21 @@ class ReportTests(unittest.TestCase):
         self.assertIn("No CVE met ThreatWatch prioritization criteria", self.text(rep, "summary"))
         self.assertIn("No new CISA KEV additions were verified", self.text(rep, "exploitation"))
 
+    def test_monthly_summary(self):
+        doc = {"month": "2026-11", "complete": False, "metrics": [{"id": "vendors", "value": 1}, {"id": "ransomware", "value": 1},
+               {"id": "epss90", "value": 1}],
+               "events": [{"date": "2026-11-21", "cve": "CVE-2099-0001", "vendor": "ExampleCorp", "product": "Gateway",
+                           "concern": "Gateway RCE", "ransomware": "known"}]}
+        rep = R.compose_month(doc, R.Catalog(self.dir), None, NOW)
+        self.assertEqual(R.validate_report(rep, R.M_SECTION_IDS), [])
+        self.assertEqual(rep["dateLabel"], "November 2026")
+        self.assertIn("month to date", rep["window"])
+        self.assertIn("CVE-2099-0002", self.text(rep, "exploitation"))      # EUVD-only, in month
+        self.assertIn("ExampleCorp", self.text(rep, "industry"))
+        chron = self.text(rep, "chronology")
+        self.assertIn("known ransomware use", chron)
+        self.assertEqual(rep["footer"], "Enterprise Cyber Threat Intelligence | November 2026")
+
 
 if __name__ == "__main__":
     unittest.main()

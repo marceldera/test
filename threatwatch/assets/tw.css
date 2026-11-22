@@ -167,6 +167,9 @@ select, input[type="search"], input[type="date"] { background: var(--panel); col
 .doc-tbl { width: 100%; border-collapse: collapse; border: 1px solid var(--rule); font-size: 12.5px; line-height: 1.5; }
 .doc-tbl thead th { background: var(--navy); color: #fff; font-weight: 600; text-align: left; padding: 9px 11px; }
 .doc-tbl tbody th, .doc-tbl td { text-align: left; vertical-align: top; padding: 9px 11px; border-top: 1px solid var(--rule); font-weight: 400; color: var(--ink); }
+.paper .doc-tbl tbody th, .paper .doc-tbl td { white-space: normal; background: transparent; color: var(--ink); font-family: inherit; font-size: inherit; letter-spacing: normal; text-transform: none; }
+.paper .doc-tbl thead th { white-space: normal; background: var(--navy); color: #fff; font-family: inherit; font-size: inherit; letter-spacing: normal; text-transform: none; }
+.doc-tbl tbody tr { background: #fff; }
 .doc-tbl tbody tr:nth-child(even) { background: var(--zebra); }
 .doc-tbl.cols-2 th:first-child { width: 31%; }
 .doc-tbl.cols-3 th:first-child { width: 15%; }
@@ -190,3 +193,15 @@ select, input[type="search"], input[type="date"] { background: var(--panel); col
   .doc-tbl thead th { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   .doc-tbl tbody tr:nth-child(even) { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 }
+
+/* edition / month strip */
+.day-strip { display: flex; flex-wrap: wrap; gap: 6px; }
+.day-strip .day { display: flex; flex-direction: column; align-items: center; min-width: 58px; padding: 5px 8px; line-height: 1.2;
+  font: 600 12px var(--font); color: var(--text); background: var(--content); border: 1px solid var(--border); border-radius: 6px; cursor: pointer; }
+.day-strip .day .wk { font-size: 10.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.day-strip .day .md { font-size: 13px; }
+.day-strip .day:hover:not(:disabled) { border-color: var(--accent); }
+.day-strip .day.on { background: var(--corp); border-color: var(--corp); color: #fff; }
+.day-strip .day.on .wk { color: rgba(255,255,255,.85); }
+.day-strip .day:disabled { opacity: .38; cursor: not-allowed; }
+.brief-toolbar { flex-wrap: wrap; }

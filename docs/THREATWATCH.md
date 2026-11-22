@@ -212,3 +212,16 @@ Any section you supply replaces the generated one; the rest stay automated.
 Section ids: `summary, critical, exploitation, industry, actors, remediation, changes`. Links must be https.
 After committing an editorial file for a day already published, run the workflow with **refresh_report** (or
 `python scripts/build_brief.py --refresh-report`); this re-composes the latest edition without re-running the KEV diff.
+
+## Monthly summary page (`threatwatch/monthly.html`)
+
+Same framed-document format as the daily brief, one per month for the last six months, recomposed every morning:
+1 Executive Intelligence Summary (KEV additions, vendors, ransomware, EPSS ≥ 90th, exploited/zero-day outside KEV,
+public exploit count, NVD publications) · 2 Most Significant Vulnerabilities · 3 Exploitation and Zero-Day Activity ·
+4 Vendor and Industry Concentration · 5 Threat Actor Intelligence · 6 Enterprise Risk and Remediation Decisions
+(incl. upcoming federal due dates) · 7 Monthly Chronology · references.
+Analyst override: `threatwatch/data/editorial/monthly-YYYY-MM.json` → `"report"` with section ids
+`summary, critical, exploitation, industry, actors, remediation, chronology`.
+
+The daily page shows the last 7 calendar days as an edition strip. Editions published before the document format
+existed are reconstructed from catalog data (marked "reconstructed") the next time the report is composed.
