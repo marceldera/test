@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
   "edition": "2026-11-22",
-  "publishedAt": "2026-11-22T18:18:16Z",
+  "publishedAt": "2026-11-22T18:22:51Z",
   "window": {
-    "start": "2026-11-22T17:59:14Z",
-    "end": "2026-11-22T18:18:16Z",
+    "start": "2026-11-22T18:18:16Z",
+    "end": "2026-11-22T18:22:51Z",
     "note": "KEV additions not present in the previous edition’s catalog snapshot."
   },
   "executive": {
@@ -88,20 +88,20 @@
       "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
       "version": "2026.11.20",
       "released": "2026-11-20T17:48:39.1516Z",
-      "fetchedAt": "2026-11-22T18:18:16Z",
+      "fetchedAt": "2026-11-22T18:22:51Z",
       "status": "ok"
     },
     {
       "name": "FIRST EPSS",
       "url": "https://www.first.org/epss/",
-      "fetchedAt": "2026-11-22T18:18:16Z",
+      "fetchedAt": "2026-11-22T18:22:51Z",
       "status": "ok",
       "note": "Probability estimate; not evidence of exploitation."
     },
     {
       "name": "NVD CVE API 2.0",
       "url": "https://nvd.nist.gov/",
-      "fetchedAt": "2026-11-22T18:18:16Z",
+      "fetchedAt": "2026-11-22T18:22:51Z",
       "status": "no data",
       "note": "Enrichment can lag publication by days."
     }
@@ -457,7 +457,7 @@
     ],
     "footer": "Enterprise Cyber Threat Intelligence | 22 Nov 2026",
     "reviewedBy": "Marcel Dera, Aegis Cyber Solutions",
-    "generatedAt": "2026-11-22T18:20:47Z",
+    "generatedAt": "2026-11-22T18:24:40Z",
     "prioritized": [
       "CVE-2026-133968",
       "CVE-2026-102769",
