@@ -10,8 +10,16 @@ Writes under threatwatch/data/:
   validation/nuclei-index.json  cached template index
   validation/reviews.json       Aegis-curated reviews (hand-edited)
 
-Env: NVD_API_KEY (optional), TW_NUCLEI_DIR + TW_NUCLEI_COMMIT (optional checkout),
-     TW_NVD_BACKFILL_DAYS (14), TW_RETAIN_DAYS (120), TW_NVD_LOOKUPS (auto).
+  validation/intel-*.json       last good copy of each enrichment feed
+
+Coverage: every CVE published in the last TW_RETAIN_DAYS (90), every CISA KEV CVE,
+every zero-day / exploited CVE from Google Project Zero, ENISA EUVD and VulnCheck KEV,
+and every CVE featured in a brief. Each record carries public exploit / PoC links,
+threat-intelligence context and MITRE ATT&CK mappings (see tw/intel.py).
+
+Env: NVD_API_KEY (optional), VULNCHECK_API_KEY (optional), TW_NUCLEI_DIR + TW_NUCLEI_COMMIT,
+     TW_NVD_BACKFILL_DAYS (14), TW_RETAIN_DAYS (90), TW_MIN_CVSS (0), TW_NVD_LOOKUPS (auto),
+     TW_INTEL_FETCH (1), TW_POC_DIR (optional local PoC-in-GitHub checkout).
 """
 from __future__ import annotations
 
@@ -25,7 +33,8 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from tw import catalog as C  # noqa: E402
-from tw.common import DATA_DIR, SourceError, fetch_json, iso, now_utc, read_json, write_json  # noqa: E402
+from tw import intel as I  # noqa: E402
+from tw.common import DATA_DIR, SourceError, fetch_json, fetch_text, iso, now_utc, read_json, write_json  # noqa: E402
 from tw.detections import combine, index_nmap, index_nuclei, load_reviews, merge  # noqa: E402
 from tw.playbooks import load_playbooks, load_products  # noqa: E402
 from tw.sources import NVD_URL, collect_epss, collect_kev  # noqa: E402
@@ -33,7 +42,8 @@ from tw.sources import NVD_URL, collect_epss, collect_kev  # noqa: E402
 CVE_DIR = DATA_DIR / "cves"
 VAL_DIR = DATA_DIR / "validation"
 BACKFILL_DAYS = int(os.environ.get("TW_NVD_BACKFILL_DAYS", "14"))
-RETAIN_DAYS = int(os.environ.get("TW_RETAIN_DAYS", "120"))
+RETAIN_DAYS = int(os.environ.get("TW_RETAIN_DAYS", "90"))
+SCOPE_VERSION = 2  # 2 = every CVE published in the window (backfilled once by publish date)
 
 
 def main() -> int:
@@ -71,9 +81,43 @@ def nvd_from_record(r: dict) -> dict | None:
         "status": r.get("nvdStatus"), "description": r.get("description")}
 
 
+def cached_source(name: str, label: str, fn, warnings: list[str], meta: dict, keep: set[str] | None = None) -> dict:
+    """Run one enrichment collector; on failure fall back to its last good copy."""
+    path = VAL_DIR / f"intel-{name}.json"
+    old = read_json(path, {}) or {}
+    try:
+        data = fn()
+        if keep is not None:
+            data = {k: v for k, v in data.items() if k in keep}
+        if json.loads(json.dumps(data)) != old.get("data"):  # rewrite only when content changed
+            write_json(path, {"source": label, "count": len(data), "data": data})
+        meta[name] = {"ok": True, "count": len(data)}
+        return data
+    except (SourceError, ValueError, KeyError, TypeError) as exc:
+        warnings.append(f"{label} unavailable; kept last good copy ({exc})"[:300])
+        meta[name] = {"ok": False, "count": len(old.get("data") or {})}
+        return old.get("data") or {}
+
+
 def build(now, warnings: list[str]) -> dict:
     kev = collect_kev()
     kev_by = {r["cve"]: r for r in kev["records"]}
+    intel_on = os.environ.get("TW_INTEL_FETCH", "1") == "1"
+    src: dict[str, dict] = {}
+    imeta: dict[str, dict] = {}
+
+    # ---- zero-day / exploited-in-the-wild sources (they define part of the universe)
+    if intel_on:
+        src["p0"] = cached_source("project-zero", "Google Project Zero 0day In the Wild",
+                                  lambda: I.collect_project_zero(now.year), warnings, imeta)
+        src["euvd"] = cached_source("euvd", "ENISA EUVD exploited", I.collect_euvd, warnings, imeta)
+        vc_key = os.environ.get("VULNCHECK_API_KEY", "").strip()
+        if vc_key:
+            src["vulncheck"] = cached_source("vulncheck", "VulnCheck KEV", lambda: I.collect_vulncheck(vc_key),
+                                             warnings, imeta)
+        else:
+            imeta["vulncheck"] = {"ok": None, "count": 0, "note": "set VULNCHECK_API_KEY to enable"}
+    exploited = I.exploited_set(src)
     existing = load_existing()
     nvd_cache = {c: n for c, r in existing.items() if (n := nvd_from_record(r))}
 
@@ -92,13 +136,28 @@ def build(now, warnings: list[str]) -> dict:
         nvd_ok, synced = False, 0
         warnings.append(f"NVD sync failed; using cached NVD data ({exc})"[:300])
 
+    # ---- one-time backfill when the coverage rule widens: every CVE *published* in the window
+    scope = state.get("scope")
+    if nvd_ok and scope != SCOPE_VERSION:
+        try:
+            pub = C.nvd_modified_since(now - timedelta(days=RETAIN_DAYS), now, field="pub")
+            for rec in pub:
+                cid = rec.get("id")
+                if C.is_cve(cid):
+                    nvd_cache[cid] = C.parse_nvd_full(rec)
+            synced += len(pub)
+            scope = SCOPE_VERSION
+        except SourceError as exc:
+            warnings.append(f"NVD {RETAIN_DAYS}-day backfill failed; will retry next run ({exc})"[:300])
+
     # ---- universe
     brief_cves, appears = brief_appearances()
-    universe = set(kev_by) | set(brief_cves)
+    universe = set(kev_by) | set(brief_cves) | exploited
     universe |= {c for c, n in nvd_cache.items() if C.keep_non_kev(n, now, RETAIN_DAYS)}
 
-    # ---- per-CVE NVD lookups for KEV/brief CVEs still missing NVD data
-    missing = sorted((c for c in universe if c not in nvd_cache), reverse=True)
+    # ---- per-CVE NVD lookups for KEV / zero-day / brief CVEs still missing NVD data (zero-days first)
+    missing = sorted((c for c in universe if c not in nvd_cache), key=lambda c: (c not in (src.get("p0") or {}), c not in kev_by,
+                                             [-int(x) for x in c.split("-")[1:]]))
     key = os.environ.get("NVD_API_KEY", "").strip()
     limit = int(os.environ.get("TW_NVD_LOOKUPS") or (400 if key else 40))
     pause = 0 if os.environ.get("TW_FIXTURES") else (0.7 if key else 6.5)
@@ -113,7 +172,29 @@ def build(now, warnings: list[str]) -> dict:
         except SourceError:
             pass
         time.sleep(pause)
-    universe = {c for c in universe if c in nvd_cache or c in kev_by}  # brief CVE with neither: skip
+    universe = {c for c in universe if c in nvd_cache or c in kev_by or c in exploited}  # brief CVE with neither: skip
+
+    # ---- public exploits / PoCs and ATT&CK (links and metadata only; nothing is executed)
+    if intel_on:
+        src["msf"] = cached_source("metasploit", "Metasploit module metadata",
+                                   lambda: I.index_metasploit(fetch_json(I.MSF_URL, retries=2, timeout=120)),
+                                   warnings, imeta, keep=universe)
+        src["edb"] = cached_source("exploitdb", "Exploit-DB index",
+                                   lambda: I.index_exploitdb(fetch_text(I.EDB_URL, retries=2)),
+                                   warnings, imeta, keep=universe)
+        if not os.environ.get("TW_FIXTURES") or os.environ.get("TW_POC_DIR"):
+            src["github"] = cached_source("github-poc", "PoC-in-GitHub",
+                                          lambda: I.collect_github_pocs(universe), warnings, imeta, keep=universe)
+        else:
+            src["github"] = {}
+
+        def _attack():
+            data, version = I.index_attack(json.loads(fetch_text(I.ATTACK_URL, retries=2)))
+            imeta["attackVersion"] = version
+            return data
+        src["attack"] = cached_source("attack", "MITRE ATT&CK Enterprise", _attack, warnings, imeta)
+        src["ctid"] = cached_source("ctid-kev", "CTID KEV→ATT&CK mappings",
+                                    lambda: I.index_ctid(fetch_json(I.CTID_URL, retries=2, timeout=120)), warnings, imeta)
 
     # ---- detections
     nuclei_dir = os.environ.get("TW_NUCLEI_DIR")
@@ -174,7 +255,14 @@ def build(now, warnings: list[str]) -> dict:
                     "catalogVersion": kev.get("catalogVersion"), "fetchedAt": kev["fetchedAt"]} if cid in kev_by else None,
             "detections": {"source": "nuclei-templates / nmap", "commitInStatus": True} if cid in detections else None,
         }
-        r = C.build_record(cid, nvd, kev_by.get(cid), detections.get(cid, []), appears.get(cid, {}), prov)
+        fb = (src.get("p0") or {}).get(cid) or (src.get("vulncheck") or {}).get(cid)
+        r = C.build_record(cid, nvd, kev_by.get(cid), detections.get(cid, []), appears.get(cid, {}), prov, fb)
+        r.update(I.assemble(cid, kev_by.get(cid), src, r["exploitRefs"]))
+        ex = r["exploitStatus"]
+        ex["publicExploitReference"] = r["pocs"]["count"] > 0
+        ex["reportedExploitation"] = ", ".join(s["source"] for s in r["exploitation"]["sources"]) or None
+        ex["note"] = ("Exploitation reports, public exploit / PoC code and scanner signals are separate evidence; "
+                      "none proves a specific asset is vulnerable or compromised. PoC repositories are unvetted.")
         r["curatedPlaybook"] = cid in playbooks
         errs += C.validate_record(r)
         records[cid] = r
@@ -199,19 +287,27 @@ def build(now, warnings: list[str]) -> dict:
     write_json(CVE_DIR / "index.json", {"schemaVersion": 1, "generatedAt": iso(now), "fields": C.INDEX_FIELDS,
                                         "count": len(rows), "items": rows})
     if nvd_ok:
-        write_json(CVE_DIR / "state.json", {"nvdCursor": iso(now)})
+        write_json(CVE_DIR / "state.json", {"nvdCursor": iso(now), "scope": scope})
     pending = sum(1 for r in records.values() if r["nvdPending"])
     if pending:
-        warnings.append(f"{pending} KEV CVEs awaiting NVD enrichment (filled over the next runs)")
+        warnings.append(f"{pending} exploited CVEs awaiting NVD enrichment (filled over the next runs)")
     return {
-        "coverage": (f"All CISA KEV CVEs, CVEs with CVSS ≥ 7.0 published in the last {RETAIN_DAYS} days, "
-                     "and every CVE featured in a ThreatWatch brief."),
-        "counts": {"total": len(records), "kev": len(kev_by), "withDetection": sum(1 for r in records.values() if r["detections"]),
+        "coverage": (f"Every CVE published in the last {RETAIN_DAYS} days"
+                     + (f" with CVSS ≥ {C.MIN_CVSS:g}" if C.MIN_CVSS > 0 else "")
+                     + ", every CISA KEV CVE, every zero-day tracked by Google Project Zero, exploited CVEs "
+                       "reported by ENISA EUVD" + (" and VulnCheck KEV" if src.get("vulncheck") else "")
+                     + ", and every CVE featured in a ThreatWatch brief."),
+        "counts": {"total": len(records), "kev": len(kev_by),
+                   "zeroDay": sum(1 for r in records.values() if r["exploitation"]["zeroDay"]),
+                   "inTheWild": sum(1 for r in records.values() if r["exploitation"]["inTheWild"]),
+                   "withPoc": sum(1 for r in records.values() if r["pocs"]["count"]),
+                   "withAttack": sum(1 for r in records.values() if r["attack"]["techniques"] or r["intel"]["groups"]),
+                   "withDetection": sum(1 for r in records.values() if r["detections"]),
                    "nvdPending": pending, "nvdSynced": synced, "nvdLookups": looked,
                    "written": written, "removed": removed},
         "sources": {"kevCatalogVersion": kev.get("catalogVersion"), "nucleiCommit": nuclei_meta.get("commit"),
                     "nucleiIndexedAt": nuclei_meta.get("indexedAt"), "nmapCommit": nuclei_meta.get("nmapCommit"),
-                    "curatedPlaybooks": len(playbooks),
+                    "curatedPlaybooks": len(playbooks), "intel": imeta,
                     "nvdSyncOk": nvd_ok},
     }
 

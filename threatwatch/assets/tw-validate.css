@@ -18,6 +18,10 @@
 .chip.det { color: var(--ok); border-color: var(--ok); }
 .chip.exp { color: var(--high); border-color: var(--high); }
 .chip.fix { color: var(--accent); border-color: var(--accent); }
+.chip.zd { color: #fff; background: var(--crit); border-color: var(--crit); }
+.chip.att { color: var(--text, inherit); border-style: dashed; }
+.card h4 { margin: 14px 0 6px; font-size: 13px; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); }
+.card ul.plain li { overflow-wrap: anywhere; }
 .vv-section { margin-top: 40px; }
 .vv-steps { padding-left: 22px; }
 .vv-steps li { margin-bottom: 10px; }
@@ -38,7 +42,7 @@
 .rbadge.on b::before { content: "● "; }
 .rbadge.off { opacity: .7; }
 .rbadge.off b::before { content: "○ "; }
-.rbadge.on.kev { border-color: var(--crit); } .rbadge.on.kev b { color: var(--crit); }
+.rbadge.on.kev, .rbadge.on.zd, .rbadge.on.itw { border-color: var(--crit); } .rbadge.on.kev b, .rbadge.on.zd b, .rbadge.on.itw b { color: var(--crit); }
 .rbadge.on.epss, .rbadge.on.crit { border-color: var(--high); } .rbadge.on.epss b, .rbadge.on.crit b { color: var(--high); }
 .rbadge.on.exp { border-color: var(--high); } .rbadge.on.exp b { color: var(--high); }
 .rbadge.on.fix { border-color: var(--accent); } .rbadge.on.fix b { color: var(--accent); }

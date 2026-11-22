@@ -63,7 +63,7 @@ class CatalogTests(unittest.TestCase):
         self.w("nvd-bulk-0.json", {"totalResults": 4, "vulnerabilities": [
             {"cve": nvd_rec("CVE-2099-0001", 9.8)},
             {"cve": nvd_rec("CVE-2099-0010", 9.1, exploit=True)},          # recent critical, kept
-            {"cve": nvd_rec("CVE-2099-0011", 5.3)},                        # medium, dropped
+            {"cve": nvd_rec("CVE-2099-0011", 5.3)},                        # medium, recent: kept (90-day scope)
             {"cve": nvd_rec("CVE-2099-0012", 8.8, published="2025-01-01T00:00:00.000")}]})  # old, dropped
         self.w("nvd-CVE-2099-0002.json", {"vulnerabilities": [{"cve": nvd_rec("CVE-2099-0002", None, patch=False)}]})
         self.w("epss.json", {"data": [{"cve": "CVE-2099-0001", "epss": "0.91", "percentile": "0.99", "date": "2026-11-21"}]})
@@ -91,7 +91,7 @@ class CatalogTests(unittest.TestCase):
         self.assertEqual(r.returncode, 0, r.stderr)
         idx = json.loads((self.data / "cves" / "index.json").read_text())
         ids = sorted(row[0] for row in idx["items"])
-        self.assertEqual(ids, ["CVE-2099-0001", "CVE-2099-0002", "CVE-2099-0010"])
+        self.assertEqual(ids, ["CVE-2099-0001", "CVE-2099-0002", "CVE-2099-0010", "CVE-2099-0011"])
         a = self.rec("CVE-2099-0001")
         self.assertTrue(a["exploitStatus"]["kevListed"])
         self.assertFalse(a["exploitStatus"]["publicExploitReference"])  # javascript: ref discarded

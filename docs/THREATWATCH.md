@@ -40,6 +40,7 @@ tests/test_publisher.py                 offline tests (synthetic CVE-2099 fixtur
 2. Repo **Settings → Actions → General → Workflow permissions**: allow *Read and write*.
    If `main` is protected, allow `github-actions[bot]` to push or switch publishing to a PR-based flow.
 3. Optional: add secret `NVD_API_KEY` (free from NVD) — raises the rate limit from 5 to 50 req/30 s.
+4. Optional: add secret `VULNCHECK_API_KEY` (free VulnCheck Community account) — adds VulnCheck KEV exploitation reports and XDB exploit links.
 4. Pin `actions/checkout` and `actions/setup-python` to commit SHAs (TODO in workflow).
 5. Merge. Then **Actions → Publish ThreatWatch → Run workflow** with *force = true* to create the first edition.
    Until that run succeeds, `/threatwatch/` shows a clear “temporarily unavailable” message.
@@ -85,16 +86,29 @@ actor→campaign, campaign→cve/industry/geography/technique, actor→technique
 
 Public, read-only CVE lookup. It never scans and has no scan button. Phase 2 (authorized assessments) is deliberately absent: GitHub Pages can't safely run scans or hold customer data.
 
-**Coverage:** every CISA KEV CVE, CVEs with CVSS ≥ 7.0 published in the last 120 days (`TW_RETAIN_DAYS`), and every CVE featured in a brief. Unknown CVEs show a "not in catalog" page linking to NVD and CVE.org.
+**Coverage:** every CVE published in the last 90 days (`TW_RETAIN_DAYS`; optional floor `TW_MIN_CVSS`, default 0), every CISA KEV CVE, every zero-day in Google Project Zero's "0day In the Wild" tracker, exploited CVEs from ENISA EUVD (and VulnCheck KEV when its key is set), and every CVE featured in a brief. Unknown CVEs show a "not in catalog" page linking to NVD and CVE.org.
+
+**Enrichment per CVE** (`scripts/tw/intel.py`; links and metadata only — nothing is downloaded or executed):
+
+| Section | Sources |
+|---|---|
+| `exploitation` / `zeroDay` | CISA KEV · Google Project Zero sheet (type, discovered, patched, advisory, analysis, root-cause analysis, reported by) · ENISA EUVD · VulnCheck KEV |
+| `pocs` | Metasploit module metadata (rank, `check()`) · Exploit-DB index · nomi-sec/PoC-in-GitHub (top 5 by stars, forks ignored, unvetted) · VulnCheck XDB · NVD Exploit-tagged references |
+| `intel` | ATT&CK groups / campaigns / software whose ATT&CK text cites the CVE (campaign → group attribution followed) · ransomware use (KEV, VulnCheck) · VulnCheck exploitation reports |
+| `attack.techniques` | ATT&CK procedure examples citing the CVE · Center for Threat-Informed Defense KEV→ATT&CK mappings (exploitation technique, primary / secondary impact) |
+
+Each feed keeps its last good copy in `data/validation/intel-*.json` (rewritten only when content changes). A feed outage is a warning in `status.json`, never a blocked run; per-feed health is in `status.sources.intel`.
 
 **Pipeline** (`scripts/build_catalog.py`, run automatically by `build_brief.py` right after each published edition; set `TW_SKIP_CATALOG=1` to disable). It fetches Nuclei template metadata itself with a sparse git clone, so the workflow needs no extra step:
 
 1. CISA KEV (required — failure blocks the catalog run).
 2. NVD incremental sync by `lastModified` window from the cursor in `data/cves/state.json`. The first run backfills 14 days (`TW_NVD_BACKFILL_DAYS`). If NVD fails, cached records are kept and a warning is shown.
-3. Per-CVE NVD lookups for KEV CVEs not yet enriched: 40 per run without a key, 400 with `NVD_API_KEY`. The backlog clears over a few runs. Records awaiting NVD show "NVD details not yet collected".
+   When the coverage rule widens (`SCOPE_VERSION` in `build_catalog.py`), one run backfills every CVE *published* in the window.
+3. Per-CVE NVD lookups for KEV / zero-day CVEs not yet enriched (Project Zero first, then KEV, newest first): 40 per run without a key, 400 with `NVD_API_KEY`. The backlog clears over a few runs. Records awaiting NVD show "NVD details not yet collected".
 4. EPSS for every catalog CVE, stored in one file, `data/cves/epss.json`. A missing score shows as Unknown, never 0.
 5. Nuclei template **metadata** indexed from a sparse checkout of `projectdiscovery/nuclei-templates`. Nothing is executed. The commit is recorded in `data/cves/status.json`.
-6. Quality gate (schema, https-only links, review file) → write changed records only, prune CVEs that fell out of coverage.
+6. Zero-day, exploit/PoC and ATT&CK enrichment (table above).
+7. Quality gate (schema, https-only links in every section, review file) → write changed records only, prune CVEs that fell out of coverage.
 
 **Curating checks:** add entries to `threatwatch/data/validation/reviews.json`, then run the workflow with force.
 
@@ -117,12 +131,12 @@ Public, read-only CVE lookup. It never scans and has no scan button. Phase 2 (au
 
 | Tier | Rule |
 |---|---|
-| 1 Immediate | KEV-listed and not internal-only; or CVSS ≥ 9 + exploit reference + internet-facing |
-| 2 High | KEV-listed (internal); EPSS ≥ 95th percentile; or CVSS ≥ 9 + internet-facing |
+| 1 Immediate | Exploited in the wild (KEV, Project Zero, EUVD or VulnCheck) and not internal-only; or CVSS ≥ 9 + public exploit/PoC + internet-facing |
+| 2 High | Exploited in the wild (internal); EPSS ≥ 95th percentile; or CVSS ≥ 9 + internet-facing |
 | 3 Planned | CVSS ≥ 7 |
 | 4 Monitor | Everything else, including unscored |
 
-High asset criticality raises one tier. Low criticality lowers one tier (never for KEV). "Not deployed" means not applicable.
+High asset criticality raises one tier. Low criticality lowers one tier (never for exploited-in-the-wild CVEs). "Not deployed" means not applicable.
 
 **Controlled test plan** (`validate.html#plan`): visitors pick 1–25 CVEs and the page builds a Nuclei command locked to those templates with `-id`. Defaults: `-etags intrusive,dos,fuzz`, `-ni` (no out-of-band callbacks), `-rl 10 -c 5 -timeout 10`, JSONL output. The visitor must tick four authorization statements and enter a name before any command appears. Targets are checked against a strict hostname/IP/URL pattern and shell-quoted. Everything happens in the browser: only the selected CVE IDs persist (localStorage), never targets or attestations. Aegis runs nothing and receives nothing. A downloadable JSON record captures scope, options, attestations and the template commit for the tester's audit trail. Flags verified against `projectdiscovery/nuclei` `cmd/nuclei/main.go` on 21 Nov 2026.
 

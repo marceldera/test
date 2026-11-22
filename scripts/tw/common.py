@@ -62,7 +62,7 @@ def fetch_json(url: str, *, headers: dict | None = None, timeout: int = 45,
             with urllib.request.urlopen(req, timeout=timeout) as resp:
                 if resp.status != 200:
                     raise SourceError(f"HTTP {resp.status} from {url}")
-                raw = resp.read(60 * 1024 * 1024)  # 60 MB ceiling
+                raw = resp.read(150 * 1024 * 1024)  # 150 MB ceiling
             return json.loads(raw)
         except (urllib.error.URLError, TimeoutError, json.JSONDecodeError, SourceError) as exc:
             last = exc
@@ -73,14 +73,59 @@ def fetch_json(url: str, *, headers: dict | None = None, timeout: int = 45,
     raise SourceError(f"Failed to fetch {url}: {last}")
 
 
+def fetch_text(url: str, *, headers: dict | None = None, timeout: int = 120,
+               retries: int = 3, backoff: float = 5.0, limit_mb: int = 200) -> str:
+    """Fetch a text/CSV/large-JSON body. Offline test mode maps URLs to fixture files."""
+    fixture_dir = os.environ.get("TW_FIXTURES")
+    if fixture_dir:
+        path = Path(fixture_dir) / _fixture_name(url)
+        if not path.exists():
+            raise SourceError(f"Fixture missing: {path.name}")
+        return path.read_text(encoding="utf-8")
+    last: Exception | None = None
+    for attempt in range(1, retries + 1):
+        req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT, **(headers or {})})
+        try:
+            with urllib.request.urlopen(req, timeout=timeout) as resp:
+                if resp.status != 200:
+                    raise SourceError(f"HTTP {resp.status} from {url}")
+                return resp.read(limit_mb * 1024 * 1024).decode("utf-8", errors="replace")
+        except (urllib.error.URLError, TimeoutError, SourceError) as exc:
+            last = exc
+            if isinstance(exc, urllib.error.HTTPError) and exc.code in (400, 401, 403, 404):
+                break
+            if attempt < retries:
+                time.sleep(backoff * attempt)
+    raise SourceError(f"Failed to fetch {url}: {last}")
+
+
+def _fixture_name(url: str) -> str:
+    """Fixture file names for the enrichment feeds (offline tests)."""
+    table = [("docs.google.com/spreadsheets", "p0-{sheet}.csv"), ("modules_metadata_base", "msf.json"),
+             ("files_exploits.csv", "edb.csv"), ("enterprise-attack.json", "attack.json"),
+             ("mappings-explorer", "ctid-kev.json"), ("euvdservices", "euvd-{page}.json"),
+             ("api.vulncheck.com", "vulncheck-{page}.json")]
+    for needle, name in table:
+        if needle in url:
+            sheet = re.search(r"sheet=([^&]+)", url)
+            page = re.search(r"[?&]page=(\d+)", url)
+            return name.format(sheet=sheet.group(1) if sheet else "x", page=page.group(1) if page else 0)
+    return "unmapped.txt"
+
+
 def _fixture_for(url: str, fixture_dir: Path) -> Any:
-    if "known_exploited_vulnerabilities" in url:
+    if any(n in url for n in ("euvdservices", "api.vulncheck.com", "mappings-explorer", "modules_metadata_base")):
+        name = _fixture_name(url)
+    elif "known_exploited_vulnerabilities" in url:
         name = "kev.json"
     elif "api.first.org" in url:
         name = "epss.json"
     elif "services.nvd.nist.gov" in url and "lastModStartDate" in url:
         m = re.search(r"startIndex=(\d+)", url)
         name = f"nvd-bulk-{m.group(1) if m else 0}.json"
+    elif "services.nvd.nist.gov" in url and "pubStartDate" in url:
+        m = re.search(r"startIndex=(\d+)", url)
+        name = f"nvd-pub-{m.group(1) if m else 0}.json"
     elif "services.nvd.nist.gov" in url:
         m = re.search(r"cveId=(CVE-\d{4}-\d+)", url)
         name = f"nvd-{m.group(1)}.json" if m else "nvd.json"

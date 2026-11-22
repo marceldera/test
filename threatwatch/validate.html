@@ -43,7 +43,7 @@
   <section class="vv-hero" aria-labelledby="vv-title">
     <div class="eyebrow">Vulnerability Validation</div>
     <h1 id="vv-title">Validate exposure, not just severity</h1>
-    <p class="lead">Look up a CVE to see cited CVSS, EPSS and CISA KEV evidence, which products and versions are affected, whether a public detection check exists, and how to confirm exposure safely.</p>
+    <p class="lead">Look up a CVE to see cited CVSS, EPSS and exploitation evidence (CISA KEV, Google Project Zero zero-days, ENISA EUVD), public exploits and PoCs, threat actors and MITRE ATT&amp;CK techniques, which versions are affected, and how to confirm exposure safely.</p>
     <form id="vv-search" class="vv-search" role="search" aria-label="Search CVEs">
       <label class="sr-only" for="vv-q">CVE ID, vendor or product</label>
       <input type="search" id="vv-q" placeholder="CVE-2024-3400, Ivanti, Fortinet…" autocomplete="off" spellcheck="false">
@@ -64,7 +64,10 @@
       </label>
       <label class="chk"><input type="checkbox" id="vf-kev"> CISA KEV-listed</label>
       <label class="chk"><input type="checkbox" id="vf-det"> Public detection check</label>
-      <label class="chk"><input type="checkbox" id="vf-exp"> Exploit reference</label>
+      <label class="chk"><input type="checkbox" id="vf-zd"> Zero-day (Project Zero)</label>
+      <label class="chk"><input type="checkbox" id="vf-itw"> Exploited in the wild</label>
+      <label class="chk"><input type="checkbox" id="vf-exp"> Public exploit / PoC</label>
+      <label class="chk"><input type="checkbox" id="vf-att"> ATT&amp;CK / actor linked</label>
       <button type="button" class="btn secondary" id="vf-reset">Reset</button>
     </form>
     <p class="muted" id="vv-count" aria-live="polite"></p>

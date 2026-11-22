@@ -1,9 +1,11 @@
 """Public CVE catalog for Vulnerability Validation (Phase 1, read-only).
 
 Coverage (by design, stated on the page):
+  * every CVE published within RETAIN_DAYS (90; optional TW_MIN_CVSS floor, default 0),
+    kept current by an incremental NVD lastModified sync;
   * every CVE in the CISA KEV catalog;
-  * CVEs with CVSS >= 7.0 published within RETAIN_DAYS, found via an
-    incremental NVD lastModified sync;
+  * every zero-day / exploited CVE from Google Project Zero, ENISA EUVD and
+    VulnCheck KEV (see intel.py);
   * every CVE that appeared in a ThreatWatch daily brief.
 
 Each CVE is one JSON file (changes only when NVD/KEV change). EPSS lives in a
@@ -12,6 +14,7 @@ single epss.json so daily score updates don't rewrite thousands of files.
 from __future__ import annotations
 
 import os
+import re
 import time
 from datetime import datetime, timedelta
 from typing import Any
@@ -23,15 +26,16 @@ from .sources import NVD_URL, _parse_nvd
 SCHEMA_VERSION = 1
 NVD_PAGE = 2000
 NVD_MAX_WINDOW = timedelta(days=119)
-MIN_CVSS = 7.0
+MIN_CVSS = float(os.environ.get("TW_MIN_CVSS", "0"))  # 0 = every published CVE in the window
 
 
 def _nvd_time(dt: datetime) -> str:
     return quote(dt.astimezone(UTC).strftime("%Y-%m-%dT%H:%M:%S.000+00:00"), safe="")
 
 
-def nvd_modified_since(start: datetime, end: datetime) -> list[dict]:
-    """All non-rejected NVD CVE records modified in [start, end], paginated."""
+def nvd_modified_since(start: datetime, end: datetime, field: str = "lastMod") -> list[dict]:
+    """All non-rejected NVD CVE records modified (field="lastMod") or published (field="pub")
+    in [start, end], paginated."""
     key = os.environ.get("NVD_API_KEY", "").strip()
     headers = {"apiKey": key} if key else {}
     pause = 0 if os.environ.get("TW_FIXTURES") else (0.7 if key else 6.5)
@@ -41,7 +45,7 @@ def nvd_modified_since(start: datetime, end: datetime) -> list[dict]:
         win_end = min(end, win_start + NVD_MAX_WINDOW)
         index = 0
         while True:
-            url = (f"{NVD_URL}?lastModStartDate={_nvd_time(win_start)}&lastModEndDate={_nvd_time(win_end)}"
+            url = (f"{NVD_URL}?{field}StartDate={_nvd_time(win_start)}&{field}EndDate={_nvd_time(win_end)}"
                    f"&resultsPerPage={NVD_PAGE}&startIndex={index}&noRejected")
             raw = fetch_json(url, headers=headers, retries=4, backoff=10)
             if not isinstance(raw, dict) or "vulnerabilities" not in raw:
@@ -103,7 +107,7 @@ def parse_nvd_full(rec: dict) -> dict:
 
 
 def build_record(cve: str, nvd: dict | None, kev: dict | None, detections: list[dict],
-                 appears: dict, prov: dict) -> dict:
+                 appears: dict, prov: dict, fallback: dict | None = None) -> dict:
     nvd = nvd or {}
     refs = nvd.get("references", [])
     exploit_refs = [r["url"] for r in refs if "Exploit" in r["tags"]][:6]
@@ -111,13 +115,15 @@ def build_record(cve: str, nvd: dict | None, kev: dict | None, detections: list[
     vendor_refs = [r for r in refs if "Vendor Advisory" in r["tags"]][:6]
     affected = nvd.get("affected") or []
     vendor, product = (kev["vendor"], kev["product"]) if kev else _primary(affected)
+    if not vendor and fallback:
+        vendor, product = fallback.get("vendor"), fallback.get("product")
     return {
         "schemaVersion": SCHEMA_VERSION,
         "cve": cve,
         "vendor": vendor,
         "product": product,
         "title": kev["name"] if kev else None,
-        "description": nvd.get("description") or (kev or {}).get("description"),
+        "description": nvd.get("description") or (kev or {}).get("description") or (fallback or {}).get("description"),
         "published": nvd.get("published"),
         "lastModified": nvd.get("lastModified"),
         "nvdStatus": nvd.get("status"),
@@ -163,17 +169,24 @@ def index_row(r: dict) -> list:
             1 if any(d["reviewStatus"] != "rejected" for d in r["detections"]) else 0,
             1 if r["exploitStatus"]["publicExploitReference"] else 0,
             (r.get("published") or "")[:10] or None,
-            1 if r["fixRefs"] else 0]
+            1 if r["fixRefs"] else 0,
+            1 if (r.get("exploitation") or {}).get("zeroDay") else 0,
+            1 if (r.get("exploitation") or {}).get("inTheWild") else 0,
+            (r.get("pocs") or {}).get("count", 0),
+            1 if (r.get("attack") or {}).get("techniques") or (r.get("intel") or {}).get("groups") else 0]
 
 
 INDEX_FIELDS = ["cve", "vendor", "product", "cvss", "severity", "kev", "detection",
-                "exploitRef", "published", "fixRef"]
+                "exploitRef", "published", "fixRef", "zeroDay", "itw", "poc", "attack"]
 
 
 def keep_non_kev(nvd: dict, now: datetime, retain_days: int) -> bool:
+    """Recently published, not rejected (and at or above TW_MIN_CVSS when that is set)."""
     score = (nvd.get("cvss") or {}).get("score")
     pub = nvd.get("published")
-    if score is None or score < MIN_CVSS or not pub:
+    if not pub or str(nvd.get("status") or "").lower() == "rejected":
+        return False
+    if MIN_CVSS > 0 and (score is None or score < MIN_CVSS):
         return False
     try:
         published = datetime.fromisoformat(pub.replace("Z", "+00:00"))
@@ -203,8 +216,30 @@ def validate_record(r: Any) -> list[str]:
             errs.append(f"{c}: unsafe detection url")
         if d.get("reviewStatus") not in ("reviewed", "unreviewed", "rejected"):
             errs.append(f"{c}: bad detection reviewStatus")
-    if r.get("nvdPending") and not r.get("kev"):
-        errs.append(f"{c}: record has neither NVD nor KEV data")
+    if r.get("nvdPending") and not r.get("kev") and not (r.get("exploitation") or {}).get("sources"):
+        errs.append(f"{c}: record has neither NVD data nor an exploitation source")
+    for s in (r.get("exploitation") or {}).get("sources", []):
+        if not safe_url(s.get("url")):
+            errs.append(f"{c}: unsafe exploitation source url")
+    zd = r.get("zeroDay") or {}
+    for k in ("advisoryUrl", "analysisUrl", "rcaUrl"):
+        if zd.get(k) is not None and not safe_url(zd[k]):
+            errs.append(f"{c}: unsafe zeroDay.{k}")
+    pocs = r.get("pocs") or {}
+    for k in ("metasploit", "exploitdb", "github", "vulncheckXdb"):
+        for x in pocs.get(k, []):
+            if x.get("url") is not None and not safe_url(x["url"]):
+                errs.append(f"{c}: unsafe pocs.{k} url")
+    if not all(safe_url(u) for u in pocs.get("nvdTagged", [])):
+        errs.append(f"{c}: unsafe pocs.nvdTagged url")
+    intel = r.get("intel") or {}
+    for k in ("groups", "campaigns", "software", "exploitationReports"):
+        for x in intel.get(k, []):
+            if x.get("url") is not None and not safe_url(x["url"]):
+                errs.append(f"{c}: unsafe intel.{k} url")
+    for t in (r.get("attack") or {}).get("techniques", []):
+        if not re.match(r"^T\d{4}(\.\d{3})?$", str(t.get("id"))) or (t.get("url") and not safe_url(t["url"])):
+            errs.append(f"{c}: bad ATT&CK technique")
     return errs
 
 
