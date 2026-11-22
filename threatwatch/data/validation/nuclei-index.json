@@ -1,7 +1,7 @@
 {
   "repo": "projectdiscovery/nuclei-templates",
-  "commit": "1ad2589",
-  "indexedAt": "2026-11-21T18:06:30Z",
+  "commit": "a346d8f",
+  "indexedAt": "2026-11-22T16:04:43Z",
   "count": 4771,
   "templates": {
     "CVE-2014-0160": [

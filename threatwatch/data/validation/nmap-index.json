@@ -1,7 +1,7 @@
 {
   "repo": "nmap/nmap",
-  "commit": "80dd68b",
-  "indexedAt": "2026-11-21T18:06:30Z",
+  "commit": "6e5d1dc",
+  "indexedAt": "2026-11-22T16:04:43Z",
   "count": 55,
   "scripts": {
     "CVE-2010-0533": [
@@ -721,7 +721,7 @@
         "reviewNote": null
       }
     ],
-    "CVE-2012-0152": [
+    "CVE-2012-0002": [
       {
         "method": "nmap-nse",
         "id": "rdp-vuln-ms12-020",
@@ -743,7 +743,7 @@
         "reviewNote": null
       }
     ],
-    "CVE-2012-0002": [
+    "CVE-2012-0152": [
       {
         "method": "nmap-nse",
         "id": "rdp-vuln-ms12-020",
@@ -1171,7 +1171,7 @@
         "reviewNote": null
       }
     ],
-    "CVE-2016-0800": [
+    "CVE-2015-3197": [
       {
         "method": "nmap-nse",
         "id": "sslv2-drown",
@@ -1193,7 +1193,7 @@
         "reviewNote": null
       }
     ],
-    "CVE-2015-3197": [
+    "CVE-2016-0800": [
       {
         "method": "nmap-nse",
         "id": "sslv2-drown",

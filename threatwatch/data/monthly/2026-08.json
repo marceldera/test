@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "month": "2026-08",
   "complete": true,
-  "updatedAt": "2026-11-21T18:06:28Z",
+  "updatedAt": "2026-11-22T16:04:42Z",
   "metrics": [
     {
       "id": "kev_added",
@@ -11,7 +11,7 @@
       "rule": "CVE entries whose CISA dateAdded falls in the month.",
       "source": "CISA KEV",
       "window": "2026-08-01 to 2026-08-31 (dateAdded, ET calendar)",
-      "updatedAt": "2026-11-21T18:06:28Z"
+      "updatedAt": "2026-11-22T16:04:42Z"
     },
     {
       "id": "vendors",
@@ -20,7 +20,7 @@
       "rule": "Unique vendorProject values among the month’s KEV entries.",
       "source": "CISA KEV",
       "window": "2026-08-01 to 2026-08-31 (dateAdded, ET calendar)",
-      "updatedAt": "2026-11-21T18:06:28Z"
+      "updatedAt": "2026-11-22T16:04:42Z"
     },
     {
       "id": "ransomware",
@@ -29,16 +29,16 @@
       "rule": "Month’s KEV entries where CISA sets knownRansomwareCampaignUse = Known.",
       "source": "CISA KEV",
       "window": "2026-08-01 to 2026-08-31 (dateAdded, ET calendar)",
-      "updatedAt": "2026-11-21T18:06:28Z"
+      "updatedAt": "2026-11-22T16:04:42Z"
     },
     {
       "id": "epss90",
       "label": "EPSS ≥ 90th percentile",
       "value": 25,
-      "rule": "Month’s KEV entries with EPSS percentile ≥ 0.90 (scores as of 2026-11-21).",
+      "rule": "Month’s KEV entries with EPSS percentile ≥ 0.90 (scores as of 2026-11-22).",
       "source": "FIRST EPSS",
       "window": "2026-08-01 to 2026-08-31 (dateAdded, ET calendar)",
-      "updatedAt": "2026-11-21T18:06:28Z"
+      "updatedAt": "2026-11-22T16:04:42Z"
     }
   ],
   "notice": "These are CISA KEV catalog counts, not a count of total cyber incidents.",
@@ -50,7 +50,7 @@
       "product": "N-central",
       "concern": "N-able N-central Authentication Bypass Using an Alternate Path or Channel Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.96738,
+      "epssPercentile": 0.96741,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -83,7 +83,7 @@
       "product": "Langflow",
       "concern": "IBM Langflow Code Injection Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.98182,
+      "epssPercentile": 0.98183,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -116,7 +116,7 @@
       "product": "Secure Firewall Adaptive Security Appliance (ASA) and Secure Firewall Threat Defense (FTD)",
       "concern": "Cisco Secure Firewall Adaptive Security Appliance (ASA) and Secure Firewall Threat Defense (FTD) Heap Inspection Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.63988,
+      "epssPercentile": 0.6401,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -127,7 +127,7 @@
       "product": "Windows Ancillary Function Driver for WinSock",
       "concern": "Microsoft Windows Ancillary Function Driver for WinSock Use-After-Free Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.95198,
+      "epssPercentile": 0.95201,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -149,7 +149,7 @@
       "product": "Ray",
       "concern": "Ray-Project Ray Code Injection Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.99157,
+      "epssPercentile": 0.99158,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -193,7 +193,7 @@
       "product": "macOS",
       "concern": "Apple macOS Improper Authentication Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.97264,
+      "epssPercentile": 0.97267,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -204,7 +204,7 @@
       "product": "MLflow",
       "concern": "MLflow Server-Side Request Forgery Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.95987,
+      "epssPercentile": 0.9599,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -215,7 +215,7 @@
       "product": "Server",
       "concern": "TrueConf Server Missing Authentication for Critical Function Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.74303,
+      "epssPercentile": 0.74319,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -226,7 +226,7 @@
       "product": "Server",
       "concern": "TrueConf Server Code Injection Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.77602,
+      "epssPercentile": 0.77617,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -237,7 +237,7 @@
       "product": "Zimbra Collaboration Suite (ZCS)",
       "concern": "Zimbra Collaboration Suite (ZCS) OS Command Injection Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.99552,
+      "epssPercentile": 0.99553,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -259,7 +259,7 @@
       "product": "Gitea",
       "concern": "Gitea Code Injection Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.97888,
+      "epssPercentile": 0.97889,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -270,7 +270,7 @@
       "product": "Libuser",
       "concern": "Red Hat Libuser Race Condition Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.95166,
+      "epssPercentile": 0.95169,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -281,7 +281,7 @@
       "product": "Automatic Bug Reporting Tool",
       "concern": "Red Hat Automatic Bug Reporting Tool Privilege Escalation Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.92437,
+      "epssPercentile": 0.92443,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -314,7 +314,7 @@
       "product": "Kernel",
       "concern": "Linux Kernel Out-of-Bounds Write Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.95332,
+      "epssPercentile": 0.95334,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -325,7 +325,7 @@
       "product": "NetScaler ADC and NetScaler Gateway",
       "concern": "Citrix NetScaler ADC and NetScaler Gateway Improper Restriction of Operations within the Bounds of a Memory Buffer Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.89681,
+      "epssPercentile": 0.89689,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -336,7 +336,7 @@
       "product": "ownCloud",
       "concern": "ownCloud Improper Authentication Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.98755,
+      "epssPercentile": 0.98857,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -347,7 +347,7 @@
       "product": "Kernel",
       "concern": "Linux Kernel Unspecified Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.72029,
+      "epssPercentile": 0.72046,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -358,7 +358,7 @@
       "product": "Artifactory",
       "concern": "JFrog Artifactory Improper Limitation of a Pathname to a Restricted Directory Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.52709,
+      "epssPercentile": 0.5273,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -380,7 +380,7 @@
       "product": "NG/MF",
       "concern": "PaperCut NG/MF Unsafe Reflection Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.99173,
+      "epssPercentile": 0.99174,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     }

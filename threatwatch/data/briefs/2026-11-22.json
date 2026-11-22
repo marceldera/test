@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "edition": "2026-11-22",
+  "publishedAt": "2026-11-22T16:04:42Z",
+  "window": {
+    "start": "2026-11-21T18:06:28Z",
+    "end": "2026-11-22T16:04:42Z",
+    "note": "KEV additions not present in the previous edition’s catalog snapshot."
+  },
+  "executive": {
+    "summary": "CISA published no new Known Exploited Vulnerabilities since the previous edition. That does not mean no new threats emerged — KEV is one confirmed-exploitation source, and campaigns or zero-days outside it are not covered by today’s automated feeds.",
+    "summarySource": "generated",
+    "counts": {
+      "kevAdded": 0,
+      "kevRansomware": 0,
+      "emergency": 0,
+      "urgent": 0,
+      "criticalHigh": 0,
+      "materialChanges": 0
+    },
+    "developments": []
+  },
+  "actions": [],
+  "cves": [],
+  "overflow": 0,
+  "campaigns": {
+    "status": "not_covered",
+    "items": [],
+    "note": "No reviewed, source-linked intelligence for this section in today’s edition."
+  },
+  "industries": {
+    "status": "not_covered",
+    "items": [],
+    "note": "No reviewed, source-linked intelligence for this section in today’s edition."
+  },
+  "actors": {
+    "status": "not_covered",
+    "items": [],
+    "note": "No reviewed, source-linked intelligence for this section in today’s edition."
+  },
+  "remediation": {
+    "groups": {
+      "emergency": [],
+      "urgent": [],
+      "routine": [],
+      "monitor": []
+    },
+    "guidance": {
+      "emergency": "Mitigate exposed instances within 24–72 hours (guidance, not policy).",
+      "urgent": "Remediate within the CISA due date or your next emergency change window.",
+      "routine": "Remediate in the normal patch cycle; prerequisites limit exposure.",
+      "monitor": "Track for exploitation or scope changes."
+    }
+  },
+  "changes": [],
+  "sources": [
+    {
+      "name": "CISA Known Exploited Vulnerabilities",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+      "version": "2026.11.20",
+      "released": "2026-11-20T17:48:39.1516Z",
+      "fetchedAt": "2026-11-22T16:04:42Z",
+      "status": "ok"
+    },
+    {
+      "name": "FIRST EPSS",
+      "url": "https://www.first.org/epss/",
+      "fetchedAt": "2026-11-22T16:04:42Z",
+      "status": "ok",
+      "note": "Probability estimate; not evidence of exploitation."
+    },
+    {
+      "name": "NVD CVE API 2.0",
+      "url": "https://nvd.nist.gov/",
+      "fetchedAt": "2026-11-22T16:04:42Z",
+      "status": "no data",
+      "note": "Enrichment can lag publication by days."
+    }
+  ],
+  "coverage": {
+    "covered": [
+      "CISA KEV additions",
+      "FIRST EPSS",
+      "NVD CVSS and references"
+    ],
+    "notCovered": [
+      "Campaign, threat actor and industry analysis (requires reviewed editorial input)",
+      "Zero-days not yet in CISA KEV",
+      "Vendor-specific fixed-version validation"
+    ],
+    "unknownFields": [],
+    "editorial": {
+      "present": false,
+      "reviewedBy": null,
+      "reviewedAt": null
+    }
+  }
+}

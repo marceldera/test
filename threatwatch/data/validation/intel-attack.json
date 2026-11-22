@@ -1,0 +1,4053 @@
+{
+  "source": "MITRE ATT&CK Enterprise",
+  "count": 171,
+  "data": {
+    "CVE-2025-53771": {
+      "groups": [],
+      "campaigns": [
+        {
+          "id": "C0058",
+          "name": "SharePoint ToolShell Exploitation",
+          "url": "https://attack.mitre.org/campaigns/C0058"
+        }
+      ],
+      "software": [],
+      "techniques": []
+    },
+    "CVE-2025-53770": {
+      "groups": [],
+      "campaigns": [
+        {
+          "id": "C0058",
+          "name": "SharePoint ToolShell Exploitation",
+          "url": "https://attack.mitre.org/campaigns/C0058"
+        }
+      ],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1595.002",
+          "name": "Vulnerability Scanning",
+          "url": "https://attack.mitre.org/techniques/T1595/002",
+          "via": "ATT&CK: SharePoint ToolShell Exploitation"
+        }
+      ]
+    },
+    "CVE-2025-49706": {
+      "groups": [],
+      "campaigns": [
+        {
+          "id": "C0058",
+          "name": "SharePoint ToolShell Exploitation",
+          "url": "https://attack.mitre.org/campaigns/C0058"
+        }
+      ],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "url": "https://attack.mitre.org/techniques/T1190",
+          "via": "ATT&CK: SharePoint ToolShell Exploitation"
+        }
+      ]
+    },
+    "CVE-2025-49704": {
+      "groups": [],
+      "campaigns": [
+        {
+          "id": "C0058",
+          "name": "SharePoint ToolShell Exploitation",
+          "url": "https://attack.mitre.org/campaigns/C0058"
+        }
+      ],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "url": "https://attack.mitre.org/techniques/T1190",
+          "via": "ATT&CK: SharePoint ToolShell Exploitation"
+        }
+      ]
+    },
+    "CVE-2024-3400": {
+      "groups": [
+        {
+          "id": "G1045",
+          "name": "Salt Typhoon",
+          "url": "https://attack.mitre.org/groups/G1045"
+        }
+      ],
+      "campaigns": [
+        {
+          "id": "C0048",
+          "name": "Operation MidnightEclipse",
+          "url": "https://attack.mitre.org/campaigns/C0048"
+        }
+      ],
+      "software": [
+        {
+          "id": "S1164",
+          "name": "UPSTYLE",
+          "url": "https://attack.mitre.org/software/S1164"
+        }
+      ],
+      "techniques": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "url": "https://attack.mitre.org/techniques/T1190",
+          "via": "ATT&CK: Operation MidnightEclipse"
+        }
+      ]
+    },
+    "CVE-2023-48022": {
+      "groups": [],
+      "campaigns": [
+        {
+          "id": "C0045",
+          "name": "ShadowRay",
+          "url": "https://attack.mitre.org/campaigns/C0045"
+        }
+      ],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "url": "https://attack.mitre.org/techniques/T1190",
+          "via": "ATT&CK: ShadowRay"
+        }
+      ]
+    },
+    "CVE-2022-38028": {
+      "groups": [
+        {
+          "id": "G0007",
+          "name": "APT28",
+          "url": "https://attack.mitre.org/groups/G0007"
+        }
+      ],
+      "campaigns": [
+        {
+          "id": "C0051",
+          "name": "APT28 Nearest Neighbor Campaign",
+          "url": "https://attack.mitre.org/campaigns/C0051"
+        }
+      ],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1068",
+          "name": "Exploitation for Privilege Escalation",
+          "url": "https://attack.mitre.org/techniques/T1068",
+          "via": "ATT&CK: APT28"
+        }
+      ]
+    },
+    "CVE-2024-39717": {
+      "groups": [
+        {
+          "id": "G1017",
+          "name": "Volt Typhoon",
+          "url": "https://attack.mitre.org/groups/G1017"
+        }
+      ],
+      "campaigns": [
+        {
+          "id": "C0039",
+          "name": "Versa Director Zero Day Exploitation",
+          "url": "https://attack.mitre.org/campaigns/C0039"
+        }
+      ],
+      "software": [
+        {
+          "id": "S1154",
+          "name": "VersaMem",
+          "url": "https://attack.mitre.org/software/S1154"
+        }
+      ],
+      "techniques": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "url": "https://attack.mitre.org/techniques/T1190",
+          "via": "ATT&CK: Versa Director Zero Day Exploitation"
+        },
+        {
+          "id": "T1203",
+          "name": "Exploitation for Client Execution",
+          "url": "https://attack.mitre.org/techniques/T1203",
+          "via": "ATT&CK: VersaMem"
+        }
+      ]
+    },
+    "CVE-2022-42475": {
+      "groups": [
+        {
+          "id": "G1048",
+          "name": "UNC3886",
+          "url": "https://attack.mitre.org/groups/G1048"
+        }
+      ],
+      "campaigns": [],
+      "software": [
+        {
+          "id": "S1105",
+          "name": "COATHANGER",
+          "url": "https://attack.mitre.org/software/S1105"
+        },
+        {
+          "id": "S1184",
+          "name": "BOLDMOVE",
+          "url": "https://attack.mitre.org/software/S1184"
+        }
+      ],
+      "techniques": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "url": "https://attack.mitre.org/techniques/T1190",
+          "via": "ATT&CK: UNC3886"
+        }
+      ]
+    },
+    "CVE-2014-6352": {
+      "groups": [
+        {
+          "id": "G0098",
+          "name": "BlackTech",
+          "url": "https://attack.mitre.org/groups/G0098"
+        }
+      ],
+      "campaigns": [],
+      "software": [
+        {
+          "id": "S0129",
+          "name": "AutoIt backdoor",
+          "url": "https://attack.mitre.org/software/S0129"
+        }
+      ],
+      "techniques": [
+        {
+          "id": "T1203",
+          "name": "Exploitation for Client Execution",
+          "url": "https://attack.mitre.org/techniques/T1203",
+          "via": "ATT&CK: BlackTech"
+        }
+      ]
+    },
+    "CVE-2019-3610": {
+      "groups": [],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1555.005",
+          "name": "Password Managers",
+          "url": "https://attack.mitre.org/techniques/T1555/005",
+          "via": "ATT&CK technique description"
+        }
+      ]
+    },
+    "CVE-2016-6662": {
+      "groups": [],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "url": "https://attack.mitre.org/techniques/T1190",
+          "via": "ATT&CK technique description"
+        },
+        {
+          "id": "T1210",
+          "name": "Exploitation of Remote Services",
+          "url": "https://attack.mitre.org/techniques/T1210",
+          "via": "ATT&CK technique description"
+        }
+      ]
+    },
+    "CVE-2014-7169": {
+      "groups": [],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "url": "https://attack.mitre.org/techniques/T1190",
+          "via": "ATT&CK technique description"
+        },
+        {
+          "id": "T1210",
+          "name": "Exploitation of Remote Services",
+          "url": "https://attack.mitre.org/techniques/T1210",
+          "via": "ATT&CK technique description"
+        }
+      ]
+    },
+    "CVE-2017-0176": {
+      "groups": [],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1210",
+          "name": "Exploitation of Remote Services",
+          "url": "https://attack.mitre.org/techniques/T1210",
+          "via": "ATT&CK technique description"
+        }
+      ]
+    },
+    "CVE-2024-55591": {
+      "groups": [],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1686.002",
+          "name": "Network Device Firewall",
+          "url": "https://attack.mitre.org/techniques/T1686/002",
+          "via": "ATT&CK technique description"
+        }
+      ]
+    },
+    "CVE-2017-8625": {
+      "groups": [],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1218.001",
+          "name": "Compiled HTML File",
+          "url": "https://attack.mitre.org/techniques/T1218/001",
+          "via": "ATT&CK technique description"
+        }
+      ]
+    },
+    "CVE-2021-35464": {
+      "groups": [
+        {
+          "id": "G1015",
+          "name": "Scattered Spider",
+          "url": "https://attack.mitre.org/groups/G1015"
+        }
+      ],
+      "campaigns": [
+        {
+          "id": "C0027",
+          "name": "C0027",
+          "url": "https://attack.mitre.org/campaigns/C0027"
+        }
+      ],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "url": "https://attack.mitre.org/techniques/T1190",
+          "via": "ATT&CK: C0027"
+        }
+      ]
+    },
+    "CVE-2017-3066": {
+      "groups": [
+        {
+          "id": "G0106",
+          "name": "Rocke",
+          "url": "https://attack.mitre.org/groups/G0106"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "url": "https://attack.mitre.org/techniques/T1190",
+          "via": "ATT&CK: Rocke"
+        }
+      ]
+    },
+    "CVE-2017-10271": {
+      "groups": [
+        {
+          "id": "G0106",
+          "name": "Rocke",
+          "url": "https://attack.mitre.org/groups/G0106"
+        }
+      ],
+      "campaigns": [],
+      "software": [
+        {
+          "id": "S0374",
+          "name": "SpeakUp",
+          "url": "https://attack.mitre.org/software/S0374"
+        }
+      ],
+      "techniques": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "url": "https://attack.mitre.org/techniques/T1190",
+          "via": "ATT&CK: Rocke"
+        },
+        {
+          "id": "T1203",
+          "name": "Exploitation for Client Execution",
+          "url": "https://attack.mitre.org/techniques/T1203",
+          "via": "ATT&CK: SpeakUp"
+        }
+      ]
+    },
+    "CVE-2017-11882": {
+      "groups": [
+        {
+          "id": "G0121",
+          "name": "Sidewinder",
+          "url": "https://attack.mitre.org/groups/G0121"
+        },
+        {
+          "id": "G1031",
+          "name": "Saint Bear",
+          "url": "https://attack.mitre.org/groups/G1031"
+        },
+        {
+          "id": "G0142",
+          "name": "Confucius",
+          "url": "https://attack.mitre.org/groups/G0142"
+        },
+        {
+          "id": "G0040",
+          "name": "Patchwork",
+          "url": "https://attack.mitre.org/groups/G0040"
+        },
+        {
+          "id": "G0080",
+          "name": "Cobalt Group",
+          "url": "https://attack.mitre.org/groups/G0080"
+        },
+        {
+          "id": "G0065",
+          "name": "Leviathan",
+          "url": "https://attack.mitre.org/groups/G0065"
+        },
+        {
+          "id": "G0081",
+          "name": "Tropic Trooper",
+          "url": "https://attack.mitre.org/groups/G0081"
+        },
+        {
+          "id": "G0131",
+          "name": "Tonto Team",
+          "url": "https://attack.mitre.org/groups/G0131"
+        },
+        {
+          "id": "G0100",
+          "name": "Inception",
+          "url": "https://attack.mitre.org/groups/G0100"
+        },
+        {
+          "id": "G0096",
+          "name": "APT41",
+          "url": "https://attack.mitre.org/groups/G0096"
+        },
+        {
+          "id": "G1002",
+          "name": "BITTER",
+          "url": "https://attack.mitre.org/groups/G1002"
+        },
+        {
+          "id": "G0050",
+          "name": "APT32",
+          "url": "https://attack.mitre.org/groups/G0050"
+        }
+      ],
+      "campaigns": [
+        {
+          "id": "C0001",
+          "name": "Frankenstein",
+          "url": "https://attack.mitre.org/campaigns/C0001"
+        }
+      ],
+      "software": [
+        {
+          "id": "S0331",
+          "name": "Agent Tesla",
+          "url": "https://attack.mitre.org/software/S0331"
+        },
+        {
+          "id": "S1207",
+          "name": "XLoader",
+          "url": "https://attack.mitre.org/software/S1207"
+        },
+        {
+          "id": "S0458",
+          "name": "Ramsay",
+          "url": "https://attack.mitre.org/software/S0458"
+        },
+        {
+          "id": "S0391",
+          "name": "HAWKBALL",
+          "url": "https://attack.mitre.org/software/S0391"
+        }
+      ],
+      "techniques": [
+        {
+          "id": "T1203",
+          "name": "Exploitation for Client Execution",
+          "url": "https://attack.mitre.org/techniques/T1203",
+          "via": "ATT&CK: Sidewinder"
+        }
+      ]
+    },
+    "CVE-2020-0674": {
+      "groups": [
+        {
+          "id": "G0121",
+          "name": "Sidewinder",
+          "url": "https://attack.mitre.org/groups/G0121"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1203",
+          "name": "Exploitation for Client Execution",
+          "url": "https://attack.mitre.org/techniques/T1203",
+          "via": "ATT&CK: Sidewinder"
+        }
+      ]
+    },
+    "CVE-2014-6324": {
+      "groups": [
+        {
+          "id": "G0027",
+          "name": "Threat Group-3390",
+          "url": "https://attack.mitre.org/groups/G0027"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1068",
+          "name": "Exploitation for Privilege Escalation",
+          "url": "https://attack.mitre.org/techniques/T1068",
+          "via": "ATT&CK: Threat Group-3390"
+        }
+      ]
+    },
+    "CVE-2017-0213": {
+      "groups": [
+        {
+          "id": "G0027",
+          "name": "Threat Group-3390",
+          "url": "https://attack.mitre.org/groups/G0027"
+        },
+        {
+          "id": "G0064",
+          "name": "APT33",
+          "url": "https://attack.mitre.org/groups/G0064"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1068",
+          "name": "Exploitation for Privilege Escalation",
+          "url": "https://attack.mitre.org/techniques/T1068",
+          "via": "ATT&CK: Threat Group-3390"
+        }
+      ]
+    },
+    "CVE-2021-26858": {
+      "groups": [
+        {
+          "id": "G0027",
+          "name": "Threat Group-3390",
+          "url": "https://attack.mitre.org/groups/G0027"
+        },
+        {
+          "id": "G0059",
+          "name": "Magic Hound",
+          "url": "https://attack.mitre.org/groups/G0059"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "url": "https://attack.mitre.org/techniques/T1190",
+          "via": "ATT&CK: Threat Group-3390"
+        },
+        {
+          "id": "T1595.002",
+          "name": "Vulnerability Scanning",
+          "url": "https://attack.mitre.org/techniques/T1595/002",
+          "via": "ATT&CK: Magic Hound"
+        }
+      ]
+    },
+    "CVE-2021-26857": {
+      "groups": [
+        {
+          "id": "G0027",
+          "name": "Threat Group-3390",
+          "url": "https://attack.mitre.org/groups/G0027"
+        },
+        {
+          "id": "G0059",
+          "name": "Magic Hound",
+          "url": "https://attack.mitre.org/groups/G0059"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "url": "https://attack.mitre.org/techniques/T1190",
+          "via": "ATT&CK: Threat Group-3390"
+        },
+        {
+          "id": "T1595.002",
+          "name": "Vulnerability Scanning",
+          "url": "https://attack.mitre.org/techniques/T1595/002",
+          "via": "ATT&CK: Magic Hound"
+        }
+      ]
+    },
+    "CVE-2021-26855": {
+      "groups": [
+        {
+          "id": "G0027",
+          "name": "Threat Group-3390",
+          "url": "https://attack.mitre.org/groups/G0027"
+        },
+        {
+          "id": "G0059",
+          "name": "Magic Hound",
+          "url": "https://attack.mitre.org/groups/G0059"
+        },
+        {
+          "id": "G1022",
+          "name": "ToddyCat",
+          "url": "https://attack.mitre.org/groups/G1022"
+        },
+        {
+          "id": "G0096",
+          "name": "APT41",
+          "url": "https://attack.mitre.org/groups/G0096"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "url": "https://attack.mitre.org/techniques/T1190",
+          "via": "ATT&CK: Threat Group-3390"
+        },
+        {
+          "id": "T1595.002",
+          "name": "Vulnerability Scanning",
+          "url": "https://attack.mitre.org/techniques/T1595/002",
+          "via": "ATT&CK: Magic Hound"
+        }
+      ]
+    },
+    "CVE-2019-0604": {
+      "groups": [
+        {
+          "id": "G0027",
+          "name": "Threat Group-3390",
+          "url": "https://attack.mitre.org/groups/G0027"
+        },
+        {
+          "id": "G1055",
+          "name": "VOID MANTICORE",
+          "url": "https://attack.mitre.org/groups/G1055"
+        }
+      ],
+      "campaigns": [
+        {
+          "id": "C0038",
+          "name": "HomeLand Justice",
+          "url": "https://attack.mitre.org/campaigns/C0038"
+        }
+      ],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "url": "https://attack.mitre.org/techniques/T1190",
+          "via": "ATT&CK: Threat Group-3390"
+        }
+      ]
+    },
+    "CVE-2021-27065": {
+      "groups": [
+        {
+          "id": "G0027",
+          "name": "Threat Group-3390",
+          "url": "https://attack.mitre.org/groups/G0027"
+        },
+        {
+          "id": "G0059",
+          "name": "Magic Hound",
+          "url": "https://attack.mitre.org/groups/G0059"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "url": "https://attack.mitre.org/techniques/T1190",
+          "via": "ATT&CK: Threat Group-3390"
+        },
+        {
+          "id": "T1595.002",
+          "name": "Vulnerability Scanning",
+          "url": "https://attack.mitre.org/techniques/T1595/002",
+          "via": "ATT&CK: Magic Hound"
+        }
+      ]
+    },
+    "CVE-2020-1472": {
+      "groups": [
+        {
+          "id": "G0102",
+          "name": "Wizard Spider",
+          "url": "https://attack.mitre.org/groups/G0102"
+        },
+        {
+          "id": "G1006",
+          "name": "Earth Lusca",
+          "url": "https://attack.mitre.org/groups/G1006"
+        },
+        {
+          "id": "G0045",
+          "name": "menuPass",
+          "url": "https://attack.mitre.org/groups/G0045"
+        },
+        {
+          "id": "G0035",
+          "name": "Dragonfly",
+          "url": "https://attack.mitre.org/groups/G0035"
+        },
+        {
+          "id": "G0069",
+          "name": "MuddyWater",
+          "url": "https://attack.mitre.org/groups/G0069"
+        },
+        {
+          "id": "G0046",
+          "name": "FIN7",
+          "url": "https://attack.mitre.org/groups/G0046"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1210",
+          "name": "Exploitation of Remote Services",
+          "url": "https://attack.mitre.org/techniques/T1210",
+          "via": "ATT&CK: Wizard Spider"
+        }
+      ]
+    },
+    "CVE-2024-21893": {
+      "groups": [],
+      "campaigns": [
+        {
+          "id": "C0029",
+          "name": "Cutting Edge",
+          "url": "https://attack.mitre.org/campaigns/C0029"
+        }
+      ],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1595.002",
+          "name": "Vulnerability Scanning",
+          "url": "https://attack.mitre.org/techniques/T1595/002",
+          "via": "ATT&CK: Cutting Edge"
+        },
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "url": "https://attack.mitre.org/techniques/T1190",
+          "via": "ATT&CK: Cutting Edge"
+        }
+      ]
+    },
+    "CVE-2021-31207": {
+      "groups": [
+        {
+          "id": "G0046",
+          "name": "FIN7",
+          "url": "https://attack.mitre.org/groups/G0046"
+        },
+        {
+          "id": "G0059",
+          "name": "Magic Hound",
+          "url": "https://attack.mitre.org/groups/G0059"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "url": "https://attack.mitre.org/techniques/T1190",
+          "via": "ATT&CK: FIN7"
+        }
+      ]
+    },
+    "CVE-2017-0262": {
+      "groups": [
+        {
+          "id": "G0007",
+          "name": "APT28",
+          "url": "https://attack.mitre.org/groups/G0007"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1203",
+          "name": "Exploitation for Client Execution",
+          "url": "https://attack.mitre.org/techniques/T1203",
+          "via": "ATT&CK: APT28"
+        }
+      ]
+    },
+    "CVE-2018-0798": {
+      "groups": [
+        {
+          "id": "G0027",
+          "name": "Threat Group-3390",
+          "url": "https://attack.mitre.org/groups/G0027"
+        },
+        {
+          "id": "G0126",
+          "name": "Higaisa",
+          "url": "https://attack.mitre.org/groups/G0126"
+        },
+        {
+          "id": "G0060",
+          "name": "BRONZE BUTLER",
+          "url": "https://attack.mitre.org/groups/G0060"
+        },
+        {
+          "id": "G0131",
+          "name": "Tonto Team",
+          "url": "https://attack.mitre.org/groups/G0131"
+        },
+        {
+          "id": "G1002",
+          "name": "BITTER",
+          "url": "https://attack.mitre.org/groups/G1002"
+        }
+      ],
+      "campaigns": [],
+      "software": [
+        {
+          "id": "S1207",
+          "name": "XLoader",
+          "url": "https://attack.mitre.org/software/S1207"
+        }
+      ],
+      "techniques": [
+        {
+          "id": "T1203",
+          "name": "Exploitation for Client Execution",
+          "url": "https://attack.mitre.org/techniques/T1203",
+          "via": "ATT&CK: Threat Group-3390"
+        }
+      ]
+    },
+    "CVE-2017-8570": {
+      "groups": [
+        {
+          "id": "G0040",
+          "name": "Patchwork",
+          "url": "https://attack.mitre.org/groups/G0040"
+        },
+        {
+          "id": "G0080",
+          "name": "Cobalt Group",
+          "url": "https://attack.mitre.org/groups/G0080"
+        }
+      ],
+      "campaigns": [],
+      "software": [
+        {
+          "id": "S0331",
+          "name": "Agent Tesla",
+          "url": "https://attack.mitre.org/software/S0331"
+        },
+        {
+          "id": "S0458",
+          "name": "Ramsay",
+          "url": "https://attack.mitre.org/software/S0458"
+        }
+      ],
+      "techniques": [
+        {
+          "id": "T1203",
+          "name": "Exploitation for Client Execution",
+          "url": "https://attack.mitre.org/techniques/T1203",
+          "via": "ATT&CK: Agent Tesla"
+        }
+      ]
+    },
+    "CVE-2013-3906": {
+      "groups": [
+        {
+          "id": "G0034",
+          "name": "Sandworm Team",
+          "url": "https://attack.mitre.org/groups/G0034"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1203",
+          "name": "Exploitation for Client Execution",
+          "url": "https://attack.mitre.org/techniques/T1203",
+          "via": "ATT&CK: Sandworm Team"
+        }
+      ]
+    },
+    "CVE-2014-4114": {
+      "groups": [
+        {
+          "id": "G0034",
+          "name": "Sandworm Team",
+          "url": "https://attack.mitre.org/groups/G0034"
+        },
+        {
+          "id": "G0040",
+          "name": "Patchwork",
+          "url": "https://attack.mitre.org/groups/G0040"
+        },
+        {
+          "id": "G0060",
+          "name": "BRONZE BUTLER",
+          "url": "https://attack.mitre.org/groups/G0060"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1203",
+          "name": "Exploitation for Client Execution",
+          "url": "https://attack.mitre.org/techniques/T1203",
+          "via": "ATT&CK: Sandworm Team"
+        }
+      ]
+    },
+    "CVE-2021-44228": {
+      "groups": [
+        {
+          "id": "G0096",
+          "name": "APT41",
+          "url": "https://attack.mitre.org/groups/G0096"
+        },
+        {
+          "id": "G0059",
+          "name": "Magic Hound",
+          "url": "https://attack.mitre.org/groups/G0059"
+        },
+        {
+          "id": "G1041",
+          "name": "Sea Turtle",
+          "url": "https://attack.mitre.org/groups/G1041"
+        }
+      ],
+      "campaigns": [
+        {
+          "id": "C0018",
+          "name": "C0018",
+          "url": "https://attack.mitre.org/campaigns/C0018"
+        },
+        {
+          "id": "C0017",
+          "name": "C0017",
+          "url": "https://attack.mitre.org/campaigns/C0017"
+        }
+      ],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "url": "https://attack.mitre.org/techniques/T1190",
+          "via": "ATT&CK: C0018"
+        },
+        {
+          "id": "T1595.002",
+          "name": "Vulnerability Scanning",
+          "url": "https://attack.mitre.org/techniques/T1595/002",
+          "via": "ATT&CK: Magic Hound"
+        },
+        {
+          "id": "T1203",
+          "name": "Exploitation for Client Execution",
+          "url": "https://attack.mitre.org/techniques/T1203",
+          "via": "ATT&CK: Sea Turtle"
+        }
+      ]
+    },
+    "CVE-2021-45046": {
+      "groups": [],
+      "campaigns": [
+        {
+          "id": "C0018",
+          "name": "C0018",
+          "url": "https://attack.mitre.org/campaigns/C0018"
+        }
+      ],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "url": "https://attack.mitre.org/techniques/T1190",
+          "via": "ATT&CK: C0018"
+        }
+      ]
+    },
+    "CVE-2021-45105": {
+      "groups": [],
+      "campaigns": [
+        {
+          "id": "C0018",
+          "name": "C0018",
+          "url": "https://attack.mitre.org/campaigns/C0018"
+        }
+      ],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "url": "https://attack.mitre.org/techniques/T1190",
+          "via": "ATT&CK: C0018"
+        }
+      ]
+    },
+    "CVE-2021-44832": {
+      "groups": [],
+      "campaigns": [
+        {
+          "id": "C0018",
+          "name": "C0018",
+          "url": "https://attack.mitre.org/campaigns/C0018"
+        }
+      ],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "url": "https://attack.mitre.org/techniques/T1190",
+          "via": "ATT&CK: C0018"
+        }
+      ]
+    },
+    "CVE-2016-0099": {
+      "groups": [],
+      "campaigns": [],
+      "software": [
+        {
+          "id": "S0378",
+          "name": "PoshC2",
+          "url": "https://attack.mitre.org/software/S0378"
+        }
+      ],
+      "techniques": [
+        {
+          "id": "T1068",
+          "name": "Exploitation for Privilege Escalation",
+          "url": "https://attack.mitre.org/techniques/T1068",
+          "via": "ATT&CK: PoshC2"
+        }
+      ]
+    },
+    "CVE-2016-9192": {
+      "groups": [],
+      "campaigns": [],
+      "software": [
+        {
+          "id": "S0378",
+          "name": "PoshC2",
+          "url": "https://attack.mitre.org/software/S0378"
+        }
+      ],
+      "techniques": [
+        {
+          "id": "T1068",
+          "name": "Exploitation for Privilege Escalation",
+          "url": "https://attack.mitre.org/techniques/T1068",
+          "via": "ATT&CK: PoshC2"
+        }
+      ]
+    },
+    "CVE-2024-21887": {
+      "groups": [],
+      "campaigns": [
+        {
+          "id": "C0029",
+          "name": "Cutting Edge",
+          "url": "https://attack.mitre.org/campaigns/C0029"
+        }
+      ],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1070",
+          "name": "Indicator Removal",
+          "url": "https://attack.mitre.org/techniques/T1070",
+          "via": "ATT&CK: Cutting Edge"
+        },
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "url": "https://attack.mitre.org/techniques/T1190",
+          "via": "ATT&CK: Cutting Edge"
+        }
+      ]
+    },
+    "CVE-2023-46805": {
+      "groups": [
+        {
+          "id": "G1045",
+          "name": "Salt Typhoon",
+          "url": "https://attack.mitre.org/groups/G1045"
+        }
+      ],
+      "campaigns": [
+        {
+          "id": "C0029",
+          "name": "Cutting Edge",
+          "url": "https://attack.mitre.org/campaigns/C0029"
+        }
+      ],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1070",
+          "name": "Indicator Removal",
+          "url": "https://attack.mitre.org/techniques/T1070",
+          "via": "ATT&CK: Cutting Edge"
+        },
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "url": "https://attack.mitre.org/techniques/T1190",
+          "via": "ATT&CK: Cutting Edge"
+        }
+      ]
+    },
+    "CVE-2026-33634": {
+      "groups": [
+        {
+          "id": "G1056",
+          "name": "TeamPCP",
+          "url": "https://attack.mitre.org/groups/G1056"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "url": "https://attack.mitre.org/techniques/T1190",
+          "via": "ATT&CK: TeamPCP"
+        }
+      ]
+    },
+    "CVE-2025-55182": {
+      "groups": [
+        {
+          "id": "G1056",
+          "name": "TeamPCP",
+          "url": "https://attack.mitre.org/groups/G1056"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "url": "https://attack.mitre.org/techniques/T1190",
+          "via": "ATT&CK: TeamPCP"
+        }
+      ]
+    },
+    "CVE-2023-20867": {
+      "groups": [
+        {
+          "id": "G1048",
+          "name": "UNC3886",
+          "url": "https://attack.mitre.org/groups/G1048"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1068",
+          "name": "Exploitation for Privilege Escalation",
+          "url": "https://attack.mitre.org/techniques/T1068",
+          "via": "ATT&CK: UNC3886"
+        },
+        {
+          "id": "T1203",
+          "name": "Exploitation for Client Execution",
+          "url": "https://attack.mitre.org/techniques/T1203",
+          "via": "ATT&CK: UNC3886"
+        },
+        {
+          "id": "T1587.004",
+          "name": "Exploits",
+          "url": "https://attack.mitre.org/techniques/T1587/004",
+          "via": "ATT&CK: UNC3886"
+        }
+      ]
+    },
+    "CVE-2021-36934": {
+      "groups": [
+        {
+          "id": "G0016",
+          "name": "APT29",
+          "url": "https://attack.mitre.org/groups/G0016"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1068",
+          "name": "Exploitation for Privilege Escalation",
+          "url": "https://attack.mitre.org/techniques/T1068",
+          "via": "ATT&CK: APT29"
+        }
+      ]
+    },
+    "CVE-2011-0611": {
+      "groups": [
+        {
+          "id": "G0035",
+          "name": "Dragonfly",
+          "url": "https://attack.mitre.org/groups/G0035"
+        },
+        {
+          "id": "G0005",
+          "name": "APT12",
+          "url": "https://attack.mitre.org/groups/G0005"
+        }
+      ],
+      "campaigns": [
+        {
+          "id": "C0016",
+          "name": "Operation Dust Storm",
+          "url": "https://attack.mitre.org/campaigns/C0016"
+        }
+      ],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1203",
+          "name": "Exploitation for Client Execution",
+          "url": "https://attack.mitre.org/techniques/T1203",
+          "via": "ATT&CK: Dragonfly"
+        }
+      ]
+    },
+    "CVE-2015-3113": {
+      "groups": [
+        {
+          "id": "G0022",
+          "name": "APT3",
+          "url": "https://attack.mitre.org/groups/G0022"
+        }
+      ],
+      "campaigns": [],
+      "software": [
+        {
+          "id": "S0063",
+          "name": "SHOTPUT",
+          "url": "https://attack.mitre.org/software/S0063"
+        }
+      ],
+      "techniques": [
+        {
+          "id": "T1027",
+          "name": "Obfuscated Files or Information",
+          "url": "https://attack.mitre.org/techniques/T1027",
+          "via": "ATT&CK: SHOTPUT"
+        },
+        {
+          "id": "T1083",
+          "name": "File and Directory Discovery",
+          "url": "https://attack.mitre.org/techniques/T1083",
+          "via": "ATT&CK: SHOTPUT"
+        },
+        {
+          "id": "T1087.001",
+          "name": "Local Account",
+          "url": "https://attack.mitre.org/techniques/T1087/001",
+          "via": "ATT&CK: SHOTPUT"
+        },
+        {
+          "id": "T1203",
+          "name": "Exploitation for Client Execution",
+          "url": "https://attack.mitre.org/techniques/T1203",
+          "via": "ATT&CK: APT3"
+        },
+        {
+          "id": "T1018",
+          "name": "Remote System Discovery",
+          "url": "https://attack.mitre.org/techniques/T1018",
+          "via": "ATT&CK: SHOTPUT"
+        },
+        {
+          "id": "T1049",
+          "name": "System Network Connections Discovery",
+          "url": "https://attack.mitre.org/techniques/T1049",
+          "via": "ATT&CK: SHOTPUT"
+        },
+        {
+          "id": "T1057",
+          "name": "Process Discovery",
+          "url": "https://attack.mitre.org/techniques/T1057",
+          "via": "ATT&CK: SHOTPUT"
+        }
+      ]
+    },
+    "CVE-2020-0688": {
+      "groups": [
+        {
+          "id": "G0094",
+          "name": "Kimsuky",
+          "url": "https://attack.mitre.org/groups/G0094"
+        },
+        {
+          "id": "G0016",
+          "name": "APT29",
+          "url": "https://attack.mitre.org/groups/G0016"
+        },
+        {
+          "id": "G0035",
+          "name": "Dragonfly",
+          "url": "https://attack.mitre.org/groups/G0035"
+        },
+        {
+          "id": "G0069",
+          "name": "MuddyWater",
+          "url": "https://attack.mitre.org/groups/G0069"
+        }
+      ],
+      "campaigns": [
+        {
+          "id": "C0024",
+          "name": "SolarWinds Compromise",
+          "url": "https://attack.mitre.org/campaigns/C0024"
+        }
+      ],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "url": "https://attack.mitre.org/techniques/T1190",
+          "via": "ATT&CK: Kimsuky"
+        }
+      ]
+    },
+    "CVE-2021-26084": {
+      "groups": [
+        {
+          "id": "G1003",
+          "name": "Ember Bear",
+          "url": "https://attack.mitre.org/groups/G1003"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "url": "https://attack.mitre.org/techniques/T1190",
+          "via": "ATT&CK: Ember Bear"
+        }
+      ]
+    },
+    "CVE-2022-41040": {
+      "groups": [
+        {
+          "id": "G1003",
+          "name": "Ember Bear",
+          "url": "https://attack.mitre.org/groups/G1003"
+        },
+        {
+          "id": "G1040",
+          "name": "Play",
+          "url": "https://attack.mitre.org/groups/G1040"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "url": "https://attack.mitre.org/techniques/T1190",
+          "via": "ATT&CK: Ember Bear"
+        }
+      ]
+    },
+    "CVE-2024-20359": {
+      "groups": [],
+      "campaigns": [],
+      "software": [
+        {
+          "id": "S1188",
+          "name": "Line Runner",
+          "url": "https://attack.mitre.org/software/S1188"
+        }
+      ],
+      "techniques": [
+        {
+          "id": "T1027.015",
+          "name": "Compression",
+          "url": "https://attack.mitre.org/techniques/T1027/015",
+          "via": "ATT&CK: Line Runner"
+        }
+      ]
+    },
+    "CVE-2017-11774": {
+      "groups": [
+        {
+          "id": "G0049",
+          "name": "OilRig",
+          "url": "https://attack.mitre.org/groups/G0049"
+        },
+        {
+          "id": "G0064",
+          "name": "APT33",
+          "url": "https://attack.mitre.org/groups/G0064"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1137.004",
+          "name": "Outlook Home Page",
+          "url": "https://attack.mitre.org/techniques/T1137/004",
+          "via": "ATT&CK: OilRig"
+        },
+        {
+          "id": "T1203",
+          "name": "Exploitation for Client Execution",
+          "url": "https://attack.mitre.org/techniques/T1203",
+          "via": "ATT&CK: APT33"
+        }
+      ]
+    },
+    "CVE-2021-44207": {
+      "groups": [
+        {
+          "id": "G0096",
+          "name": "APT41",
+          "url": "https://attack.mitre.org/groups/G0096"
+        }
+      ],
+      "campaigns": [
+        {
+          "id": "C0017",
+          "name": "C0017",
+          "url": "https://attack.mitre.org/campaigns/C0017"
+        }
+      ],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "url": "https://attack.mitre.org/techniques/T1190",
+          "via": "ATT&CK: C0017"
+        }
+      ]
+    },
+    "CVE-2020-5902": {
+      "groups": [
+        {
+          "id": "G0135",
+          "name": "BackdoorDiplomacy",
+          "url": "https://attack.mitre.org/groups/G0135"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "url": "https://attack.mitre.org/techniques/T1190",
+          "via": "ATT&CK: BackdoorDiplomacy"
+        }
+      ]
+    },
+    "CVE-2024-20353": {
+      "groups": [],
+      "campaigns": [
+        {
+          "id": "C0046",
+          "name": "ArcaneDoor",
+          "url": "https://attack.mitre.org/campaigns/C0046"
+        }
+      ],
+      "software": [
+        {
+          "id": "S1188",
+          "name": "Line Runner",
+          "url": "https://attack.mitre.org/software/S1188"
+        }
+      ],
+      "techniques": [
+        {
+          "id": "T1653",
+          "name": "Power Settings",
+          "url": "https://attack.mitre.org/techniques/T1653",
+          "via": "ATT&CK: ArcaneDoor"
+        }
+      ]
+    },
+    "CVE-2026-35273": {
+      "groups": [
+        {
+          "id": "G1057",
+          "name": "ShinyHunters",
+          "url": "https://attack.mitre.org/groups/G1057"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "url": "https://attack.mitre.org/techniques/T1190",
+          "via": "ATT&CK: ShinyHunters"
+        },
+        {
+          "id": "T1587.004",
+          "name": "Exploits",
+          "url": "https://attack.mitre.org/techniques/T1587/004",
+          "via": "ATT&CK: ShinyHunters"
+        }
+      ]
+    },
+    "CVE-2016-0167": {
+      "groups": [
+        {
+          "id": "G0061",
+          "name": "FIN8",
+          "url": "https://attack.mitre.org/groups/G0061"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1068",
+          "name": "Exploitation for Privilege Escalation",
+          "url": "https://attack.mitre.org/techniques/T1068",
+          "via": "ATT&CK: FIN8"
+        }
+      ]
+    },
+    "CVE-2022-22948": {
+      "groups": [
+        {
+          "id": "G1048",
+          "name": "UNC3886",
+          "url": "https://attack.mitre.org/groups/G1048"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1212",
+          "name": "Exploitation for Credential Access",
+          "url": "https://attack.mitre.org/techniques/T1212",
+          "via": "ATT&CK: UNC3886"
+        }
+      ]
+    },
+    "CVE-2020-10189": {
+      "groups": [
+        {
+          "id": "G0096",
+          "name": "APT41",
+          "url": "https://attack.mitre.org/groups/G0096"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1071.001",
+          "name": "Web Protocols",
+          "url": "https://attack.mitre.org/techniques/T1071/001",
+          "via": "ATT&CK: APT41"
+        },
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "url": "https://attack.mitre.org/techniques/T1190",
+          "via": "ATT&CK: APT41"
+        }
+      ]
+    },
+    "CVE-2019-19781": {
+      "groups": [
+        {
+          "id": "G0096",
+          "name": "APT41",
+          "url": "https://attack.mitre.org/groups/G0096"
+        },
+        {
+          "id": "G0016",
+          "name": "APT29",
+          "url": "https://attack.mitre.org/groups/G0016"
+        },
+        {
+          "id": "G0035",
+          "name": "Dragonfly",
+          "url": "https://attack.mitre.org/groups/G0035"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1071.001",
+          "name": "Web Protocols",
+          "url": "https://attack.mitre.org/techniques/T1071/001",
+          "via": "ATT&CK: APT41"
+        },
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "url": "https://attack.mitre.org/techniques/T1190",
+          "via": "ATT&CK: APT29"
+        }
+      ]
+    },
+    "CVE-2021-40444": {
+      "groups": [
+        {
+          "id": "G1011",
+          "name": "EXOTIC LILY",
+          "url": "https://attack.mitre.org/groups/G1011"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1203",
+          "name": "Exploitation for Client Execution",
+          "url": "https://attack.mitre.org/techniques/T1203",
+          "via": "ATT&CK: EXOTIC LILY"
+        }
+      ]
+    },
+    "CVE-2017-1000486": {
+      "groups": [
+        {
+          "id": "G1016",
+          "name": "FIN13",
+          "url": "https://attack.mitre.org/groups/G1016"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "url": "https://attack.mitre.org/techniques/T1190",
+          "via": "ATT&CK: FIN13"
+        }
+      ]
+    },
+    "CVE-2015-7450": {
+      "groups": [
+        {
+          "id": "G1016",
+          "name": "FIN13",
+          "url": "https://attack.mitre.org/groups/G1016"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "url": "https://attack.mitre.org/techniques/T1190",
+          "via": "ATT&CK: FIN13"
+        }
+      ]
+    },
+    "CVE-2010-5326": {
+      "groups": [
+        {
+          "id": "G1016",
+          "name": "FIN13",
+          "url": "https://attack.mitre.org/groups/G1016"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "url": "https://attack.mitre.org/techniques/T1190",
+          "via": "ATT&CK: FIN13"
+        }
+      ]
+    },
+    "CVE-2017-7269": {
+      "groups": [
+        {
+          "id": "G0098",
+          "name": "BlackTech",
+          "url": "https://attack.mitre.org/groups/G0098"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "url": "https://attack.mitre.org/techniques/T1190",
+          "via": "ATT&CK: BlackTech"
+        }
+      ]
+    },
+    "CVE-2018-13379": {
+      "groups": [
+        {
+          "id": "G0059",
+          "name": "Magic Hound",
+          "url": "https://attack.mitre.org/groups/G0059"
+        },
+        {
+          "id": "G1030",
+          "name": "Agrius",
+          "url": "https://attack.mitre.org/groups/G1030"
+        },
+        {
+          "id": "G0016",
+          "name": "APT29",
+          "url": "https://attack.mitre.org/groups/G0016"
+        },
+        {
+          "id": "G0035",
+          "name": "Dragonfly",
+          "url": "https://attack.mitre.org/groups/G0035"
+        },
+        {
+          "id": "G1040",
+          "name": "Play",
+          "url": "https://attack.mitre.org/groups/G1040"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "url": "https://attack.mitre.org/techniques/T1190",
+          "via": "ATT&CK: Magic Hound"
+        },
+        {
+          "id": "T1595.002",
+          "name": "Vulnerability Scanning",
+          "url": "https://attack.mitre.org/techniques/T1595/002",
+          "via": "ATT&CK: Magic Hound"
+        }
+      ]
+    },
+    "CVE-2021-34523": {
+      "groups": [
+        {
+          "id": "G0059",
+          "name": "Magic Hound",
+          "url": "https://attack.mitre.org/groups/G0059"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "url": "https://attack.mitre.org/techniques/T1190",
+          "via": "ATT&CK: Magic Hound"
+        }
+      ]
+    },
+    "CVE-2021-34473": {
+      "groups": [
+        {
+          "id": "G0059",
+          "name": "Magic Hound",
+          "url": "https://attack.mitre.org/groups/G0059"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "url": "https://attack.mitre.org/techniques/T1190",
+          "via": "ATT&CK: Magic Hound"
+        }
+      ]
+    },
+    "CVE-2018-4878": {
+      "groups": [
+        {
+          "id": "G0032",
+          "name": "Lazarus Group",
+          "url": "https://attack.mitre.org/groups/G0032"
+        },
+        {
+          "id": "G0067",
+          "name": "APT37",
+          "url": "https://attack.mitre.org/groups/G0067"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1203",
+          "name": "Exploitation for Client Execution",
+          "url": "https://attack.mitre.org/techniques/T1203",
+          "via": "ATT&CK: Lazarus Group"
+        }
+      ]
+    },
+    "CVE-2017-15303": {
+      "groups": [],
+      "campaigns": [],
+      "software": [
+        {
+          "id": "S0664",
+          "name": "Pandora",
+          "url": "https://attack.mitre.org/software/S0664"
+        }
+      ],
+      "techniques": [
+        {
+          "id": "T1068",
+          "name": "Exploitation for Privilege Escalation",
+          "url": "https://attack.mitre.org/techniques/T1068",
+          "via": "ATT&CK: Pandora"
+        },
+        {
+          "id": "T1553.006",
+          "name": "Code Signing Policy Modification",
+          "url": "https://attack.mitre.org/techniques/T1553/006",
+          "via": "ATT&CK: Pandora"
+        }
+      ]
+    },
+    "CVE-2010-2568": {
+      "groups": [],
+      "campaigns": [],
+      "software": [
+        {
+          "id": "S0603",
+          "name": "Stuxnet",
+          "url": "https://attack.mitre.org/software/S0603"
+        }
+      ],
+      "techniques": [
+        {
+          "id": "T1091",
+          "name": "Replication Through Removable Media",
+          "url": "https://attack.mitre.org/techniques/T1091",
+          "via": "ATT&CK: Stuxnet"
+        }
+      ]
+    },
+    "CVE-2010-4398": {
+      "groups": [
+        {
+          "id": "G0037",
+          "name": "FIN6",
+          "url": "https://attack.mitre.org/groups/G0037"
+        }
+      ],
+      "campaigns": [],
+      "software": [
+        {
+          "id": "S0484",
+          "name": "Carberp",
+          "url": "https://attack.mitre.org/software/S0484"
+        },
+        {
+          "id": "S0050",
+          "name": "CosmicDuke",
+          "url": "https://attack.mitre.org/software/S0050"
+        }
+      ],
+      "techniques": [
+        {
+          "id": "T1068",
+          "name": "Exploitation for Privilege Escalation",
+          "url": "https://attack.mitre.org/techniques/T1068",
+          "via": "ATT&CK: Carberp"
+        }
+      ]
+    },
+    "CVE-2010-2743": {
+      "groups": [],
+      "campaigns": [],
+      "software": [
+        {
+          "id": "S0484",
+          "name": "Carberp",
+          "url": "https://attack.mitre.org/software/S0484"
+        }
+      ],
+      "techniques": [
+        {
+          "id": "T1068",
+          "name": "Exploitation for Privilege Escalation",
+          "url": "https://attack.mitre.org/techniques/T1068",
+          "via": "ATT&CK: Carberp"
+        }
+      ]
+    },
+    "CVE-2010-3338": {
+      "groups": [],
+      "campaigns": [],
+      "software": [
+        {
+          "id": "S0484",
+          "name": "Carberp",
+          "url": "https://attack.mitre.org/software/S0484"
+        }
+      ],
+      "techniques": [
+        {
+          "id": "T1068",
+          "name": "Exploitation for Privilege Escalation",
+          "url": "https://attack.mitre.org/techniques/T1068",
+          "via": "ATT&CK: Carberp"
+        }
+      ]
+    },
+    "CVE-2008-1084": {
+      "groups": [],
+      "campaigns": [],
+      "software": [
+        {
+          "id": "S0484",
+          "name": "Carberp",
+          "url": "https://attack.mitre.org/software/S0484"
+        }
+      ],
+      "techniques": [
+        {
+          "id": "T1068",
+          "name": "Exploitation for Privilege Escalation",
+          "url": "https://attack.mitre.org/techniques/T1068",
+          "via": "ATT&CK: Carberp"
+        }
+      ]
+    },
+    "CVE-2024-1709": {
+      "groups": [
+        {
+          "id": "G1051",
+          "name": "Medusa Group",
+          "url": "https://attack.mitre.org/groups/G1051"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "url": "https://attack.mitre.org/techniques/T1190",
+          "via": "ATT&CK: Medusa Group"
+        }
+      ]
+    },
+    "CVE-2023-48788": {
+      "groups": [
+        {
+          "id": "G1051",
+          "name": "Medusa Group",
+          "url": "https://attack.mitre.org/groups/G1051"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "url": "https://attack.mitre.org/techniques/T1190",
+          "via": "ATT&CK: Medusa Group"
+        }
+      ]
+    },
+    "CVE-2010-0232": {
+      "groups": [],
+      "campaigns": [],
+      "software": [
+        {
+          "id": "S0050",
+          "name": "CosmicDuke",
+          "url": "https://attack.mitre.org/software/S0050"
+        }
+      ],
+      "techniques": [
+        {
+          "id": "T1068",
+          "name": "Exploitation for Privilege Escalation",
+          "url": "https://attack.mitre.org/techniques/T1068",
+          "via": "ATT&CK: CosmicDuke"
+        }
+      ]
+    },
+    "CVE-2023-50224": {
+      "groups": [],
+      "campaigns": [
+        {
+          "id": "C0055",
+          "name": "Quad7 Activity",
+          "url": "https://attack.mitre.org/campaigns/C0055"
+        }
+      ],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "url": "https://attack.mitre.org/techniques/T1190",
+          "via": "ATT&CK: Quad7 Activity"
+        }
+      ]
+    },
+    "CVE-2025-9377": {
+      "groups": [],
+      "campaigns": [
+        {
+          "id": "C0055",
+          "name": "Quad7 Activity",
+          "url": "https://attack.mitre.org/campaigns/C0055"
+        }
+      ],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "url": "https://attack.mitre.org/techniques/T1190",
+          "via": "ATT&CK: Quad7 Activity"
+        }
+      ]
+    },
+    "CVE-2019-16098": {
+      "groups": [],
+      "campaigns": [],
+      "software": [
+        {
+          "id": "S1181",
+          "name": "BlackByte 2.0 Ransomware",
+          "url": "https://attack.mitre.org/software/S1181"
+        }
+      ],
+      "techniques": [
+        {
+          "id": "T1068",
+          "name": "Exploitation for Privilege Escalation",
+          "url": "https://attack.mitre.org/techniques/T1068",
+          "via": "ATT&CK: BlackByte 2.0 Ransomware"
+        }
+      ]
+    },
+    "CVE-2007-5633": {
+      "groups": [],
+      "campaigns": [],
+      "software": [
+        {
+          "id": "S0260",
+          "name": "InvisiMole",
+          "url": "https://attack.mitre.org/software/S0260"
+        }
+      ],
+      "techniques": [
+        {
+          "id": "T1068",
+          "name": "Exploitation for Privilege Escalation",
+          "url": "https://attack.mitre.org/techniques/T1068",
+          "via": "ATT&CK: InvisiMole"
+        }
+      ]
+    },
+    "CVE-2023-38203": {
+      "groups": [
+        {
+          "id": "G1053",
+          "name": "Storm-0501",
+          "url": "https://attack.mitre.org/groups/G1053"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "url": "https://attack.mitre.org/techniques/T1190",
+          "via": "ATT&CK: Storm-0501"
+        },
+        {
+          "id": "T1588.006",
+          "name": "Vulnerabilities",
+          "url": "https://attack.mitre.org/techniques/T1588/006",
+          "via": "ATT&CK: Storm-0501"
+        }
+      ]
+    },
+    "CVE-2023-29300": {
+      "groups": [
+        {
+          "id": "G1053",
+          "name": "Storm-0501",
+          "url": "https://attack.mitre.org/groups/G1053"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "url": "https://attack.mitre.org/techniques/T1190",
+          "via": "ATT&CK: Storm-0501"
+        },
+        {
+          "id": "T1588.006",
+          "name": "Vulnerabilities",
+          "url": "https://attack.mitre.org/techniques/T1588/006",
+          "via": "ATT&CK: Storm-0501"
+        }
+      ]
+    },
+    "CVE-2022-47966": {
+      "groups": [
+        {
+          "id": "G1053",
+          "name": "Storm-0501",
+          "url": "https://attack.mitre.org/groups/G1053"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "url": "https://attack.mitre.org/techniques/T1190",
+          "via": "ATT&CK: Storm-0501"
+        },
+        {
+          "id": "T1588.006",
+          "name": "Vulnerabilities",
+          "url": "https://attack.mitre.org/techniques/T1588/006",
+          "via": "ATT&CK: Storm-0501"
+        }
+      ]
+    },
+    "CVE-2023-4966": {
+      "groups": [
+        {
+          "id": "G1053",
+          "name": "Storm-0501",
+          "url": "https://attack.mitre.org/groups/G1053"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "url": "https://attack.mitre.org/techniques/T1190",
+          "via": "ATT&CK: Storm-0501"
+        },
+        {
+          "id": "T1588.006",
+          "name": "Vulnerabilities",
+          "url": "https://attack.mitre.org/techniques/T1588/006",
+          "via": "ATT&CK: Storm-0501"
+        }
+      ]
+    },
+    "CVE-2015-5119": {
+      "groups": [
+        {
+          "id": "G0098",
+          "name": "BlackTech",
+          "url": "https://attack.mitre.org/groups/G0098"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1203",
+          "name": "Exploitation for Client Execution",
+          "url": "https://attack.mitre.org/techniques/T1203",
+          "via": "ATT&CK: BlackTech"
+        }
+      ]
+    },
+    "CVE-2017-0199": {
+      "groups": [
+        {
+          "id": "G0098",
+          "name": "BlackTech",
+          "url": "https://attack.mitre.org/groups/G0098"
+        },
+        {
+          "id": "G0040",
+          "name": "Patchwork",
+          "url": "https://attack.mitre.org/groups/G0040"
+        },
+        {
+          "id": "G0080",
+          "name": "Cobalt Group",
+          "url": "https://attack.mitre.org/groups/G0080"
+        },
+        {
+          "id": "G0065",
+          "name": "Leviathan",
+          "url": "https://attack.mitre.org/groups/G0065"
+        },
+        {
+          "id": "G0067",
+          "name": "APT37",
+          "url": "https://attack.mitre.org/groups/G0067"
+        },
+        {
+          "id": "G0062",
+          "name": "TA459",
+          "url": "https://attack.mitre.org/groups/G0062"
+        },
+        {
+          "id": "G0129",
+          "name": "Mustang Panda",
+          "url": "https://attack.mitre.org/groups/G0129"
+        },
+        {
+          "id": "G0096",
+          "name": "APT41",
+          "url": "https://attack.mitre.org/groups/G0096"
+        },
+        {
+          "id": "G0069",
+          "name": "MuddyWater",
+          "url": "https://attack.mitre.org/groups/G0069"
+        }
+      ],
+      "campaigns": [],
+      "software": [
+        {
+          "id": "S0458",
+          "name": "Ramsay",
+          "url": "https://attack.mitre.org/software/S0458"
+        }
+      ],
+      "techniques": [
+        {
+          "id": "T1203",
+          "name": "Exploitation for Client Execution",
+          "url": "https://attack.mitre.org/techniques/T1203",
+          "via": "ATT&CK: BlackTech"
+        }
+      ]
+    },
+    "CVE-2012-0158": {
+      "groups": [
+        {
+          "id": "G0098",
+          "name": "BlackTech",
+          "url": "https://attack.mitre.org/groups/G0098"
+        },
+        {
+          "id": "G0005",
+          "name": "APT12",
+          "url": "https://attack.mitre.org/groups/G0005"
+        },
+        {
+          "id": "G0134",
+          "name": "Transparent Tribe",
+          "url": "https://attack.mitre.org/groups/G0134"
+        },
+        {
+          "id": "G0081",
+          "name": "Tropic Trooper",
+          "url": "https://attack.mitre.org/groups/G0081"
+        },
+        {
+          "id": "G1007",
+          "name": "Aoqin Dragon",
+          "url": "https://attack.mitre.org/groups/G1007"
+        },
+        {
+          "id": "G0100",
+          "name": "Inception",
+          "url": "https://attack.mitre.org/groups/G0100"
+        },
+        {
+          "id": "G0096",
+          "name": "APT41",
+          "url": "https://attack.mitre.org/groups/G0096"
+        },
+        {
+          "id": "G1002",
+          "name": "BITTER",
+          "url": "https://attack.mitre.org/groups/G1002"
+        },
+        {
+          "id": "G0018",
+          "name": "admin@338",
+          "url": "https://attack.mitre.org/groups/G0018"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1203",
+          "name": "Exploitation for Client Execution",
+          "url": "https://attack.mitre.org/techniques/T1203",
+          "via": "ATT&CK: BlackTech"
+        }
+      ]
+    },
+    "CVE-2011-4369": {
+      "groups": [],
+      "campaigns": [],
+      "software": [
+        {
+          "id": "S0396",
+          "name": "EvilBunny",
+          "url": "https://attack.mitre.org/software/S0396"
+        }
+      ],
+      "techniques": [
+        {
+          "id": "T1203",
+          "name": "Exploitation for Client Execution",
+          "url": "https://attack.mitre.org/techniques/T1203",
+          "via": "ATT&CK: EvilBunny"
+        }
+      ]
+    },
+    "CVE-2014-0322": {
+      "groups": [
+        {
+          "id": "G0001",
+          "name": "Axiom",
+          "url": "https://attack.mitre.org/groups/G0001"
+        }
+      ],
+      "campaigns": [
+        {
+          "id": "C0016",
+          "name": "Operation Dust Storm",
+          "url": "https://attack.mitre.org/campaigns/C0016"
+        }
+      ],
+      "software": [
+        {
+          "id": "S0412",
+          "name": "ZxShell",
+          "url": "https://attack.mitre.org/software/S0412"
+        }
+      ],
+      "techniques": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "url": "https://attack.mitre.org/techniques/T1190",
+          "via": "ATT&CK: ZxShell"
+        },
+        {
+          "id": "T1203",
+          "name": "Exploitation for Client Execution",
+          "url": "https://attack.mitre.org/techniques/T1203",
+          "via": "ATT&CK: Axiom"
+        },
+        {
+          "id": "T1189",
+          "name": "Drive-by Compromise",
+          "url": "https://attack.mitre.org/techniques/T1189",
+          "via": "ATT&CK: Operation Dust Storm"
+        }
+      ]
+    },
+    "CVE-2013-3163": {
+      "groups": [],
+      "campaigns": [],
+      "software": [
+        {
+          "id": "S0412",
+          "name": "ZxShell",
+          "url": "https://attack.mitre.org/software/S0412"
+        }
+      ],
+      "techniques": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "url": "https://attack.mitre.org/techniques/T1190",
+          "via": "ATT&CK: ZxShell"
+        }
+      ]
+    },
+    "CVE-2011-2462": {
+      "groups": [],
+      "campaigns": [],
+      "software": [
+        {
+          "id": "S0412",
+          "name": "ZxShell",
+          "url": "https://attack.mitre.org/software/S0412"
+        }
+      ],
+      "techniques": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "url": "https://attack.mitre.org/techniques/T1190",
+          "via": "ATT&CK: ZxShell"
+        }
+      ]
+    },
+    "CVE-2020-10148": {
+      "groups": [],
+      "campaigns": [],
+      "software": [
+        {
+          "id": "S0578",
+          "name": "SUPERNOVA",
+          "url": "https://attack.mitre.org/software/S0578"
+        }
+      ],
+      "techniques": [
+        {
+          "id": "T1203",
+          "name": "Exploitation for Client Execution",
+          "url": "https://attack.mitre.org/techniques/T1203",
+          "via": "ATT&CK: SUPERNOVA"
+        }
+      ]
+    },
+    "CVE-2015-1641": {
+      "groups": [
+        {
+          "id": "G0142",
+          "name": "Confucius",
+          "url": "https://attack.mitre.org/groups/G0142"
+        },
+        {
+          "id": "G0040",
+          "name": "Patchwork",
+          "url": "https://attack.mitre.org/groups/G0040"
+        },
+        {
+          "id": "G0096",
+          "name": "APT41",
+          "url": "https://attack.mitre.org/groups/G0096"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1203",
+          "name": "Exploitation for Client Execution",
+          "url": "https://attack.mitre.org/techniques/T1203",
+          "via": "ATT&CK: Confucius"
+        }
+      ]
+    },
+    "CVE-2018-0802": {
+      "groups": [
+        {
+          "id": "G0142",
+          "name": "Confucius",
+          "url": "https://attack.mitre.org/groups/G0142"
+        },
+        {
+          "id": "G0060",
+          "name": "BRONZE BUTLER",
+          "url": "https://attack.mitre.org/groups/G0060"
+        },
+        {
+          "id": "G0081",
+          "name": "Tropic Trooper",
+          "url": "https://attack.mitre.org/groups/G0081"
+        },
+        {
+          "id": "G0131",
+          "name": "Tonto Team",
+          "url": "https://attack.mitre.org/groups/G0131"
+        },
+        {
+          "id": "G0100",
+          "name": "Inception",
+          "url": "https://attack.mitre.org/groups/G0100"
+        },
+        {
+          "id": "G1002",
+          "name": "BITTER",
+          "url": "https://attack.mitre.org/groups/G1002"
+        }
+      ],
+      "campaigns": [],
+      "software": [
+        {
+          "id": "S0391",
+          "name": "HAWKBALL",
+          "url": "https://attack.mitre.org/software/S0391"
+        }
+      ],
+      "techniques": [
+        {
+          "id": "T1203",
+          "name": "Exploitation for Client Execution",
+          "url": "https://attack.mitre.org/techniques/T1203",
+          "via": "ATT&CK: Confucius"
+        }
+      ]
+    },
+    "CVE-2021-1732": {
+      "groups": [
+        {
+          "id": "G1019",
+          "name": "MoustachedBouncer",
+          "url": "https://attack.mitre.org/groups/G1019"
+        },
+        {
+          "id": "G1002",
+          "name": "BITTER",
+          "url": "https://attack.mitre.org/groups/G1002"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1068",
+          "name": "Exploitation for Privilege Escalation",
+          "url": "https://attack.mitre.org/techniques/T1068",
+          "via": "ATT&CK: MoustachedBouncer"
+        }
+      ]
+    },
+    "CVE-2012-1856": {
+      "groups": [
+        {
+          "id": "G0040",
+          "name": "Patchwork",
+          "url": "https://attack.mitre.org/groups/G0040"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1203",
+          "name": "Exploitation for Client Execution",
+          "url": "https://attack.mitre.org/techniques/T1203",
+          "via": "ATT&CK: Patchwork"
+        }
+      ]
+    },
+    "CVE-2013-3660": {
+      "groups": [
+        {
+          "id": "G0037",
+          "name": "FIN6",
+          "url": "https://attack.mitre.org/groups/G0037"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1068",
+          "name": "Exploitation for Privilege Escalation",
+          "url": "https://attack.mitre.org/techniques/T1068",
+          "via": "ATT&CK: FIN6"
+        }
+      ]
+    },
+    "CVE-2011-2005": {
+      "groups": [
+        {
+          "id": "G0037",
+          "name": "FIN6",
+          "url": "https://attack.mitre.org/groups/G0037"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1068",
+          "name": "Exploitation for Privilege Escalation",
+          "url": "https://attack.mitre.org/techniques/T1068",
+          "via": "ATT&CK: FIN6"
+        }
+      ]
+    },
+    "CVE-2009-4324": {
+      "groups": [
+        {
+          "id": "G0005",
+          "name": "APT12",
+          "url": "https://attack.mitre.org/groups/G0005"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1203",
+          "name": "Exploitation for Client Execution",
+          "url": "https://attack.mitre.org/techniques/T1203",
+          "via": "ATT&CK: APT12"
+        }
+      ]
+    },
+    "CVE-2009-3129": {
+      "groups": [
+        {
+          "id": "G0005",
+          "name": "APT12",
+          "url": "https://attack.mitre.org/groups/G0005"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1203",
+          "name": "Exploitation for Client Execution",
+          "url": "https://attack.mitre.org/techniques/T1203",
+          "via": "ATT&CK: APT12"
+        }
+      ]
+    },
+    "CVE-2009-0927": {
+      "groups": [
+        {
+          "id": "G0005",
+          "name": "APT12",
+          "url": "https://attack.mitre.org/groups/G0005"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1203",
+          "name": "Exploitation for Client Execution",
+          "url": "https://attack.mitre.org/techniques/T1203",
+          "via": "ATT&CK: APT12"
+        }
+      ]
+    },
+    "CVE-2011-0609": {
+      "groups": [
+        {
+          "id": "G0005",
+          "name": "APT12",
+          "url": "https://attack.mitre.org/groups/G0005"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1203",
+          "name": "Exploitation for Client Execution",
+          "url": "https://attack.mitre.org/techniques/T1203",
+          "via": "ATT&CK: APT12"
+        }
+      ]
+    },
+    "CVE-2016-0051": {
+      "groups": [
+        {
+          "id": "G0107",
+          "name": "Whitefly",
+          "url": "https://attack.mitre.org/groups/G0107"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1068",
+          "name": "Exploitation for Privilege Escalation",
+          "url": "https://attack.mitre.org/techniques/T1068",
+          "via": "ATT&CK: Whitefly"
+        }
+      ]
+    },
+    "CVE-2025-21590": {
+      "groups": [
+        {
+          "id": "G1048",
+          "name": "UNC3886",
+          "url": "https://attack.mitre.org/groups/G1048"
+        }
+      ],
+      "campaigns": [
+        {
+          "id": "C0056",
+          "name": "RedPenguin",
+          "url": "https://attack.mitre.org/campaigns/C0056"
+        }
+      ],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1203",
+          "name": "Exploitation for Client Execution",
+          "url": "https://attack.mitre.org/techniques/T1203",
+          "via": "ATT&CK: RedPenguin"
+        },
+        {
+          "id": "T1055",
+          "name": "Process Injection",
+          "url": "https://attack.mitre.org/techniques/T1055",
+          "via": "ATT&CK: RedPenguin"
+        }
+      ]
+    },
+    "CVE-2012-1889": {
+      "groups": [
+        {
+          "id": "G0001",
+          "name": "Axiom",
+          "url": "https://attack.mitre.org/groups/G0001"
+        }
+      ],
+      "campaigns": [
+        {
+          "id": "C0016",
+          "name": "Operation Dust Storm",
+          "url": "https://attack.mitre.org/campaigns/C0016"
+        }
+      ],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1203",
+          "name": "Exploitation for Client Execution",
+          "url": "https://attack.mitre.org/techniques/T1203",
+          "via": "ATT&CK: Axiom"
+        }
+      ]
+    },
+    "CVE-2013-3893": {
+      "groups": [
+        {
+          "id": "G0001",
+          "name": "Axiom",
+          "url": "https://attack.mitre.org/groups/G0001"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1203",
+          "name": "Exploitation for Client Execution",
+          "url": "https://attack.mitre.org/techniques/T1203",
+          "via": "ATT&CK: Axiom"
+        }
+      ]
+    },
+    "CVE-2012-4792": {
+      "groups": [
+        {
+          "id": "G0001",
+          "name": "Axiom",
+          "url": "https://attack.mitre.org/groups/G0001"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1203",
+          "name": "Exploitation for Client Execution",
+          "url": "https://attack.mitre.org/techniques/T1203",
+          "via": "ATT&CK: Axiom"
+        }
+      ]
+    },
+    "CVE-2017-8759": {
+      "groups": [
+        {
+          "id": "G0080",
+          "name": "Cobalt Group",
+          "url": "https://attack.mitre.org/groups/G0080"
+        },
+        {
+          "id": "G0065",
+          "name": "Leviathan",
+          "url": "https://attack.mitre.org/groups/G0065"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1203",
+          "name": "Exploitation for Client Execution",
+          "url": "https://attack.mitre.org/techniques/T1203",
+          "via": "ATT&CK: Cobalt Group"
+        }
+      ]
+    },
+    "CVE-2018-8174": {
+      "groups": [
+        {
+          "id": "G0080",
+          "name": "Cobalt Group",
+          "url": "https://attack.mitre.org/groups/G0080"
+        },
+        {
+          "id": "G0131",
+          "name": "Tonto Team",
+          "url": "https://attack.mitre.org/groups/G0131"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1203",
+          "name": "Exploitation for Client Execution",
+          "url": "https://attack.mitre.org/techniques/T1203",
+          "via": "ATT&CK: Cobalt Group"
+        }
+      ]
+    },
+    "CVE-2022-27518": {
+      "groups": [
+        {
+          "id": "G1023",
+          "name": "APT5",
+          "url": "https://attack.mitre.org/groups/G1023"
+        },
+        {
+          "id": "G0004",
+          "name": "Ke3chang",
+          "url": "https://attack.mitre.org/groups/G0004"
+        }
+      ],
+      "campaigns": [
+        {
+          "id": "C0052",
+          "name": "SPACEHOP Activity",
+          "url": "https://attack.mitre.org/campaigns/C0052"
+        }
+      ],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "url": "https://attack.mitre.org/techniques/T1190",
+          "via": "ATT&CK: SPACEHOP Activity"
+        }
+      ]
+    },
+    "CVE-2012-0874": {
+      "groups": [],
+      "campaigns": [],
+      "software": [
+        {
+          "id": "S0374",
+          "name": "SpeakUp",
+          "url": "https://attack.mitre.org/software/S0374"
+        }
+      ],
+      "techniques": [
+        {
+          "id": "T1203",
+          "name": "Exploitation for Client Execution",
+          "url": "https://attack.mitre.org/techniques/T1203",
+          "via": "ATT&CK: SpeakUp"
+        }
+      ]
+    },
+    "CVE-2010-1871": {
+      "groups": [],
+      "campaigns": [],
+      "software": [
+        {
+          "id": "S0374",
+          "name": "SpeakUp",
+          "url": "https://attack.mitre.org/software/S0374"
+        }
+      ],
+      "techniques": [
+        {
+          "id": "T1203",
+          "name": "Exploitation for Client Execution",
+          "url": "https://attack.mitre.org/techniques/T1203",
+          "via": "ATT&CK: SpeakUp"
+        }
+      ]
+    },
+    "CVE-2016-3088": {
+      "groups": [],
+      "campaigns": [],
+      "software": [
+        {
+          "id": "S0374",
+          "name": "SpeakUp",
+          "url": "https://attack.mitre.org/software/S0374"
+        }
+      ],
+      "techniques": [
+        {
+          "id": "T1203",
+          "name": "Exploitation for Client Execution",
+          "url": "https://attack.mitre.org/techniques/T1203",
+          "via": "ATT&CK: SpeakUp"
+        }
+      ]
+    },
+    "CVE-2018-2894": {
+      "groups": [],
+      "campaigns": [],
+      "software": [
+        {
+          "id": "S0374",
+          "name": "SpeakUp",
+          "url": "https://attack.mitre.org/software/S0374"
+        }
+      ],
+      "techniques": [
+        {
+          "id": "T1203",
+          "name": "Exploitation for Client Execution",
+          "url": "https://attack.mitre.org/techniques/T1203",
+          "via": "ATT&CK: SpeakUp"
+        }
+      ]
+    },
+    "CVE-2021-26411": {
+      "groups": [
+        {
+          "id": "G0067",
+          "name": "APT37",
+          "url": "https://attack.mitre.org/groups/G0067"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1203",
+          "name": "Exploitation for Client Execution",
+          "url": "https://attack.mitre.org/techniques/T1203",
+          "via": "ATT&CK: APT37"
+        }
+      ]
+    },
+    "CVE-2016-4117": {
+      "groups": [
+        {
+          "id": "G0067",
+          "name": "APT37",
+          "url": "https://attack.mitre.org/groups/G0067"
+        }
+      ],
+      "campaigns": [],
+      "software": [
+        {
+          "id": "S0176",
+          "name": "Wingbird",
+          "url": "https://attack.mitre.org/software/S0176"
+        }
+      ],
+      "techniques": [
+        {
+          "id": "T1203",
+          "name": "Exploitation for Client Execution",
+          "url": "https://attack.mitre.org/techniques/T1203",
+          "via": "ATT&CK: APT37"
+        },
+        {
+          "id": "T1068",
+          "name": "Exploitation for Privilege Escalation",
+          "url": "https://attack.mitre.org/techniques/T1068",
+          "via": "ATT&CK: Wingbird"
+        }
+      ]
+    },
+    "CVE-2020-26411": {
+      "groups": [
+        {
+          "id": "G0067",
+          "name": "APT37",
+          "url": "https://attack.mitre.org/groups/G0067"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1203",
+          "name": "Exploitation for Client Execution",
+          "url": "https://attack.mitre.org/techniques/T1203",
+          "via": "ATT&CK: APT37"
+        }
+      ]
+    },
+    "CVE-2020-1380": {
+      "groups": [
+        {
+          "id": "G0067",
+          "name": "APT37",
+          "url": "https://attack.mitre.org/groups/G0067"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1203",
+          "name": "Exploitation for Client Execution",
+          "url": "https://attack.mitre.org/techniques/T1203",
+          "via": "ATT&CK: APT37"
+        }
+      ]
+    },
+    "CVE-2023-34048": {
+      "groups": [
+        {
+          "id": "G1048",
+          "name": "UNC3886",
+          "url": "https://attack.mitre.org/groups/G1048"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1203",
+          "name": "Exploitation for Client Execution",
+          "url": "https://attack.mitre.org/techniques/T1203",
+          "via": "ATT&CK: UNC3886"
+        },
+        {
+          "id": "T1587.004",
+          "name": "Exploits",
+          "url": "https://attack.mitre.org/techniques/T1587/004",
+          "via": "ATT&CK: UNC3886"
+        }
+      ]
+    },
+    "CVE-2014-1776": {
+      "groups": [
+        {
+          "id": "G0022",
+          "name": "APT3",
+          "url": "https://attack.mitre.org/groups/G0022"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1203",
+          "name": "Exploitation for Client Execution",
+          "url": "https://attack.mitre.org/techniques/T1203",
+          "via": "ATT&CK: APT3"
+        }
+      ]
+    },
+    "CVE-2022-0847": {
+      "groups": [
+        {
+          "id": "G1041",
+          "name": "Sea Turtle",
+          "url": "https://attack.mitre.org/groups/G1041"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1203",
+          "name": "Exploitation for Client Execution",
+          "url": "https://attack.mitre.org/techniques/T1203",
+          "via": "ATT&CK: Sea Turtle"
+        }
+      ]
+    },
+    "CVE-2021-21974": {
+      "groups": [
+        {
+          "id": "G1041",
+          "name": "Sea Turtle",
+          "url": "https://attack.mitre.org/groups/G1041"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1203",
+          "name": "Exploitation for Client Execution",
+          "url": "https://attack.mitre.org/techniques/T1203",
+          "via": "ATT&CK: Sea Turtle"
+        }
+      ]
+    },
+    "CVE-2010-3333": {
+      "groups": [
+        {
+          "id": "G0134",
+          "name": "Transparent Tribe",
+          "url": "https://attack.mitre.org/groups/G0134"
+        },
+        {
+          "id": "G1007",
+          "name": "Aoqin Dragon",
+          "url": "https://attack.mitre.org/groups/G1007"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1203",
+          "name": "Exploitation for Client Execution",
+          "url": "https://attack.mitre.org/techniques/T1203",
+          "via": "ATT&CK: Transparent Tribe"
+        }
+      ]
+    },
+    "CVE-2015-2387": {
+      "groups": [
+        {
+          "id": "G0007",
+          "name": "APT28",
+          "url": "https://attack.mitre.org/groups/G0007"
+        }
+      ],
+      "campaigns": [],
+      "software": [
+        {
+          "id": "S0044",
+          "name": "JHUHUGIT",
+          "url": "https://attack.mitre.org/software/S0044"
+        }
+      ],
+      "techniques": [
+        {
+          "id": "T1068",
+          "name": "Exploitation for Privilege Escalation",
+          "url": "https://attack.mitre.org/techniques/T1068",
+          "via": "ATT&CK: JHUHUGIT"
+        }
+      ]
+    },
+    "CVE-2015-1701": {
+      "groups": [
+        {
+          "id": "G0007",
+          "name": "APT28",
+          "url": "https://attack.mitre.org/groups/G0007"
+        }
+      ],
+      "campaigns": [],
+      "software": [
+        {
+          "id": "S0044",
+          "name": "JHUHUGIT",
+          "url": "https://attack.mitre.org/software/S0044"
+        }
+      ],
+      "techniques": [
+        {
+          "id": "T1068",
+          "name": "Exploitation for Privilege Escalation",
+          "url": "https://attack.mitre.org/techniques/T1068",
+          "via": "ATT&CK: JHUHUGIT"
+        },
+        {
+          "id": "T1134.001",
+          "name": "Token Impersonation/Theft",
+          "url": "https://attack.mitre.org/techniques/T1134/001",
+          "via": "ATT&CK: APT28"
+        }
+      ]
+    },
+    "CVE-2022-41328": {
+      "groups": [
+        {
+          "id": "G1048",
+          "name": "UNC3886",
+          "url": "https://attack.mitre.org/groups/G1048"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1587.004",
+          "name": "Exploits",
+          "url": "https://attack.mitre.org/techniques/T1587/004",
+          "via": "ATT&CK: UNC3886"
+        }
+      ]
+    },
+    "CVE-2017-0144": {
+      "groups": [],
+      "campaigns": [],
+      "software": [
+        {
+          "id": "S0260",
+          "name": "InvisiMole",
+          "url": "https://attack.mitre.org/software/S0260"
+        },
+        {
+          "id": "S0532",
+          "name": "Lucifer",
+          "url": "https://attack.mitre.org/software/S0532"
+        }
+      ],
+      "techniques": [
+        {
+          "id": "T1210",
+          "name": "Exploitation of Remote Services",
+          "url": "https://attack.mitre.org/techniques/T1210",
+          "via": "ATT&CK: InvisiMole"
+        }
+      ]
+    },
+    "CVE-2019-0708": {
+      "groups": [],
+      "campaigns": [],
+      "software": [
+        {
+          "id": "S0260",
+          "name": "InvisiMole",
+          "url": "https://attack.mitre.org/software/S0260"
+        }
+      ],
+      "techniques": [
+        {
+          "id": "T1210",
+          "name": "Exploitation of Remote Services",
+          "url": "https://attack.mitre.org/techniques/T1210",
+          "via": "ATT&CK: InvisiMole"
+        }
+      ]
+    },
+    "CVE-2019-18935": {
+      "groups": [
+        {
+          "id": "G0108",
+          "name": "Blue Mockingbird",
+          "url": "https://attack.mitre.org/groups/G0108"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "url": "https://attack.mitre.org/techniques/T1190",
+          "via": "ATT&CK: Blue Mockingbird"
+        }
+      ]
+    },
+    "CVE-2022-49475": {
+      "groups": [],
+      "campaigns": [],
+      "software": [
+        {
+          "id": "S1184",
+          "name": "BOLDMOVE",
+          "url": "https://attack.mitre.org/software/S1184"
+        }
+      ],
+      "techniques": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "url": "https://attack.mitre.org/techniques/T1190",
+          "via": "ATT&CK: BOLDMOVE"
+        }
+      ]
+    },
+    "CVE-2019-19871": {
+      "groups": [
+        {
+          "id": "G0096",
+          "name": "APT41",
+          "url": "https://attack.mitre.org/groups/G0096"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1059.004",
+          "name": "Unix Shell",
+          "url": "https://attack.mitre.org/techniques/T1059/004",
+          "via": "ATT&CK: APT41"
+        }
+      ]
+    },
+    "CVE-2001-0507": {
+      "groups": [
+        {
+          "id": "G1016",
+          "name": "FIN13",
+          "url": "https://attack.mitre.org/groups/G1016"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1574.001",
+          "name": "DLL",
+          "url": "https://attack.mitre.org/techniques/T1574/001",
+          "via": "ATT&CK: FIN13"
+        }
+      ]
+    },
+    "CVE-2019-9489": {
+      "groups": [
+        {
+          "id": "G0131",
+          "name": "Tonto Team",
+          "url": "https://attack.mitre.org/groups/G0131"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1203",
+          "name": "Exploitation for Client Execution",
+          "url": "https://attack.mitre.org/techniques/T1203",
+          "via": "ATT&CK: Tonto Team"
+        }
+      ]
+    },
+    "CVE-2020-8468": {
+      "groups": [
+        {
+          "id": "G0131",
+          "name": "Tonto Team",
+          "url": "https://attack.mitre.org/groups/G0131"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1203",
+          "name": "Exploitation for Client Execution",
+          "url": "https://attack.mitre.org/techniques/T1203",
+          "via": "ATT&CK: Tonto Team"
+        }
+      ]
+    },
+    "CVE-2014-1761": {
+      "groups": [
+        {
+          "id": "G0100",
+          "name": "Inception",
+          "url": "https://attack.mitre.org/groups/G0100"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1203",
+          "name": "Exploitation for Client Execution",
+          "url": "https://attack.mitre.org/techniques/T1203",
+          "via": "ATT&CK: Inception"
+        }
+      ]
+    },
+    "CVE-2024-37085": {
+      "groups": [
+        {
+          "id": "G1043",
+          "name": "BlackByte",
+          "url": "https://attack.mitre.org/groups/G1043"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1068",
+          "name": "Exploitation for Privilege Escalation",
+          "url": "https://attack.mitre.org/techniques/T1068",
+          "via": "ATT&CK: BlackByte"
+        }
+      ]
+    },
+    "CVE-2019-3396": {
+      "groups": [
+        {
+          "id": "G0096",
+          "name": "APT41",
+          "url": "https://attack.mitre.org/groups/G0096"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1203",
+          "name": "Exploitation for Client Execution",
+          "url": "https://attack.mitre.org/techniques/T1203",
+          "via": "ATT&CK: APT41"
+        }
+      ]
+    },
+    "CVE-2019-11510": {
+      "groups": [
+        {
+          "id": "G0016",
+          "name": "APT29",
+          "url": "https://attack.mitre.org/groups/G0016"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "url": "https://attack.mitre.org/techniques/T1190",
+          "via": "ATT&CK: APT29"
+        }
+      ]
+    },
+    "CVE-2019-9670": {
+      "groups": [
+        {
+          "id": "G0016",
+          "name": "APT29",
+          "url": "https://attack.mitre.org/groups/G0016"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "url": "https://attack.mitre.org/techniques/T1190",
+          "via": "ATT&CK: APT29"
+        }
+      ]
+    },
+    "CVE-2015-2291": {
+      "groups": [
+        {
+          "id": "G1015",
+          "name": "Scattered Spider",
+          "url": "https://attack.mitre.org/groups/G1015"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1068",
+          "name": "Exploitation for Privilege Escalation",
+          "url": "https://attack.mitre.org/techniques/T1068",
+          "via": "ATT&CK: Scattered Spider"
+        }
+      ]
+    },
+    "CVE-2010-1885": {
+      "groups": [],
+      "campaigns": [
+        {
+          "id": "C0016",
+          "name": "Operation Dust Storm",
+          "url": "https://attack.mitre.org/campaigns/C0016"
+        }
+      ],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1203",
+          "name": "Exploitation for Client Execution",
+          "url": "https://attack.mitre.org/techniques/T1203",
+          "via": "ATT&CK: Operation Dust Storm"
+        }
+      ]
+    },
+    "CVE-2011-1255": {
+      "groups": [],
+      "campaigns": [
+        {
+          "id": "C0016",
+          "name": "Operation Dust Storm",
+          "url": "https://attack.mitre.org/campaigns/C0016"
+        }
+      ],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1203",
+          "name": "Exploitation for Client Execution",
+          "url": "https://attack.mitre.org/techniques/T1203",
+          "via": "ATT&CK: Operation Dust Storm"
+        }
+      ]
+    },
+    "CVE-2024-20399": {
+      "groups": [
+        {
+          "id": "G1047",
+          "name": "Velvet Ant",
+          "url": "https://attack.mitre.org/groups/G1047"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1211",
+          "name": "Exploitation for Stealth",
+          "url": "https://attack.mitre.org/techniques/T1211",
+          "via": "ATT&CK: Velvet Ant"
+        }
+      ]
+    },
+    "CVE-2023-3519": {
+      "groups": [
+        {
+          "id": "G1032",
+          "name": "INC Ransom",
+          "url": "https://attack.mitre.org/groups/G1032"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "url": "https://attack.mitre.org/techniques/T1190",
+          "via": "ATT&CK: INC Ransom"
+        }
+      ]
+    },
+    "CVE-2014-4076": {
+      "groups": [
+        {
+          "id": "G0007",
+          "name": "APT28",
+          "url": "https://attack.mitre.org/groups/G0007"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1068",
+          "name": "Exploitation for Privilege Escalation",
+          "url": "https://attack.mitre.org/techniques/T1068",
+          "via": "ATT&CK: APT28"
+        }
+      ]
+    },
+    "CVE-2017-0263": {
+      "groups": [
+        {
+          "id": "G0007",
+          "name": "APT28",
+          "url": "https://attack.mitre.org/groups/G0007"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1068",
+          "name": "Exploitation for Privilege Escalation",
+          "url": "https://attack.mitre.org/techniques/T1068",
+          "via": "ATT&CK: APT28"
+        }
+      ]
+    },
+    "CVE-2017-0005": {
+      "groups": [
+        {
+          "id": "G0128",
+          "name": "ZIRCONIUM",
+          "url": "https://attack.mitre.org/groups/G0128"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1068",
+          "name": "Exploitation for Privilege Escalation",
+          "url": "https://attack.mitre.org/techniques/T1068",
+          "via": "ATT&CK: ZIRCONIUM"
+        }
+      ]
+    },
+    "CVE-2019-0803": {
+      "groups": [
+        {
+          "id": "G0131",
+          "name": "Tonto Team",
+          "url": "https://attack.mitre.org/groups/G0131"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1068",
+          "name": "Exploitation for Privilege Escalation",
+          "url": "https://attack.mitre.org/techniques/T1068",
+          "via": "ATT&CK: Tonto Team"
+        }
+      ]
+    },
+    "CVE-2019-0859": {
+      "groups": [],
+      "campaigns": [],
+      "software": [
+        {
+          "id": "S0654",
+          "name": "ProLock",
+          "url": "https://attack.mitre.org/software/S0654"
+        }
+      ],
+      "techniques": [
+        {
+          "id": "T1068",
+          "name": "Exploitation for Privilege Escalation",
+          "url": "https://attack.mitre.org/techniques/T1068",
+          "via": "ATT&CK: ProLock"
+        }
+      ]
+    },
+    "CVE-2022-30190": {
+      "groups": [],
+      "campaigns": [],
+      "software": [
+        {
+          "id": "S1065",
+          "name": "Woody RAT",
+          "url": "https://attack.mitre.org/software/S1065"
+        }
+      ],
+      "techniques": [
+        {
+          "id": "T1203",
+          "name": "Exploitation for Client Execution",
+          "url": "https://attack.mitre.org/techniques/T1203",
+          "via": "ATT&CK: Woody RAT"
+        }
+      ]
+    },
+    "CVE-2015-5374": {
+      "groups": [],
+      "campaigns": [],
+      "software": [
+        {
+          "id": "S0604",
+          "name": "Industroyer",
+          "url": "https://attack.mitre.org/software/S0604"
+        }
+      ],
+      "techniques": [
+        {
+          "id": "T1499.004",
+          "name": "Application or System Exploitation",
+          "url": "https://attack.mitre.org/techniques/T1499/004",
+          "via": "ATT&CK: Industroyer"
+        }
+      ]
+    },
+    "CVE-2013-2460": {
+      "groups": [],
+      "campaigns": [],
+      "software": [
+        {
+          "id": "S0154",
+          "name": "Cobalt Strike",
+          "url": "https://attack.mitre.org/software/S0154"
+        }
+      ],
+      "techniques": [
+        {
+          "id": "T1203",
+          "name": "Exploitation for Client Execution",
+          "url": "https://attack.mitre.org/techniques/T1203",
+          "via": "ATT&CK: Cobalt Strike"
+        }
+      ]
+    },
+    "CVE-2011-3544": {
+      "groups": [],
+      "campaigns": [],
+      "software": [
+        {
+          "id": "S0154",
+          "name": "Cobalt Strike",
+          "url": "https://attack.mitre.org/software/S0154"
+        }
+      ],
+      "techniques": [
+        {
+          "id": "T1203",
+          "name": "Exploitation for Client Execution",
+          "url": "https://attack.mitre.org/techniques/T1203",
+          "via": "ATT&CK: Cobalt Strike"
+        }
+      ]
+    },
+    "CVE-2013-2465": {
+      "groups": [],
+      "campaigns": [],
+      "software": [
+        {
+          "id": "S0154",
+          "name": "Cobalt Strike",
+          "url": "https://attack.mitre.org/software/S0154"
+        }
+      ],
+      "techniques": [
+        {
+          "id": "T1203",
+          "name": "Exploitation for Client Execution",
+          "url": "https://attack.mitre.org/techniques/T1203",
+          "via": "ATT&CK: Cobalt Strike"
+        }
+      ]
+    },
+    "CVE-2012-4681": {
+      "groups": [],
+      "campaigns": [],
+      "software": [
+        {
+          "id": "S0154",
+          "name": "Cobalt Strike",
+          "url": "https://attack.mitre.org/software/S0154"
+        }
+      ],
+      "techniques": [
+        {
+          "id": "T1203",
+          "name": "Exploitation for Client Execution",
+          "url": "https://attack.mitre.org/techniques/T1203",
+          "via": "ATT&CK: Cobalt Strike"
+        }
+      ]
+    },
+    "CVE-2016-7255": {
+      "groups": [
+        {
+          "id": "G0050",
+          "name": "APT32",
+          "url": "https://attack.mitre.org/groups/G0050"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1068",
+          "name": "Exploitation for Privilege Escalation",
+          "url": "https://attack.mitre.org/techniques/T1068",
+          "via": "ATT&CK: APT32"
+        }
+      ]
+    },
+    "CVE-2015-8651": {
+      "groups": [
+        {
+          "id": "G0012",
+          "name": "Darkhotel",
+          "url": "https://attack.mitre.org/groups/G0012"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1203",
+          "name": "Exploitation for Client Execution",
+          "url": "https://attack.mitre.org/techniques/T1203",
+          "via": "ATT&CK: Darkhotel"
+        }
+      ]
+    },
+    "CVE-2024-30088": {
+      "groups": [
+        {
+          "id": "G0049",
+          "name": "OilRig",
+          "url": "https://attack.mitre.org/groups/G0049"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1203",
+          "name": "Exploitation for Client Execution",
+          "url": "https://attack.mitre.org/techniques/T1203",
+          "via": "ATT&CK: OilRig"
+        },
+        {
+          "id": "T1068",
+          "name": "Exploitation for Privilege Escalation",
+          "url": "https://attack.mitre.org/techniques/T1068",
+          "via": "ATT&CK: OilRig"
+        }
+      ]
+    },
+    "CVE-2015-4902": {
+      "groups": [
+        {
+          "id": "G0007",
+          "name": "APT28",
+          "url": "https://attack.mitre.org/groups/G0007"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1211",
+          "name": "Exploitation for Stealth",
+          "url": "https://attack.mitre.org/techniques/T1211",
+          "via": "ATT&CK: APT28"
+        }
+      ]
+    },
+    "CVE-2020-12812": {
+      "groups": [
+        {
+          "id": "G1040",
+          "name": "Play",
+          "url": "https://attack.mitre.org/groups/G1040"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "url": "https://attack.mitre.org/techniques/T1190",
+          "via": "ATT&CK: Play"
+        }
+      ]
+    },
+    "CVE-2022-41082": {
+      "groups": [
+        {
+          "id": "G1040",
+          "name": "Play",
+          "url": "https://attack.mitre.org/groups/G1040"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "url": "https://attack.mitre.org/techniques/T1190",
+          "via": "ATT&CK: Play"
+        }
+      ]
+    },
+    "CVE-2018-20250": {
+      "groups": [
+        {
+          "id": "G0064",
+          "name": "APT33",
+          "url": "https://attack.mitre.org/groups/G0064"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1203",
+          "name": "Exploitation for Client Execution",
+          "url": "https://attack.mitre.org/techniques/T1203",
+          "via": "ATT&CK: APT33"
+        }
+      ]
+    },
+    "CVE-2022-0609": {
+      "groups": [
+        {
+          "id": "G1049",
+          "name": "AppleJeus",
+          "url": "https://attack.mitre.org/groups/G1049"
+        }
+      ],
+      "campaigns": [
+        {
+          "id": "C0057",
+          "name": "3CX Supply Chain Attack",
+          "url": "https://attack.mitre.org/campaigns/C0057"
+        }
+      ],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1203",
+          "name": "Exploitation for Client Execution",
+          "url": "https://attack.mitre.org/techniques/T1203",
+          "via": "ATT&CK: 3CX Supply Chain Attack"
+        }
+      ]
+    },
+    "CVE-2018-0171": {
+      "groups": [
+        {
+          "id": "G1045",
+          "name": "Salt Typhoon",
+          "url": "https://attack.mitre.org/groups/G1045"
+        }
+      ],
+      "campaigns": [],
+      "software": [],
+      "techniques": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "url": "https://attack.mitre.org/techniques/T1190",
+          "via": "ATT&CK: Salt Typhoon"
+        }
+      ]
+    },
+    "CVE-2019-5736": {
+      "groups": [],
+      "campaigns": [],
+      "software": [
+        {
+          "id": "S0601",
+          "name": "Hildegard",
+          "url": "https://attack.mitre.org/software/S0601"
+        }
+      ],
+      "techniques": [
+        {
+          "id": "T1068",
+          "name": "Exploitation for Privilege Escalation",
+          "url": "https://attack.mitre.org/techniques/T1068",
+          "via": "ATT&CK: Hildegard"
+        }
+      ]
+    },
+    "CVE-2025-0282": {
+      "groups": [],
+      "campaigns": [],
+      "software": [
+        {
+          "id": "S9024",
+          "name": "SPAWNCHIMERA",
+          "url": "https://attack.mitre.org/software/S9024"
+        }
+      ],
+      "techniques": [
+        {
+          "id": "T1480.002",
+          "name": "Mutual Exclusion",
+          "url": "https://attack.mitre.org/techniques/T1480/002",
+          "via": "ATT&CK: SPAWNCHIMERA"
+        }
+      ]
+    }
+  }
+}
