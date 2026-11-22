@@ -1,6 +1,11 @@
 {
   "editions": [
     {
+      "edition": "2026-11-22",
+      "kevAdded": 0,
+      "emergency": 0
+    },
+    {
       "edition": "2026-11-21",
       "kevAdded": 0,
       "emergency": 0

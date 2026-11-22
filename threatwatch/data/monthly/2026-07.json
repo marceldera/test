@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "month": "2026-07",
   "complete": true,
-  "updatedAt": "2026-11-21T18:06:28Z",
+  "updatedAt": "2026-11-22T16:04:42Z",
   "metrics": [
     {
       "id": "kev_added",
@@ -11,7 +11,7 @@
       "rule": "CVE entries whose CISA dateAdded falls in the month.",
       "source": "CISA KEV",
       "window": "2026-07-01 to 2026-07-31 (dateAdded, ET calendar)",
-      "updatedAt": "2026-11-21T18:06:28Z"
+      "updatedAt": "2026-11-22T16:04:42Z"
     },
     {
       "id": "vendors",
@@ -20,7 +20,7 @@
       "rule": "Unique vendorProject values among the month’s KEV entries.",
       "source": "CISA KEV",
       "window": "2026-07-01 to 2026-07-31 (dateAdded, ET calendar)",
-      "updatedAt": "2026-11-21T18:06:28Z"
+      "updatedAt": "2026-11-22T16:04:42Z"
     },
     {
       "id": "ransomware",
@@ -29,16 +29,16 @@
       "rule": "Month’s KEV entries where CISA sets knownRansomwareCampaignUse = Known.",
       "source": "CISA KEV",
       "window": "2026-07-01 to 2026-07-31 (dateAdded, ET calendar)",
-      "updatedAt": "2026-11-21T18:06:28Z"
+      "updatedAt": "2026-11-22T16:04:42Z"
     },
     {
       "id": "epss90",
       "label": "EPSS ≥ 90th percentile",
       "value": 21,
-      "rule": "Month’s KEV entries with EPSS percentile ≥ 0.90 (scores as of 2026-11-21).",
+      "rule": "Month’s KEV entries with EPSS percentile ≥ 0.90 (scores as of 2026-11-22).",
       "source": "FIRST EPSS",
       "window": "2026-07-01 to 2026-07-31 (dateAdded, ET calendar)",
-      "updatedAt": "2026-11-21T18:06:28Z"
+      "updatedAt": "2026-11-22T16:04:42Z"
     }
   ],
   "notice": "These are CISA KEV catalog counts, not a count of total cyber incidents.",
@@ -50,7 +50,7 @@
       "product": "SharePoint Server",
       "concern": "Microsoft SharePoint Server Deserialization of Untrusted Data Vulnerability",
       "ransomware": "known",
-      "epssPercentile": 0.99626,
+      "epssPercentile": 0.99627,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -61,7 +61,7 @@
       "product": "ColdFusion",
       "concern": "Adobe ColdFusion Path Traversal Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.98733,
+      "epssPercentile": 0.98734,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -83,7 +83,7 @@
       "product": "Langflow",
       "concern": "Langflow Authorization Bypass Through User-Controlled Key Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.6016,
+      "epssPercentile": 0.60183,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -94,7 +94,7 @@
       "product": "Page Builder",
       "concern": "Joomlack Page Builder Improper Access Control Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.98293,
+      "epssPercentile": 0.98294,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -105,7 +105,7 @@
       "product": "iCagenda",
       "concern": "iCagenda Unrestricted Upload of File with Dangerous Type Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.9751,
+      "epssPercentile": 0.97512,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -116,7 +116,7 @@
       "product": "Forms",
       "concern": "Balbooa Forms Unrestricted Upload of File with Dangerous Type Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.96775,
+      "epssPercentile": 0.96778,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -138,7 +138,7 @@
       "product": "SMA1000 Appliances",
       "concern": "SonicWall SMA1000 Appliances Server-Side Request Forgery Vulnerability",
       "ransomware": "known",
-      "epssPercentile": 0.94148,
+      "epssPercentile": 0.94152,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -149,7 +149,7 @@
       "product": "SMA1000 Appliances",
       "concern": "SonicWall SMA1000 Appliances Code Injection Vulnerability",
       "ransomware": "known",
-      "epssPercentile": 0.96183,
+      "epssPercentile": 0.96186,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -160,7 +160,7 @@
       "product": "Active Directory Federation Services",
       "concern": "Microsoft Active Directory Federation Services Insufficient Granularity of Access Control Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.28767,
+      "epssPercentile": 0.28772,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -171,7 +171,7 @@
       "product": "SharePoint Server",
       "concern": "Microsoft SharePoint Server Missing Authentication for Critical Function Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.98104,
+      "epssPercentile": 0.98105,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -182,7 +182,7 @@
       "product": "KNX Protocol Connection Authorization Option 1",
       "concern": "KNX Association KNX Protocol Connection Authorization Option 1 Overly Restrictive Account Lockout Mechanism Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.72479,
+      "epssPercentile": 0.72495,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -193,7 +193,7 @@
       "product": "E-Business Suite",
       "concern": "Oracle E-Business Suite Improper Privilege Management Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.96287,
+      "epssPercentile": 0.9629,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -226,7 +226,7 @@
       "product": "SharePoint",
       "concern": "Microsoft SharePoint Deserialization of Untrusted Data Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.96962,
+      "epssPercentile": 0.96965,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -237,7 +237,7 @@
       "product": "DD-WRT",
       "concern": "DD-WRT Stack-Based Buffer Overflow Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.90771,
+      "epssPercentile": 0.90778,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -248,7 +248,7 @@
       "product": "Langflow",
       "concern": "Langflow Inclusion of Functionality from Untrusted Control Sphere Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.99209,
+      "epssPercentile": 0.9921,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -259,7 +259,7 @@
       "product": "Core",
       "concern": "WordPress Core SQL Injection Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.92801,
+      "epssPercentile": 0.92807,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -270,7 +270,7 @@
       "product": "Core",
       "concern": "WordPress Core Interpretation Conflict Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.95912,
+      "epssPercentile": 0.95915,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -281,7 +281,7 @@
       "product": "SmartConsole",
       "concern": "Check Point SmartConsole Improper Authentication Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.89501,
+      "epssPercentile": 0.89508,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -303,7 +303,7 @@
       "product": "FortiOS",
       "concern": "Fortinet FortiOS Exposure of Sensitive Information to an Unauthorized Actor Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.98227,
+      "epssPercentile": 0.98229,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -314,7 +314,7 @@
       "product": "VeloCloud Orchestrator",
       "concern": "Arista VeloCloud Orchestrator On-Prem OS Command Injection Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.78567,
+      "epssPercentile": 0.78582,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -325,7 +325,7 @@
       "product": "Secure Firewall Management Center (FMC)",
       "concern": "Cisco Secure Firewall Management Center Use of Hard-coded Password Vulnerability",
       "ransomware": "known",
-      "epssPercentile": 0.98476,
+      "epssPercentile": 0.98477,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     }
