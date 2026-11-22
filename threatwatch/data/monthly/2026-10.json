@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "month": "2026-10",
   "complete": true,
-  "updatedAt": "2026-11-22T16:44:20Z",
+  "updatedAt": "2026-11-22T17:59:14Z",
   "metrics": [
     {
       "id": "kev_added",
@@ -11,7 +11,7 @@
       "rule": "CVE entries whose CISA dateAdded falls in the month.",
       "source": "CISA KEV",
       "window": "2026-10-01 to 2026-10-31 (dateAdded, ET calendar)",
-      "updatedAt": "2026-11-22T16:44:20Z"
+      "updatedAt": "2026-11-22T17:59:14Z"
     },
     {
       "id": "vendors",
@@ -20,7 +20,7 @@
       "rule": "Unique vendorProject values among the month’s KEV entries.",
       "source": "CISA KEV",
       "window": "2026-10-01 to 2026-10-31 (dateAdded, ET calendar)",
-      "updatedAt": "2026-11-22T16:44:20Z"
+      "updatedAt": "2026-11-22T17:59:14Z"
     },
     {
       "id": "ransomware",
@@ -29,7 +29,7 @@
       "rule": "Month’s KEV entries where CISA sets knownRansomwareCampaignUse = Known.",
       "source": "CISA KEV",
       "window": "2026-10-01 to 2026-10-31 (dateAdded, ET calendar)",
-      "updatedAt": "2026-11-22T16:44:20Z"
+      "updatedAt": "2026-11-22T17:59:14Z"
     },
     {
       "id": "epss90",
@@ -38,7 +38,7 @@
       "rule": "Month’s KEV entries with EPSS percentile ≥ 0.90 (scores as of 2026-11-22).",
       "source": "FIRST EPSS",
       "window": "2026-10-01 to 2026-10-31 (dateAdded, ET calendar)",
-      "updatedAt": "2026-11-22T16:44:20Z"
+      "updatedAt": "2026-11-22T17:59:14Z"
     }
   ],
   "notice": "These are CISA KEV catalog counts, not a count of total cyber incidents.",
@@ -439,5 +439,652 @@
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     }
-  ]
+  ],
+  "report": {
+    "version": 1,
+    "kind": "monthly",
+    "title": [
+      "MONTHLY ENTERPRISE CYBERSECURITY",
+      "THREAT INTELLIGENCE SUMMARY"
+    ],
+    "dateLabel": "October 2026",
+    "window": "Reporting period: October 1-31, 2026",
+    "prepared": "Final monthly summary",
+    "sourceNote": "Compiled automatically from CISA KEV, NVD, FIRST EPSS, Google Project Zero, ENISA EUVD, VulnCheck, Metasploit, Exploit-DB, PoC-in-GitHub and MITRE ATT&CK. Counts are catalog counts, not a count of cyber incidents; anything the sources do not establish is stated as not established.",
+    "sections": [
+      {
+        "id": "summary",
+        "num": 1,
+        "title": "Executive Intelligence Summary",
+        "source": "generated",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "CISA added **36 vulnerabilities** to the KEV catalog in October 2026, spanning 26 vendors. The highest-likelihood additions by EPSS were **CVE-2026-109618 (PHP Group PHP)** and **CVE-2026-109619 (PHP Group PHP)**. Outside KEV, 4 further CVEs were reported exploited or tracked as zero-days by Google Project Zero, ENISA EUVD or VulnCheck."
+          },
+          {
+            "type": "table",
+            "columns": [
+              "Metric",
+              "Value"
+            ],
+            "rows": [
+              [
+                "New KEV entries",
+                "36"
+              ],
+              [
+                "Distinct vendors",
+                "26"
+              ],
+              [
+                "Known ransomware use",
+                "0"
+              ],
+              [
+                "EPSS ≥ 90th percentile",
+                "29 of the month's KEV entries"
+              ],
+              [
+                "Exploited or zero-day outside KEV",
+                "4 (Project Zero, ENISA EUVD, VulnCheck)"
+              ],
+              [
+                "Public exploit code referenced",
+                "25 of the month's KEV entries"
+              ],
+              [
+                "CVEs published to NVD",
+                "17,051 (8,568 High/Critical)"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "These are CISA KEV catalog counts, not a count of total cyber incidents."
+          },
+          {
+            "type": "p",
+            "text": "**Top five actions:** (1) Isolate or patch exposed PHP Group PHP (CVE-2026-109618); (2) isolate or patch exposed PHP Group PHP (CVE-2026-109619); (3) isolate or patch exposed Google Brotli (CVE-2026-111497); (4) isolate or patch exposed ISC BIND (CVE-2015-5477); (5) examine PHP Group PHP hosts for unexpected child processes and outbound connections."
+          }
+        ]
+      },
+      {
+        "id": "critical",
+        "num": 2,
+        "title": "Most Significant Vulnerabilities",
+        "source": "generated",
+        "blocks": [
+          {
+            "type": "table",
+            "columns": [
+              "CVE",
+              "Product",
+              "Issue",
+              "Status"
+            ],
+            "rows": [
+              [
+                "CVE-2026-109618",
+                "PHP Group PHP",
+                "use-after-free",
+                "CISA KEV 2026-10-26; ENISA EUVD; EPSS 99th pct; public exploit"
+              ],
+              [
+                "CVE-2026-109619",
+                "PHP Group PHP",
+                "use-after-free",
+                "CISA KEV 2026-10-26; ENISA EUVD; EPSS 99th pct; public exploit"
+              ],
+              [
+                "CVE-2026-111497",
+                "Google Brotli",
+                "out-of-bounds write",
+                "CISA KEV 2026-10-27; ENISA EUVD; EPSS 99th pct; public exploit"
+              ],
+              [
+                "CVE-2015-5477",
+                "ISC BIND",
+                "vulnerability",
+                "CISA KEV 2026-10-08; ENISA EUVD; EPSS 99th pct; public exploit"
+              ],
+              [
+                "CVE-2015-3306",
+                "ProFTPD",
+                "improper access control",
+                "CISA KEV 2026-10-08; ENISA EUVD; EPSS 99th pct; public exploit"
+              ],
+              [
+                "CVE-2016-3081",
+                "Apache Struts",
+                "command injection",
+                "CISA KEV 2026-10-08; ENISA EUVD; EPSS 99th pct; public exploit"
+              ],
+              [
+                "CVE-2026-104935",
+                "Ivanti Connect Secure",
+                "authentication bypass",
+                "CISA KEV 2026-10-13; ENISA EUVD; EPSS 99th pct; public exploit"
+              ],
+              [
+                "CVE-2026-21589",
+                "Atlassian Multiple Products",
+                "vulnerability",
+                "CISA KEV 2026-10-15; ENISA EUVD; EPSS 99th pct; public exploit"
+              ],
+              [
+                "CVE-2026-40477",
+                "Thymeleaf",
+                "template injection",
+                "ENISA EUVD; EPSS 59th pct; public exploit"
+              ],
+              [
+                "CVE-2026-40478",
+                "Thymeleaf",
+                "template injection",
+                "ENISA EUVD; EPSS 67th pct; no public exploit identified"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "**CVE-2026-109618 - PHP Group PHP use-after-free (CVSS 9.2).** PHP uses longjmp() for out-of-memory (OOM) errors to exit the current context and abort handling of the request. Some contexts may not properly account for this scenario and leave request memory in an uninitialized state before performing an allocation. The subsequent request cleanup procedure may read or branch on this memory. Fixed version (first unaffected release per NVD ranges): php 8.2.35, php 8.3.36, php 8.4.27, php 8.5.12. Attack path: network-accessible; no authentication required; no user interaction required."
+          },
+          {
+            "type": "p",
+            "text": "**CVE-2026-109619 - PHP Group PHP use-after-free (CVSS 9.2).** PHP has various global state that temporarily points into request memory. In some scenarios, global state may not be correctly reset, or may be repopulated after being reset. The global state may then refer to request memory even after it has been freed. Subsequent requests may read or branch on this stale state before it is fully initialized. Fixed version (first unaffected release per NVD ranges): php 8.2.35, php 8.3.36, php 8.4.27, php 8.5.12. Attack path: network-accessible; no authentication required; no user interaction required."
+          },
+          {
+            "type": "p",
+            "text": "**CVE-2026-111497 - Google Brotli out-of-bounds write (CVSS 9.2).** A buffer overflow vulnerability in the Brotli decoder (c/dec/decode.c) in Google Brotli versions 1.0.3 through 1.2.0 on all platforms allows a remote unauthenticated attacker to corrupt adjacent decoder state memory, disclose sensitive memory contents, cause a denial of service, or potentially execute arbitrary code using a crafted Brotli-compressed stream. Fixed version (first unaffected release per NVD ranges): brotli 1.0.10, brotli 1.1.1, brotli 1.2.1, node.js 22.23.4. Attack path: network-accessible; no authentication required; no user interaction required."
+          }
+        ]
+      },
+      {
+        "id": "exploitation",
+        "num": 3,
+        "title": "Exploitation and Zero-Day Activity",
+        "source": "generated",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "KEV additions by week: week of Sep 28: 4; week of Oct 5: 5; week of Oct 12: 9; week of Oct 19: 8; week of Oct 26: 10."
+          },
+          {
+            "type": "table",
+            "columns": [
+              "Date",
+              "CVE",
+              "Report"
+            ],
+            "rows": [
+              [
+                "2026-10-10",
+                "CVE-2026-40477 (Thymeleaf)",
+                "ENISA EUVD"
+              ],
+              [
+                "2026-10-10",
+                "CVE-2026-40478 (Thymeleaf)",
+                "ENISA EUVD"
+              ],
+              [
+                "2026-10-10",
+                "CVE-2026-41901 (CVE-2026-41901)",
+                "ENISA EUVD"
+              ],
+              [
+                "2026-10-25",
+                "CVE-2015-0279 (Redhat Richfaces)",
+                "ENISA EUVD"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "No campaign-specific IP addresses, hashes or domains are collected by ThreatWatch's automated feeds. Victim counts and campaign scope are not established unless cited in section 5."
+          },
+          {
+            "type": "p",
+            "text": "**Defensive hunting focus:** unexpected child processes and outbound connections (14 CVEs); unusual requests and changes (8 CVEs); unexpected file writes and persistence (6 CVEs)."
+          }
+        ]
+      },
+      {
+        "id": "industry",
+        "num": 4,
+        "title": "Vendor and Industry Concentration",
+        "source": "generated",
+        "blocks": [
+          {
+            "type": "table",
+            "columns": [
+              "Vendor",
+              "KEV entries",
+              "Products"
+            ],
+            "rows": [
+              [
+                "Plex",
+                "4",
+                "Media Server"
+              ],
+              [
+                "Ivanti",
+                "3",
+                "Connect Secure"
+              ],
+              [
+                "Ahsay",
+                "2",
+                "AhsayCBS"
+              ],
+              [
+                "Cisco",
+                "2",
+                "Secure Email Gateway and Secure Firewall ASA Software and Cisco Secure FTD Software"
+              ],
+              [
+                "Fortinet",
+                "2",
+                "FortiMail and Multiple Products"
+              ],
+              [
+                "PHP Group",
+                "2",
+                "PHP"
+              ],
+              [
+                "Zammad GmbH",
+                "2",
+                "Zammad"
+              ],
+              [
+                "Adobe",
+                "1",
+                "Commerce and Magento"
+              ],
+              [
+                "Apache",
+                "1",
+                "Struts"
+              ],
+              [
+                "Arista",
+                "1",
+                "VeloCloud Orchestrator"
+              ]
+            ]
+          },
+          {
+            "type": "table",
+            "columns": [
+              "Industry / market",
+              "Observed activity vs. possible exposure"
+            ],
+            "rows": [
+              [
+                "Healthcare / medical imaging",
+                "Possible Apache Struts, Atlassian Multiple Products and CVE-2026-41901 exposure; targeting unknown"
+              ],
+              [
+                "Education / research",
+                "Possible Apache Struts, Atlassian Multiple Products and CVE-2026-41901 exposure; targeting unknown"
+              ],
+              [
+                "Technology / software",
+                "Potential Apache Struts, Atlassian Multiple Products, CVE-2026-41901 and Google Brotli dependency exposure"
+              ],
+              [
+                "Government / defense",
+                "Possible Apache Struts, Atlassian Multiple Products and CVE-2026-41901 exposure; no new sector-specific targeting confirmed"
+              ],
+              [
+                "Financial services",
+                "Possible Apache Struts, Atlassian Multiple Products and CVE-2026-41901 exposure; targeting unknown"
+              ],
+              [
+                "Manufacturing / energy / utilities",
+                "Ivanti Connect Secure relevant to this sector; confirmed sector targeting not established"
+              ],
+              [
+                "Retail / transportation",
+                "Possible Apache Struts, Atlassian Multiple Products and CVE-2026-41901 exposure; targeting unknown"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "Geography and organization-size targeting were not reliably established. Product use indicates possible exposure, not observed attacker selection."
+          }
+        ]
+      },
+      {
+        "id": "actors",
+        "num": 5,
+        "title": "Threat Actor Intelligence",
+        "source": "generated",
+        "blocks": [
+          {
+            "type": "table",
+            "columns": [
+              "Actor / cluster",
+              "Attribution and activity"
+            ],
+            "rows": [
+              [
+                "Remaining 40 exploited CVEs",
+                "Unknown; identity, motivation and geographic targeting not established in tracked sources."
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "**MITRE ATT&CK defensive mapping:** No ATT&CK technique mappings published yet for this month's CVEs. These mappings support defensive detection and do not establish actor attribution."
+          }
+        ]
+      },
+      {
+        "id": "remediation",
+        "num": 6,
+        "title": "Enterprise Risk and Remediation Decisions",
+        "source": "generated",
+        "blocks": [
+          {
+            "type": "table",
+            "columns": [
+              "Priority",
+              "Scenario",
+              "Suggested window"
+            ],
+            "rows": [
+              [
+                "Emergency",
+                "Unremediated internet-facing Adobe Commerce and Magento, AhsayCBS, Apache Struts, Arista VeloCloud Orchestrator, Atlassian Multiple Products and BeyondTrust Remote Support and others",
+                "Immediate containment and applicable forensic triage"
+              ],
+              [
+                "Urgent",
+                "Products with exploitation reported outside KEV: CVE-2026-41901, Redhat Richfaces and Thymeleaf",
+                "Apply vendor fixes in 24-72 hours"
+              ],
+              [
+                "Urgent",
+                "Local or client-side KEV entries: EG Secure Solutions SiteGuard Server Edition, Ivanti Connect Secure, Linux Kernel and Siemens Software Center",
+                "Patch within 7 days"
+              ],
+              [
+                "Routine",
+                "Affected but effectively restricted software",
+                "Controlled maintenance window"
+              ],
+              [
+                "Monitor",
+                "Verified fixed or nonaffected software",
+                "Watch for material new evidence"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "Federal due dates apply to covered agencies under applicable requirements; they are not a universal private-sector mandate. Response windows are recommendations, not mandatory policy."
+          }
+        ]
+      },
+      {
+        "id": "chronology",
+        "num": 7,
+        "title": "Monthly Chronology",
+        "source": "generated",
+        "blocks": [
+          {
+            "type": "table",
+            "columns": [
+              "Date",
+              "CVE",
+              "Development"
+            ],
+            "rows": [
+              [
+                "2026-10-01",
+                "CVE-2026-104286",
+                "Fortinet FortiMail Path Traversal Vulnerability"
+              ],
+              [
+                "2026-10-02",
+                "CVE-2026-102489",
+                "Zammad GmbH Zammad Session Fixation Vulnerability"
+              ],
+              [
+                "2026-10-02",
+                "CVE-2026-102490",
+                "Zammad GmbH Zammad Improper Privilege Management Vulnerability"
+              ],
+              [
+                "2026-10-04",
+                "CVE-2026-88779",
+                "Citrix NetScaler Improper Restriction of Operations within the Bounds of a Memory Buffer Vulnerability"
+              ],
+              [
+                "2026-10-08",
+                "CVE-2015-3306",
+                "ProFTPD Improper Access Control Vulnerability"
+              ],
+              [
+                "2026-10-08",
+                "CVE-2015-5477",
+                "ISC BIND Data Processing Errors Vulnerability"
+              ],
+              [
+                "2026-10-08",
+                "CVE-2016-3081",
+                "Apache Struts Command Injection Vulnerability"
+              ],
+              [
+                "2026-10-08",
+                "CVE-2021-3199",
+                "ONLYOFFICE Docs Server Path Traversal Vulnerability"
+              ],
+              [
+                "2026-10-08",
+                "CVE-2023-22894",
+                "Strapi Cleartext Storage of Sensitive Information Vulnerability"
+              ],
+              [
+                "2026-10-10",
+                "CVE-2026-40477",
+                "Thymeleaf: exploitation reported by ENISA EUVD"
+              ],
+              [
+                "2026-10-10",
+                "CVE-2026-40478",
+                "Thymeleaf: exploitation reported by ENISA EUVD"
+              ],
+              [
+                "2026-10-10",
+                "CVE-2026-41901",
+                "CVE-2026-41901: exploitation reported by ENISA EUVD"
+              ],
+              [
+                "2026-10-13",
+                "CVE-2026-104935",
+                "Ivanti Connect Secure Authentication Bypass by Spoofing Vulnerability"
+              ],
+              [
+                "2026-10-13",
+                "CVE-2026-96951",
+                "Microsoft Windows Command Injection Vulnerability"
+              ],
+              [
+                "2026-10-14",
+                "CVE-2026-0322",
+                "Palo Alto Networks PAN-OS Code Injection Vulnerability"
+              ],
+              [
+                "2026-10-14",
+                "CVE-2026-105133",
+                "Ahsay AhsayCBS Improper Authentication Vulnerability"
+              ],
+              [
+                "2026-10-14",
+                "CVE-2026-105134",
+                "Ahsay AhsayCBS Command Injection Vulnerability"
+              ],
+              [
+                "2026-10-14",
+                "CVE-2026-76519",
+                "Cisco Secure Email Gateway Relative Path Traversal Vulnerability"
+              ],
+              [
+                "2026-10-15",
+                "CVE-2026-21589",
+                "Atlassian Multiple Products Files or Directories Accessible to External Parties Vulnerability"
+              ],
+              [
+                "2026-10-16",
+                "CVE-2025-61624",
+                "Fortinet Multiple Products Path Traversal Vulnerability"
+              ],
+              [
+                "2026-10-16",
+                "CVE-2026-102764",
+                "BeyondTrust Remote Support Authentication Bypass by Spoofing Vulnerability"
+              ],
+              [
+                "2026-10-20",
+                "CVE-2026-106931",
+                "EG Secure Solutions SiteGuard Server Edition OS Command Injection Vulnerability"
+              ],
+              [
+                "2026-10-20",
+                "CVE-2026-110936",
+                "Siemens Software Center Uncontrolled Search Path Element Vulnerability"
+              ],
+              [
+                "2026-10-20",
+                "CVE-2026-96652",
+                "Plex Media Server Server-Side Request Forgery (SSRF) Vulnerability"
+              ],
+              [
+                "2026-10-20",
+                "CVE-2026-96654",
+                "Plex Media Server Improper Neutralization of Encoded URI Schemes in a Web Page Vulnerability"
+              ],
+              [
+                "2026-10-20",
+                "CVE-2026-96655",
+                "Plex Media Server Server-Side Request Forgery (SSRF) Vulnerability"
+              ],
+              [
+                "2026-10-20",
+                "CVE-2026-96656",
+                "Plex Media Server External Control of File Name or Path Vulnerability"
+              ],
+              [
+                "2026-10-23",
+                "CVE-2026-110447",
+                "Collabora Online – Built-in CODE Server OS Command Injection Vulnerability"
+              ],
+              [
+                "2026-10-23",
+                "CVE-2026-114625",
+                "Arista VeloCloud Orchestrator SQL Injection Vulnerability"
+              ],
+              [
+                "2026-10-25",
+                "CVE-2015-0279",
+                "Redhat Richfaces: exploitation reported by ENISA EUVD"
+              ],
+              [
+                "2026-10-26",
+                "CVE-2026-109618",
+                "PHP Memory Corruption Vulnerability"
+              ],
+              [
+                "2026-10-26",
+                "CVE-2026-109619",
+                "PHP Stale Internal Request-State Vulnerability"
+              ],
+              [
+                "2026-10-27",
+                "CVE-2026-111497",
+                "Google Brotli Unchecked Return Value Vulnerability"
+              ],
+              [
+                "2026-10-27",
+                "CVE-2026-48356",
+                "Adobe Commerce and Magento Unrestricted Upload of File with Dangerous Type Vulnerability"
+              ],
+              [
+                "2026-10-28",
+                "CVE-2026-41709",
+                "Broadcom VMWare ESX Insufficient Logging Vulnerability"
+              ],
+              [
+                "2026-10-28",
+                "CVE-2026-46300",
+                "Linux Kernel Missing Initialization of a Variable Vulnerability"
+              ],
+              [
+                "2026-10-29",
+                "CVE-2026-76418",
+                "Cisco Secure Firewall ASA Software and Cisco Secure FTD Software Unchecked Return Value to NULL Pointer Dereference Vulnerability"
+              ],
+              [
+                "2026-10-29",
+                "CVE-2026-97229",
+                "GitLab Community Edition and Enterprise Edition Integer Overflow or Wraparound Vulnerability"
+              ],
+              [
+                "2026-10-30",
+                "CVE-2026-111357",
+                "Ivanti Connect Secure Missing Authentication for Critical Function Vulnerability"
+              ],
+              [
+                "2026-10-30",
+                "CVE-2026-118527",
+                "Ivanti Connect Secure Generation of Predictable Numbers or Identifiers Vulnerability"
+              ]
+            ]
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "label": "PHP Group PHP vendor advisory",
+        "url": "https://github.com/php/php-src/security/advisories/GHSA-w8hw-w9fx-j79w"
+      },
+      {
+        "label": "PHP Group PHP vendor advisory",
+        "url": "https://github.com/php/php-src/security/advisories/GHSA-6wmf-4rv5-p3rp"
+      },
+      {
+        "label": "Google Brotli vendor advisory",
+        "url": "https://github.com/dotnet/announcements/issues/494"
+      },
+      {
+        "label": "ISC BIND vendor advisory",
+        "url": "https://kb.isc.org/article/AA-01272"
+      },
+      {
+        "label": "Apache Struts vendor advisory",
+        "url": "https://struts.apache.org/docs/s2-032.html"
+      },
+      {
+        "label": "CISA KEV catalog",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+      },
+      {
+        "label": "FIRST EPSS",
+        "url": "https://www.first.org/epss/"
+      },
+      {
+        "label": "Google Project Zero 0day In the Wild tracker",
+        "url": "https://docs.google.com/spreadsheets/d/1lkNJ0uQwbeC1ZTRrxdtuPLCIl7mlUreoKfSIgajnSyY"
+      }
+    ],
+    "footer": "Enterprise Cyber Threat Intelligence | October 2026",
+    "generatedAt": "2026-11-22T18:05:37Z"
+  }
 }

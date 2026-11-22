@@ -1,8 +1,36 @@
 {
   "editions": {
     "2026-11-22": {
+      "CVE-2026-133968": {
+        "label": "MONAI Label",
+        "firstReported": "2026-11-22",
+        "kev": false,
+        "kevDate": null,
+        "zeroDay": false,
+        "itw": [],
+        "poc": 1,
+        "epss": 0.03759,
+        "cvss": 9.8,
+        "fix": false,
+        "nvdStatus": "Received",
+        "priority": "Emergency"
+      },
+      "CVE-2026-102769": {
+        "label": "WhatsApp for Android",
+        "firstReported": "2026-11-22",
+        "kev": false,
+        "kevDate": null,
+        "zeroDay": false,
+        "itw": [],
+        "poc": 0,
+        "epss": 0.00407,
+        "cvss": 6.8,
+        "fix": false,
+        "nvdStatus": "Received",
+        "priority": "Emergency"
+      },
       "CVE-2026-120539": {
-        "label": "CVE-2026-120539",
+        "label": "Restrictions for BuddyPress WordPress plugin",
         "firstReported": "2026-11-22",
         "kev": false,
         "kevDate": null,
@@ -16,7 +44,7 @@
         "priority": "Urgent"
       },
       "CVE-2026-133993": {
-        "label": "CVE-2026-133993",
+        "label": "D-Link DIR-600L",
         "firstReported": "2026-11-22",
         "kev": false,
         "kevDate": null,
@@ -30,7 +58,7 @@
         "priority": "Urgent"
       },
       "CVE-2026-125294": {
-        "label": "CVE-2026-125294",
+        "label": "Nexter Blocks Pro WordPress plugin",
         "firstReported": "2026-11-22",
         "kev": false,
         "kevDate": null,

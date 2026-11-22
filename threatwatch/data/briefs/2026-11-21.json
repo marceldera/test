@@ -94,5 +94,538 @@
       "reviewedBy": null,
       "reviewedAt": null
     }
+  },
+  "report": {
+    "version": 1,
+    "title": [
+      "DAILY ENTERPRISE CYBERSECURITY",
+      "THREAT INTELLIGENCE BRIEF"
+    ],
+    "dateLabel": "Saturday, November 21, 2026",
+    "window": "Reporting window: November 20-21, 2026",
+    "prepared": "Automated edition (reconstructed from catalog data)",
+    "sourceNote": "This brief is compiled automatically from public sources (CISA KEV, NVD, FIRST EPSS, Google Project Zero, ENISA EUVD, Metasploit, Exploit-DB, PoC-in-GitHub, MITRE ATT&CK). Exploitation statuses reflect what those sources report; anything they do not establish is stated as not established or not verified.",
+    "sections": [
+      {
+        "id": "summary",
+        "num": 1,
+        "title": "Executive Intelligence Summary",
+        "source": "generated",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "The leading newly prioritized issue is **CVE-2026-129448 (Apache Roller)**, a critical unsafe deserialization flaw; it is listed in CISA KEV on 2026-11-20 (exploitation confirmed by CISA) and reported exploited by ENISA EUVD since 2026-11-20. A fixed release is identified (roller 6.1.5). **CVE-2026-133968 (MONAI Label)** is another important newly highlighted issue; it is described in its CVE record as exploited in the wild (not yet corroborated by CISA KEV, Project Zero, EUVD or VulnCheck)."
+          },
+          {
+            "type": "table",
+            "columns": [
+              "Metric",
+              "Assessment"
+            ],
+            "rows": [
+              [
+                "Newly prioritized CVEs",
+                "9: Apache Roller, MONAI Label, Broadcom VMware vCenter, Cisco Expressway Series, SAP NetWeaver, WhatsApp for Android and 3 more"
+              ],
+              [
+                "Latest KEV baseline",
+                "1,790 (catalog version 2026.11.20)"
+              ],
+              [
+                "New KEV additions",
+                "None verified in reporting window"
+              ],
+              [
+                "New zero-day / in-the-wild reports",
+                "CVE-2026-129448 (Apache Roller), CVE-2026-133968 (MONAI Label), CVE-2026-123890 (Broadcom VMware vCenter) and CVE-2026-76466 (Cisco Expressway Series)"
+              ],
+              [
+                "Emergency candidates",
+                "6 newly highlighted: exposed Apache Roller, exposed MONAI Label, exposed Broadcom VMware vCenter and exposed Cisco Expressway Series"
+              ],
+              [
+                "Complete worldwide High/Critical count",
+                "Not established; 402 High/Critical CVEs published to NVD in the window (NVD-scored only)"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "**Top five actions:** (1) Isolate or patch exposed Apache Roller (CVE-2026-129448); (2) isolate or patch exposed MONAI Label (CVE-2026-133968); (3) isolate or patch exposed Broadcom VMware vCenter (CVE-2026-123890); (4) isolate or patch exposed Cisco Expressway Series (CVE-2026-76466); (5) examine Apache Roller hosts for unexpected child processes and outbound connections."
+          }
+        ]
+      },
+      {
+        "id": "critical",
+        "num": 2,
+        "title": "Critical Vulnerability Intelligence",
+        "source": "generated",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "**CVE-2026-129448 - Apache Roller unsafe deserialization (CVSS 9.8).** Deserialization of Untrusted Data in Apache Roller versions 4.0.0 through 6.1.4 allows an unauthenticated remote attacker to execute arbitrary code. The XML-RPC endpoint accepts vendor extension types and deserializes them before authenticating the requester. This is the same vulnerability as CVE-2026-82384, which listed only Apache Roller 6.1.5 as affected. This issue is being actively exploited. Affected releases (NVD): roller >= 4.0, < 6.1.5. Fixed version (first unaffected release per NVD ranges): roller 6.1.5. Attack path: network-accessible; no authentication required; no user interaction required."
+          },
+          {
+            "type": "table",
+            "columns": [
+              "Field",
+              "Status"
+            ],
+            "rows": [
+              [
+                "EPSS / percentile",
+                "5.5% probability / 92nd percentile (FIRST EPSS)"
+              ],
+              [
+                "CISA KEV",
+                "Listed 2026-11-20; federal due date 2026-11-23"
+              ],
+              [
+                "Exploitation",
+                "Listed in CISA KEV on 2026-11-20 (exploitation confirmed by CISA) and reported exploited by ENISA EUVD since 2026-11-20; independently corroborated victim evidence not established"
+              ],
+              [
+                "Public exploit",
+                "Public exploit code referenced: 3 unvetted GitHub repositories; weaponized exploit not verified"
+              ],
+              [
+                "Mitigation",
+                "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk guidance and CISA’s “Forensics Triage Requirements”. Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable."
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "**CVE-2026-133968 - MONAI Label path traversal (CVSS 9.8).** monailabel (aka MONAI Label) through 0.8.5 allows directory traversal, with resultant remote code execution, via the image parameter to the PUT /datastore/image endpoint, as exploited in the wild starting in September 2026. Affected releases: not yet published in NVD configuration data. Fixed package release: none identified in tracked sources. Attack path: network-accessible; no authentication required; no user interaction required."
+          },
+          {
+            "type": "table",
+            "columns": [
+              "Field",
+              "Status"
+            ],
+            "rows": [
+              [
+                "EPSS / percentile",
+                "3.8% probability / 90th percentile (FIRST EPSS)"
+              ],
+              [
+                "CISA KEV",
+                "Not listed in latest verified baseline"
+              ],
+              [
+                "Exploitation",
+                "Described in its CVE record as exploited in the wild (not yet corroborated by CISA KEV, Project Zero, EUVD or VulnCheck); independently corroborated victim evidence not established"
+              ],
+              [
+                "Public exploit",
+                "Public exploit code referenced: 1 unvetted GitHub repository; weaponized exploit not verified"
+              ],
+              [
+                "Mitigation",
+                "Apply the vendor fix or mitigation; remove untrusted network reachability until patched; place the service behind authentication or a VPN; investigate for signs of prior compromise"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "**CVE-2026-123890 - Broadcom VMware vCenter authentication bypass (CVSS 9.8).** VMware vCenter contains an authentication bypass vulnerability in the VMware Directory Service. Affected versions: 9.1.x (fixed in 9.1.1.0200); 9.0.x (fixed in 9.0.2.0200); 8.0 (fixed in 8.0 U3m); 5.x (fixed in 5.2.5). Telco Cloud Platform 3.0, 4.x, 5.0.x, 5.1.x, 5.2 and Telco Cloud Infrastructure 3.0 are also affected (see KB463116). Affected releases (NVD): cloud foundation >= 5.0, < 5.2.5; telco cloud infrastructure = 3.0; telco cloud platform >= 3.0, <= 5.2; +4 more. Fixed version (first unaffected release per NVD ranges): cloud foundation 5.2.5, vcenter server 9.0.2.0200, vcenter server 9.1.1.0200. Attack path: network-accessible; no authentication required; no user interaction required."
+          },
+          {
+            "type": "table",
+            "columns": [
+              "Field",
+              "Status"
+            ],
+            "rows": [
+              [
+                "EPSS / percentile",
+                "3.5% probability / 89th percentile (FIRST EPSS)"
+              ],
+              [
+                "CISA KEV",
+                "Listed 2026-11-20; federal due date 2026-11-23"
+              ],
+              [
+                "Exploitation",
+                "Listed in CISA KEV on 2026-11-20 (exploitation confirmed by CISA) and reported exploited by ENISA EUVD since 2026-11-20; independently corroborated victim evidence not established"
+              ],
+              [
+                "Public exploit",
+                "Public exploit code referenced: 8 unvetted GitHub repositories; weaponized exploit not verified"
+              ],
+              [
+                "Mitigation",
+                "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk guidance and CISA’s “Forensics Triage Requirements”. Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable."
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "**CVE-2026-76466 - Cisco Expressway Series hard-coded credentials (CVSS 9.8).** A vulnerability in the database service feature of Cisco Expressway Series could allow an unauthenticated, remote attacker with network access to a Cisco Expressway device to execute arbitrary operating system commands as root. This vulnerability is due to the use of persistent cookies. Affected releases (NVD): expressway < x15.5.20. Fixed version (first unaffected release per NVD ranges): expressway x15.5.20. Attack path: network-accessible; no authentication required; no user interaction required."
+          },
+          {
+            "type": "table",
+            "columns": [
+              "Field",
+              "Status"
+            ],
+            "rows": [
+              [
+                "EPSS / percentile",
+                "2.2% probability / 82nd percentile (FIRST EPSS)"
+              ],
+              [
+                "CISA KEV",
+                "Listed 2026-11-20; federal due date 2026-11-23"
+              ],
+              [
+                "Exploitation",
+                "Listed in CISA KEV on 2026-11-20 (exploitation confirmed by CISA) and reported exploited by ENISA EUVD since 2026-11-20; independently corroborated victim evidence not established"
+              ],
+              [
+                "Public exploit",
+                "Public exploit code referenced: 3 unvetted GitHub repositories; weaponized exploit not verified"
+              ],
+              [
+                "Mitigation",
+                "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk guidance and CISA’s “Forensics Triage Requirements”. Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable."
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "**CVE-2025-42884 - SAP NetWeaver SAP NetWeaver Improper Neutralization of Special Elements in Data Query Logic Vulnerability (CVSS 6.5).** SAP NetWeaver Enterprise Portal allows an unauthenticated attacker to inject JNDI environment properties or pass a URL used during JNDI lookup operations, enabling access to an unintended JNDI provider. This could further lead to disclosure or modification of information about the server. There is no impact on availability. Affected releases (NVD): netweaver enterprise portal = 7.50. Fixed package release: not mapped in NVD ranges; 1 vendor patch or advisory reference available. Attack path: network-accessible; no authentication required; no user interaction required."
+          },
+          {
+            "type": "table",
+            "columns": [
+              "Field",
+              "Status"
+            ],
+            "rows": [
+              [
+                "EPSS / percentile",
+                "0.7% probability / 54th percentile (FIRST EPSS)"
+              ],
+              [
+                "CISA KEV",
+                "Listed 2026-11-20; federal due date 2026-11-23"
+              ],
+              [
+                "Exploitation",
+                "Listed in CISA KEV on 2026-11-20 (exploitation confirmed by CISA) and reported exploited by ENISA EUVD since 2026-11-20; independently corroborated victim evidence not established"
+              ],
+              [
+                "Public exploit",
+                "No public exploit or proof-of-concept identified in tracked sources"
+              ],
+              [
+                "Mitigation",
+                "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk guidance and CISA’s “Forensics Triage Requirements”. Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable."
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "**CVE-2026-102769 - WhatsApp for Android SQL injection (CVSS 6.8).** A SQL injection vulnerability when the recipient tapped on a specially crafted “order details” message from an unofficial client in WhatsApp for Android prior to version 2.26.35.74 could have allowed deletion of locally-stored WhatsApp files and, only if the user is online at time of receipt, leaked one bit of information asked by the attacker about the user’s chat database via an induced-crash delivery receipt… Affected releases: not yet published in NVD configuration data. Fixed package release: none identified in tracked sources. Attack path: network-accessible; low-privileged authentication required; user interaction required."
+          },
+          {
+            "type": "table",
+            "columns": [
+              "Field",
+              "Status"
+            ],
+            "rows": [
+              [
+                "EPSS / percentile",
+                "0.4% probability / 35th percentile (FIRST EPSS)"
+              ],
+              [
+                "CISA KEV",
+                "Not listed in latest verified baseline"
+              ],
+              [
+                "Exploitation",
+                "Described in its CVE record as exploited in the wild (not yet corroborated by CISA KEV, Project Zero, EUVD or VulnCheck); independently corroborated victim evidence not established"
+              ],
+              [
+                "Public exploit",
+                "No public exploit or proof-of-concept identified in tracked sources"
+              ],
+              [
+                "Mitigation",
+                "Apply the vendor fix or mitigation; remove untrusted network reachability until patched; investigate for signs of prior compromise"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "Also prioritized: CVE-2026-133493 (D-Link DIR-600L, urgent); CVE-2026-120539 (Restrictions for BuddyPress WordPress plugin, urgent); CVE-2026-80188 (BuddyBoss Addons WordPress plugin, urgent). Details are in the Vulnerability Validation catalog."
+          }
+        ]
+      },
+      {
+        "id": "exploitation",
+        "num": 3,
+        "title": "Active Exploitation and Threat Campaigns",
+        "source": "generated",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "CVE-2026-129448 (Apache Roller): listed in CISA KEV on 2026-11-20 (exploitation confirmed by CISA) and reported exploited by ENISA EUVD since 2026-11-20. No named actor, verified victim count or campaign is established in tracked sources. CVE-2026-123890 (Broadcom VMware vCenter): listed in CISA KEV on 2026-11-20 (exploitation confirmed by CISA) and reported exploited by ENISA EUVD since 2026-11-20. No named actor, verified victim count or campaign is established in tracked sources. CVE-2026-76466 (Cisco Expressway Series): listed in CISA KEV on 2026-11-20 (exploitation confirmed by CISA) and reported exploited by ENISA EUVD since 2026-11-20. No named actor, verified victim count or campaign is established in tracked sources. CVE-2025-42884 (SAP NetWeaver): listed in CISA KEV on 2026-11-20 (exploitation confirmed by CISA) and reported exploited by ENISA EUVD since 2026-11-20. No named actor, verified victim count or campaign is established in tracked sources. No campaign-specific IP addresses, hashes or domains are collected by ThreatWatch's automated feeds."
+          },
+          {
+            "type": "p",
+            "text": "No new CISA KEV additions were verified in the reporting window. The latest additions remain the 4 entries added November 20, 2026: SAP NetWeaver, Broadcom VMware vCenter, Apache Roller and Cisco Expressway Series. The federal remediation deadline for those entries is **November 23, 2026**. This deadline applies to covered federal agencies under applicable requirements; it is not a universal private-sector mandate."
+          },
+          {
+            "type": "p",
+            "text": "**Defensive hunting:** for Apache Roller (CVE-2026-129448), inspect unexpected child processes of the service, new scheduled jobs or services, and unusual outbound connections from the host; for MONAI Label (CVE-2026-133968), inspect unexpected file writes outside the application's data directories, new web-accessible files, modified application code, altered SSH authorized_keys files and suspicious scheduled jobs; for Broadcom VMware vCenter (CVE-2026-123890), review administrative logins, newly created accounts or API tokens, and configuration changes made without a matching change record; for Cisco Expressway Series (CVE-2026-76466), review administrative logins, newly created accounts or API tokens, and configuration changes made without a matching change record."
+          }
+        ]
+      },
+      {
+        "id": "industry",
+        "num": 4,
+        "title": "Industry and Market Threat Landscape",
+        "source": "generated",
+        "blocks": [
+          {
+            "type": "table",
+            "columns": [
+              "Industry / market",
+              "Observed activity vs. possible exposure"
+            ],
+            "rows": [
+              [
+                "Healthcare / medical imaging",
+                "MONAI Label relevant to this sector; confirmed sector targeting not established"
+              ],
+              [
+                "Education / research",
+                "MONAI Label relevant to this sector; confirmed sector targeting not established"
+              ],
+              [
+                "Technology / software",
+                "Potential Apache Roller, Broadcom VMware vCenter, Cisco Expressway Series and MONAI Label dependency exposure"
+              ],
+              [
+                "Government / defense",
+                "Possible Apache Roller, Broadcom VMware vCenter and Cisco Expressway Series exposure; no new sector-specific targeting confirmed"
+              ],
+              [
+                "Financial services",
+                "Possible Apache Roller, Broadcom VMware vCenter and Cisco Expressway Series exposure; targeting unknown"
+              ],
+              [
+                "Manufacturing / energy / utilities",
+                "Possible Apache Roller, Broadcom VMware vCenter and Cisco Expressway Series exposure; targeting unknown"
+              ],
+              [
+                "Retail / transportation",
+                "Possible Apache Roller, Broadcom VMware vCenter and Cisco Expressway Series exposure; targeting unknown"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "Geography and organization-size targeting were not reliably established. Product use indicates possible exposure, not observed attacker selection."
+          }
+        ]
+      },
+      {
+        "id": "actors",
+        "num": 5,
+        "title": "Threat Actor Intelligence",
+        "source": "generated",
+        "blocks": [
+          {
+            "type": "table",
+            "columns": [
+              "Actor / cluster",
+              "Attribution and activity"
+            ],
+            "rows": [
+              [
+                "Apache Roller operators",
+                "Unknown. Exploitation reported; identity, motivation and geographic targeting not established."
+              ],
+              [
+                "MONAI Label operators",
+                "Unknown. Exploitation reported; identity, motivation and geographic targeting not established."
+              ],
+              [
+                "Broadcom VMware vCenter operators",
+                "Unknown. Exploitation reported; identity, motivation and geographic targeting not established."
+              ],
+              [
+                "Cisco Expressway Series operators",
+                "Unknown. Exploitation reported; identity, motivation and geographic targeting not established."
+              ],
+              [
+                "SAP NetWeaver operators",
+                "Unknown. Exploitation reported; identity, motivation and geographic targeting not established."
+              ],
+              [
+                "WhatsApp for Android operators",
+                "Unknown. Exploitation reported; identity, motivation and geographic targeting not established."
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "**MITRE ATT&CK defensive mapping:** T1190 (Exploit Public-Facing Application) may be relevant to exposed Apache Roller, MONAI Label, Broadcom VMware vCenter and Cisco Expressway Series services. These mappings support defensive detection and do not establish actor attribution."
+          }
+        ]
+      },
+      {
+        "id": "remediation",
+        "num": 6,
+        "title": "Enterprise Risk and Remediation Decisions",
+        "source": "generated",
+        "blocks": [
+          {
+            "type": "table",
+            "columns": [
+              "Priority",
+              "Scenario",
+              "Suggested window"
+            ],
+            "rows": [
+              [
+                "Emergency",
+                "Apache Roller (CVE-2026-129448) reachable from untrusted networks",
+                "Isolate immediately; investigate and mitigate within 24 hours"
+              ],
+              [
+                "Emergency",
+                "MONAI Label (CVE-2026-133968) reachable from untrusted networks",
+                "Isolate immediately; investigate and mitigate within 24 hours"
+              ],
+              [
+                "Emergency",
+                "Broadcom VMware vCenter (CVE-2026-123890) reachable from untrusted networks",
+                "Isolate immediately; investigate and mitigate within 24 hours"
+              ],
+              [
+                "Emergency",
+                "Cisco Expressway Series (CVE-2026-76466) reachable from untrusted networks",
+                "Isolate immediately; investigate and mitigate within 24 hours"
+              ],
+              [
+                "Emergency",
+                "SAP NetWeaver (CVE-2025-42884) reachable from untrusted networks",
+                "Isolate immediately; investigate and mitigate within 24 hours"
+              ],
+              [
+                "Emergency",
+                "WhatsApp for Android (CVE-2026-102769) reachable from untrusted networks",
+                "Isolate immediately; investigate and mitigate within 24 hours"
+              ],
+              [
+                "Routine",
+                "Affected but effectively restricted software",
+                "Controlled maintenance window"
+              ],
+              [
+                "Monitor",
+                "Verified fixed or nonaffected software",
+                "Watch for material new evidence"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "Response windows are recommendations, not mandatory policy. No organization-specific exposure, compromise, asset criticality or patch status was established."
+          }
+        ]
+      },
+      {
+        "id": "changes",
+        "num": 7,
+        "title": "Significant Changes to Previously Reported Issues",
+        "source": "generated",
+        "blocks": [
+          {
+            "type": "table",
+            "columns": [
+              "Issue",
+              "Material development"
+            ],
+            "rows": [
+              [
+                "Previously reported issues",
+                "None tracked in the last 14 days"
+              ]
+            ]
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "label": "Apache Roller vendor advisory",
+        "url": "https://lists.apache.org/thread.html/lnz4s26tv6hdo03wngtdbpfj4hg4gtds"
+      },
+      {
+        "label": "CVE-2026-129448 NVD record",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-129448"
+      },
+      {
+        "label": "CVE-2026-133968 NVD record",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-133968"
+      },
+      {
+        "label": "Broadcom VMware vCenter vendor advisory",
+        "url": "https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/39495"
+      },
+      {
+        "label": "CVE-2026-123890 NVD record",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123890"
+      },
+      {
+        "label": "Cisco Expressway Series vendor advisory",
+        "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-vcs-static-cred-hr7EWZ8t"
+      },
+      {
+        "label": "CVE-2026-76466 NVD record",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76466"
+      },
+      {
+        "label": "SAP NetWeaver vendor advisory",
+        "url": "https://url.sap/sapsecuritypatchday"
+      },
+      {
+        "label": "CVE-2025-42884 NVD record",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-42884"
+      },
+      {
+        "label": "CVE-2026-102769 NVD record",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102769"
+      },
+      {
+        "label": "CISA KEV catalog",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+      },
+      {
+        "label": "FIRST EPSS",
+        "url": "https://www.first.org/epss/"
+      }
+    ],
+    "footer": "Enterprise Cyber Threat Intelligence | 21 Nov 2026",
+    "reviewedBy": null,
+    "generatedAt": "2026-11-22T18:05:37Z",
+    "prioritized": [
+      "CVE-2026-129448",
+      "CVE-2026-133968",
+      "CVE-2026-123890",
+      "CVE-2026-76466",
+      "CVE-2025-42884",
+      "CVE-2026-102769",
+      "CVE-2026-133493",
+      "CVE-2026-120539",
+      "CVE-2026-80188"
+    ]
   }
 }
