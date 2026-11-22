@@ -40,8 +40,128 @@
   }
   function pct(v) { return (v * 100).toFixed(1) + "%"; }
 
+  // ------------------------------------------------------------------ report (framed document)
+  var CVE_RE = /(CVE-\d{4}-\d{4,7})/g;
+  // Text → nodes: **bold** runs become <strong>, CVE ids link to the validation page. No HTML is parsed.
+  function rich(text, linkCves) {
+    var out = [];
+    String(text).split("**").forEach(function (part, i) {
+      if (!part) return;
+      var kids = [];
+      part.split(CVE_RE).forEach(function (bit, j) {
+        if (!bit) return;
+        if (j % 2 === 1 && linkCves) kids.push(el("a", { cls: "cve-link", href: "validate.html?cve=" + encodeURIComponent(bit), text: bit }));
+        else kids.push(document.createTextNode(bit));
+      });
+      out.push(i % 2 === 1 ? el("strong", null, kids) : el("span", null, kids));
+    });
+    return out;
+  }
+  function block(b) {
+    if (b.type === "p") return el("p", null, rich(b.text, true));
+    if (b.type === "table") {
+      var cls = "doc-tbl cols-" + b.columns.length;
+      return el("div", { cls: "doc-tbl-wrap" }, [el("table", { cls: cls }, [
+        el("thead", null, [el("tr", null, b.columns.map(function (c) { return el("th", { scope: "col", text: c }); }))]),
+        el("tbody", null, b.rows.map(function (r) {
+          return el("tr", null, r.map(function (cell, i) {
+            return i === 0 ? el("th", { scope: "row" }, rich(cell, true)) : el("td", null, rich(cell, true));
+          }));
+        }))
+      ])]);
+    }
+    return null;
+  }
+  function renderReport(b, status, body) {
+    var r = b.report;
+    var paper = el("article", { cls: "paper", "aria-labelledby": "doc-title" }, [
+      el("h1", { id: "doc-title", cls: "doc-title" }, r.title.map(function (line, i) {
+        return el("span", { text: line });
+      })),
+      el("p", { cls: "doc-meta" }, [el("strong", { text: r.dateLabel }), " | " + r.window + " | " + r.prepared + "."]),
+      el("p", { cls: "doc-note" }, [el("strong", { text: "Source note: " }), r.sourceNote])
+    ]);
+    r.sections.forEach(function (s) {
+      var sec = el("section", { cls: "doc-sec", "aria-labelledby": "doc-s" + s.num }, [
+        el("h2", { id: "doc-s" + s.num, text: s.num + ". " + s.title })
+      ]);
+      s.blocks.forEach(function (bl) { var n = block(bl); if (n) sec.appendChild(n); });
+      paper.appendChild(sec);
+    });
+    if (r.references && r.references.length) {
+      paper.appendChild(el("section", { cls: "doc-sec doc-refs", "aria-labelledby": "doc-refs" }, [
+        el("h2", { id: "doc-refs", text: "Primary Public References" })
+      ].concat(r.references.map(function (ref) {
+        return el("p", null, [ref.label + ": ", link(ref.url)]);
+      }))));
+    }
+    paper.appendChild(el("footer", { cls: "doc-foot" }, [
+      el("span", { text: r.footer }),
+      el("span", { text: "Aegis Cyber Solutions · ThreatWatch" })
+    ]));
+    body.appendChild(paper);
+  }
+
+  function renderToolbar(b, status, editions) {
+    var bar = document.getElementById("brief-toolbar");
+    bar.textContent = "";
+    if (editions && editions.length > 1) {
+      var sel = el("select", { id: "edition-pick", "aria-label": "Choose edition" }, editions.map(function (e) {
+        var o = el("option", { value: e.edition, text: new Date(e.edition + "T12:00:00Z").toLocaleDateString("en-US",
+          { weekday: "short", month: "short", day: "numeric", year: "numeric", timeZone: "UTC" }) });
+        if (e.edition === b.edition) o.selected = true;
+        return o;
+      }));
+      sel.addEventListener("change", function () {
+        if (!/^\d{4}-\d{2}-\d{2}$/.test(sel.value)) return;
+        getJSON("data/briefs/" + sel.value + ".json").then(function (nb) { renderBrief(nb, status, editions); })
+          .catch(function () { document.getElementById("notices").appendChild(el("p", { cls: "notice", text: "That edition could not be loaded." })); });
+      });
+      bar.appendChild(el("label", { "for": "edition-pick", cls: "tb-label", text: "Edition" }));
+      bar.appendChild(sel);
+    }
+    var btn = el("button", { type: "button", cls: "btn-print", text: "Print / Save as PDF" });
+    btn.addEventListener("click", function () { window.print(); });
+    bar.appendChild(btn);
+  }
+
   // ------------------------------------------------------------------ brief
-  function renderBrief(b, status) {
+  function renderBrief(b, status, editions) {
+    var body = document.getElementById("brief-body");
+    if (b.report && b.report.sections) {
+      body.textContent = "";
+      document.getElementById("brief-title").textContent = "Daily Threat Intelligence Brief — " +
+        new Date(b.edition + "T12:00:00Z").toLocaleDateString("en-US", { dateStyle: "long", timeZone: "UTC" });
+      document.getElementById("brief-meta").textContent = "Published " + fmtTime(b.publishedAt) +
+        " · a new edition is issued every morning at 7:00 AM ET";
+      freshness(b, status);
+      renderToolbar(b, status, editions);
+      renderReport(b, status, body);
+      return;
+    }
+    legacyBrief(b, status);
+  }
+
+  function freshness(b, status) {
+    var age = (Date.now() - Date.parse(b.publishedAt)) / 36e5;
+    var fresh = document.getElementById("freshness");
+    fresh.textContent = "";
+    var latest = !document.getElementById("edition-pick") || document.getElementById("edition-pick").selectedIndex <= 0;
+    var stale = age > STALE_HOURS && latest;
+    fresh.appendChild(el("span", { cls: "fresh" + (stale ? " stale" : "") }, [
+      el("span", { cls: "badge " + (stale ? "b-urgent" : "b-ok"), text: stale ? "Stale" : (latest ? "Current" : "Archive") }),
+      stale ? "This edition is " + Math.round(age) + " hours old; a newer edition has not been published."
+            : "Last successful refresh " + fmtTime((status && status.lastSuccessAt) || b.publishedAt)
+    ]));
+    var notices = document.getElementById("notices");
+    notices.textContent = "";
+    if (status && status.ok === false) {
+      notices.appendChild(el("p", { cls: "notice", text: "The most recent refresh attempt (" + fmtTime(status.lastAttemptAt) +
+        ") did not pass quality checks. The last verified edition is shown." }));
+    }
+  }
+
+  function legacyBrief(b, status) {
     var body = document.getElementById("brief-body");
     body.textContent = "";
     document.getElementById("brief-title").textContent = "Zero-Day Intelligence Brief — " +
@@ -261,7 +381,8 @@
 
   // ------------------------------------------------------------------ boot
   var statusP = getJSON("data/status.json").catch(function () { return null; });
-  Promise.all([getJSON("data/latest.json"), statusP]).then(function (r) { renderBrief(r[0], r[1]); })
+  var editionsP = getJSON("data/briefs/index.json").then(function (d) { return d.editions || []; }).catch(function () { return []; });
+  Promise.all([getJSON("data/latest.json"), statusP, editionsP]).then(function (r) { renderBrief(r[0], r[1], r[2]); })
     .catch(function () {
       document.getElementById("brief-meta").textContent = "";
       document.getElementById("brief-body").appendChild(el("p", { cls: "notice",

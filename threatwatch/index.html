@@ -38,18 +38,18 @@
   </div>
 </header>
 
-<main id="main">
-  <article id="brief" aria-labelledby="brief-title">
-    <header>
-      <div class="eyebrow">Daily Zero-Day Intelligence Brief</div>
-      <h1 id="brief-title">Today’s exploited-vulnerability brief</h1>
+<main id="main" class="wide">
+  <div id="brief" aria-labelledby="brief-title">
+    <header class="brief-head">
+      <div class="eyebrow">Daily Threat Intelligence Brief · issued 7:00 AM ET</div>
+      <h1 id="brief-title">Today’s threat intelligence brief</h1>
       <p class="meta" id="brief-meta">Loading the latest edition…</p>
-      <div id="freshness" role="status"></div>
+      <div class="brief-status"><div id="freshness" role="status"></div><div id="brief-toolbar" class="brief-toolbar"></div></div>
       <div id="notices"></div>
     </header>
     <noscript><p class="notice">This page needs JavaScript to display the brief. The raw edition is available at <a href="data/latest.json">data/latest.json</a>.</p></noscript>
     <div id="brief-body" aria-live="polite"></div>
-  </article>
+  </div>
 
   <section id="monthly" aria-labelledby="monthly-title">
     <h2 id="monthly-title"><span class="num">M</span>Monthly Intelligence Summary</h2>

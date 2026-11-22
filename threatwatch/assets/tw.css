@@ -135,3 +135,58 @@ select, input[type="search"], input[type="date"] { background: var(--panel); col
 .tw-foot nav ul { list-style: none; display: flex; flex-wrap: wrap; gap: 4px 16px; margin: 0; padding: 0; }
 .tw-foot nav a { display: inline-flex; min-height: 44px; align-items: center; }
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* ---------------------------------------------------------------- daily brief: framed document */
+.brief-status { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 16px; }
+.brief-toolbar { display: flex; align-items: center; gap: 10px; margin: 6px 0 16px; }
+.brief-toolbar .tb-label { font-size: 13px; color: var(--muted); font-weight: 600; letter-spacing: .04em; }
+.brief-toolbar select, .btn-print { font: 600 13px var(--font); color: var(--text); background: var(--content); border: 1px solid var(--border); border-radius: 4px; min-height: 36px; padding: 0 12px; }
+.btn-print { cursor: pointer; }
+.btn-print:hover, .brief-toolbar select:hover { border-color: var(--accent); }
+
+.paper {
+  --ink: #1f2933; --navy: #1d3a5f; --head: #1f4e79; --rule: #d5dde7; --zebra: #f0f4f9; --soft: #6b7c93;
+  background: #fff; color: var(--ink);
+  max-width: 860px; margin: 8px auto 48px; padding: 56px 64px 26px;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0,0,0,.30), 0 12px 28px rgba(0,0,0,.35), 0 32px 64px rgba(0,0,0,.30);
+  font: 400 15px/1.7 "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.paper a { color: var(--head); text-decoration-color: rgba(31,78,121,.35); overflow-wrap: anywhere; }
+.paper a:hover { text-decoration-color: currentColor; }
+.paper a.cve-link { color: inherit; text-decoration: underline; text-decoration-color: rgba(31,78,121,.28); text-underline-offset: 3px; }
+.paper strong { font-weight: 700; color: #111827; }
+.doc-title { margin: 0 0 22px; text-align: center; color: var(--navy); font: 800 30px/1.18 "Helvetica Neue", Helvetica, Arial, sans-serif; letter-spacing: .01em; text-transform: uppercase; }
+.doc-title span { display: block; }
+.doc-meta, .doc-note { font-size: 13px; line-height: 1.6; margin: 0 0 12px; }
+.doc-note { margin-bottom: 8px; }
+.doc-sec { margin-top: 26px; }
+.doc-sec h2 { border: 0; padding: 0; margin: 0 0 12px; color: var(--head); font: 700 19px/1.3 "Helvetica Neue", Helvetica, Arial, sans-serif; }
+.doc-sec p { margin: 0 0 14px; }
+.doc-tbl-wrap { overflow-x: auto; margin: 4px 0 18px; }
+.doc-tbl { width: 100%; border-collapse: collapse; border: 1px solid var(--rule); font-size: 12.5px; line-height: 1.5; }
+.doc-tbl thead th { background: var(--navy); color: #fff; font-weight: 600; text-align: left; padding: 9px 11px; }
+.doc-tbl tbody th, .doc-tbl td { text-align: left; vertical-align: top; padding: 9px 11px; border-top: 1px solid var(--rule); font-weight: 400; color: var(--ink); }
+.doc-tbl tbody tr:nth-child(even) { background: var(--zebra); }
+.doc-tbl.cols-2 th:first-child { width: 31%; }
+.doc-tbl.cols-3 th:first-child { width: 15%; }
+.doc-tbl.cols-3 td:last-child { width: 30%; }
+.doc-refs p { margin: 0 0 8px; font-size: 14px; }
+.doc-foot { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-top: 40px; padding-top: 14px; border-top: 1px solid var(--rule); color: var(--soft); font-size: 12px; }
+@media (max-width: 720px) {
+  .paper { padding: 30px 20px 18px; margin: 4px -8px 32px; }
+  .doc-title { font-size: 22px; }
+  .doc-tbl.cols-2 th:first-child, .doc-tbl.cols-3 th:first-child { width: auto; }
+}
+@media print {
+  @page { margin: 16mm 14mm; }
+  body { background: #fff; }
+  .tw-head, .tw-foot, .skip, .brief-head, #monthly, #subscribe, #methodology { display: none !important; }
+  main, main.wide { max-width: none; padding: 0; }
+  .paper { box-shadow: none; margin: 0; padding: 0; max-width: none; font-size: 11pt; }
+  .paper a { color: var(--ink); text-decoration: none; }
+  .doc-sec h2 { break-after: avoid; }
+  .doc-tbl tr { break-inside: avoid; }
+  .doc-tbl thead th { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .doc-tbl tbody tr:nth-child(even) { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}

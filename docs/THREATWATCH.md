@@ -178,3 +178,37 @@ python -m unittest discover -s tests -v
 python scripts/validate_data.py
 python -m http.server 8000   # then open http://localhost:8000/threatwatch/
 ```
+
+## Daily brief document (seven sections, issued 7:00 AM ET)
+
+The brief page renders `brief.report` as a framed document laid out like the reference brief of 2026-11-22:
+1 Executive Intelligence Summary · 2 Critical Vulnerability Intelligence · 3 Active Exploitation and Threat Campaigns ·
+4 Industry and Market Threat Landscape · 5 Threat Actor Intelligence · 6 Enterprise Risk and Remediation Decisions ·
+7 Significant Changes to Previously Reported Issues · Primary Public References.
+
+**Automated each morning** (`scripts/tw/report.py`), from the catalog:
+- *Newly prioritized CVEs*: new CISA KEV additions; CVEs newly reported exploited / zero-day by Google Project Zero,
+  ENISA EUVD or VulnCheck; and up to 3 newly published, network-reachable CVSS ≥ 9 CVEs (public exploit first, then EPSS, CVSS).
+- Priority: **Emergency** = exploited and network-reachable; **Urgent** = exploited otherwise, CVSS ≥ 9 unauthenticated
+  network, or public exploit with CVSS ≥ 7; **Routine** otherwise.
+- Fixed versions come from NVD CPE ranges (`< X` ⇒ first fixed release X). Hunting guidance comes from the CWE.
+  Actor rows come only from MITRE ATT&CK links; technique mappings from ATT&CK / CTID. Unknowns are stated as
+  "not established" / "not verified".
+- Section 7 follows every CVE prioritized in the last 14 days (`data/report-state.json`) and reports KEV listing,
+  new exploitation reports, new public exploits, NVD scoring, fix references and EPSS moves ≥ 0.10.
+
+The publisher composes the report when the brief is published, then **re-composes it after the catalog build** so it
+uses that morning's zero-day, PoC and ATT&CK data.
+
+**Analyst edition.** Put reviewed text in `threatwatch/data/editorial/<YYYY-MM-DD>.json` under `"report"`.
+Any section you supply replaces the generated one; the rest stay automated.
+```json
+{ "reviewedBy": "Name", "reviewedAt": "2026-11-22T07:00:00-05:00",
+  "report": { "window": "Reporting window: November 21-22, 2026", "sourceNote": "…",
+    "sections": { "summary": [ {"type": "p", "text": "Text with **bold**."},
+                               {"type": "table", "columns": ["Metric", "Assessment"], "rows": [["…", "…"]]} ] },
+    "references": [ {"label": "Vendor advisory", "url": "https://…"} ] } }
+```
+Section ids: `summary, critical, exploitation, industry, actors, remediation, changes`. Links must be https.
+After committing an editorial file for a day already published, run the workflow with **refresh_report** (or
+`python scripts/build_brief.py --refresh-report`); this re-composes the latest edition without re-running the KEV diff.

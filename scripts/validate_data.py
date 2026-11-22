@@ -18,7 +18,17 @@ def main() -> int:
     errs += [f"relationships: {e}" for e in validate_relationships(json.loads(rel.read_text()))]
     latest = DATA_DIR / "latest.json"
     if latest.exists():
-        errs += [f"latest: {e}" for e in validate_brief(json.loads(latest.read_text()))]
+        lb = json.loads(latest.read_text())
+        errs += [f"latest: {e}" for e in validate_brief(lb)]
+        if "report" in lb:
+            from tw.report import validate_report
+            errs += [f"latest report: {e}" for e in validate_report(lb["report"])]
+    from tw.brief import safe_editorial
+    for p in sorted((DATA_DIR / "editorial").glob("*.json")):
+        try:
+            safe_editorial(json.loads(p.read_text()))
+        except (ValueError, TypeError, AttributeError) as exc:
+            errs.append(f"editorial/{p.name}: {exc}")
     for p in sorted((DATA_DIR / "monthly").glob("????-??.json")):
         errs += [f"{p.name}: {e}" for e in validate_month(json.loads(p.read_text()))]
     idx = DATA_DIR / "cves" / "index.json"

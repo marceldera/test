@@ -106,6 +106,7 @@ def build_daily(kev: dict, epss: dict, nvd: dict, state: dict, editorial: dict |
         "urgent": len(remediation["urgent"]),
         "criticalHigh": sum(1 for c in cves if ((c.get("cvss") or {}).get("severity") or "").upper() in ("CRITICAL", "HIGH")),
         "materialChanges": len(changes) - len(cves),
+        "kevTotal": len(by_id),
     }
     unknown_fields = sorted({f for c in cves for f in c["unknown"]})
 
@@ -123,6 +124,7 @@ def build_daily(kev: dict, epss: dict, nvd: dict, state: dict, editorial: dict |
             "counts": counts,
             "developments": _developments(cves, changes),
         },
+        "kevLatest": _kev_latest(kev),
         "actions": actions,
         "cves": cves,
         "overflow": overflow,
@@ -151,6 +153,19 @@ def build_daily(kev: dict, epss: dict, nvd: dict, state: dict, editorial: dict |
         "lastEdition": edition,
     }
     return brief, new_state
+
+
+def _kev_latest(kev: dict) -> dict:
+    """The most recent dateAdded batch in the KEV catalog (for "latest additions remain …")."""
+    recs = kev.get("records") or []
+    if not recs:
+        return {}
+    last = max(r["dateAdded"] for r in recs)
+    batch = sorted((r for r in recs if r["dateAdded"] == last), key=lambda r: r["cve"])
+    dues = sorted(r["dueDate"] for r in batch if r.get("dueDate"))
+    return {"date": last, "dueDate": dues[0] if dues else None, "catalogVersion": kev.get("catalogVersion"),
+            "released": kev.get("dateReleased"),
+            "items": [{"cve": r["cve"], "vendor": r["vendor"], "product": r["product"]} for r in batch[:12]]}
 
 
 def _cve_entry(rec: dict, epss: dict | None, nvd: dict | None) -> dict:
@@ -328,6 +343,9 @@ def safe_editorial(raw: Any) -> dict | None:
             items.append({**it, "sources": srcs})
         if items:
             out[key] = items
+    if raw.get("report") is not None:
+        from .report import safe_report_editorial
+        out["report"] = safe_report_editorial(raw["report"])
     for s in raw.get("sources") or []:
         if safe_url(s.get("url")):
             out.setdefault("sources", []).append({"name": str(s.get("name")), "url": s["url"],

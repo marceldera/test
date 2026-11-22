@@ -23,8 +23,10 @@ from tw.brief import build_daily, build_month, recent_months, safe_editorial  # 
 from tw.common import DATA_DIR, ET, SourceError, iso, now_utc, read_json, write_json  # noqa: E402
 from tw.sources import collect_epss, collect_kev, collect_nvd  # noqa: E402
 from tw.validate import validate_brief, validate_month  # noqa: E402
+from tw.report import Catalog, compose, validate_report  # noqa: E402
 
-EARLIEST_ET = (6, 45)   # don't publish before 06:45 ET
+EARLIEST_ET = (6, 45)   # don't publish before 06:45 ET (target: brief live by 07:00 ET)
+REPORT_STATE = "report-state.json"
 RETENTION_DAYS = int(os.environ.get("TW_RETENTION_DAYS", "365"))
 
 
@@ -39,7 +41,12 @@ def gh_output(**kv) -> None:
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--force", action="store_true", help="ignore time gate and idempotency")
+    ap.add_argument("--refresh-report", action="store_true",
+                    help="re-compose the latest edition's report (after editing its editorial file); "
+                         "does not re-run the KEV diff")
     args = ap.parse_args()
+    if args.refresh_report:
+        return refresh_report()
 
     now = now_utc()
     now_et = now.astimezone(ET)
@@ -80,7 +87,8 @@ def main() -> int:
             editorial = safe_editorial(read_json(ed_path))
 
         brief, new_state = build_daily(kev, epss, nvd, state, editorial, now)
-        errs = validate_brief(brief)
+        report_state = attach_report(brief, editorial, now)
+        errs = validate_brief(brief) + validate_report(brief["report"])
         monthlies = {m: build_month(kev, epss, m, now) for m in months}
         for m, doc in monthlies.items():
             errs += [f"{m}: {e}" for e in validate_month(doc)]
@@ -103,6 +111,7 @@ def main() -> int:
     _prune_and_index(now)
     write_json(DATA_DIR / "latest.json", brief)
     write_json(DATA_DIR / "state.json", new_state)
+    write_json(DATA_DIR / REPORT_STATE, report_state)
     status.update({"ok": True, "lastError": None, "lastSuccessAt": iso(now), "lastEdition": edition,
                    "kevCatalogVersion": kev.get("catalogVersion"), "kevRejectedRecords": kev["rejected"]})
     write_json(status_path, status)
@@ -117,6 +126,43 @@ def main() -> int:
             print("Catalog build failed — see threatwatch/data/cves/status.json. "
                   "The brief was published; the last good catalog stays live.", file=sys.stderr)
             return 1
+        # the catalog now holds today's zero-day / PoC / ATT&CK data: re-compose the report with it
+        return refresh_report()
+    return 0
+
+
+def attach_report(brief: dict, editorial: dict | None, now) -> dict:
+    """Compose the seven-section report into brief['report']; returns the new tracking state."""
+    track = read_json(DATA_DIR / REPORT_STATE, {}) or {}
+    report, new_track = compose(brief, Catalog(DATA_DIR), track, editorial, now)
+    brief["report"] = report
+    return new_track
+
+
+def refresh_report() -> int:
+    """Re-compose the latest edition's report from the current catalog and editorial file."""
+    latest = read_json(DATA_DIR / "latest.json", {}) or {}
+    edition = latest.get("edition")
+    if not edition:
+        print("No published edition to refresh.", file=sys.stderr)
+        return 1
+    try:
+        editorial = None
+        ed_path = DATA_DIR / "editorial" / f"{edition}.json"
+        if ed_path.exists():
+            editorial = safe_editorial(read_json(ed_path))
+        report_state = attach_report(latest, editorial, now_utc())
+        errs = validate_report(latest["report"])
+        if errs:
+            raise ValueError("Report quality gate failed:\n  - " + "\n  - ".join(errs))
+    except (ValueError, KeyError) as exc:
+        print(f"REPORT REFRESH BLOCKED (published edition unchanged): {exc}", file=sys.stderr)
+        return 1
+    write_json(DATA_DIR / "briefs" / f"{edition}.json", latest)
+    write_json(DATA_DIR / "latest.json", latest)
+    write_json(DATA_DIR / REPORT_STATE, report_state)
+    print(f"Report for {edition} composed: {len(latest['report']['prioritized'])} prioritized CVEs; "
+          f"editorial sections: {[s['id'] for s in latest['report']['sections'] if s['source'] == 'editorial']}")
     return 0
 
 
