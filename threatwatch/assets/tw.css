@@ -205,3 +205,24 @@ select, input[type="search"], input[type="date"] { background: var(--panel); col
 .day-strip .day.on .wk { color: rgba(255,255,255,.85); }
 .day-strip .day:disabled { opacity: .38; cursor: not-allowed; }
 .brief-toolbar { flex-wrap: wrap; }
+
+/* email signup band (bottom of every page) */
+.sub-band { border-top: 1px solid var(--border); background: linear-gradient(180deg, rgba(47,127,255,.10), rgba(47,127,255,.02)); margin-top: 48px; }
+.sub-in { max-width: var(--nav, 920px); margin: 0 auto; padding: 34px 20px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px 32px; }
+.sub-copy { flex: 1 1 320px; min-width: 0; }
+.sub-copy h2 { margin: 0 0 6px; padding: 0; border: 0; font-size: 22px; }
+.sub-copy p { margin: 0; color: var(--muted); font-size: 15px; }
+.sub-form { flex: 1 1 380px; min-width: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+.sub-form input[type=email] { flex: 1 1 220px; min-width: 0; min-height: 46px; padding: 0 14px; font: 500 16px var(--font);
+  color: var(--text); background: var(--content); border: 1px solid var(--border); border-radius: 6px; }
+.sub-form input[type=email]::placeholder { color: var(--muted); opacity: .75; }
+.sub-form input[type=email]:focus { outline: 2px solid var(--accent); outline-offset: 1px; border-color: var(--accent); }
+.sub-form input[aria-invalid=true] { border-color: #ff8a80; }
+.sub-form button { min-height: 46px; padding: 0 22px; font: 700 15px var(--font); color: #fff; background: var(--corp);
+  border: 1px solid var(--corp); border-radius: 6px; cursor: pointer; }
+.sub-form button:hover { filter: brightness(1.1); }
+.sub-form button:disabled { opacity: .6; cursor: default; }
+.sub-msg { flex-basis: 100%; margin: 0; min-height: 1.4em; font-size: 14px; color: var(--muted); }
+.sub-msg.err { color: #ffb4ab; }
+.sub-msg.ok { color: #8be0a4; }
+@media print { .sub-band { display: none !important; } }

@@ -5,12 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Monthly Threat Intelligence Summary · Aegis ThreatWatch</title>
 <meta name="description" content="Free monthly cyber threat intelligence summary from Aegis Cyber Solutions: exploited vulnerabilities, zero-days, vendors, actors and remediation priorities for the month.">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; base-uri 'self'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; base-uri 'self'; form-action https://buttondown.com">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/tw.css?v=20261122b">
-<script src="assets/tw-brief.js?v=20261122b" defer></script>
+<link rel="stylesheet" href="assets/tw.css?v=20261122c">
+<script src="assets/tw-subscribe.js?v=20261122c" defer></script>
+<script src="assets/tw-brief.js?v=20261122c" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to the summary</a>
@@ -32,7 +33,7 @@
         <li><a href="monthly.html" aria-current="page">Monthly Summary</a></li>
         <li><a href="map.html">Threat Map</a></li>
         <li><a href="validate.html">Vulnerability Validation</a></li>
-        <li><a href="./#subscribe">Subscribe</a></li>
+        <li><a href="#subscribe">Subscribe</a></li>
       </ul>
     </nav>
   </div>
@@ -50,6 +51,23 @@
     <div id="month-body" aria-live="polite"></div>
   </div>
 </main>
+
+<section id="subscribe" class="sub-band" aria-labelledby="subscribe-title">
+  <div class="sub-in">
+    <div class="sub-copy">
+      <h2 id="subscribe-title">Get the daily brief by email</h2>
+      <p>Free ThreatWatch updates in your inbox. Email address only; you’ll confirm by email, and you can unsubscribe anytime.</p>
+    </div>
+    <form id="subscribe-form" class="sub-form" method="post" target="_blank" novalidate>
+      <label for="sub-email" class="sr-only">Email address</label>
+      <input id="sub-email" name="email" type="email" inputmode="email" autocomplete="email" required maxlength="254" placeholder="you@company.com">
+      <input type="hidden" name="embed" value="1">
+      <button type="submit">Subscribe</button>
+      <p id="sub-msg" class="sub-msg" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
 
 <footer class="tw-foot">
   <div class="tw-foot-in">

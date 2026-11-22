@@ -63,6 +63,13 @@ def main() -> int:
         errs.append("subscription-config.json contains unexpected keys (no secrets allowed)")
     if cfg.get("enabled") and not safe_url(cfg.get("signupUrl")):
         errs.append("subscription enabled without an https signupUrl")
+    if safe_url(cfg.get("signupUrl")):
+        from urllib.parse import urlsplit
+        host = urlsplit(cfg["signupUrl"]).netloc
+        for page in sorted((REPO_ROOT / "threatwatch").glob("*.html")):
+            txt = page.read_text()
+            if 'id="subscribe-form"' in txt and f"form-action https://{host}" not in txt:
+                errs.append(f"{page.name}: CSP form-action does not allow the signup host {host}")
     for e in errs:
         print("ERROR:", e)
     print("OK" if not errs else f"{len(errs)} error(s)")

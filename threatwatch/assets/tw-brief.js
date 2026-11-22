@@ -401,21 +401,7 @@
     ]);
   }
 
-  // ------------------------------------------------------------------ subscribe
-  function renderSubscribe(cfg) {
-    var root = document.getElementById("subscribe-body");
-    var url = cfg && cfg.enabled ? safeHref(cfg.signupUrl) : null;
-    if (!url) {
-      root.appendChild(el("p", { cls: "muted", text: "Email signup is not open yet. Bookmark this page — a new edition is published every morning." }));
-      return;
-    }
-    root.appendChild(el("p", { text: "Get a short daily digest with the top findings and a link back to the full free report. Double opt-in; unsubscribe anytime." }));
-    root.appendChild(el("a", { cls: "btn", href: url, rel: "noopener", text: "Subscribe to free email updates" }));
-  }
-
   // ------------------------------------------------------------------ boot
-  var subBody = document.getElementById("subscribe-body");
-  if (subBody) getJSON("subscription-config.json").then(renderSubscribe).catch(function () { renderSubscribe(null); });
   if (document.getElementById("month-body")) {
     getJSON("data/monthly/index.json").then(renderMonthly).catch(function () { renderMonthly(null); });
     return;

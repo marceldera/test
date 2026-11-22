@@ -1,6 +1,6 @@
 {
   "enabled": false,
   "signupUrl": null,
-  "provider": null,
-  "note": "Set enabled=true and an https signupUrl only after end-to-end double opt-in testing. Never put API keys or subscriber data here."
+  "provider": "buttondown",
+  "note": "Email-only signup. Set signupUrl to https://buttondown.com/api/emails/embed-subscribe/<your-username> and enabled=true after testing double opt-in end to end. The form posts only the email address; never put API keys or subscriber data here. Another provider needs its host added to form-action in each page's CSP."
 }
