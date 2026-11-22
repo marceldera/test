@@ -1,0 +1,48 @@
+{
+  "editions": {
+    "2026-11-22": {
+      "CVE-2026-120539": {
+        "label": "CVE-2026-120539",
+        "firstReported": "2026-11-22",
+        "kev": false,
+        "kevDate": null,
+        "zeroDay": false,
+        "itw": [],
+        "poc": 1,
+        "epss": 0.02157,
+        "cvss": 9.8,
+        "fix": false,
+        "nvdStatus": "Deferred",
+        "priority": "Urgent"
+      },
+      "CVE-2026-133993": {
+        "label": "CVE-2026-133993",
+        "firstReported": "2026-11-22",
+        "kev": false,
+        "kevDate": null,
+        "zeroDay": false,
+        "itw": [],
+        "poc": 0,
+        "epss": 0.01052,
+        "cvss": 9.3,
+        "fix": false,
+        "nvdStatus": "Deferred",
+        "priority": "Urgent"
+      },
+      "CVE-2026-125294": {
+        "label": "CVE-2026-125294",
+        "firstReported": "2026-11-22",
+        "kev": false,
+        "kevDate": null,
+        "zeroDay": false,
+        "itw": [],
+        "poc": 0,
+        "epss": 0.00801,
+        "cvss": 9.8,
+        "fix": false,
+        "nvdStatus": "Deferred",
+        "priority": "Urgent"
+      }
+    }
+  }
+}

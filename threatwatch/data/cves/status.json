@@ -1,30 +1,30 @@
 {
-  "lastAttemptAt": "2026-11-22T16:04:43Z",
+  "lastAttemptAt": "2026-11-22T16:44:21Z",
   "ok": true,
   "lastError": null,
-  "lastSuccessAt": "2026-11-22T16:04:43Z",
+  "lastSuccessAt": "2026-11-22T16:44:21Z",
   "warnings": [
-    "573 exploited CVEs awaiting NVD enrichment (filled over the next runs)"
+    "173 exploited CVEs awaiting NVD enrichment (filled over the next runs)"
   ],
   "coverage": "Every CVE published in the last 90 days, every CISA KEV CVE, every zero-day tracked by Google Project Zero, exploited CVEs reported by ENISA EUVD, and every CVE featured in a ThreatWatch brief.",
   "counts": {
-    "total": 49034,
+    "total": 49039,
     "kev": 1790,
     "zeroDay": 413,
     "inTheWild": 1811,
-    "withPoc": 3292,
+    "withPoc": 3319,
     "withAttack": 500,
     "withDetection": 696,
-    "nvdPending": 573,
-    "nvdSynced": 47774,
+    "nvdPending": 173,
+    "nvdSynced": 35,
     "nvdLookups": 400,
-    "written": 49034,
-    "removed": 191
+    "written": 1808,
+    "removed": 13
   },
   "sources": {
     "kevCatalogVersion": "2026.11.20",
     "nucleiCommit": "a346d8f",
-    "nucleiIndexedAt": "2026-11-22T16:04:43Z",
+    "nucleiIndexedAt": "2026-11-22T16:44:21Z",
     "nmapCommit": "6e5d1dc",
     "curatedPlaybooks": 1,
     "intel": {
@@ -51,7 +51,7 @@
       },
       "github-poc": {
         "ok": true,
-        "count": 2077
+        "count": 2075
       },
       "attackVersion": "20.1",
       "attack": {
