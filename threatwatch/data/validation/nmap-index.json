@@ -1,0 +1,1241 @@
+{
+  "repo": "nmap/nmap",
+  "commit": "80dd68b",
+  "indexedAt": "2026-11-21T18:06:30Z",
+  "count": 55,
+  "scripts": {
+    "CVE-2010-0533": [
+      {
+        "method": "nmap-nse",
+        "id": "afp-path-vuln",
+        "name": "afp-path-vuln",
+        "path": "scripts/afp-path-vuln.nse",
+        "protocol": null,
+        "publisher": "Nmap Project (official NSE script)",
+        "url": "https://github.com/nmap/nmap/blob/master/scripts/afp-path-vuln.nse",
+        "templateSeverity": null,
+        "upstreamVerified": false,
+        "categories": [
+          "exploit",
+          "intrusive",
+          "vuln"
+        ],
+        "invasiveness": "intrusive",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2004-2687": [
+      {
+        "method": "nmap-nse",
+        "id": "distcc-cve2004-2687",
+        "name": "distcc-cve2004-2687",
+        "path": "scripts/distcc-cve2004-2687.nse",
+        "protocol": null,
+        "publisher": "Nmap Project (official NSE script)",
+        "url": "https://github.com/nmap/nmap/blob/master/scripts/distcc-cve2004-2687.nse",
+        "templateSeverity": null,
+        "upstreamVerified": false,
+        "categories": [
+          "exploit",
+          "intrusive",
+          "vuln"
+        ],
+        "invasiveness": "intrusive",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2010-1938": [
+      {
+        "method": "nmap-nse",
+        "id": "ftp-libopie",
+        "name": "ftp-libopie",
+        "path": "scripts/ftp-libopie.nse",
+        "protocol": null,
+        "publisher": "Nmap Project (official NSE script)",
+        "url": "https://github.com/nmap/nmap/blob/master/scripts/ftp-libopie.nse",
+        "templateSeverity": null,
+        "upstreamVerified": false,
+        "categories": [
+          "intrusive",
+          "vuln"
+        ],
+        "invasiveness": "intrusive",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2011-2523": [
+      {
+        "method": "nmap-nse",
+        "id": "ftp-vsftpd-backdoor",
+        "name": "ftp-vsftpd-backdoor",
+        "path": "scripts/ftp-vsftpd-backdoor.nse",
+        "protocol": null,
+        "publisher": "Nmap Project (official NSE script)",
+        "url": "https://github.com/nmap/nmap/blob/master/scripts/ftp-vsftpd-backdoor.nse",
+        "templateSeverity": null,
+        "upstreamVerified": false,
+        "categories": [
+          "exploit",
+          "intrusive",
+          "malware",
+          "vuln"
+        ],
+        "invasiveness": "intrusive",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2010-4221": [
+      {
+        "method": "nmap-nse",
+        "id": "ftp-vuln-cve2010-4221",
+        "name": "ftp-vuln-cve2010-4221",
+        "path": "scripts/ftp-vuln-cve2010-4221.nse",
+        "protocol": null,
+        "publisher": "Nmap Project (official NSE script)",
+        "url": "https://github.com/nmap/nmap/blob/master/scripts/ftp-vuln-cve2010-4221.nse",
+        "templateSeverity": null,
+        "upstreamVerified": false,
+        "categories": [
+          "intrusive",
+          "vuln"
+        ],
+        "invasiveness": "intrusive",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2005-3299": [
+      {
+        "method": "nmap-nse",
+        "id": "http-phpmyadmin-dir-traversal",
+        "name": "http-phpmyadmin-dir-traversal",
+        "path": "scripts/http-phpmyadmin-dir-traversal.nse",
+        "protocol": null,
+        "publisher": "Nmap Project (official NSE script)",
+        "url": "https://github.com/nmap/nmap/blob/master/scripts/http-phpmyadmin-dir-traversal.nse",
+        "templateSeverity": null,
+        "upstreamVerified": false,
+        "categories": [
+          "exploit",
+          "vuln"
+        ],
+        "invasiveness": "intrusive",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2014-6271": [
+      {
+        "method": "nmap-nse",
+        "id": "http-shellshock",
+        "name": "http-shellshock",
+        "path": "scripts/http-shellshock.nse",
+        "protocol": null,
+        "publisher": "Nmap Project (official NSE script)",
+        "url": "https://github.com/nmap/nmap/blob/master/scripts/http-shellshock.nse",
+        "templateSeverity": null,
+        "upstreamVerified": false,
+        "categories": [
+          "exploit",
+          "intrusive",
+          "vuln"
+        ],
+        "invasiveness": "intrusive",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2007-6750": [
+      {
+        "method": "nmap-nse",
+        "id": "http-slowloris-check",
+        "name": "http-slowloris-check",
+        "path": "scripts/http-slowloris-check.nse",
+        "protocol": null,
+        "publisher": "Nmap Project (official NSE script)",
+        "url": "https://github.com/nmap/nmap/blob/master/scripts/http-slowloris-check.nse",
+        "templateSeverity": null,
+        "upstreamVerified": false,
+        "categories": [
+          "safe",
+          "vuln"
+        ],
+        "invasiveness": "safe-probe",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2006-3392": [
+      {
+        "method": "nmap-nse",
+        "id": "http-vuln-cve2006-3392",
+        "name": "http-vuln-cve2006-3392",
+        "path": "scripts/http-vuln-cve2006-3392.nse",
+        "protocol": null,
+        "publisher": "Nmap Project (official NSE script)",
+        "url": "https://github.com/nmap/nmap/blob/master/scripts/http-vuln-cve2006-3392.nse",
+        "templateSeverity": null,
+        "upstreamVerified": false,
+        "categories": [
+          "exploit",
+          "intrusive",
+          "vuln"
+        ],
+        "invasiveness": "intrusive",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2009-3960": [
+      {
+        "method": "nmap-nse",
+        "id": "http-vuln-cve2009-3960",
+        "name": "http-vuln-cve2009-3960",
+        "path": "scripts/http-vuln-cve2009-3960.nse",
+        "protocol": null,
+        "publisher": "Nmap Project (official NSE script)",
+        "url": "https://github.com/nmap/nmap/blob/master/scripts/http-vuln-cve2009-3960.nse",
+        "templateSeverity": null,
+        "upstreamVerified": false,
+        "categories": [
+          "exploit",
+          "intrusive",
+          "vuln"
+        ],
+        "invasiveness": "intrusive",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2010-0738": [
+      {
+        "method": "nmap-nse",
+        "id": "http-vuln-cve2010-0738",
+        "name": "http-vuln-cve2010-0738",
+        "path": "scripts/http-vuln-cve2010-0738.nse",
+        "protocol": null,
+        "publisher": "Nmap Project (official NSE script)",
+        "url": "https://github.com/nmap/nmap/blob/master/scripts/http-vuln-cve2010-0738.nse",
+        "templateSeverity": null,
+        "upstreamVerified": false,
+        "categories": [
+          "auth",
+          "safe",
+          "vuln"
+        ],
+        "invasiveness": "safe-probe",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2010-2861": [
+      {
+        "method": "nmap-nse",
+        "id": "http-vuln-cve2010-2861",
+        "name": "http-vuln-cve2010-2861",
+        "path": "scripts/http-vuln-cve2010-2861.nse",
+        "protocol": null,
+        "publisher": "Nmap Project (official NSE script)",
+        "url": "https://github.com/nmap/nmap/blob/master/scripts/http-vuln-cve2010-2861.nse",
+        "templateSeverity": null,
+        "upstreamVerified": false,
+        "categories": [
+          "intrusive",
+          "vuln"
+        ],
+        "invasiveness": "intrusive",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2011-3192": [
+      {
+        "method": "nmap-nse",
+        "id": "http-vuln-cve2011-3192",
+        "name": "http-vuln-cve2011-3192",
+        "path": "scripts/http-vuln-cve2011-3192.nse",
+        "protocol": null,
+        "publisher": "Nmap Project (official NSE script)",
+        "url": "https://github.com/nmap/nmap/blob/master/scripts/http-vuln-cve2011-3192.nse",
+        "templateSeverity": null,
+        "upstreamVerified": false,
+        "categories": [
+          "safe",
+          "vuln"
+        ],
+        "invasiveness": "safe-probe",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2011-3368": [
+      {
+        "method": "nmap-nse",
+        "id": "http-vuln-cve2011-3368",
+        "name": "http-vuln-cve2011-3368",
+        "path": "scripts/http-vuln-cve2011-3368.nse",
+        "protocol": null,
+        "publisher": "Nmap Project (official NSE script)",
+        "url": "https://github.com/nmap/nmap/blob/master/scripts/http-vuln-cve2011-3368.nse",
+        "templateSeverity": null,
+        "upstreamVerified": false,
+        "categories": [
+          "intrusive",
+          "vuln"
+        ],
+        "invasiveness": "intrusive",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2012-1823": [
+      {
+        "method": "nmap-nse",
+        "id": "http-vuln-cve2012-1823",
+        "name": "http-vuln-cve2012-1823",
+        "path": "scripts/http-vuln-cve2012-1823.nse",
+        "protocol": null,
+        "publisher": "Nmap Project (official NSE script)",
+        "url": "https://github.com/nmap/nmap/blob/master/scripts/http-vuln-cve2012-1823.nse",
+        "templateSeverity": null,
+        "upstreamVerified": false,
+        "categories": [
+          "exploit",
+          "intrusive",
+          "vuln"
+        ],
+        "invasiveness": "intrusive",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2013-0156": [
+      {
+        "method": "nmap-nse",
+        "id": "http-vuln-cve2013-0156",
+        "name": "http-vuln-cve2013-0156",
+        "path": "scripts/http-vuln-cve2013-0156.nse",
+        "protocol": null,
+        "publisher": "Nmap Project (official NSE script)",
+        "url": "https://github.com/nmap/nmap/blob/master/scripts/http-vuln-cve2013-0156.nse",
+        "templateSeverity": null,
+        "upstreamVerified": false,
+        "categories": [
+          "exploit",
+          "vuln"
+        ],
+        "invasiveness": "intrusive",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2013-6786": [
+      {
+        "method": "nmap-nse",
+        "id": "http-vuln-cve2013-6786",
+        "name": "http-vuln-cve2013-6786",
+        "path": "scripts/http-vuln-cve2013-6786.nse",
+        "protocol": null,
+        "publisher": "Nmap Project (official NSE script)",
+        "url": "https://github.com/nmap/nmap/blob/master/scripts/http-vuln-cve2013-6786.nse",
+        "templateSeverity": null,
+        "upstreamVerified": false,
+        "categories": [
+          "exploit",
+          "vuln"
+        ],
+        "invasiveness": "intrusive",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2013-7091": [
+      {
+        "method": "nmap-nse",
+        "id": "http-vuln-cve2013-7091",
+        "name": "http-vuln-cve2013-7091",
+        "path": "scripts/http-vuln-cve2013-7091.nse",
+        "protocol": null,
+        "publisher": "Nmap Project (official NSE script)",
+        "url": "https://github.com/nmap/nmap/blob/master/scripts/http-vuln-cve2013-7091.nse",
+        "templateSeverity": null,
+        "upstreamVerified": false,
+        "categories": [
+          "exploit",
+          "intrusive",
+          "vuln"
+        ],
+        "invasiveness": "intrusive",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2014-2126": [
+      {
+        "method": "nmap-nse",
+        "id": "http-vuln-cve2014-2126",
+        "name": "http-vuln-cve2014-2126",
+        "path": "scripts/http-vuln-cve2014-2126.nse",
+        "protocol": null,
+        "publisher": "Nmap Project (official NSE script)",
+        "url": "https://github.com/nmap/nmap/blob/master/scripts/http-vuln-cve2014-2126.nse",
+        "templateSeverity": null,
+        "upstreamVerified": false,
+        "categories": [
+          "safe",
+          "vuln"
+        ],
+        "invasiveness": "safe-probe",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2014-2127": [
+      {
+        "method": "nmap-nse",
+        "id": "http-vuln-cve2014-2127",
+        "name": "http-vuln-cve2014-2127",
+        "path": "scripts/http-vuln-cve2014-2127.nse",
+        "protocol": null,
+        "publisher": "Nmap Project (official NSE script)",
+        "url": "https://github.com/nmap/nmap/blob/master/scripts/http-vuln-cve2014-2127.nse",
+        "templateSeverity": null,
+        "upstreamVerified": false,
+        "categories": [
+          "safe",
+          "vuln"
+        ],
+        "invasiveness": "safe-probe",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2014-2128": [
+      {
+        "method": "nmap-nse",
+        "id": "http-vuln-cve2014-2128",
+        "name": "http-vuln-cve2014-2128",
+        "path": "scripts/http-vuln-cve2014-2128.nse",
+        "protocol": null,
+        "publisher": "Nmap Project (official NSE script)",
+        "url": "https://github.com/nmap/nmap/blob/master/scripts/http-vuln-cve2014-2128.nse",
+        "templateSeverity": null,
+        "upstreamVerified": false,
+        "categories": [
+          "safe",
+          "vuln"
+        ],
+        "invasiveness": "safe-probe",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2014-2129": [
+      {
+        "method": "nmap-nse",
+        "id": "http-vuln-cve2014-2129",
+        "name": "http-vuln-cve2014-2129",
+        "path": "scripts/http-vuln-cve2014-2129.nse",
+        "protocol": null,
+        "publisher": "Nmap Project (official NSE script)",
+        "url": "https://github.com/nmap/nmap/blob/master/scripts/http-vuln-cve2014-2129.nse",
+        "templateSeverity": null,
+        "upstreamVerified": false,
+        "categories": [
+          "safe",
+          "vuln"
+        ],
+        "invasiveness": "safe-probe",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2014-3704": [
+      {
+        "method": "nmap-nse",
+        "id": "http-vuln-cve2014-3704",
+        "name": "http-vuln-cve2014-3704",
+        "path": "scripts/http-vuln-cve2014-3704.nse",
+        "protocol": null,
+        "publisher": "Nmap Project (official NSE script)",
+        "url": "https://github.com/nmap/nmap/blob/master/scripts/http-vuln-cve2014-3704.nse",
+        "templateSeverity": null,
+        "upstreamVerified": false,
+        "categories": [
+          "exploit",
+          "intrusive",
+          "vuln"
+        ],
+        "invasiveness": "intrusive",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2014-8877": [
+      {
+        "method": "nmap-nse",
+        "id": "http-vuln-cve2014-8877",
+        "name": "http-vuln-cve2014-8877",
+        "path": "scripts/http-vuln-cve2014-8877.nse",
+        "protocol": null,
+        "publisher": "Nmap Project (official NSE script)",
+        "url": "https://github.com/nmap/nmap/blob/master/scripts/http-vuln-cve2014-8877.nse",
+        "templateSeverity": null,
+        "upstreamVerified": false,
+        "categories": [
+          "exploit",
+          "intrusive",
+          "vuln"
+        ],
+        "invasiveness": "intrusive",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2015-1427": [
+      {
+        "method": "nmap-nse",
+        "id": "http-vuln-cve2015-1427",
+        "name": "http-vuln-cve2015-1427",
+        "path": "scripts/http-vuln-cve2015-1427.nse",
+        "protocol": null,
+        "publisher": "Nmap Project (official NSE script)",
+        "url": "https://github.com/nmap/nmap/blob/master/scripts/http-vuln-cve2015-1427.nse",
+        "templateSeverity": null,
+        "upstreamVerified": false,
+        "categories": [
+          "intrusive",
+          "vuln"
+        ],
+        "invasiveness": "intrusive",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2015-1635": [
+      {
+        "method": "nmap-nse",
+        "id": "http-vuln-cve2015-1635",
+        "name": "http-vuln-cve2015-1635",
+        "path": "scripts/http-vuln-cve2015-1635.nse",
+        "protocol": null,
+        "publisher": "Nmap Project (official NSE script)",
+        "url": "https://github.com/nmap/nmap/blob/master/scripts/http-vuln-cve2015-1635.nse",
+        "templateSeverity": null,
+        "upstreamVerified": false,
+        "categories": [
+          "safe",
+          "vuln"
+        ],
+        "invasiveness": "safe-probe",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2017-1001000": [
+      {
+        "method": "nmap-nse",
+        "id": "http-vuln-cve2017-1001000",
+        "name": "http-vuln-cve2017-1001000",
+        "path": "scripts/http-vuln-cve2017-1001000.nse",
+        "protocol": null,
+        "publisher": "Nmap Project (official NSE script)",
+        "url": "https://github.com/nmap/nmap/blob/master/scripts/http-vuln-cve2017-1001000.nse",
+        "templateSeverity": null,
+        "upstreamVerified": false,
+        "categories": [
+          "safe",
+          "vuln"
+        ],
+        "invasiveness": "safe-probe",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2017-5638": [
+      {
+        "method": "nmap-nse",
+        "id": "http-vuln-cve2017-5638",
+        "name": "http-vuln-cve2017-5638",
+        "path": "scripts/http-vuln-cve2017-5638.nse",
+        "protocol": null,
+        "publisher": "Nmap Project (official NSE script)",
+        "url": "https://github.com/nmap/nmap/blob/master/scripts/http-vuln-cve2017-5638.nse",
+        "templateSeverity": null,
+        "upstreamVerified": false,
+        "categories": [
+          "vuln"
+        ],
+        "invasiveness": "safe-probe",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2017-5689": [
+      {
+        "method": "nmap-nse",
+        "id": "http-vuln-cve2017-5689",
+        "name": "http-vuln-cve2017-5689",
+        "path": "scripts/http-vuln-cve2017-5689.nse",
+        "protocol": null,
+        "publisher": "Nmap Project (official NSE script)",
+        "url": "https://github.com/nmap/nmap/blob/master/scripts/http-vuln-cve2017-5689.nse",
+        "templateSeverity": null,
+        "upstreamVerified": false,
+        "categories": [
+          "auth",
+          "exploit",
+          "vuln"
+        ],
+        "invasiveness": "intrusive",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2017-8917": [
+      {
+        "method": "nmap-nse",
+        "id": "http-vuln-cve2017-8917",
+        "name": "http-vuln-cve2017-8917",
+        "path": "scripts/http-vuln-cve2017-8917.nse",
+        "protocol": null,
+        "publisher": "Nmap Project (official NSE script)",
+        "url": "https://github.com/nmap/nmap/blob/master/scripts/http-vuln-cve2017-8917.nse",
+        "templateSeverity": null,
+        "upstreamVerified": false,
+        "categories": [
+          "intrusive",
+          "vuln"
+        ],
+        "invasiveness": "intrusive",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2014-9222": [
+      {
+        "method": "nmap-nse",
+        "id": "http-vuln-misfortune-cookie",
+        "name": "http-vuln-misfortune-cookie",
+        "path": "scripts/http-vuln-misfortune-cookie.nse",
+        "protocol": null,
+        "publisher": "Nmap Project (official NSE script)",
+        "url": "https://github.com/nmap/nmap/blob/master/scripts/http-vuln-misfortune-cookie.nse",
+        "templateSeverity": null,
+        "upstreamVerified": false,
+        "categories": [
+          "intrusive",
+          "vuln"
+        ],
+        "invasiveness": "intrusive",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2012-2122": [
+      {
+        "method": "nmap-nse",
+        "id": "mysql-vuln-cve2012-2122",
+        "name": "mysql-vuln-cve2012-2122",
+        "path": "scripts/mysql-vuln-cve2012-2122.nse",
+        "protocol": null,
+        "publisher": "Nmap Project (official NSE script)",
+        "url": "https://github.com/nmap/nmap/blob/master/scripts/mysql-vuln-cve2012-2122.nse",
+        "templateSeverity": null,
+        "upstreamVerified": false,
+        "categories": [
+          "discovery",
+          "intrusive",
+          "vuln"
+        ],
+        "invasiveness": "intrusive",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2012-0152": [
+      {
+        "method": "nmap-nse",
+        "id": "rdp-vuln-ms12-020",
+        "name": "rdp-vuln-ms12-020",
+        "path": "scripts/rdp-vuln-ms12-020.nse",
+        "protocol": null,
+        "publisher": "Nmap Project (official NSE script)",
+        "url": "https://github.com/nmap/nmap/blob/master/scripts/rdp-vuln-ms12-020.nse",
+        "templateSeverity": null,
+        "upstreamVerified": false,
+        "categories": [
+          "intrusive",
+          "vuln"
+        ],
+        "invasiveness": "intrusive",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2012-0002": [
+      {
+        "method": "nmap-nse",
+        "id": "rdp-vuln-ms12-020",
+        "name": "rdp-vuln-ms12-020",
+        "path": "scripts/rdp-vuln-ms12-020.nse",
+        "protocol": null,
+        "publisher": "Nmap Project (official NSE script)",
+        "url": "https://github.com/nmap/nmap/blob/master/scripts/rdp-vuln-ms12-020.nse",
+        "templateSeverity": null,
+        "upstreamVerified": false,
+        "categories": [
+          "intrusive",
+          "vuln"
+        ],
+        "invasiveness": "intrusive",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2006-2369": [
+      {
+        "method": "nmap-nse",
+        "id": "realvnc-auth-bypass",
+        "name": "realvnc-auth-bypass",
+        "path": "scripts/realvnc-auth-bypass.nse",
+        "protocol": null,
+        "publisher": "Nmap Project (official NSE script)",
+        "url": "https://github.com/nmap/nmap/blob/master/scripts/realvnc-auth-bypass.nse",
+        "templateSeverity": null,
+        "upstreamVerified": false,
+        "categories": [
+          "auth",
+          "safe",
+          "vuln"
+        ],
+        "invasiveness": "safe-probe",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2017-15361": [
+      {
+        "method": "nmap-nse",
+        "id": "rsa-vuln-roca",
+        "name": "rsa-vuln-roca",
+        "path": "scripts/rsa-vuln-roca.nse",
+        "protocol": null,
+        "publisher": "Nmap Project (official NSE script)",
+        "url": "https://github.com/nmap/nmap/blob/master/scripts/rsa-vuln-roca.nse",
+        "templateSeverity": null,
+        "upstreamVerified": false,
+        "categories": [
+          "safe",
+          "vuln"
+        ],
+        "invasiveness": "safe-probe",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2012-1182": [
+      {
+        "method": "nmap-nse",
+        "id": "samba-vuln-cve-2012-1182",
+        "name": "samba-vuln-cve-2012-1182",
+        "path": "scripts/samba-vuln-cve-2012-1182.nse",
+        "protocol": null,
+        "publisher": "Nmap Project (official NSE script)",
+        "url": "https://github.com/nmap/nmap/blob/master/scripts/samba-vuln-cve-2012-1182.nse",
+        "templateSeverity": null,
+        "upstreamVerified": false,
+        "categories": [
+          "intrusive",
+          "vuln"
+        ],
+        "invasiveness": "intrusive",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2010-2550": [
+      {
+        "method": "nmap-nse",
+        "id": "smb-double-pulsar-backdoor",
+        "name": "smb-double-pulsar-backdoor",
+        "path": "scripts/smb-double-pulsar-backdoor.nse",
+        "protocol": null,
+        "publisher": "Nmap Project (official NSE script)",
+        "url": "https://github.com/nmap/nmap/blob/master/scripts/smb-double-pulsar-backdoor.nse",
+        "templateSeverity": null,
+        "upstreamVerified": false,
+        "categories": [
+          "malware",
+          "safe",
+          "vuln"
+        ],
+        "invasiveness": "intrusive",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      },
+      {
+        "method": "nmap-nse",
+        "id": "smb-vuln-ms10-054",
+        "name": "smb-vuln-ms10-054",
+        "path": "scripts/smb-vuln-ms10-054.nse",
+        "protocol": null,
+        "publisher": "Nmap Project (official NSE script)",
+        "url": "https://github.com/nmap/nmap/blob/master/scripts/smb-vuln-ms10-054.nse",
+        "templateSeverity": null,
+        "upstreamVerified": false,
+        "categories": [
+          "dos",
+          "intrusive",
+          "vuln"
+        ],
+        "invasiveness": "intrusive",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2017-7494": [
+      {
+        "method": "nmap-nse",
+        "id": "smb-vuln-cve-2017-7494",
+        "name": "smb-vuln-cve-2017-7494",
+        "path": "scripts/smb-vuln-cve-2017-7494.nse",
+        "protocol": null,
+        "publisher": "Nmap Project (official NSE script)",
+        "url": "https://github.com/nmap/nmap/blob/master/scripts/smb-vuln-cve-2017-7494.nse",
+        "templateSeverity": null,
+        "upstreamVerified": false,
+        "categories": [
+          "intrusive",
+          "vuln"
+        ],
+        "invasiveness": "intrusive",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2009-3103": [
+      {
+        "method": "nmap-nse",
+        "id": "smb-vuln-cve2009-3103",
+        "name": "smb-vuln-cve2009-3103",
+        "path": "scripts/smb-vuln-cve2009-3103.nse",
+        "protocol": null,
+        "publisher": "Nmap Project (official NSE script)",
+        "url": "https://github.com/nmap/nmap/blob/master/scripts/smb-vuln-cve2009-3103.nse",
+        "templateSeverity": null,
+        "upstreamVerified": false,
+        "categories": [
+          "dos",
+          "exploit",
+          "intrusive",
+          "vuln"
+        ],
+        "invasiveness": "intrusive",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2006-2370": [
+      {
+        "method": "nmap-nse",
+        "id": "smb-vuln-ms06-025",
+        "name": "smb-vuln-ms06-025",
+        "path": "scripts/smb-vuln-ms06-025.nse",
+        "protocol": null,
+        "publisher": "Nmap Project (official NSE script)",
+        "url": "https://github.com/nmap/nmap/blob/master/scripts/smb-vuln-ms06-025.nse",
+        "templateSeverity": null,
+        "upstreamVerified": false,
+        "categories": [
+          "dos",
+          "exploit",
+          "intrusive",
+          "vuln"
+        ],
+        "invasiveness": "intrusive",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2007-1748": [
+      {
+        "method": "nmap-nse",
+        "id": "smb-vuln-ms07-029",
+        "name": "smb-vuln-ms07-029",
+        "path": "scripts/smb-vuln-ms07-029.nse",
+        "protocol": null,
+        "publisher": "Nmap Project (official NSE script)",
+        "url": "https://github.com/nmap/nmap/blob/master/scripts/smb-vuln-ms07-029.nse",
+        "templateSeverity": null,
+        "upstreamVerified": false,
+        "categories": [
+          "dos",
+          "exploit",
+          "intrusive",
+          "vuln"
+        ],
+        "invasiveness": "intrusive",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2008-4250": [
+      {
+        "method": "nmap-nse",
+        "id": "smb-vuln-ms08-067",
+        "name": "smb-vuln-ms08-067",
+        "path": "scripts/smb-vuln-ms08-067.nse",
+        "protocol": null,
+        "publisher": "Nmap Project (official NSE script)",
+        "url": "https://github.com/nmap/nmap/blob/master/scripts/smb-vuln-ms08-067.nse",
+        "templateSeverity": null,
+        "upstreamVerified": false,
+        "categories": [
+          "dos",
+          "exploit",
+          "intrusive",
+          "vuln"
+        ],
+        "invasiveness": "intrusive",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2010-2729": [
+      {
+        "method": "nmap-nse",
+        "id": "smb-vuln-ms10-061",
+        "name": "smb-vuln-ms10-061",
+        "path": "scripts/smb-vuln-ms10-061.nse",
+        "protocol": null,
+        "publisher": "Nmap Project (official NSE script)",
+        "url": "https://github.com/nmap/nmap/blob/master/scripts/smb-vuln-ms10-061.nse",
+        "templateSeverity": null,
+        "upstreamVerified": false,
+        "categories": [
+          "intrusive",
+          "vuln"
+        ],
+        "invasiveness": "intrusive",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2017-0143": [
+      {
+        "method": "nmap-nse",
+        "id": "smb-vuln-ms17-010",
+        "name": "smb-vuln-ms17-010",
+        "path": "scripts/smb-vuln-ms17-010.nse",
+        "protocol": null,
+        "publisher": "Nmap Project (official NSE script)",
+        "url": "https://github.com/nmap/nmap/blob/master/scripts/smb-vuln-ms17-010.nse",
+        "templateSeverity": null,
+        "upstreamVerified": false,
+        "categories": [
+          "safe",
+          "vuln"
+        ],
+        "invasiveness": "safe-probe",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2018-15442": [
+      {
+        "method": "nmap-nse",
+        "id": "smb-vuln-webexec",
+        "name": "smb-vuln-webexec",
+        "path": "scripts/smb-vuln-webexec.nse",
+        "protocol": null,
+        "publisher": "Nmap Project (official NSE script)",
+        "url": "https://github.com/nmap/nmap/blob/master/scripts/smb-vuln-webexec.nse",
+        "templateSeverity": null,
+        "upstreamVerified": false,
+        "categories": [
+          "intrusive",
+          "vuln"
+        ],
+        "invasiveness": "intrusive",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2010-4344": [
+      {
+        "method": "nmap-nse",
+        "id": "smtp-vuln-cve2010-4344",
+        "name": "smtp-vuln-cve2010-4344",
+        "path": "scripts/smtp-vuln-cve2010-4344.nse",
+        "protocol": null,
+        "publisher": "Nmap Project (official NSE script)",
+        "url": "https://github.com/nmap/nmap/blob/master/scripts/smtp-vuln-cve2010-4344.nse",
+        "templateSeverity": null,
+        "upstreamVerified": false,
+        "categories": [
+          "exploit",
+          "intrusive",
+          "vuln"
+        ],
+        "invasiveness": "intrusive",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2011-1720": [
+      {
+        "method": "nmap-nse",
+        "id": "smtp-vuln-cve2011-1720",
+        "name": "smtp-vuln-cve2011-1720",
+        "path": "scripts/smtp-vuln-cve2011-1720.nse",
+        "protocol": null,
+        "publisher": "Nmap Project (official NSE script)",
+        "url": "https://github.com/nmap/nmap/blob/master/scripts/smtp-vuln-cve2011-1720.nse",
+        "templateSeverity": null,
+        "upstreamVerified": false,
+        "categories": [
+          "intrusive",
+          "vuln"
+        ],
+        "invasiveness": "intrusive",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2011-1764": [
+      {
+        "method": "nmap-nse",
+        "id": "smtp-vuln-cve2011-1764",
+        "name": "smtp-vuln-cve2011-1764",
+        "path": "scripts/smtp-vuln-cve2011-1764.nse",
+        "protocol": null,
+        "publisher": "Nmap Project (official NSE script)",
+        "url": "https://github.com/nmap/nmap/blob/master/scripts/smtp-vuln-cve2011-1764.nse",
+        "templateSeverity": null,
+        "upstreamVerified": false,
+        "categories": [
+          "intrusive",
+          "vuln"
+        ],
+        "invasiveness": "intrusive",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2015-4000": [
+      {
+        "method": "nmap-nse",
+        "id": "ssl-dh-params",
+        "name": "ssl-dh-params",
+        "path": "scripts/ssl-dh-params.nse",
+        "protocol": null,
+        "publisher": "Nmap Project (official NSE script)",
+        "url": "https://github.com/nmap/nmap/blob/master/scripts/ssl-dh-params.nse",
+        "templateSeverity": null,
+        "upstreamVerified": false,
+        "categories": [
+          "safe",
+          "vuln"
+        ],
+        "invasiveness": "safe-probe",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2014-3566": [
+      {
+        "method": "nmap-nse",
+        "id": "ssl-poodle",
+        "name": "ssl-poodle",
+        "path": "scripts/ssl-poodle.nse",
+        "protocol": null,
+        "publisher": "Nmap Project (official NSE script)",
+        "url": "https://github.com/nmap/nmap/blob/master/scripts/ssl-poodle.nse",
+        "templateSeverity": null,
+        "upstreamVerified": false,
+        "categories": [
+          "safe",
+          "vuln"
+        ],
+        "invasiveness": "safe-probe",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2016-0800": [
+      {
+        "method": "nmap-nse",
+        "id": "sslv2-drown",
+        "name": "sslv2-drown",
+        "path": "scripts/sslv2-drown.nse",
+        "protocol": null,
+        "publisher": "Nmap Project (official NSE script)",
+        "url": "https://github.com/nmap/nmap/blob/master/scripts/sslv2-drown.nse",
+        "templateSeverity": null,
+        "upstreamVerified": false,
+        "categories": [
+          "intrusive",
+          "vuln"
+        ],
+        "invasiveness": "intrusive",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2015-3197": [
+      {
+        "method": "nmap-nse",
+        "id": "sslv2-drown",
+        "name": "sslv2-drown",
+        "path": "scripts/sslv2-drown.nse",
+        "protocol": null,
+        "publisher": "Nmap Project (official NSE script)",
+        "url": "https://github.com/nmap/nmap/blob/master/scripts/sslv2-drown.nse",
+        "templateSeverity": null,
+        "upstreamVerified": false,
+        "categories": [
+          "intrusive",
+          "vuln"
+        ],
+        "invasiveness": "intrusive",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2016-0703": [
+      {
+        "method": "nmap-nse",
+        "id": "sslv2-drown",
+        "name": "sslv2-drown",
+        "path": "scripts/sslv2-drown.nse",
+        "protocol": null,
+        "publisher": "Nmap Project (official NSE script)",
+        "url": "https://github.com/nmap/nmap/blob/master/scripts/sslv2-drown.nse",
+        "templateSeverity": null,
+        "upstreamVerified": false,
+        "categories": [
+          "intrusive",
+          "vuln"
+        ],
+        "invasiveness": "intrusive",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ]
+  }
+}
