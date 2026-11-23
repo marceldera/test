@@ -1,0 +1,105 @@
+{
+  "id": "GI-2026-0012",
+  "record_type": "signal",
+  "publication_status": "verification_pending",
+  "location": "Western Sahara / Tindouf",
+  "secondary_categories": [
+    "Military"
+  ],
+  "confirmed_facts": [
+    {
+      "text": "The Polisario Front's National Secretariat declared a state of general mobilisation on 10 November.",
+      "sources": [
+        0,
+        1,
+        2
+      ]
+    }
+  ],
+  "reported_claims": [],
+  "international_perspectives": [
+    {
+      "text": "A Morocco-based outlet dismissed the declaration as rhetoric and said it gave no details on locations, units or measures.",
+      "sources": [
+        3
+      ]
+    }
+  ],
+  "unknowns": [
+    "Whether mobilisation translates into military action"
+  ],
+  "reassessment_triggers": [],
+  "threatwatch_cves": [],
+  "published_at": "2026-11-23T23:30:00Z",
+  "last_verified": "2026-11-23T23:30:00Z",
+  "last_substantive_update": "2026-11-23T23:30:00Z",
+  "update_history": [
+    {
+      "date": "2026-11-23T23:30:00Z",
+      "type": "published",
+      "summary": "Draft prepared for editorial review (sources accessed 23 November 2026)."
+    }
+  ],
+  "title": "Polisario Front declares general mobilisation as UN Western Sahara mission winds down",
+  "regions": [
+    "Africa"
+  ],
+  "countries": [
+    "Western Sahara",
+    "Morocco",
+    "Algeria"
+  ],
+  "primary_category": "Geopolitical",
+  "priority": "MODERATE",
+  "evidence_status": "Confirmed",
+  "event_date": "2026-11-10",
+  "trend": "Stable",
+  "observed_action": "On 10 November 2026 the Polisario Front's National Secretariat declared a state of general mobilisation, citing Moroccan military movements, as the UN mission MINURSO is being withdrawn.",
+  "interpretation": "A significant political signal after the end of the UN mission, but no clashes had been reported in the sources reviewed; it does not by itself establish imminent large-scale fighting.",
+  "summary": "The Polisario Front declared a general mobilisation against Morocco on 10 November 2026 following the end of the UN peacekeeping mission's mandate in Western Sahara.",
+  "impact_assessment": "Potential: renewed armed confrontation along the berm and further strain on Morocco–Algeria relations.",
+  "priority_rationale": "MODERATE: a confirmed mobilisation announcement in a frozen conflict without observed escalation.",
+  "monitoring_actions": [
+    "Watch for reported clashes along the berm",
+    "Follow UN statements on MINURSO's withdrawal"
+  ],
+  "sources": [
+    {
+      "publisher": "Sahara Press Service (Polisario/SADR)",
+      "title": "Polisario Front National Secretariat declares general mobilisation",
+      "published": "2026-11-10",
+      "url": "https://www.spsrasd.info/en/2026/11/10/18873.html",
+      "type": "primary",
+      "accessed": "2026-11-23",
+      "region": "Africa",
+      "state_affiliated": true
+    },
+    {
+      "publisher": "PassBlue",
+      "title": "What happens next with Western Sahara? No one knows",
+      "published": "2026-11-10",
+      "url": "https://passblue.com/2026/11/10/what-happens-next-with-western-sahara-no-one-knows/",
+      "type": "news",
+      "accessed": "2026-11-23",
+      "region": "North America"
+    },
+    {
+      "publisher": "Inkstick",
+      "title": "What happens to Western Sahara after the UN mission ends?",
+      "published": "2026-11-17",
+      "url": "https://inkstickmedia.com/what-happens-to-western-sahara-after-the-un-mission-ends/",
+      "type": "research",
+      "accessed": "2026-11-23",
+      "region": "North America"
+    },
+    {
+      "publisher": "The North Africa Post",
+      "title": "Polisario's 'general mobilization' proves empty rhetoric amid diplomatic setbacks",
+      "published": "2026-11-12",
+      "url": "https://northafricapost.com/101533-polisarios-general-mobilization-proves-empty-rhetoric-amid-diplomatic-setbacks.html",
+      "type": "news",
+      "accessed": "2026-11-23",
+      "region": "Africa"
+    }
+  ]
+}

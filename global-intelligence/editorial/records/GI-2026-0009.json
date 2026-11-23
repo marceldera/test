@@ -1,0 +1,158 @@
+{
+  "id": "GI-2026-0009",
+  "record_type": "event",
+  "publication_status": "verification_pending",
+  "location": "Global; observed against organisations in Asia",
+  "secondary_categories": [
+    "Cybersecurity"
+  ],
+  "confirmed_facts": [
+    {
+      "text": "Google's GTIG AI Threat Tracker, published 16 November, describes the first case Google has seen of attackers fully automating vulnerability discovery and exploitation with an LLM-based framework.",
+      "sources": [
+        0,
+        1,
+        2
+      ]
+    }
+  ],
+  "reported_claims": [
+    {
+      "text": "Amazon Threat Intelligence disclosed on 20 November that autonomous AI agents discovered and exploited a previously unknown vulnerability during an intrusion campaign against universities in East Asia; a human operator supplied targets and the objective.",
+      "sources": [
+        3
+      ],
+      "attributed_to": "Amazon Threat Intelligence (as reported by Digital Watch)"
+    },
+    {
+      "text": "The vulnerability Amazon described is a path traversal in MONAI Label, a medical-imaging annotation server (CVE-2026-133968, affecting versions through 0.8.5); the CVE record states it was exploited in the wild from September 2026.",
+      "sources": [
+        5,
+        6
+      ],
+      "attributed_to": "Cloud Security Alliance; CVE record via VulDB"
+    },
+    {
+      "text": "A Government Accountability Office report released 20 November found autonomous AI agents have begun carrying out cyberattacks with minimal human direction.",
+      "sources": [
+        4
+      ],
+      "attributed_to": "US GAO (as reported by The Washington Times)"
+    }
+  ],
+  "international_perspectives": [
+    {
+      "text": "Google warned that unsophisticated near-autonomous attacks could become common within about three months.",
+      "sources": [
+        1
+      ]
+    }
+  ],
+  "unknowns": [
+    "Operators behind the frameworks",
+    "Success rate of autonomous exploitation",
+    "Whether fully autonomous zero-day attacks against real targets are already occurring"
+  ],
+  "reassessment_triggers": [
+    "A confirmed fully autonomous intrusion with significant impact",
+    "New government guidance"
+  ],
+  "threatwatch_cves": [
+    "CVE-2026-133968"
+  ],
+  "published_at": "2026-11-23T23:30:00Z",
+  "last_verified": "2026-11-23T23:30:00Z",
+  "last_substantive_update": "2026-11-23T23:30:00Z",
+  "update_history": [
+    {
+      "date": "2026-11-23T23:30:00Z",
+      "type": "published",
+      "summary": "Draft prepared for editorial review (sources accessed 23 November 2026)."
+    }
+  ],
+  "title": "Attackers begin using autonomous AI agents to find and exploit vulnerabilities",
+  "regions": [
+    "Global"
+  ],
+  "countries": [
+    "Multiple"
+  ],
+  "primary_category": "AI",
+  "priority": "HIGH",
+  "evidence_status": "Confirmed",
+  "event_date": "2026-11-16",
+  "trend": "Escalating",
+  "summary": "On 16 November 2026 Google Threat Intelligence Group and Mandiant reported, for the first time, threat actors using an AI agent framework to automate vulnerability discovery and exploitation without a human in the loop. Amazon separately disclosed that autonomous agents found and exploited a previously unknown vulnerability against universities in East Asia, and a US GAO report said AI agents have begun carrying out cyberattacks with minimal human direction. The window between a patch and its exploitation is shrinking.",
+  "impact_assessment": "Observed: automated patch-to-exploit activity and AI-agent intrusions. Potential: much faster exploitation of newly patched flaws, forcing shorter patch cycles across all sectors.",
+  "priority_rationale": "HIGH: a confirmed change in attacker capability reported by major security vendors and a US government auditor, with broad cross-sector exposure.",
+  "monitoring_actions": [
+    "Shorten patch windows for internet-facing systems",
+    "Use ThreatWatch to track newly exploited CVEs daily",
+    "Follow GTIG and Amazon threat intelligence publications"
+  ],
+  "sources": [
+    {
+      "publisher": "Google Threat Intelligence Group",
+      "title": "Outpace automated cyber threats with security built for nonstop defense (AI Threat Tracker)",
+      "published": "2026-11-16",
+      "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/gtig-ai-threat-tracker-q4-2026/",
+      "type": "research",
+      "accessed": "2026-11-23",
+      "region": "Global"
+    },
+    {
+      "publisher": "Cyber Magazine",
+      "title": "Google spots fully autonomous AI attacks for the first time",
+      "published": "2026-11-17",
+      "url": "https://cybermagazine.com/news/google-spots-fully-autonomous-cyberattacks-for-thfirst-time",
+      "type": "news",
+      "accessed": "2026-11-23",
+      "region": "Europe"
+    },
+    {
+      "publisher": "TNGlobal",
+      "title": "Google finds autonomous agentic AI exploitation",
+      "published": "2026-11-17",
+      "url": "https://technode.global/2026/11/17/google-agentic-ai-autonomous-exploitation-threats/",
+      "type": "news",
+      "accessed": "2026-11-23",
+      "region": "Asia-Pacific"
+    },
+    {
+      "publisher": "Digital Watch Observatory",
+      "title": "Amazon documents autonomous AI agents discovering and exploiting a zero-day",
+      "published": "2026-11-23",
+      "url": "https://dig.watch/updates/amazon-ai-agents-discovering-zero-day",
+      "type": "news",
+      "accessed": "2026-11-23",
+      "region": "Europe"
+    },
+    {
+      "publisher": "The Washington Times",
+      "title": "AI agents now carrying out cyberattacks with minimal human input",
+      "published": "2026-11-20",
+      "url": "https://www.washingtontimes.com/news/2026/nov/20/ai-agents-carrying-cyberattacks-minimal-human-input/",
+      "type": "news",
+      "accessed": "2026-11-23",
+      "region": "North America"
+    },
+    {
+      "publisher": "Cloud Security Alliance",
+      "title": "MONAI Label zero-day: AI agents exploit medical imaging research servers",
+      "published": "2026-11-21",
+      "url": "https://labs.cloudsecurityalliance.org/research/csa-research-note-monai-label-agent-discovered-zero-day-2026/",
+      "type": "research",
+      "accessed": "2026-11-23",
+      "region": "Global"
+    },
+    {
+      "publisher": "VulDB",
+      "title": "CVE-2026-133968 in MONAI Label",
+      "published": "2026-11-20",
+      "url": "https://vuldb.com/cve/CVE-2026-133968",
+      "type": "advisory",
+      "accessed": "2026-11-23",
+      "region": "Europe"
+    }
+  ]
+}

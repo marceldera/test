@@ -188,9 +188,13 @@ def build(now, warnings: list[str]) -> dict:
         else:
             src["github"] = {}
 
+        attack_bundle: dict = {}
+
         def _attack():
-            data, version = I.index_attack(json.loads(fetch_text(I.ATTACK_URL, retries=2)))
+            bundle = json.loads(fetch_text(I.ATTACK_URL, retries=2))
+            data, version = I.index_attack(bundle)
             imeta["attackVersion"] = version
+            attack_bundle["bundle"], attack_bundle["version"] = bundle, version
             return data
         src["attack"] = cached_source("attack", "MITRE ATT&CK Enterprise", _attack, warnings, imeta)
         src["ctid"] = cached_source("ctid-kev", "CTID KEV→ATT&CK mappings",
@@ -284,6 +288,25 @@ def build(now, warnings: list[str]) -> dict:
         (CVE_DIR / cid.split("-")[1] / f"{cid}.json").unlink(missing_ok=True)
         removed += 1
     rows = sorted((C.index_row(r) for r in records.values()), key=lambda x: (x[8] or "", x[0]), reverse=True)
+    # ---- Threat Map: sourced relationships from MITRE ATT&CK (keeps the last good file on any failure)
+    try:
+        bundle = (locals().get("attack_bundle") or {}).get("bundle")
+        if bundle:
+            from tw.relationships import build_graph
+            from tw.validate import validate_relationships
+            info = {r["cve"]: {"product": f"{r.get('vendor') or ''} {r.get('product') or ''}".strip() or None,
+                               "kev": bool((r.get("kev") or {}).get("dateAdded")) if isinstance(r.get("kev"), dict) else bool(r.get("kev")),
+                               "cvss": (r.get("cvss") or {}).get("score") if isinstance(r.get("cvss"), dict) else r.get("cvss")}
+                    for r in records.values()}
+            graph = build_graph(bundle, info, attack_bundle.get("version"), iso(now))
+            gerrs = validate_relationships(graph)
+            if gerrs or not graph["edges"]:
+                warnings.append("Threat Map not rebuilt: " + "; ".join(gerrs[:3] or ["no ATT&CK campaign links"]))
+            else:
+                write_json(DATA_DIR / "relationships.json", graph)
+    except Exception as exc:  # never block the catalog on the map
+        warnings.append(f"Threat Map not rebuilt: {exc}")
+
     write_json(CVE_DIR / "index.json", {"schemaVersion": 1, "generatedAt": iso(now), "fields": C.INDEX_FIELDS,
                                         "count": len(rows), "items": rows})
     if nvd_ok:

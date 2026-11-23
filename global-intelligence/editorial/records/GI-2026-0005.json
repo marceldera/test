@@ -1,0 +1,125 @@
+{
+  "id": "GI-2026-0005",
+  "record_type": "event",
+  "publication_status": "verification_pending",
+  "location": "Retail grocery, cold storage, transport and healthcare cold chains",
+  "secondary_categories": [
+    "Critical Infrastructure"
+  ],
+  "confirmed_facts": [
+    {
+      "text": "CISA, the FBI, HHS, USDA and DOT published a joint TLP:CLEAR fact sheet on 5 November urging owners to harden industrial refrigeration and cold-chain monitoring systems.",
+      "sources": [
+        0,
+        1
+      ]
+    },
+    {
+      "text": "The agencies said successful exploitation could change temperatures and cause fire hazards, loss of inventory and equipment damage.",
+      "sources": [
+        0,
+        2
+      ]
+    }
+  ],
+  "reported_claims": [
+    {
+      "text": "In October, refrigeration controllers at an estimated 250 to 350 French supermarkets were compromised, with attackers activating defrost functions and raising temperatures.",
+      "sources": [
+        1
+      ],
+      "attributed_to": "BleepingComputer reporting"
+    },
+    {
+      "text": "Supermarket chains in France and elsewhere in Europe destroyed food stock after systems administered by a refrigeration provider were compromised.",
+      "sources": [
+        2
+      ],
+      "attributed_to": "Infosecurity Magazine reporting"
+    }
+  ],
+  "international_perspectives": [],
+  "unknowns": [
+    "Identity and motive of the actors",
+    "Specific vulnerabilities exploited",
+    "Number of organisations affected outside Europe"
+  ],
+  "reassessment_triggers": [
+    "Attribution to a named actor",
+    "Reported harm to medicine or blood supplies",
+    "A CVE or KEV listing for an exploited controller"
+  ],
+  "threatwatch_cves": [],
+  "published_at": "2026-11-23T23:30:00Z",
+  "last_verified": "2026-11-23T23:30:00Z",
+  "last_substantive_update": "2026-11-23T23:30:00Z",
+  "update_history": [
+    {
+      "date": "2026-11-23T23:30:00Z",
+      "type": "published",
+      "summary": "Draft prepared for editorial review (sources accessed 23 November 2026)."
+    }
+  ],
+  "title": "Global cyber campaign against industrial refrigeration and cold-chain systems",
+  "regions": [
+    "Global",
+    "Europe",
+    "North America"
+  ],
+  "countries": [
+    "Multiple",
+    "France",
+    "United States"
+  ],
+  "primary_category": "Cybersecurity",
+  "priority": "HIGH",
+  "evidence_status": "Confirmed",
+  "event_date": "2026-11-05",
+  "trend": "Stable",
+  "summary": "On 5 November 2026 CISA, the FBI, HHS, USDA and the Department of Transportation issued a joint fact sheet warning of malicious cyber activity targeting industrial refrigeration and cold-chain monitoring systems globally. Attackers are exploiting unpatched or internet-accessible temperature controllers and refrigeration management systems. The warning followed compromises of supermarket refrigeration in France and other European countries in October that forced stock to be destroyed.",
+  "impact_assessment": "Observed: food stock destroyed at European supermarkets. Potential: spoilage of food and temperature-sensitive medicine, fire hazards and equipment damage across food, agriculture, transport and healthcare cold chains.",
+  "priority_rationale": "HIGH: confirmed, ongoing activity against systems with physical consequences across several critical sectors, documented by five US agencies; the actors are not publicly identified.",
+  "monitoring_actions": [
+    "Inventory internet-exposed refrigeration and temperature controllers",
+    "Check ThreatWatch for exploited controller vulnerabilities",
+    "Follow CISA and CERT-FR updates"
+  ],
+  "sources": [
+    {
+      "publisher": "FBI / CISA / HHS / USDA / DOT",
+      "title": "US Government Partners Urge Hardening Industrial Refrigeration and Cold Chain Monitoring Systems (fact sheet)",
+      "published": "2026-11-05",
+      "url": "https://www.ic3.gov/CSA/2026/261105.pdf",
+      "type": "advisory",
+      "accessed": "2026-11-23",
+      "region": "North America"
+    },
+    {
+      "publisher": "BleepingComputer",
+      "title": "FBI, CISA warn of cyberattacks targeting refrigeration systems",
+      "published": "2026-11-05",
+      "url": "https://bleepingcomputer.com/news/security/fbi-cisa-warn-of-cyberattacks-targeting-refrigeration-systems",
+      "type": "news",
+      "accessed": "2026-11-23",
+      "region": "North America"
+    },
+    {
+      "publisher": "Infosecurity Magazine",
+      "title": "CISA, FBI urge action to protect industrial refrigeration networks",
+      "published": "2026-11-06",
+      "url": "https://www.infosecurity-magazine.com/news/cisa-protect-refrigeration-networks/",
+      "type": "news",
+      "accessed": "2026-11-23",
+      "region": "Europe"
+    },
+    {
+      "publisher": "TechCrunch",
+      "title": "US government warns of 'ongoing cyber threat' amid mass hacks of industrial retail and military freezers",
+      "published": "2026-11-05",
+      "url": "https://techcrunch.com/2026/11/05/u-s-government-warns-of-ongoing-cyber-threat-amid-mass-hacks-of-industrial-retail-and-military-freezers/",
+      "type": "news",
+      "accessed": "2026-11-23",
+      "region": "North America"
+    }
+  ]
+}

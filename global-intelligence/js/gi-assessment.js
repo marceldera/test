@@ -121,6 +121,6 @@
         return el("tr", null, [el("th", { scope: "row", text: fmt(u.date, true) }), el("td", { text: HIST_LABEL[u.type] || u.type }), el("td", { text: u.summary })]);
       }))
     ])]), el("p", { cls: "gi-sub", text: "Earlier entries and corrections are preserved; nothing is silently overwritten." })]));
-    box.appendChild(el("footer", { cls: "doc-foot" }, [el("span", { text: "AEGIS Global Intelligence | " + r.id }), el("a", { href: "./", text: "Back to dashboard" })]));
+    box.appendChild(el("footer", { cls: "doc-foot" }, [el("span", { text: "AEGIS Global Intelligence | " + r.id }), el("a", { href: "../", text: "Back to dashboard" })]));
   }
 })();

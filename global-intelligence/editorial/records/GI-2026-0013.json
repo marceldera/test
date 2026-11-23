@@ -1,0 +1,84 @@
+{
+  "id": "GI-2026-0013",
+  "record_type": "signal",
+  "publication_status": "verification_pending",
+  "location": "United States / Iran",
+  "secondary_categories": [
+    "Military"
+  ],
+  "confirmed_facts": [],
+  "reported_claims": [
+    {
+      "text": "Trump said he would talk about possible new strikes 'after the beginning of the year'.",
+      "sources": [
+        0
+      ],
+      "attributed_to": "Donald Trump (Reuters interview)"
+    },
+    {
+      "text": "Trump said he was inclined to renew the Iran offensive if no deal is reached by the end of the year.",
+      "sources": [
+        1
+      ],
+      "attributed_to": "Donald Trump (as reported by The Times of Israel)"
+    }
+  ],
+  "international_perspectives": [],
+  "unknowns": [],
+  "reassessment_triggers": [],
+  "threatwatch_cves": [],
+  "published_at": "2026-11-23T23:30:00Z",
+  "last_verified": "2026-11-23T23:30:00Z",
+  "last_substantive_update": "2026-11-23T23:30:00Z",
+  "update_history": [
+    {
+      "date": "2026-11-23T23:30:00Z",
+      "type": "published",
+      "summary": "Draft prepared for editorial review (sources accessed 23 November 2026)."
+    }
+  ],
+  "title": "US president signals decision on renewed Iran strikes after 1 January",
+  "regions": [
+    "Middle East",
+    "North America"
+  ],
+  "countries": [
+    "United States",
+    "Iran"
+  ],
+  "primary_category": "Geopolitical",
+  "priority": "MODERATE",
+  "evidence_status": "Reported",
+  "event_date": "2026-11-19",
+  "trend": "Stable",
+  "observed_action": "President Trump said on 19 November he would look to the new year before deciding on renewed strikes against Iran, and on 22 November said he was inclined to renew the offensive if no deal is reached by the end of the year.",
+  "interpretation": "A stated policy timeline rather than a decision; it raises the risk of escalation in early 2027 while indirect talks continue.",
+  "summary": "US statements on 19 and 22 November 2026 set the start of 2027 as a decision point on renewed US military action against Iran.",
+  "impact_assessment": "Potential: renewed large-scale strikes in early 2027 and further attacks on Gulf states and shipping.",
+  "priority_rationale": "MODERATE: an official statement of intent that changes the risk timeline; not itself an escalation.",
+  "monitoring_actions": [
+    "Track US–Iran indirect talks",
+    "Watch US force posture in the Gulf"
+  ],
+  "sources": [
+    {
+      "publisher": "Al-Monitor (Reuters)",
+      "title": "Trump says he will look to next year before deciding on Iran strikes",
+      "published": "2026-11-19",
+      "url": "https://www.al-monitor.com/originals/2026/11/trump-eyes-2027-see-what-happens-iran",
+      "type": "news",
+      "accessed": "2026-11-23",
+      "region": "Middle East",
+      "syndicated_from": "Reuters"
+    },
+    {
+      "publisher": "The Times of Israel",
+      "title": "Nov. 22 live blog: Trump says he's inclined to renew Iran offensive if no deal reached by end of year",
+      "published": "2026-11-22",
+      "url": "https://www.timesofisrael.com/liveblog-november-22-2026/",
+      "type": "news",
+      "accessed": "2026-11-23",
+      "region": "Middle East"
+    }
+  ]
+}

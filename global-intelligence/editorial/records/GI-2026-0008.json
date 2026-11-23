@@ -1,0 +1,121 @@
+{
+  "id": "GI-2026-0008",
+  "record_type": "event",
+  "publication_status": "verification_pending",
+  "location": "Western Pacific between Taiwan and Guam",
+  "secondary_categories": [
+    "Geopolitical"
+  ],
+  "confirmed_facts": [],
+  "reported_claims": [
+    {
+      "text": "More than 100 PLA Navy and China Coast Guard vessels were operating in the western Pacific, including the Liaoning and Fujian carrier groups.",
+      "sources": [
+        0,
+        2
+      ],
+      "attributed_to": "Taiwan National Security Council"
+    },
+    {
+      "text": "The deployment was larger than 'Justice Mission 2025' and included simulated attacks on other militaries and cities including Taiwan's.",
+      "sources": [
+        0
+      ],
+      "attributed_to": "Senior Taiwan security official (to Reuters)"
+    }
+  ],
+  "international_perspectives": [
+    {
+      "text": "The Institute for the Study of War and AEI assessed the activity as a possible major exercise simulating the isolation of Taiwan.",
+      "sources": [
+        2,
+        3
+      ]
+    },
+    {
+      "text": "Officials in Taipei described the drills as 'silent intimidation' ahead of major international meetings.",
+      "sources": [
+        0,
+        1
+      ]
+    }
+  ],
+  "unknowns": [
+    "Beijing's stated purpose",
+    "Whether vessels have fully returned to port"
+  ],
+  "reassessment_triggers": [
+    "A formally announced PLA exercise",
+    "Interference with commercial shipping"
+  ],
+  "threatwatch_cves": [],
+  "published_at": "2026-11-23T23:30:00Z",
+  "last_verified": "2026-11-23T23:30:00Z",
+  "last_substantive_update": "2026-11-23T23:30:00Z",
+  "update_history": [
+    {
+      "date": "2026-11-23T23:30:00Z",
+      "type": "published",
+      "summary": "Draft prepared for editorial review (sources accessed 23 November 2026)."
+    }
+  ],
+  "title": "Large unannounced Chinese naval exercise around Taiwan and the western Pacific",
+  "regions": [
+    "Asia-Pacific"
+  ],
+  "countries": [
+    "Taiwan",
+    "China"
+  ],
+  "primary_category": "Military",
+  "priority": "HIGH",
+  "evidence_status": "Reported",
+  "event_date": "2026-11-03",
+  "trend": "Stable",
+  "summary": "In early November 2026 more than 100 Chinese navy and coast guard vessels, including two aircraft carriers, operated in the western Pacific around Taiwan in an exercise Beijing did not announce, according to Taiwan's National Security Council. A senior Taiwan security official told Reuters the drills included simulated attacks and were larger than China's 'Justice Mission 2025' exercise. US analysts assessed it may have simulated isolating Taiwan.",
+  "impact_assessment": "Observed: a large-scale naval deployment without public announcement. Potential: shorter warning times for any real blockade, and pressure on shipping and regional militaries.",
+  "priority_rationale": "HIGH: a credible, large military activity relevant to a potential blockade of a major economy; China has not publicly described the exercise, so evidence is Reported.",
+  "monitoring_actions": [
+    "Follow Taiwan Ministry of National Defense daily reports",
+    "Track ISW/AEI China–Taiwan updates"
+  ],
+  "sources": [
+    {
+      "publisher": "Taipei Times (Reuters)",
+      "title": "China stages Pacific drills in 'silent intimidation' of Taiwan",
+      "published": "2026-11-13",
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/11/13/2003867684",
+      "type": "news",
+      "accessed": "2026-11-23",
+      "region": "Asia-Pacific",
+      "syndicated_from": "Reuters"
+    },
+    {
+      "publisher": "France 24",
+      "title": "What we know about China's military exercises around Taiwan",
+      "published": "2026-11-13",
+      "url": "https://www.france24.com/en/asia-pacific/20261113-chinese-army-military-exercises-taiwan",
+      "type": "news",
+      "accessed": "2026-11-23",
+      "region": "Europe"
+    },
+    {
+      "publisher": "The Maritime Executive",
+      "title": "Analysis: China's naval drills suggest preparation to isolate Taiwan",
+      "published": "2026-11-11",
+      "url": "https://maritime-executive.com/article/analysis-china-s-naval-drills-suggest-preparation-to-isolate-taiwan",
+      "type": "news",
+      "accessed": "2026-11-23",
+      "region": "North America"
+    },
+    {
+      "publisher": "American Enterprise Institute",
+      "title": "China & Taiwan Update, November 20, 2026",
+      "published": "2026-11-20",
+      "url": "https://www.aei.org/commentary/china-taiwan-update-november-20-2026/",
+      "type": "research",
+      "accessed": "2026-11-23",
+      "region": "North America"
+    }
+  ]
+}

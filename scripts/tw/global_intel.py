@@ -300,7 +300,7 @@ def executive_summary(events: list[dict], signals: list[dict], now: datetime) ->
     """Counts and a 200-300 word summary computed only from published records."""
     active = [r for r in events if r["status"] == "active"]
     since = (now - timedelta(hours=24)).isoformat().replace("+00:00", "Z")
-    countries = sorted({c for r in active for c in r["countries"]})
+    countries = sorted({c for r in active for c in r["countries"] if c.lower() not in ("multiple", "global")})
     by_pri = {p: [r for r in active if r["priority"] == p] for p in PRIORITIES}
     regions = {g: sum(1 for r in active if g in r["regions"]) for g in REGIONS}
     cats = {c: sum(1 for r in active if r["primary_category"] == c) for c in CATEGORIES}

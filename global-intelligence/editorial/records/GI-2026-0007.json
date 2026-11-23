@@ -1,0 +1,120 @@
+{
+  "id": "GI-2026-0007",
+  "record_type": "event",
+  "publication_status": "verification_pending",
+  "location": "West Kordofan (El Khuwai, Al Nahud axis) and Blue Nile, Sudan",
+  "secondary_categories": [
+    "Humanitarian"
+  ],
+  "confirmed_facts": [],
+  "reported_claims": [
+    {
+      "text": "Army and allied troops seized several areas around El Khuwai on 13 November after clashes with the RSF.",
+      "sources": [
+        1,
+        0
+      ],
+      "attributed_to": "Military sources (to Anadolu); Sudan Tribune"
+    },
+    {
+      "text": "Army drones carried out intensive strikes on RSF positions across West Kordofan on 15 November, and thousands of civilians fled westward toward Darfur.",
+      "sources": [
+        0
+      ],
+      "attributed_to": "Sudan Tribune"
+    },
+    {
+      "text": "More than 51,000 people were newly displaced in Blue Nile, and about 2,100 fled Abu Zabad.",
+      "sources": [
+        2
+      ],
+      "attributed_to": "Humanitarian authorities and local sources (Darfur24)"
+    },
+    {
+      "text": "The Kordofan Monitor accused RSF gunmen of killing civilians in the Abu Qalb area.",
+      "sources": [
+        3
+      ],
+      "attributed_to": "Kordofan Monitor (rights group)"
+    }
+  ],
+  "international_perspectives": [],
+  "unknowns": [
+    "Civilian casualty totals",
+    "Independent verification of territorial claims"
+  ],
+  "reassessment_triggers": [
+    "UN OCHA or IOM displacement figures",
+    "Fall of Al Nahud",
+    "Ceasefire talks"
+  ],
+  "threatwatch_cves": [],
+  "published_at": "2026-11-23T23:30:00Z",
+  "last_verified": "2026-11-23T23:30:00Z",
+  "last_substantive_update": "2026-11-23T23:30:00Z",
+  "update_history": [
+    {
+      "date": "2026-11-23T23:30:00Z",
+      "type": "published",
+      "summary": "Draft prepared for editorial review (sources accessed 23 November 2026)."
+    }
+  ],
+  "title": "Sudanese army offensive against RSF in West Kordofan drives new displacement",
+  "regions": [
+    "Africa"
+  ],
+  "countries": [
+    "Sudan"
+  ],
+  "primary_category": "Military",
+  "priority": "HIGH",
+  "evidence_status": "Reported",
+  "event_date": "2026-11-13",
+  "trend": "Escalating",
+  "summary": "The Sudanese army and allied forces have advanced against the Rapid Support Forces in West Kordofan in November 2026, seizing El Khuwai and pushing toward Al Nahud with drone strikes. Thousands of civilians have fled, and more than 51,000 people were reported newly displaced in Blue Nile. A rights monitor accused the RSF of killing civilians in the Abu Qalb area.",
+  "impact_assessment": "Observed: large-scale displacement and civilian killings. Potential: a renewed humanitarian emergency in Kordofan, further drone warfare, and spillover toward Darfur.",
+  "priority_rationale": "HIGH: active large-scale fighting with significant civilian displacement in one of the world's largest humanitarian crises; front-line claims come mainly from one side, so evidence is Reported.",
+  "monitoring_actions": [
+    "Track OCHA and IOM displacement updates",
+    "Watch for RSF statements and counter-claims"
+  ],
+  "sources": [
+    {
+      "publisher": "Sudan Tribune",
+      "title": "Sudanese army advances on Al Nahud amid airstrikes",
+      "published": "2026-11-15",
+      "url": "https://sudantribune.com/article/321257",
+      "type": "news",
+      "accessed": "2026-11-23",
+      "region": "Africa"
+    },
+    {
+      "publisher": "Anadolu Agency",
+      "title": "Sudanese army advances in West Kordofan, says it downed drone from Ethiopia",
+      "published": "2026-11-13",
+      "url": "https://aa.com.tr/en/middle-east/sudanese-army-advances-in-west-kordofan-says-it-downed-drone-from-ethiopia/4124681",
+      "type": "news",
+      "accessed": "2026-11-23",
+      "region": "Europe",
+      "state_affiliated": true
+    },
+    {
+      "publisher": "Darfur24",
+      "title": "Sudan fighting displaces thousands in Kordofan, Blue Nile",
+      "published": "2026-11-23",
+      "url": "https://darfur24.com/en/2026/11/23/sudan-fighting-displaces-thousands-in-kordofan-blue-nile/",
+      "type": "news",
+      "accessed": "2026-11-23",
+      "region": "Africa"
+    },
+    {
+      "publisher": "Sudan Tribune",
+      "title": "Rights monitor accuses Sudan's RSF of killing civilians in West Kordofan",
+      "published": "2026-11-22",
+      "url": "https://sudantribune.com/article/321517",
+      "type": "news",
+      "accessed": "2026-11-23",
+      "region": "Africa"
+    }
+  ]
+}

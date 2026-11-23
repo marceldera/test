@@ -1,0 +1,108 @@
+{
+  "id": "GI-2026-0004",
+  "record_type": "event",
+  "publication_status": "verification_pending",
+  "location": "Benghazi Naval Base, eastern Libya",
+  "secondary_categories": [
+    "Geopolitical"
+  ],
+  "confirmed_facts": [],
+  "reported_claims": [
+    {
+      "text": "Two Libyan military officials said the strike severely damaged the corvette Merkury and set a fire at the base.",
+      "sources": [
+        0,
+        1
+      ],
+      "attributed_to": "Libyan military officials (to AP)"
+    },
+    {
+      "text": "A cargo ship was also hit by a sea drone in a second attack hours later.",
+      "sources": [
+        0
+      ],
+      "attributed_to": "Libyan officials"
+    },
+    {
+      "text": "President Zelenskyy said Ukrainian sea drones sank the Russian warship.",
+      "sources": [
+        2
+      ],
+      "attributed_to": "Volodymyr Zelenskyy"
+    }
+  ],
+  "international_perspectives": [],
+  "unknowns": [
+    "Whether the corvette sank or was damaged",
+    "Casualties",
+    "Launch point of the drones"
+  ],
+  "reassessment_triggers": [
+    "Russian Defence Ministry statement",
+    "Independent imagery confirming the ship's status"
+  ],
+  "threatwatch_cves": [],
+  "published_at": "2026-11-23T23:30:00Z",
+  "last_verified": "2026-11-23T23:30:00Z",
+  "last_substantive_update": "2026-11-23T23:30:00Z",
+  "update_history": [
+    {
+      "date": "2026-11-23T23:30:00Z",
+      "type": "published",
+      "summary": "Draft prepared for editorial review (sources accessed 23 November 2026)."
+    }
+  ],
+  "title": "Suspected Ukrainian sea-drone strike damages Russian corvette at Benghazi naval base",
+  "regions": [
+    "Africa"
+  ],
+  "countries": [
+    "Libya",
+    "Russia",
+    "Ukraine"
+  ],
+  "primary_category": "Military",
+  "priority": "HIGH",
+  "evidence_status": "Reported",
+  "event_date": "2026-11-22",
+  "trend": "Escalating",
+  "summary": "On 22 November 2026 the Russian navy corvette Merkury, docked at the Benghazi Naval Base in eastern Libya, was hit by what Libyan officials described as a Ukrainian sea drone; a cargo ship was hit in a second attack hours later. Two Libyan military officials told the Associated Press the corvette was severely damaged and a fire broke out. President Zelenskyy hailed the attack and claimed the ship was sunk. The incident extends the Russia–Ukraine war into North Africa.",
+  "impact_assessment": "Observed: damage to a Russian warship and a fire at a naval base in a third country. Potential: further attacks on Russian assets in the Mediterranean and Libya, risk to Libyan port operations and shipping, and friction with eastern Libyan authorities.",
+  "priority_rationale": "HIGH: a significant geographic extension of an interstate war onto a third country's territory. Evidence is Reported because all accounts trace to one wire chain (AP) and Ukraine's claim of a sinking conflicts with Libyan officials' account.",
+  "monitoring_actions": [
+    "Watch for Russian and Libyan National Army statements",
+    "Track further incidents at Libyan ports"
+  ],
+  "sources": [
+    {
+      "publisher": "France 24 (AP)",
+      "title": "Russian warship hit by Ukrainian drone at Benghazi naval base, Libyan officials say",
+      "published": "2026-11-22",
+      "url": "https://www.france24.com/en/africa/20261122-russian-warship-hit-by-suspected-ukrainian-drone-at-libya-s-benghazi-naval-base",
+      "type": "news",
+      "accessed": "2026-11-23",
+      "region": "Europe",
+      "syndicated_from": "Associated Press"
+    },
+    {
+      "publisher": "WSB-TV (AP)",
+      "title": "Suspected Ukrainian sea drones hit Russian warship at Benghazi naval base, Libyan officials say",
+      "published": "2026-11-22",
+      "url": "https://www.wsbtv.com/news/suspected-ukrainian/JTXBBHRN7Q6ABCUNNB3YD47Y5E/",
+      "type": "news",
+      "accessed": "2026-11-23",
+      "region": "North America",
+      "syndicated_from": "Associated Press"
+    },
+    {
+      "publisher": "NPR",
+      "title": "Zelenskyy hails Ukraine's attack on a Russian warship docked at a naval base in Libya",
+      "published": "2026-11-23",
+      "url": "https://www.npr.org/2026/11/23/g-s1-155017/ukraine-attack-russian-warship-libya",
+      "type": "news",
+      "accessed": "2026-11-23",
+      "region": "North America",
+      "syndicated_from": "Associated Press"
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "id": "GI-2026-0006",
+  "record_type": "event",
+  "publication_status": "verification_pending",
+  "location": "USDA Farm Production and Conservation mission area",
+  "secondary_categories": [
+    "Critical Infrastructure"
+  ],
+  "confirmed_facts": [],
+  "reported_claims": [
+    {
+      "text": "USDA's Farm Production and Conservation mission sent notice of a security breach involving GIS mapping, payments and contracting systems, which were shut down until further notice.",
+      "sources": [
+        0
+      ],
+      "attributed_to": "Source familiar with the situation (to ABC News)"
+    },
+    {
+      "text": "USDA IT staff took multiple systems offline; it is not clear who carried out the intrusion or whether data was exfiltrated.",
+      "sources": [
+        1
+      ],
+      "attributed_to": "People familiar with the matter (to Nextgov)"
+    }
+  ],
+  "international_perspectives": [],
+  "unknowns": [
+    "Threat actor",
+    "Whether data was exfiltrated",
+    "Duration of the outage"
+  ],
+  "reassessment_triggers": [
+    "Official USDA confirmation or disclosure of data theft",
+    "Attribution"
+  ],
+  "threatwatch_cves": [],
+  "published_at": "2026-11-23T23:30:00Z",
+  "last_verified": "2026-11-23T23:30:00Z",
+  "last_substantive_update": "2026-11-23T23:30:00Z",
+  "update_history": [
+    {
+      "date": "2026-11-23T23:30:00Z",
+      "type": "published",
+      "summary": "Draft prepared for editorial review (sources accessed 23 November 2026)."
+    }
+  ],
+  "title": "Security breach at US Department of Agriculture takes farm program systems offline",
+  "regions": [
+    "North America"
+  ],
+  "countries": [
+    "United States"
+  ],
+  "primary_category": "Cybersecurity",
+  "priority": "MODERATE",
+  "evidence_status": "Reported",
+  "event_date": "2026-11-16",
+  "trend": "Stable",
+  "summary": "Multiple sources told ABC News that the US Department of Agriculture was hit by a cyberattack affecting systems including a farmer-payment tool, and Nextgov reported that IT staff took multiple systems offline. It is not clear who carried out the intrusion or whether data was taken. USDA had not publicly detailed the incident in the reporting reviewed.",
+  "impact_assessment": "Observed: farm program payment, mapping and contracting systems offline. Potential: delayed payments to farmers and exposure of producer data if exfiltration occurred.",
+  "priority_rationale": "MODERATE: credible reporting of a breach at a federal agency with service disruption, but scope, actor and data impact are unconfirmed.",
+  "monitoring_actions": [
+    "Watch for an official USDA or CISA statement",
+    "Track restoration of farm payment systems"
+  ],
+  "sources": [
+    {
+      "publisher": "ABC News",
+      "title": "USDA hit with cyberattack: Sources",
+      "published": "2026-11-20",
+      "url": "https://abcnews.com/GMA/Food/new-government-report-sparks-concern-potential-cyberattack-us/story?id=138316014",
+      "type": "news",
+      "accessed": "2026-11-23",
+      "region": "North America"
+    },
+    {
+      "publisher": "Nextgov/FCW",
+      "title": "USDA grapples with security breach as IT staff take multiple systems offline",
+      "published": "2026-11-20",
+      "url": "https://www.nextgov.com/cybersecurity/2026/11/usda-grapples-security-breach-it-staff-take-multiple-systems-offline/417350/",
+      "type": "news",
+      "accessed": "2026-11-23",
+      "region": "North America"
+    }
+  ]
+}

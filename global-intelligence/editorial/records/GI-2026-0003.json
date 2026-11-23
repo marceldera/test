@@ -1,0 +1,92 @@
+{
+  "id": "GI-2026-0003",
+  "record_type": "event",
+  "publication_status": "verification_pending",
+  "location": "Kryvyi Rih, Dnipropetrovsk region, Ukraine",
+  "secondary_categories": [
+    "Humanitarian"
+  ],
+  "confirmed_facts": [
+    {
+      "text": "The strike killed two people, a seven-year-old boy and a 20-year-old woman, and wounded 60, including six children (local officials).",
+      "sources": [
+        0,
+        1
+      ]
+    },
+    {
+      "text": "About 25 apartment buildings, a hospital, schools and businesses were damaged.",
+      "sources": [
+        0,
+        1
+      ]
+    }
+  ],
+  "reported_claims": [],
+  "international_perspectives": [],
+  "unknowns": [
+    "Exact munitions used and intended target"
+  ],
+  "reassessment_triggers": [],
+  "threatwatch_cves": [],
+  "published_at": "2026-11-23T23:30:00Z",
+  "last_verified": "2026-11-23T23:30:00Z",
+  "last_substantive_update": "2026-11-23T23:30:00Z",
+  "update_history": [
+    {
+      "date": "2026-11-23T23:30:00Z",
+      "type": "published",
+      "summary": "Draft prepared for editorial review (sources accessed 23 November 2026)."
+    }
+  ],
+  "title": "Russian ballistic missile strike on central Kryvyi Rih kills two, wounds 60",
+  "regions": [
+    "Europe"
+  ],
+  "countries": [
+    "Ukraine",
+    "Russia"
+  ],
+  "primary_category": "Military",
+  "priority": "HIGH",
+  "evidence_status": "Confirmed",
+  "event_date": "2026-11-20",
+  "trend": "Stable",
+  "summary": "A Russian strike on the centre of Kryvyi Rih late on 20 November 2026 killed a seven-year-old boy and a 20-year-old woman and wounded 60 people, including six children, according to local officials. About 25 apartment buildings, a hospital, schools and businesses were damaged. The strike was part of continuing large-scale Russian attacks on Ukrainian cities and energy infrastructure.",
+  "impact_assessment": "Observed: civilian deaths and injuries and damage to housing, a hospital and schools. Potential: continued strikes on civilian areas and energy infrastructure during winter.",
+  "priority_rationale": "HIGH: confirmed lethal strike on a city centre as part of an ongoing interstate war; localised rather than a change in the war's overall course.",
+  "monitoring_actions": [
+    "Track Ukrainian regional administration casualty updates",
+    "Watch for strikes on energy infrastructure ahead of winter"
+  ],
+  "sources": [
+    {
+      "publisher": "Al Jazeera (AFP and AP)",
+      "title": "Russian strike in Zelenskyy's hometown kills two, wounds 60",
+      "published": "2026-11-21",
+      "url": "https://www.aljazeera.com/news/2026/11/21/russian-strike-kills-two-wounds-60-in-zelenskyys-hometown",
+      "type": "news",
+      "accessed": "2026-11-23",
+      "region": "Middle East"
+    },
+    {
+      "publisher": "France 24",
+      "title": "Russia attacks Zelensky's hometown, Ukraine reaffirms wish to join NATO",
+      "published": "2026-11-21",
+      "url": "https://www.france24.com/en/europe/20261121-russia-attacks-zelensky-s-hometown-ukraine-reaffirms-wish-to-join-nato",
+      "type": "news",
+      "accessed": "2026-11-23",
+      "region": "Europe"
+    },
+    {
+      "publisher": "The Washington Times (AP)",
+      "title": "Ballistic missile attack on Zelenskyy's hometown in central Ukraine kills 2 and wounds scores",
+      "published": "2026-11-21",
+      "url": "https://www.washingtontimes.com/news/2026/nov/21/ballistic-missile-attack-kryvyi-rih-hometown-volodymyr-zelenskyy/",
+      "type": "news",
+      "accessed": "2026-11-23",
+      "region": "North America",
+      "syndicated_from": "Associated Press"
+    }
+  ]
+}

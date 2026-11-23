@@ -157,7 +157,8 @@ class RelationshipTests(unittest.TestCase):
     def test_shipped_dataset_valid(self):
         g = json.loads((ROOT / "threatwatch" / "data" / "relationships.json").read_text())
         self.assertEqual(validate_relationships(g), [])
-        self.assertEqual(g["dataset"]["status"], "demo")
+        self.assertEqual(g["dataset"]["status"], "verified")
+        self.assertFalse([n for n in g["nodes"] if "2099" in n.get("label", "")])
 
     def test_direct_actor_cve_edge_rejected(self):
         g = {"dataset": {"status": "verified"},

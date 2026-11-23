@@ -1,0 +1,164 @@
+{
+  "id": "GI-2026-0001",
+  "record_type": "event",
+  "publication_status": "verification_pending",
+  "location": "Bahrain; Strait of Hormuz and Gulf of Oman approaches",
+  "secondary_categories": [
+    "Critical Infrastructure",
+    "Geopolitical"
+  ],
+  "confirmed_facts": [
+    {
+      "text": "Bahrain's Interior Ministry said an Iranian attack on 21 November hit a civilian industrial facility, causing a fire and material damage.",
+      "sources": [
+        0,
+        1
+      ]
+    },
+    {
+      "text": "Two people were injured: a Pakistani resident in critical condition and a Bahraini citizen in stable condition (Interior Ministry).",
+      "sources": [
+        0,
+        1
+      ]
+    },
+    {
+      "text": "UKMTO reported that on 16 November a tanker transiting outbound through the Strait of Hormuz was struck by an unidentified projectile, causing an engine-room fire; a second tanker attack the same day left a vessel disabled.",
+      "sources": [
+        3,
+        4
+      ]
+    }
+  ],
+  "reported_claims": [
+    {
+      "text": "Iran's Revolutionary Guards said the 21 November strikes targeted US military positions in Bahrain.",
+      "sources": [
+        1
+      ],
+      "attributed_to": "IRGC statement (as reported by Reuters)"
+    },
+    {
+      "text": "The IRGC claimed that several tankers using a route it had not authorised struck mines and caught fire or sank in mid-November; these sinkings have not been independently verified.",
+      "sources": [
+        5
+      ],
+      "attributed_to": "IRGC via Fars news agency"
+    }
+  ],
+  "international_perspectives": [
+    {
+      "text": "Bahrain's Foreign Ministry rejected the IRGC justification and said the strike hit an exclusively civilian industrial site.",
+      "sources": [
+        0
+      ]
+    },
+    {
+      "text": "Saudi Arabia and Jordan condemned the attack on Bahrain.",
+      "sources": [
+        2
+      ]
+    }
+  ],
+  "unknowns": [
+    "Exact location and identity of the industrial facility hit in Bahrain",
+    "Number of vessels actually sunk, as opposed to IRGC claims",
+    "Whether US–Iran indirect talks will produce a de-escalation"
+  ],
+  "reassessment_triggers": [
+    "Resumption of large-scale US strikes on Iran",
+    "A verified sinking with loss of life",
+    "A negotiated reopening of the Strait"
+  ],
+  "threatwatch_cves": [],
+  "published_at": "2026-11-23T23:30:00Z",
+  "last_verified": "2026-11-23T23:30:00Z",
+  "last_substantive_update": "2026-11-23T23:30:00Z",
+  "update_history": [
+    {
+      "date": "2026-11-23T23:30:00Z",
+      "type": "published",
+      "summary": "Draft prepared for editorial review (sources accessed 23 November 2026)."
+    }
+  ],
+  "title": "Iranian strikes on Bahrain and continuing attacks on shipping in the Strait of Hormuz",
+  "regions": [
+    "Middle East"
+  ],
+  "countries": [
+    "Bahrain",
+    "Iran",
+    "Oman",
+    "United States"
+  ],
+  "primary_category": "Military",
+  "priority": "CRITICAL",
+  "evidence_status": "Confirmed",
+  "event_date": "2026-11-21",
+  "trend": "Escalating",
+  "summary": "On 21 November 2026 an Iranian attack hit a civilian industrial facility in Bahrain, injuring two people, one critically, according to Bahrain's Interior Ministry. Iran's Revolutionary Guards said they targeted US military positions in the kingdom, which hosts the US Navy's Fifth Fleet. The strike comes amid a sustained campaign against commercial shipping in and around the Strait of Hormuz, where UKMTO has logged repeated projectile strikes on tankers in November. This matters because the Strait carries a large share of world oil and LNG trade and attacks on Gulf states risk widening the war.",
+  "impact_assessment": "Observed: casualties and fire damage at an industrial site in Bahrain; repeated strikes on tankers with engine-room fires and at least one disabled vessel. Potential: further disruption to Gulf energy exports and shipping insurance, attacks on desalination, power or port infrastructure in Gulf states, and escalation involving US forces.",
+  "priority_rationale": "CRITICAL: active armed attacks by a state on a neighbouring state and on commercial shipping, confirmed by official statements and independent maritime reporting, with a direct effect on a global energy chokepoint.",
+  "monitoring_actions": [
+    "Track UKMTO warnings and JMIC advisories for the Strait of Hormuz",
+    "Follow Bahrain Interior Ministry statements",
+    "Watch Gulf desalination, power and port operators for disruption notices"
+  ],
+  "sources": [
+    {
+      "publisher": "The National",
+      "title": "Two injured, one critically, in Iranian attack on industrial plant in Bahrain",
+      "published": "2026-11-22",
+      "url": "https://www.thenationalnews.com/news/gulf/2026/11/22/two-injured-one-critically-in-iranian-attack-on-industrial-plant-in-bahrain/",
+      "type": "news",
+      "accessed": "2026-11-23",
+      "region": "Middle East"
+    },
+    {
+      "publisher": "Cyprus Mail (Reuters)",
+      "title": "Bahrain says Iran strikes industrial facility as air defences intercept attacks",
+      "published": "2026-11-22",
+      "url": "https://cyprus-mail.com/2026/11/22/bahrain-says-iran-strikes-industrial-facility-as-air-defences-intercept-attacks",
+      "type": "news",
+      "accessed": "2026-11-23",
+      "region": "Europe",
+      "syndicated_from": "Reuters"
+    },
+    {
+      "publisher": "Gulf News",
+      "title": "Middle East conflict: Bahrain intercepts Iranian attacks as Tehran prepares 14 oil tankers to breach US naval blockade",
+      "published": "2026-11-22",
+      "url": "https://gulfnews.com/world/mena/middle-east-conflict-bahrain-intercepts-iranian-attacks-as-tehran-prepares-14-oil-tankers-to-breach-us-naval-blockade-1.500756662",
+      "type": "news",
+      "accessed": "2026-11-23",
+      "region": "Middle East"
+    },
+    {
+      "publisher": "gCaptain",
+      "title": "UKMTO reports two tanker attacks in Strait of Hormuz",
+      "published": "2026-11-16",
+      "url": "https://gcaptain.com/ukmto-reports-two-tanker-attacks-in-strait-of-hormuz/",
+      "type": "news",
+      "accessed": "2026-11-23",
+      "region": "Global"
+    },
+    {
+      "publisher": "Seatrade Maritime",
+      "title": "Two tankers confirmed struck, Iran claims VLCC sinking in Hormuz",
+      "published": "2026-11-16",
+      "url": "https://seatrade-maritime.com/security/tanker-confirmed-struck-in-the-gulf-iran-claims-vlcc-sinking",
+      "type": "news",
+      "accessed": "2026-11-23",
+      "region": "Global"
+    },
+    {
+      "publisher": "Riviera Maritime Media",
+      "title": "Tanker hit off Oman as attacks and mine claims in and around Strait of Hormuz continue",
+      "published": "2026-11-17",
+      "url": "https://www.rivieramm.com/news-content-hub/tanker-hit-off-oman-as-attacks-and-mine-claims-in-and-around-strait-of-hormuz-continue-90591",
+      "type": "news",
+      "accessed": "2026-11-23",
+      "region": "Global"
+    }
+  ]
+}

@@ -9,6 +9,9 @@
   var EVID = ["Confirmed", "Reported", "Disputed", "Analytical Assessment"];
   var PERIODS = [["1", "Last 24 hours"], ["7", "Last 7 days"], ["30", "Last 30 days"], ["all", "Historical (all)"]];
   var $ = function (id) { return document.getElementById(id); };
+  // The dashboard is served at the site root (data-gi-base="global-intelligence/") and can also run inside its folder.
+  var BASE = document.body.getAttribute("data-gi-base") || "";
+  if (!/^([a-z\-]+\/)?$/.test(BASE)) BASE = "";
 
   function el(tag, attrs, kids) {
     var n = document.createElement(tag);
@@ -148,7 +151,7 @@
       return;
     }
     rows.forEach(function (r) {
-      var href = "assessment.html?id=" + encodeURIComponent(r.id);
+      var href = BASE + "assessment.html?id=" + encodeURIComponent(r.id);
       tb.appendChild(el("tr", { cls: r.priority === "CRITICAL" ? "row-crit" : r.priority === "HIGH" ? "row-high" : "" }, [
         el("th", { scope: "row", cls: "gid" }, [r.demo ? el("span", { cls: "demo-tag", text: "Demo" }) : null, r.demo ? el("br") : null, r.id]),
         el("td", { "data-label": "Region" }, [r.regions.join(", "), el("span", { cls: "sm", text: r.countries.join(", ") })]),
@@ -174,7 +177,7 @@
         el("div", { cls: "obs" }, [el("span", { cls: "lbl", text: "Observed action" }), el("p", { text: s.observed_action })]),
         el("div", { cls: "int" }, [el("span", { cls: "lbl", text: "AEGIS interpretation" }), el("p", { text: s.interpretation })]),
         el("div", { cls: "meta" }, [s.countries.join(", ") + " · " + fmt(s.event_date) + " · ",
-          el("a", { href: "assessment.html?id=" + encodeURIComponent(s.id), text: "Details" })])
+          el("a", { href: BASE + "assessment.html?id=" + encodeURIComponent(s.id), text: "Details" })])
       ]));
     });
   }
@@ -204,8 +207,8 @@
   PERIODS.forEach(function (p) { $("f-period").appendChild(el("option", { value: p[0], text: p[1] })); });
   readURL();
 
-  Promise.all([getJSON("data/active-threats.json"), getJSON("data/historical-threats.json"), getJSON("data/signals.json"),
-               getJSON("data/executive-summary.json"), getJSON("data/last-updated.json")])
+  Promise.all([getJSON(BASE + "data/active-threats.json"), getJSON(BASE + "data/historical-threats.json"), getJSON(BASE + "data/signals.json"),
+               getJSON(BASE + "data/executive-summary.json"), getJSON(BASE + "data/last-updated.json")])
     .then(function (d) {
       state.records = d[0].records || [];
       state.historical = (d[1].records || []).filter(function (r) { return r.record_type === "event"; });

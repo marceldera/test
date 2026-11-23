@@ -1,0 +1,128 @@
+{
+  "id": "GI-2026-0002",
+  "record_type": "event",
+  "publication_status": "verification_pending",
+  "location": "Nowy Lipowiec, Rudnik nad Sanem and Mołodycz, south-eastern Poland",
+  "secondary_categories": [
+    "Geopolitical"
+  ],
+  "confirmed_facts": [
+    {
+      "text": "Objects struck three locations in south-eastern Poland on 20 November: Nowy Lipowiec, Rudnik nad Sanem and Mołodycz.",
+      "sources": [
+        2,
+        3
+      ]
+    },
+    {
+      "text": "Polish prosecutors said on 23 November that all three objects were Russian Kh-101 cruise missiles; no injuries or infrastructure damage were reported.",
+      "sources": [
+        2
+      ]
+    },
+    {
+      "text": "NATO Secretary-General Mark Rutte called the incident a grave violation of Poland's airspace.",
+      "sources": [
+        0
+      ]
+    }
+  ],
+  "reported_claims": [
+    {
+      "text": "Prime Minister Donald Tusk said the incident was likely a provocation timed to European military exercises in Poland.",
+      "sources": [
+        0,
+        1
+      ],
+      "attributed_to": "Polish government"
+    }
+  ],
+  "international_perspectives": [
+    {
+      "text": "Ukraine's foreign minister said the incident shows the threat Russian aggression poses to Europe as a whole.",
+      "sources": [
+        0
+      ]
+    }
+  ],
+  "unknowns": [
+    "Whether the missiles were deliberately aimed at Poland or strayed",
+    "Whether a Russian explanation will be offered"
+  ],
+  "reassessment_triggers": [
+    "Casualties from a future incident",
+    "NATO Article 4 consultations",
+    "Russian acknowledgement or denial"
+  ],
+  "threatwatch_cves": [],
+  "published_at": "2026-11-23T23:30:00Z",
+  "last_verified": "2026-11-23T23:30:00Z",
+  "last_substantive_update": "2026-11-23T23:30:00Z",
+  "update_history": [
+    {
+      "date": "2026-11-23T23:30:00Z",
+      "type": "published",
+      "summary": "Draft prepared for editorial review (sources accessed 23 November 2026)."
+    }
+  ],
+  "title": "Russian Kh-101 cruise missiles land in Poland during attacks on Ukraine",
+  "regions": [
+    "Europe"
+  ],
+  "countries": [
+    "Poland",
+    "Russia",
+    "Ukraine"
+  ],
+  "primary_category": "Military",
+  "priority": "HIGH",
+  "evidence_status": "Confirmed",
+  "event_date": "2026-11-20",
+  "trend": "Stable",
+  "summary": "Early on 20 November 2026, during large-scale Russian strikes on Ukraine, three objects came down in south-eastern Poland, a NATO member. Polish prosecutors have since said all three were Russian Kh-101 cruise missiles. No one was hurt. Poland's prime minister called it a likely provocation timed to European military exercises nearby, and NATO's Secretary-General called it a grave violation of Polish airspace.",
+  "impact_assessment": "Observed: missile impacts on NATO territory without casualties. Potential: further airspace violations, pressure for stronger air defence along NATO's eastern flank, and escalation risk if an impact causes casualties.",
+  "priority_rationale": "HIGH: confirmed weapons impacts on NATO territory with clear escalation potential, but no casualties or damage.",
+  "monitoring_actions": [
+    "Follow Polish prosecutors' and Defence Ministry statements",
+    "Watch NATO statements on eastern-flank air defence"
+  ],
+  "sources": [
+    {
+      "publisher": "PBS NewsHour (AP)",
+      "title": "NATO calls Russian missiles landing in Poland a 'grave violation' of airspace",
+      "published": "2026-11-20",
+      "url": "https://www.pbs.org/newshour/world/nato-calls-russian-missiles-landing-in-poland-a-grave-violation-of-airspace",
+      "type": "news",
+      "accessed": "2026-11-23",
+      "region": "North America",
+      "syndicated_from": "Associated Press"
+    },
+    {
+      "publisher": "France 24",
+      "title": "Poland slams Russian 'provocation' as missiles land near European military drills",
+      "published": "2026-11-20",
+      "url": "https://www.france24.com/en/europe/20261120-poland-says-russian-missile-hit-its-territory-during-attack-on-ukraine",
+      "type": "news",
+      "accessed": "2026-11-23",
+      "region": "Europe"
+    },
+    {
+      "publisher": "Notes from Poland",
+      "title": "Poland confirms three objects that struck its territory were all Russian missiles",
+      "published": "2026-11-23",
+      "url": "https://notesfrompoland.com/2026/11/23/poland-confirms-three-objects-that-struck-its-territory-were-all-russian-missiles/",
+      "type": "news",
+      "accessed": "2026-11-23",
+      "region": "Europe"
+    },
+    {
+      "publisher": "Notes from Poland",
+      "title": "Two Russian missiles and a drone hit Poland",
+      "published": "2026-11-20",
+      "url": "https://notesfrompoland.com/2026/11/20/unidentified-object-hits-poland-amid-russian-attacks-on-western-ukraine/",
+      "type": "news",
+      "accessed": "2026-11-23",
+      "region": "Europe"
+    }
+  ]
+}

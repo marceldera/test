@@ -1,0 +1,109 @@
+{
+  "id": "GI-2026-0010",
+  "record_type": "event",
+  "publication_status": "verification_pending",
+  "location": "Antalya, Türkiye",
+  "secondary_categories": [
+    "Geopolitical"
+  ],
+  "confirmed_facts": [
+    {
+      "text": "COP31 ended on 22 November without consensus on its main cover decision.",
+      "sources": [
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "text": "The EU and others rejected the final draft, which made no mention of fossil fuels.",
+      "sources": [
+        1,
+        2,
+        3
+      ]
+    }
+  ],
+  "reported_claims": [],
+  "international_perspectives": [
+    {
+      "text": "Delegates from developing countries said the failure left out many things they wanted, including progress on finance.",
+      "sources": [
+        0,
+        2
+      ]
+    }
+  ],
+  "unknowns": [],
+  "reassessment_triggers": [],
+  "threatwatch_cves": [],
+  "published_at": "2026-11-23T23:30:00Z",
+  "last_verified": "2026-11-23T23:30:00Z",
+  "last_substantive_update": "2026-11-23T23:30:00Z",
+  "update_history": [
+    {
+      "date": "2026-11-23T23:30:00Z",
+      "type": "published",
+      "summary": "Draft prepared for editorial review (sources accessed 23 November 2026)."
+    }
+  ],
+  "title": "COP31 climate talks in Antalya collapse without a deal",
+  "regions": [
+    "Global"
+  ],
+  "countries": [
+    "Türkiye",
+    "Multiple"
+  ],
+  "primary_category": "Environmental",
+  "priority": "MODERATE",
+  "evidence_status": "Confirmed",
+  "event_date": "2026-11-22",
+  "trend": "Stable",
+  "summary": "The UN climate conference COP31 in Antalya ended on 22 November 2026 without an overarching agreement after the European Union and others rejected a final draft they said was too weak, notably because it did not mention fossil fuels. It was the longest COP on record and the first major breakdown since Copenhagen in 2009, leaving climate finance and adaptation commitments unresolved.",
+  "impact_assessment": "Potential: slower climate-finance flows to vulnerable countries and weaker coordination on disaster response, increasing long-term environmental and humanitarian security risk.",
+  "priority_rationale": "MODERATE: a confirmed multilateral breakdown with long-term security implications but no immediate physical harm.",
+  "monitoring_actions": [
+    "Track UNFCCC statements on next steps",
+    "Watch commitments ahead of COP32 in Addis Ababa"
+  ],
+  "sources": [
+    {
+      "publisher": "U.S. News & World Report (Reuters)",
+      "title": "Countries react as COP31 climate talks collapse",
+      "published": "2026-11-22",
+      "url": "https://www.usnews.com/news/world/articles/2026-11-22/cop31-climate-deal-in-the-balance-after-fractious-talks",
+      "type": "news",
+      "accessed": "2026-11-23",
+      "region": "North America",
+      "syndicated_from": "Reuters"
+    },
+    {
+      "publisher": "CNN",
+      "title": "Global climate summit collapses as countries fail to agree on moving away from fossil fuels",
+      "published": "2026-11-22",
+      "url": "https://edition.cnn.com/2026/11/22/climate/cop31-summit-collapses-in-fossil-fuel-failure",
+      "type": "news",
+      "accessed": "2026-11-23",
+      "region": "North America"
+    },
+    {
+      "publisher": "Al Jazeera",
+      "title": "COP31: What next after UN climate talks collapse",
+      "published": "2026-11-23",
+      "url": "https://www.aljazeera.com/news/2026/11/23/cop31-what-next-after-un-climate-talks-collapse",
+      "type": "news",
+      "accessed": "2026-11-23",
+      "region": "Middle East"
+    },
+    {
+      "publisher": "The Washington Post",
+      "title": "COP31 negotiations break down as countries fail to agree on climate deal",
+      "published": "2026-11-22",
+      "url": "https://www.washingtonpost.com/climate-environment/2026/11/22/cop31-negotiations-break-down-countries-fail-agree-climate-deal/",
+      "type": "news",
+      "accessed": "2026-11-23",
+      "region": "North America"
+    }
+  ]
+}

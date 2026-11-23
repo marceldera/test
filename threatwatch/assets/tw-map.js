@@ -225,7 +225,12 @@
   }
 
   // ------------------------------------------------------------ boot
-  function fill(selId, items) { items.forEach(function (it) { $(selId).appendChild(el("option", { value: it[0], text: it[1] })); }); }
+  function fill(selId, items) {
+    items.forEach(function (it) { $(selId).appendChild(el("option", { value: it[0], text: it[1] })); });
+    // Hide filters the current dataset has no values for (e.g. industry/geography in the ATT&CK-derived map).
+    var lab = $(selId).closest("label");
+    if (lab) lab.hidden = !items.length;
+  }
 
   fetch("data/relationships.json", { cache: "no-cache" }).then(function (r) { return r.json(); }).then(function (g) {
     G = g;
