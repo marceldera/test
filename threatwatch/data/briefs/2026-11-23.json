@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
   "edition": "2026-11-23",
-  "publishedAt": "2026-11-23T23:10:45Z",
+  "publishedAt": "2026-11-23T23:26:11Z",
   "window": {
-    "start": "2026-11-23T22:16:45Z",
-    "end": "2026-11-23T23:10:45Z",
+    "start": "2026-11-23T23:10:45Z",
+    "end": "2026-11-23T23:26:11Z",
     "note": "KEV additions not present in the previous edition’s catalog snapshot."
   },
   "executive": {
@@ -78,20 +78,20 @@
       "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
       "version": "2026.11.23",
       "released": "2026-11-23T19:43:55.7979Z",
-      "fetchedAt": "2026-11-23T23:10:46Z",
+      "fetchedAt": "2026-11-23T23:26:11Z",
       "status": "ok"
     },
     {
       "name": "FIRST EPSS",
       "url": "https://www.first.org/epss/",
-      "fetchedAt": "2026-11-23T23:10:46Z",
+      "fetchedAt": "2026-11-23T23:26:11Z",
       "status": "ok",
       "note": "Probability estimate; not evidence of exploitation."
     },
     {
       "name": "NVD CVE API 2.0",
       "url": "https://nvd.nist.gov/",
-      "fetchedAt": "2026-11-23T23:10:46Z",
+      "fetchedAt": "2026-11-23T23:26:11Z",
       "status": "no data",
       "note": "Enrichment can lag publication by days."
     }
@@ -164,7 +164,7 @@
               ],
               [
                 "Complete worldwide High/Critical count",
-                "Not established; 179 High/Critical CVEs published to NVD in the window (NVD-scored only)"
+                "Not established; 196 High/Critical CVEs published to NVD in the window (NVD-scored only)"
               ]
             ]
           },
@@ -509,7 +509,7 @@
     ],
     "footer": "Enterprise Cyber Threat Intelligence | 23 Nov 2026",
     "reviewedBy": null,
-    "generatedAt": "2026-11-23T23:12:44Z",
+    "generatedAt": "2026-11-23T23:27:51Z",
     "prioritized": [
       "CVE-2026-133469",
       "CVE-2026-134624",

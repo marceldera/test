@@ -1,12 +1,12 @@
 {
-  "lastAttemptAt": "2026-11-23T23:10:47Z",
+  "lastAttemptAt": "2026-11-23T23:26:12Z",
   "ok": true,
   "lastError": null,
-  "lastSuccessAt": "2026-11-23T23:10:47Z",
+  "lastSuccessAt": "2026-11-23T23:26:12Z",
   "warnings": [],
   "coverage": "Every CVE published in the last 90 days, every CISA KEV CVE, every zero-day tracked by Google Project Zero, exploited CVEs reported by ENISA EUVD, and every CVE featured in a ThreatWatch brief.",
   "counts": {
-    "total": 48581,
+    "total": 48586,
     "kev": 1792,
     "zeroDay": 413,
     "inTheWild": 1813,
@@ -14,15 +14,15 @@
     "withAttack": 500,
     "withDetection": 724,
     "nvdPending": 0,
-    "nvdSynced": 158,
+    "nvdSynced": 98,
     "nvdLookups": 0,
-    "written": 1853,
-    "removed": 33
+    "written": 1826,
+    "removed": 24
   },
   "sources": {
     "kevCatalogVersion": "2026.11.23",
     "nucleiCommit": "a79bfa0",
-    "nucleiIndexedAt": "2026-11-23T23:10:47Z",
+    "nucleiIndexedAt": "2026-11-23T23:26:12Z",
     "nmapCommit": "7755daa",
     "curatedPlaybooks": 1,
     "intel": {
