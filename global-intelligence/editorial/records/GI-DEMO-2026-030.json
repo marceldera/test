@@ -1,0 +1,52 @@
+{
+  "id": "GI-DEMO-2026-030",
+  "demo": true,
+  "record_type": "event",
+  "publication_status": "verification_pending",
+  "location": "",
+  "secondary_categories": [],
+  "international_perspectives": [],
+  "reported_claims": [],
+  "unknowns": [],
+  "reassessment_triggers": [],
+  "threatwatch_cves": [],
+  "title": "DEMO: Unverified report of dam sabotage",
+  "regions": [
+    "Latin America"
+  ],
+  "countries": [
+    "Costa Verde"
+  ],
+  "primary_category": "Critical Infrastructure",
+  "priority": "LOW",
+  "evidence_status": "Reported",
+  "event_date": "2026-11-23",
+  "published_at": "2026-11-23T10:00:00Z",
+  "last_verified": "2026-11-23T10:00:00Z",
+  "last_substantive_update": "2026-11-23T10:00:00Z",
+  "trend": "Stable",
+  "summary": "DEMONSTRATION DRAFT awaiting verification; never shown publicly.",
+  "impact_assessment": "Unknown.",
+  "priority_rationale": "Pending review.",
+  "monitoring_actions": [
+    "Verify with primary sources"
+  ],
+  "sources": [
+    {
+      "publisher": "Social media post (demo)",
+      "title": "Claim",
+      "published": "2026-11-23",
+      "url": "https://example.org/demo/rumor",
+      "type": "news",
+      "accessed": "2026-11-23",
+      "region": "Latin America"
+    }
+  ],
+  "update_history": [
+    {
+      "date": "2026-11-23T10:00:00Z",
+      "type": "published",
+      "summary": "Draft created."
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "id": "GI-DEMO-2026-008",
+  "demo": true,
+  "record_type": "event",
+  "publication_status": "published",
+  "location": "",
+  "secondary_categories": [
+    "Environmental"
+  ],
+  "international_perspectives": [],
+  "reported_claims": [
+    {
+      "text": "Forty suspected cases have been reported.",
+      "sources": [
+        0
+      ],
+      "attributed_to": "Humanitarian agency (demo)"
+    }
+  ],
+  "unknowns": [],
+  "reassessment_triggers": [],
+  "threatwatch_cves": [],
+  "title": "DEMO: Cholera cases rise in displacement camps",
+  "regions": [
+    "Africa"
+  ],
+  "countries": [
+    "Republic of Amaru"
+  ],
+  "primary_category": "Humanitarian",
+  "priority": "LOW",
+  "evidence_status": "Reported",
+  "event_date": "2026-11-21",
+  "published_at": "2026-11-22T09:00:00Z",
+  "last_verified": "2026-11-22T09:00:00Z",
+  "last_substantive_update": "2026-11-22T09:00:00Z",
+  "trend": "Stable",
+  "summary": "DEMONSTRATION RECORD. A humanitarian agency reports suspected cholera cases in camps housing people displaced by flooding.",
+  "impact_assessment": "Potential: wider outbreak if water and sanitation are not restored.",
+  "priority_rationale": "Low for global security; important locally.",
+  "monitoring_actions": [
+    "Track case counts from health authorities"
+  ],
+  "sources": [
+    {
+      "publisher": "Demo Humanitarian Agency",
+      "title": "Situation report",
+      "published": "2026-11-22",
+      "url": "https://example.org/demo/sitrep",
+      "type": "humanitarian",
+      "accessed": "2026-11-23",
+      "region": "Africa"
+    }
+  ],
+  "update_history": [
+    {
+      "date": "2026-11-22T09:00:00Z",
+      "type": "published",
+      "summary": "First published."
+    }
+  ]
+}

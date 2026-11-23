@@ -1,0 +1,111 @@
+{
+  "id": "GI-DEMO-2026-002",
+  "demo": true,
+  "record_type": "event",
+  "publication_status": "published",
+  "location": "Upper Sarin valley (fictional)",
+  "secondary_categories": [
+    "Humanitarian"
+  ],
+  "international_perspectives": [
+    {
+      "text": "A regional monitoring mission said it was unable to access the area to verify either account.",
+      "sources": [
+        2
+      ]
+    }
+  ],
+  "reported_claims": [
+    {
+      "text": "Kestria's defence ministry says four soldiers were killed by Valdoran shelling.",
+      "sources": [
+        0
+      ],
+      "attributed_to": "Kestria Ministry of Defence (demo)"
+    },
+    {
+      "text": "Valdor's government says Kestrian forces fired first and that two civilians were injured.",
+      "sources": [
+        1
+      ],
+      "attributed_to": "Valdor Government Press Office (demo)"
+    }
+  ],
+  "unknowns": [
+    "Which side fired first",
+    "Actual casualty figures"
+  ],
+  "reassessment_triggers": [
+    "Independent verification of casualties",
+    "Mobilisation announcements"
+  ],
+  "threatwatch_cves": [],
+  "title": "DEMO: Cross-border artillery exchanges along disputed valley",
+  "regions": [
+    "Asia-Pacific"
+  ],
+  "countries": [
+    "Kestria",
+    "Valdor"
+  ],
+  "primary_category": "Military",
+  "priority": "HIGH",
+  "evidence_status": "Reported",
+  "event_date": "2026-11-20",
+  "published_at": "2026-11-20T09:00:00Z",
+  "last_verified": "2026-11-23T09:10:00Z",
+  "last_substantive_update": "2026-11-22T18:00:00Z",
+  "trend": "Escalating",
+  "summary": "DEMONSTRATION RECORD. The fictional states of Kestria and Valdor each report artillery fire from the other side of a disputed valley. Casualty figures differ sharply between the two governments and have not been independently verified.",
+  "impact_assessment": "Observed: displacement of an estimated 3,000 residents (humanitarian agency figure). Potential: wider escalation if regular forces are reinforced; disruption to the valley's hydroelectric plant.",
+  "priority_rationale": "High: credible reports of armed exchanges between state forces with displacement, but casualty claims are contested and no independent verification is available.",
+  "monitoring_actions": [
+    "Follow monitoring-mission statements",
+    "Track displacement figures from humanitarian agencies"
+  ],
+  "sources": [
+    {
+      "publisher": "Kestria Ministry of Defence (demo)",
+      "title": "Statement on border incident",
+      "published": "2026-11-20",
+      "url": "https://example.org/demo/kestria-mod",
+      "type": "official",
+      "accessed": "2026-11-23",
+      "region": "Asia-Pacific",
+      "state_affiliated": true
+    },
+    {
+      "publisher": "Valdor Government Press Office (demo)",
+      "title": "Statement on provocation",
+      "published": "2026-11-20",
+      "url": "https://example.org/demo/valdor-gov",
+      "type": "official",
+      "accessed": "2026-11-23",
+      "region": "Asia-Pacific",
+      "state_affiliated": true
+    },
+    {
+      "publisher": "Regional Monitoring Mission (demo)",
+      "title": "Access update",
+      "published": "2026-11-22",
+      "url": "https://example.org/demo/monitor",
+      "type": "international_org",
+      "accessed": "2026-11-23",
+      "region": "Asia-Pacific"
+    }
+  ],
+  "update_history": [
+    {
+      "date": "2026-11-20T09:00:00Z",
+      "type": "published",
+      "summary": "First published."
+    },
+    {
+      "date": "2026-11-22T18:00:00Z",
+      "type": "trend",
+      "summary": "Trend changed from Stable to Escalating after second day of exchanges."
+    }
+  ],
+  "approved_by": "Aegis editorial desk (demo)",
+  "approved_at": "2026-11-23T09:10:00Z"
+}

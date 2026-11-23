@@ -1,0 +1,49 @@
+{
+ "demo": true,
+ "generated_at": "2026-11-23T23:15:09.652574Z",
+ "counts": {
+  "active": 8,
+  "critical": 1,
+  "high": 3,
+  "moderate": 3,
+  "low": 1,
+  "countries": 8,
+  "updated_24h": 1,
+  "historical": 1,
+  "signals": 3
+ },
+ "distribution": {
+  "region": {
+   "Africa": 2,
+   "Asia-Pacific": 1,
+   "Europe": 1,
+   "Middle East": 1,
+   "North America": 1,
+   "Latin America": 1,
+   "Global": 1
+  },
+  "category": {
+   "Geopolitical": 1,
+   "Military": 1,
+   "Cybersecurity": 1,
+   "AI": 1,
+   "Critical Infrastructure": 2,
+   "Humanitarian": 1,
+   "Environmental": 1
+  },
+  "evidence": {
+   "Confirmed": 3,
+   "Reported": 3,
+   "Disputed": 1,
+   "Analytical Assessment": 1
+  },
+  "priority": {
+   "CRITICAL": 1,
+   "HIGH": 3,
+   "MODERATE": 3,
+   "LOW": 1
+  }
+ },
+ "summary": "AEGIS is tracking 8 active global security events across 8 countries and territories. 1 is rated Critical and 3 High; 3 Moderate and 1 Low events are under observation. 1 event was substantively updated in the last 24 hours.\n\nCritical events: DEMO: Grid operator outage after coordinated intrusion (Northmark).\n\nHigh-priority events: DEMO: Cross-border artillery exchanges along disputed valley (Kestria, Valdor); DEMO: Flooding cuts fuel and food corridor (Republic of Amaru); DEMO: Ransomware disrupts regional hospital network (Freeland).\n\nBy region, activity is recorded in Africa (2), Asia-Pacific (1), Europe (1), Middle East (1), North America (1), Latin America (1), Global (1). By primary category: critical infrastructure (2), geopolitical (1), military (1), cybersecurity (1), AI (1), humanitarian (1), environmental (1).\n\nEvidence status across active events: 3 confirmed, 3 reported, 1 disputed and 1 analytical assessment. Trends: 2 escalating, 5 stable and 1 de-escalating.\n\nThe Emerging Global Security Signals panel lists 3 observed actions, such as preparedness guidance, exercises, official warnings and new advisories. A signal records what was observed; it does not by itself establish an imminent threat.\n\nPriority reflects impact, evidence quality, exposure, geographic scope, observed activity and urgency, not media attention, and is kept separate from evidence status. Reported allegations remain attributed claims until supported by independent evidence. Volume of reporting about a country is not a measure of its threat level. Each assessment lists its sources, unknowns and full update history.",
+ "word_count": 232
+}

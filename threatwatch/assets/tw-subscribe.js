@@ -20,7 +20,10 @@
     return /^https:\/\/[^\s"'<>]+$/.test(u) ? u : null;
   }
 
-  fetch("subscription-config.json", { cache: "no-cache" })
+  // Pages outside /threatwatch/ point at the shared config with data-config="../threatwatch/subscription-config.json".
+  var cfgUrl = form.getAttribute("data-config") || "subscription-config.json";
+  if (!/^(\.\.\/)?[\w\-\/]*subscription-config\.json$/.test(cfgUrl)) cfgUrl = "subscription-config.json";
+  fetch(cfgUrl, { cache: "no-cache" })
     .then(function (r) { return r.ok ? r.json() : null; })
     .then(function (c) { cfg = c; var u = endpoint(c); if (u) form.action = u; })
     .catch(function () { cfg = null; });

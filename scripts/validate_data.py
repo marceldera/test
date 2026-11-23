@@ -70,6 +70,8 @@ def main() -> int:
             txt = page.read_text()
             if 'id="subscribe-form"' in txt and f"form-action https://{host}" not in txt:
                 errs.append(f"{page.name}: CSP form-action does not allow the signup host {host}")
+    from tw.global_intel import build as build_global
+    errs += [f"global-intelligence: {e}" for e in build_global(REPO_ROOT, write=False)[1]]
     for e in errs:
         print("ERROR:", e)
     print("OK" if not errs else f"{len(errs)} error(s)")

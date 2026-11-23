@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Global Threat Intelligence Dashboard · AEGIS</title>
+<meta name="description" content="Free, evidence-based global threat intelligence from AEGIS: geopolitical, military, cyber, AI, infrastructure, humanitarian and environmental security across every region.">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; base-uri 'self'; form-action https://buttondown.com">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../threatwatch/assets/tw.css?v=20261123a">
+<link rel="stylesheet" href="css/gi.css?v=20261123a">
+<script src="../threatwatch/assets/tw-subscribe.js?v=20261123a" defer></script>
+<script src="js/gi.js?v=20261123a" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="tw-head">
+  <div class="tw-head-in">
+    <a class="brand" href="../" aria-label="Aegis Cyber Solutions — main website">
+      <svg width="28" height="32" viewBox="0 0 42 48" fill="none" aria-hidden="true">
+        <path d="M21 2L4 9V22C4 33 12 43 21 46C30 43 38 33 38 22V9L21 2Z" fill="url(#gisg)" stroke="rgba(47,127,255,0.5)" stroke-width="0.5"/>
+        <text x="21" y="31" text-anchor="middle" font-family="Exo 2" font-weight="800" font-size="18" fill="white">A</text>
+        <defs><linearGradient id="gisg" x1="21" y1="2" x2="21" y2="46" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#2f7fff"/><stop offset="100%" stop-color="#0a2060"/></linearGradient></defs>
+      </svg>
+      <span class="brand-txt"><b>AEGIS</b><span>Cyber Solutions · <em>Global Intelligence</em></span></span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="tw-nav">
+        <li><a class="home" href="../">← Aegis Home</a></li>
+        <li><a href="../threatwatch/">ThreatWatch</a></li>
+        <li><a href="../threatwatch/">Daily Zero-Day Brief</a></li>
+        <li><a href="./" aria-current="page">Global Intelligence</a></li>
+        <li><a href="../#why">About AEGIS</a></li>
+        <li><a href="#subscribe">Subscribe</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="gi-main">
+  <div class="eyebrow">Global Threat Intelligence Dashboard · updated daily 7:00 AM ET · not real-time</div>
+  <h1>Global Threat Intelligence</h1>
+  <p class="gi-tagline"><b>Global Coverage. Independent Verification. Evidence-Based Threat Assessment.</b> Geopolitical, military, cyber, AI, infrastructure, humanitarian and environmental security across every region, free and without registration.</p>
+  <div id="gi-demo" class="gi-demo" role="note" hidden><strong>Demonstration data.</strong> Every event on this page is fictional (invented countries, organisations and sources) and exists only to show how the dashboard works. It is not real intelligence.</div>
+
+  <div id="gi-metrics" class="gi-metrics" aria-label="Headline figures"><div class="gi-metric"><span class="v">…</span><span class="l">Loading</span></div></div>
+  <p id="gi-times" class="gi-times" role="status"></p>
+
+  <section class="paper gi-summary" aria-labelledby="sum-title">
+    <h2 id="sum-title" class="gi-h">Executive Summary</h2>
+    <p id="gi-summary-meta" class="gi-sub"></p>
+    <div id="gi-summary-body"></div>
+  </section>
+
+  <section class="paper" aria-labelledby="matrix-title">
+    <h2 id="matrix-title" class="gi-h">Global Threat Priority Matrix</h2>
+    <p class="gi-sub">Priority (impact, evidence quality, exposure, scope, observed activity, urgency) is kept separate from evidence status. Media attention is not a severity criterion.</p>
+    <form id="gi-filters" class="gi-filters" role="search" aria-label="Filter events">
+      <div class="gi-frow">
+        <fieldset class="gi-fgroup"><legend>Region</legend><div id="f-region" class="gi-chips"></div></fieldset>
+      </div>
+      <div class="gi-frow">
+        <fieldset class="gi-fgroup"><legend>Category</legend><div id="f-category" class="gi-chips"></div></fieldset>
+      </div>
+      <div class="gi-frow">
+        <fieldset class="gi-fgroup"><legend>Priority</legend><div id="f-priority" class="gi-chips"></div></fieldset>
+        <fieldset class="gi-fgroup"><legend>Evidence</legend><div id="f-evidence" class="gi-chips"></div></fieldset>
+      </div>
+      <div class="gi-frow">
+        <div><label class="gi-flabel" for="f-q">Search keyword or country</label><input id="f-q" type="search" maxlength="100" placeholder="e.g. grid, Kestria, GI-2026-0001"></div>
+        <div><label class="gi-flabel" for="f-period">Updated within</label><select id="f-period"></select></div>
+        <div><label class="gi-flabel" for="f-view">Show</label><select id="f-view"><option value="active">Active events</option><option value="resolved">Resolved / archived</option><option value="all">All</option></select></div>
+        <div><label class="gi-flabel" for="f-sort">Sort by</label><select id="f-sort"><option value="priority">Priority</option><option value="date">Latest update</option><option value="event">Event date</option><option value="country">Country</option></select></div>
+      </div>
+      <div class="gi-frow">
+        <div><label class="gi-flabel" for="f-from">Event date from</label><input id="f-from" type="date"></div>
+        <div><label class="gi-flabel" for="f-to">Event date to</label><input id="f-to" type="date"></div>
+        <button type="button" id="f-reset" class="gi-reset">Reset filters</button>
+      </div>
+    </form>
+    <p id="gi-count" class="gi-count" role="status" aria-live="polite"></p>
+    <div class="doc-tbl-wrap"><table class="doc-tbl gi-matrix">
+      <caption class="sr-only">Global threat priority matrix</caption>
+      <thead><tr><th scope="col">Threat ID</th><th scope="col">Region / Countries</th><th scope="col">Threat / Development</th><th scope="col">Category / Priority</th><th scope="col">Evidence status</th><th scope="col">Event / Verified</th><th scope="col">Trend</th><th scope="col">Details</th></tr></thead>
+      <tbody id="gi-rows"></tbody>
+    </table></div>
+  </section>
+
+  <section class="paper" aria-labelledby="sig-title">
+    <h2 id="sig-title" class="gi-h">Emerging Global Security Signals</h2>
+    <p class="gi-sub">Civil-defence guidance, preparedness campaigns, exercises, official warnings, verified outages, new cyber advisories and policy shifts. The observed action is shown separately from AEGIS's interpretation; a signal does not by itself establish an imminent threat.</p>
+    <div id="gi-signals" class="gi-signals"></div>
+  </section>
+
+  <section class="paper" aria-labelledby="dist-title">
+    <h2 id="dist-title" class="gi-h">Distribution of Active Events</h2>
+    <p class="gi-sub">Counts of published assessments only. The number of events or volume of reporting about a place is not a measure of its actual threat level.</p>
+    <div id="gi-charts" class="gi-charts"></div>
+  </section>
+
+  <section id="method" class="paper" aria-labelledby="method-title">
+    <h2 id="method-title" class="gi-h">Methodology and Definitions</h2>
+    <div class="doc-tbl-wrap"><table class="doc-tbl cols-2">
+      <thead><tr><th scope="col">Priority</th><th scope="col">Definition</th></tr></thead>
+      <tbody>
+        <tr><th scope="row"><span class="pri CRITICAL">Critical</span></th><td>Active severe consequences, significant confirmed activity, or potentially catastrophic disruption requiring urgent attention.</td></tr>
+        <tr><th scope="row"><span class="pri HIGH">High</span></th><td>Significant development or credible threat requiring heightened monitoring.</td></tr>
+        <tr><th scope="row"><span class="pri MODERATE">Moderate</span></th><td>Emerging risk, preparedness initiative, or development requiring observation.</td></tr>
+        <tr><th scope="row"><span class="pri LOW">Low</span></th><td>Limited immediate implications with potential intelligence relevance.</td></tr>
+      </tbody>
+    </table></div>
+    <div class="doc-tbl-wrap"><table class="doc-tbl cols-2">
+      <thead><tr><th scope="col">Evidence status</th><th scope="col">Meaning</th></tr></thead>
+      <tbody>
+        <tr><th scope="row"><span class="evi Confirmed">Confirmed</span></th><td>Supported by primary evidence or at least two genuinely independent sources, and approved by an AEGIS editor.</td></tr>
+        <tr><th scope="row"><span class="evi Reported">Reported</span></th><td>Attributed to a named source but not independently verified.</td></tr>
+        <tr><th scope="row"><span class="evi Disputed">Disputed</span></th><td>Credible sources disagree; each account is shown with its attribution.</td></tr>
+        <tr><th scope="row"><span class="evi AnalyticalAssessment">Analytical Assessment</span></th><td>AEGIS analysis of available evidence, labelled as analysis rather than fact.</td></tr>
+      </tbody>
+    </table></div>
+    <p>AEGIS prefers primary documents, seeks at least two independent sources including affected-region reporting, and counts syndicated copies of the same report once. State-affiliated and Western official statements are treated alike, as attributed claims until supported by evidence. Updates and corrections are added to each assessment's history and never silently overwritten. Cyber vulnerabilities (CVEs, KEV, EPSS, patches) are covered in <a href="../threatwatch/">ThreatWatch</a> and cross-linked from relevant events.</p>
+  </section>
+</main>
+
+<section id="subscribe" class="sub-band" aria-labelledby="subscribe-title">
+  <div class="sub-in">
+    <div class="sub-copy">
+      <h2 id="subscribe-title">Get AEGIS intelligence by email</h2>
+      <p>Free updates in your inbox. Email address only; you’ll confirm by email, and you can unsubscribe anytime.</p>
+    </div>
+    <form id="subscribe-form" class="sub-form" method="post" target="_blank" novalidate data-config="../threatwatch/subscription-config.json">
+      <label for="sub-email" class="sr-only">Email address</label>
+      <input id="sub-email" name="email" type="email" inputmode="email" autocomplete="email" required maxlength="254" placeholder="you@company.com">
+      <input type="hidden" name="embed" value="1">
+      <button type="submit">Subscribe</button>
+      <p id="sub-msg" class="sub-msg" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<footer class="tw-foot">
+  <div class="tw-foot-in">
+    <span>© 2026 Aegis Cyber Solutions LLC · Global Intelligence is free and public.</span>
+    <nav aria-label="Footer">
+      <ul>
+        <li><a href="../">Return to main website</a></li>
+        <li><a href="./">Global Intelligence</a></li>
+        <li><a href="../threatwatch/">ThreatWatch Daily Brief</a></li>
+        <li><a href="../threatwatch/monthly.html">Monthly Summary</a></li>
+        <li><a href="./#method">Methodology</a></li>
+        <li><a href="mailto:info@aegisdefensecyber.com">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>

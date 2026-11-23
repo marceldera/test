@@ -1,0 +1,79 @@
+{
+  "id": "GI-DEMO-2026-006",
+  "demo": true,
+  "record_type": "event",
+  "publication_status": "published",
+  "location": "",
+  "secondary_categories": [
+    "Humanitarian"
+  ],
+  "international_perspectives": [],
+  "reported_claims": [
+    {
+      "text": "The opposition alleges tally-sheet discrepancies in four districts.",
+      "sources": [
+        0
+      ],
+      "attributed_to": "Opposition coalition (demo)"
+    },
+    {
+      "text": "The electoral authority says audits found no material discrepancies.",
+      "sources": [
+        1
+      ],
+      "attributed_to": "Electoral authority (demo)"
+    }
+  ],
+  "unknowns": [],
+  "reassessment_triggers": [],
+  "threatwatch_cves": [],
+  "title": "DEMO: Disputed election results prompt nationwide protests",
+  "regions": [
+    "Latin America"
+  ],
+  "countries": [
+    "Costa Verde"
+  ],
+  "primary_category": "Geopolitical",
+  "priority": "MODERATE",
+  "evidence_status": "Disputed",
+  "event_date": "2026-11-15",
+  "published_at": "2026-11-16T10:00:00Z",
+  "last_verified": "2026-11-22T20:00:00Z",
+  "last_substantive_update": "2026-11-22T20:00:00Z",
+  "trend": "Stable",
+  "summary": "DEMONSTRATION RECORD. Opposition parties in the fictional state of Costa Verde reject provisional election results; the electoral authority stands by its count. Protests have been largely peaceful.",
+  "impact_assessment": "Observed: peaceful protests in the capital. Potential: unrest if the certification date passes without an agreed audit.",
+  "priority_rationale": "Moderate: contested political situation with limited violence so far.",
+  "monitoring_actions": [
+    "Track certification timeline",
+    "Watch for independent observer reports"
+  ],
+  "sources": [
+    {
+      "publisher": "Opposition coalition (demo)",
+      "title": "Press release",
+      "published": "2026-11-16",
+      "url": "https://example.org/demo/opposition",
+      "type": "primary",
+      "accessed": "2026-11-23",
+      "region": "Latin America"
+    },
+    {
+      "publisher": "Costa Verde Electoral Authority (demo)",
+      "title": "Audit statement",
+      "published": "2026-11-22",
+      "url": "https://example.org/demo/electoral",
+      "type": "official",
+      "accessed": "2026-11-23",
+      "region": "Latin America"
+    }
+  ],
+  "update_history": [
+    {
+      "date": "2026-11-16T10:00:00Z",
+      "type": "published",
+      "summary": "First published."
+    }
+  ]
+}

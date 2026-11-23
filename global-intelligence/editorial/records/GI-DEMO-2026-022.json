@@ -1,0 +1,76 @@
+{
+  "id": "GI-DEMO-2026-022",
+  "demo": true,
+  "record_type": "signal",
+  "publication_status": "published",
+  "location": "",
+  "secondary_categories": [],
+  "international_perspectives": [],
+  "reported_claims": [],
+  "unknowns": [],
+  "reassessment_triggers": [],
+  "threatwatch_cves": [
+    "CVE-2026-123633"
+  ],
+  "title": "DEMO: National CERT issues advisory on remote-access gateways",
+  "regions": [
+    "Global"
+  ],
+  "countries": [
+    "Multiple"
+  ],
+  "primary_category": "Cybersecurity",
+  "priority": "MODERATE",
+  "evidence_status": "Confirmed",
+  "event_date": "2026-11-21",
+  "published_at": "2026-11-21T18:00:00Z",
+  "last_verified": "2026-11-22T18:00:00Z",
+  "last_substantive_update": "2026-11-21T18:00:00Z",
+  "trend": "Stable",
+  "observed_action": "A joint advisory urges patching of remote-access gateways after exploitation was observed.",
+  "interpretation": "Confirms active exploitation; details and CVEs are tracked in ThreatWatch.",
+  "summary": "DEMONSTRATION RECORD. Joint cyber advisory.",
+  "confirmed_facts": [
+    {
+      "text": "Advisory published jointly by two national agencies.",
+      "sources": [
+        0,
+        1
+      ]
+    }
+  ],
+  "impact_assessment": "Organisations running affected gateways are exposed.",
+  "priority_rationale": "Moderate: confirmed exploitation of widely deployed products.",
+  "monitoring_actions": [
+    "Check ThreatWatch for the referenced CVEs"
+  ],
+  "sources": [
+    {
+      "publisher": "National CERT A (demo)",
+      "title": "Joint advisory",
+      "published": "2026-11-21",
+      "url": "https://example.org/demo/cert-a",
+      "type": "advisory",
+      "accessed": "2026-11-23",
+      "region": "Europe"
+    },
+    {
+      "publisher": "National CERT B (demo)",
+      "title": "Joint advisory (co-sealed)",
+      "published": "2026-11-21",
+      "url": "https://example.org/demo/cert-b",
+      "type": "advisory",
+      "accessed": "2026-11-23",
+      "region": "North America"
+    }
+  ],
+  "update_history": [
+    {
+      "date": "2026-11-21T18:00:00Z",
+      "type": "published",
+      "summary": "First published."
+    }
+  ],
+  "approved_by": "Aegis editorial desk (demo)",
+  "approved_at": "2026-11-22T18:00:00Z"
+}
