@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "month": "2026-10",
   "complete": true,
-  "updatedAt": "2026-11-22T18:22:51Z",
+  "updatedAt": "2026-11-23T22:16:45Z",
   "metrics": [
     {
       "id": "kev_added",
@@ -11,7 +11,7 @@
       "rule": "CVE entries whose CISA dateAdded falls in the month.",
       "source": "CISA KEV",
       "window": "2026-10-01 to 2026-10-31 (dateAdded, ET calendar)",
-      "updatedAt": "2026-11-22T18:22:51Z"
+      "updatedAt": "2026-11-23T22:16:45Z"
     },
     {
       "id": "vendors",
@@ -20,7 +20,7 @@
       "rule": "Unique vendorProject values among the month’s KEV entries.",
       "source": "CISA KEV",
       "window": "2026-10-01 to 2026-10-31 (dateAdded, ET calendar)",
-      "updatedAt": "2026-11-22T18:22:51Z"
+      "updatedAt": "2026-11-23T22:16:45Z"
     },
     {
       "id": "ransomware",
@@ -29,16 +29,16 @@
       "rule": "Month’s KEV entries where CISA sets knownRansomwareCampaignUse = Known.",
       "source": "CISA KEV",
       "window": "2026-10-01 to 2026-10-31 (dateAdded, ET calendar)",
-      "updatedAt": "2026-11-22T18:22:51Z"
+      "updatedAt": "2026-11-23T22:16:45Z"
     },
     {
       "id": "epss90",
       "label": "EPSS ≥ 90th percentile",
       "value": 29,
-      "rule": "Month’s KEV entries with EPSS percentile ≥ 0.90 (scores as of 2026-11-22).",
+      "rule": "Month’s KEV entries with EPSS percentile ≥ 0.90 (scores as of 2026-11-23).",
       "source": "FIRST EPSS",
       "window": "2026-10-01 to 2026-10-31 (dateAdded, ET calendar)",
-      "updatedAt": "2026-11-22T18:22:51Z"
+      "updatedAt": "2026-11-23T22:16:45Z"
     }
   ],
   "notice": "These are CISA KEV catalog counts, not a count of total cyber incidents.",
@@ -50,7 +50,7 @@
       "product": "FortiMail",
       "concern": "Fortinet FortiMail Path Traversal Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.91842,
+      "epssPercentile": 0.91844,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -61,7 +61,7 @@
       "product": "Zammad",
       "concern": "Zammad GmbH Zammad Session Fixation Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.98928,
+      "epssPercentile": 0.98927,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -72,7 +72,7 @@
       "product": "Zammad",
       "concern": "Zammad GmbH Zammad Improper Privilege Management Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.95992,
+      "epssPercentile": 0.95993,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -83,7 +83,7 @@
       "product": "NetScaler",
       "concern": "Citrix NetScaler Improper Restriction of Operations within the Bounds of a Memory Buffer Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.96099,
+      "epssPercentile": 0.961,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -138,7 +138,7 @@
       "product": "Strapi",
       "concern": "Strapi Cleartext Storage of Sensitive Information Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.9103,
+      "epssPercentile": 0.91032,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -160,7 +160,7 @@
       "product": "Windows",
       "concern": "Microsoft Windows Command Injection Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.95667,
+      "epssPercentile": 0.95668,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -171,7 +171,7 @@
       "product": "PAN-OS",
       "concern": "Palo Alto Networks PAN-OS Code Injection Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.82567,
+      "epssPercentile": 0.82574,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -204,7 +204,7 @@
       "product": "Secure Email Gateway",
       "concern": "Cisco Secure Email Gateway Relative Path Traversal Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.93218,
+      "epssPercentile": 0.9322,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -226,7 +226,7 @@
       "product": "Multiple Products",
       "concern": "Fortinet Multiple Products Path Traversal Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.73101,
+      "epssPercentile": 0.73106,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -248,7 +248,7 @@
       "product": "SiteGuard Server Edition",
       "concern": "EG Secure Solutions SiteGuard Server Edition OS Command Injection Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.85291,
+      "epssPercentile": 0.85295,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -259,7 +259,7 @@
       "product": "Software Center",
       "concern": "Siemens Software Center Uncontrolled Search Path Element Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.62696,
+      "epssPercentile": 0.62704,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -281,7 +281,7 @@
       "product": "Media Server",
       "concern": "Plex Media Server Improper Neutralization of Encoded URI Schemes in a Web Page Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.96357,
+      "epssPercentile": 0.96358,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -292,7 +292,7 @@
       "product": "Media Server",
       "concern": "Plex Media Server Server-Side Request Forgery (SSRF) Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.95936,
+      "epssPercentile": 0.95937,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -303,7 +303,7 @@
       "product": "Media Server",
       "concern": "Plex Media Server External Control of File Name or Path Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.97473,
+      "epssPercentile": 0.97472,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -325,7 +325,7 @@
       "product": "VeloCloud Orchestrator",
       "concern": "Arista VeloCloud Orchestrator SQL Injection Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.94728,
+      "epssPercentile": 0.9473,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -380,7 +380,7 @@
       "product": "VMware ESX",
       "concern": "Broadcom VMWare ESX Insufficient Logging Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.6058,
+      "epssPercentile": 0.60589,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -402,7 +402,7 @@
       "product": "Secure Firewall ASA Software and Cisco Secure FTD Software",
       "concern": "Cisco Secure Firewall ASA Software and Cisco Secure FTD Software Unchecked Return Value to NULL Pointer Dereference Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.95191,
+      "epssPercentile": 0.95193,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -424,7 +424,7 @@
       "product": "Connect Secure",
       "concern": "Ivanti Connect Secure Missing Authentication for Critical Function Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.57641,
+      "epssPercentile": 0.57648,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -435,7 +435,7 @@
       "product": "Connect Secure",
       "concern": "Ivanti Connect Secure Generation of Predictable Numbers or Identifiers Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.63414,
+      "epssPercentile": 0.63422,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     }
@@ -495,7 +495,7 @@
               ],
               [
                 "CVEs published to NVD",
-                "17,051 (8,568 High/Critical)"
+                "17,051 (8,569 High/Critical)"
               ]
             ]
           },
@@ -1085,6 +1085,6 @@
       }
     ],
     "footer": "Enterprise Cyber Threat Intelligence | October 2026",
-    "generatedAt": "2026-11-22T18:24:41Z"
+    "generatedAt": "2026-11-23T22:19:58Z"
   }
 }

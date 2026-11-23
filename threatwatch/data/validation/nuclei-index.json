@@ -1,8 +1,8 @@
 {
   "repo": "projectdiscovery/nuclei-templates",
-  "commit": "a346d8f",
-  "indexedAt": "2026-11-22T18:22:53Z",
-  "count": 4771,
+  "commit": "a79bfa0",
+  "indexedAt": "2026-11-23T22:16:49Z",
+  "count": 4822,
   "templates": {
     "CVE-2014-0160": [
       {
@@ -484,24 +484,6 @@
         "templateSeverity": "critical",
         "upstreamVerified": false,
         "invasiveness": "safe-probe",
-        "outOfBand": false,
-        "reviewStatus": "unreviewed",
-        "lastReviewed": null,
-        "reviewNote": null
-      }
-    ],
-    "CVE-2025-22457": [
-      {
-        "method": "nuclei",
-        "id": "CVE-2025-22457",
-        "name": "Ivanti Connect Secure - Stack-based Buffer Overflow",
-        "path": "code/cves/2025/CVE-2025-22457.yaml",
-        "protocol": "code",
-        "publisher": "ProjectDiscovery nuclei-templates (community)",
-        "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/code/cves/2025/CVE-2025-22457.yaml",
-        "templateSeverity": "critical",
-        "upstreamVerified": false,
-        "invasiveness": "intrusive",
         "outOfBand": false,
         "reviewStatus": "unreviewed",
         "lastReviewed": null,
@@ -3255,6 +3237,24 @@
         "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2010/CVE-2010-1870.yaml",
         "templateSeverity": "medium",
         "upstreamVerified": false,
+        "invasiveness": "safe-probe",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2010-1871": [
+      {
+        "method": "nuclei",
+        "id": "CVE-2010-1871",
+        "name": "JBoss Seam 2 - Expression Language Injection (Remote Code Execution)",
+        "path": "http/cves/2010/CVE-2010-1871.yaml",
+        "protocol": "http",
+        "publisher": "ProjectDiscovery nuclei-templates (community)",
+        "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2010/CVE-2010-1871.yaml",
+        "templateSeverity": "high",
+        "upstreamVerified": true,
         "invasiveness": "safe-probe",
         "outOfBand": false,
         "reviewStatus": "unreviewed",
@@ -8313,7 +8313,7 @@
         "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2016/CVE-2016-5734.yaml",
         "templateSeverity": "critical",
         "upstreamVerified": true,
-        "invasiveness": "safe-probe",
+        "invasiveness": "intrusive",
         "outOfBand": false,
         "reviewStatus": "unreviewed",
         "lastReviewed": null,
@@ -8981,6 +8981,24 @@
         "upstreamVerified": false,
         "invasiveness": "intrusive",
         "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2017-12636": [
+      {
+        "method": "nuclei",
+        "id": "CVE-2017-12636",
+        "name": "Apache CouchDB < 1.7.0 / 2.x < 2.1.1 - Query Server Remote Code Execution",
+        "path": "http/cves/2017/CVE-2017-12636.yaml",
+        "protocol": "http",
+        "publisher": "ProjectDiscovery nuclei-templates (community)",
+        "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2017/CVE-2017-12636.yaml",
+        "templateSeverity": "high",
+        "upstreamVerified": true,
+        "invasiveness": "intrusive",
+        "outOfBand": true,
         "reviewStatus": "unreviewed",
         "lastReviewed": null,
         "reviewNote": null
@@ -10706,6 +10724,24 @@
         "publisher": "ProjectDiscovery nuclei-templates (community)",
         "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2017/CVE-2017-8229.yaml",
         "templateSeverity": "critical",
+        "upstreamVerified": true,
+        "invasiveness": "safe-probe",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2017-8295": [
+      {
+        "method": "nuclei",
+        "id": "CVE-2017-8295",
+        "name": "WordPress < 5.5 - Password Reset Poisoning via Host Header Injection",
+        "path": "http/cves/2017/CVE-2017-8295.yaml",
+        "protocol": "http",
+        "publisher": "ProjectDiscovery nuclei-templates (community)",
+        "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2017/CVE-2017-8295.yaml",
+        "templateSeverity": "medium",
         "upstreamVerified": true,
         "invasiveness": "safe-probe",
         "outOfBand": false,
@@ -14269,6 +14305,24 @@
         "protocol": "http",
         "publisher": "ProjectDiscovery nuclei-templates (community)",
         "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2018/CVE-2018-8033.yaml",
+        "templateSeverity": "high",
+        "upstreamVerified": true,
+        "invasiveness": "safe-probe",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2018-8581": [
+      {
+        "method": "nuclei",
+        "id": "CVE-2018-8581",
+        "name": "Microsoft Exchange Server - SSRF Privilege Escalation",
+        "path": "http/cves/2018/CVE-2018-8581.yaml",
+        "protocol": "http",
+        "publisher": "ProjectDiscovery nuclei-templates (community)",
+        "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2018/CVE-2018-8581.yaml",
         "templateSeverity": "high",
         "upstreamVerified": true,
         "invasiveness": "safe-probe",
@@ -19619,6 +19673,24 @@
         "upstreamVerified": true,
         "invasiveness": "safe-probe",
         "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2020-13925": [
+      {
+        "method": "nuclei",
+        "id": "CVE-2020-13925",
+        "name": "Apache Kylin < 3.1.0 - Diagnosis API Unauthenticated Command Injection",
+        "path": "http/cves/2020/CVE-2020-13925.yaml",
+        "protocol": "http",
+        "publisher": "ProjectDiscovery nuclei-templates (community)",
+        "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2020/CVE-2020-13925.yaml",
+        "templateSeverity": "critical",
+        "upstreamVerified": true,
+        "invasiveness": "safe-probe",
+        "outOfBand": true,
         "reviewStatus": "unreviewed",
         "lastReviewed": null,
         "reviewNote": null
@@ -25269,6 +25341,24 @@
         "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2021/CVE-2021-22881.yaml",
         "templateSeverity": "medium",
         "upstreamVerified": false,
+        "invasiveness": "safe-probe",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2021-22893": [
+      {
+        "method": "nuclei",
+        "id": "CVE-2021-22893",
+        "name": "Pulse Connect Secure 9.0R3 - 9.1R11.3 - Authentication Bypass",
+        "path": "http/cves/2021/CVE-2021-22893.yaml",
+        "protocol": "http",
+        "publisher": "ProjectDiscovery nuclei-templates (community)",
+        "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2021/CVE-2021-22893.yaml",
+        "templateSeverity": "critical",
+        "upstreamVerified": true,
         "invasiveness": "safe-probe",
         "outOfBand": false,
         "reviewStatus": "unreviewed",
@@ -37042,6 +37132,24 @@
         "templateSeverity": "critical",
         "upstreamVerified": false,
         "invasiveness": "safe-probe",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2022-23221": [
+      {
+        "method": "nuclei",
+        "id": "CVE-2022-23221",
+        "name": "H2 Database Console - JDBC URL Pre-Auth RCE",
+        "path": "http/cves/2022/CVE-2022-23221.yaml",
+        "protocol": "http",
+        "publisher": "ProjectDiscovery nuclei-templates (community)",
+        "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2022/CVE-2022-23221.yaml",
+        "templateSeverity": "critical",
+        "upstreamVerified": true,
+        "invasiveness": "intrusive",
         "outOfBand": false,
         "reviewStatus": "unreviewed",
         "lastReviewed": null,
@@ -54202,6 +54310,24 @@
         "reviewNote": null
       }
     ],
+    "CVE-2023-7334": [
+      {
+        "method": "nuclei",
+        "id": "CVE-2023-7334",
+        "name": "Chanjet T+ (AjaxPro) - Deserialization of Untrusted Data",
+        "path": "http/cves/2023/CVE-2023-7334.yaml",
+        "protocol": "http",
+        "publisher": "ProjectDiscovery nuclei-templates (community)",
+        "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2023/CVE-2023-7334.yaml",
+        "templateSeverity": "critical",
+        "upstreamVerified": false,
+        "invasiveness": "safe-probe",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
     "CVE-2023-7335": [
       {
         "method": "nuclei",
@@ -56445,6 +56571,24 @@
         "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2024/CVE-2024-1751.yaml",
         "templateSeverity": "high",
         "upstreamVerified": true,
+        "invasiveness": "safe-probe",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2024-20353": [
+      {
+        "method": "nuclei",
+        "id": "CVE-2024-20353",
+        "name": "Cisco ASA & FTD - Denial of Service",
+        "path": "http/cves/2024/CVE-2024-20353.yaml",
+        "protocol": "http",
+        "publisher": "ProjectDiscovery nuclei-templates (community)",
+        "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2024/CVE-2024-20353.yaml",
+        "templateSeverity": "high",
+        "upstreamVerified": false,
         "invasiveness": "safe-probe",
         "outOfBand": false,
         "reviewStatus": "unreviewed",
@@ -66298,6 +66442,24 @@
         "reviewNote": null
       }
     ],
+    "CVE-2025-13877": [
+      {
+        "method": "nuclei",
+        "id": "CVE-2025-13877",
+        "name": "NocoBase - Default JWT Secret Authentication Bypass",
+        "path": "http/cves/2025/CVE-2025-13877.yaml",
+        "protocol": "http",
+        "publisher": "ProjectDiscovery nuclei-templates (community)",
+        "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2025/CVE-2025-13877.yaml",
+        "templateSeverity": "medium",
+        "upstreamVerified": true,
+        "invasiveness": "safe-probe",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
     "CVE-2025-13920": [
       {
         "method": "nuclei",
@@ -66814,6 +66976,24 @@
         "templateSeverity": "critical",
         "upstreamVerified": true,
         "invasiveness": "intrusive",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2025-22457": [
+      {
+        "method": "nuclei",
+        "id": "CVE-2025-22457",
+        "name": "Ivanti Connect Secure < 22.7R2.6 - Stack-based Buffer Overflow",
+        "path": "http/cves/2025/CVE-2025-22457.yaml",
+        "protocol": "http",
+        "publisher": "ProjectDiscovery nuclei-templates (community)",
+        "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2025/CVE-2025-22457.yaml",
+        "templateSeverity": "critical",
+        "upstreamVerified": false,
+        "invasiveness": "safe-probe",
         "outOfBand": false,
         "reviewStatus": "unreviewed",
         "lastReviewed": null,
@@ -72166,6 +72346,24 @@
         "reviewNote": null
       }
     ],
+    "CVE-2025-64179": [
+      {
+        "method": "nuclei",
+        "id": "CVE-2025-64179",
+        "name": "lakeFS < 1.71.0 - Unauthenticated Usage Report Disclosure",
+        "path": "http/cves/2025/CVE-2025-64179.yaml",
+        "protocol": "http",
+        "publisher": "ProjectDiscovery nuclei-templates (community)",
+        "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2025/CVE-2025-64179.yaml",
+        "templateSeverity": "medium",
+        "upstreamVerified": true,
+        "invasiveness": "safe-probe",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
     "CVE-2025-64328": [
       {
         "method": "nuclei",
@@ -73156,6 +73354,24 @@
         "reviewNote": null
       }
     ],
+    "CVE-2026-0769": [
+      {
+        "method": "nuclei",
+        "id": "CVE-2026-0769",
+        "name": "Langflow - Remote Code Execution via custom_component eval_custom_component_code",
+        "path": "http/cves/2026/CVE-2026-0769.yaml",
+        "protocol": "http",
+        "publisher": "ProjectDiscovery nuclei-templates (community)",
+        "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2026/CVE-2026-0769.yaml",
+        "templateSeverity": "critical",
+        "upstreamVerified": true,
+        "invasiveness": "safe-probe",
+        "outOfBand": true,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
     "CVE-2026-0770": [
       {
         "method": "nuclei",
@@ -73202,6 +73418,24 @@
         "publisher": "ProjectDiscovery nuclei-templates (community)",
         "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2026/CVE-2026-0926.yaml",
         "templateSeverity": "critical",
+        "upstreamVerified": true,
+        "invasiveness": "safe-probe",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2026-100519": [
+      {
+        "method": "nuclei",
+        "id": "CVE-2026-100519",
+        "name": "PDF Generator for WP <= 1.6.5 - Unauthenticated Arbitrary Post PDF Disclosure via genpdf",
+        "path": "http/cves/2026/CVE-2026-100519.yaml",
+        "protocol": "http",
+        "publisher": "ProjectDiscovery nuclei-templates (community)",
+        "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2026/CVE-2026-100519.yaml",
+        "templateSeverity": "medium",
         "upstreamVerified": true,
         "invasiveness": "safe-probe",
         "outOfBand": false,
@@ -73732,6 +73966,24 @@
         "reviewNote": null
       }
     ],
+    "CVE-2026-112947": [
+      {
+        "method": "nuclei",
+        "id": "CVE-2026-112947",
+        "name": "Vite Dev Server - server.fs Bypass via vite-wasm-instance",
+        "path": "http/cves/2026/CVE-2026-112947.yaml",
+        "protocol": "http",
+        "publisher": "ProjectDiscovery nuclei-templates (community)",
+        "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2026/CVE-2026-112947.yaml",
+        "templateSeverity": "medium",
+        "upstreamVerified": true,
+        "invasiveness": "safe-probe",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
     "CVE-2026-11387": [
       {
         "method": "nuclei",
@@ -73762,6 +74014,24 @@
         "templateSeverity": "critical",
         "upstreamVerified": true,
         "invasiveness": "intrusive",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2026-114516": [
+      {
+        "method": "nuclei",
+        "id": "CVE-2026-114516",
+        "name": "Etherpad 1.8.14 - 3.3.2 - Path Traversal",
+        "path": "http/cves/2026/CVE-2026-114516.yaml",
+        "protocol": "http",
+        "publisher": "ProjectDiscovery nuclei-templates (community)",
+        "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2026/CVE-2026-114516.yaml",
+        "templateSeverity": "critical",
+        "upstreamVerified": true,
+        "invasiveness": "safe-probe",
         "outOfBand": false,
         "reviewStatus": "unreviewed",
         "lastReviewed": null,
@@ -73995,7 +74265,7 @@
         "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2026/CVE-2026-116606.yaml",
         "templateSeverity": "critical",
         "upstreamVerified": false,
-        "invasiveness": "safe-probe",
+        "invasiveness": "intrusive",
         "outOfBand": false,
         "reviewStatus": "unreviewed",
         "lastReviewed": null,
@@ -74140,6 +74410,24 @@
         "templateSeverity": "high",
         "upstreamVerified": true,
         "invasiveness": "safe-probe",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2026-118423": [
+      {
+        "method": "nuclei",
+        "id": "CVE-2026-118423",
+        "name": "WP Libre Form - Unrestricted File Upload RCE",
+        "path": "http/cves/2026/CVE-2026-118423.yaml",
+        "protocol": "http",
+        "publisher": "ProjectDiscovery nuclei-templates (community)",
+        "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2026/CVE-2026-118423.yaml",
+        "templateSeverity": "critical",
+        "upstreamVerified": true,
+        "invasiveness": "intrusive",
         "outOfBand": false,
         "reviewStatus": "unreviewed",
         "lastReviewed": null,
@@ -74740,6 +75028,24 @@
         "reviewNote": null
       }
     ],
+    "CVE-2026-129448": [
+      {
+        "method": "nuclei",
+        "id": "CVE-2026-129448",
+        "name": "Apache Roller - XML-RPC Pre-Auth Deserialization RCE",
+        "path": "http/cves/2026/CVE-2026-129448.yaml",
+        "protocol": "http",
+        "publisher": "ProjectDiscovery nuclei-templates (community)",
+        "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2026/CVE-2026-129448.yaml",
+        "templateSeverity": "critical",
+        "upstreamVerified": true,
+        "invasiveness": "safe-probe",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
     "CVE-2026-1296": [
       {
         "method": "nuclei",
@@ -74830,6 +75136,24 @@
         "reviewNote": null
       }
     ],
+    "CVE-2026-130765": [
+      {
+        "method": "nuclei",
+        "id": "CVE-2026-130765",
+        "name": "Obot <= 0.26.3 - Open Redirect via Tab Character in Sign-out Redirect",
+        "path": "http/cves/2026/CVE-2026-130765.yaml",
+        "protocol": "http",
+        "publisher": "ProjectDiscovery nuclei-templates (community)",
+        "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2026/CVE-2026-130765.yaml",
+        "templateSeverity": "medium",
+        "upstreamVerified": true,
+        "invasiveness": "safe-probe",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
     "CVE-2026-1314": [
       {
         "method": "nuclei",
@@ -74878,6 +75202,42 @@
         "templateSeverity": "medium",
         "upstreamVerified": true,
         "invasiveness": "safe-probe",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2026-131720": [
+      {
+        "method": "nuclei",
+        "id": "CVE-2026-131720",
+        "name": "BookIt <= 2.6.0.8 - Unauthenticated Payment Settings (incl. Stripe Secret Key) Disclosure via Calendar Vue Prop",
+        "path": "http/cves/2026/CVE-2026-131720.yaml",
+        "protocol": "http",
+        "publisher": "ProjectDiscovery nuclei-templates (community)",
+        "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2026/CVE-2026-131720.yaml",
+        "templateSeverity": "high",
+        "upstreamVerified": true,
+        "invasiveness": "safe-probe",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2026-133968": [
+      {
+        "method": "nuclei",
+        "id": "CVE-2026-133968",
+        "name": "monailabel - Directory Traversal",
+        "path": "http/cves/2026/CVE-2026-133968.yaml",
+        "protocol": "http",
+        "publisher": "ProjectDiscovery nuclei-templates (community)",
+        "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2026/CVE-2026-133968.yaml",
+        "templateSeverity": "critical",
+        "upstreamVerified": true,
+        "invasiveness": "intrusive",
         "outOfBand": false,
         "reviewStatus": "unreviewed",
         "lastReviewed": null,
@@ -75712,6 +76072,24 @@
         "reviewNote": null
       }
     ],
+    "CVE-2026-20045": [
+      {
+        "method": "nuclei",
+        "id": "CVE-2026-20045",
+        "name": "Cisco Unified Communications Manager - Remote Code Execution",
+        "path": "http/cves/2026/CVE-2026-20045.yaml",
+        "protocol": "http",
+        "publisher": "ProjectDiscovery nuclei-templates (community)",
+        "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2026/CVE-2026-20045.yaml",
+        "templateSeverity": "critical",
+        "upstreamVerified": false,
+        "invasiveness": "safe-probe",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
     "CVE-2026-20079": [
       {
         "method": "nuclei",
@@ -75723,6 +76101,24 @@
         "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2026/CVE-2026-20079.yaml",
         "templateSeverity": "critical",
         "upstreamVerified": true,
+        "invasiveness": "safe-probe",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2026-20131": [
+      {
+        "method": "nuclei",
+        "id": "CVE-2026-20131",
+        "name": "Cisco Secure Firewall Management Center - RCE",
+        "path": "http/cves/2026/CVE-2026-20131.yaml",
+        "protocol": "http",
+        "publisher": "ProjectDiscovery nuclei-templates (community)",
+        "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2026/CVE-2026-20131.yaml",
+        "templateSeverity": "critical",
+        "upstreamVerified": false,
         "invasiveness": "safe-probe",
         "outOfBand": false,
         "reviewStatus": "unreviewed",
@@ -75777,6 +76173,24 @@
         "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2026/CVE-2026-20896.yaml",
         "templateSeverity": "critical",
         "upstreamVerified": true,
+        "invasiveness": "safe-probe",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2026-20963": [
+      {
+        "method": "nuclei",
+        "id": "CVE-2026-20963",
+        "name": "Microsoft Office SharePoint - Insecure Deserialization",
+        "path": "http/cves/2026/CVE-2026-20963.yaml",
+        "protocol": "http",
+        "publisher": "ProjectDiscovery nuclei-templates (community)",
+        "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2026/CVE-2026-20963.yaml",
+        "templateSeverity": "critical",
+        "upstreamVerified": false,
         "invasiveness": "safe-probe",
         "outOfBand": false,
         "reviewStatus": "unreviewed",
@@ -76270,6 +76684,24 @@
         "reviewNote": null
       }
     ],
+    "CVE-2026-23734": [
+      {
+        "method": "nuclei",
+        "id": "CVE-2026-23734",
+        "name": "XWiki Platform - Path Traversal",
+        "path": "http/cves/2026/CVE-2026-23734.yaml",
+        "protocol": "http",
+        "publisher": "ProjectDiscovery nuclei-templates (community)",
+        "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2026/CVE-2026-23734.yaml",
+        "templateSeverity": "critical",
+        "upstreamVerified": true,
+        "invasiveness": "safe-probe",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
     "CVE-2026-23744": [
       {
         "method": "nuclei",
@@ -76532,6 +76964,24 @@
         "publisher": "ProjectDiscovery nuclei-templates (community)",
         "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2026/CVE-2026-25616.yaml",
         "templateSeverity": "medium",
+        "upstreamVerified": true,
+        "invasiveness": "safe-probe",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2026-25660": [
+      {
+        "method": "nuclei",
+        "id": "CVE-2026-25660",
+        "name": "CodeChecker - Authentication Bypass",
+        "path": "http/cves/2026/CVE-2026-25660.yaml",
+        "protocol": "http",
+        "publisher": "ProjectDiscovery nuclei-templates (community)",
+        "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2026/CVE-2026-25660.yaml",
+        "templateSeverity": "critical",
         "upstreamVerified": true,
         "invasiveness": "safe-probe",
         "outOfBand": false,
@@ -76821,7 +77271,7 @@
         "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2026/CVE-2026-27175.yaml",
         "templateSeverity": "critical",
         "upstreamVerified": true,
-        "invasiveness": "safe-probe",
+        "invasiveness": "intrusive",
         "outOfBand": true,
         "reviewStatus": "unreviewed",
         "lastReviewed": null,
@@ -77054,6 +77504,24 @@
         "publisher": "ProjectDiscovery nuclei-templates (community)",
         "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2026/CVE-2026-27944.yaml",
         "templateSeverity": "critical",
+        "upstreamVerified": true,
+        "invasiveness": "safe-probe",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2026-27948": [
+      {
+        "method": "nuclei",
+        "id": "CVE-2026-27948",
+        "name": "Copyparty < 1.20.9 - Cross-Site Scripting via setck",
+        "path": "http/cves/2026/CVE-2026-27948.yaml",
+        "protocol": "http",
+        "publisher": "ProjectDiscovery nuclei-templates (community)",
+        "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2026/CVE-2026-27948.yaml",
+        "templateSeverity": "medium",
         "upstreamVerified": true,
         "invasiveness": "safe-probe",
         "outOfBand": false,
@@ -77296,6 +77764,24 @@
         "reviewNote": null
       }
     ],
+    "CVE-2026-29038": [
+      {
+        "method": "nuclei",
+        "id": "CVE-2026-29038",
+        "name": "changedetection.io < 0.54.4 - Reflected Cross-Site Scripting via RSS Tag Feed",
+        "path": "http/cves/2026/CVE-2026-29038.yaml",
+        "protocol": "http",
+        "publisher": "ProjectDiscovery nuclei-templates (community)",
+        "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2026/CVE-2026-29038.yaml",
+        "templateSeverity": "medium",
+        "upstreamVerified": true,
+        "invasiveness": "safe-probe",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
     "CVE-2026-29058": [
       {
         "method": "nuclei",
@@ -77345,6 +77831,24 @@
         "upstreamVerified": true,
         "invasiveness": "safe-probe",
         "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2026-29178": [
+      {
+        "method": "nuclei",
+        "id": "CVE-2026-29178",
+        "name": "Lemmy <= 0.19.15 - Unauthenticated Server-Side Request Forgery",
+        "path": "http/cves/2026/CVE-2026-29178.yaml",
+        "protocol": "http",
+        "publisher": "ProjectDiscovery nuclei-templates (community)",
+        "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2026/CVE-2026-29178.yaml",
+        "templateSeverity": "high",
+        "upstreamVerified": true,
+        "invasiveness": "safe-probe",
+        "outOfBand": true,
         "reviewStatus": "unreviewed",
         "lastReviewed": null,
         "reviewNote": null
@@ -77649,6 +78153,24 @@
         "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2026/CVE-2026-31831.yaml",
         "templateSeverity": "high",
         "upstreamVerified": true,
+        "invasiveness": "safe-probe",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2026-32201": [
+      {
+        "method": "nuclei",
+        "id": "CVE-2026-32201",
+        "name": "Microsoft Office SharePoint - Spoofing",
+        "path": "http/cves/2026/CVE-2026-32201.yaml",
+        "protocol": "http",
+        "publisher": "ProjectDiscovery nuclei-templates (community)",
+        "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2026/CVE-2026-32201.yaml",
+        "templateSeverity": "medium",
+        "upstreamVerified": false,
         "invasiveness": "safe-probe",
         "outOfBand": false,
         "reviewStatus": "unreviewed",
@@ -78214,6 +78736,24 @@
         "reviewNote": null
       }
     ],
+    "CVE-2026-34400": [
+      {
+        "method": "nuclei",
+        "id": "CVE-2026-34400",
+        "name": "Alerta - SQL Injection",
+        "path": "http/cves/2026/CVE-2026-34400.yaml",
+        "protocol": "http",
+        "publisher": "ProjectDiscovery nuclei-templates (community)",
+        "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2026/CVE-2026-34400.yaml",
+        "templateSeverity": "critical",
+        "upstreamVerified": true,
+        "invasiveness": "safe-probe",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
     "CVE-2026-34413": [
       {
         "method": "nuclei",
@@ -78443,6 +78983,24 @@
         "upstreamVerified": true,
         "invasiveness": "safe-probe",
         "outOfBand": true,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2026-35413": [
+      {
+        "method": "nuclei",
+        "id": "CVE-2026-35413",
+        "name": "Directus < 11.16.1 - GraphQL Introspection Control Bypass",
+        "path": "http/cves/2026/CVE-2026-35413.yaml",
+        "protocol": "http",
+        "publisher": "ProjectDiscovery nuclei-templates (community)",
+        "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2026/CVE-2026-35413.yaml",
+        "templateSeverity": "medium",
+        "upstreamVerified": true,
+        "invasiveness": "safe-probe",
+        "outOfBand": false,
         "reviewStatus": "unreviewed",
         "lastReviewed": null,
         "reviewNote": null
@@ -78844,6 +79402,24 @@
         "reviewNote": null
       }
     ],
+    "CVE-2026-40293": [
+      {
+        "method": "nuclei",
+        "id": "CVE-2026-40293",
+        "name": "OpenFGA <= 1.13.1 - Preshared API Key Disclosure",
+        "path": "http/cves/2026/CVE-2026-40293.yaml",
+        "protocol": "http",
+        "publisher": "ProjectDiscovery nuclei-templates (community)",
+        "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2026/CVE-2026-40293.yaml",
+        "templateSeverity": "medium",
+        "upstreamVerified": true,
+        "invasiveness": "safe-probe",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
     "CVE-2026-40308": [
       {
         "method": "nuclei",
@@ -78965,6 +79541,24 @@
         "upstreamVerified": true,
         "invasiveness": "safe-probe",
         "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2026-41130": [
+      {
+        "method": "nuclei",
+        "id": "CVE-2026-41130",
+        "name": "Craft CMS < 4.17.9, < 5.9.15 - Unauthenticated Server-Side Request Forgery",
+        "path": "http/cves/2026/CVE-2026-41130.yaml",
+        "protocol": "http",
+        "publisher": "ProjectDiscovery nuclei-templates (community)",
+        "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2026/CVE-2026-41130.yaml",
+        "templateSeverity": "medium",
+        "upstreamVerified": true,
+        "invasiveness": "safe-probe",
+        "outOfBand": true,
         "reviewStatus": "unreviewed",
         "lastReviewed": null,
         "reviewNote": null
@@ -79215,7 +79809,7 @@
         "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2026/CVE-2026-42016.yaml",
         "templateSeverity": "high",
         "upstreamVerified": false,
-        "invasiveness": "safe-probe",
+        "invasiveness": "intrusive",
         "outOfBand": false,
         "reviewStatus": "unreviewed",
         "lastReviewed": null,
@@ -79510,6 +80104,24 @@
         "reviewNote": null
       }
     ],
+    "CVE-2026-42897": [
+      {
+        "method": "nuclei",
+        "id": "CVE-2026-42897",
+        "name": "Microsoft Exchange Server - Stored XSS",
+        "path": "http/cves/2026/CVE-2026-42897.yaml",
+        "protocol": "http",
+        "publisher": "ProjectDiscovery nuclei-templates (community)",
+        "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2026/CVE-2026-42897.yaml",
+        "templateSeverity": "high",
+        "upstreamVerified": false,
+        "invasiveness": "safe-probe",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
     "CVE-2026-44177": [
       {
         "method": "nuclei",
@@ -79636,6 +80248,24 @@
         "reviewNote": null
       }
     ],
+    "CVE-2026-45140": [
+      {
+        "method": "nuclei",
+        "id": "CVE-2026-45140",
+        "name": "Chamilo LMS <= 2.0.0 - Unauthenticated Arbitrary File Upload via CStudio big-upload.php",
+        "path": "http/cves/2026/CVE-2026-45140.yaml",
+        "protocol": "http",
+        "publisher": "ProjectDiscovery nuclei-templates (community)",
+        "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2026/CVE-2026-45140.yaml",
+        "templateSeverity": "critical",
+        "upstreamVerified": true,
+        "invasiveness": "intrusive",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
     "CVE-2026-45247": [
       {
         "method": "nuclei",
@@ -79700,6 +80330,24 @@
         "publisher": "ProjectDiscovery nuclei-templates (community)",
         "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2026/CVE-2026-45397.yaml",
         "templateSeverity": "medium",
+        "upstreamVerified": true,
+        "invasiveness": "safe-probe",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2026-45627": [
+      {
+        "method": "nuclei",
+        "id": "CVE-2026-45627",
+        "name": "Arcane <= 1.18.1 - Cross-Site Scripting",
+        "path": "http/cves/2026/CVE-2026-45627.yaml",
+        "protocol": "http",
+        "publisher": "ProjectDiscovery nuclei-templates (community)",
+        "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2026/CVE-2026-45627.yaml",
+        "templateSeverity": "high",
         "upstreamVerified": true,
         "invasiveness": "safe-probe",
         "outOfBand": false,
@@ -80410,6 +81058,24 @@
         "reviewNote": null
       }
     ],
+    "CVE-2026-50522": [
+      {
+        "method": "nuclei",
+        "id": "CVE-2026-50522",
+        "name": "Microsoft SharePoint Server - Remote Code Execution",
+        "path": "http/cves/2026/CVE-2026-50522.yaml",
+        "protocol": "http",
+        "publisher": "ProjectDiscovery nuclei-templates (community)",
+        "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2026/CVE-2026-50522.yaml",
+        "templateSeverity": "critical",
+        "upstreamVerified": false,
+        "invasiveness": "safe-probe",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
     "CVE-2026-5073": [
       {
         "method": "nuclei",
@@ -80546,6 +81212,24 @@
         "publisher": "ProjectDiscovery nuclei-templates (community)",
         "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2026/CVE-2026-52824.yaml",
         "templateSeverity": "critical",
+        "upstreamVerified": true,
+        "invasiveness": "safe-probe",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2026-52881": [
+      {
+        "method": "nuclei",
+        "id": "CVE-2026-52881",
+        "name": "MantisBT <= 2.28.3 - Cross-Site Scripting",
+        "path": "http/cves/2026/CVE-2026-52881.yaml",
+        "protocol": "http",
+        "publisher": "ProjectDiscovery nuclei-templates (community)",
+        "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2026/CVE-2026-52881.yaml",
+        "templateSeverity": "medium",
         "upstreamVerified": true,
         "invasiveness": "safe-probe",
         "outOfBand": false,
@@ -81256,6 +81940,24 @@
         "reviewNote": null
       }
     ],
+    "CVE-2026-57148": [
+      {
+        "method": "nuclei",
+        "id": "CVE-2026-57148",
+        "name": "PraisonAI Platform <= 0.1.4 - Hardcoded JWT Secret Authentication Bypass",
+        "path": "http/cves/2026/CVE-2026-57148.yaml",
+        "protocol": "http",
+        "publisher": "ProjectDiscovery nuclei-templates (community)",
+        "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2026/CVE-2026-57148.yaml",
+        "templateSeverity": "critical",
+        "upstreamVerified": true,
+        "invasiveness": "safe-probe",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
     "CVE-2026-5718": [
       {
         "method": "nuclei",
@@ -81286,6 +81988,24 @@
         "templateSeverity": "high",
         "upstreamVerified": true,
         "invasiveness": "safe-probe",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2026-57573": [
+      {
+        "method": "nuclei",
+        "id": "CVE-2026-57573",
+        "name": "Crawl4AI <= 0.8.9 - Server-Side Request Forgery via Streaming Crawl",
+        "path": "http/cves/2026/CVE-2026-57573.yaml",
+        "protocol": "http",
+        "publisher": "ProjectDiscovery nuclei-templates (community)",
+        "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2026/CVE-2026-57573.yaml",
+        "templateSeverity": "high",
+        "upstreamVerified": true,
+        "invasiveness": "intrusive",
         "outOfBand": false,
         "reviewStatus": "unreviewed",
         "lastReviewed": null,
@@ -81483,6 +82203,24 @@
         "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2026/CVE-2026-59177.yaml",
         "templateSeverity": "high",
         "upstreamVerified": true,
+        "invasiveness": "safe-probe",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2026-59309": [
+      {
+        "method": "nuclei",
+        "id": "CVE-2026-59309",
+        "name": "VMware vCenter Server - Authentication Bypass",
+        "path": "http/cves/2026/CVE-2026-59309.yaml",
+        "protocol": "http",
+        "publisher": "ProjectDiscovery nuclei-templates (community)",
+        "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2026/CVE-2026-59309.yaml",
+        "templateSeverity": "critical",
+        "upstreamVerified": false,
         "invasiveness": "safe-probe",
         "outOfBand": false,
         "reviewStatus": "unreviewed",
@@ -81688,6 +82426,24 @@
         "reviewNote": null
       }
     ],
+    "CVE-2026-61740": [
+      {
+        "method": "nuclei",
+        "id": "CVE-2026-61740",
+        "name": "LightRAG < 1.5.4 - Authentication Bypass via Guest Token",
+        "path": "http/cves/2026/CVE-2026-61740.yaml",
+        "protocol": "http",
+        "publisher": "ProjectDiscovery nuclei-templates (community)",
+        "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2026/CVE-2026-61740.yaml",
+        "templateSeverity": "critical",
+        "upstreamVerified": true,
+        "invasiveness": "safe-probe",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
     "CVE-2026-61808": [
       {
         "method": "nuclei",
@@ -81735,6 +82491,42 @@
         "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2026/CVE-2026-62032.yaml",
         "templateSeverity": "critical",
         "upstreamVerified": true,
+        "invasiveness": "safe-probe",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2026-62252": [
+      {
+        "method": "nuclei",
+        "id": "CVE-2026-62252",
+        "name": "Homer < 11.0.283 - Hardcoded Default Admin Password",
+        "path": "http/cves/2026/CVE-2026-62252.yaml",
+        "protocol": "http",
+        "publisher": "ProjectDiscovery nuclei-templates (community)",
+        "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2026/CVE-2026-62252.yaml",
+        "templateSeverity": "critical",
+        "upstreamVerified": true,
+        "invasiveness": "safe-probe",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2026-62253": [
+      {
+        "method": "nuclei",
+        "id": "CVE-2026-62253",
+        "name": "Homer - Authentication Bypass",
+        "path": "http/cves/2026/CVE-2026-62253.yaml",
+        "protocol": "http",
+        "publisher": "ProjectDiscovery nuclei-templates (community)",
+        "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2026/CVE-2026-62253.yaml",
+        "templateSeverity": "critical",
+        "upstreamVerified": false,
         "invasiveness": "safe-probe",
         "outOfBand": false,
         "reviewStatus": "unreviewed",
@@ -81826,6 +82618,24 @@
         "templateSeverity": "critical",
         "upstreamVerified": true,
         "invasiveness": "intrusive",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2026-63189": [
+      {
+        "method": "nuclei",
+        "id": "CVE-2026-63189",
+        "name": "Dialoqbase < 1.11.5 - Unauthenticated Arbitrary File Read",
+        "path": "http/cves/2026/CVE-2026-63189.yaml",
+        "protocol": "http",
+        "publisher": "ProjectDiscovery nuclei-templates (community)",
+        "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2026/CVE-2026-63189.yaml",
+        "templateSeverity": "high",
+        "upstreamVerified": true,
+        "invasiveness": "safe-probe",
         "outOfBand": false,
         "reviewStatus": "unreviewed",
         "lastReviewed": null,
@@ -82300,6 +83110,24 @@
         "reviewNote": null
       }
     ],
+    "CVE-2026-72788": [
+      {
+        "method": "nuclei",
+        "id": "CVE-2026-72788",
+        "name": "SiYuan < 3.8.0 - Publish Service UI Layout Disclosure",
+        "path": "http/cves/2026/CVE-2026-72788.yaml",
+        "protocol": "http",
+        "publisher": "ProjectDiscovery nuclei-templates (community)",
+        "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2026/CVE-2026-72788.yaml",
+        "templateSeverity": "medium",
+        "upstreamVerified": true,
+        "invasiveness": "safe-probe",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
     "CVE-2026-72867": [
       {
         "method": "nuclei",
@@ -82516,6 +83344,60 @@
         "reviewNote": null
       }
     ],
+    "CVE-2026-77318": [
+      {
+        "method": "nuclei",
+        "id": "CVE-2026-77318",
+        "name": "Jupyter MCP Server <= 1.0.2 - Unauthenticated Management Routes",
+        "path": "http/cves/2026/CVE-2026-77318.yaml",
+        "protocol": "http",
+        "publisher": "ProjectDiscovery nuclei-templates (community)",
+        "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2026/CVE-2026-77318.yaml",
+        "templateSeverity": "high",
+        "upstreamVerified": true,
+        "invasiveness": "safe-probe",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2026-77608": [
+      {
+        "method": "nuclei",
+        "id": "CVE-2026-77608",
+        "name": "Semantic MediaWiki <= 7.1.0 - Reflected Cross-Site Scripting",
+        "path": "http/cves/2026/CVE-2026-77608.yaml",
+        "protocol": "http",
+        "publisher": "ProjectDiscovery nuclei-templates (community)",
+        "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2026/CVE-2026-77608.yaml",
+        "templateSeverity": "medium",
+        "upstreamVerified": true,
+        "invasiveness": "safe-probe",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2026-77610": [
+      {
+        "method": "nuclei",
+        "id": "CVE-2026-77610",
+        "name": "Semantic MediaWiki <= 7.1.0 - Reflected Cross-Site Scripting via Query Debug Output",
+        "path": "http/cves/2026/CVE-2026-77610.yaml",
+        "protocol": "http",
+        "publisher": "ProjectDiscovery nuclei-templates (community)",
+        "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2026/CVE-2026-77610.yaml",
+        "templateSeverity": "medium",
+        "upstreamVerified": true,
+        "invasiveness": "safe-probe",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
     "CVE-2026-77806": [
       {
         "method": "nuclei",
@@ -82652,6 +83534,24 @@
         "publisher": "ProjectDiscovery nuclei-templates (community)",
         "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2026/CVE-2026-8089.yaml",
         "templateSeverity": "high",
+        "upstreamVerified": true,
+        "invasiveness": "safe-probe",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2026-81195": [
+      {
+        "method": "nuclei",
+        "id": "CVE-2026-81195",
+        "name": "MasterStudy LMS < 3.7.46 - Student Enrollment Disclosure",
+        "path": "http/cves/2026/CVE-2026-81195.yaml",
+        "protocol": "http",
+        "publisher": "ProjectDiscovery nuclei-templates (community)",
+        "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2026/CVE-2026-81195.yaml",
+        "templateSeverity": "medium",
         "upstreamVerified": true,
         "invasiveness": "safe-probe",
         "outOfBand": false,
@@ -83821,6 +84721,24 @@
         "protocol": "http",
         "publisher": "ProjectDiscovery nuclei-templates (community)",
         "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2026/CVE-2026-96656.yaml",
+        "templateSeverity": "high",
+        "upstreamVerified": true,
+        "invasiveness": "intrusive",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2026-96662": [
+      {
+        "method": "nuclei",
+        "id": "CVE-2026-96662",
+        "name": "LatePoint <= 5.7.2 - Unauthenticated SQL Injection",
+        "path": "http/cves/2026/CVE-2026-96662.yaml",
+        "protocol": "http",
+        "publisher": "ProjectDiscovery nuclei-templates (community)",
+        "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2026/CVE-2026-96662.yaml",
         "templateSeverity": "high",
         "upstreamVerified": true,
         "invasiveness": "intrusive",

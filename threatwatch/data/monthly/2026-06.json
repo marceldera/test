@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "month": "2026-06",
   "complete": true,
-  "updatedAt": "2026-11-22T18:22:51Z",
+  "updatedAt": "2026-11-23T22:16:45Z",
   "metrics": [
     {
       "id": "kev_added",
@@ -11,7 +11,7 @@
       "rule": "CVE entries whose CISA dateAdded falls in the month.",
       "source": "CISA KEV",
       "window": "2026-06-01 to 2026-06-30 (dateAdded, ET calendar)",
-      "updatedAt": "2026-11-22T18:22:51Z"
+      "updatedAt": "2026-11-23T22:16:45Z"
     },
     {
       "id": "vendors",
@@ -20,7 +20,7 @@
       "rule": "Unique vendorProject values among the month’s KEV entries.",
       "source": "CISA KEV",
       "window": "2026-06-01 to 2026-06-30 (dateAdded, ET calendar)",
-      "updatedAt": "2026-11-22T18:22:51Z"
+      "updatedAt": "2026-11-23T22:16:45Z"
     },
     {
       "id": "ransomware",
@@ -29,16 +29,16 @@
       "rule": "Month’s KEV entries where CISA sets knownRansomwareCampaignUse = Known.",
       "source": "CISA KEV",
       "window": "2026-06-01 to 2026-06-30 (dateAdded, ET calendar)",
-      "updatedAt": "2026-11-22T18:22:51Z"
+      "updatedAt": "2026-11-23T22:16:45Z"
     },
     {
       "id": "epss90",
       "label": "EPSS ≥ 90th percentile",
       "value": 19,
-      "rule": "Month’s KEV entries with EPSS percentile ≥ 0.90 (scores as of 2026-11-22).",
+      "rule": "Month’s KEV entries with EPSS percentile ≥ 0.90 (scores as of 2026-11-23).",
       "source": "FIRST EPSS",
       "window": "2026-06-01 to 2026-06-30 (dateAdded, ET calendar)",
-      "updatedAt": "2026-11-22T18:22:51Z"
+      "updatedAt": "2026-11-23T22:16:45Z"
     }
   ],
   "notice": "These are CISA KEV catalog counts, not a count of total cyber incidents.",
@@ -61,7 +61,7 @@
       "product": "Kernel",
       "concern": "Linux Kernel Improper Authentication Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.93011,
+      "epssPercentile": 0.93012,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -72,7 +72,7 @@
       "product": "Framework",
       "concern": "Android Framework Integer Overflow Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.81223,
+      "epssPercentile": 0.81227,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -127,7 +127,7 @@
       "product": "Chromium V8",
       "concern": "Google Chromium V8 Out-of-Bounds Read and Write Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.84709,
+      "epssPercentile": 0.84713,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -138,7 +138,7 @@
       "product": "Catalyst SD-WAN Manager",
       "concern": "Cisco Catalyst SD-WAN Manager Improper Encoding or Escaping of Output Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.97988,
+      "epssPercentile": 0.97989,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -149,7 +149,7 @@
       "product": "Extensible Operating System",
       "concern": "Arista Extensible Operating System Incomplete Comparison with Missing Factors Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.66704,
+      "epssPercentile": 0.66709,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -182,7 +182,7 @@
       "product": "Catalyst SD-WAN Manager",
       "concern": "Cisco Catalyst SD-WAN Manager Directory or Path Traversal Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.9821,
+      "epssPercentile": 0.98211,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -193,7 +193,7 @@
       "product": "cPanel Plugin",
       "concern": "LiteSpeed cPanel Plugin UNIX Symbolic Link (Symlink) Following Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.73847,
+      "epssPercentile": 0.73855,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -814,6 +814,6 @@
       }
     ],
     "footer": "Enterprise Cyber Threat Intelligence | June 2026",
-    "generatedAt": "2026-11-22T18:24:41Z"
+    "generatedAt": "2026-11-23T22:19:58Z"
   }
 }
