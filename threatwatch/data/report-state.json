@@ -73,22 +73,6 @@
       }
     },
     "2026-11-23": {
-      "CVE-2026-133968": {
-        "label": "Project MONAI MONAI Label",
-        "firstReported": "2026-11-22",
-        "kev": true,
-        "kevDate": "2026-11-23",
-        "zeroDay": false,
-        "itw": [
-          "ENISA EUVD (exploited)"
-        ],
-        "poc": 1,
-        "epss": 0.03664,
-        "cvss": 9.8,
-        "fix": false,
-        "nvdStatus": "Received",
-        "priority": "Emergency"
-      },
       "CVE-2026-133469": {
         "label": "CVE-2026-133469",
         "firstReported": "2026-11-23",
@@ -160,6 +144,22 @@
         "fix": false,
         "nvdStatus": "Received",
         "priority": "Urgent"
+      },
+      "CVE-2026-133968": {
+        "label": "Project MONAI MONAI Label",
+        "firstReported": "2026-11-22",
+        "kev": true,
+        "kevDate": "2026-11-23",
+        "zeroDay": false,
+        "itw": [
+          "ENISA EUVD (exploited)"
+        ],
+        "poc": 1,
+        "epss": 0.03664,
+        "cvss": 9.8,
+        "fix": false,
+        "nvdStatus": "Received",
+        "priority": "Emergency"
       },
       "CVE-2026-102769": {
         "label": "WhatsApp for Android",
