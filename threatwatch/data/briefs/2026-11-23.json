@@ -1,0 +1,771 @@
+{
+  "schemaVersion": 1,
+  "edition": "2026-11-23",
+  "publishedAt": "2026-11-23T22:16:45Z",
+  "window": {
+    "start": "2026-11-22T18:41:35Z",
+    "end": "2026-11-23T22:16:45Z",
+    "note": "KEV additions not present in the previous edition’s catalog snapshot."
+  },
+  "executive": {
+    "summary": "CISA added 2 vulnerabilities to the Known Exploited Vulnerabilities catalog since the previous edition, affecting Project MONAI, N-able. 1 meet the emergency criteria (confirmed exploitation plus critical severity or unauthenticated network exposure).",
+    "summarySource": "generated",
+    "counts": {
+      "kevAdded": 2,
+      "kevRansomware": 0,
+      "emergency": 1,
+      "urgent": 0,
+      "criticalHigh": 2,
+      "materialChanges": 3,
+      "kevTotal": 1792
+    },
+    "developments": [
+      "CVE-2026-133968 — Project MONAI MONAI Label: Project MONAI MONAI Label Path Traversal Vulnerability (emergency)",
+      "CVE-2026-134624 — N-able MailAssure: N-able MailAssure (SpamExperts) Server-Side Request Forgery (SSRF) Vulnerability (routine)",
+      "CVE-2024-10441: CISA now flags known ransomware use (Synology DiskStation Manager (DSM)).",
+      "CVE-2026-124194: EPSS rose from 0.02 to 0.25 (score date 2026-11-23)."
+    ]
+  },
+  "kevLatest": {
+    "date": "2026-11-23",
+    "dueDate": "2026-11-26",
+    "catalogVersion": "2026.11.23",
+    "released": "2026-11-23T19:43:55.7979Z",
+    "items": [
+      {
+        "cve": "CVE-2026-133968",
+        "vendor": "Project MONAI",
+        "product": "MONAI Label"
+      },
+      {
+        "cve": "CVE-2026-134624",
+        "vendor": "N-able",
+        "product": "MailAssure"
+      }
+    ]
+  },
+  "actions": [
+    {
+      "rank": 1,
+      "cve": "CVE-2026-133968",
+      "priority": "emergency",
+      "title": "Patch or mitigate Project MONAI MONAI Label (CVE-2026-133968)",
+      "why": "Exploitation confirmed by CISA KEV; CVSS 3.1 9.8; network-reachable without authentication.",
+      "steps": [
+        "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+        "Identify internet-facing and internal Project MONAI MONAI Label instances.",
+        "Confirm fixed versions in the vendor advisory before closing the action.",
+        "CISA due date for federal agencies: 2026-11-26."
+      ],
+      "evidence": [
+        "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+        "https://nvd.nist.gov/vuln/detail/CVE-2026-133968",
+        "https://www.first.org/epss/"
+      ]
+    }
+  ],
+  "cves": [
+    {
+      "cve": "CVE-2026-133968",
+      "vendor": "Project MONAI",
+      "product": "MONAI Label",
+      "name": "Project MONAI MONAI Label Path Traversal Vulnerability",
+      "description": "Project MONAI MONAI Label contains a path traversal vulnerability that allows an unauthenticated remote attacker to write arbitrary files outside the intended datastore directory, potentially resulting in remote code execution.",
+      "kev": {
+        "dateAdded": "2026-11-23",
+        "dueDate": "2026-11-26",
+        "ransomware": "unknown",
+        "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "exploitation": {
+        "status": "Confirmed exploited",
+        "basis": "Listed in CISA KEV (dateAdded is the listing date, not first exploitation)."
+      },
+      "exploitMaturity": null,
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "severity": "CRITICAL",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+        "attackVector": "NETWORK",
+        "privileges": "NONE",
+        "userInteraction": "NONE",
+        "source": "cve@mitre.org"
+      },
+      "epss": {
+        "score": 0.03664,
+        "percentile": 0.89921,
+        "date": "2026-11-23"
+      },
+      "affectedVersions": null,
+      "fixedVersions": null,
+      "cwes": [
+        "CWE-24"
+      ],
+      "nvdStatus": "Received",
+      "priority": "emergency",
+      "rationale": "Exploitation confirmed by CISA KEV; CVSS 3.1 9.8; network-reachable without authentication.",
+      "sources": [
+        {
+          "label": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "label": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-133968"
+        },
+        {
+          "label": "FIRST EPSS",
+          "url": "https://www.first.org/epss/"
+        },
+        {
+          "label": "KEV reference",
+          "url": "https://github.com/Project-MONAI/MONAILabel/security/advisories/GHSA-qc22-rmgc-vg94"
+        },
+        {
+          "label": "KEV reference",
+          "url": "https://github.com/Project-MONAI/MONAILabel/pull/1915"
+        }
+      ],
+      "unknown": [
+        "Affected versions",
+        "Fixed versions",
+        "Exploit maturity"
+      ]
+    },
+    {
+      "cve": "CVE-2026-134624",
+      "vendor": "N-able",
+      "product": "MailAssure",
+      "name": "N-able MailAssure (SpamExperts) Server-Side Request Forgery (SSRF) Vulnerability",
+      "description": "N-able MailAssure (SpamExperts) contains a server-side request forgery vulnerability in the LDAP synchronization connection check that allows an authenticated API user to connect to arbitrary internal hosts and ports, determine which are reachable, and send crafted data to internal services.",
+      "kev": {
+        "dateAdded": "2026-11-23",
+        "dueDate": "2026-11-26",
+        "ransomware": "unknown",
+        "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "exploitation": {
+        "status": "Confirmed exploited",
+        "basis": "Listed in CISA KEV (dateAdded is the listing date, not first exploitation)."
+      },
+      "exploitMaturity": null,
+      "cvss": {
+        "version": "4.0",
+        "score": 9.3,
+        "severity": "CRITICAL",
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:N/SC:H/SI:H/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+        "attackVector": "NETWORK",
+        "privileges": "HIGH",
+        "userInteraction": "NONE",
+        "source": "a5532a13-c4dd-4202-bef1-e0b8f2f8d12b"
+      },
+      "epss": {
+        "score": 0.00354,
+        "percentile": 0.2969,
+        "date": "2026-11-23"
+      },
+      "affectedVersions": null,
+      "fixedVersions": null,
+      "cwes": [
+        "CWE-918"
+      ],
+      "nvdStatus": "Received",
+      "priority": "routine",
+      "rationale": "Exploitation confirmed by CISA KEV; CVSS 4.0 9.3; requires local access or high privileges.",
+      "sources": [
+        {
+          "label": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "label": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-134624"
+        },
+        {
+          "label": "FIRST EPSS",
+          "url": "https://www.first.org/epss/"
+        },
+        {
+          "label": "KEV reference",
+          "url": "https://me.n-able.com/s/security-advisory/aArVy0000002mrlKAA"
+        }
+      ],
+      "unknown": [
+        "Affected versions",
+        "Fixed versions",
+        "Exploit maturity"
+      ]
+    }
+  ],
+  "overflow": 0,
+  "campaigns": {
+    "status": "not_covered",
+    "items": [],
+    "note": "No reviewed, source-linked intelligence for this section in today’s edition."
+  },
+  "industries": {
+    "status": "not_covered",
+    "items": [],
+    "note": "No reviewed, source-linked intelligence for this section in today’s edition."
+  },
+  "actors": {
+    "status": "not_covered",
+    "items": [],
+    "note": "No reviewed, source-linked intelligence for this section in today’s edition."
+  },
+  "remediation": {
+    "groups": {
+      "emergency": [
+        "CVE-2026-133968"
+      ],
+      "urgent": [],
+      "routine": [
+        "CVE-2026-134624"
+      ],
+      "monitor": []
+    },
+    "guidance": {
+      "emergency": "Mitigate exposed instances within 24–72 hours (guidance, not policy).",
+      "urgent": "Remediate within the CISA due date or your next emergency change window.",
+      "routine": "Remediate in the normal patch cycle; prerequisites limit exposure.",
+      "monitor": "Track for exploitation or scope changes."
+    }
+  },
+  "changes": [
+    {
+      "cve": "CVE-2026-133968",
+      "type": "kev_added",
+      "detail": "Added to CISA KEV on 2026-11-23."
+    },
+    {
+      "cve": "CVE-2026-134624",
+      "type": "kev_added",
+      "detail": "Added to CISA KEV on 2026-11-23."
+    },
+    {
+      "cve": "CVE-2024-10441",
+      "type": "ransomware_flag",
+      "detail": "CISA now flags known ransomware use (Synology DiskStation Manager (DSM))."
+    },
+    {
+      "cve": "CVE-2026-124194",
+      "type": "epss_change",
+      "detail": "EPSS rose from 0.02 to 0.25 (score date 2026-11-23)."
+    },
+    {
+      "cve": "CVE-2026-115731",
+      "type": "epss_change",
+      "detail": "EPSS rose from 0.01 to 0.13 (score date 2026-11-23)."
+    }
+  ],
+  "sources": [
+    {
+      "name": "CISA Known Exploited Vulnerabilities",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+      "version": "2026.11.23",
+      "released": "2026-11-23T19:43:55.7979Z",
+      "fetchedAt": "2026-11-23T22:16:45Z",
+      "status": "ok"
+    },
+    {
+      "name": "FIRST EPSS",
+      "url": "https://www.first.org/epss/",
+      "fetchedAt": "2026-11-23T22:16:45Z",
+      "status": "ok",
+      "note": "Probability estimate; not evidence of exploitation."
+    },
+    {
+      "name": "NVD CVE API 2.0",
+      "url": "https://nvd.nist.gov/",
+      "fetchedAt": "2026-11-23T22:16:45Z",
+      "status": "ok",
+      "note": "Enrichment can lag publication by days."
+    }
+  ],
+  "coverage": {
+    "covered": [
+      "CISA KEV additions",
+      "FIRST EPSS",
+      "NVD CVSS and references"
+    ],
+    "notCovered": [
+      "Campaign, threat actor and industry analysis (requires reviewed editorial input)",
+      "Zero-days not yet in CISA KEV",
+      "Vendor-specific fixed-version validation"
+    ],
+    "unknownFields": [
+      "Affected versions",
+      "Exploit maturity",
+      "Fixed versions"
+    ],
+    "editorial": {
+      "present": false,
+      "reviewedBy": null,
+      "reviewedAt": null
+    }
+  },
+  "report": {
+    "version": 1,
+    "title": [
+      "DAILY ENTERPRISE CYBERSECURITY",
+      "THREAT INTELLIGENCE BRIEF"
+    ],
+    "dateLabel": "Monday, November 23, 2026",
+    "window": "Reporting window: November 22-23, 2026",
+    "prepared": "Automated edition, issued 7:00 AM ET",
+    "sourceNote": "This brief is compiled automatically from public sources (CISA KEV, NVD, FIRST EPSS, Google Project Zero, ENISA EUVD, Metasploit, Exploit-DB, PoC-in-GitHub, MITRE ATT&CK). Exploitation statuses reflect what those sources report; anything they do not establish is stated as not established or not verified.",
+    "sections": [
+      {
+        "id": "summary",
+        "num": 1,
+        "title": "Executive Intelligence Summary",
+        "source": "generated",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "The leading newly prioritized issue is **CVE-2026-133968 (Project MONAI MONAI Label)**, a critical path traversal flaw; it is listed in CISA KEV on 2026-11-23 (exploitation confirmed by CISA) and reported exploited by ENISA EUVD since 2026-11-23. No fixed release is mapped in NVD data yet. **CVE-2026-133469 (CVE-2026-133469)** is another important newly highlighted issue; it is described in its CVE record as exploited in the wild (not yet corroborated by CISA KEV, Project Zero, EUVD or VulnCheck)."
+          },
+          {
+            "type": "table",
+            "columns": [
+              "Metric",
+              "Assessment"
+            ],
+            "rows": [
+              [
+                "Newly prioritized CVEs",
+                "6: Project MONAI MONAI Label, CVE-2026-133469, N-able MailAssure, CVE-2026-134815, CVE-2026-134814 and Weblate"
+              ],
+              [
+                "Latest KEV baseline",
+                "1,792 (catalog version 2026.11.23, released 2026-11-23)"
+              ],
+              [
+                "New KEV additions",
+                "CVE-2026-133968 (Project MONAI MONAI Label) and CVE-2026-134624 (N-able MailAssure)"
+              ],
+              [
+                "New zero-day / in-the-wild reports",
+                "CVE-2026-133968 (Project MONAI MONAI Label), CVE-2026-133469 (CVE-2026-133469) and CVE-2026-134624 (N-able MailAssure)"
+              ],
+              [
+                "Emergency candidates",
+                "3 newly highlighted: exposed Project MONAI MONAI Label, exposed CVE-2026-133469 and exposed N-able MailAssure"
+              ],
+              [
+                "Complete worldwide High/Critical count",
+                "Not established; 158 High/Critical CVEs published to NVD in the window (NVD-scored only)"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "**Top five actions:** (1) Isolate or patch exposed Project MONAI MONAI Label (CVE-2026-133968); (2) isolate or patch exposed CVE-2026-133469 (CVE-2026-133469); (3) isolate or patch exposed N-able MailAssure (CVE-2026-134624); (4) validate remediation of MONAI Label CVE-2026-133968 and WhatsApp for Android CVE-2026-102769; (5) examine Project MONAI MONAI Label hosts for unexpected file writes and persistence."
+          }
+        ]
+      },
+      {
+        "id": "critical",
+        "num": 2,
+        "title": "Critical Vulnerability Intelligence",
+        "source": "generated",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "**CVE-2026-133968 - Project MONAI MONAI Label path traversal (CVSS 9.8).** monailabel (aka MONAI Label) before 0.8.6 allows directory traversal, with resultant remote code execution, via the image parameter to the PUT /datastore/image endpoint, as exploited in the wild starting in September 2026. Affected releases: not yet published in NVD configuration data. Fixed package release: none identified in tracked sources. Attack path: network-accessible; no authentication required; no user interaction required."
+          },
+          {
+            "type": "table",
+            "columns": [
+              "Field",
+              "Status"
+            ],
+            "rows": [
+              [
+                "EPSS / percentile",
+                "3.7% probability / 89th percentile (FIRST EPSS)"
+              ],
+              [
+                "CISA KEV",
+                "Listed 2026-11-23; federal due date 2026-11-26"
+              ],
+              [
+                "Exploitation",
+                "Listed in CISA KEV on 2026-11-23 (exploitation confirmed by CISA) and reported exploited by ENISA EUVD since 2026-11-23; independently corroborated victim evidence not established"
+              ],
+              [
+                "Public exploit",
+                "Public exploit code referenced: 1 unvetted GitHub repository; weaponized exploit not verified"
+              ],
+              [
+                "Mitigation",
+                "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk guidance and CISA’s “Forensics Triage Requirements”. Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable."
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "**CVE-2026-133469 - CVE-2026-133469 authentication bypass (CVSS 9.8).** XO (Xen Orchestra) is a solution to visualize, manage, backup and delegate your XCP-ng (or XenServer) infrastructure. Prior to 6.9.2 and 6.10.1, REST cookie parsing turns authenticationToken=j:%7B%7D into {}. REST authentication passes that object to the XO token provider without requiring a string. The token collection treats {} as an unfiltered lookup and returns its first token;. Affected releases: not yet published in NVD configuration data. Fixed package release: none identified in tracked sources. Attack path: network-accessible; no authentication required; no user interaction required."
+          },
+          {
+            "type": "table",
+            "columns": [
+              "Field",
+              "Status"
+            ],
+            "rows": [
+              [
+                "EPSS / percentile",
+                "Not verified"
+              ],
+              [
+                "CISA KEV",
+                "Not listed in latest verified baseline"
+              ],
+              [
+                "Exploitation",
+                "Described in its CVE record as exploited in the wild (not yet corroborated by CISA KEV, Project Zero, EUVD or VulnCheck); independently corroborated victim evidence not established"
+              ],
+              [
+                "Public exploit",
+                "Public exploit code referenced: 1 unvetted GitHub repository; weaponized exploit not verified"
+              ],
+              [
+                "Mitigation",
+                "Apply the vendor fix or mitigation; remove untrusted network reachability until patched; place the service behind authentication or a VPN; investigate for signs of prior compromise"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "**CVE-2026-134624 - N-able MailAssure server-side request forgery (CVSS 9.3).** N-able MailAssure (SpamExperts) before 20261121.1943 does not restrict the destination of the LDAP synchronisation connection check performed when a relay is configured. An authenticated API user can cause the server to connect to arbitrary internal hosts and ports, determine which are reachable, and send crafted data to internal services. Affected releases: not yet published in NVD configuration data. Fixed package release: none identified in tracked sources. Attack path: network-accessible; high-privileged authentication required; no user interaction required."
+          },
+          {
+            "type": "table",
+            "columns": [
+              "Field",
+              "Status"
+            ],
+            "rows": [
+              [
+                "EPSS / percentile",
+                "0.4% probability / 29th percentile (FIRST EPSS)"
+              ],
+              [
+                "CISA KEV",
+                "Listed 2026-11-23; federal due date 2026-11-26"
+              ],
+              [
+                "Exploitation",
+                "Listed in CISA KEV on 2026-11-23 (exploitation confirmed by CISA) and reported exploited by ENISA EUVD since 2026-11-23; independently corroborated victim evidence not established"
+              ],
+              [
+                "Public exploit",
+                "No public exploit or proof-of-concept identified in tracked sources"
+              ],
+              [
+                "Mitigation",
+                "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk guidance and CISA’s “Forensics Triage Requirements”. Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable."
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "**CVE-2026-134815 - CVE-2026-134815 vulnerability (CVSS 9.2).** simple-git before 4.1.0 contains an argument injection vulnerability that allows attackers to bypass the allowUnsafePack guard by supplying the --exec option to non-push git operations. Attackers who influence arguments passed to listRemote() or raw() can inject --exec for ls-remote, archive, fetch-pack or send-pack to execute commands on the host. Affected releases: not yet published in NVD configuration data. Fixed package release: none identified in tracked sources. Attack path: network-accessible; no authentication required; no user interaction required."
+          },
+          {
+            "type": "p",
+            "text": "EPSS: 0.8% probability / 55th percentile (FIRST EPSS). CISA KEV: Not listed in latest verified baseline. Exploitation: No malicious exploitation confirmed by tracked sources. Public exploit code referenced: 1 unvetted GitHub repository; weaponized exploit not verified. Mitigation: Apply the vendor fix or mitigation; remove untrusted network reachability until patched; place the service behind authentication or a VPN; monitor for exploitation."
+          },
+          {
+            "type": "p",
+            "text": "**CVE-2026-134814 - CVE-2026-134814 code injection (CVSS 9.2).** binary-parser before 2.3.1 contains a code injection vulnerability that allows attackers controlling parser definitions to inject JavaScript through string-typed options passed unvalidated by Context.generateOption(). Attackers can supply crafted length, lengthInBytes, key, tag, offset, or namely() alias values to execute arbitrary JavaScript in the Node.js process when the parser is compiled. Affected releases: not yet published in NVD configuration data. Fixed package release: none identified in tracked sources. Attack path: network-accessible; no authentication required; no user interaction required."
+          },
+          {
+            "type": "p",
+            "text": "EPSS: 0.6% probability / 50th percentile (FIRST EPSS). CISA KEV: Not listed in latest verified baseline. Exploitation: No malicious exploitation confirmed by tracked sources. Public exploit code referenced: 2 unvetted GitHub repositories; weaponized exploit not verified. Mitigation: Apply the vendor fix or mitigation; remove untrusted network reachability until patched; place the service behind authentication or a VPN; monitor for exploitation."
+          },
+          {
+            "type": "p",
+            "text": "**CVE-2026-134838 - Weblate vulnerability (CVSS 9.1).** Weblate before 2026.11 contains an account takeover vulnerability in the reset_password view that allows unauthenticated attackers to reset victim passwords by abusing case-insensitive Unicode e-mail matching. Attackers controlling a lookalike mailbox using a dotless i or other case-folding variant receive the victim's reset link, since it is sent to the typed address, and set a new password. Affected releases: not yet published in NVD configuration data. Fixed package release: none identified in tracked sources. Attack path: network-accessible; no authentication required; no user interaction required."
+          },
+          {
+            "type": "p",
+            "text": "EPSS: 0.5% probability / 46th percentile (FIRST EPSS). CISA KEV: Not listed in latest verified baseline. Exploitation: No malicious exploitation confirmed by tracked sources. Public exploit code referenced: 1 unvetted GitHub repository; weaponized exploit not verified. Mitigation: Apply the vendor fix or mitigation; remove untrusted network reachability until patched; place the service behind authentication or a VPN; monitor for exploitation."
+          }
+        ]
+      },
+      {
+        "id": "exploitation",
+        "num": 3,
+        "title": "Active Exploitation and Threat Campaigns",
+        "source": "generated",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "CVE-2026-133968 (Project MONAI MONAI Label): listed in CISA KEV on 2026-11-23 (exploitation confirmed by CISA) and reported exploited by ENISA EUVD since 2026-11-23. No named actor, verified victim count or campaign is established in tracked sources. CVE-2026-134624 (N-able MailAssure): listed in CISA KEV on 2026-11-23 (exploitation confirmed by CISA) and reported exploited by ENISA EUVD since 2026-11-23. No named actor, verified victim count or campaign is established in tracked sources. No campaign-specific IP addresses, hashes or domains are collected by ThreatWatch's automated feeds."
+          },
+          {
+            "type": "p",
+            "text": "CISA added 2 vulnerabilities to the KEV catalog in the reporting window: Project MONAI MONAI Label and N-able MailAssure. The federal remediation deadline is **November 26, 2026**. This deadline applies to covered federal agencies under applicable requirements; it is not a universal private-sector mandate."
+          },
+          {
+            "type": "p",
+            "text": "CVE-2024-10441: CISA now flags known ransomware use (Synology DiskStation Manager (DSM))."
+          },
+          {
+            "type": "p",
+            "text": "**Defensive hunting:** for Project MONAI MONAI Label (CVE-2026-133968), inspect unexpected file writes outside the application's data directories, new web-accessible files, modified application code, altered SSH authorized_keys files and suspicious scheduled jobs; for CVE-2026-133469 (CVE-2026-133469), review administrative logins, newly created accounts or API tokens, and configuration changes made without a matching change record; for N-able MailAssure (CVE-2026-134624), review outbound requests from the service to internal addresses or cloud metadata endpoints; for CVE-2026-134815 (CVE-2026-134815), review the affected service's logs for unusual requests and changes around the disclosure date."
+          }
+        ]
+      },
+      {
+        "id": "industry",
+        "num": 4,
+        "title": "Industry and Market Threat Landscape",
+        "source": "generated",
+        "blocks": [
+          {
+            "type": "table",
+            "columns": [
+              "Industry / market",
+              "Observed activity vs. possible exposure"
+            ],
+            "rows": [
+              [
+                "Healthcare / medical imaging",
+                "Project MONAI MONAI Label relevant to this sector; confirmed sector targeting not established"
+              ],
+              [
+                "Education / research",
+                "Project MONAI MONAI Label relevant to this sector; confirmed sector targeting not established"
+              ],
+              [
+                "Technology / software",
+                "Potential CVE-2026-133469, CVE-2026-134814, CVE-2026-134815 and N-able MailAssure dependency exposure"
+              ],
+              [
+                "Government / defense",
+                "Possible CVE-2026-133469, CVE-2026-134814 and CVE-2026-134815 exposure; no new sector-specific targeting confirmed"
+              ],
+              [
+                "Financial services",
+                "Possible CVE-2026-133469, CVE-2026-134814 and CVE-2026-134815 exposure; targeting unknown"
+              ],
+              [
+                "Manufacturing / energy / utilities",
+                "Possible CVE-2026-133469, CVE-2026-134814 and CVE-2026-134815 exposure; targeting unknown"
+              ],
+              [
+                "Retail / transportation",
+                "Possible CVE-2026-133469, CVE-2026-134814 and CVE-2026-134815 exposure; targeting unknown"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "Geography and organization-size targeting were not reliably established. Product use indicates possible exposure, not observed attacker selection."
+          }
+        ]
+      },
+      {
+        "id": "actors",
+        "num": 5,
+        "title": "Threat Actor Intelligence",
+        "source": "generated",
+        "blocks": [
+          {
+            "type": "table",
+            "columns": [
+              "Actor / cluster",
+              "Attribution and activity"
+            ],
+            "rows": [
+              [
+                "Project MONAI MONAI Label operators",
+                "Unknown. Exploitation reported; identity, motivation and geographic targeting not established."
+              ],
+              [
+                "CVE-2026-133469 operators",
+                "Unknown. Exploitation reported; identity, motivation and geographic targeting not established."
+              ],
+              [
+                "N-able MailAssure operators",
+                "Unknown. Exploitation reported; identity, motivation and geographic targeting not established."
+              ],
+              [
+                "CVE-2026-134815 operators",
+                "No confirmed malicious exploitation or attribution."
+              ],
+              [
+                "CVE-2026-134814 operators",
+                "No confirmed malicious exploitation or attribution."
+              ],
+              [
+                "Weblate operators",
+                "No confirmed malicious exploitation or attribution."
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "**MITRE ATT&CK defensive mapping:** T1190 (Exploit Public-Facing Application) may be relevant to exposed Project MONAI MONAI Label, CVE-2026-133469, N-able MailAssure and CVE-2026-134815 services. These mappings support defensive detection and do not establish actor attribution."
+          }
+        ]
+      },
+      {
+        "id": "remediation",
+        "num": 6,
+        "title": "Enterprise Risk and Remediation Decisions",
+        "source": "generated",
+        "blocks": [
+          {
+            "type": "table",
+            "columns": [
+              "Priority",
+              "Scenario",
+              "Suggested window"
+            ],
+            "rows": [
+              [
+                "Emergency",
+                "Project MONAI MONAI Label (CVE-2026-133968) reachable from untrusted networks",
+                "Isolate immediately; investigate and mitigate within 24 hours"
+              ],
+              [
+                "Emergency",
+                "CVE-2026-133469 reachable from untrusted networks",
+                "Isolate immediately; investigate and mitigate within 24 hours"
+              ],
+              [
+                "Emergency",
+                "N-able MailAssure (CVE-2026-134624) reachable from untrusted networks",
+                "Isolate immediately; investigate and mitigate within 24 hours"
+              ],
+              [
+                "Urgent",
+                "Vulnerable CVE-2026-134815 (CVE-2026-134815)",
+                "Apply applicable vendor fix in 24-72 hours"
+              ],
+              [
+                "Urgent",
+                "Vulnerable CVE-2026-134814 (CVE-2026-134814)",
+                "Apply applicable vendor fix in 24-72 hours"
+              ],
+              [
+                "Urgent",
+                "Vulnerable Weblate (CVE-2026-134838)",
+                "Apply applicable vendor fix in 24-72 hours"
+              ],
+              [
+                "Routine",
+                "Affected but effectively restricted software",
+                "Controlled maintenance window"
+              ],
+              [
+                "Monitor",
+                "Verified fixed or nonaffected software",
+                "Watch for material new evidence"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "Response windows are recommendations, not mandatory policy. No organization-specific exposure, compromise, asset criticality or patch status was established."
+          }
+        ]
+      },
+      {
+        "id": "changes",
+        "num": 7,
+        "title": "Significant Changes to Previously Reported Issues",
+        "source": "generated",
+        "blocks": [
+          {
+            "type": "table",
+            "columns": [
+              "Issue",
+              "Material development"
+            ],
+            "rows": [
+              [
+                "Project MONAI MONAI Label CVE-2026-133968",
+                "Added to CISA KEV on 2026-11-23; exploitation now reported by ENISA EUVD"
+              ],
+              [
+                "WhatsApp for Android CVE-2026-102769",
+                "No significant new development established since November 22"
+              ],
+              [
+                "Restrictions for BuddyPress WordPress plugin CVE-2026-120539",
+                "No significant new development established since November 22"
+              ],
+              [
+                "D-Link DIR-600L CVE-2026-133993",
+                "No significant new development established since November 22"
+              ],
+              [
+                "Nexter Blocks Pro WordPress plugin CVE-2026-125294",
+                "No significant new development established since November 22"
+              ],
+              [
+                "CVE-2026-124194",
+                "EPSS rose from 0.02 to 0.25 (score date 2026-11-23)."
+              ],
+              [
+                "CVE-2026-115731",
+                "EPSS rose from 0.01 to 0.13 (score date 2026-11-23)."
+              ]
+            ]
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "label": "CVE-2026-133968 NVD record",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-133968"
+      },
+      {
+        "label": "CVE-2026-133469 NVD record",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-133469"
+      },
+      {
+        "label": "CVE-2026-134624 NVD record",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-134624"
+      },
+      {
+        "label": "CVE-2026-134815 NVD record",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-134815"
+      },
+      {
+        "label": "CVE-2026-134814 NVD record",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-134814"
+      },
+      {
+        "label": "CVE-2026-134838 NVD record",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-134838"
+      },
+      {
+        "label": "CISA KEV catalog",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+      },
+      {
+        "label": "FIRST EPSS",
+        "url": "https://www.first.org/epss/"
+      }
+    ],
+    "footer": "Enterprise Cyber Threat Intelligence | 23 Nov 2026",
+    "reviewedBy": null,
+    "generatedAt": "2026-11-23T22:19:57Z",
+    "prioritized": [
+      "CVE-2026-133968",
+      "CVE-2026-133469",
+      "CVE-2026-134624",
+      "CVE-2026-134815",
+      "CVE-2026-134814",
+      "CVE-2026-134838"
+    ]
+  }
+}
