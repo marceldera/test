@@ -2,25 +2,25 @@
   "schemaVersion": 1,
   "month": "2026-11",
   "complete": false,
-  "updatedAt": "2026-11-24T00:08:38Z",
+  "updatedAt": "2026-11-24T20:54:41Z",
   "metrics": [
     {
       "id": "kev_added",
       "label": "New KEV entries",
-      "value": 26,
+      "value": 29,
       "rule": "CVE entries whose CISA dateAdded falls in the month.",
       "source": "CISA KEV",
-      "window": "2026-11-01 to 2026-11-23 (dateAdded, ET calendar)",
-      "updatedAt": "2026-11-24T00:08:38Z"
+      "window": "2026-11-01 to 2026-11-24 (dateAdded, ET calendar)",
+      "updatedAt": "2026-11-24T20:54:41Z"
     },
     {
       "id": "vendors",
       "label": "Distinct vendors",
-      "value": 23,
+      "value": 26,
       "rule": "Unique vendorProject values among the month’s KEV entries.",
       "source": "CISA KEV",
-      "window": "2026-11-01 to 2026-11-23 (dateAdded, ET calendar)",
-      "updatedAt": "2026-11-24T00:08:38Z"
+      "window": "2026-11-01 to 2026-11-24 (dateAdded, ET calendar)",
+      "updatedAt": "2026-11-24T20:54:41Z"
     },
     {
       "id": "ransomware",
@@ -28,17 +28,17 @@
       "value": 1,
       "rule": "Month’s KEV entries where CISA sets knownRansomwareCampaignUse = Known.",
       "source": "CISA KEV",
-      "window": "2026-11-01 to 2026-11-23 (dateAdded, ET calendar)",
-      "updatedAt": "2026-11-24T00:08:38Z"
+      "window": "2026-11-01 to 2026-11-24 (dateAdded, ET calendar)",
+      "updatedAt": "2026-11-24T20:54:41Z"
     },
     {
       "id": "epss90",
       "label": "EPSS ≥ 90th percentile",
-      "value": 14,
-      "rule": "Month’s KEV entries with EPSS percentile ≥ 0.90 (scores as of 2026-11-23).",
+      "value": 15,
+      "rule": "Month’s KEV entries with EPSS percentile ≥ 0.90 (scores as of 2026-11-24).",
       "source": "FIRST EPSS",
-      "window": "2026-11-01 to 2026-11-23 (dateAdded, ET calendar)",
-      "updatedAt": "2026-11-24T00:08:38Z"
+      "window": "2026-11-01 to 2026-11-24 (dateAdded, ET calendar)",
+      "updatedAt": "2026-11-24T20:54:41Z"
     }
   ],
   "notice": "These are CISA KEV catalog counts, not a count of total cyber incidents.",
@@ -50,7 +50,7 @@
       "product": "WordPress Core",
       "concern": "WordPress WordPress Core Time-of-check Time-of-use (TOCTOU) Race Condition Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.94929,
+      "epssPercentile": 0.94871,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -61,7 +61,7 @@
       "product": "Multiple Products",
       "concern": "Apple Multiple Products Improper Authentication Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.75857,
+      "epssPercentile": 0.75724,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -72,7 +72,7 @@
       "product": "SonicOS SSLVPN",
       "concern": "SonicWall SonicOS SSLVPN Use of Single-factor Authentication Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.94923,
+      "epssPercentile": 0.94865,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -83,7 +83,7 @@
       "product": "GPUStack",
       "concern": "GPUStack Improper Authentication Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.97351,
+      "epssPercentile": 0.97334,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -94,7 +94,7 @@
       "product": "FreeSwitch",
       "concern": "SignalWire FreeSwitch Code Injection Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.98784,
+      "epssPercentile": 0.98774,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -105,7 +105,7 @@
       "product": "OpenSSH",
       "concern": "OpenBSD OpenSSH Unexpected Status Code or Return Value Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.99871,
+      "epssPercentile": 0.99868,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -116,7 +116,7 @@
       "product": "Aspera Faspex",
       "concern": "IBM Aspera Faspex Incorrect Authorization Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.64094,
+      "epssPercentile": 0.63924,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -127,7 +127,7 @@
       "product": "Multiple Products",
       "concern": "Barracuda Networks Multiple Products OS Command Injection Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.99239,
+      "epssPercentile": 0.99232,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -138,7 +138,7 @@
       "product": "Webtop Media Transcoder",
       "concern": "Openwave Messaging Limited Webtop Media Transcoder Incorrect Resource Transfer Between Spheres Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.6825,
+      "epssPercentile": 0.68089,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -149,7 +149,7 @@
       "product": "Barracuda Email Security Gateway (ESG)",
       "concern": "Barracuda Networks Email Security Gateway (ESG) Authentication Bypass Using an Alternate Path or Channel Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.99506,
+      "epssPercentile": 0.99502,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -160,7 +160,7 @@
       "product": "Office",
       "concern": "Microsoft Office Outlook Missing User Interaction for Potentially Unsafe Action Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.97959,
+      "epssPercentile": 0.97943,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -171,7 +171,7 @@
       "product": "Chromium",
       "concern": "Google Chromium Use-After-Free Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.94158,
+      "epssPercentile": 0.94086,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -182,7 +182,7 @@
       "product": "BroadWorks",
       "concern": "Cisco BroadWorks Improper Restriction of XML External Entity Reference Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.77566,
+      "epssPercentile": 0.77441,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -193,7 +193,7 @@
       "product": "UnrealIRCd",
       "concern": "UnrealIRCd Improper Neutralization of Delimiters Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.67661,
+      "epssPercentile": 0.72116,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -204,7 +204,7 @@
       "product": "Multiple Products",
       "concern": "Check Point Multiple Products Incorrect Permission Assignment for Critical Resource Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.88716,
+      "epssPercentile": 0.88621,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -215,7 +215,7 @@
       "product": "Puppet Enterprise",
       "concern": "Perforce Puppet Enterprise Deserialization of Untrusted Data Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.96392,
+      "epssPercentile": 0.96365,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -226,7 +226,7 @@
       "product": "DiskStation Manager (DSM)",
       "concern": "Synology DiskStation Manager (DSM) Improper Encoding or Escaping of Output Vulnerability",
       "ransomware": "known",
-      "epssPercentile": 0.88191,
+      "epssPercentile": 0.88097,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -237,7 +237,7 @@
       "product": "LiteLLM",
       "concern": "BerriAI LiteLLM Unprotected Alternate Channel Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.99678,
+      "epssPercentile": 0.99674,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -248,7 +248,7 @@
       "product": "Axis",
       "concern": "Apache Axis Unsafe Reflection Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.93395,
+      "epssPercentile": 0.93317,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -259,7 +259,7 @@
       "product": "Research Electronic Data Capture (REDCap)",
       "concern": "Vanderbilt University Research Electronic Data Capture (REDCap) Code Injection Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.98448,
+      "epssPercentile": 0.98433,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -270,7 +270,7 @@
       "product": "NetWeaver",
       "concern": "SAP NetWeaver Improper Neutralization of Special Elements in Data Query Logic Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.60644,
+      "epssPercentile": 0.60474,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -281,7 +281,7 @@
       "product": "VMware vCenter",
       "concern": "VMWare vCenter Authentication Bypass Using an Alternate Path or Channel Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.89533,
+      "epssPercentile": 0.89444,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -292,7 +292,7 @@
       "product": "Roller",
       "concern": "Apache Roller Deserialization of Untrusted Data Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.9294,
+      "epssPercentile": 0.98654,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -303,7 +303,7 @@
       "product": "Expressway Series",
       "concern": "Cisco Expressway Series Use of Hard-coded Credentials Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.82879,
+      "epssPercentile": 0.82762,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -314,7 +314,7 @@
       "product": "MONAI Label",
       "concern": "Project MONAI MONAI Label Path Traversal Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.89921,
+      "epssPercentile": 0.98916,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -325,7 +325,40 @@
       "product": "MailAssure",
       "concern": "N-able MailAssure (SpamExperts) Server-Side Request Forgery (SSRF) Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.2969,
+      "epssPercentile": 0.50289,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-11-24",
+      "cve": "CVE-2026-131914",
+      "vendor": "Idunno",
+      "product": "AntiCsrf",
+      "concern": "Idunno AntiCsrf Deserialization of Untrusted Data Vulnerability",
+      "ransomware": "unknown",
+      "epssPercentile": 0.50152,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-11-24",
+      "cve": "CVE-2026-132165",
+      "vendor": "Drupal",
+      "product": "Core",
+      "concern": "Drupal Core Remote Code Execution Vulnerability",
+      "ransomware": "unknown",
+      "epssPercentile": null,
+      "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "date": "2026-11-24",
+      "cve": "CVE-2026-132224",
+      "vendor": "Optimizely",
+      "product": "Web Experimentation",
+      "concern": "Optimizely Web Experimentation External Control of Critical State Data Vulnerability",
+      "ransomware": "unknown",
+      "epssPercentile": 0.35845,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     }
@@ -338,7 +371,7 @@
       "THREAT INTELLIGENCE SUMMARY"
     ],
     "dateLabel": "November 2026",
-    "window": "Reporting period: November 1-23, 2026 (month to date)",
+    "window": "Reporting period: November 1-24, 2026 (month to date)",
     "prepared": "Automated summary, refreshed daily at 7:00 AM ET",
     "sourceNote": "Compiled automatically from CISA KEV, NVD, FIRST EPSS, Google Project Zero, ENISA EUVD, VulnCheck, Metasploit, Exploit-DB, PoC-in-GitHub and MITRE ATT&CK. Counts are catalog counts, not a count of cyber incidents; anything the sources do not establish is stated as not established.",
     "sections": [
@@ -350,7 +383,7 @@
         "blocks": [
           {
             "type": "p",
-            "text": "CISA added **26 vulnerabilities** to the KEV catalog in November 2026 (month to date through November 23, 2026), spanning 23 vendors. CISA flags known ransomware use for 1 of them. The highest-likelihood additions by EPSS were **CVE-2026-123158 (OpenBSD OpenSSH)** and **CVE-2026-40217 (BerriAI LiteLLM)**."
+            "text": "CISA added **29 vulnerabilities** to the KEV catalog in November 2026 (month to date through November 24, 2026), spanning 26 vendors. CISA flags known ransomware use for 1 of them. The highest-likelihood additions by EPSS were **CVE-2026-123158 (OpenBSD OpenSSH)** and **CVE-2026-40217 (BerriAI LiteLLM)**."
           },
           {
             "type": "table",
@@ -361,11 +394,11 @@
             "rows": [
               [
                 "New KEV entries",
-                "26"
+                "29"
               ],
               [
                 "Distinct vendors",
-                "23"
+                "26"
               ],
               [
                 "Known ransomware use",
@@ -373,7 +406,7 @@
               ],
               [
                 "EPSS ≥ 90th percentile",
-                "14 of the month's KEV entries"
+                "15 of the month's KEV entries"
               ],
               [
                 "Exploited or zero-day outside KEV",
@@ -381,11 +414,11 @@
               ],
               [
                 "Public exploit code referenced",
-                "21 of the month's KEV entries"
+                "27 of the month's KEV entries"
               ],
               [
                 "CVEs published to NVD",
-                "13,021 (6,477 High/Critical)"
+                "13,797 (6,855 High/Critical)"
               ]
             ]
           },
@@ -436,7 +469,13 @@
                 "CVE-2026-111560",
                 "Barracuda Networks Multiple Products",
                 "OS command injection",
-                "CISA KEV 2026-11-10; ENISA EUVD; EPSS 99th pct; no public exploit identified"
+                "CISA KEV 2026-11-10; ENISA EUVD; EPSS 99th pct; public exploit"
+              ],
+              [
+                "CVE-2026-133968",
+                "Project MONAI MONAI Label",
+                "path traversal",
+                "CISA KEV 2026-11-23; ENISA EUVD; EPSS 98th pct; public exploit"
               ],
               [
                 "CVE-2026-116779",
@@ -445,22 +484,16 @@
                 "CISA KEV 2026-11-09; ENISA EUVD; EPSS 98th pct; public exploit"
               ],
               [
+                "CVE-2026-129448",
+                "Apache Roller",
+                "unsafe deserialization",
+                "CISA KEV 2026-11-20; ENISA EUVD; EPSS 98th pct; public exploit"
+              ],
+              [
                 "CVE-2026-90817",
                 "Vanderbilt University Research Electronic Data Capture (REDCap)",
                 "arbitrary file write",
                 "CISA KEV 2026-11-18; ENISA EUVD; EPSS 98th pct; public exploit"
-              ],
-              [
-                "CVE-2026-124194",
-                "Microsoft Office",
-                "vulnerability",
-                "CISA KEV 2026-11-10; ENISA EUVD; EPSS 97th pct; public exploit"
-              ],
-              [
-                "CVE-2026-102895",
-                "GPUStack",
-                "authentication bypass",
-                "CISA KEV 2026-11-09; ENISA EUVD; EPSS 97th pct; public exploit"
               ]
             ]
           },
@@ -486,7 +519,7 @@
         "blocks": [
           {
             "type": "p",
-            "text": "KEV additions by week: week of Nov 2: 3; week of Nov 9: 12; week of Nov 16: 9; week of Nov 23: 2."
+            "text": "KEV additions by week: week of Nov 2: 3; week of Nov 9: 12; week of Nov 16: 9; week of Nov 23: 5."
           },
           {
             "type": "p",
@@ -498,7 +531,7 @@
           },
           {
             "type": "p",
-            "text": "**Defensive hunting focus:** unexpected child processes and outbound connections (8 CVEs); unauthorized administrative access and configuration changes (8 CVEs); unusual requests and changes (6 CVEs)."
+            "text": "**Defensive hunting focus:** unexpected child processes and outbound connections (10 CVEs); unauthorized administrative access and configuration changes (8 CVEs); unusual requests and changes (7 CVEs)."
           }
         ]
       },
@@ -552,6 +585,11 @@
                 "Multiple Products"
               ],
               [
+                "Drupal",
+                "1",
+                "Core"
+              ],
+              [
                 "GPUStack",
                 "1",
                 "GPUStack"
@@ -560,11 +598,6 @@
                 "Google",
                 "1",
                 "Chromium"
-              ],
-              [
-                "IBM",
-                "1",
-                "Aspera Faspex"
               ]
             ]
           },
@@ -577,31 +610,31 @@
             "rows": [
               [
                 "Healthcare / medical imaging",
-                "Possible Barracuda Networks Barracuda Email Security Gateway (ESG), Barracuda Networks Multiple Products and BerriAI LiteLLM exposure; targeting unknown"
+                "Project MONAI MONAI Label relevant to this sector; confirmed sector targeting not established"
               ],
               [
                 "Education / research",
-                "Vanderbilt University Research Electronic Data Capture (REDCap) relevant to this sector; confirmed sector targeting not established"
+                "Project MONAI MONAI Label and Vanderbilt University Research Electronic Data Capture (REDCap) relevant to this sector; confirmed sector targeting not established"
               ],
               [
                 "Technology / software",
-                "Potential Barracuda Networks Barracuda Email Security Gateway (ESG), Barracuda Networks Multiple Products, BerriAI LiteLLM and GPUStack dependency exposure"
+                "Potential Apache Roller, Barracuda Networks Barracuda Email Security Gateway (ESG), Barracuda Networks Multiple Products and BerriAI LiteLLM dependency exposure"
               ],
               [
                 "Government / defense",
-                "Possible Barracuda Networks Barracuda Email Security Gateway (ESG), Barracuda Networks Multiple Products and BerriAI LiteLLM exposure; no new sector-specific targeting confirmed"
+                "Possible Apache Roller, Barracuda Networks Barracuda Email Security Gateway (ESG) and Barracuda Networks Multiple Products exposure; no new sector-specific targeting confirmed"
               ],
               [
                 "Financial services",
-                "Possible Barracuda Networks Barracuda Email Security Gateway (ESG), Barracuda Networks Multiple Products and BerriAI LiteLLM exposure; targeting unknown"
+                "Possible Apache Roller, Barracuda Networks Barracuda Email Security Gateway (ESG) and Barracuda Networks Multiple Products exposure; targeting unknown"
               ],
               [
                 "Manufacturing / energy / utilities",
-                "Possible Barracuda Networks Barracuda Email Security Gateway (ESG), Barracuda Networks Multiple Products and BerriAI LiteLLM exposure; targeting unknown"
+                "Possible Apache Roller, Barracuda Networks Barracuda Email Security Gateway (ESG) and Barracuda Networks Multiple Products exposure; targeting unknown"
               ],
               [
                 "Retail / transportation",
-                "Possible Barracuda Networks Barracuda Email Security Gateway (ESG), Barracuda Networks Multiple Products and BerriAI LiteLLM exposure; targeting unknown"
+                "Possible Apache Roller, Barracuda Networks Barracuda Email Security Gateway (ESG) and Barracuda Networks Multiple Products exposure; targeting unknown"
               ]
             ]
           },
@@ -625,7 +658,7 @@
             ],
             "rows": [
               [
-                "Remaining 26 exploited CVEs",
+                "Remaining 29 exploited CVEs",
                 "Unknown; identity, motivation and geographic targeting not established in tracked sources."
               ]
             ]
@@ -657,7 +690,7 @@
               ],
               [
                 "Urgent",
-                "Local or client-side KEV entries: Apple Multiple Products and Check Point Multiple Products",
+                "Local or client-side KEV entries: Apple Multiple Products, Check Point Multiple Products and Drupal Core",
                 "Patch within 7 days"
               ],
               [
@@ -680,26 +713,6 @@
               "Product"
             ],
             "rows": [
-              [
-                "November 23, 2026",
-                "CVE-2025-42884",
-                "SAP NetWeaver"
-              ],
-              [
-                "November 23, 2026",
-                "CVE-2026-123890",
-                "Broadcom VMware vCenter"
-              ],
-              [
-                "November 23, 2026",
-                "CVE-2026-129448",
-                "Apache Roller"
-              ],
-              [
-                "November 23, 2026",
-                "CVE-2026-76466",
-                "Cisco Expressway Series"
-              ],
               [
                 "November 24, 2026",
                 "CVE-2026-111793",
@@ -729,6 +742,21 @@
                 "November 26, 2026",
                 "CVE-2026-134624",
                 "N-able MailAssure"
+              ],
+              [
+                "November 27, 2026",
+                "CVE-2026-131914",
+                "Idunno AntiCsrf"
+              ],
+              [
+                "November 27, 2026",
+                "CVE-2026-132165",
+                "Drupal Core"
+              ],
+              [
+                "November 27, 2026",
+                "CVE-2026-132224",
+                "Optimizely Web Experimentation"
               ],
               [
                 "December 1, 2026",
@@ -891,6 +919,21 @@
                 "2026-11-23",
                 "CVE-2026-134624",
                 "N-able MailAssure (SpamExperts) Server-Side Request Forgery (SSRF) Vulnerability"
+              ],
+              [
+                "2026-11-24",
+                "CVE-2026-131914",
+                "Idunno AntiCsrf Deserialization of Untrusted Data Vulnerability"
+              ],
+              [
+                "2026-11-24",
+                "CVE-2026-132165",
+                "Drupal Core Remote Code Execution Vulnerability"
+              ],
+              [
+                "2026-11-24",
+                "CVE-2026-132224",
+                "Optimizely Web Experimentation External Control of Critical State Data Vulnerability"
               ]
             ]
           }
@@ -911,6 +954,10 @@
         "url": "https://trust.barracuda.com/security/pre-authentication-authorization-bypass-command-injection"
       },
       {
+        "label": "Project MONAI MONAI Label vendor advisory",
+        "url": "https://github.com/Project-MONAI/MONAILabel/security/advisories/GHSA-qc22-rmgc-vg94"
+      },
+      {
         "label": "SignalWire FreeSwitch vendor advisory",
         "url": "https://github.com/signalwire/freeswitch/commit/7015f6a73ab3d67fed5fbfc277ecfb88a74c2a86"
       },
@@ -924,6 +971,6 @@
       }
     ],
     "footer": "Enterprise Cyber Threat Intelligence | November 2026",
-    "generatedAt": "2026-11-24T00:10:45Z"
+    "generatedAt": "2026-11-24T20:57:11Z"
   }
 }

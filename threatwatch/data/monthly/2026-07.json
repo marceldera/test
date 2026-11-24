@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "month": "2026-07",
   "complete": true,
-  "updatedAt": "2026-11-24T00:08:38Z",
+  "updatedAt": "2026-11-24T20:54:41Z",
   "metrics": [
     {
       "id": "kev_added",
@@ -11,7 +11,7 @@
       "rule": "CVE entries whose CISA dateAdded falls in the month.",
       "source": "CISA KEV",
       "window": "2026-07-01 to 2026-07-31 (dateAdded, ET calendar)",
-      "updatedAt": "2026-11-24T00:08:38Z"
+      "updatedAt": "2026-11-24T20:54:41Z"
     },
     {
       "id": "vendors",
@@ -20,7 +20,7 @@
       "rule": "Unique vendorProject values among the month’s KEV entries.",
       "source": "CISA KEV",
       "window": "2026-07-01 to 2026-07-31 (dateAdded, ET calendar)",
-      "updatedAt": "2026-11-24T00:08:38Z"
+      "updatedAt": "2026-11-24T20:54:41Z"
     },
     {
       "id": "ransomware",
@@ -29,16 +29,16 @@
       "rule": "Month’s KEV entries where CISA sets knownRansomwareCampaignUse = Known.",
       "source": "CISA KEV",
       "window": "2026-07-01 to 2026-07-31 (dateAdded, ET calendar)",
-      "updatedAt": "2026-11-24T00:08:38Z"
+      "updatedAt": "2026-11-24T20:54:41Z"
     },
     {
       "id": "epss90",
       "label": "EPSS ≥ 90th percentile",
       "value": 21,
-      "rule": "Month’s KEV entries with EPSS percentile ≥ 0.90 (scores as of 2026-11-23).",
+      "rule": "Month’s KEV entries with EPSS percentile ≥ 0.90 (scores as of 2026-11-24).",
       "source": "FIRST EPSS",
       "window": "2026-07-01 to 2026-07-31 (dateAdded, ET calendar)",
-      "updatedAt": "2026-11-24T00:08:38Z"
+      "updatedAt": "2026-11-24T20:54:41Z"
     }
   ],
   "notice": "These are CISA KEV catalog counts, not a count of total cyber incidents.",
@@ -50,7 +50,7 @@
       "product": "SharePoint Server",
       "concern": "Microsoft SharePoint Server Deserialization of Untrusted Data Vulnerability",
       "ransomware": "known",
-      "epssPercentile": 0.99626,
+      "epssPercentile": 0.99623,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -61,7 +61,7 @@
       "product": "ColdFusion",
       "concern": "Adobe ColdFusion Path Traversal Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.98734,
+      "epssPercentile": 0.98723,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -72,7 +72,7 @@
       "product": "SP Page Builder",
       "concern": "JoomShaper SP Page Builder Unrestricted Upload of File with Dangerous Type Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.99776,
+      "epssPercentile": 0.99772,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -83,7 +83,7 @@
       "product": "Langflow",
       "concern": "Langflow Authorization Bypass Through User-Controlled Key Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.60192,
+      "epssPercentile": 0.60018,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -94,7 +94,7 @@
       "product": "Page Builder",
       "concern": "Joomlack Page Builder Improper Access Control Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.98295,
+      "epssPercentile": 0.98279,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -105,7 +105,7 @@
       "product": "iCagenda",
       "concern": "iCagenda Unrestricted Upload of File with Dangerous Type Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.97511,
+      "epssPercentile": 0.97493,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -116,7 +116,7 @@
       "product": "Forms",
       "concern": "Balbooa Forms Unrestricted Upload of File with Dangerous Type Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.96778,
+      "epssPercentile": 0.96757,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -127,7 +127,7 @@
       "product": "IOS",
       "concern": "Cisco IOS Cross-Site Request Forgery Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.9843,
+      "epssPercentile": 0.98468,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -138,7 +138,7 @@
       "product": "SMA1000 Appliances",
       "concern": "SonicWall SMA1000 Appliances Server-Side Request Forgery Vulnerability",
       "ransomware": "known",
-      "epssPercentile": 0.94154,
+      "epssPercentile": 0.94082,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -149,7 +149,7 @@
       "product": "SMA1000 Appliances",
       "concern": "SonicWall SMA1000 Appliances Code Injection Vulnerability",
       "ransomware": "known",
-      "epssPercentile": 0.96187,
+      "epssPercentile": 0.96155,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -160,7 +160,7 @@
       "product": "Active Directory Federation Services",
       "concern": "Microsoft Active Directory Federation Services Insufficient Granularity of Access Control Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.28756,
+      "epssPercentile": 0.28514,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -171,7 +171,7 @@
       "product": "SharePoint Server",
       "concern": "Microsoft SharePoint Server Missing Authentication for Critical Function Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.98106,
+      "epssPercentile": 0.98091,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -182,7 +182,7 @@
       "product": "KNX Protocol Connection Authorization Option 1",
       "concern": "KNX Association KNX Protocol Connection Authorization Option 1 Overly Restrictive Account Lockout Mechanism Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.72501,
+      "epssPercentile": 0.72353,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -193,7 +193,7 @@
       "product": "E-Business Suite",
       "concern": "Oracle E-Business Suite Improper Privilege Management Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.96291,
+      "epssPercentile": 0.96262,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -204,7 +204,7 @@
       "product": "FortiSandbox",
       "concern": "Fortinet FortiSandbox OS Command Injection Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.99541,
+      "epssPercentile": 0.99537,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -215,7 +215,7 @@
       "product": "FortiSandbox",
       "concern": "Fortinet FortiSandbox OS Command Injection Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.99839,
+      "epssPercentile": 0.99835,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -226,7 +226,7 @@
       "product": "SharePoint",
       "concern": "Microsoft SharePoint Deserialization of Untrusted Data Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.96965,
+      "epssPercentile": 0.96944,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -237,7 +237,7 @@
       "product": "DD-WRT",
       "concern": "DD-WRT Stack-Based Buffer Overflow Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.9078,
+      "epssPercentile": 0.90689,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -248,7 +248,7 @@
       "product": "Langflow",
       "concern": "Langflow Inclusion of Functionality from Untrusted Control Sphere Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.9921,
+      "epssPercentile": 0.99203,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -259,7 +259,7 @@
       "product": "Core",
       "concern": "WordPress Core SQL Injection Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.92808,
+      "epssPercentile": 0.92724,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -270,7 +270,7 @@
       "product": "Core",
       "concern": "WordPress Core Interpretation Conflict Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.95916,
+      "epssPercentile": 0.95878,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -281,7 +281,7 @@
       "product": "SmartConsole",
       "concern": "Check Point SmartConsole Improper Authentication Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.89511,
+      "epssPercentile": 0.8942,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -292,7 +292,7 @@
       "product": "SharePoint",
       "concern": "Microsoft SharePoint Deserialization of Untrusted Data Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.99657,
+      "epssPercentile": 0.99927,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -303,7 +303,7 @@
       "product": "FortiOS",
       "concern": "Fortinet FortiOS Exposure of Sensitive Information to an Unauthorized Actor Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.98229,
+      "epssPercentile": 0.98214,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -314,7 +314,7 @@
       "product": "VeloCloud Orchestrator",
       "concern": "Arista VeloCloud Orchestrator On-Prem OS Command Injection Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.78588,
+      "epssPercentile": 0.78464,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -325,7 +325,7 @@
       "product": "Secure Firewall Management Center (FMC)",
       "concern": "Cisco Secure Firewall Management Center Use of Hard-coded Password Vulnerability",
       "ransomware": "known",
-      "epssPercentile": 0.98478,
+      "epssPercentile": 0.98464,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     }
@@ -350,7 +350,7 @@
         "blocks": [
           {
             "type": "p",
-            "text": "CISA added **26 vulnerabilities** to the KEV catalog in July 2026, spanning 16 vendors. CISA flags known ransomware use for 4 of them. The highest-likelihood additions by EPSS were **CVE-2026-39808 (Fortinet FortiSandbox)** and **CVE-2026-48908 (JoomShaper SP Page Builder)**. Outside KEV, 1 further CVE was reported exploited or tracked as zero-days by Google Project Zero, ENISA EUVD or VulnCheck."
+            "text": "CISA added **26 vulnerabilities** to the KEV catalog in July 2026, spanning 16 vendors. CISA flags known ransomware use for 4 of them. The highest-likelihood additions by EPSS were **CVE-2026-50522 (Microsoft SharePoint)** and **CVE-2026-39808 (Fortinet FortiSandbox)**. Outside KEV, 1 further CVE was reported exploited or tracked as zero-days by Google Project Zero, ENISA EUVD or VulnCheck."
           },
           {
             "type": "table",
@@ -395,7 +395,7 @@
           },
           {
             "type": "p",
-            "text": "**Top five actions:** (1) Isolate or patch exposed Fortinet FortiSandbox (CVE-2026-39808); (2) isolate or patch exposed JoomShaper SP Page Builder (CVE-2026-48908); (3) isolate or patch exposed Microsoft SharePoint (CVE-2026-50522); (4) isolate or patch exposed Microsoft SharePoint Server (CVE-2026-45659); (5) examine Fortinet FortiSandbox hosts for unexpected child processes and outbound connections."
+            "text": "**Top five actions:** (1) Isolate or patch exposed Microsoft SharePoint (CVE-2026-50522); (2) isolate or patch exposed Fortinet FortiSandbox (CVE-2026-39808); (3) isolate or patch exposed JoomShaper SP Page Builder (CVE-2026-48908); (4) isolate or patch exposed Microsoft SharePoint Server (CVE-2026-45659); (5) examine Microsoft SharePoint hosts for unexpected child processes and outbound connections."
           }
         ]
       },
@@ -415,6 +415,12 @@
             ],
             "rows": [
               [
+                "CVE-2026-50522",
+                "Microsoft SharePoint",
+                "unsafe deserialization",
+                "CISA KEV 2026-07-22; ENISA EUVD; EPSS 99th pct; public exploit"
+              ],
+              [
                 "CVE-2026-39808",
                 "Fortinet FortiSandbox",
                 "OS command injection",
@@ -425,12 +431,6 @@
                 "JoomShaper SP Page Builder",
                 "unrestricted file upload",
                 "CISA KEV 2026-07-07; ENISA EUVD; EPSS 99th pct; public exploit"
-              ],
-              [
-                "CVE-2026-50522",
-                "Microsoft SharePoint",
-                "unsafe deserialization",
-                "CISA KEV 2026-07-22; ENISA EUVD; EPSS 99th pct; public exploit"
               ],
               [
                 "CVE-2026-45659",
@@ -457,10 +457,10 @@
                 "CISA KEV 2026-07-07; ENISA EUVD; EPSS 98th pct; public exploit"
               ],
               [
-                "CVE-2026-20316",
-                "Cisco Secure Firewall Management Center (FMC)",
-                "vulnerability",
-                "CISA KEV 2026-07-29; ENISA EUVD; EPSS 98th pct; no public exploit identified"
+                "CVE-2008-4128",
+                "Cisco IOS",
+                "cross-site request forgery",
+                "CISA KEV 2026-07-13; ENISA EUVD; EPSS 98th pct; public exploit"
               ],
               [
                 "CVE-2026-49049",
@@ -472,15 +472,15 @@
           },
           {
             "type": "p",
+            "text": "**CVE-2026-50522 - Microsoft SharePoint unsafe deserialization (CVSS 9.8).** Deserialization of untrusted data in Microsoft Office SharePoint allows an unauthorized attacker to execute code over a network. Fixed version (first unaffected release per NVD ranges): sharepoint server 16.0.19725.20434. Attack path: network-accessible; no authentication required; no user interaction required."
+          },
+          {
+            "type": "p",
             "text": "**CVE-2026-39808 - Fortinet FortiSandbox OS command injection (CVSS 9.8).** A improper neutralization of special elements used in an os command ('os command injection') vulnerability in Fortinet FortiSandbox 4.4.0 through 4.4.8 may allow attacker to execute unauthorized code or commands via Fixed package release: not mapped in NVD ranges; 1 vendor patch or advisory reference available. Attack path: network-accessible; no authentication required; no user interaction required."
           },
           {
             "type": "p",
             "text": "**CVE-2026-48908 - JoomShaper SP Page Builder unrestricted file upload (CVSS 10).** A vulnerability in SP Page Builder for Joomla allows unauthenticated users to upload arbitrary files, ultimately resulting in the upload and execution of PHP code. Fixed version (first unaffected release per NVD ranges): sp page builder 6.6.2. Attack path: network-accessible; no authentication required; no user interaction required."
-          },
-          {
-            "type": "p",
-            "text": "**CVE-2026-50522 - Microsoft SharePoint unsafe deserialization (CVSS 9.8).** Deserialization of untrusted data in Microsoft Office SharePoint allows an unauthorized attacker to execute code over a network. Fixed version (first unaffected release per NVD ranges): sharepoint server 16.0.19725.20434. Attack path: network-accessible; no authentication required; no user interaction required."
           }
         ]
       },
@@ -598,31 +598,31 @@
             "rows": [
               [
                 "Healthcare / medical imaging",
-                "Possible Adobe ColdFusion, Cisco Secure Firewall Management Center (FMC) and Fortinet FortiSandbox exposure; targeting unknown"
+                "Possible Adobe ColdFusion, Cisco IOS and Fortinet FortiSandbox exposure; targeting unknown"
               ],
               [
                 "Education / research",
-                "Possible Adobe ColdFusion, Cisco Secure Firewall Management Center (FMC) and Fortinet FortiSandbox exposure; targeting unknown"
+                "Possible Adobe ColdFusion, Cisco IOS and Fortinet FortiSandbox exposure; targeting unknown"
               ],
               [
                 "Technology / software",
-                "Potential Adobe ColdFusion, Cisco Secure Firewall Management Center (FMC), Fortinet FortiSandbox and JoomShaper SP Page Builder dependency exposure"
+                "Potential Adobe ColdFusion, Cisco IOS, Fortinet FortiSandbox and JoomShaper SP Page Builder dependency exposure"
               ],
               [
                 "Government / defense",
-                "Possible Adobe ColdFusion, Cisco Secure Firewall Management Center (FMC) and Fortinet FortiSandbox exposure; no new sector-specific targeting confirmed"
+                "Possible Adobe ColdFusion, Cisco IOS and Fortinet FortiSandbox exposure; no new sector-specific targeting confirmed"
               ],
               [
                 "Financial services",
-                "Possible Adobe ColdFusion, Cisco Secure Firewall Management Center (FMC) and Fortinet FortiSandbox exposure; targeting unknown"
+                "Possible Adobe ColdFusion, Cisco IOS and Fortinet FortiSandbox exposure; targeting unknown"
               ],
               [
                 "Manufacturing / energy / utilities",
-                "Possible Adobe ColdFusion, Cisco Secure Firewall Management Center (FMC) and Fortinet FortiSandbox exposure; targeting unknown"
+                "Possible Adobe ColdFusion, Cisco IOS and Fortinet FortiSandbox exposure; targeting unknown"
               ],
               [
                 "Retail / transportation",
-                "Possible Adobe ColdFusion, Cisco Secure Firewall Management Center (FMC) and Fortinet FortiSandbox exposure; targeting unknown"
+                "Possible Adobe ColdFusion, Cisco IOS and Fortinet FortiSandbox exposure; targeting unknown"
               ]
             ]
           },
@@ -860,12 +860,12 @@
     ],
     "references": [
       {
-        "label": "Fortinet FortiSandbox vendor advisory",
-        "url": "https://fortiguard.fortinet.com/psirt/FG-IR-26-100"
-      },
-      {
         "label": "Microsoft SharePoint vendor advisory",
         "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50522"
+      },
+      {
+        "label": "Fortinet FortiSandbox vendor advisory",
+        "url": "https://fortiguard.fortinet.com/psirt/FG-IR-26-100"
       },
       {
         "label": "Microsoft SharePoint Server vendor advisory",
@@ -889,6 +889,6 @@
       }
     ],
     "footer": "Enterprise Cyber Threat Intelligence | July 2026",
-    "generatedAt": "2026-11-24T00:10:45Z"
+    "generatedAt": "2026-11-24T20:57:11Z"
   }
 }

@@ -1,46 +1,298 @@
 {
   "schemaVersion": 1,
-  "edition": "2026-11-23",
-  "publishedAt": "2026-11-24T00:08:38Z",
+  "edition": "2026-11-24",
+  "publishedAt": "2026-11-24T20:54:41Z",
   "window": {
-    "start": "2026-11-23T23:26:11Z",
-    "end": "2026-11-24T00:08:38Z",
+    "start": "2026-11-24T00:08:38Z",
+    "end": "2026-11-24T20:54:41Z",
     "note": "KEV additions not present in the previous edition’s catalog snapshot."
   },
   "executive": {
-    "summary": "CISA published no new Known Exploited Vulnerabilities since the previous edition. That does not mean no new threats emerged — KEV is one confirmed-exploitation source, and campaigns or zero-days outside it are not covered by today’s automated feeds.",
+    "summary": "CISA added 3 vulnerabilities to the Known Exploited Vulnerabilities catalog since the previous edition, affecting Idunno, Optimizely, Drupal. 1 meet the emergency criteria (confirmed exploitation plus critical severity or unauthenticated network exposure).",
     "summarySource": "generated",
     "counts": {
-      "kevAdded": 0,
+      "kevAdded": 3,
       "kevRansomware": 0,
-      "emergency": 0,
-      "urgent": 0,
-      "criticalHigh": 0,
-      "materialChanges": 0,
-      "kevTotal": 1792
+      "emergency": 1,
+      "urgent": 2,
+      "criticalHigh": 2,
+      "materialChanges": 4,
+      "kevTotal": 1795
     },
-    "developments": []
+    "developments": [
+      "CVE-2026-131914 — Idunno AntiCsrf: Idunno AntiCsrf Deserialization of Untrusted Data Vulnerability (emergency)",
+      "CVE-2026-132224 — Optimizely Web Experimentation: Optimizely Web Experimentation External Control of Critical State Data Vulnerability (urgent)",
+      "CVE-2026-132165 — Drupal Core: Drupal Core Remote Code Execution Vulnerability (urgent)",
+      "CVE-2026-133968: EPSS rose from 0.04 to 0.50 (score date 2026-11-24).",
+      "CVE-2026-129448: EPSS rose from 0.05 to 0.40 (score date 2026-11-24)."
+    ]
   },
   "kevLatest": {
-    "date": "2026-11-23",
-    "dueDate": "2026-11-26",
-    "catalogVersion": "2026.11.23",
-    "released": "2026-11-23T19:43:55.7979Z",
+    "date": "2026-11-24",
+    "dueDate": "2026-11-27",
+    "catalogVersion": "2026.11.24",
+    "released": "2026-11-24T17:47:46.199Z",
     "items": [
       {
-        "cve": "CVE-2026-133968",
-        "vendor": "Project MONAI",
-        "product": "MONAI Label"
+        "cve": "CVE-2026-131914",
+        "vendor": "Idunno",
+        "product": "AntiCsrf"
       },
       {
-        "cve": "CVE-2026-134624",
-        "vendor": "N-able",
-        "product": "MailAssure"
+        "cve": "CVE-2026-132165",
+        "vendor": "Drupal",
+        "product": "Core"
+      },
+      {
+        "cve": "CVE-2026-132224",
+        "vendor": "Optimizely",
+        "product": "Web Experimentation"
       }
     ]
   },
-  "actions": [],
-  "cves": [],
+  "actions": [
+    {
+      "rank": 1,
+      "cve": "CVE-2026-131914",
+      "priority": "emergency",
+      "title": "Patch or mitigate Idunno AntiCsrf (CVE-2026-131914)",
+      "why": "Exploitation confirmed by CISA KEV; CVSS 4.0 9.3; network-reachable without authentication.",
+      "steps": [
+        "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+        "Identify internet-facing and internal Idunno AntiCsrf instances.",
+        "Confirm fixed versions in the vendor advisory before closing the action.",
+        "CISA due date for federal agencies: 2026-11-27."
+      ],
+      "evidence": [
+        "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+        "https://nvd.nist.gov/vuln/detail/CVE-2026-131914",
+        "https://www.first.org/epss/"
+      ]
+    },
+    {
+      "rank": 2,
+      "cve": "CVE-2026-132224",
+      "priority": "urgent",
+      "title": "Patch or mitigate Optimizely Web Experimentation (CVE-2026-132224)",
+      "why": "Exploitation confirmed by CISA KEV; CVSS 4.0 7.1.",
+      "steps": [
+        "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+        "Identify internet-facing and internal Optimizely Web Experimentation instances.",
+        "Confirm fixed versions in the vendor advisory before closing the action.",
+        "CISA due date for federal agencies: 2026-11-27."
+      ],
+      "evidence": [
+        "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+        "https://nvd.nist.gov/vuln/detail/CVE-2026-132224",
+        "https://www.first.org/epss/"
+      ]
+    },
+    {
+      "rank": 3,
+      "cve": "CVE-2026-132165",
+      "priority": "urgent",
+      "title": "Patch or mitigate Drupal Core (CVE-2026-132165)",
+      "why": "Exploitation confirmed by CISA KEV; CVSS not yet available from NVD.",
+      "steps": [
+        "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+        "Identify internet-facing and internal Drupal Core instances.",
+        "Confirm fixed versions in the vendor advisory before closing the action.",
+        "CISA due date for federal agencies: 2026-11-27."
+      ],
+      "evidence": [
+        "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+        "https://www.drupal.org/sa-core-2026-017",
+        "https://nvd.nist.gov/vuln/detail/CVE-2026-132165"
+      ]
+    }
+  ],
+  "cves": [
+    {
+      "cve": "CVE-2026-131914",
+      "vendor": "Idunno",
+      "product": "AntiCsrf",
+      "name": "Idunno AntiCsrf Deserialization of Untrusted Data Vulnerability",
+      "description": "Idunno AntiCsrf contains a deserialization of untrusted data vulnerability that allows an unauthenticated remote attacker to execute arbitrary code via object injection. The impacted product(s) could be end-of-life (EoL) and/or end-of-service (EoS). Users are advised to discontinue use and/or transition to a supported version.",
+      "kev": {
+        "dateAdded": "2026-11-24",
+        "dueDate": "2026-11-27",
+        "ransomware": "unknown",
+        "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "exploitation": {
+        "status": "Confirmed exploited",
+        "basis": "Listed in CISA KEV (dateAdded is the listing date, not first exploitation)."
+      },
+      "exploitMaturity": null,
+      "cvss": {
+        "version": "4.0",
+        "score": 9.3,
+        "severity": "CRITICAL",
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:A/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+        "attackVector": "NETWORK",
+        "privileges": "NONE",
+        "userInteraction": "NONE",
+        "source": "mandiant-cve@google.com"
+      },
+      "epss": {
+        "score": 0.00614,
+        "percentile": 0.50152,
+        "date": "2026-11-24"
+      },
+      "affectedVersions": null,
+      "fixedVersions": null,
+      "cwes": [
+        "CWE-502"
+      ],
+      "nvdStatus": "Analyzed",
+      "priority": "emergency",
+      "rationale": "Exploitation confirmed by CISA KEV; CVSS 4.0 9.3; network-reachable without authentication.",
+      "sources": [
+        {
+          "label": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "label": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-131914"
+        },
+        {
+          "label": "FIRST EPSS",
+          "url": "https://www.first.org/epss/"
+        },
+        {
+          "label": "Vendor advisory",
+          "url": "https://github.com/mandiant/Vulnerability-Disclosures/blob/master/2026/MNDT-2026-0048.md"
+        }
+      ],
+      "unknown": [
+        "Affected versions",
+        "Fixed versions",
+        "Exploit maturity"
+      ]
+    },
+    {
+      "cve": "CVE-2026-132224",
+      "vendor": "Optimizely",
+      "product": "Web Experimentation",
+      "name": "Optimizely Web Experimentation External Control of Critical State Data Vulnerability",
+      "description": "Optimizely Web Experimentation contains an external control of critical state data vulnerability in its account signup flow that could allow an attacker to impersonate existing customer users and modify Project JavaScript. Successful exploitation can result in attacker-controlled JavaScript being distributed through Optimizely-hosted assets and executed in browsers visiting affected customer websites.",
+      "kev": {
+        "dateAdded": "2026-11-24",
+        "dueDate": "2026-11-27",
+        "ransomware": "unknown",
+        "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "exploitation": {
+        "status": "Confirmed exploited",
+        "basis": "Listed in CISA KEV (dateAdded is the listing date, not first exploitation)."
+      },
+      "exploitMaturity": null,
+      "cvss": {
+        "version": "4.0",
+        "score": 7.1,
+        "severity": "HIGH",
+        "vector": "CVSS:4.0/AV:N/AC:H/AT:N/PR:L/UI:N/VC:N/VI:H/VA:N/SC:H/SI:H/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+        "attackVector": "NETWORK",
+        "privileges": "LOW",
+        "userInteraction": "NONE",
+        "source": "cve@mitre.org"
+      },
+      "epss": {
+        "score": 0.00411,
+        "percentile": 0.35845,
+        "date": "2026-11-24"
+      },
+      "affectedVersions": null,
+      "fixedVersions": null,
+      "cwes": [
+        "CWE-642"
+      ],
+      "nvdStatus": "Analyzed",
+      "priority": "urgent",
+      "rationale": "Exploitation confirmed by CISA KEV; CVSS 4.0 7.1.",
+      "sources": [
+        {
+          "label": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "label": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-132224"
+        },
+        {
+          "label": "FIRST EPSS",
+          "url": "https://www.first.org/epss/"
+        },
+        {
+          "label": "Vendor advisory",
+          "url": "https://github.com/brave/adblock-resources/pull/355"
+        },
+        {
+          "label": "Vendor advisory",
+          "url": "https://pages.optimizely.com/rs/947-RKE-048/images/Security%20Incident%20Report%20-%20Optimizely%20Web%20Experimentation%20-%20Nov%2017%202026.pdf"
+        },
+        {
+          "label": "Vendor advisory",
+          "url": "https://status.optimizely.com/incidents/ftw0fh9wx43z"
+        }
+      ],
+      "unknown": [
+        "Affected versions",
+        "Fixed versions",
+        "Exploit maturity"
+      ]
+    },
+    {
+      "cve": "CVE-2026-132165",
+      "vendor": "Drupal",
+      "product": "Core",
+      "name": "Drupal Core Remote Code Execution Vulnerability",
+      "description": "Drupal Core contains a not failing securely vulnerability that could allow an unauthenticated attacker to take over an existing site or execute arbitrary code via the Drupal installer. Under specific conditions, the attacker can use install.php to attempt to reinstall Drupal on the site.",
+      "kev": {
+        "dateAdded": "2026-11-24",
+        "dueDate": "2026-11-27",
+        "ransomware": "unknown",
+        "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "exploitation": {
+        "status": "Confirmed exploited",
+        "basis": "Listed in CISA KEV (dateAdded is the listing date, not first exploitation)."
+      },
+      "exploitMaturity": null,
+      "cvss": null,
+      "epss": null,
+      "affectedVersions": null,
+      "fixedVersions": null,
+      "cwes": [
+        "CWE-636"
+      ],
+      "nvdStatus": null,
+      "priority": "urgent",
+      "rationale": "Exploitation confirmed by CISA KEV; CVSS not yet available from NVD.",
+      "sources": [
+        {
+          "label": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "label": "KEV reference",
+          "url": "https://www.drupal.org/sa-core-2026-017"
+        },
+        {
+          "label": "KEV reference",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-132165"
+        }
+      ],
+      "unknown": [
+        "CVSS",
+        "EPSS",
+        "Affected versions",
+        "Fixed versions",
+        "Exploit maturity"
+      ]
+    }
+  ],
   "overflow": 0,
   "campaigns": {
     "status": "not_covered",
@@ -59,8 +311,13 @@
   },
   "remediation": {
     "groups": {
-      "emergency": [],
-      "urgent": [],
+      "emergency": [
+        "CVE-2026-131914"
+      ],
+      "urgent": [
+        "CVE-2026-132224",
+        "CVE-2026-132165"
+      ],
       "routine": [],
       "monitor": []
     },
@@ -71,28 +328,64 @@
       "monitor": "Track for exploitation or scope changes."
     }
   },
-  "changes": [],
+  "changes": [
+    {
+      "cve": "CVE-2026-131914",
+      "type": "kev_added",
+      "detail": "Added to CISA KEV on 2026-11-24."
+    },
+    {
+      "cve": "CVE-2026-132224",
+      "type": "kev_added",
+      "detail": "Added to CISA KEV on 2026-11-24."
+    },
+    {
+      "cve": "CVE-2026-132165",
+      "type": "kev_added",
+      "detail": "Added to CISA KEV on 2026-11-24."
+    },
+    {
+      "cve": "CVE-2026-133968",
+      "type": "epss_change",
+      "detail": "EPSS rose from 0.04 to 0.50 (score date 2026-11-24)."
+    },
+    {
+      "cve": "CVE-2026-129448",
+      "type": "epss_change",
+      "detail": "EPSS rose from 0.05 to 0.40 (score date 2026-11-24)."
+    },
+    {
+      "cve": "CVE-2026-59310",
+      "type": "epss_change",
+      "detail": "EPSS rose from 0.62 to 0.88 (score date 2026-11-24)."
+    },
+    {
+      "cve": "CVE-2026-50522",
+      "type": "epss_change",
+      "detail": "EPSS rose from 0.82 to 0.99 (score date 2026-11-24)."
+    }
+  ],
   "sources": [
     {
       "name": "CISA Known Exploited Vulnerabilities",
       "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
-      "version": "2026.11.23",
-      "released": "2026-11-23T19:43:55.7979Z",
-      "fetchedAt": "2026-11-24T00:08:39Z",
+      "version": "2026.11.24",
+      "released": "2026-11-24T17:47:46.199Z",
+      "fetchedAt": "2026-11-24T20:54:41Z",
       "status": "ok"
     },
     {
       "name": "FIRST EPSS",
       "url": "https://www.first.org/epss/",
-      "fetchedAt": "2026-11-24T00:08:39Z",
+      "fetchedAt": "2026-11-24T20:54:41Z",
       "status": "ok",
       "note": "Probability estimate; not evidence of exploitation."
     },
     {
       "name": "NVD CVE API 2.0",
       "url": "https://nvd.nist.gov/",
-      "fetchedAt": "2026-11-24T00:08:39Z",
-      "status": "no data",
+      "fetchedAt": "2026-11-24T20:54:41Z",
+      "status": "ok",
       "note": "Enrichment can lag publication by days."
     }
   ],
@@ -107,7 +400,13 @@
       "Zero-days not yet in CISA KEV",
       "Vendor-specific fixed-version validation"
     ],
-    "unknownFields": [],
+    "unknownFields": [
+      "Affected versions",
+      "CVSS",
+      "EPSS",
+      "Exploit maturity",
+      "Fixed versions"
+    ],
     "editorial": {
       "present": false,
       "reviewedBy": null,
@@ -120,8 +419,8 @@
       "DAILY ENTERPRISE CYBERSECURITY",
       "THREAT INTELLIGENCE BRIEF"
     ],
-    "dateLabel": "Monday, November 23, 2026",
-    "window": "Reporting window: November 22-23, 2026",
+    "dateLabel": "Tuesday, November 24, 2026",
+    "window": "Reporting window: November 23-24, 2026",
     "prepared": "Automated edition, issued 7:00 AM ET",
     "sourceNote": "This brief is compiled automatically from public sources (CISA KEV, NVD, FIRST EPSS, Google Project Zero, ENISA EUVD, Metasploit, Exploit-DB, PoC-in-GitHub, MITRE ATT&CK). Exploitation statuses reflect what those sources report; anything they do not establish is stated as not established or not verified.",
     "sections": [
@@ -133,7 +432,7 @@
         "blocks": [
           {
             "type": "p",
-            "text": "The leading newly prioritized issue is **CVE-2026-133469 (CVE-2026-133469)**, a critical authentication bypass flaw; it is described in its CVE record as exploited in the wild (not yet corroborated by CISA KEV, Project Zero, EUVD or VulnCheck). No fixed release is mapped in NVD data yet. **CVE-2026-134624 (N-able MailAssure)** is another important newly highlighted issue; it is listed in CISA KEV on 2026-11-23 (exploitation confirmed by CISA) and reported exploited by ENISA EUVD since 2026-11-23."
+            "text": "The leading newly prioritized issue is **CVE-2026-131914 (Idunno AntiCsrf)**, a critical unsafe deserialization flaw; it is listed in CISA KEV on 2026-11-24 (exploitation confirmed by CISA) and reported exploited by ENISA EUVD since 2026-11-24. A vendor fix reference is available. **CVE-2026-132165 (Drupal Core)** is another important newly highlighted issue; it is listed in CISA KEV on 2026-11-24 (exploitation confirmed by CISA)."
           },
           {
             "type": "table",
@@ -144,33 +443,33 @@
             "rows": [
               [
                 "Newly prioritized CVEs",
-                "5: CVE-2026-133469, N-able MailAssure, CVE-2026-134815, CVE-2026-134814 and Weblate"
+                "7: Idunno AntiCsrf, Drupal Core, Optimizely Web Experimentation, CVE-2026-129514, TOTOLINK A7100RU, OAuth API and 1 more"
               ],
               [
                 "Latest KEV baseline",
-                "1,792 (catalog version 2026.11.23, released 2026-11-23)"
+                "1,795 (catalog version 2026.11.24, released 2026-11-24)"
               ],
               [
                 "New KEV additions",
-                "None verified in reporting window"
+                "CVE-2026-131914 (Idunno AntiCsrf), CVE-2026-132165 (Drupal Core) and CVE-2026-132224 (Optimizely Web Experimentation)"
               ],
               [
                 "New zero-day / in-the-wild reports",
-                "CVE-2026-133469 (CVE-2026-133469) and CVE-2026-134624 (N-able MailAssure)"
+                "CVE-2026-131914 (Idunno AntiCsrf), CVE-2026-132224 (Optimizely Web Experimentation) and CVE-2026-129514 (CVE-2026-129514)"
               ],
               [
                 "Emergency candidates",
-                "2 newly highlighted: exposed CVE-2026-133469 and exposed N-able MailAssure"
+                "4 newly highlighted: exposed Idunno AntiCsrf, Drupal Core, exposed Optimizely Web Experimentation and exposed CVE-2026-129514"
               ],
               [
                 "Complete worldwide High/Critical count",
-                "Not established; 196 High/Critical CVEs published to NVD in the window (NVD-scored only)"
+                "Not established; 500 High/Critical CVEs published to NVD in the window (NVD-scored only)"
               ]
             ]
           },
           {
             "type": "p",
-            "text": "**Top five actions:** (1) Isolate or patch exposed CVE-2026-133469 (CVE-2026-133469); (2) isolate or patch exposed N-able MailAssure (CVE-2026-134624); (3) apply the vendor fix for CVE-2026-134815 (CVE-2026-134815); (4) validate remediation of MONAI Label CVE-2026-133968 and WhatsApp for Android CVE-2026-102769; (5) examine CVE-2026-133469 hosts for unauthorized administrative access and configuration changes."
+            "text": "**Top five actions:** (1) Isolate or patch exposed Idunno AntiCsrf (CVE-2026-131914); (2) apply the vendor fix for Drupal Core (CVE-2026-132165); (3) isolate or patch exposed Optimizely Web Experimentation (CVE-2026-132224); (4) close previously reported Project MONAI MONAI Label and N-able MailAssure KEV exposure; (5) examine Idunno AntiCsrf hosts for unexpected child processes and outbound connections."
           }
         ]
       },
@@ -182,7 +481,106 @@
         "blocks": [
           {
             "type": "p",
-            "text": "**CVE-2026-133469 - CVE-2026-133469 authentication bypass (CVSS 9.8).** XO (Xen Orchestra) is a solution to visualize, manage, backup and delegate your XCP-ng (or XenServer) infrastructure. Prior to 6.9.2 and 6.10.1, REST cookie parsing turns authenticationToken=j:%7B%7D into {}. REST authentication passes that object to the XO token provider without requiring a string. The token collection treats {} as an unfiltered lookup and returns its first token;. Affected releases: not yet published in NVD configuration data. Fixed package release: none identified in tracked sources. Attack path: network-accessible; no authentication required; no user interaction required."
+            "text": "**CVE-2026-131914 - Idunno AntiCsrf unsafe deserialization (CVSS 9.3).** Deserialization of untrusted data in double-submit cookie vs. form field validation in Idunno.AntiCsrf versions through 0.9.1 Beta on ASP.NET allows remote unauthenticated attackers to execute code via object injection. Affected releases (NVD): anticsrf = 0.9.0; anticsrf = 0.9.1. Fixed package release: not mapped in NVD ranges; 1 vendor patch or advisory reference available. Attack path: network-accessible; no authentication required; no user interaction required."
+          },
+          {
+            "type": "table",
+            "columns": [
+              "Field",
+              "Status"
+            ],
+            "rows": [
+              [
+                "EPSS / percentile",
+                "0.6% probability / 50th percentile (FIRST EPSS)"
+              ],
+              [
+                "CISA KEV",
+                "Listed 2026-11-24; federal due date 2026-11-27"
+              ],
+              [
+                "Exploitation",
+                "Listed in CISA KEV on 2026-11-24 (exploitation confirmed by CISA) and reported exploited by ENISA EUVD since 2026-11-24; independently corroborated victim evidence not established"
+              ],
+              [
+                "Public exploit",
+                "Public exploit code referenced: 4 unvetted GitHub repositories; weaponized exploit not verified"
+              ],
+              [
+                "Mitigation",
+                "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk guidance and CISA’s “Forensics Triage Requirements”. Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable."
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "**CVE-2026-132165 - Drupal Core remote code execution.** Drupal Core contains a not failing securely vulnerability that could allow an unauthenticated attacker to take over an existing site or execute arbitrary code via the Drupal installer. Under specific conditions, the attacker can use install.php to attempt to reinstall Drupal on the site. Affected releases: not yet published in NVD configuration data. Fixed package release: none identified in tracked sources. Attack path: not established (no CVSS vector published yet)."
+          },
+          {
+            "type": "table",
+            "columns": [
+              "Field",
+              "Status"
+            ],
+            "rows": [
+              [
+                "EPSS / percentile",
+                "Not verified"
+              ],
+              [
+                "CISA KEV",
+                "Listed 2026-11-24; federal due date 2026-11-27"
+              ],
+              [
+                "Exploitation",
+                "Listed in CISA KEV on 2026-11-24 (exploitation confirmed by CISA); independently corroborated victim evidence not established"
+              ],
+              [
+                "Public exploit",
+                "Public exploit code referenced: 1 unvetted GitHub repository; weaponized exploit not verified"
+              ],
+              [
+                "Mitigation",
+                "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk guidance and CISA’s “Forensics Triage Requirements”. Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable."
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "**CVE-2026-132224 - Optimizely Web Experimentation Optimizely Web Experimentation External Control of Critical State Data Vulnerability (CVSS 7.1).** Optimizely Web Experimentation before 2026-11-17 mishandles the account signup flow, leading to presence of attacker-controlled code in the projectJS (aka Project JavaScript) field of certain cdn.optimizely.com assets. Affected releases (NVD): web experimentation < 2026-11-17. Fixed version (first unaffected release per NVD ranges): web experimentation 2026-11-17. Attack path: network-accessible; low-privileged authentication required; no user interaction required."
+          },
+          {
+            "type": "table",
+            "columns": [
+              "Field",
+              "Status"
+            ],
+            "rows": [
+              [
+                "EPSS / percentile",
+                "0.4% probability / 35th percentile (FIRST EPSS)"
+              ],
+              [
+                "CISA KEV",
+                "Listed 2026-11-24; federal due date 2026-11-27"
+              ],
+              [
+                "Exploitation",
+                "Listed in CISA KEV on 2026-11-24 (exploitation confirmed by CISA) and reported exploited by ENISA EUVD since 2026-11-24; independently corroborated victim evidence not established"
+              ],
+              [
+                "Public exploit",
+                "No public exploit or proof-of-concept identified in tracked sources"
+              ],
+              [
+                "Mitigation",
+                "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk guidance and CISA’s “Forensics Triage Requirements”. Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable."
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "**CVE-2026-129514 - CVE-2026-129514 unsafe deserialization (CVSS 10).** Deserialization of Untrusted Data vulnerability in the application/vnd.hex+erlang request body parser in hexpm hexpm allows an unauthenticated remote attacker to execute operating system commands via a crafted Erlang external term format request body. This vulnerability was actively exploited against the hex.pm service on 2026-11-23. Affected releases: not yet published in NVD configuration data. Fixed package release: none identified in tracked sources. Attack path: network-accessible; no authentication required; no user interaction required."
           },
           {
             "type": "table",
@@ -205,7 +603,7 @@
               ],
               [
                 "Public exploit",
-                "Public exploit code referenced: 1 unvetted GitHub repository; weaponized exploit not verified"
+                "No public exploit or proof-of-concept identified in tracked sources"
               ],
               [
                 "Mitigation",
@@ -215,60 +613,23 @@
           },
           {
             "type": "p",
-            "text": "**CVE-2026-134624 - N-able MailAssure server-side request forgery (CVSS 9.3).** N-able MailAssure (SpamExperts) before 20261121.1943 does not restrict the destination of the LDAP synchronisation connection check performed when a relay is configured. An authenticated API user can cause the server to connect to arbitrary internal hosts and ports, determine which are reachable, and send crafted data to internal services. Affected releases: not yet published in NVD configuration data. Fixed package release: none identified in tracked sources. Attack path: network-accessible; high-privileged authentication required; no user interaction required."
-          },
-          {
-            "type": "table",
-            "columns": [
-              "Field",
-              "Status"
-            ],
-            "rows": [
-              [
-                "EPSS / percentile",
-                "0.4% probability / 29th percentile (FIRST EPSS)"
-              ],
-              [
-                "CISA KEV",
-                "Listed 2026-11-23; federal due date 2026-11-26"
-              ],
-              [
-                "Exploitation",
-                "Listed in CISA KEV on 2026-11-23 (exploitation confirmed by CISA) and reported exploited by ENISA EUVD since 2026-11-23; independently corroborated victim evidence not established"
-              ],
-              [
-                "Public exploit",
-                "No public exploit or proof-of-concept identified in tracked sources"
-              ],
-              [
-                "Mitigation",
-                "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk guidance and CISA’s “Forensics Triage Requirements”. Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable."
-              ]
-            ]
+            "text": "**CVE-2026-134882 - TOTOLINK A7100RU command injection (CVSS 10).** A weakness has been identified in TOTOLINK A7100RU 7.4cu.2313_B20191024. This issue affects the function exportOvpn of the file /cgi-bin/cstecgi.cgi of the component CGI Handler. This manipulation of the argument Username causes os command injection. The attack is possible to be carried out remotely. Affected releases: not yet published in NVD configuration data. Fixed package release: none identified in tracked sources. Attack path: network-accessible; no authentication required; no user interaction required."
           },
           {
             "type": "p",
-            "text": "**CVE-2026-134815 - CVE-2026-134815 vulnerability (CVSS 9.2).** simple-git before 4.1.0 contains an argument injection vulnerability that allows attackers to bypass the allowUnsafePack guard by supplying the --exec option to non-push git operations. Attackers who influence arguments passed to listRemote() or raw() can inject --exec for ls-remote, archive, fetch-pack or send-pack to execute commands on the host. Affected releases: not yet published in NVD configuration data. Fixed package release: none identified in tracked sources. Attack path: network-accessible; no authentication required; no user interaction required."
+            "text": "EPSS: 2.5% probability / 85th percentile (FIRST EPSS). CISA KEV: Not listed in latest verified baseline. Exploitation: No malicious exploitation confirmed by tracked sources. Public exploit code referenced: 1 unvetted GitHub repository; weaponized exploit not verified. Mitigation: Apply the vendor fix or mitigation; remove untrusted network reachability until patched; place the service behind authentication or a VPN; monitor for exploitation."
           },
           {
             "type": "p",
-            "text": "EPSS: 0.8% probability / 55th percentile (FIRST EPSS). CISA KEV: Not listed in latest verified baseline. Exploitation: No malicious exploitation confirmed by tracked sources. Public exploit code referenced: 1 unvetted GitHub repository; weaponized exploit not verified. Mitigation: Apply the vendor fix or mitigation; remove untrusted network reachability until patched; place the service behind authentication or a VPN; monitor for exploitation."
+            "text": "**CVE-2026-120382 - OAuth API arbitrary file write (CVSS 9.8).** An improper neutralization of argument delimiters in a command vulnerability in the OAuth API in Synology DiskStation Manager (DSM) before 7.1.1-42962-10, 7.2.1-69057-14, 7.2.2-72806-11, 7.3.2-86009-6, and 7.4.1-90080-2 allows remote attackers to read or write arbitrary files and conduct denial-of-service attacks. Affected releases: not yet published in NVD configuration data. Fixed package release: none identified in tracked sources. Attack path: network-accessible; no authentication required; no user interaction required."
           },
           {
             "type": "p",
-            "text": "**CVE-2026-134814 - CVE-2026-134814 code injection (CVSS 9.2).** binary-parser before 2.3.1 contains a code injection vulnerability that allows attackers controlling parser definitions to inject JavaScript through string-typed options passed unvalidated by Context.generateOption(). Attackers can supply crafted length, lengthInBytes, key, tag, offset, or namely() alias values to execute arbitrary JavaScript in the Node.js process when the parser is compiled. Affected releases: not yet published in NVD configuration data. Fixed package release: none identified in tracked sources. Attack path: network-accessible; no authentication required; no user interaction required."
+            "text": "EPSS: 1.2% probability / 69th percentile (FIRST EPSS). CISA KEV: Not listed in latest verified baseline. Exploitation: No malicious exploitation confirmed by tracked sources. Public exploit code referenced: 1 unvetted GitHub repository; weaponized exploit not verified. Mitigation: Apply the vendor fix or mitigation; remove untrusted network reachability until patched; place the service behind authentication or a VPN; monitor for exploitation."
           },
           {
             "type": "p",
-            "text": "EPSS: 0.6% probability / 50th percentile (FIRST EPSS). CISA KEV: Not listed in latest verified baseline. Exploitation: No malicious exploitation confirmed by tracked sources. Public exploit code referenced: 2 unvetted GitHub repositories; weaponized exploit not verified. Mitigation: Apply the vendor fix or mitigation; remove untrusted network reachability until patched; place the service behind authentication or a VPN; monitor for exploitation."
-          },
-          {
-            "type": "p",
-            "text": "**CVE-2026-134838 - Weblate vulnerability (CVSS 9.1).** Weblate before 2026.11 contains an account takeover vulnerability in the reset_password view that allows unauthenticated attackers to reset victim passwords by abusing case-insensitive Unicode e-mail matching. Attackers controlling a lookalike mailbox using a dotless i or other case-folding variant receive the victim's reset link, since it is sent to the typed address, and set a new password. Affected releases: not yet published in NVD configuration data. Fixed package release: none identified in tracked sources. Attack path: network-accessible; no authentication required; no user interaction required."
-          },
-          {
-            "type": "p",
-            "text": "EPSS: 0.5% probability / 46th percentile (FIRST EPSS). CISA KEV: Not listed in latest verified baseline. Exploitation: No malicious exploitation confirmed by tracked sources. Public exploit code referenced: 1 unvetted GitHub repository; weaponized exploit not verified. Mitigation: Apply the vendor fix or mitigation; remove untrusted network reachability until patched; place the service behind authentication or a VPN; monitor for exploitation."
+            "text": "Also prioritized: CVE-2026-135211 (BISHENG, urgent). Details are in the Vulnerability Validation catalog."
           }
         ]
       },
@@ -280,15 +641,15 @@
         "blocks": [
           {
             "type": "p",
-            "text": "CVE-2026-134624 (N-able MailAssure): listed in CISA KEV on 2026-11-23 (exploitation confirmed by CISA) and reported exploited by ENISA EUVD since 2026-11-23. No named actor, verified victim count or campaign is established in tracked sources. No campaign-specific IP addresses, hashes or domains are collected by ThreatWatch's automated feeds."
+            "text": "CVE-2026-131914 (Idunno AntiCsrf): listed in CISA KEV on 2026-11-24 (exploitation confirmed by CISA) and reported exploited by ENISA EUVD since 2026-11-24. No named actor, verified victim count or campaign is established in tracked sources. CVE-2026-132224 (Optimizely Web Experimentation): listed in CISA KEV on 2026-11-24 (exploitation confirmed by CISA) and reported exploited by ENISA EUVD since 2026-11-24. No named actor, verified victim count or campaign is established in tracked sources. No campaign-specific IP addresses, hashes or domains are collected by ThreatWatch's automated feeds."
           },
           {
             "type": "p",
-            "text": "No new CISA KEV additions were verified in the reporting window. The latest additions remain the 2 entries added November 23, 2026: Project MONAI MONAI Label and N-able MailAssure. The federal remediation deadline for those entries is **November 26, 2026**. This deadline applies to covered federal agencies under applicable requirements; it is not a universal private-sector mandate."
+            "text": "CISA added 3 vulnerabilities to the KEV catalog in the reporting window: Idunno AntiCsrf, Optimizely Web Experimentation and Drupal Core. The federal remediation deadline is **November 27, 2026**. This deadline applies to covered federal agencies under applicable requirements; it is not a universal private-sector mandate."
           },
           {
             "type": "p",
-            "text": "**Defensive hunting:** for CVE-2026-133469 (CVE-2026-133469), review administrative logins, newly created accounts or API tokens, and configuration changes made without a matching change record; for N-able MailAssure (CVE-2026-134624), review outbound requests from the service to internal addresses or cloud metadata endpoints; for CVE-2026-134815 (CVE-2026-134815), review the affected service's logs for unusual requests and changes around the disclosure date; for CVE-2026-134814 (CVE-2026-134814), inspect unexpected child processes of the service, new scheduled jobs or services, and unusual outbound connections from the host."
+            "text": "**Defensive hunting:** for Idunno AntiCsrf (CVE-2026-131914), inspect unexpected child processes of the service, new scheduled jobs or services, and unusual outbound connections from the host; for Drupal Core (CVE-2026-132165), inspect unexpected child processes of the service, new scheduled jobs or services, and unusual outbound connections from the host; for Optimizely Web Experimentation (CVE-2026-132224), review the affected service's logs for unusual requests and changes around the disclosure date; for CVE-2026-129514 (CVE-2026-129514), inspect unexpected child processes of the service, new scheduled jobs or services, and unusual outbound connections from the host."
           }
         ]
       },
@@ -307,31 +668,31 @@
             "rows": [
               [
                 "Healthcare / medical imaging",
-                "Possible CVE-2026-133469, CVE-2026-134814 and CVE-2026-134815 exposure; targeting unknown"
+                "Possible CVE-2026-129514, Idunno AntiCsrf and OAuth API exposure; targeting unknown"
               ],
               [
                 "Education / research",
-                "Possible CVE-2026-133469, CVE-2026-134814 and CVE-2026-134815 exposure; targeting unknown"
+                "Possible CVE-2026-129514, Idunno AntiCsrf and OAuth API exposure; targeting unknown"
               ],
               [
                 "Technology / software",
-                "Potential CVE-2026-133469, CVE-2026-134814, CVE-2026-134815 and N-able MailAssure dependency exposure"
+                "Potential CVE-2026-129514, Drupal Core, Idunno AntiCsrf and OAuth API dependency exposure"
               ],
               [
                 "Government / defense",
-                "Possible CVE-2026-133469, CVE-2026-134814 and CVE-2026-134815 exposure; no new sector-specific targeting confirmed"
+                "Possible CVE-2026-129514, Idunno AntiCsrf and OAuth API exposure; no new sector-specific targeting confirmed"
               ],
               [
                 "Financial services",
-                "Possible CVE-2026-133469, CVE-2026-134814 and CVE-2026-134815 exposure; targeting unknown"
+                "Possible CVE-2026-129514, Idunno AntiCsrf and OAuth API exposure; targeting unknown"
               ],
               [
                 "Manufacturing / energy / utilities",
-                "Possible CVE-2026-133469, CVE-2026-134814 and CVE-2026-134815 exposure; targeting unknown"
+                "Possible CVE-2026-129514, Idunno AntiCsrf and OAuth API exposure; targeting unknown"
               ],
               [
                 "Retail / transportation",
-                "Possible CVE-2026-133469, CVE-2026-134814 and CVE-2026-134815 exposure; targeting unknown"
+                "Possible CVE-2026-129514, Idunno AntiCsrf and OAuth API exposure; targeting unknown"
               ]
             ]
           },
@@ -355,30 +716,34 @@
             ],
             "rows": [
               [
-                "CVE-2026-133469 operators",
+                "Idunno AntiCsrf operators",
                 "Unknown. Exploitation reported; identity, motivation and geographic targeting not established."
               ],
               [
-                "N-able MailAssure operators",
+                "Drupal Core operators",
                 "Unknown. Exploitation reported; identity, motivation and geographic targeting not established."
               ],
               [
-                "CVE-2026-134815 operators",
+                "Optimizely Web Experimentation operators",
+                "Unknown. Exploitation reported; identity, motivation and geographic targeting not established."
+              ],
+              [
+                "CVE-2026-129514 operators",
+                "Unknown. Exploitation reported; identity, motivation and geographic targeting not established."
+              ],
+              [
+                "TOTOLINK A7100RU operators",
                 "No confirmed malicious exploitation or attribution."
               ],
               [
-                "CVE-2026-134814 operators",
-                "No confirmed malicious exploitation or attribution."
-              ],
-              [
-                "Weblate operators",
+                "OAuth API operators",
                 "No confirmed malicious exploitation or attribution."
               ]
             ]
           },
           {
             "type": "p",
-            "text": "**MITRE ATT&CK defensive mapping:** T1190 (Exploit Public-Facing Application) may be relevant to exposed CVE-2026-133469, N-able MailAssure, CVE-2026-134815 and CVE-2026-134814 services. These mappings support defensive detection and do not establish actor attribution."
+            "text": "**MITRE ATT&CK defensive mapping:** T1190 (Exploit Public-Facing Application) may be relevant to exposed Idunno AntiCsrf, Optimizely Web Experimentation, CVE-2026-129514 and TOTOLINK A7100RU services. These mappings support defensive detection and do not establish actor attribution."
           }
         ]
       },
@@ -398,27 +763,37 @@
             "rows": [
               [
                 "Emergency",
-                "CVE-2026-133469 reachable from untrusted networks",
+                "Idunno AntiCsrf (CVE-2026-131914) reachable from untrusted networks",
                 "Isolate immediately; investigate and mitigate within 24 hours"
               ],
               [
                 "Emergency",
-                "N-able MailAssure (CVE-2026-134624) reachable from untrusted networks",
+                "Drupal Core (CVE-2026-132165) on exposed hosts",
                 "Isolate immediately; investigate and mitigate within 24 hours"
               ],
               [
+                "Emergency",
+                "Optimizely Web Experimentation (CVE-2026-132224) reachable from untrusted networks",
+                "Isolate immediately; investigate and mitigate within 24 hours"
+              ],
+              [
+                "Emergency",
+                "CVE-2026-129514 reachable from untrusted networks",
+                "Isolate immediately; investigate and mitigate within 24 hours"
+              ],
+              [
+                "Emergency",
+                "Unremediated confirmed-exploited N-able MailAssure or Project MONAI MONAI Label exposure",
+                "Immediate containment and applicable forensic triage"
+              ],
+              [
                 "Urgent",
-                "Vulnerable CVE-2026-134815 (CVE-2026-134815)",
+                "Vulnerable TOTOLINK A7100RU (CVE-2026-134882)",
                 "Apply applicable vendor fix in 24-72 hours"
               ],
               [
                 "Urgent",
-                "Vulnerable CVE-2026-134814 (CVE-2026-134814)",
-                "Apply applicable vendor fix in 24-72 hours"
-              ],
-              [
-                "Urgent",
-                "Vulnerable Weblate (CVE-2026-134838)",
+                "Vulnerable OAuth API (CVE-2026-120382)",
                 "Apply applicable vendor fix in 24-72 hours"
               ],
               [
@@ -453,8 +828,28 @@
             ],
             "rows": [
               [
+                "CVE-2026-133469 CVE-2026-133469",
+                "No significant new development established since November 23"
+              ],
+              [
+                "N-able MailAssure CVE-2026-134624",
+                "Public exploit code now referenced; fixed-version or patch reference added"
+              ],
+              [
+                "CVE-2026-134815 CVE-2026-134815",
+                "No significant new development established since November 23"
+              ],
+              [
+                "CVE-2026-134814 CVE-2026-134814",
+                "No significant new development established since November 23"
+              ],
+              [
+                "Weblate CVE-2026-134838",
+                "No significant new development established since November 23"
+              ],
+              [
                 "Project MONAI MONAI Label CVE-2026-133968",
-                "Added to CISA KEV on 2026-11-23; exploitation now reported by ENISA EUVD"
+                "Fixed-version or patch reference added; EPSS rose from 0.04 to 0.50"
               ],
               [
                 "WhatsApp for Android CVE-2026-102769",
@@ -466,11 +861,11 @@
               ],
               [
                 "D-Link DIR-600L CVE-2026-133993",
-                "No significant new development established since November 22"
+                "Public exploit code now referenced"
               ],
               [
                 "Nexter Blocks Pro WordPress plugin CVE-2026-125294",
-                "No significant new development established since November 22"
+                "Public exploit code now referenced"
               ]
             ]
           }
@@ -479,24 +874,36 @@
     ],
     "references": [
       {
-        "label": "CVE-2026-133469 NVD record",
-        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-133469"
+        "label": "Idunno AntiCsrf vendor advisory",
+        "url": "https://github.com/mandiant/Vulnerability-Disclosures/blob/master/2026/MNDT-2026-0048.md"
       },
       {
-        "label": "CVE-2026-134624 NVD record",
-        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-134624"
+        "label": "CVE-2026-131914 NVD record",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-131914"
       },
       {
-        "label": "CVE-2026-134815 NVD record",
-        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-134815"
+        "label": "CVE-2026-132165 NVD record",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-132165"
       },
       {
-        "label": "CVE-2026-134814 NVD record",
-        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-134814"
+        "label": "Optimizely Web Experimentation vendor advisory",
+        "url": "https://pages.optimizely.com/rs/947-RKE-048/images/Security%20Incident%20Report%20-%20Optimizely%20Web%20Experimentation%20-%20Nov%2017%202026.pdf"
       },
       {
-        "label": "CVE-2026-134838 NVD record",
-        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-134838"
+        "label": "CVE-2026-132224 NVD record",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-132224"
+      },
+      {
+        "label": "CVE-2026-129514 NVD record",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-129514"
+      },
+      {
+        "label": "CVE-2026-134882 NVD record",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-134882"
+      },
+      {
+        "label": "CVE-2026-120382 NVD record",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120382"
       },
       {
         "label": "CISA KEV catalog",
@@ -507,15 +914,17 @@
         "url": "https://www.first.org/epss/"
       }
     ],
-    "footer": "Enterprise Cyber Threat Intelligence | 23 Nov 2026",
+    "footer": "Enterprise Cyber Threat Intelligence | 24 Nov 2026",
     "reviewedBy": null,
-    "generatedAt": "2026-11-24T00:10:44Z",
+    "generatedAt": "2026-11-24T20:57:10Z",
     "prioritized": [
-      "CVE-2026-133469",
-      "CVE-2026-134624",
-      "CVE-2026-134815",
-      "CVE-2026-134814",
-      "CVE-2026-134838"
+      "CVE-2026-131914",
+      "CVE-2026-132165",
+      "CVE-2026-132224",
+      "CVE-2026-129514",
+      "CVE-2026-134882",
+      "CVE-2026-120382",
+      "CVE-2026-135211"
     ]
   }
 }

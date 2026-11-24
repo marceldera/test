@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "month": "2026-09",
   "complete": true,
-  "updatedAt": "2026-11-24T00:08:38Z",
+  "updatedAt": "2026-11-24T20:54:41Z",
   "metrics": [
     {
       "id": "kev_added",
@@ -11,7 +11,7 @@
       "rule": "CVE entries whose CISA dateAdded falls in the month.",
       "source": "CISA KEV",
       "window": "2026-09-01 to 2026-09-30 (dateAdded, ET calendar)",
-      "updatedAt": "2026-11-24T00:08:38Z"
+      "updatedAt": "2026-11-24T20:54:41Z"
     },
     {
       "id": "vendors",
@@ -20,7 +20,7 @@
       "rule": "Unique vendorProject values among the month’s KEV entries.",
       "source": "CISA KEV",
       "window": "2026-09-01 to 2026-09-30 (dateAdded, ET calendar)",
-      "updatedAt": "2026-11-24T00:08:38Z"
+      "updatedAt": "2026-11-24T20:54:41Z"
     },
     {
       "id": "ransomware",
@@ -29,16 +29,16 @@
       "rule": "Month’s KEV entries where CISA sets knownRansomwareCampaignUse = Known.",
       "source": "CISA KEV",
       "window": "2026-09-01 to 2026-09-30 (dateAdded, ET calendar)",
-      "updatedAt": "2026-11-24T00:08:38Z"
+      "updatedAt": "2026-11-24T20:54:41Z"
     },
     {
       "id": "epss90",
       "label": "EPSS ≥ 90th percentile",
       "value": 29,
-      "rule": "Month’s KEV entries with EPSS percentile ≥ 0.90 (scores as of 2026-11-23).",
+      "rule": "Month’s KEV entries with EPSS percentile ≥ 0.90 (scores as of 2026-11-24).",
       "source": "FIRST EPSS",
       "window": "2026-09-01 to 2026-09-30 (dateAdded, ET calendar)",
-      "updatedAt": "2026-11-24T00:08:38Z"
+      "updatedAt": "2026-11-24T20:54:41Z"
     }
   ],
   "notice": "These are CISA KEV catalog counts, not a count of total cyber incidents.",
@@ -50,7 +50,7 @@
       "product": "Starlette",
       "concern": "Kludex Starlette HTTP Request/Response Smuggling Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.99398,
+      "epssPercentile": 0.99393,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -61,7 +61,7 @@
       "product": "Kestra OSS",
       "concern": "Kestra OSS OS Command Injection Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.97553,
+      "epssPercentile": 0.97536,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -72,7 +72,7 @@
       "product": "LiteLLM",
       "concern": "BerriAI LiteLLM Improper Authentication Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.58645,
+      "epssPercentile": 0.5847,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -83,7 +83,7 @@
       "product": "Artifactory",
       "concern": "JFrog Artifactory Improper Authentication Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.96705,
+      "epssPercentile": 0.96683,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -94,7 +94,7 @@
       "product": "SMA1000 Appliances",
       "concern": "SonicWall SMA1000 Appliances Server-Side Request Forgery Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.94925,
+      "epssPercentile": 0.94867,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -105,7 +105,7 @@
       "product": "SMA1000 Appliances",
       "concern": "SonicWall SMA1000 Appliances OS Command Injection Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.95693,
+      "epssPercentile": 0.95647,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -116,7 +116,7 @@
       "product": "Switchvox",
       "concern": "Sangoma Switchvox SQL Injection Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.97371,
+      "epssPercentile": 0.97354,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -127,7 +127,7 @@
       "product": "Chromium V8",
       "concern": "Google Chromium V8 Type Confusion Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.79134,
+      "epssPercentile": 0.79008,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -138,7 +138,7 @@
       "product": "Commerce and Magento",
       "concern": "Adobe Commerce and Magento Improper Neutralization of Special Elements Used in a Template Engine Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.99941,
+      "epssPercentile": 0.9994,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -149,7 +149,7 @@
       "product": "Windows",
       "concern": "Microsoft Windows Link Following Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.94397,
+      "epssPercentile": 0.9433,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -160,7 +160,7 @@
       "product": "Windows",
       "concern": "Microsoft Windows Heap-Based Buffer Overflow Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.33552,
+      "epssPercentile": 0.33293,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -171,7 +171,7 @@
       "product": "N-central",
       "concern": "N-able N-central Static Code Injection Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.96865,
+      "epssPercentile": 0.96845,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -182,7 +182,7 @@
       "product": "Multiple Products",
       "concern": "Fortinet Multiple Products Heap-based Buffer Overflow Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.90135,
+      "epssPercentile": 0.90044,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -193,7 +193,7 @@
       "product": "NetScaler",
       "concern": "Citrix NetScaler Authentication Bypass Using an Alternate Path or Channel Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.98409,
+      "epssPercentile": 0.98394,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -204,7 +204,7 @@
       "product": "Secure Firewall Management Center (FMC) and Security Cloud Control (SCC) Firewall Management",
       "concern": "Cisco Firewall Management Center Authentication Bypass Using an Alternate Path or Channel Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.99779,
+      "epssPercentile": 0.99775,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -215,7 +215,7 @@
       "product": "Chromium V8",
       "concern": "Google Chromium V8 Out of Bounds Write Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.8948,
+      "epssPercentile": 0.8939,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -226,7 +226,7 @@
       "product": "RouterOS",
       "concern": "MikroTik RouterOS Missing Authentication for Critical Function Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.75885,
+      "epssPercentile": 0.75753,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -237,7 +237,7 @@
       "product": "RouterOS",
       "concern": "MikroTik RouterOS Improper Neutralization of Argument Delimiters in a Command Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.93838,
+      "epssPercentile": 0.93765,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -248,7 +248,7 @@
       "product": "Artifactory",
       "concern": "JFrog Artifactory Incorrect Authorization Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.95241,
+      "epssPercentile": 0.95189,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -259,7 +259,7 @@
       "product": "Artifactory",
       "concern": "JFrog Artifactory Improper Authentication Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.95721,
+      "epssPercentile": 0.95677,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -270,7 +270,7 @@
       "product": "ScreenConnect",
       "concern": "ConnectWise ScreenConnect Improper Privilege Management and Missing Authorization Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.68278,
+      "epssPercentile": 0.68117,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -281,7 +281,7 @@
       "product": "Community Edition and Enterprise Edition",
       "concern": "GitLab Community Edition and Enterprise Edition Path Traversal Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.99899,
+      "epssPercentile": 0.99897,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -292,7 +292,7 @@
       "product": "Secure Email Gateway",
       "concern": "Cisco Secure Email Gateway SQL Injection Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.9867,
+      "epssPercentile": 0.98658,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -303,7 +303,7 @@
       "product": "Pixel",
       "concern": "Google Pixel Improper Authorization Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.5091,
+      "epssPercentile": 0.50695,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -314,7 +314,7 @@
       "product": "Identity Services Engine",
       "concern": "Cisco Identity Services Engine Incorrect Use of Privileged APIs Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.99529,
+      "epssPercentile": 0.99524,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -325,7 +325,7 @@
       "product": "Backup",
       "concern": "Acronis Backup Incorrect Default Permissions Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.14252,
+      "epssPercentile": 0.14115,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -336,7 +336,7 @@
       "product": "Kernel",
       "concern": "Linux Kernel Improper Check for Unusual or Exceptional Conditions Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.88874,
+      "epssPercentile": 0.8878,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -347,7 +347,7 @@
       "product": "Kernel",
       "concern": "Linux Kernel Race Condition Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.76523,
+      "epssPercentile": 0.76395,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -358,7 +358,7 @@
       "product": "Kernel",
       "concern": "Linux Kernel Out-of-Bounds Write Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.61671,
+      "epssPercentile": 0.61502,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -369,7 +369,7 @@
       "product": "GS1900 Series Switches",
       "concern": "Zyxel GS1900 Series Switches Stack-Based Buffer Overflow Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.86996,
+      "epssPercentile": 0.86894,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -380,7 +380,7 @@
       "product": "Multiple Products",
       "concern": "Check Point Multiple Products Improper Certificate Validation Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.99031,
+      "epssPercentile": 0.99022,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -391,7 +391,7 @@
       "product": "Multiple Products",
       "concern": "Check Point Multiple Products Path Traversal Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.99818,
+      "epssPercentile": 0.99814,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -402,7 +402,7 @@
       "product": "VeloCloud Orchestrator",
       "concern": "Arista VeloCloud Orchestrator Improper Input Validation Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.72911,
+      "epssPercentile": 0.72765,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -413,7 +413,7 @@
       "product": "BIG-IP APM",
       "concern": "F5 BIG-IP APM Heap-based Buffer Overflow Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.98061,
+      "epssPercentile": 0.98045,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -424,7 +424,7 @@
       "product": "Multiple Products",
       "concern": "WSO2 Multiple Products Path Traversal Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.996,
+      "epssPercentile": 0.99596,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -435,7 +435,7 @@
       "product": "Commerce and Magento",
       "concern": "Adobe Commerce and Magento Incorrect Authorization Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.99819,
+      "epssPercentile": 0.99815,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -446,7 +446,7 @@
       "product": "SharePoint",
       "concern": "Microsoft SharePoint Code Injection Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.95681,
+      "epssPercentile": 0.95635,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -457,7 +457,7 @@
       "product": "RouterOS",
       "concern": "Mikrotik RouterOS Improper Enforcement of Behavioral Workflow Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.8356,
+      "epssPercentile": 0.83445,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -468,7 +468,7 @@
       "product": "Core",
       "concern": "WordPress Core Remote File Inclusion Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.99874,
+      "epssPercentile": 0.99871,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -479,7 +479,7 @@
       "product": "NetScaler",
       "concern": "Citrix NetScaler Improper Input Validation Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.99659,
+      "epssPercentile": 0.99656,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -490,7 +490,7 @@
       "product": "NetScaler",
       "concern": "Citrix NetScaler Improper Restriction of Operations within the Bounds of a Memory Buffer Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.99551,
+      "epssPercentile": 0.99547,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -501,7 +501,7 @@
       "product": "Multiple Products",
       "concern": "Apple Multiple Products Out-of-Bounds Write Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.98107,
+      "epssPercentile": 0.98092,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -512,7 +512,7 @@
       "product": "Catalyst SD-WAN Manager",
       "concern": "Cisco Catalyst SD-WAN Manager Hex Encoding Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.98624,
+      "epssPercentile": 0.98612,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     }
@@ -1197,6 +1197,6 @@
       }
     ],
     "footer": "Enterprise Cyber Threat Intelligence | September 2026",
-    "generatedAt": "2026-11-24T00:10:45Z"
+    "generatedAt": "2026-11-24T20:57:11Z"
   }
 }
