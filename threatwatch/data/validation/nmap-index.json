@@ -1,7 +1,7 @@
 {
   "repo": "nmap/nmap",
-  "commit": "7755daa",
-  "indexedAt": "2026-11-23T23:26:12Z",
+  "commit": "d058258",
+  "indexedAt": "2026-11-24T00:08:40Z",
   "count": 55,
   "scripts": {
     "CVE-2010-0533": [
@@ -1171,28 +1171,6 @@
         "reviewNote": null
       }
     ],
-    "CVE-2015-3197": [
-      {
-        "method": "nmap-nse",
-        "id": "sslv2-drown",
-        "name": "sslv2-drown",
-        "path": "scripts/sslv2-drown.nse",
-        "protocol": null,
-        "publisher": "Nmap Project (official NSE script)",
-        "url": "https://github.com/nmap/nmap/blob/master/scripts/sslv2-drown.nse",
-        "templateSeverity": null,
-        "upstreamVerified": false,
-        "categories": [
-          "intrusive",
-          "vuln"
-        ],
-        "invasiveness": "intrusive",
-        "outOfBand": false,
-        "reviewStatus": "unreviewed",
-        "lastReviewed": null,
-        "reviewNote": null
-      }
-    ],
     "CVE-2016-0800": [
       {
         "method": "nmap-nse",
@@ -1216,6 +1194,28 @@
       }
     ],
     "CVE-2016-0703": [
+      {
+        "method": "nmap-nse",
+        "id": "sslv2-drown",
+        "name": "sslv2-drown",
+        "path": "scripts/sslv2-drown.nse",
+        "protocol": null,
+        "publisher": "Nmap Project (official NSE script)",
+        "url": "https://github.com/nmap/nmap/blob/master/scripts/sslv2-drown.nse",
+        "templateSeverity": null,
+        "upstreamVerified": false,
+        "categories": [
+          "intrusive",
+          "vuln"
+        ],
+        "invasiveness": "intrusive",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2015-3197": [
       {
         "method": "nmap-nse",
         "id": "sslv2-drown",

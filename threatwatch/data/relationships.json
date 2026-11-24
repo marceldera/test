@@ -1,1 +1,1740 @@
-{"schemaVersion": 1, "dataset": {"status": "verified", "label": "Relationships from MITRE ATT&CK Enterprise 20.1: groups, their campaigns, the CVEs those campaigns exploited and the exploitation techniques they used. Each link cites its ATT&CK record.", "updatedAt": "2026-11-23T23:59:00Z", "source": "https://attack.mitre.org/campaigns/"}, "nodes": [{"id": "k-C0001", "type": "campaign", "label": "Frankenstein", "attackId": "C0001", "url": "https://attack.mitre.org/campaigns/C0001", "timeframe": "2019-01-01 to 2019-04-01"}, {"id": "c-CVE-2017-11882", "type": "cve", "label": "CVE-2017-11882", "product": "Microsoft Office", "exploitation": "confirmed", "kev": true, "epss": null, "cvss": 7.8}, {"id": "t-T1203", "type": "technique", "label": "T1203 Exploitation for Client Execution", "url": "https://attack.mitre.org/techniques/T1203"}, {"id": "k-C0016", "type": "campaign", "label": "Operation Dust Storm", "attackId": "C0016", "url": "https://attack.mitre.org/campaigns/C0016", "timeframe": "2010-01-01 to 2016-02-01"}, {"id": "c-CVE-2010-1885", "type": "cve", "label": "CVE-2010-1885", "product": null, "exploitation": "reported", "kev": false, "epss": null, "cvss": null}, {"id": "c-CVE-2011-0611", "type": "cve", "label": "CVE-2011-0611", "product": "Adobe Flash Player", "exploitation": "confirmed", "kev": true, "epss": null, "cvss": 8.8}, {"id": "c-CVE-2011-1255", "type": "cve", "label": "CVE-2011-1255", "product": null, "exploitation": "reported", "kev": false, "epss": null, "cvss": null}, {"id": "c-CVE-2012-1889", "type": "cve", "label": "CVE-2012-1889", "product": "Microsoft XML Core Services", "exploitation": "confirmed", "kev": true, "epss": null, "cvss": 8.8}, {"id": "c-CVE-2014-0322", "type": "cve", "label": "CVE-2014-0322", "product": "Microsoft Internet Explorer", "exploitation": "confirmed", "kev": true, "epss": null, "cvss": 8.8}, {"id": "t-T1189", "type": "technique", "label": "T1189 Drive-by Compromise", "url": "https://attack.mitre.org/techniques/T1189"}, {"id": "k-C0017", "type": "campaign", "label": "C0017", "attackId": "C0017", "url": "https://attack.mitre.org/campaigns/C0017", "timeframe": "2021-05-01 to 2022-02-01"}, {"id": "c-CVE-2021-44207", "type": "cve", "label": "CVE-2021-44207", "product": "Acclaim Systems USAHERDS", "exploitation": "confirmed", "kev": true, "epss": null, "cvss": 8.1}, {"id": "c-CVE-2021-44228", "type": "cve", "label": "CVE-2021-44228", "product": "Apache Log4j2", "exploitation": "confirmed", "kev": true, "epss": null, "cvss": 10.0}, {"id": "t-T1190", "type": "technique", "label": "T1190 Exploit Public-Facing Application", "url": "https://attack.mitre.org/techniques/T1190"}, {"id": "a-G0096", "type": "actor", "label": "APT41", "aliases": ["Wicked Panda", "Brass Typhoon", "BARIUM"], "classification": null, "motivation": null, "origin": null, "profile": "https://attack.mitre.org/groups/G0096", "attackId": "G0096"}, {"id": "k-C0018", "type": "campaign", "label": "C0018", "attackId": "C0018", "url": "https://attack.mitre.org/campaigns/C0018", "timeframe": "2022-02-01 to 2022-03-01"}, {"id": "c-CVE-2021-44832", "type": "cve", "label": "CVE-2021-44832", "product": null, "exploitation": "reported", "kev": false, "epss": null, "cvss": null}, {"id": "c-CVE-2021-45046", "type": "cve", "label": "CVE-2021-45046", "product": "Apache Log4j2", "exploitation": "confirmed", "kev": true, "epss": null, "cvss": 9.0}, {"id": "c-CVE-2021-45105", "type": "cve", "label": "CVE-2021-45105", "product": null, "exploitation": "reported", "kev": false, "epss": null, "cvss": null}, {"id": "k-C0024", "type": "campaign", "label": "SolarWinds Compromise", "attackId": "C0024", "url": "https://attack.mitre.org/campaigns/C0024", "timeframe": "2019-08-01 to 2021-01-01"}, {"id": "c-CVE-2020-0688", "type": "cve", "label": "CVE-2020-0688", "product": "Microsoft Exchange Server", "exploitation": "confirmed", "kev": true, "epss": null, "cvss": 8.8}, {"id": "a-G0016", "type": "actor", "label": "APT29", "aliases": ["IRON RITUAL", "IRON HEMLOCK", "NobleBaron", "Dark Halo", "NOBELIUM", "UNC2452"], "classification": null, "motivation": null, "origin": null, "profile": "https://attack.mitre.org/groups/G0016", "attackId": "G0016"}, {"id": "t-T1133", "type": "technique", "label": "T1133 External Remote Services", "url": "https://attack.mitre.org/techniques/T1133"}, {"id": "t-T1195.002", "type": "technique", "label": "T1195.002 Compromise Software Supply Chain", "url": "https://attack.mitre.org/techniques/T1195/002"}, {"id": "k-C0027", "type": "campaign", "label": "C0027", "attackId": "C0027", "url": "https://attack.mitre.org/campaigns/C0027", "timeframe": "2022-06-01 to 2022-12-01"}, {"id": "c-CVE-2021-35464", "type": "cve", "label": "CVE-2021-35464", "product": "ForgeRock Access Management (AM)", "exploitation": "confirmed", "kev": true, "epss": null, "cvss": 9.8}, {"id": "a-G1015", "type": "actor", "label": "Scattered Spider", "aliases": ["Roasted 0ktapus", "Octo Tempest", "Storm-0875", "UNC3944"], "classification": null, "motivation": null, "origin": null, "profile": "https://attack.mitre.org/groups/G1015", "attackId": "G1015"}, {"id": "k-C0029", "type": "campaign", "label": "Cutting Edge", "attackId": "C0029", "url": "https://attack.mitre.org/campaigns/C0029", "timeframe": "2023-12-01 to 2024-02-01"}, {"id": "c-CVE-2023-46805", "type": "cve", "label": "CVE-2023-46805", "product": "Ivanti Connect Secure and Policy Secure", "exploitation": "confirmed", "kev": true, "epss": null, "cvss": 8.2}, {"id": "c-CVE-2024-21887", "type": "cve", "label": "CVE-2024-21887", "product": "Ivanti Connect Secure and Policy Secure", "exploitation": "confirmed", "kev": true, "epss": null, "cvss": 9.1}, {"id": "c-CVE-2024-21893", "type": "cve", "label": "CVE-2024-21893", "product": "Ivanti Connect Secure, Policy Secure, and Neurons", "exploitation": "confirmed", "kev": true, "epss": null, "cvss": 8.2}, {"id": "k-C0038", "type": "campaign", "label": "HomeLand Justice", "attackId": "C0038", "url": "https://attack.mitre.org/campaigns/C0038", "timeframe": "2021-05-01 to 2022-09-01"}, {"id": "c-CVE-2019-0604", "type": "cve", "label": "CVE-2019-0604", "product": "Microsoft SharePoint", "exploitation": "confirmed", "kev": true, "epss": null, "cvss": 9.8}, {"id": "a-G1055", "type": "actor", "label": "VOID MANTICORE", "aliases": ["COBALT MYSTIQUE", "Handala Hack", "Homeland Justice", "Karma", "Karmabelow80", "BANISHED KITTEN"], "classification": null, "motivation": null, "origin": null, "profile": "https://attack.mitre.org/groups/G1055", "attackId": "G1055"}, {"id": "k-C0039", "type": "campaign", "label": "Versa Director Zero Day Exploitation", "attackId": "C0039", "url": "https://attack.mitre.org/campaigns/C0039", "timeframe": "2024-06-01 to 2024-08-01"}, {"id": "c-CVE-2024-39717", "type": "cve", "label": "CVE-2024-39717", "product": "Versa Director", "exploitation": "confirmed", "kev": true, "epss": null, "cvss": 7.2}, {"id": "a-G1017", "type": "actor", "label": "Volt Typhoon", "aliases": ["BRONZE SILHOUETTE", "Vanguard Panda", "DEV-0391", "UNC3236", "Voltzite", "Insidious Taurus"], "classification": null, "motivation": null, "origin": null, "profile": "https://attack.mitre.org/groups/G1017", "attackId": "G1017"}, {"id": "k-C0045", "type": "campaign", "label": "ShadowRay", "attackId": "C0045", "url": "https://attack.mitre.org/campaigns/C0045", "timeframe": "2023-09-01 to 2024-03-01"}, {"id": "c-CVE-2023-48022", "type": "cve", "label": "CVE-2023-48022", "product": null, "exploitation": "reported", "kev": false, "epss": null, "cvss": null}, {"id": "t-T1068", "type": "technique", "label": "T1068 Exploitation for Privilege Escalation", "url": "https://attack.mitre.org/techniques/T1068"}, {"id": "k-C0046", "type": "campaign", "label": "ArcaneDoor", "attackId": "C0046", "url": "https://attack.mitre.org/campaigns/C0046", "timeframe": "2023-07-01 to 2024-04-01"}, {"id": "c-CVE-2024-20353", "type": "cve", "label": "CVE-2024-20353", "product": "Cisco Adaptive Security Appliance (ASA) and Firepower Threat Defense (FTD)", "exploitation": "confirmed", "kev": true, "epss": null, "cvss": 8.6}, {"id": "k-C0048", "type": "campaign", "label": "Operation MidnightEclipse", "attackId": "C0048", "url": "https://attack.mitre.org/campaigns/C0048", "timeframe": "2024-03-01 to 2024-04-01"}, {"id": "c-CVE-2024-3400", "type": "cve", "label": "CVE-2024-3400", "product": "Palo Alto Networks PAN-OS", "exploitation": "confirmed", "kev": true, "epss": null, "cvss": 10.0}, {"id": "k-C0051", "type": "campaign", "label": "APT28 Nearest Neighbor Campaign", "attackId": "C0051", "url": "https://attack.mitre.org/campaigns/C0051", "timeframe": "2022-02-01 to 2024-11-01"}, {"id": "c-CVE-2022-38028", "type": "cve", "label": "CVE-2022-38028", "product": "Microsoft Windows", "exploitation": "confirmed", "kev": true, "epss": null, "cvss": 7.8}, {"id": "a-G0007", "type": "actor", "label": "APT28", "aliases": ["IRON TWILIGHT", "SNAKEMACKEREL", "Swallowtail", "Group 74", "Sednit", "Sofacy"], "classification": null, "motivation": null, "origin": null, "profile": "https://attack.mitre.org/groups/G0007", "attackId": "G0007"}, {"id": "k-C0052", "type": "campaign", "label": "SPACEHOP Activity", "attackId": "C0052", "url": "https://attack.mitre.org/campaigns/C0052", "timeframe": "2019-01-01 to 2024-05-01"}, {"id": "c-CVE-2022-27518", "type": "cve", "label": "CVE-2022-27518", "product": "Citrix Application Delivery Controller (ADC) and Gateway", "exploitation": "confirmed", "kev": true, "epss": null, "cvss": 9.8}, {"id": "a-G1023", "type": "actor", "label": "APT5", "aliases": ["Mulberry Typhoon", "MANGANESE", "BRONZE FLEETWOOD", "Keyhole Panda", "UNC2630"], "classification": null, "motivation": null, "origin": null, "profile": "https://attack.mitre.org/groups/G1023", "attackId": "G1023"}, {"id": "a-G0004", "type": "actor", "label": "Ke3chang", "aliases": ["APT15", "Mirage", "Vixen Panda", "GREF", "Playful Dragon", "RoyalAPT"], "classification": null, "motivation": null, "origin": null, "profile": "https://attack.mitre.org/groups/G0004", "attackId": "G0004"}, {"id": "k-C0055", "type": "campaign", "label": "Quad7 Activity", "attackId": "C0055", "url": "https://attack.mitre.org/campaigns/C0055", "timeframe": "2023-08-01 to 2025-08-01"}, {"id": "c-CVE-2023-50224", "type": "cve", "label": "CVE-2023-50224", "product": "TP-Link TL-WR841N", "exploitation": "confirmed", "kev": true, "epss": null, "cvss": 6.5}, {"id": "c-CVE-2025-9377", "type": "cve", "label": "CVE-2025-9377", "product": "TP-Link Multiple Routers", "exploitation": "confirmed", "kev": true, "epss": null, "cvss": 8.6}, {"id": "k-C0056", "type": "campaign", "label": "RedPenguin", "attackId": "C0056", "url": "https://attack.mitre.org/campaigns/C0056", "timeframe": "2024-07-01 to 2025-03-01"}, {"id": "c-CVE-2025-21590", "type": "cve", "label": "CVE-2025-21590", "product": "Juniper Junos OS", "exploitation": "confirmed", "kev": true, "epss": null, "cvss": 6.7}, {"id": "a-G1048", "type": "actor", "label": "UNC3886", "aliases": [], "classification": null, "motivation": null, "origin": null, "profile": "https://attack.mitre.org/groups/G1048", "attackId": "G1048"}, {"id": "k-C0057", "type": "campaign", "label": "3CX Supply Chain Attack", "attackId": "C0057", "url": "https://attack.mitre.org/campaigns/C0057", "timeframe": "2022-11-01 to 2023-03-01"}, {"id": "c-CVE-2022-0609", "type": "cve", "label": "CVE-2022-0609", "product": "Google Chromium Animation", "exploitation": "confirmed", "kev": true, "epss": null, "cvss": 8.8}, {"id": "a-G1049", "type": "actor", "label": "AppleJeus", "aliases": ["Gleaming Pisces", "Citrine Sleet", "UNC1720", "UNC4736"], "classification": null, "motivation": null, "origin": null, "profile": "https://attack.mitre.org/groups/G1049", "attackId": "G1049"}, {"id": "k-C0058", "type": "campaign", "label": "SharePoint ToolShell Exploitation", "attackId": "C0058", "url": "https://attack.mitre.org/campaigns/C0058", "timeframe": "2025-07-01 to 2025-07-01"}, {"id": "c-CVE-2025-49704", "type": "cve", "label": "CVE-2025-49704", "product": "Microsoft SharePoint", "exploitation": "confirmed", "kev": true, "epss": null, "cvss": 8.8}, {"id": "c-CVE-2025-49706", "type": "cve", "label": "CVE-2025-49706", "product": "Microsoft SharePoint", "exploitation": "confirmed", "kev": true, "epss": null, "cvss": 6.5}, {"id": "c-CVE-2025-53770", "type": "cve", "label": "CVE-2025-53770", "product": "Microsoft SharePoint", "exploitation": "confirmed", "kev": true, "epss": null, "cvss": 9.8}, {"id": "c-CVE-2025-53771", "type": "cve", "label": "CVE-2025-53771", "product": null, "exploitation": "reported", "kev": false, "epss": null, "cvss": null}], "edges": [{"id": "e1", "source": "k-C0001", "target": "c-CVE-2017-11882", "relation": "exploits", "confidence": "high", "why": "The ATT&CK record for Frankenstein names CVE-2017-11882 as exploited in the campaign.", "evidence": {"type": "MITRE ATT&CK", "url": "https://attack.mitre.org/campaigns/C0001", "reportDate": "2026-07-31", "firstObserved": "2019-01-01", "lastObserved": "2019-04-01", "provenance": "MITRE ATT&CK Enterprise 20.1"}}, {"id": "e2", "source": "k-C0001", "target": "t-T1203", "relation": "uses", "confidence": "moderate", "why": "ATT&CK records Frankenstein using T1203.", "evidence": {"type": "MITRE ATT&CK", "url": "https://blog.talosintelligence.com/2019/06/frankenstein-campaign.html", "reportDate": "2026-07-31", "firstObserved": "2019-01-01", "lastObserved": "2019-04-01", "provenance": "MITRE ATT&CK Enterprise 20.1"}}, {"id": "e3", "source": "k-C0016", "target": "c-CVE-2010-1885", "relation": "exploits", "confidence": "moderate", "why": "The ATT&CK record for Operation Dust Storm names CVE-2010-1885 as exploited in the campaign.", "evidence": {"type": "MITRE ATT&CK", "url": "https://attack.mitre.org/campaigns/C0016", "reportDate": "2026-07-31", "firstObserved": "2010-01-01", "lastObserved": "2016-02-01", "provenance": "MITRE ATT&CK Enterprise 20.1"}}, {"id": "e4", "source": "k-C0016", "target": "c-CVE-2011-0611", "relation": "exploits", "confidence": "high", "why": "The ATT&CK record for Operation Dust Storm names CVE-2011-0611 as exploited in the campaign.", "evidence": {"type": "MITRE ATT&CK", "url": "https://attack.mitre.org/campaigns/C0016", "reportDate": "2026-07-31", "firstObserved": "2010-01-01", "lastObserved": "2016-02-01", "provenance": "MITRE ATT&CK Enterprise 20.1"}}, {"id": "e5", "source": "k-C0016", "target": "c-CVE-2011-1255", "relation": "exploits", "confidence": "moderate", "why": "The ATT&CK record for Operation Dust Storm names CVE-2011-1255 as exploited in the campaign.", "evidence": {"type": "MITRE ATT&CK", "url": "https://attack.mitre.org/campaigns/C0016", "reportDate": "2026-07-31", "firstObserved": "2010-01-01", "lastObserved": "2016-02-01", "provenance": "MITRE ATT&CK Enterprise 20.1"}}, {"id": "e6", "source": "k-C0016", "target": "c-CVE-2012-1889", "relation": "exploits", "confidence": "high", "why": "The ATT&CK record for Operation Dust Storm names CVE-2012-1889 as exploited in the campaign.", "evidence": {"type": "MITRE ATT&CK", "url": "https://attack.mitre.org/campaigns/C0016", "reportDate": "2026-07-31", "firstObserved": "2010-01-01", "lastObserved": "2016-02-01", "provenance": "MITRE ATT&CK Enterprise 20.1"}}, {"id": "e7", "source": "k-C0016", "target": "c-CVE-2014-0322", "relation": "exploits", "confidence": "high", "why": "The ATT&CK record for Operation Dust Storm names CVE-2014-0322 as exploited in the campaign.", "evidence": {"type": "MITRE ATT&CK", "url": "https://attack.mitre.org/campaigns/C0016", "reportDate": "2026-07-31", "firstObserved": "2010-01-01", "lastObserved": "2016-02-01", "provenance": "MITRE ATT&CK Enterprise 20.1"}}, {"id": "e8", "source": "k-C0016", "target": "t-T1189", "relation": "uses", "confidence": "moderate", "why": "ATT&CK records Operation Dust Storm using T1189.", "evidence": {"type": "MITRE ATT&CK", "url": "https://s7d2.scene7.com/is/content/cylance/prod/cylance-web/en-us/resources/knowledge-center/resource-library/reports/Op_Dust_Storm_Report.pdf", "reportDate": "2026-07-31", "firstObserved": "2010-01-01", "lastObserved": "2016-02-01", "provenance": "MITRE ATT&CK Enterprise 20.1"}}, {"id": "e9", "source": "k-C0016", "target": "t-T1203", "relation": "uses", "confidence": "moderate", "why": "ATT&CK records Operation Dust Storm using T1203.", "evidence": {"type": "MITRE ATT&CK", "url": "https://s7d2.scene7.com/is/content/cylance/prod/cylance-web/en-us/resources/knowledge-center/resource-library/reports/Op_Dust_Storm_Report.pdf", "reportDate": "2026-07-31", "firstObserved": "2010-01-01", "lastObserved": "2016-02-01", "provenance": "MITRE ATT&CK Enterprise 20.1"}}, {"id": "e10", "source": "k-C0017", "target": "c-CVE-2021-44207", "relation": "exploits", "confidence": "high", "why": "The ATT&CK record for C0017 names CVE-2021-44207 as exploited in the campaign.", "evidence": {"type": "MITRE ATT&CK", "url": "https://attack.mitre.org/campaigns/C0017", "reportDate": "2026-07-31", "firstObserved": "2021-05-01", "lastObserved": "2022-02-01", "provenance": "MITRE ATT&CK Enterprise 20.1"}}, {"id": "e11", "source": "k-C0017", "target": "c-CVE-2021-44228", "relation": "exploits", "confidence": "high", "why": "The ATT&CK record for C0017 names CVE-2021-44228 as exploited in the campaign.", "evidence": {"type": "MITRE ATT&CK", "url": "https://attack.mitre.org/campaigns/C0017", "reportDate": "2026-07-31", "firstObserved": "2021-05-01", "lastObserved": "2022-02-01", "provenance": "MITRE ATT&CK Enterprise 20.1"}}, {"id": "e12", "source": "k-C0017", "target": "t-T1190", "relation": "uses", "confidence": "moderate", "why": "ATT&CK records C0017 using T1190.", "evidence": {"type": "MITRE ATT&CK", "url": "https://www.mandiant.com/resources/apt41-us-state-governments", "reportDate": "2026-07-31", "firstObserved": "2021-05-01", "lastObserved": "2022-02-01", "provenance": "MITRE ATT&CK Enterprise 20.1"}}, {"id": "e13", "source": "a-G0096", "target": "k-C0017", "relation": "attributed", "confidence": "moderate", "why": "MITRE ATT&CK attributes C0017 to APT41.", "evidence": {"type": "MITRE ATT&CK", "url": "https://www.mandiant.com/resources/apt41-us-state-governments", "reportDate": "2026-07-31", "firstObserved": "2021-05-01", "lastObserved": "2022-02-01", "provenance": "MITRE ATT&CK Enterprise 20.1"}}, {"id": "e14", "source": "k-C0018", "target": "c-CVE-2021-44228", "relation": "exploits", "confidence": "high", "why": "The ATT&CK record for C0018 names CVE-2021-44228 as exploited in the campaign.", "evidence": {"type": "MITRE ATT&CK", "url": "https://attack.mitre.org/campaigns/C0018", "reportDate": "2026-07-31", "firstObserved": "2022-02-01", "lastObserved": "2022-03-01", "provenance": "MITRE ATT&CK Enterprise 20.1"}}, {"id": "e15", "source": "k-C0018", "target": "c-CVE-2021-44832", "relation": "exploits", "confidence": "moderate", "why": "The ATT&CK record for C0018 names CVE-2021-44832 as exploited in the campaign.", "evidence": {"type": "MITRE ATT&CK", "url": "https://attack.mitre.org/campaigns/C0018", "reportDate": "2026-07-31", "firstObserved": "2022-02-01", "lastObserved": "2022-03-01", "provenance": "MITRE ATT&CK Enterprise 20.1"}}, {"id": "e16", "source": "k-C0018", "target": "c-CVE-2021-45046", "relation": "exploits", "confidence": "high", "why": "The ATT&CK record for C0018 names CVE-2021-45046 as exploited in the campaign.", "evidence": {"type": "MITRE ATT&CK", "url": "https://attack.mitre.org/campaigns/C0018", "reportDate": "2026-07-31", "firstObserved": "2022-02-01", "lastObserved": "2022-03-01", "provenance": "MITRE ATT&CK Enterprise 20.1"}}, {"id": "e17", "source": "k-C0018", "target": "c-CVE-2021-45105", "relation": "exploits", "confidence": "moderate", "why": "The ATT&CK record for C0018 names CVE-2021-45105 as exploited in the campaign.", "evidence": {"type": "MITRE ATT&CK", "url": "https://attack.mitre.org/campaigns/C0018", "reportDate": "2026-07-31", "firstObserved": "2022-02-01", "lastObserved": "2022-03-01", "provenance": "MITRE ATT&CK Enterprise 20.1"}}, {"id": "e18", "source": "k-C0018", "target": "t-T1190", "relation": "uses", "confidence": "moderate", "why": "ATT&CK records C0018 using T1190.", "evidence": {"type": "MITRE ATT&CK", "url": "https://blog.talosintelligence.com/avoslocker-new-arsenal/", "reportDate": "2026-07-31", "firstObserved": "2022-02-01", "lastObserved": "2022-03-01", "provenance": "MITRE ATT&CK Enterprise 20.1"}}, {"id": "e19", "source": "k-C0024", "target": "c-CVE-2020-0688", "relation": "exploits", "confidence": "high", "why": "The ATT&CK record for SolarWinds Compromise names CVE-2020-0688 as exploited in the campaign.", "evidence": {"type": "MITRE ATT&CK", "url": "https://attack.mitre.org/campaigns/C0024", "reportDate": "2026-07-31", "firstObserved": "2019-08-01", "lastObserved": "2021-01-01", "provenance": "MITRE ATT&CK Enterprise 20.1"}}, {"id": "e20", "source": "a-G0016", "target": "k-C0024", "relation": "attributed", "confidence": "moderate", "why": "MITRE ATT&CK attributes SolarWinds Compromise to APT29.", "evidence": {"type": "MITRE ATT&CK", "url": "https://www.mandiant.com/resources/blog/unc2452-merged-into-apt29", "reportDate": "2026-07-31", "firstObserved": "2019-08-01", "lastObserved": "2021-01-01", "provenance": "MITRE ATT&CK Enterprise 20.1"}}, {"id": "e21", "source": "k-C0024", "target": "t-T1190", "relation": "uses", "confidence": "moderate", "why": "ATT&CK records SolarWinds Compromise using T1190.", "evidence": {"type": "MITRE ATT&CK", "url": "https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/", "reportDate": "2026-07-31", "firstObserved": "2019-08-01", "lastObserved": "2021-01-01", "provenance": "MITRE ATT&CK Enterprise 20.1"}}, {"id": "e22", "source": "k-C0024", "target": "t-T1133", "relation": "uses", "confidence": "moderate", "why": "ATT&CK records SolarWinds Compromise using T1133.", "evidence": {"type": "MITRE ATT&CK", "url": "https://www.crowdstrike.com/blog/observations-from-the-stellarparticle-campaign/", "reportDate": "2026-07-31", "firstObserved": "2019-08-01", "lastObserved": "2021-01-01", "provenance": "MITRE ATT&CK Enterprise 20.1"}}, {"id": "e23", "source": "k-C0024", "target": "t-T1195.002", "relation": "uses", "confidence": "moderate", "why": "ATT&CK records SolarWinds Compromise using T1195.002.", "evidence": {"type": "MITRE ATT&CK", "url": "https://www.fireeye.com/blog/threat-research/2020/12/evasive-attacker-leverages-solarwinds-supply-chain-compromises-with-sunburst-backdoor.html", "reportDate": "2026-07-31", "firstObserved": "2019-08-01", "lastObserved": "2021-01-01", "provenance": "MITRE ATT&CK Enterprise 20.1"}}, {"id": "e24", "source": "k-C0027", "target": "c-CVE-2021-35464", "relation": "exploits", "confidence": "high", "why": "The ATT&CK record for C0027 names CVE-2021-35464 as exploited in the campaign.", "evidence": {"type": "MITRE ATT&CK", "url": "https://attack.mitre.org/campaigns/C0027", "reportDate": "2026-07-31", "firstObserved": "2022-06-01", "lastObserved": "2022-12-01", "provenance": "MITRE ATT&CK Enterprise 20.1"}}, {"id": "e25", "source": "k-C0027", "target": "t-T1190", "relation": "uses", "confidence": "moderate", "why": "ATT&CK records C0027 using T1190.", "evidence": {"type": "MITRE ATT&CK", "url": "https://www.crowdstrike.com/blog/analysis-of-intrusion-campaign-targeting-telecom-and-bpo-companies/", "reportDate": "2026-07-31", "firstObserved": "2022-06-01", "lastObserved": "2022-12-01", "provenance": "MITRE ATT&CK Enterprise 20.1"}}, {"id": "e26", "source": "k-C0027", "target": "t-T1133", "relation": "uses", "confidence": "moderate", "why": "ATT&CK records C0027 using T1133.", "evidence": {"type": "MITRE ATT&CK", "url": "https://www.crowdstrike.com/blog/analysis-of-intrusion-campaign-targeting-telecom-and-bpo-companies/", "reportDate": "2026-07-31", "firstObserved": "2022-06-01", "lastObserved": "2022-12-01", "provenance": "MITRE ATT&CK Enterprise 20.1"}}, {"id": "e27", "source": "a-G1015", "target": "k-C0027", "relation": "attributed", "confidence": "moderate", "why": "MITRE ATT&CK attributes C0027 to Scattered Spider.", "evidence": {"type": "MITRE ATT&CK", "url": "https://www.crowdstrike.com/blog/analysis-of-intrusion-campaign-targeting-telecom-and-bpo-companies/", "reportDate": "2026-07-31", "firstObserved": "2022-06-01", "lastObserved": "2022-12-01", "provenance": "MITRE ATT&CK Enterprise 20.1"}}, {"id": "e28", "source": "k-C0029", "target": "c-CVE-2023-46805", "relation": "exploits", "confidence": "high", "why": "The ATT&CK record for Cutting Edge names CVE-2023-46805 as exploited in the campaign.", "evidence": {"type": "MITRE ATT&CK", "url": "https://attack.mitre.org/campaigns/C0029", "reportDate": "2026-07-31", "firstObserved": "2023-12-01", "lastObserved": "2024-02-01", "provenance": "MITRE ATT&CK Enterprise 20.1"}}, {"id": "e29", "source": "k-C0029", "target": "c-CVE-2024-21887", "relation": "exploits", "confidence": "high", "why": "The ATT&CK record for Cutting Edge names CVE-2024-21887 as exploited in the campaign.", "evidence": {"type": "MITRE ATT&CK", "url": "https://attack.mitre.org/campaigns/C0029", "reportDate": "2026-07-31", "firstObserved": "2023-12-01", "lastObserved": "2024-02-01", "provenance": "MITRE ATT&CK Enterprise 20.1"}}, {"id": "e30", "source": "k-C0029", "target": "c-CVE-2024-21893", "relation": "exploits", "confidence": "high", "why": "The ATT&CK record for Cutting Edge names CVE-2024-21893 as exploited in the campaign.", "evidence": {"type": "MITRE ATT&CK", "url": "https://attack.mitre.org/campaigns/C0029", "reportDate": "2026-07-31", "firstObserved": "2023-12-01", "lastObserved": "2024-02-01", "provenance": "MITRE ATT&CK Enterprise 20.1"}}, {"id": "e31", "source": "k-C0029", "target": "t-T1190", "relation": "uses", "confidence": "moderate", "why": "ATT&CK records Cutting Edge using T1190.", "evidence": {"type": "MITRE ATT&CK", "url": "https://www.volexity.com/blog/2024/01/15/ivanti-connect-secure-vpn-exploitation-goes-global/", "reportDate": "2026-07-31", "firstObserved": "2023-12-01", "lastObserved": "2024-02-01", "provenance": "MITRE ATT&CK Enterprise 20.1"}}, {"id": "e32", "source": "k-C0038", "target": "c-CVE-2019-0604", "relation": "exploits", "confidence": "high", "why": "The ATT&CK record for HomeLand Justice names CVE-2019-0604 as exploited in the campaign.", "evidence": {"type": "MITRE ATT&CK", "url": "https://attack.mitre.org/campaigns/C0038", "reportDate": "2026-07-31", "firstObserved": "2021-05-01", "lastObserved": "2022-09-01", "provenance": "MITRE ATT&CK Enterprise 20.1"}}, {"id": "e33", "source": "a-G1055", "target": "k-C0038", "relation": "attributed", "confidence": "moderate", "why": "MITRE ATT&CK attributes HomeLand Justice to VOID MANTICORE.", "evidence": {"type": "MITRE ATT&CK", "url": "https://attack.mitre.org/campaigns/C0038", "reportDate": "2026-07-31", "firstObserved": "2021-05-01", "lastObserved": "2022-09-01", "provenance": "MITRE ATT&CK Enterprise 20.1"}}, {"id": "e34", "source": "k-C0038", "target": "t-T1190", "relation": "uses", "confidence": "moderate", "why": "ATT&CK records HomeLand Justice using T1190.", "evidence": {"type": "MITRE ATT&CK", "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-264a", "reportDate": "2026-07-31", "firstObserved": "2021-05-01", "lastObserved": "2022-09-01", "provenance": "MITRE ATT&CK Enterprise 20.1"}}, {"id": "e35", "source": "k-C0039", "target": "c-CVE-2024-39717", "relation": "exploits", "confidence": "high", "why": "The ATT&CK record for Versa Director Zero Day Exploitation names CVE-2024-39717 as exploited in the campaign.", "evidence": {"type": "MITRE ATT&CK", "url": "https://attack.mitre.org/campaigns/C0039", "reportDate": "2026-11-02", "firstObserved": "2024-06-01", "lastObserved": "2024-08-01", "provenance": "MITRE ATT&CK Enterprise 20.1"}}, {"id": "e36", "source": "k-C0039", "target": "t-T1190", "relation": "uses", "confidence": "moderate", "why": "ATT&CK records Versa Director Zero Day Exploitation using T1190.", "evidence": {"type": "MITRE ATT&CK", "url": "https://www.lumen.com/blog/en-us/uncovering-versa-director-zero-day-exploitation", "reportDate": "2026-11-02", "firstObserved": "2024-06-01", "lastObserved": "2024-08-01", "provenance": "MITRE ATT&CK Enterprise 20.1"}}, {"id": "e37", "source": "a-G1017", "target": "k-C0039", "relation": "attributed", "confidence": "moderate", "why": "MITRE ATT&CK attributes Versa Director Zero Day Exploitation to Volt Typhoon.", "evidence": {"type": "MITRE ATT&CK", "url": "https://www.lumen.com/blog/en-us/uncovering-versa-director-zero-day-exploitation", "reportDate": "2026-11-02", "firstObserved": "2024-06-01", "lastObserved": "2024-08-01", "provenance": "MITRE ATT&CK Enterprise 20.1"}}, {"id": "e38", "source": "k-C0045", "target": "c-CVE-2023-48022", "relation": "exploits", "confidence": "moderate", "why": "The ATT&CK record for ShadowRay names CVE-2023-48022 as exploited in the campaign.", "evidence": {"type": "MITRE ATT&CK", "url": "https://attack.mitre.org/campaigns/C0045", "reportDate": "2026-07-31", "firstObserved": "2023-09-01", "lastObserved": "2024-03-01", "provenance": "MITRE ATT&CK Enterprise 20.1"}}, {"id": "e39", "source": "k-C0045", "target": "t-T1190", "relation": "uses", "confidence": "moderate", "why": "ATT&CK records ShadowRay using T1190.", "evidence": {"type": "MITRE ATT&CK", "url": "https://www.oligo.security/blog/shadowray-attack-ai-workloads-actively-exploited-in-the-wild", "reportDate": "2026-07-31", "firstObserved": "2023-09-01", "lastObserved": "2024-03-01", "provenance": "MITRE ATT&CK Enterprise 20.1"}}, {"id": "e40", "source": "k-C0045", "target": "t-T1068", "relation": "uses", "confidence": "moderate", "why": "ATT&CK records ShadowRay using T1068.", "evidence": {"type": "MITRE ATT&CK", "url": "https://www.oligo.security/blog/shadowray-attack-ai-workloads-actively-exploited-in-the-wild", "reportDate": "2026-07-31", "firstObserved": "2023-09-01", "lastObserved": "2024-03-01", "provenance": "MITRE ATT&CK Enterprise 20.1"}}, {"id": "e41", "source": "k-C0046", "target": "c-CVE-2024-20353", "relation": "exploits", "confidence": "high", "why": "The ATT&CK record for ArcaneDoor names CVE-2024-20353 as exploited in the campaign.", "evidence": {"type": "MITRE ATT&CK", "url": "https://attack.mitre.org/campaigns/C0046", "reportDate": "2026-07-31", "firstObserved": "2023-07-01", "lastObserved": "2024-04-01", "provenance": "MITRE ATT&CK Enterprise 20.1"}}, {"id": "e42", "source": "k-C0046", "target": "t-T1190", "relation": "uses", "confidence": "moderate", "why": "ATT&CK records ArcaneDoor using T1190.", "evidence": {"type": "MITRE ATT&CK", "url": "https://www.cyber.gc.ca/en/news-events/cyber-activity-impacting-cisco-asa-vpns", "reportDate": "2026-07-31", "firstObserved": "2023-07-01", "lastObserved": "2024-04-01", "provenance": "MITRE ATT&CK Enterprise 20.1"}}, {"id": "e43", "source": "k-C0046", "target": "t-T1133", "relation": "uses", "confidence": "moderate", "why": "ATT&CK records ArcaneDoor using T1133.", "evidence": {"type": "MITRE ATT&CK", "url": "https://www.cyber.gc.ca/en/news-events/cyber-activity-impacting-cisco-asa-vpns", "reportDate": "2026-07-31", "firstObserved": "2023-07-01", "lastObserved": "2024-04-01", "provenance": "MITRE ATT&CK Enterprise 20.1"}}, {"id": "e44", "source": "k-C0048", "target": "c-CVE-2024-3400", "relation": "exploits", "confidence": "high", "why": "The ATT&CK record for Operation MidnightEclipse names CVE-2024-3400 as exploited in the campaign.", "evidence": {"type": "MITRE ATT&CK", "url": "https://attack.mitre.org/campaigns/C0048", "reportDate": "2026-07-31", "firstObserved": "2024-03-01", "lastObserved": "2024-04-01", "provenance": "MITRE ATT&CK Enterprise 20.1"}}, {"id": "e45", "source": "k-C0048", "target": "t-T1190", "relation": "uses", "confidence": "moderate", "why": "ATT&CK records Operation MidnightEclipse using T1190.", "evidence": {"type": "MITRE ATT&CK", "url": "https://unit42.paloaltonetworks.com/cve-2024-3400/", "reportDate": "2026-07-31", "firstObserved": "2024-03-01", "lastObserved": "2024-04-01", "provenance": "MITRE ATT&CK Enterprise 20.1"}}, {"id": "e46", "source": "k-C0051", "target": "c-CVE-2022-38028", "relation": "exploits", "confidence": "high", "why": "The ATT&CK record for APT28 Nearest Neighbor Campaign names CVE-2022-38028 as exploited in the campaign.", "evidence": {"type": "MITRE ATT&CK", "url": "https://attack.mitre.org/campaigns/C0051", "reportDate": "2026-07-31", "firstObserved": "2022-02-01", "lastObserved": "2024-11-01", "provenance": "MITRE ATT&CK Enterprise 20.1"}}, {"id": "e47", "source": "a-G0007", "target": "k-C0051", "relation": "attributed", "confidence": "moderate", "why": "MITRE ATT&CK attributes APT28 Nearest Neighbor Campaign to APT28.", "evidence": {"type": "MITRE ATT&CK", "url": "https://www.volexity.com/blog/2024/11/22/the-nearest-neighbor-attack-how-a-russian-apt-weaponized-nearby-wi-fi-networks-for-covert-access/", "reportDate": "2026-07-31", "firstObserved": "2022-02-01", "lastObserved": "2024-11-01", "provenance": "MITRE ATT&CK Enterprise 20.1"}}, {"id": "e48", "source": "k-C0052", "target": "c-CVE-2022-27518", "relation": "exploits", "confidence": "high", "why": "The ATT&CK record for SPACEHOP Activity names CVE-2022-27518 as exploited in the campaign.", "evidence": {"type": "MITRE ATT&CK", "url": "https://attack.mitre.org/campaigns/C0052", "reportDate": "2026-07-31", "firstObserved": "2019-01-01", "lastObserved": "2024-05-01", "provenance": "MITRE ATT&CK Enterprise 20.1"}}, {"id": "e49", "source": "a-G1023", "target": "k-C0052", "relation": "attributed", "confidence": "moderate", "why": "MITRE ATT&CK attributes SPACEHOP Activity to APT5.", "evidence": {"type": "MITRE ATT&CK", "url": "https://cloud.google.com/blog/topics/threat-intelligence/china-nexus-espionage-orb-networks", "reportDate": "2026-07-31", "firstObserved": "2019-01-01", "lastObserved": "2024-05-01", "provenance": "MITRE ATT&CK Enterprise 20.1"}}, {"id": "e50", "source": "k-C0052", "target": "t-T1190", "relation": "uses", "confidence": "moderate", "why": "ATT&CK records SPACEHOP Activity using T1190.", "evidence": {"type": "MITRE ATT&CK", "url": "https://media.defense.gov/2022/Dec/13/2003131586/-1/-1/0/CSA-APT5-CITRIXADC-V1.PDF", "reportDate": "2026-07-31", "firstObserved": "2019-01-01", "lastObserved": "2024-05-01", "provenance": "MITRE ATT&CK Enterprise 20.1"}}, {"id": "e51", "source": "a-G0004", "target": "k-C0052", "relation": "attributed", "confidence": "moderate", "why": "MITRE ATT&CK attributes SPACEHOP Activity to Ke3chang.", "evidence": {"type": "MITRE ATT&CK", "url": "https://cloud.google.com/blog/topics/threat-intelligence/china-nexus-espionage-orb-networks", "reportDate": "2026-07-31", "firstObserved": "2019-01-01", "lastObserved": "2024-05-01", "provenance": "MITRE ATT&CK Enterprise 20.1"}}, {"id": "e52", "source": "k-C0055", "target": "c-CVE-2023-50224", "relation": "exploits", "confidence": "high", "why": "The ATT&CK record for Quad7 Activity names CVE-2023-50224 as exploited in the campaign.", "evidence": {"type": "MITRE ATT&CK", "url": "https://attack.mitre.org/campaigns/C0055", "reportDate": "2026-07-31", "firstObserved": "2023-08-01", "lastObserved": "2025-08-01", "provenance": "MITRE ATT&CK Enterprise 20.1"}}, {"id": "e53", "source": "k-C0055", "target": "c-CVE-2025-9377", "relation": "exploits", "confidence": "high", "why": "The ATT&CK record for Quad7 Activity names CVE-2025-9377 as exploited in the campaign.", "evidence": {"type": "MITRE ATT&CK", "url": "https://attack.mitre.org/campaigns/C0055", "reportDate": "2026-07-31", "firstObserved": "2023-08-01", "lastObserved": "2025-08-01", "provenance": "MITRE ATT&CK Enterprise 20.1"}}, {"id": "e54", "source": "k-C0055", "target": "t-T1190", "relation": "uses", "confidence": "moderate", "why": "ATT&CK records Quad7 Activity using T1190.", "evidence": {"type": "MITRE ATT&CK", "url": "https://www.microsoft.com/en-us/security/blog/2024/10/31/chinese-threat-actor-storm-0940-uses-credentials-from-password-spray-attacks-from-a-covert-network/", "reportDate": "2026-07-31", "firstObserved": "2023-08-01", "lastObserved": "2025-08-01", "provenance": "MITRE ATT&CK Enterprise 20.1"}}, {"id": "e55", "source": "k-C0056", "target": "c-CVE-2025-21590", "relation": "exploits", "confidence": "high", "why": "The ATT&CK record for RedPenguin names CVE-2025-21590 as exploited in the campaign.", "evidence": {"type": "MITRE ATT&CK", "url": "https://attack.mitre.org/campaigns/C0056", "reportDate": "2026-07-31", "firstObserved": "2024-07-01", "lastObserved": "2025-03-01", "provenance": "MITRE ATT&CK Enterprise 20.1"}}, {"id": "e56", "source": "a-G1048", "target": "k-C0056", "relation": "attributed", "confidence": "moderate", "why": "MITRE ATT&CK attributes RedPenguin to UNC3886.", "evidence": {"type": "MITRE ATT&CK", "url": "https://cloud.google.com/blog/topics/threat-intelligence/china-nexus-espionage-targets-juniper-routers", "reportDate": "2026-07-31", "firstObserved": "2024-07-01", "lastObserved": "2025-03-01", "provenance": "MITRE ATT&CK Enterprise 20.1"}}, {"id": "e57", "source": "k-C0056", "target": "t-T1203", "relation": "uses", "confidence": "moderate", "why": "ATT&CK records RedPenguin using T1203.", "evidence": {"type": "MITRE ATT&CK", "url": "https://supportportal.juniper.net/sfc/servlet.shepherd/document/download/069Dp00000FzdmIIAR?operationContext=S1", "reportDate": "2026-07-31", "firstObserved": "2024-07-01", "lastObserved": "2025-03-01", "provenance": "MITRE ATT&CK Enterprise 20.1"}}, {"id": "e58", "source": "k-C0057", "target": "c-CVE-2022-0609", "relation": "exploits", "confidence": "high", "why": "The ATT&CK record for 3CX Supply Chain Attack names CVE-2022-0609 as exploited in the campaign.", "evidence": {"type": "MITRE ATT&CK", "url": "https://attack.mitre.org/campaigns/C0057", "reportDate": "2026-07-31", "firstObserved": "2022-11-01", "lastObserved": "2023-03-01", "provenance": "MITRE ATT&CK Enterprise 20.1"}}, {"id": "e59", "source": "k-C0057", "target": "t-T1195.002", "relation": "uses", "confidence": "moderate", "why": "ATT&CK records 3CX Supply Chain Attack using T1195.002.", "evidence": {"type": "MITRE ATT&CK", "url": "https://cloud.google.com/blog/topics/threat-intelligence/3cx-software-supply-chain-compromise/", "reportDate": "2026-07-31", "firstObserved": "2022-11-01", "lastObserved": "2023-03-01", "provenance": "MITRE ATT&CK Enterprise 20.1"}}, {"id": "e60", "source": "k-C0057", "target": "t-T1189", "relation": "uses", "confidence": "moderate", "why": "ATT&CK records 3CX Supply Chain Attack using T1189.", "evidence": {"type": "MITRE ATT&CK", "url": "https://cloud.google.com/blog/topics/threat-intelligence/3cx-software-supply-chain-compromise/", "reportDate": "2026-07-31", "firstObserved": "2022-11-01", "lastObserved": "2023-03-01", "provenance": "MITRE ATT&CK Enterprise 20.1"}}, {"id": "e61", "source": "a-G1049", "target": "k-C0057", "relation": "attributed", "confidence": "moderate", "why": "MITRE ATT&CK attributes 3CX Supply Chain Attack to AppleJeus.", "evidence": {"type": "MITRE ATT&CK", "url": "https://cloud.google.com/blog/topics/threat-intelligence/3cx-software-supply-chain-compromise/", "reportDate": "2026-07-31", "firstObserved": "2022-11-01", "lastObserved": "2023-03-01", "provenance": "MITRE ATT&CK Enterprise 20.1"}}, {"id": "e62", "source": "k-C0057", "target": "t-T1203", "relation": "uses", "confidence": "moderate", "why": "ATT&CK records 3CX Supply Chain Attack using T1203.", "evidence": {"type": "MITRE ATT&CK", "url": "https://cloud.google.com/blog/topics/threat-intelligence/3cx-software-supply-chain-compromise/", "reportDate": "2026-07-31", "firstObserved": "2022-11-01", "lastObserved": "2023-03-01", "provenance": "MITRE ATT&CK Enterprise 20.1"}}, {"id": "e63", "source": "k-C0058", "target": "c-CVE-2025-49704", "relation": "exploits", "confidence": "high", "why": "The ATT&CK record for SharePoint ToolShell Exploitation names CVE-2025-49704 as exploited in the campaign.", "evidence": {"type": "MITRE ATT&CK", "url": "https://attack.mitre.org/campaigns/C0058", "reportDate": "2026-07-31", "firstObserved": "2025-07-01", "lastObserved": "2025-07-01", "provenance": "MITRE ATT&CK Enterprise 20.1"}}, {"id": "e64", "source": "k-C0058", "target": "c-CVE-2025-49706", "relation": "exploits", "confidence": "high", "why": "The ATT&CK record for SharePoint ToolShell Exploitation names CVE-2025-49706 as exploited in the campaign.", "evidence": {"type": "MITRE ATT&CK", "url": "https://attack.mitre.org/campaigns/C0058", "reportDate": "2026-07-31", "firstObserved": "2025-07-01", "lastObserved": "2025-07-01", "provenance": "MITRE ATT&CK Enterprise 20.1"}}, {"id": "e65", "source": "k-C0058", "target": "c-CVE-2025-53770", "relation": "exploits", "confidence": "high", "why": "The ATT&CK record for SharePoint ToolShell Exploitation names CVE-2025-53770 as exploited in the campaign.", "evidence": {"type": "MITRE ATT&CK", "url": "https://attack.mitre.org/campaigns/C0058", "reportDate": "2026-07-31", "firstObserved": "2025-07-01", "lastObserved": "2025-07-01", "provenance": "MITRE ATT&CK Enterprise 20.1"}}, {"id": "e66", "source": "k-C0058", "target": "c-CVE-2025-53771", "relation": "exploits", "confidence": "moderate", "why": "The ATT&CK record for SharePoint ToolShell Exploitation names CVE-2025-53771 as exploited in the campaign.", "evidence": {"type": "MITRE ATT&CK", "url": "https://attack.mitre.org/campaigns/C0058", "reportDate": "2026-07-31", "firstObserved": "2025-07-01", "lastObserved": "2025-07-01", "provenance": "MITRE ATT&CK Enterprise 20.1"}}, {"id": "e67", "source": "k-C0058", "target": "t-T1190", "relation": "uses", "confidence": "moderate", "why": "ATT&CK records SharePoint ToolShell Exploitation using T1190.", "evidence": {"type": "MITRE ATT&CK", "url": "https://www.trendmicro.com/en_us/research/25/g/cve-2025-53770-and-cve-2025-53771-sharepoint-attacks.html", "reportDate": "2026-07-31", "firstObserved": "2025-07-01", "lastObserved": "2025-07-01", "provenance": "MITRE ATT&CK Enterprise 20.1"}}]}
+{
+  "schemaVersion": 1,
+  "dataset": {
+    "status": "verified",
+    "label": "Relationships from MITRE ATT&CK Enterprise 20.1: groups, their campaigns, the CVEs those campaigns exploited and the exploitation techniques they used. Each link cites its ATT&CK record.",
+    "updatedAt": "2026-11-24T00:08:40Z",
+    "source": "https://attack.mitre.org/campaigns/"
+  },
+  "nodes": [
+    {
+      "id": "k-C0001",
+      "type": "campaign",
+      "label": "Frankenstein",
+      "attackId": "C0001",
+      "url": "https://attack.mitre.org/campaigns/C0001",
+      "timeframe": "2019-01-01 to 2019-04-01"
+    },
+    {
+      "id": "c-CVE-2017-11882",
+      "type": "cve",
+      "label": "CVE-2017-11882",
+      "product": "Microsoft Office",
+      "exploitation": "confirmed",
+      "kev": true,
+      "epss": null,
+      "cvss": 7.8
+    },
+    {
+      "id": "t-T1203",
+      "type": "technique",
+      "label": "T1203 Exploitation for Client Execution",
+      "url": "https://attack.mitre.org/techniques/T1203"
+    },
+    {
+      "id": "k-C0016",
+      "type": "campaign",
+      "label": "Operation Dust Storm",
+      "attackId": "C0016",
+      "url": "https://attack.mitre.org/campaigns/C0016",
+      "timeframe": "2010-01-01 to 2016-02-01"
+    },
+    {
+      "id": "c-CVE-2010-1885",
+      "type": "cve",
+      "label": "CVE-2010-1885",
+      "product": null,
+      "exploitation": "reported",
+      "kev": false,
+      "epss": null,
+      "cvss": null
+    },
+    {
+      "id": "c-CVE-2011-0611",
+      "type": "cve",
+      "label": "CVE-2011-0611",
+      "product": "Adobe Flash Player",
+      "exploitation": "confirmed",
+      "kev": true,
+      "epss": null,
+      "cvss": 8.8
+    },
+    {
+      "id": "c-CVE-2011-1255",
+      "type": "cve",
+      "label": "CVE-2011-1255",
+      "product": null,
+      "exploitation": "reported",
+      "kev": false,
+      "epss": null,
+      "cvss": null
+    },
+    {
+      "id": "c-CVE-2012-1889",
+      "type": "cve",
+      "label": "CVE-2012-1889",
+      "product": "Microsoft XML Core Services",
+      "exploitation": "confirmed",
+      "kev": true,
+      "epss": null,
+      "cvss": 8.8
+    },
+    {
+      "id": "c-CVE-2014-0322",
+      "type": "cve",
+      "label": "CVE-2014-0322",
+      "product": "Microsoft Internet Explorer",
+      "exploitation": "confirmed",
+      "kev": true,
+      "epss": null,
+      "cvss": 8.8
+    },
+    {
+      "id": "t-T1189",
+      "type": "technique",
+      "label": "T1189 Drive-by Compromise",
+      "url": "https://attack.mitre.org/techniques/T1189"
+    },
+    {
+      "id": "k-C0017",
+      "type": "campaign",
+      "label": "C0017",
+      "attackId": "C0017",
+      "url": "https://attack.mitre.org/campaigns/C0017",
+      "timeframe": "2021-05-01 to 2022-02-01"
+    },
+    {
+      "id": "c-CVE-2021-44207",
+      "type": "cve",
+      "label": "CVE-2021-44207",
+      "product": "Acclaim Systems USAHERDS",
+      "exploitation": "confirmed",
+      "kev": true,
+      "epss": null,
+      "cvss": 8.1
+    },
+    {
+      "id": "c-CVE-2021-44228",
+      "type": "cve",
+      "label": "CVE-2021-44228",
+      "product": "Apache Log4j2",
+      "exploitation": "confirmed",
+      "kev": true,
+      "epss": null,
+      "cvss": 10.0
+    },
+    {
+      "id": "t-T1190",
+      "type": "technique",
+      "label": "T1190 Exploit Public-Facing Application",
+      "url": "https://attack.mitre.org/techniques/T1190"
+    },
+    {
+      "id": "a-G0096",
+      "type": "actor",
+      "label": "APT41",
+      "aliases": [
+        "Wicked Panda",
+        "Brass Typhoon",
+        "BARIUM"
+      ],
+      "classification": null,
+      "motivation": null,
+      "origin": null,
+      "profile": "https://attack.mitre.org/groups/G0096",
+      "attackId": "G0096"
+    },
+    {
+      "id": "k-C0018",
+      "type": "campaign",
+      "label": "C0018",
+      "attackId": "C0018",
+      "url": "https://attack.mitre.org/campaigns/C0018",
+      "timeframe": "2022-02-01 to 2022-03-01"
+    },
+    {
+      "id": "c-CVE-2021-44832",
+      "type": "cve",
+      "label": "CVE-2021-44832",
+      "product": null,
+      "exploitation": "reported",
+      "kev": false,
+      "epss": null,
+      "cvss": null
+    },
+    {
+      "id": "c-CVE-2021-45046",
+      "type": "cve",
+      "label": "CVE-2021-45046",
+      "product": "Apache Log4j2",
+      "exploitation": "confirmed",
+      "kev": true,
+      "epss": null,
+      "cvss": 9.0
+    },
+    {
+      "id": "c-CVE-2021-45105",
+      "type": "cve",
+      "label": "CVE-2021-45105",
+      "product": null,
+      "exploitation": "reported",
+      "kev": false,
+      "epss": null,
+      "cvss": null
+    },
+    {
+      "id": "k-C0024",
+      "type": "campaign",
+      "label": "SolarWinds Compromise",
+      "attackId": "C0024",
+      "url": "https://attack.mitre.org/campaigns/C0024",
+      "timeframe": "2019-08-01 to 2021-01-01"
+    },
+    {
+      "id": "c-CVE-2020-0688",
+      "type": "cve",
+      "label": "CVE-2020-0688",
+      "product": "Microsoft Exchange Server",
+      "exploitation": "confirmed",
+      "kev": true,
+      "epss": null,
+      "cvss": 8.8
+    },
+    {
+      "id": "a-G0016",
+      "type": "actor",
+      "label": "APT29",
+      "aliases": [
+        "IRON RITUAL",
+        "IRON HEMLOCK",
+        "NobleBaron",
+        "Dark Halo",
+        "NOBELIUM",
+        "UNC2452"
+      ],
+      "classification": null,
+      "motivation": null,
+      "origin": null,
+      "profile": "https://attack.mitre.org/groups/G0016",
+      "attackId": "G0016"
+    },
+    {
+      "id": "t-T1133",
+      "type": "technique",
+      "label": "T1133 External Remote Services",
+      "url": "https://attack.mitre.org/techniques/T1133"
+    },
+    {
+      "id": "t-T1195.002",
+      "type": "technique",
+      "label": "T1195.002 Compromise Software Supply Chain",
+      "url": "https://attack.mitre.org/techniques/T1195/002"
+    },
+    {
+      "id": "k-C0027",
+      "type": "campaign",
+      "label": "C0027",
+      "attackId": "C0027",
+      "url": "https://attack.mitre.org/campaigns/C0027",
+      "timeframe": "2022-06-01 to 2022-12-01"
+    },
+    {
+      "id": "c-CVE-2021-35464",
+      "type": "cve",
+      "label": "CVE-2021-35464",
+      "product": "ForgeRock Access Management (AM)",
+      "exploitation": "confirmed",
+      "kev": true,
+      "epss": null,
+      "cvss": 9.8
+    },
+    {
+      "id": "a-G1015",
+      "type": "actor",
+      "label": "Scattered Spider",
+      "aliases": [
+        "Roasted 0ktapus",
+        "Octo Tempest",
+        "Storm-0875",
+        "UNC3944"
+      ],
+      "classification": null,
+      "motivation": null,
+      "origin": null,
+      "profile": "https://attack.mitre.org/groups/G1015",
+      "attackId": "G1015"
+    },
+    {
+      "id": "k-C0029",
+      "type": "campaign",
+      "label": "Cutting Edge",
+      "attackId": "C0029",
+      "url": "https://attack.mitre.org/campaigns/C0029",
+      "timeframe": "2023-12-01 to 2024-02-01"
+    },
+    {
+      "id": "c-CVE-2023-46805",
+      "type": "cve",
+      "label": "CVE-2023-46805",
+      "product": "Ivanti Connect Secure and Policy Secure",
+      "exploitation": "confirmed",
+      "kev": true,
+      "epss": null,
+      "cvss": 8.2
+    },
+    {
+      "id": "c-CVE-2024-21887",
+      "type": "cve",
+      "label": "CVE-2024-21887",
+      "product": "Ivanti Connect Secure and Policy Secure",
+      "exploitation": "confirmed",
+      "kev": true,
+      "epss": null,
+      "cvss": 9.1
+    },
+    {
+      "id": "c-CVE-2024-21893",
+      "type": "cve",
+      "label": "CVE-2024-21893",
+      "product": "Ivanti Connect Secure, Policy Secure, and Neurons",
+      "exploitation": "confirmed",
+      "kev": true,
+      "epss": null,
+      "cvss": 8.2
+    },
+    {
+      "id": "k-C0038",
+      "type": "campaign",
+      "label": "HomeLand Justice",
+      "attackId": "C0038",
+      "url": "https://attack.mitre.org/campaigns/C0038",
+      "timeframe": "2021-05-01 to 2022-09-01"
+    },
+    {
+      "id": "c-CVE-2019-0604",
+      "type": "cve",
+      "label": "CVE-2019-0604",
+      "product": "Microsoft SharePoint",
+      "exploitation": "confirmed",
+      "kev": true,
+      "epss": null,
+      "cvss": 9.8
+    },
+    {
+      "id": "a-G1055",
+      "type": "actor",
+      "label": "VOID MANTICORE",
+      "aliases": [
+        "COBALT MYSTIQUE",
+        "Handala Hack",
+        "Homeland Justice",
+        "Karma",
+        "Karmabelow80",
+        "BANISHED KITTEN"
+      ],
+      "classification": null,
+      "motivation": null,
+      "origin": null,
+      "profile": "https://attack.mitre.org/groups/G1055",
+      "attackId": "G1055"
+    },
+    {
+      "id": "k-C0039",
+      "type": "campaign",
+      "label": "Versa Director Zero Day Exploitation",
+      "attackId": "C0039",
+      "url": "https://attack.mitre.org/campaigns/C0039",
+      "timeframe": "2024-06-01 to 2024-08-01"
+    },
+    {
+      "id": "c-CVE-2024-39717",
+      "type": "cve",
+      "label": "CVE-2024-39717",
+      "product": "Versa Director",
+      "exploitation": "confirmed",
+      "kev": true,
+      "epss": null,
+      "cvss": 7.2
+    },
+    {
+      "id": "a-G1017",
+      "type": "actor",
+      "label": "Volt Typhoon",
+      "aliases": [
+        "BRONZE SILHOUETTE",
+        "Vanguard Panda",
+        "DEV-0391",
+        "UNC3236",
+        "Voltzite",
+        "Insidious Taurus"
+      ],
+      "classification": null,
+      "motivation": null,
+      "origin": null,
+      "profile": "https://attack.mitre.org/groups/G1017",
+      "attackId": "G1017"
+    },
+    {
+      "id": "k-C0045",
+      "type": "campaign",
+      "label": "ShadowRay",
+      "attackId": "C0045",
+      "url": "https://attack.mitre.org/campaigns/C0045",
+      "timeframe": "2023-09-01 to 2024-03-01"
+    },
+    {
+      "id": "c-CVE-2023-48022",
+      "type": "cve",
+      "label": "CVE-2023-48022",
+      "product": null,
+      "exploitation": "reported",
+      "kev": false,
+      "epss": null,
+      "cvss": null
+    },
+    {
+      "id": "t-T1068",
+      "type": "technique",
+      "label": "T1068 Exploitation for Privilege Escalation",
+      "url": "https://attack.mitre.org/techniques/T1068"
+    },
+    {
+      "id": "k-C0046",
+      "type": "campaign",
+      "label": "ArcaneDoor",
+      "attackId": "C0046",
+      "url": "https://attack.mitre.org/campaigns/C0046",
+      "timeframe": "2023-07-01 to 2024-04-01"
+    },
+    {
+      "id": "c-CVE-2024-20353",
+      "type": "cve",
+      "label": "CVE-2024-20353",
+      "product": "Cisco Adaptive Security Appliance (ASA) and Firepower Threat Defense (FTD)",
+      "exploitation": "confirmed",
+      "kev": true,
+      "epss": null,
+      "cvss": 8.6
+    },
+    {
+      "id": "k-C0048",
+      "type": "campaign",
+      "label": "Operation MidnightEclipse",
+      "attackId": "C0048",
+      "url": "https://attack.mitre.org/campaigns/C0048",
+      "timeframe": "2024-03-01 to 2024-04-01"
+    },
+    {
+      "id": "c-CVE-2024-3400",
+      "type": "cve",
+      "label": "CVE-2024-3400",
+      "product": "Palo Alto Networks PAN-OS",
+      "exploitation": "confirmed",
+      "kev": true,
+      "epss": null,
+      "cvss": 10.0
+    },
+    {
+      "id": "k-C0051",
+      "type": "campaign",
+      "label": "APT28 Nearest Neighbor Campaign",
+      "attackId": "C0051",
+      "url": "https://attack.mitre.org/campaigns/C0051",
+      "timeframe": "2022-02-01 to 2024-11-01"
+    },
+    {
+      "id": "c-CVE-2022-38028",
+      "type": "cve",
+      "label": "CVE-2022-38028",
+      "product": "Microsoft Windows",
+      "exploitation": "confirmed",
+      "kev": true,
+      "epss": null,
+      "cvss": 7.8
+    },
+    {
+      "id": "a-G0007",
+      "type": "actor",
+      "label": "APT28",
+      "aliases": [
+        "IRON TWILIGHT",
+        "SNAKEMACKEREL",
+        "Swallowtail",
+        "Group 74",
+        "Sednit",
+        "Sofacy"
+      ],
+      "classification": null,
+      "motivation": null,
+      "origin": null,
+      "profile": "https://attack.mitre.org/groups/G0007",
+      "attackId": "G0007"
+    },
+    {
+      "id": "k-C0052",
+      "type": "campaign",
+      "label": "SPACEHOP Activity",
+      "attackId": "C0052",
+      "url": "https://attack.mitre.org/campaigns/C0052",
+      "timeframe": "2019-01-01 to 2024-05-01"
+    },
+    {
+      "id": "c-CVE-2022-27518",
+      "type": "cve",
+      "label": "CVE-2022-27518",
+      "product": "Citrix Application Delivery Controller (ADC) and Gateway",
+      "exploitation": "confirmed",
+      "kev": true,
+      "epss": null,
+      "cvss": 9.8
+    },
+    {
+      "id": "a-G1023",
+      "type": "actor",
+      "label": "APT5",
+      "aliases": [
+        "Mulberry Typhoon",
+        "MANGANESE",
+        "BRONZE FLEETWOOD",
+        "Keyhole Panda",
+        "UNC2630"
+      ],
+      "classification": null,
+      "motivation": null,
+      "origin": null,
+      "profile": "https://attack.mitre.org/groups/G1023",
+      "attackId": "G1023"
+    },
+    {
+      "id": "a-G0004",
+      "type": "actor",
+      "label": "Ke3chang",
+      "aliases": [
+        "APT15",
+        "Mirage",
+        "Vixen Panda",
+        "GREF",
+        "Playful Dragon",
+        "RoyalAPT"
+      ],
+      "classification": null,
+      "motivation": null,
+      "origin": null,
+      "profile": "https://attack.mitre.org/groups/G0004",
+      "attackId": "G0004"
+    },
+    {
+      "id": "k-C0055",
+      "type": "campaign",
+      "label": "Quad7 Activity",
+      "attackId": "C0055",
+      "url": "https://attack.mitre.org/campaigns/C0055",
+      "timeframe": "2023-08-01 to 2025-08-01"
+    },
+    {
+      "id": "c-CVE-2023-50224",
+      "type": "cve",
+      "label": "CVE-2023-50224",
+      "product": "TP-Link TL-WR841N",
+      "exploitation": "confirmed",
+      "kev": true,
+      "epss": null,
+      "cvss": 6.5
+    },
+    {
+      "id": "c-CVE-2025-9377",
+      "type": "cve",
+      "label": "CVE-2025-9377",
+      "product": "TP-Link Multiple Routers",
+      "exploitation": "confirmed",
+      "kev": true,
+      "epss": null,
+      "cvss": 8.6
+    },
+    {
+      "id": "k-C0056",
+      "type": "campaign",
+      "label": "RedPenguin",
+      "attackId": "C0056",
+      "url": "https://attack.mitre.org/campaigns/C0056",
+      "timeframe": "2024-07-01 to 2025-03-01"
+    },
+    {
+      "id": "c-CVE-2025-21590",
+      "type": "cve",
+      "label": "CVE-2025-21590",
+      "product": "Juniper Junos OS",
+      "exploitation": "confirmed",
+      "kev": true,
+      "epss": null,
+      "cvss": 6.7
+    },
+    {
+      "id": "a-G1048",
+      "type": "actor",
+      "label": "UNC3886",
+      "aliases": [],
+      "classification": null,
+      "motivation": null,
+      "origin": null,
+      "profile": "https://attack.mitre.org/groups/G1048",
+      "attackId": "G1048"
+    },
+    {
+      "id": "k-C0057",
+      "type": "campaign",
+      "label": "3CX Supply Chain Attack",
+      "attackId": "C0057",
+      "url": "https://attack.mitre.org/campaigns/C0057",
+      "timeframe": "2022-11-01 to 2023-03-01"
+    },
+    {
+      "id": "c-CVE-2022-0609",
+      "type": "cve",
+      "label": "CVE-2022-0609",
+      "product": "Google Chromium Animation",
+      "exploitation": "confirmed",
+      "kev": true,
+      "epss": null,
+      "cvss": 8.8
+    },
+    {
+      "id": "a-G1049",
+      "type": "actor",
+      "label": "AppleJeus",
+      "aliases": [
+        "Gleaming Pisces",
+        "Citrine Sleet",
+        "UNC1720",
+        "UNC4736"
+      ],
+      "classification": null,
+      "motivation": null,
+      "origin": null,
+      "profile": "https://attack.mitre.org/groups/G1049",
+      "attackId": "G1049"
+    },
+    {
+      "id": "k-C0058",
+      "type": "campaign",
+      "label": "SharePoint ToolShell Exploitation",
+      "attackId": "C0058",
+      "url": "https://attack.mitre.org/campaigns/C0058",
+      "timeframe": "2025-07-01 to 2025-07-01"
+    },
+    {
+      "id": "c-CVE-2025-49704",
+      "type": "cve",
+      "label": "CVE-2025-49704",
+      "product": "Microsoft SharePoint",
+      "exploitation": "confirmed",
+      "kev": true,
+      "epss": null,
+      "cvss": 8.8
+    },
+    {
+      "id": "c-CVE-2025-49706",
+      "type": "cve",
+      "label": "CVE-2025-49706",
+      "product": "Microsoft SharePoint",
+      "exploitation": "confirmed",
+      "kev": true,
+      "epss": null,
+      "cvss": 6.5
+    },
+    {
+      "id": "c-CVE-2025-53770",
+      "type": "cve",
+      "label": "CVE-2025-53770",
+      "product": "Microsoft SharePoint",
+      "exploitation": "confirmed",
+      "kev": true,
+      "epss": null,
+      "cvss": 9.8
+    },
+    {
+      "id": "c-CVE-2025-53771",
+      "type": "cve",
+      "label": "CVE-2025-53771",
+      "product": null,
+      "exploitation": "reported",
+      "kev": false,
+      "epss": null,
+      "cvss": null
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "source": "k-C0001",
+      "target": "c-CVE-2017-11882",
+      "relation": "exploits",
+      "confidence": "high",
+      "why": "The ATT&CK record for Frankenstein names CVE-2017-11882 as exploited in the campaign.",
+      "evidence": {
+        "type": "MITRE ATT&CK",
+        "url": "https://attack.mitre.org/campaigns/C0001",
+        "reportDate": "2026-07-31",
+        "firstObserved": "2019-01-01",
+        "lastObserved": "2019-04-01",
+        "provenance": "MITRE ATT&CK Enterprise 20.1"
+      }
+    },
+    {
+      "id": "e2",
+      "source": "k-C0001",
+      "target": "t-T1203",
+      "relation": "uses",
+      "confidence": "moderate",
+      "why": "ATT&CK records Frankenstein using T1203.",
+      "evidence": {
+        "type": "MITRE ATT&CK",
+        "url": "https://blog.talosintelligence.com/2019/06/frankenstein-campaign.html",
+        "reportDate": "2026-07-31",
+        "firstObserved": "2019-01-01",
+        "lastObserved": "2019-04-01",
+        "provenance": "MITRE ATT&CK Enterprise 20.1"
+      }
+    },
+    {
+      "id": "e3",
+      "source": "k-C0016",
+      "target": "c-CVE-2010-1885",
+      "relation": "exploits",
+      "confidence": "moderate",
+      "why": "The ATT&CK record for Operation Dust Storm names CVE-2010-1885 as exploited in the campaign.",
+      "evidence": {
+        "type": "MITRE ATT&CK",
+        "url": "https://attack.mitre.org/campaigns/C0016",
+        "reportDate": "2026-07-31",
+        "firstObserved": "2010-01-01",
+        "lastObserved": "2016-02-01",
+        "provenance": "MITRE ATT&CK Enterprise 20.1"
+      }
+    },
+    {
+      "id": "e4",
+      "source": "k-C0016",
+      "target": "c-CVE-2011-0611",
+      "relation": "exploits",
+      "confidence": "high",
+      "why": "The ATT&CK record for Operation Dust Storm names CVE-2011-0611 as exploited in the campaign.",
+      "evidence": {
+        "type": "MITRE ATT&CK",
+        "url": "https://attack.mitre.org/campaigns/C0016",
+        "reportDate": "2026-07-31",
+        "firstObserved": "2010-01-01",
+        "lastObserved": "2016-02-01",
+        "provenance": "MITRE ATT&CK Enterprise 20.1"
+      }
+    },
+    {
+      "id": "e5",
+      "source": "k-C0016",
+      "target": "c-CVE-2011-1255",
+      "relation": "exploits",
+      "confidence": "moderate",
+      "why": "The ATT&CK record for Operation Dust Storm names CVE-2011-1255 as exploited in the campaign.",
+      "evidence": {
+        "type": "MITRE ATT&CK",
+        "url": "https://attack.mitre.org/campaigns/C0016",
+        "reportDate": "2026-07-31",
+        "firstObserved": "2010-01-01",
+        "lastObserved": "2016-02-01",
+        "provenance": "MITRE ATT&CK Enterprise 20.1"
+      }
+    },
+    {
+      "id": "e6",
+      "source": "k-C0016",
+      "target": "c-CVE-2012-1889",
+      "relation": "exploits",
+      "confidence": "high",
+      "why": "The ATT&CK record for Operation Dust Storm names CVE-2012-1889 as exploited in the campaign.",
+      "evidence": {
+        "type": "MITRE ATT&CK",
+        "url": "https://attack.mitre.org/campaigns/C0016",
+        "reportDate": "2026-07-31",
+        "firstObserved": "2010-01-01",
+        "lastObserved": "2016-02-01",
+        "provenance": "MITRE ATT&CK Enterprise 20.1"
+      }
+    },
+    {
+      "id": "e7",
+      "source": "k-C0016",
+      "target": "c-CVE-2014-0322",
+      "relation": "exploits",
+      "confidence": "high",
+      "why": "The ATT&CK record for Operation Dust Storm names CVE-2014-0322 as exploited in the campaign.",
+      "evidence": {
+        "type": "MITRE ATT&CK",
+        "url": "https://attack.mitre.org/campaigns/C0016",
+        "reportDate": "2026-07-31",
+        "firstObserved": "2010-01-01",
+        "lastObserved": "2016-02-01",
+        "provenance": "MITRE ATT&CK Enterprise 20.1"
+      }
+    },
+    {
+      "id": "e8",
+      "source": "k-C0016",
+      "target": "t-T1189",
+      "relation": "uses",
+      "confidence": "moderate",
+      "why": "ATT&CK records Operation Dust Storm using T1189.",
+      "evidence": {
+        "type": "MITRE ATT&CK",
+        "url": "https://s7d2.scene7.com/is/content/cylance/prod/cylance-web/en-us/resources/knowledge-center/resource-library/reports/Op_Dust_Storm_Report.pdf",
+        "reportDate": "2026-07-31",
+        "firstObserved": "2010-01-01",
+        "lastObserved": "2016-02-01",
+        "provenance": "MITRE ATT&CK Enterprise 20.1"
+      }
+    },
+    {
+      "id": "e9",
+      "source": "k-C0016",
+      "target": "t-T1203",
+      "relation": "uses",
+      "confidence": "moderate",
+      "why": "ATT&CK records Operation Dust Storm using T1203.",
+      "evidence": {
+        "type": "MITRE ATT&CK",
+        "url": "https://s7d2.scene7.com/is/content/cylance/prod/cylance-web/en-us/resources/knowledge-center/resource-library/reports/Op_Dust_Storm_Report.pdf",
+        "reportDate": "2026-07-31",
+        "firstObserved": "2010-01-01",
+        "lastObserved": "2016-02-01",
+        "provenance": "MITRE ATT&CK Enterprise 20.1"
+      }
+    },
+    {
+      "id": "e10",
+      "source": "k-C0017",
+      "target": "c-CVE-2021-44207",
+      "relation": "exploits",
+      "confidence": "high",
+      "why": "The ATT&CK record for C0017 names CVE-2021-44207 as exploited in the campaign.",
+      "evidence": {
+        "type": "MITRE ATT&CK",
+        "url": "https://attack.mitre.org/campaigns/C0017",
+        "reportDate": "2026-07-31",
+        "firstObserved": "2021-05-01",
+        "lastObserved": "2022-02-01",
+        "provenance": "MITRE ATT&CK Enterprise 20.1"
+      }
+    },
+    {
+      "id": "e11",
+      "source": "k-C0017",
+      "target": "c-CVE-2021-44228",
+      "relation": "exploits",
+      "confidence": "high",
+      "why": "The ATT&CK record for C0017 names CVE-2021-44228 as exploited in the campaign.",
+      "evidence": {
+        "type": "MITRE ATT&CK",
+        "url": "https://attack.mitre.org/campaigns/C0017",
+        "reportDate": "2026-07-31",
+        "firstObserved": "2021-05-01",
+        "lastObserved": "2022-02-01",
+        "provenance": "MITRE ATT&CK Enterprise 20.1"
+      }
+    },
+    {
+      "id": "e12",
+      "source": "k-C0017",
+      "target": "t-T1190",
+      "relation": "uses",
+      "confidence": "moderate",
+      "why": "ATT&CK records C0017 using T1190.",
+      "evidence": {
+        "type": "MITRE ATT&CK",
+        "url": "https://www.mandiant.com/resources/apt41-us-state-governments",
+        "reportDate": "2026-07-31",
+        "firstObserved": "2021-05-01",
+        "lastObserved": "2022-02-01",
+        "provenance": "MITRE ATT&CK Enterprise 20.1"
+      }
+    },
+    {
+      "id": "e13",
+      "source": "a-G0096",
+      "target": "k-C0017",
+      "relation": "attributed",
+      "confidence": "moderate",
+      "why": "MITRE ATT&CK attributes C0017 to APT41.",
+      "evidence": {
+        "type": "MITRE ATT&CK",
+        "url": "https://www.mandiant.com/resources/apt41-us-state-governments",
+        "reportDate": "2026-07-31",
+        "firstObserved": "2021-05-01",
+        "lastObserved": "2022-02-01",
+        "provenance": "MITRE ATT&CK Enterprise 20.1"
+      }
+    },
+    {
+      "id": "e14",
+      "source": "k-C0018",
+      "target": "c-CVE-2021-44228",
+      "relation": "exploits",
+      "confidence": "high",
+      "why": "The ATT&CK record for C0018 names CVE-2021-44228 as exploited in the campaign.",
+      "evidence": {
+        "type": "MITRE ATT&CK",
+        "url": "https://attack.mitre.org/campaigns/C0018",
+        "reportDate": "2026-07-31",
+        "firstObserved": "2022-02-01",
+        "lastObserved": "2022-03-01",
+        "provenance": "MITRE ATT&CK Enterprise 20.1"
+      }
+    },
+    {
+      "id": "e15",
+      "source": "k-C0018",
+      "target": "c-CVE-2021-44832",
+      "relation": "exploits",
+      "confidence": "moderate",
+      "why": "The ATT&CK record for C0018 names CVE-2021-44832 as exploited in the campaign.",
+      "evidence": {
+        "type": "MITRE ATT&CK",
+        "url": "https://attack.mitre.org/campaigns/C0018",
+        "reportDate": "2026-07-31",
+        "firstObserved": "2022-02-01",
+        "lastObserved": "2022-03-01",
+        "provenance": "MITRE ATT&CK Enterprise 20.1"
+      }
+    },
+    {
+      "id": "e16",
+      "source": "k-C0018",
+      "target": "c-CVE-2021-45046",
+      "relation": "exploits",
+      "confidence": "high",
+      "why": "The ATT&CK record for C0018 names CVE-2021-45046 as exploited in the campaign.",
+      "evidence": {
+        "type": "MITRE ATT&CK",
+        "url": "https://attack.mitre.org/campaigns/C0018",
+        "reportDate": "2026-07-31",
+        "firstObserved": "2022-02-01",
+        "lastObserved": "2022-03-01",
+        "provenance": "MITRE ATT&CK Enterprise 20.1"
+      }
+    },
+    {
+      "id": "e17",
+      "source": "k-C0018",
+      "target": "c-CVE-2021-45105",
+      "relation": "exploits",
+      "confidence": "moderate",
+      "why": "The ATT&CK record for C0018 names CVE-2021-45105 as exploited in the campaign.",
+      "evidence": {
+        "type": "MITRE ATT&CK",
+        "url": "https://attack.mitre.org/campaigns/C0018",
+        "reportDate": "2026-07-31",
+        "firstObserved": "2022-02-01",
+        "lastObserved": "2022-03-01",
+        "provenance": "MITRE ATT&CK Enterprise 20.1"
+      }
+    },
+    {
+      "id": "e18",
+      "source": "k-C0018",
+      "target": "t-T1190",
+      "relation": "uses",
+      "confidence": "moderate",
+      "why": "ATT&CK records C0018 using T1190.",
+      "evidence": {
+        "type": "MITRE ATT&CK",
+        "url": "https://blog.talosintelligence.com/avoslocker-new-arsenal/",
+        "reportDate": "2026-07-31",
+        "firstObserved": "2022-02-01",
+        "lastObserved": "2022-03-01",
+        "provenance": "MITRE ATT&CK Enterprise 20.1"
+      }
+    },
+    {
+      "id": "e19",
+      "source": "k-C0024",
+      "target": "c-CVE-2020-0688",
+      "relation": "exploits",
+      "confidence": "high",
+      "why": "The ATT&CK record for SolarWinds Compromise names CVE-2020-0688 as exploited in the campaign.",
+      "evidence": {
+        "type": "MITRE ATT&CK",
+        "url": "https://attack.mitre.org/campaigns/C0024",
+        "reportDate": "2026-07-31",
+        "firstObserved": "2019-08-01",
+        "lastObserved": "2021-01-01",
+        "provenance": "MITRE ATT&CK Enterprise 20.1"
+      }
+    },
+    {
+      "id": "e20",
+      "source": "a-G0016",
+      "target": "k-C0024",
+      "relation": "attributed",
+      "confidence": "moderate",
+      "why": "MITRE ATT&CK attributes SolarWinds Compromise to APT29.",
+      "evidence": {
+        "type": "MITRE ATT&CK",
+        "url": "https://www.mandiant.com/resources/blog/unc2452-merged-into-apt29",
+        "reportDate": "2026-07-31",
+        "firstObserved": "2019-08-01",
+        "lastObserved": "2021-01-01",
+        "provenance": "MITRE ATT&CK Enterprise 20.1"
+      }
+    },
+    {
+      "id": "e21",
+      "source": "k-C0024",
+      "target": "t-T1190",
+      "relation": "uses",
+      "confidence": "moderate",
+      "why": "ATT&CK records SolarWinds Compromise using T1190.",
+      "evidence": {
+        "type": "MITRE ATT&CK",
+        "url": "https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/",
+        "reportDate": "2026-07-31",
+        "firstObserved": "2019-08-01",
+        "lastObserved": "2021-01-01",
+        "provenance": "MITRE ATT&CK Enterprise 20.1"
+      }
+    },
+    {
+      "id": "e22",
+      "source": "k-C0024",
+      "target": "t-T1133",
+      "relation": "uses",
+      "confidence": "moderate",
+      "why": "ATT&CK records SolarWinds Compromise using T1133.",
+      "evidence": {
+        "type": "MITRE ATT&CK",
+        "url": "https://www.crowdstrike.com/blog/observations-from-the-stellarparticle-campaign/",
+        "reportDate": "2026-07-31",
+        "firstObserved": "2019-08-01",
+        "lastObserved": "2021-01-01",
+        "provenance": "MITRE ATT&CK Enterprise 20.1"
+      }
+    },
+    {
+      "id": "e23",
+      "source": "k-C0024",
+      "target": "t-T1195.002",
+      "relation": "uses",
+      "confidence": "moderate",
+      "why": "ATT&CK records SolarWinds Compromise using T1195.002.",
+      "evidence": {
+        "type": "MITRE ATT&CK",
+        "url": "https://www.fireeye.com/blog/threat-research/2020/12/evasive-attacker-leverages-solarwinds-supply-chain-compromises-with-sunburst-backdoor.html",
+        "reportDate": "2026-07-31",
+        "firstObserved": "2019-08-01",
+        "lastObserved": "2021-01-01",
+        "provenance": "MITRE ATT&CK Enterprise 20.1"
+      }
+    },
+    {
+      "id": "e24",
+      "source": "k-C0027",
+      "target": "c-CVE-2021-35464",
+      "relation": "exploits",
+      "confidence": "high",
+      "why": "The ATT&CK record for C0027 names CVE-2021-35464 as exploited in the campaign.",
+      "evidence": {
+        "type": "MITRE ATT&CK",
+        "url": "https://attack.mitre.org/campaigns/C0027",
+        "reportDate": "2026-07-31",
+        "firstObserved": "2022-06-01",
+        "lastObserved": "2022-12-01",
+        "provenance": "MITRE ATT&CK Enterprise 20.1"
+      }
+    },
+    {
+      "id": "e25",
+      "source": "k-C0027",
+      "target": "t-T1190",
+      "relation": "uses",
+      "confidence": "moderate",
+      "why": "ATT&CK records C0027 using T1190.",
+      "evidence": {
+        "type": "MITRE ATT&CK",
+        "url": "https://www.crowdstrike.com/blog/analysis-of-intrusion-campaign-targeting-telecom-and-bpo-companies/",
+        "reportDate": "2026-07-31",
+        "firstObserved": "2022-06-01",
+        "lastObserved": "2022-12-01",
+        "provenance": "MITRE ATT&CK Enterprise 20.1"
+      }
+    },
+    {
+      "id": "e26",
+      "source": "k-C0027",
+      "target": "t-T1133",
+      "relation": "uses",
+      "confidence": "moderate",
+      "why": "ATT&CK records C0027 using T1133.",
+      "evidence": {
+        "type": "MITRE ATT&CK",
+        "url": "https://www.crowdstrike.com/blog/analysis-of-intrusion-campaign-targeting-telecom-and-bpo-companies/",
+        "reportDate": "2026-07-31",
+        "firstObserved": "2022-06-01",
+        "lastObserved": "2022-12-01",
+        "provenance": "MITRE ATT&CK Enterprise 20.1"
+      }
+    },
+    {
+      "id": "e27",
+      "source": "a-G1015",
+      "target": "k-C0027",
+      "relation": "attributed",
+      "confidence": "moderate",
+      "why": "MITRE ATT&CK attributes C0027 to Scattered Spider.",
+      "evidence": {
+        "type": "MITRE ATT&CK",
+        "url": "https://www.crowdstrike.com/blog/analysis-of-intrusion-campaign-targeting-telecom-and-bpo-companies/",
+        "reportDate": "2026-07-31",
+        "firstObserved": "2022-06-01",
+        "lastObserved": "2022-12-01",
+        "provenance": "MITRE ATT&CK Enterprise 20.1"
+      }
+    },
+    {
+      "id": "e28",
+      "source": "k-C0029",
+      "target": "c-CVE-2023-46805",
+      "relation": "exploits",
+      "confidence": "high",
+      "why": "The ATT&CK record for Cutting Edge names CVE-2023-46805 as exploited in the campaign.",
+      "evidence": {
+        "type": "MITRE ATT&CK",
+        "url": "https://attack.mitre.org/campaigns/C0029",
+        "reportDate": "2026-07-31",
+        "firstObserved": "2023-12-01",
+        "lastObserved": "2024-02-01",
+        "provenance": "MITRE ATT&CK Enterprise 20.1"
+      }
+    },
+    {
+      "id": "e29",
+      "source": "k-C0029",
+      "target": "c-CVE-2024-21887",
+      "relation": "exploits",
+      "confidence": "high",
+      "why": "The ATT&CK record for Cutting Edge names CVE-2024-21887 as exploited in the campaign.",
+      "evidence": {
+        "type": "MITRE ATT&CK",
+        "url": "https://attack.mitre.org/campaigns/C0029",
+        "reportDate": "2026-07-31",
+        "firstObserved": "2023-12-01",
+        "lastObserved": "2024-02-01",
+        "provenance": "MITRE ATT&CK Enterprise 20.1"
+      }
+    },
+    {
+      "id": "e30",
+      "source": "k-C0029",
+      "target": "c-CVE-2024-21893",
+      "relation": "exploits",
+      "confidence": "high",
+      "why": "The ATT&CK record for Cutting Edge names CVE-2024-21893 as exploited in the campaign.",
+      "evidence": {
+        "type": "MITRE ATT&CK",
+        "url": "https://attack.mitre.org/campaigns/C0029",
+        "reportDate": "2026-07-31",
+        "firstObserved": "2023-12-01",
+        "lastObserved": "2024-02-01",
+        "provenance": "MITRE ATT&CK Enterprise 20.1"
+      }
+    },
+    {
+      "id": "e31",
+      "source": "k-C0029",
+      "target": "t-T1190",
+      "relation": "uses",
+      "confidence": "moderate",
+      "why": "ATT&CK records Cutting Edge using T1190.",
+      "evidence": {
+        "type": "MITRE ATT&CK",
+        "url": "https://www.volexity.com/blog/2024/01/15/ivanti-connect-secure-vpn-exploitation-goes-global/",
+        "reportDate": "2026-07-31",
+        "firstObserved": "2023-12-01",
+        "lastObserved": "2024-02-01",
+        "provenance": "MITRE ATT&CK Enterprise 20.1"
+      }
+    },
+    {
+      "id": "e32",
+      "source": "k-C0038",
+      "target": "c-CVE-2019-0604",
+      "relation": "exploits",
+      "confidence": "high",
+      "why": "The ATT&CK record for HomeLand Justice names CVE-2019-0604 as exploited in the campaign.",
+      "evidence": {
+        "type": "MITRE ATT&CK",
+        "url": "https://attack.mitre.org/campaigns/C0038",
+        "reportDate": "2026-07-31",
+        "firstObserved": "2021-05-01",
+        "lastObserved": "2022-09-01",
+        "provenance": "MITRE ATT&CK Enterprise 20.1"
+      }
+    },
+    {
+      "id": "e33",
+      "source": "a-G1055",
+      "target": "k-C0038",
+      "relation": "attributed",
+      "confidence": "moderate",
+      "why": "MITRE ATT&CK attributes HomeLand Justice to VOID MANTICORE.",
+      "evidence": {
+        "type": "MITRE ATT&CK",
+        "url": "https://attack.mitre.org/campaigns/C0038",
+        "reportDate": "2026-07-31",
+        "firstObserved": "2021-05-01",
+        "lastObserved": "2022-09-01",
+        "provenance": "MITRE ATT&CK Enterprise 20.1"
+      }
+    },
+    {
+      "id": "e34",
+      "source": "k-C0038",
+      "target": "t-T1190",
+      "relation": "uses",
+      "confidence": "moderate",
+      "why": "ATT&CK records HomeLand Justice using T1190.",
+      "evidence": {
+        "type": "MITRE ATT&CK",
+        "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-264a",
+        "reportDate": "2026-07-31",
+        "firstObserved": "2021-05-01",
+        "lastObserved": "2022-09-01",
+        "provenance": "MITRE ATT&CK Enterprise 20.1"
+      }
+    },
+    {
+      "id": "e35",
+      "source": "k-C0039",
+      "target": "c-CVE-2024-39717",
+      "relation": "exploits",
+      "confidence": "high",
+      "why": "The ATT&CK record for Versa Director Zero Day Exploitation names CVE-2024-39717 as exploited in the campaign.",
+      "evidence": {
+        "type": "MITRE ATT&CK",
+        "url": "https://attack.mitre.org/campaigns/C0039",
+        "reportDate": "2026-11-02",
+        "firstObserved": "2024-06-01",
+        "lastObserved": "2024-08-01",
+        "provenance": "MITRE ATT&CK Enterprise 20.1"
+      }
+    },
+    {
+      "id": "e36",
+      "source": "k-C0039",
+      "target": "t-T1190",
+      "relation": "uses",
+      "confidence": "moderate",
+      "why": "ATT&CK records Versa Director Zero Day Exploitation using T1190.",
+      "evidence": {
+        "type": "MITRE ATT&CK",
+        "url": "https://www.lumen.com/blog/en-us/uncovering-versa-director-zero-day-exploitation",
+        "reportDate": "2026-11-02",
+        "firstObserved": "2024-06-01",
+        "lastObserved": "2024-08-01",
+        "provenance": "MITRE ATT&CK Enterprise 20.1"
+      }
+    },
+    {
+      "id": "e37",
+      "source": "a-G1017",
+      "target": "k-C0039",
+      "relation": "attributed",
+      "confidence": "moderate",
+      "why": "MITRE ATT&CK attributes Versa Director Zero Day Exploitation to Volt Typhoon.",
+      "evidence": {
+        "type": "MITRE ATT&CK",
+        "url": "https://www.lumen.com/blog/en-us/uncovering-versa-director-zero-day-exploitation",
+        "reportDate": "2026-11-02",
+        "firstObserved": "2024-06-01",
+        "lastObserved": "2024-08-01",
+        "provenance": "MITRE ATT&CK Enterprise 20.1"
+      }
+    },
+    {
+      "id": "e38",
+      "source": "k-C0045",
+      "target": "c-CVE-2023-48022",
+      "relation": "exploits",
+      "confidence": "moderate",
+      "why": "The ATT&CK record for ShadowRay names CVE-2023-48022 as exploited in the campaign.",
+      "evidence": {
+        "type": "MITRE ATT&CK",
+        "url": "https://attack.mitre.org/campaigns/C0045",
+        "reportDate": "2026-07-31",
+        "firstObserved": "2023-09-01",
+        "lastObserved": "2024-03-01",
+        "provenance": "MITRE ATT&CK Enterprise 20.1"
+      }
+    },
+    {
+      "id": "e39",
+      "source": "k-C0045",
+      "target": "t-T1190",
+      "relation": "uses",
+      "confidence": "moderate",
+      "why": "ATT&CK records ShadowRay using T1190.",
+      "evidence": {
+        "type": "MITRE ATT&CK",
+        "url": "https://www.oligo.security/blog/shadowray-attack-ai-workloads-actively-exploited-in-the-wild",
+        "reportDate": "2026-07-31",
+        "firstObserved": "2023-09-01",
+        "lastObserved": "2024-03-01",
+        "provenance": "MITRE ATT&CK Enterprise 20.1"
+      }
+    },
+    {
+      "id": "e40",
+      "source": "k-C0045",
+      "target": "t-T1068",
+      "relation": "uses",
+      "confidence": "moderate",
+      "why": "ATT&CK records ShadowRay using T1068.",
+      "evidence": {
+        "type": "MITRE ATT&CK",
+        "url": "https://www.oligo.security/blog/shadowray-attack-ai-workloads-actively-exploited-in-the-wild",
+        "reportDate": "2026-07-31",
+        "firstObserved": "2023-09-01",
+        "lastObserved": "2024-03-01",
+        "provenance": "MITRE ATT&CK Enterprise 20.1"
+      }
+    },
+    {
+      "id": "e41",
+      "source": "k-C0046",
+      "target": "c-CVE-2024-20353",
+      "relation": "exploits",
+      "confidence": "high",
+      "why": "The ATT&CK record for ArcaneDoor names CVE-2024-20353 as exploited in the campaign.",
+      "evidence": {
+        "type": "MITRE ATT&CK",
+        "url": "https://attack.mitre.org/campaigns/C0046",
+        "reportDate": "2026-07-31",
+        "firstObserved": "2023-07-01",
+        "lastObserved": "2024-04-01",
+        "provenance": "MITRE ATT&CK Enterprise 20.1"
+      }
+    },
+    {
+      "id": "e42",
+      "source": "k-C0046",
+      "target": "t-T1190",
+      "relation": "uses",
+      "confidence": "moderate",
+      "why": "ATT&CK records ArcaneDoor using T1190.",
+      "evidence": {
+        "type": "MITRE ATT&CK",
+        "url": "https://www.cyber.gc.ca/en/news-events/cyber-activity-impacting-cisco-asa-vpns",
+        "reportDate": "2026-07-31",
+        "firstObserved": "2023-07-01",
+        "lastObserved": "2024-04-01",
+        "provenance": "MITRE ATT&CK Enterprise 20.1"
+      }
+    },
+    {
+      "id": "e43",
+      "source": "k-C0046",
+      "target": "t-T1133",
+      "relation": "uses",
+      "confidence": "moderate",
+      "why": "ATT&CK records ArcaneDoor using T1133.",
+      "evidence": {
+        "type": "MITRE ATT&CK",
+        "url": "https://www.cyber.gc.ca/en/news-events/cyber-activity-impacting-cisco-asa-vpns",
+        "reportDate": "2026-07-31",
+        "firstObserved": "2023-07-01",
+        "lastObserved": "2024-04-01",
+        "provenance": "MITRE ATT&CK Enterprise 20.1"
+      }
+    },
+    {
+      "id": "e44",
+      "source": "k-C0048",
+      "target": "c-CVE-2024-3400",
+      "relation": "exploits",
+      "confidence": "high",
+      "why": "The ATT&CK record for Operation MidnightEclipse names CVE-2024-3400 as exploited in the campaign.",
+      "evidence": {
+        "type": "MITRE ATT&CK",
+        "url": "https://attack.mitre.org/campaigns/C0048",
+        "reportDate": "2026-07-31",
+        "firstObserved": "2024-03-01",
+        "lastObserved": "2024-04-01",
+        "provenance": "MITRE ATT&CK Enterprise 20.1"
+      }
+    },
+    {
+      "id": "e45",
+      "source": "k-C0048",
+      "target": "t-T1190",
+      "relation": "uses",
+      "confidence": "moderate",
+      "why": "ATT&CK records Operation MidnightEclipse using T1190.",
+      "evidence": {
+        "type": "MITRE ATT&CK",
+        "url": "https://unit42.paloaltonetworks.com/cve-2024-3400/",
+        "reportDate": "2026-07-31",
+        "firstObserved": "2024-03-01",
+        "lastObserved": "2024-04-01",
+        "provenance": "MITRE ATT&CK Enterprise 20.1"
+      }
+    },
+    {
+      "id": "e46",
+      "source": "k-C0051",
+      "target": "c-CVE-2022-38028",
+      "relation": "exploits",
+      "confidence": "high",
+      "why": "The ATT&CK record for APT28 Nearest Neighbor Campaign names CVE-2022-38028 as exploited in the campaign.",
+      "evidence": {
+        "type": "MITRE ATT&CK",
+        "url": "https://attack.mitre.org/campaigns/C0051",
+        "reportDate": "2026-07-31",
+        "firstObserved": "2022-02-01",
+        "lastObserved": "2024-11-01",
+        "provenance": "MITRE ATT&CK Enterprise 20.1"
+      }
+    },
+    {
+      "id": "e47",
+      "source": "a-G0007",
+      "target": "k-C0051",
+      "relation": "attributed",
+      "confidence": "moderate",
+      "why": "MITRE ATT&CK attributes APT28 Nearest Neighbor Campaign to APT28.",
+      "evidence": {
+        "type": "MITRE ATT&CK",
+        "url": "https://www.volexity.com/blog/2024/11/22/the-nearest-neighbor-attack-how-a-russian-apt-weaponized-nearby-wi-fi-networks-for-covert-access/",
+        "reportDate": "2026-07-31",
+        "firstObserved": "2022-02-01",
+        "lastObserved": "2024-11-01",
+        "provenance": "MITRE ATT&CK Enterprise 20.1"
+      }
+    },
+    {
+      "id": "e48",
+      "source": "k-C0052",
+      "target": "c-CVE-2022-27518",
+      "relation": "exploits",
+      "confidence": "high",
+      "why": "The ATT&CK record for SPACEHOP Activity names CVE-2022-27518 as exploited in the campaign.",
+      "evidence": {
+        "type": "MITRE ATT&CK",
+        "url": "https://attack.mitre.org/campaigns/C0052",
+        "reportDate": "2026-07-31",
+        "firstObserved": "2019-01-01",
+        "lastObserved": "2024-05-01",
+        "provenance": "MITRE ATT&CK Enterprise 20.1"
+      }
+    },
+    {
+      "id": "e49",
+      "source": "a-G1023",
+      "target": "k-C0052",
+      "relation": "attributed",
+      "confidence": "moderate",
+      "why": "MITRE ATT&CK attributes SPACEHOP Activity to APT5.",
+      "evidence": {
+        "type": "MITRE ATT&CK",
+        "url": "https://cloud.google.com/blog/topics/threat-intelligence/china-nexus-espionage-orb-networks",
+        "reportDate": "2026-07-31",
+        "firstObserved": "2019-01-01",
+        "lastObserved": "2024-05-01",
+        "provenance": "MITRE ATT&CK Enterprise 20.1"
+      }
+    },
+    {
+      "id": "e50",
+      "source": "k-C0052",
+      "target": "t-T1190",
+      "relation": "uses",
+      "confidence": "moderate",
+      "why": "ATT&CK records SPACEHOP Activity using T1190.",
+      "evidence": {
+        "type": "MITRE ATT&CK",
+        "url": "https://media.defense.gov/2022/Dec/13/2003131586/-1/-1/0/CSA-APT5-CITRIXADC-V1.PDF",
+        "reportDate": "2026-07-31",
+        "firstObserved": "2019-01-01",
+        "lastObserved": "2024-05-01",
+        "provenance": "MITRE ATT&CK Enterprise 20.1"
+      }
+    },
+    {
+      "id": "e51",
+      "source": "a-G0004",
+      "target": "k-C0052",
+      "relation": "attributed",
+      "confidence": "moderate",
+      "why": "MITRE ATT&CK attributes SPACEHOP Activity to Ke3chang.",
+      "evidence": {
+        "type": "MITRE ATT&CK",
+        "url": "https://cloud.google.com/blog/topics/threat-intelligence/china-nexus-espionage-orb-networks",
+        "reportDate": "2026-07-31",
+        "firstObserved": "2019-01-01",
+        "lastObserved": "2024-05-01",
+        "provenance": "MITRE ATT&CK Enterprise 20.1"
+      }
+    },
+    {
+      "id": "e52",
+      "source": "k-C0055",
+      "target": "c-CVE-2023-50224",
+      "relation": "exploits",
+      "confidence": "high",
+      "why": "The ATT&CK record for Quad7 Activity names CVE-2023-50224 as exploited in the campaign.",
+      "evidence": {
+        "type": "MITRE ATT&CK",
+        "url": "https://attack.mitre.org/campaigns/C0055",
+        "reportDate": "2026-07-31",
+        "firstObserved": "2023-08-01",
+        "lastObserved": "2025-08-01",
+        "provenance": "MITRE ATT&CK Enterprise 20.1"
+      }
+    },
+    {
+      "id": "e53",
+      "source": "k-C0055",
+      "target": "c-CVE-2025-9377",
+      "relation": "exploits",
+      "confidence": "high",
+      "why": "The ATT&CK record for Quad7 Activity names CVE-2025-9377 as exploited in the campaign.",
+      "evidence": {
+        "type": "MITRE ATT&CK",
+        "url": "https://attack.mitre.org/campaigns/C0055",
+        "reportDate": "2026-07-31",
+        "firstObserved": "2023-08-01",
+        "lastObserved": "2025-08-01",
+        "provenance": "MITRE ATT&CK Enterprise 20.1"
+      }
+    },
+    {
+      "id": "e54",
+      "source": "k-C0055",
+      "target": "t-T1190",
+      "relation": "uses",
+      "confidence": "moderate",
+      "why": "ATT&CK records Quad7 Activity using T1190.",
+      "evidence": {
+        "type": "MITRE ATT&CK",
+        "url": "https://www.microsoft.com/en-us/security/blog/2024/10/31/chinese-threat-actor-storm-0940-uses-credentials-from-password-spray-attacks-from-a-covert-network/",
+        "reportDate": "2026-07-31",
+        "firstObserved": "2023-08-01",
+        "lastObserved": "2025-08-01",
+        "provenance": "MITRE ATT&CK Enterprise 20.1"
+      }
+    },
+    {
+      "id": "e55",
+      "source": "k-C0056",
+      "target": "c-CVE-2025-21590",
+      "relation": "exploits",
+      "confidence": "high",
+      "why": "The ATT&CK record for RedPenguin names CVE-2025-21590 as exploited in the campaign.",
+      "evidence": {
+        "type": "MITRE ATT&CK",
+        "url": "https://attack.mitre.org/campaigns/C0056",
+        "reportDate": "2026-07-31",
+        "firstObserved": "2024-07-01",
+        "lastObserved": "2025-03-01",
+        "provenance": "MITRE ATT&CK Enterprise 20.1"
+      }
+    },
+    {
+      "id": "e56",
+      "source": "a-G1048",
+      "target": "k-C0056",
+      "relation": "attributed",
+      "confidence": "moderate",
+      "why": "MITRE ATT&CK attributes RedPenguin to UNC3886.",
+      "evidence": {
+        "type": "MITRE ATT&CK",
+        "url": "https://cloud.google.com/blog/topics/threat-intelligence/china-nexus-espionage-targets-juniper-routers",
+        "reportDate": "2026-07-31",
+        "firstObserved": "2024-07-01",
+        "lastObserved": "2025-03-01",
+        "provenance": "MITRE ATT&CK Enterprise 20.1"
+      }
+    },
+    {
+      "id": "e57",
+      "source": "k-C0056",
+      "target": "t-T1203",
+      "relation": "uses",
+      "confidence": "moderate",
+      "why": "ATT&CK records RedPenguin using T1203.",
+      "evidence": {
+        "type": "MITRE ATT&CK",
+        "url": "https://supportportal.juniper.net/sfc/servlet.shepherd/document/download/069Dp00000FzdmIIAR?operationContext=S1",
+        "reportDate": "2026-07-31",
+        "firstObserved": "2024-07-01",
+        "lastObserved": "2025-03-01",
+        "provenance": "MITRE ATT&CK Enterprise 20.1"
+      }
+    },
+    {
+      "id": "e58",
+      "source": "k-C0057",
+      "target": "c-CVE-2022-0609",
+      "relation": "exploits",
+      "confidence": "high",
+      "why": "The ATT&CK record for 3CX Supply Chain Attack names CVE-2022-0609 as exploited in the campaign.",
+      "evidence": {
+        "type": "MITRE ATT&CK",
+        "url": "https://attack.mitre.org/campaigns/C0057",
+        "reportDate": "2026-07-31",
+        "firstObserved": "2022-11-01",
+        "lastObserved": "2023-03-01",
+        "provenance": "MITRE ATT&CK Enterprise 20.1"
+      }
+    },
+    {
+      "id": "e59",
+      "source": "k-C0057",
+      "target": "t-T1195.002",
+      "relation": "uses",
+      "confidence": "moderate",
+      "why": "ATT&CK records 3CX Supply Chain Attack using T1195.002.",
+      "evidence": {
+        "type": "MITRE ATT&CK",
+        "url": "https://cloud.google.com/blog/topics/threat-intelligence/3cx-software-supply-chain-compromise/",
+        "reportDate": "2026-07-31",
+        "firstObserved": "2022-11-01",
+        "lastObserved": "2023-03-01",
+        "provenance": "MITRE ATT&CK Enterprise 20.1"
+      }
+    },
+    {
+      "id": "e60",
+      "source": "k-C0057",
+      "target": "t-T1189",
+      "relation": "uses",
+      "confidence": "moderate",
+      "why": "ATT&CK records 3CX Supply Chain Attack using T1189.",
+      "evidence": {
+        "type": "MITRE ATT&CK",
+        "url": "https://cloud.google.com/blog/topics/threat-intelligence/3cx-software-supply-chain-compromise/",
+        "reportDate": "2026-07-31",
+        "firstObserved": "2022-11-01",
+        "lastObserved": "2023-03-01",
+        "provenance": "MITRE ATT&CK Enterprise 20.1"
+      }
+    },
+    {
+      "id": "e61",
+      "source": "a-G1049",
+      "target": "k-C0057",
+      "relation": "attributed",
+      "confidence": "moderate",
+      "why": "MITRE ATT&CK attributes 3CX Supply Chain Attack to AppleJeus.",
+      "evidence": {
+        "type": "MITRE ATT&CK",
+        "url": "https://cloud.google.com/blog/topics/threat-intelligence/3cx-software-supply-chain-compromise/",
+        "reportDate": "2026-07-31",
+        "firstObserved": "2022-11-01",
+        "lastObserved": "2023-03-01",
+        "provenance": "MITRE ATT&CK Enterprise 20.1"
+      }
+    },
+    {
+      "id": "e62",
+      "source": "k-C0057",
+      "target": "t-T1203",
+      "relation": "uses",
+      "confidence": "moderate",
+      "why": "ATT&CK records 3CX Supply Chain Attack using T1203.",
+      "evidence": {
+        "type": "MITRE ATT&CK",
+        "url": "https://cloud.google.com/blog/topics/threat-intelligence/3cx-software-supply-chain-compromise/",
+        "reportDate": "2026-07-31",
+        "firstObserved": "2022-11-01",
+        "lastObserved": "2023-03-01",
+        "provenance": "MITRE ATT&CK Enterprise 20.1"
+      }
+    },
+    {
+      "id": "e63",
+      "source": "k-C0058",
+      "target": "c-CVE-2025-49704",
+      "relation": "exploits",
+      "confidence": "high",
+      "why": "The ATT&CK record for SharePoint ToolShell Exploitation names CVE-2025-49704 as exploited in the campaign.",
+      "evidence": {
+        "type": "MITRE ATT&CK",
+        "url": "https://attack.mitre.org/campaigns/C0058",
+        "reportDate": "2026-07-31",
+        "firstObserved": "2025-07-01",
+        "lastObserved": "2025-07-01",
+        "provenance": "MITRE ATT&CK Enterprise 20.1"
+      }
+    },
+    {
+      "id": "e64",
+      "source": "k-C0058",
+      "target": "c-CVE-2025-49706",
+      "relation": "exploits",
+      "confidence": "high",
+      "why": "The ATT&CK record for SharePoint ToolShell Exploitation names CVE-2025-49706 as exploited in the campaign.",
+      "evidence": {
+        "type": "MITRE ATT&CK",
+        "url": "https://attack.mitre.org/campaigns/C0058",
+        "reportDate": "2026-07-31",
+        "firstObserved": "2025-07-01",
+        "lastObserved": "2025-07-01",
+        "provenance": "MITRE ATT&CK Enterprise 20.1"
+      }
+    },
+    {
+      "id": "e65",
+      "source": "k-C0058",
+      "target": "c-CVE-2025-53770",
+      "relation": "exploits",
+      "confidence": "high",
+      "why": "The ATT&CK record for SharePoint ToolShell Exploitation names CVE-2025-53770 as exploited in the campaign.",
+      "evidence": {
+        "type": "MITRE ATT&CK",
+        "url": "https://attack.mitre.org/campaigns/C0058",
+        "reportDate": "2026-07-31",
+        "firstObserved": "2025-07-01",
+        "lastObserved": "2025-07-01",
+        "provenance": "MITRE ATT&CK Enterprise 20.1"
+      }
+    },
+    {
+      "id": "e66",
+      "source": "k-C0058",
+      "target": "c-CVE-2025-53771",
+      "relation": "exploits",
+      "confidence": "moderate",
+      "why": "The ATT&CK record for SharePoint ToolShell Exploitation names CVE-2025-53771 as exploited in the campaign.",
+      "evidence": {
+        "type": "MITRE ATT&CK",
+        "url": "https://attack.mitre.org/campaigns/C0058",
+        "reportDate": "2026-07-31",
+        "firstObserved": "2025-07-01",
+        "lastObserved": "2025-07-01",
+        "provenance": "MITRE ATT&CK Enterprise 20.1"
+      }
+    },
+    {
+      "id": "e67",
+      "source": "k-C0058",
+      "target": "t-T1190",
+      "relation": "uses",
+      "confidence": "moderate",
+      "why": "ATT&CK records SharePoint ToolShell Exploitation using T1190.",
+      "evidence": {
+        "type": "MITRE ATT&CK",
+        "url": "https://www.trendmicro.com/en_us/research/25/g/cve-2025-53770-and-cve-2025-53771-sharepoint-attacks.html",
+        "reportDate": "2026-07-31",
+        "firstObserved": "2025-07-01",
+        "lastObserved": "2025-07-01",
+        "provenance": "MITRE ATT&CK Enterprise 20.1"
+      }
+    }
+  ]
+}
