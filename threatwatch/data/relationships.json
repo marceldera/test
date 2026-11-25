@@ -3,7 +3,7 @@
   "dataset": {
     "status": "verified",
     "label": "Relationships from MITRE ATT&CK Enterprise 20.1: groups, their campaigns, the CVEs those campaigns exploited and the exploitation techniques they used. Each link cites its ATT&CK record.",
-    "updatedAt": "2026-11-24T20:54:46Z",
+    "updatedAt": "2026-11-25T20:15:36Z",
     "source": "https://attack.mitre.org/campaigns/"
   },
   "nodes": [

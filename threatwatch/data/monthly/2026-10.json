@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "month": "2026-10",
   "complete": true,
-  "updatedAt": "2026-11-24T20:54:41Z",
+  "updatedAt": "2026-11-25T20:15:25Z",
   "metrics": [
     {
       "id": "kev_added",
@@ -11,7 +11,7 @@
       "rule": "CVE entries whose CISA dateAdded falls in the month.",
       "source": "CISA KEV",
       "window": "2026-10-01 to 2026-10-31 (dateAdded, ET calendar)",
-      "updatedAt": "2026-11-24T20:54:41Z"
+      "updatedAt": "2026-11-25T20:15:25Z"
     },
     {
       "id": "vendors",
@@ -20,7 +20,7 @@
       "rule": "Unique vendorProject values among the month’s KEV entries.",
       "source": "CISA KEV",
       "window": "2026-10-01 to 2026-10-31 (dateAdded, ET calendar)",
-      "updatedAt": "2026-11-24T20:54:41Z"
+      "updatedAt": "2026-11-25T20:15:25Z"
     },
     {
       "id": "ransomware",
@@ -29,16 +29,16 @@
       "rule": "Month’s KEV entries where CISA sets knownRansomwareCampaignUse = Known.",
       "source": "CISA KEV",
       "window": "2026-10-01 to 2026-10-31 (dateAdded, ET calendar)",
-      "updatedAt": "2026-11-24T20:54:41Z"
+      "updatedAt": "2026-11-25T20:15:25Z"
     },
     {
       "id": "epss90",
       "label": "EPSS ≥ 90th percentile",
-      "value": 29,
-      "rule": "Month’s KEV entries with EPSS percentile ≥ 0.90 (scores as of 2026-11-24).",
+      "value": 21,
+      "rule": "Month’s KEV entries with EPSS percentile ≥ 0.90 (scores as of 2026-11-25).",
       "source": "FIRST EPSS",
       "window": "2026-10-01 to 2026-10-31 (dateAdded, ET calendar)",
-      "updatedAt": "2026-11-24T20:54:41Z"
+      "updatedAt": "2026-11-25T20:15:25Z"
     }
   ],
   "notice": "These are CISA KEV catalog counts, not a count of total cyber incidents.",
@@ -50,7 +50,7 @@
       "product": "FortiMail",
       "concern": "Fortinet FortiMail Path Traversal Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.91752,
+      "epssPercentile": 0.74042,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -61,7 +61,7 @@
       "product": "Zammad",
       "concern": "Zammad GmbH Zammad Session Fixation Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.98919,
+      "epssPercentile": 0.97287,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -72,7 +72,7 @@
       "product": "Zammad",
       "concern": "Zammad GmbH Zammad Improper Privilege Management Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.95957,
+      "epssPercentile": 0.94545,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -83,7 +83,7 @@
       "product": "NetScaler",
       "concern": "Citrix NetScaler Improper Restriction of Operations within the Bounds of a Memory Buffer Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.96068,
+      "epssPercentile": 0.68033,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -94,7 +94,7 @@
       "product": "ProFTPD",
       "concern": "ProFTPD Improper Access Control Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.99944,
+      "epssPercentile": 0.99969,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -105,7 +105,7 @@
       "product": "BIND",
       "concern": "ISC BIND Data Processing Errors Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.99946,
+      "epssPercentile": 0.9997,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -116,7 +116,7 @@
       "product": "Struts",
       "concern": "Apache Struts Command Injection Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.99887,
+      "epssPercentile": 0.99932,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -127,7 +127,7 @@
       "product": "Docs",
       "concern": "ONLYOFFICE Docs Server Path Traversal Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.99767,
+      "epssPercentile": 0.99851,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -138,7 +138,7 @@
       "product": "Strapi",
       "concern": "Strapi Cleartext Storage of Sensitive Information Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.90942,
+      "epssPercentile": 0.90898,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -149,7 +149,7 @@
       "product": "Connect Secure",
       "concern": "Ivanti Connect Secure Authentication Bypass by Spoofing Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.99835,
+      "epssPercentile": 0.98354,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -160,7 +160,7 @@
       "product": "Windows",
       "concern": "Microsoft Windows Command Injection Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.95623,
+      "epssPercentile": 0.60851,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -171,7 +171,7 @@
       "product": "PAN-OS",
       "concern": "Palo Alto Networks PAN-OS Code Injection Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.82452,
+      "epssPercentile": 0.81035,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -182,7 +182,7 @@
       "product": "AhsayCBS",
       "concern": "Ahsay AhsayCBS Improper Authentication Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.99705,
+      "epssPercentile": 0.96057,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -193,7 +193,7 @@
       "product": "AhsayCBS",
       "concern": "Ahsay AhsayCBS Command Injection Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.99651,
+      "epssPercentile": 0.99269,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -204,7 +204,7 @@
       "product": "Secure Email Gateway",
       "concern": "Cisco Secure Email Gateway Relative Path Traversal Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.9314,
+      "epssPercentile": 0.86777,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -215,7 +215,7 @@
       "product": "Multiple Products",
       "concern": "Atlassian Multiple Products Files or Directories Accessible to External Parties Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.99807,
+      "epssPercentile": 0.9186,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -226,7 +226,7 @@
       "product": "Multiple Products",
       "concern": "Fortinet Multiple Products Path Traversal Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.72959,
+      "epssPercentile": 0.54551,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -237,7 +237,7 @@
       "product": "Remote Support",
       "concern": "BeyondTrust Remote Support Authentication Bypass by Spoofing Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.99099,
+      "epssPercentile": 0.88696,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -248,7 +248,7 @@
       "product": "SiteGuard Server Edition",
       "concern": "EG Secure Solutions SiteGuard Server Edition OS Command Injection Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.8519,
+      "epssPercentile": 0.76317,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -259,7 +259,7 @@
       "product": "Software Center",
       "concern": "Siemens Software Center Uncontrolled Search Path Element Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.62531,
+      "epssPercentile": 0.20817,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -270,7 +270,7 @@
       "product": "Media Server",
       "concern": "Plex Media Server Server-Side Request Forgery (SSRF) Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.96763,
+      "epssPercentile": 0.93502,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -281,7 +281,7 @@
       "product": "Media Server",
       "concern": "Plex Media Server Improper Neutralization of Encoded URI Schemes in a Web Page Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.96331,
+      "epssPercentile": 0.93809,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -292,7 +292,7 @@
       "product": "Media Server",
       "concern": "Plex Media Server Server-Side Request Forgery (SSRF) Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.95899,
+      "epssPercentile": 0.93502,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -303,7 +303,7 @@
       "product": "Media Server",
       "concern": "Plex Media Server External Control of File Name or Path Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.97455,
+      "epssPercentile": 0.97342,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -314,7 +314,7 @@
       "product": "Collabora Online – Built-in CODE Server",
       "concern": "Collabora Online – Built-in CODE Server OS Command Injection Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.99539,
+      "epssPercentile": 0.98745,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -325,7 +325,7 @@
       "product": "VeloCloud Orchestrator",
       "concern": "Arista VeloCloud Orchestrator SQL Injection Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.94668,
+      "epssPercentile": 0.59345,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -336,7 +336,7 @@
       "product": "PHP",
       "concern": "PHP Memory Corruption Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.99999,
+      "epssPercentile": 0.99081,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -347,7 +347,7 @@
       "product": "PHP",
       "concern": "PHP Stale Internal Request-State Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 1.0,
+      "epssPercentile": 0.98073,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -358,7 +358,7 @@
       "product": "Brotli",
       "concern": "Google Brotli Unchecked Return Value Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.99983,
+      "epssPercentile": 0.98749,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -369,7 +369,7 @@
       "product": "Commerce and Magento",
       "concern": "Adobe Commerce and Magento Unrestricted Upload of File with Dangerous Type Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.99648,
+      "epssPercentile": 0.95447,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -380,7 +380,7 @@
       "product": "VMware ESX",
       "concern": "Broadcom VMWare ESX Insufficient Logging Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.60419,
+      "epssPercentile": 0.32491,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -391,7 +391,7 @@
       "product": "Kernel",
       "concern": "Linux Kernel Missing Initialization of a Variable Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.97151,
+      "epssPercentile": 0.8793,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -402,7 +402,7 @@
       "product": "Secure Firewall ASA Software and Cisco Secure FTD Software",
       "concern": "Cisco Secure Firewall ASA Software and Cisco Secure FTD Software Unchecked Return Value to NULL Pointer Dereference Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.9514,
+      "epssPercentile": 0.61421,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -413,7 +413,7 @@
       "product": "Community Edition and Enterprise Edition",
       "concern": "GitLab Community Edition and Enterprise Edition Integer Overflow or Wraparound Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.99494,
+      "epssPercentile": 0.96789,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -424,7 +424,7 @@
       "product": "Connect Secure",
       "concern": "Ivanti Connect Secure Missing Authentication for Critical Function Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.57468,
+      "epssPercentile": 0.40218,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -435,7 +435,7 @@
       "product": "Connect Secure",
       "concern": "Ivanti Connect Secure Generation of Predictable Numbers or Identifiers Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.63249,
+      "epssPercentile": 0.54943,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     }
@@ -460,7 +460,7 @@
         "blocks": [
           {
             "type": "p",
-            "text": "CISA added **36 vulnerabilities** to the KEV catalog in October 2026, spanning 26 vendors. The highest-likelihood additions by EPSS were **CVE-2026-109618 (PHP Group PHP)** and **CVE-2026-109619 (PHP Group PHP)**. Outside KEV, 4 further CVEs were reported exploited or tracked as zero-days by Google Project Zero, ENISA EUVD or VulnCheck."
+            "text": "CISA added **36 vulnerabilities** to the KEV catalog in October 2026, spanning 26 vendors. The highest-likelihood additions by EPSS were **CVE-2015-5477 (ISC BIND)** and **CVE-2015-3306 (ProFTPD)**. Outside KEV, 4 further CVEs were reported exploited or tracked as zero-days by Google Project Zero, ENISA EUVD or VulnCheck."
           },
           {
             "type": "table",
@@ -483,7 +483,7 @@
               ],
               [
                 "EPSS ≥ 90th percentile",
-                "29 of the month's KEV entries"
+                "21 of the month's KEV entries"
               ],
               [
                 "Exploited or zero-day outside KEV",
@@ -505,7 +505,7 @@
           },
           {
             "type": "p",
-            "text": "**Top five actions:** (1) Isolate or patch exposed PHP Group PHP (CVE-2026-109618); (2) isolate or patch exposed PHP Group PHP (CVE-2026-109619); (3) isolate or patch exposed Google Brotli (CVE-2026-111497); (4) isolate or patch exposed ISC BIND (CVE-2015-5477); (5) examine PHP Group PHP hosts for unexpected child processes and outbound connections."
+            "text": "**Top five actions:** (1) Isolate or patch exposed ISC BIND (CVE-2015-5477); (2) isolate or patch exposed ProFTPD (CVE-2015-3306); (3) isolate or patch exposed Apache Struts (CVE-2016-3081); (4) isolate or patch exposed ONLYOFFICE Docs (CVE-2021-3199); (5) examine ISC BIND hosts for unusual requests and changes."
           }
         ]
       },
@@ -525,24 +525,6 @@
             ],
             "rows": [
               [
-                "CVE-2026-109618",
-                "PHP Group PHP",
-                "use-after-free",
-                "CISA KEV 2026-10-26; ENISA EUVD; EPSS 99th pct; public exploit"
-              ],
-              [
-                "CVE-2026-109619",
-                "PHP Group PHP",
-                "use-after-free",
-                "CISA KEV 2026-10-26; ENISA EUVD; EPSS 99th pct; public exploit"
-              ],
-              [
-                "CVE-2026-111497",
-                "Google Brotli",
-                "out-of-bounds write",
-                "CISA KEV 2026-10-27; ENISA EUVD; EPSS 99th pct; public exploit"
-              ],
-              [
                 "CVE-2015-5477",
                 "ISC BIND",
                 "vulnerability",
@@ -561,42 +543,60 @@
                 "CISA KEV 2026-10-08; ENISA EUVD; EPSS 99th pct; public exploit"
               ],
               [
-                "CVE-2026-104935",
-                "Ivanti Connect Secure",
-                "authentication bypass",
-                "CISA KEV 2026-10-13; ENISA EUVD; EPSS 99th pct; public exploit"
+                "CVE-2021-3199",
+                "ONLYOFFICE Docs",
+                "path traversal",
+                "CISA KEV 2026-10-08; ENISA EUVD; EPSS 99th pct; public exploit"
               ],
               [
-                "CVE-2026-21589",
-                "Atlassian Multiple Products",
-                "vulnerability",
-                "CISA KEV 2026-10-15; ENISA EUVD; EPSS 99th pct; public exploit"
+                "CVE-2026-105134",
+                "AhsayCBS",
+                "command injection",
+                "CISA KEV 2026-10-14; ENISA EUVD; EPSS 99th pct; public exploit"
+              ],
+              [
+                "CVE-2026-109618",
+                "PHP Group PHP",
+                "use-after-free",
+                "CISA KEV 2026-10-26; ENISA EUVD; EPSS 99th pct; public exploit"
+              ],
+              [
+                "CVE-2026-111497",
+                "Google Brotli",
+                "out-of-bounds write",
+                "CISA KEV 2026-10-27; ENISA EUVD; EPSS 98th pct; public exploit"
+              ],
+              [
+                "CVE-2026-110447",
+                "Collabora Online – Built-in CODE Server",
+                "OS command injection",
+                "CISA KEV 2026-10-23; ENISA EUVD; EPSS 98th pct; public exploit"
               ],
               [
                 "CVE-2026-40477",
                 "Thymeleaf",
                 "template injection",
-                "ENISA EUVD; EPSS 59th pct; public exploit"
+                "ENISA EUVD; EPSS 61st pct; public exploit"
               ],
               [
                 "CVE-2026-40478",
                 "Thymeleaf",
                 "template injection",
-                "ENISA EUVD; EPSS 66th pct; no public exploit identified"
+                "ENISA EUVD; EPSS 69th pct; no public exploit identified"
               ]
             ]
           },
           {
             "type": "p",
-            "text": "**CVE-2026-109618 - PHP Group PHP use-after-free (CVSS 9.2).** PHP uses longjmp() for out-of-memory (OOM) errors to exit the current context and abort handling of the request. Some contexts may not properly account for this scenario and leave request memory in an uninitialized state before performing an allocation. The subsequent request cleanup procedure may read or branch on this memory. Fixed version (first unaffected release per NVD ranges): php 8.2.35, php 8.3.36, php 8.4.27, php 8.5.12. Attack path: network-accessible; no authentication required; no user interaction required."
+            "text": "**CVE-2015-5477 - ISC BIND ISC BIND Data Processing Errors Vulnerability (CVSS 7.5).** named in ISC BIND 9.x before 9.9.7-P2 and 9.10.x before 9.10.2-P3 allows remote attackers to cause a denial of service (REQUIRE assertion failure and daemon exit) via TKEY queries. Fixed version (first unaffected release per NVD ranges): junos 12.1, junos 13.2. Attack path: network-accessible; no authentication required; no user interaction required."
           },
           {
             "type": "p",
-            "text": "**CVE-2026-109619 - PHP Group PHP use-after-free (CVSS 9.2).** PHP has various global state that temporarily points into request memory. In some scenarios, global state may not be correctly reset, or may be repopulated after being reset. The global state may then refer to request memory even after it has been freed. Subsequent requests may read or branch on this stale state before it is fully initialized. Fixed version (first unaffected release per NVD ranges): php 8.2.35, php 8.3.36, php 8.4.27, php 8.5.12. Attack path: network-accessible; no authentication required; no user interaction required."
+            "text": "**CVE-2015-3306 - ProFTPD improper access control (CVSS 10).** The mod_copy module in ProFTPD 1.3.5 allows remote attackers to read and write to arbitrary files via the site cpfr and site cpto commands. Fixed package release: none identified in tracked sources. Attack path: network-accessible; no authentication required; no user interaction required."
           },
           {
             "type": "p",
-            "text": "**CVE-2026-111497 - Google Brotli out-of-bounds write (CVSS 9.2).** A buffer overflow vulnerability in the Brotli decoder (c/dec/decode.c) in Google Brotli versions 1.0.3 through 1.2.0 on all platforms allows a remote unauthenticated attacker to corrupt adjacent decoder state memory, disclose sensitive memory contents, cause a denial of service, or potentially execute arbitrary code using a crafted Brotli-compressed stream. Fixed version (first unaffected release per NVD ranges): brotli 1.0.10, brotli 1.1.1, brotli 1.2.1, node.js 22.23.4. Attack path: network-accessible; no authentication required; no user interaction required."
+            "text": "**CVE-2016-3081 - Apache Struts command injection (CVSS 8.1).** Apache Struts 2.3.19 to 2.3.20.2, 2.3.21 to 2.3.24.1, and 2.3.25 to 2.3.28, when Dynamic Method Invocation is enabled, allow remote attackers to execute arbitrary code via method: prefix, related to chained expressions. Fixed package release: not mapped in NVD ranges; 2 vendor patch or advisory references available. Attack path: network-accessible; no authentication required; no user interaction required."
           }
         ]
       },
@@ -725,31 +725,31 @@
             "rows": [
               [
                 "Healthcare / medical imaging",
-                "Possible Apache Struts, Atlassian Multiple Products and CVE-2026-41901 exposure; targeting unknown"
+                "Possible AhsayCBS, Apache Struts and CVE-2026-41901 exposure; targeting unknown"
               ],
               [
                 "Education / research",
-                "Possible Apache Struts, Atlassian Multiple Products and CVE-2026-41901 exposure; targeting unknown"
+                "Possible AhsayCBS, Apache Struts and CVE-2026-41901 exposure; targeting unknown"
               ],
               [
                 "Technology / software",
-                "Potential Apache Struts, Atlassian Multiple Products, CVE-2026-41901 and Google Brotli dependency exposure"
+                "Potential AhsayCBS, Apache Struts, CVE-2026-41901 and Collabora Online – Built-in CODE Server dependency exposure"
               ],
               [
                 "Government / defense",
-                "Possible Apache Struts, Atlassian Multiple Products and CVE-2026-41901 exposure; no new sector-specific targeting confirmed"
+                "Possible AhsayCBS, Apache Struts and CVE-2026-41901 exposure; no new sector-specific targeting confirmed"
               ],
               [
                 "Financial services",
-                "Possible Apache Struts, Atlassian Multiple Products and CVE-2026-41901 exposure; targeting unknown"
+                "Possible AhsayCBS, Apache Struts and CVE-2026-41901 exposure; targeting unknown"
               ],
               [
                 "Manufacturing / energy / utilities",
-                "Ivanti Connect Secure relevant to this sector; confirmed sector targeting not established"
+                "Possible AhsayCBS, Apache Struts and CVE-2026-41901 exposure; targeting unknown"
               ],
               [
                 "Retail / transportation",
-                "Possible Apache Struts, Atlassian Multiple Products and CVE-2026-41901 exposure; targeting unknown"
+                "Possible AhsayCBS, Apache Struts and CVE-2026-41901 exposure; targeting unknown"
               ]
             ]
           },
@@ -1052,24 +1052,20 @@
     ],
     "references": [
       {
-        "label": "PHP Group PHP vendor advisory",
-        "url": "https://github.com/php/php-src/security/advisories/GHSA-w8hw-w9fx-j79w"
-      },
-      {
-        "label": "PHP Group PHP vendor advisory",
-        "url": "https://github.com/php/php-src/security/advisories/GHSA-6wmf-4rv5-p3rp"
-      },
-      {
-        "label": "Google Brotli vendor advisory",
-        "url": "https://github.com/dotnet/announcements/issues/494"
-      },
-      {
         "label": "ISC BIND vendor advisory",
         "url": "https://kb.isc.org/article/AA-01272"
       },
       {
         "label": "Apache Struts vendor advisory",
         "url": "https://struts.apache.org/docs/s2-032.html"
+      },
+      {
+        "label": "AhsayCBS vendor advisory",
+        "url": "https://www.ahsay.com/en/company/announcements/patch-cve-105133-105134-update"
+      },
+      {
+        "label": "PHP Group PHP vendor advisory",
+        "url": "https://github.com/php/php-src/security/advisories/GHSA-w8hw-w9fx-j79w"
       },
       {
         "label": "CISA KEV catalog",
@@ -1085,6 +1081,6 @@
       }
     ],
     "footer": "Enterprise Cyber Threat Intelligence | October 2026",
-    "generatedAt": "2026-11-24T20:57:11Z"
+    "generatedAt": "2026-11-25T20:19:42Z"
   }
 }

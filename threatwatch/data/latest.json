@@ -1,121 +1,192 @@
 {
   "schemaVersion": 1,
-  "edition": "2026-11-24",
-  "publishedAt": "2026-11-24T20:54:41Z",
+  "edition": "2026-11-25",
+  "publishedAt": "2026-11-25T20:15:25Z",
   "window": {
-    "start": "2026-11-24T00:08:38Z",
-    "end": "2026-11-24T20:54:41Z",
+    "start": "2026-11-24T20:54:41Z",
+    "end": "2026-11-25T20:15:25Z",
     "note": "KEV additions not present in the previous edition’s catalog snapshot."
   },
   "executive": {
-    "summary": "CISA added 3 vulnerabilities to the Known Exploited Vulnerabilities catalog since the previous edition, affecting Idunno, Optimizely, Drupal. 1 meet the emergency criteria (confirmed exploitation plus critical severity or unauthenticated network exposure).",
+    "summary": "CISA added 10 vulnerabilities to the Known Exploited Vulnerabilities catalog since the previous edition, affecting Mitel, Danfoss, Vates. 8 meet the emergency criteria (confirmed exploitation plus critical severity or unauthenticated network exposure).",
     "summarySource": "generated",
     "counts": {
-      "kevAdded": 3,
+      "kevAdded": 10,
       "kevRansomware": 0,
-      "emergency": 1,
+      "emergency": 8,
       "urgent": 2,
-      "criticalHigh": 2,
-      "materialChanges": 4,
-      "kevTotal": 1795
+      "criticalHigh": 7,
+      "materialChanges": 88,
+      "kevTotal": 1805
     },
     "developments": [
-      "CVE-2026-131914 — Idunno AntiCsrf: Idunno AntiCsrf Deserialization of Untrusted Data Vulnerability (emergency)",
-      "CVE-2026-132224 — Optimizely Web Experimentation: Optimizely Web Experimentation External Control of Critical State Data Vulnerability (urgent)",
-      "CVE-2026-132165 — Drupal Core: Drupal Core Remote Code Execution Vulnerability (urgent)",
-      "CVE-2026-133968: EPSS rose from 0.04 to 0.50 (score date 2026-11-24).",
-      "CVE-2026-129448: EPSS rose from 0.05 to 0.40 (score date 2026-11-24)."
+      "CVE-2026-133323 — Mitel MiCollab: Mitel MiCollab OS Command Injection Vulnerability (emergency)",
+      "CVE-2026-133469 — Vates Xen Orchestra: Vates Xen Orchestra Improper Validation of Specified Type of Input Vulnerability (emergency)",
+      "CVE-2026-103406 — Hewlett Packard Enterprise (HPE) Juniper Session Smart Conductor and Session Smart Router: Hewlett Packard Enterprise (HPE) Juniper Session Smart Conductor and Session Smart Router OS Command Injection Vulnerability (emergency)",
+      "CVE-2026-34486: EPSS fell from 0.99 to 0.07 (score date 2026-11-25).",
+      "CVE-2026-33824: EPSS fell from 0.77 to 0.02 (score date 2026-11-25)."
     ]
   },
   "kevLatest": {
-    "date": "2026-11-24",
-    "dueDate": "2026-11-27",
-    "catalogVersion": "2026.11.24",
-    "released": "2026-11-24T17:47:46.199Z",
+    "date": "2026-11-25",
+    "dueDate": "2026-11-28",
+    "catalogVersion": "2026.11.25",
+    "released": "2026-11-25T19:48:12.4344Z",
     "items": [
       {
-        "cve": "CVE-2026-131914",
-        "vendor": "Idunno",
-        "product": "AntiCsrf"
+        "cve": "CVE-2023-25914",
+        "vendor": "Danfoss",
+        "product": "AK-SM 800A Series"
       },
       {
-        "cve": "CVE-2026-132165",
-        "vendor": "Drupal",
-        "product": "Core"
+        "cve": "CVE-2023-25915",
+        "vendor": "Danfoss",
+        "product": "AK-SM 800A Series"
       },
       {
-        "cve": "CVE-2026-132224",
-        "vendor": "Optimizely",
-        "product": "Web Experimentation"
+        "cve": "CVE-2025-41450",
+        "vendor": "Danfoss",
+        "product": "AK-SM 800A Series"
+      },
+      {
+        "cve": "CVE-2026-103406",
+        "vendor": "Hewlett Packard Enterprise (HPE)",
+        "product": "Juniper Session Smart Conductor and Session Smart Router"
+      },
+      {
+        "cve": "CVE-2026-133275",
+        "vendor": "Mitel",
+        "product": "MiCollab"
+      },
+      {
+        "cve": "CVE-2026-133303",
+        "vendor": "Mitel",
+        "product": "MiCollab"
+      },
+      {
+        "cve": "CVE-2026-133311",
+        "vendor": "Mitel",
+        "product": "MiCollab"
+      },
+      {
+        "cve": "CVE-2026-133323",
+        "vendor": "Mitel",
+        "product": "MiCollab"
+      },
+      {
+        "cve": "CVE-2026-133324",
+        "vendor": "Mitel",
+        "product": "MiCollab"
+      },
+      {
+        "cve": "CVE-2026-133469",
+        "vendor": "Vates",
+        "product": "Xen Orchestra"
       }
     ]
   },
   "actions": [
     {
       "rank": 1,
-      "cve": "CVE-2026-131914",
+      "cve": "CVE-2026-133323",
       "priority": "emergency",
-      "title": "Patch or mitigate Idunno AntiCsrf (CVE-2026-131914)",
-      "why": "Exploitation confirmed by CISA KEV; CVSS 4.0 9.3; network-reachable without authentication.",
+      "title": "Patch or mitigate Mitel MiCollab (CVE-2026-133323)",
+      "why": "Exploitation confirmed by CISA KEV; CVSS 3.1 10.0; network-reachable without authentication.",
       "steps": [
         "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-        "Identify internet-facing and internal Idunno AntiCsrf instances.",
+        "Identify internet-facing and internal Mitel MiCollab instances.",
         "Confirm fixed versions in the vendor advisory before closing the action.",
-        "CISA due date for federal agencies: 2026-11-27."
+        "CISA due date for federal agencies: 2026-11-28."
       ],
       "evidence": [
         "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
-        "https://nvd.nist.gov/vuln/detail/CVE-2026-131914",
+        "https://nvd.nist.gov/vuln/detail/CVE-2026-133323",
         "https://www.first.org/epss/"
       ]
     },
     {
       "rank": 2,
-      "cve": "CVE-2026-132224",
-      "priority": "urgent",
-      "title": "Patch or mitigate Optimizely Web Experimentation (CVE-2026-132224)",
-      "why": "Exploitation confirmed by CISA KEV; CVSS 4.0 7.1.",
+      "cve": "CVE-2026-133469",
+      "priority": "emergency",
+      "title": "Patch or mitigate Vates Xen Orchestra (CVE-2026-133469)",
+      "why": "Exploitation confirmed by CISA KEV; CVSS 3.1 9.8; network-reachable without authentication.",
       "steps": [
         "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-        "Identify internet-facing and internal Optimizely Web Experimentation instances.",
+        "Identify internet-facing and internal Vates Xen Orchestra instances.",
         "Confirm fixed versions in the vendor advisory before closing the action.",
-        "CISA due date for federal agencies: 2026-11-27."
+        "CISA due date for federal agencies: 2026-11-28."
       ],
       "evidence": [
         "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
-        "https://nvd.nist.gov/vuln/detail/CVE-2026-132224",
+        "https://nvd.nist.gov/vuln/detail/CVE-2026-133469",
         "https://www.first.org/epss/"
       ]
     },
     {
       "rank": 3,
-      "cve": "CVE-2026-132165",
-      "priority": "urgent",
-      "title": "Patch or mitigate Drupal Core (CVE-2026-132165)",
-      "why": "Exploitation confirmed by CISA KEV; CVSS not yet available from NVD.",
+      "cve": "CVE-2026-103406",
+      "priority": "emergency",
+      "title": "Patch or mitigate Hewlett Packard Enterprise (HPE) Juniper Session Smart Conductor and Session Smart Router (CVE-2026-103406)",
+      "why": "Exploitation confirmed by CISA KEV; CVSS 3.1 9.8; network-reachable without authentication.",
       "steps": [
         "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-        "Identify internet-facing and internal Drupal Core instances.",
+        "Identify internet-facing and internal Hewlett Packard Enterprise (HPE) Juniper Session Smart Conductor and Session Smart Router instances.",
         "Confirm fixed versions in the vendor advisory before closing the action.",
-        "CISA due date for federal agencies: 2026-11-27."
+        "CISA due date for federal agencies: 2026-11-28."
       ],
       "evidence": [
         "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
-        "https://www.drupal.org/sa-core-2026-017",
-        "https://nvd.nist.gov/vuln/detail/CVE-2026-132165"
+        "https://nvd.nist.gov/vuln/detail/CVE-2026-103406",
+        "https://www.first.org/epss/"
+      ]
+    },
+    {
+      "rank": 4,
+      "cve": "CVE-2026-133303",
+      "priority": "emergency",
+      "title": "Patch or mitigate Mitel MiCollab (CVE-2026-133303)",
+      "why": "Exploitation confirmed by CISA KEV; CVSS 3.1 9.0; network-reachable without authentication.",
+      "steps": [
+        "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+        "Identify internet-facing and internal Mitel MiCollab instances.",
+        "Confirm fixed versions in the vendor advisory before closing the action.",
+        "CISA due date for federal agencies: 2026-11-28."
+      ],
+      "evidence": [
+        "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+        "https://nvd.nist.gov/vuln/detail/CVE-2026-133303",
+        "https://www.first.org/epss/"
+      ]
+    },
+    {
+      "rank": 5,
+      "cve": "CVE-2025-41450",
+      "priority": "emergency",
+      "title": "Patch or mitigate Danfoss AK-SM 800A Series (CVE-2025-41450)",
+      "why": "Exploitation confirmed by CISA KEV; CVSS 3.1 8.2; network-reachable without authentication.",
+      "steps": [
+        "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+        "Identify internet-facing and internal Danfoss AK-SM 800A Series instances.",
+        "Confirm fixed versions in the vendor advisory before closing the action.",
+        "CISA due date for federal agencies: 2026-12-09."
+      ],
+      "evidence": [
+        "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+        "https://nvd.nist.gov/vuln/detail/CVE-2025-41450",
+        "https://www.first.org/epss/"
       ]
     }
   ],
   "cves": [
     {
-      "cve": "CVE-2026-131914",
-      "vendor": "Idunno",
-      "product": "AntiCsrf",
-      "name": "Idunno AntiCsrf Deserialization of Untrusted Data Vulnerability",
-      "description": "Idunno AntiCsrf contains a deserialization of untrusted data vulnerability that allows an unauthenticated remote attacker to execute arbitrary code via object injection. The impacted product(s) could be end-of-life (EoL) and/or end-of-service (EoS). Users are advised to discontinue use and/or transition to a supported version.",
+      "cve": "CVE-2026-133323",
+      "vendor": "Mitel",
+      "product": "MiCollab",
+      "name": "Mitel MiCollab OS Command Injection Vulnerability",
+      "description": "Mitel MiCollab contains an improper neutralization of special elements used in an OS command (OS command injection) vulnerability in its Audio, Web, and Video Conferencing (AWV) component that could allow an unauthenticated attacker to execute arbitrary system commands.",
       "kev": {
-        "dateAdded": "2026-11-24",
-        "dueDate": "2026-11-27",
+        "dateAdded": "2026-11-25",
+        "dueDate": "2026-11-28",
         "ransomware": "unknown",
         "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
       },
@@ -125,92 +196,28 @@
       },
       "exploitMaturity": null,
       "cvss": {
-        "version": "4.0",
-        "score": 9.3,
+        "version": "3.1",
+        "score": 10.0,
         "severity": "CRITICAL",
-        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:A/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:H/A:H",
         "attackVector": "NETWORK",
         "privileges": "NONE",
-        "userInteraction": "NONE",
-        "source": "mandiant-cve@google.com"
-      },
-      "epss": {
-        "score": 0.00614,
-        "percentile": 0.50152,
-        "date": "2026-11-24"
-      },
-      "affectedVersions": null,
-      "fixedVersions": null,
-      "cwes": [
-        "CWE-502"
-      ],
-      "nvdStatus": "Analyzed",
-      "priority": "emergency",
-      "rationale": "Exploitation confirmed by CISA KEV; CVSS 4.0 9.3; network-reachable without authentication.",
-      "sources": [
-        {
-          "label": "CISA KEV",
-          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
-        },
-        {
-          "label": "NVD",
-          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-131914"
-        },
-        {
-          "label": "FIRST EPSS",
-          "url": "https://www.first.org/epss/"
-        },
-        {
-          "label": "Vendor advisory",
-          "url": "https://github.com/mandiant/Vulnerability-Disclosures/blob/master/2026/MNDT-2026-0048.md"
-        }
-      ],
-      "unknown": [
-        "Affected versions",
-        "Fixed versions",
-        "Exploit maturity"
-      ]
-    },
-    {
-      "cve": "CVE-2026-132224",
-      "vendor": "Optimizely",
-      "product": "Web Experimentation",
-      "name": "Optimizely Web Experimentation External Control of Critical State Data Vulnerability",
-      "description": "Optimizely Web Experimentation contains an external control of critical state data vulnerability in its account signup flow that could allow an attacker to impersonate existing customer users and modify Project JavaScript. Successful exploitation can result in attacker-controlled JavaScript being distributed through Optimizely-hosted assets and executed in browsers visiting affected customer websites.",
-      "kev": {
-        "dateAdded": "2026-11-24",
-        "dueDate": "2026-11-27",
-        "ransomware": "unknown",
-        "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
-      },
-      "exploitation": {
-        "status": "Confirmed exploited",
-        "basis": "Listed in CISA KEV (dateAdded is the listing date, not first exploitation)."
-      },
-      "exploitMaturity": null,
-      "cvss": {
-        "version": "4.0",
-        "score": 7.1,
-        "severity": "HIGH",
-        "vector": "CVSS:4.0/AV:N/AC:H/AT:N/PR:L/UI:N/VC:N/VI:H/VA:N/SC:H/SI:H/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
-        "attackVector": "NETWORK",
-        "privileges": "LOW",
         "userInteraction": "NONE",
         "source": "cve@mitre.org"
       },
       "epss": {
-        "score": 0.00411,
-        "percentile": 0.35845,
-        "date": "2026-11-24"
+        "score": 0.02546,
+        "percentile": 0.85725,
+        "date": "2026-11-25"
       },
       "affectedVersions": null,
       "fixedVersions": null,
       "cwes": [
-        "CWE-642"
+        "CWE-78"
       ],
-      "nvdStatus": "Analyzed",
-      "priority": "urgent",
-      "rationale": "Exploitation confirmed by CISA KEV; CVSS 4.0 7.1.",
+      "nvdStatus": "Undergoing Analysis",
+      "priority": "emergency",
+      "rationale": "Exploitation confirmed by CISA KEV; CVSS 3.1 10.0; network-reachable without authentication.",
       "sources": [
         {
           "label": "CISA KEV",
@@ -218,23 +225,15 @@
         },
         {
           "label": "NVD",
-          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-132224"
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-133323"
         },
         {
           "label": "FIRST EPSS",
           "url": "https://www.first.org/epss/"
         },
         {
-          "label": "Vendor advisory",
-          "url": "https://github.com/brave/adblock-resources/pull/355"
-        },
-        {
-          "label": "Vendor advisory",
-          "url": "https://pages.optimizely.com/rs/947-RKE-048/images/Security%20Incident%20Report%20-%20Optimizely%20Web%20Experimentation%20-%20Nov%2017%202026.pdf"
-        },
-        {
-          "label": "Vendor advisory",
-          "url": "https://status.optimizely.com/incidents/ftw0fh9wx43z"
+          "label": "KEV reference",
+          "url": "https://www.mitel.com/support/security-advisories/mitel-product-security-advisory-misa-2026-0012"
         }
       ],
       "unknown": [
@@ -244,14 +243,14 @@
       ]
     },
     {
-      "cve": "CVE-2026-132165",
-      "vendor": "Drupal",
-      "product": "Core",
-      "name": "Drupal Core Remote Code Execution Vulnerability",
-      "description": "Drupal Core contains a not failing securely vulnerability that could allow an unauthenticated attacker to take over an existing site or execute arbitrary code via the Drupal installer. Under specific conditions, the attacker can use install.php to attempt to reinstall Drupal on the site.",
+      "cve": "CVE-2026-133469",
+      "vendor": "Vates",
+      "product": "Xen Orchestra",
+      "name": "Vates Xen Orchestra Improper Validation of Specified Type of Input Vulnerability",
+      "description": "Vates Xen Orchestra contains an improper validation of specified type of input vulnerability that could allow an unauthenticated attacker to bypass authentication and perform actions with administrative privileges via a specially crafted authentication token containing an empty JSON object.",
       "kev": {
-        "dateAdded": "2026-11-24",
-        "dueDate": "2026-11-27",
+        "dateAdded": "2026-11-25",
+        "dueDate": "2026-11-28",
         "ransomware": "unknown",
         "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
       },
@@ -260,33 +259,561 @@
         "basis": "Listed in CISA KEV (dateAdded is the listing date, not first exploitation)."
       },
       "exploitMaturity": null,
-      "cvss": null,
-      "epss": null,
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "severity": "CRITICAL",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+        "attackVector": "NETWORK",
+        "privileges": "NONE",
+        "userInteraction": "NONE",
+        "source": "security-advisories@github.com"
+      },
+      "epss": {
+        "score": 0.01101,
+        "percentile": 0.65258,
+        "date": "2026-11-25"
+      },
+      "affectedVersions": null,
+      "fixedVersions": null,
+      "cwes": [
+        "CWE-287",
+        "CWE-1287"
+      ],
+      "nvdStatus": "Undergoing Analysis",
+      "priority": "emergency",
+      "rationale": "Exploitation confirmed by CISA KEV; CVSS 3.1 9.8; network-reachable without authentication.",
+      "sources": [
+        {
+          "label": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "label": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-133469"
+        },
+        {
+          "label": "FIRST EPSS",
+          "url": "https://www.first.org/epss/"
+        }
+      ],
+      "unknown": [
+        "Affected versions",
+        "Fixed versions",
+        "Exploit maturity"
+      ]
+    },
+    {
+      "cve": "CVE-2026-103406",
+      "vendor": "Hewlett Packard Enterprise (HPE)",
+      "product": "Juniper Session Smart Conductor and Session Smart Router",
+      "name": "Hewlett Packard Enterprise (HPE) Juniper Session Smart Conductor and Session Smart Router OS Command Injection Vulnerability",
+      "description": "Hewlett Packard Enterprise (HPE) Juniper Session Smart Conductor and Session Smart Router contain an OS command injection vulnerability that could allow a remote attacker to execute arbitrary commands as root via a specially crafted salt minion ID.",
+      "kev": {
+        "dateAdded": "2026-11-25",
+        "dueDate": "2026-11-28",
+        "ransomware": "unknown",
+        "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "exploitation": {
+        "status": "Confirmed exploited",
+        "basis": "Listed in CISA KEV (dateAdded is the listing date, not first exploitation)."
+      },
+      "exploitMaturity": null,
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "severity": "CRITICAL",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+        "attackVector": "NETWORK",
+        "privileges": "NONE",
+        "userInteraction": "NONE",
+        "source": "sirt@juniper.net"
+      },
+      "epss": {
+        "score": 0.0086,
+        "percentile": 0.56019,
+        "date": "2026-11-25"
+      },
+      "affectedVersions": null,
+      "fixedVersions": null,
+      "cwes": [
+        "CWE-78"
+      ],
+      "nvdStatus": "Analyzed",
+      "priority": "emergency",
+      "rationale": "Exploitation confirmed by CISA KEV; CVSS 3.1 9.8; network-reachable without authentication.",
+      "sources": [
+        {
+          "label": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "label": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-103406"
+        },
+        {
+          "label": "FIRST EPSS",
+          "url": "https://www.first.org/epss/"
+        },
+        {
+          "label": "Vendor advisory",
+          "url": "https://supportportal.juniper.net/JSA112183"
+        },
+        {
+          "label": "KEV reference",
+          "url": "https://supportportal.juniper.net/s/article/2026-10-On-Demand-Security-Bulletin-Session-Smart-Router-and-Session-Smart-Conductor-Multiple-internally-discovered-vulnerabilities-resolved"
+        }
+      ],
+      "unknown": [
+        "Affected versions",
+        "Fixed versions",
+        "Exploit maturity"
+      ]
+    },
+    {
+      "cve": "CVE-2026-133303",
+      "vendor": "Mitel",
+      "product": "MiCollab",
+      "name": "Mitel MiCollab XML Injection Vulnerability",
+      "description": "Mitel MiCollab contains an XML injection vulnerability in its Audio, Web, and Video Conferencing (AWV) component that could allow an unauthenticated attacker to execute arbitrary commands using pre-staged malicious content.",
+      "kev": {
+        "dateAdded": "2026-11-25",
+        "dueDate": "2026-11-28",
+        "ransomware": "unknown",
+        "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "exploitation": {
+        "status": "Confirmed exploited",
+        "basis": "Listed in CISA KEV (dateAdded is the listing date, not first exploitation)."
+      },
+      "exploitMaturity": null,
+      "cvss": {
+        "version": "3.1",
+        "score": 9.0,
+        "severity": "CRITICAL",
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H",
+        "attackVector": "NETWORK",
+        "privileges": "NONE",
+        "userInteraction": "NONE",
+        "source": "cve@mitre.org"
+      },
+      "epss": {
+        "score": 0.00515,
+        "percentile": 0.37111,
+        "date": "2026-11-25"
+      },
+      "affectedVersions": null,
+      "fixedVersions": null,
+      "cwes": [
+        "CWE-91"
+      ],
+      "nvdStatus": "Undergoing Analysis",
+      "priority": "emergency",
+      "rationale": "Exploitation confirmed by CISA KEV; CVSS 3.1 9.0; network-reachable without authentication.",
+      "sources": [
+        {
+          "label": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "label": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-133303"
+        },
+        {
+          "label": "FIRST EPSS",
+          "url": "https://www.first.org/epss/"
+        },
+        {
+          "label": "KEV reference",
+          "url": "https://www.mitel.com/support/security-advisories/mitel-product-security-advisory-misa-2026-0012"
+        }
+      ],
+      "unknown": [
+        "Affected versions",
+        "Fixed versions",
+        "Exploit maturity"
+      ]
+    },
+    {
+      "cve": "CVE-2025-41450",
+      "vendor": "Danfoss",
+      "product": "AK-SM 800A Series",
+      "name": "Danfoss AK-SM 800A Series Improper Authentication Vulnerability",
+      "description": "Danfoss AK-SM 800A Series contains an improper authentication vulnerability that could allow an attacker to generate a web report exposing sensitive information, including internal IP addresses, usernames, and store names.",
+      "kev": {
+        "dateAdded": "2026-11-25",
+        "dueDate": "2026-12-09",
+        "ransomware": "unknown",
+        "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "exploitation": {
+        "status": "Confirmed exploited",
+        "basis": "Listed in CISA KEV (dateAdded is the listing date, not first exploitation)."
+      },
+      "exploitMaturity": null,
+      "cvss": {
+        "version": "3.1",
+        "score": 8.2,
+        "severity": "HIGH",
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:L/A:H",
+        "attackVector": "NETWORK",
+        "privileges": "NONE",
+        "userInteraction": "REQUIRED",
+        "source": "d7ff35af-cf88-454c-bab9-af60602f10f8"
+      },
+      "epss": {
+        "score": 0.00513,
+        "percentile": 0.37031,
+        "date": "2026-11-25"
+      },
+      "affectedVersions": null,
+      "fixedVersions": null,
+      "cwes": [
+        "CWE-305"
+      ],
+      "nvdStatus": "Undergoing Analysis",
+      "priority": "emergency",
+      "rationale": "Exploitation confirmed by CISA KEV; CVSS 3.1 8.2; network-reachable without authentication.",
+      "sources": [
+        {
+          "label": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "label": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-41450"
+        },
+        {
+          "label": "FIRST EPSS",
+          "url": "https://www.first.org/epss/"
+        },
+        {
+          "label": "KEV reference",
+          "url": "https://www.danfoss.com/en/service-and-support/coordinated-vulnerability-disclosure/danfoss-security-advisories/dsa-2025-03-01"
+        }
+      ],
+      "unknown": [
+        "Affected versions",
+        "Fixed versions",
+        "Exploit maturity"
+      ]
+    },
+    {
+      "cve": "CVE-2026-133324",
+      "vendor": "Mitel",
+      "product": "MiCollab",
+      "name": "Mitel MiCollab Not Failing Securely Vulnerability",
+      "description": "Mitel MiCollab contains a not failing securely vulnerability in the Audio, Web and Video Conferencing (AWV) component that could allow an unauthenticated attacker to bypass authentication controls and perform unauthorized actions.",
+      "kev": {
+        "dateAdded": "2026-11-25",
+        "dueDate": "2026-11-28",
+        "ransomware": "unknown",
+        "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "exploitation": {
+        "status": "Confirmed exploited",
+        "basis": "Listed in CISA KEV (dateAdded is the listing date, not first exploitation)."
+      },
+      "exploitMaturity": null,
+      "cvss": {
+        "version": "3.1",
+        "score": 5.3,
+        "severity": "MEDIUM",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+        "attackVector": "NETWORK",
+        "privileges": "NONE",
+        "userInteraction": "NONE",
+        "source": "cve@mitre.org"
+      },
+      "epss": {
+        "score": 0.00414,
+        "percentile": 0.273,
+        "date": "2026-11-25"
+      },
       "affectedVersions": null,
       "fixedVersions": null,
       "cwes": [
         "CWE-636"
       ],
-      "nvdStatus": null,
-      "priority": "urgent",
-      "rationale": "Exploitation confirmed by CISA KEV; CVSS not yet available from NVD.",
+      "nvdStatus": "Undergoing Analysis",
+      "priority": "emergency",
+      "rationale": "Exploitation confirmed by CISA KEV; CVSS 3.1 5.3; network-reachable without authentication.",
       "sources": [
         {
           "label": "CISA KEV",
           "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
         },
         {
-          "label": "KEV reference",
-          "url": "https://www.drupal.org/sa-core-2026-017"
+          "label": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-133324"
+        },
+        {
+          "label": "FIRST EPSS",
+          "url": "https://www.first.org/epss/"
         },
         {
           "label": "KEV reference",
-          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-132165"
+          "url": "https://www.mitel.com/support/security-advisories/mitel-product-security-advisory-misa-2026-0012"
         }
       ],
       "unknown": [
-        "CVSS",
-        "EPSS",
+        "Affected versions",
+        "Fixed versions",
+        "Exploit maturity"
+      ]
+    },
+    {
+      "cve": "CVE-2026-133311",
+      "vendor": "Mitel",
+      "product": "MiCollab",
+      "name": "Mitel MiCollab Weak Authentication Vulnerability",
+      "description": "Mitel MiCollab contains a weak authentication vulnerability in the Audio, Web and Video Conferencing (AWV) component that could allow an unauthenticated attacker to access sensitive information using a specific system-generated random identifier or pre-staged content.",
+      "kev": {
+        "dateAdded": "2026-11-25",
+        "dueDate": "2026-12-09",
+        "ransomware": "unknown",
+        "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "exploitation": {
+        "status": "Confirmed exploited",
+        "basis": "Listed in CISA KEV (dateAdded is the listing date, not first exploitation)."
+      },
+      "exploitMaturity": null,
+      "cvss": {
+        "version": "3.1",
+        "score": 5.9,
+        "severity": "MEDIUM",
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+        "attackVector": "NETWORK",
+        "privileges": "NONE",
+        "userInteraction": "NONE",
+        "source": "cve@mitre.org"
+      },
+      "epss": {
+        "score": 0.00396,
+        "percentile": 0.2537,
+        "date": "2026-11-25"
+      },
+      "affectedVersions": null,
+      "fixedVersions": null,
+      "cwes": [
+        "CWE-1390"
+      ],
+      "nvdStatus": "Undergoing Analysis",
+      "priority": "emergency",
+      "rationale": "Exploitation confirmed by CISA KEV; CVSS 3.1 5.9; network-reachable without authentication.",
+      "sources": [
+        {
+          "label": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "label": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-133311"
+        },
+        {
+          "label": "FIRST EPSS",
+          "url": "https://www.first.org/epss/"
+        },
+        {
+          "label": "KEV reference",
+          "url": "https://www.mitel.com/support/security-advisories/mitel-product-security-advisory-misa-2026-0012"
+        }
+      ],
+      "unknown": [
+        "Affected versions",
+        "Fixed versions",
+        "Exploit maturity"
+      ]
+    },
+    {
+      "cve": "CVE-2026-133275",
+      "vendor": "Mitel",
+      "product": "MiCollab",
+      "name": "Mitel MiCollab Unrestricted Upload of File with Dangerous Type Vulnerability",
+      "description": "Mitel MiCollab contains an unrestricted upload of file with dangerous type vulnerability in the Audio, Web and Video Conferencing (AWV) component due to insufficient file type validation that could allow an unauthenticated attacker to upload arbitrary files.",
+      "kev": {
+        "dateAdded": "2026-11-25",
+        "dueDate": "2026-11-28",
+        "ransomware": "unknown",
+        "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "exploitation": {
+        "status": "Confirmed exploited",
+        "basis": "Listed in CISA KEV (dateAdded is the listing date, not first exploitation)."
+      },
+      "exploitMaturity": null,
+      "cvss": {
+        "version": "3.1",
+        "score": 5.3,
+        "severity": "MEDIUM",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+        "attackVector": "NETWORK",
+        "privileges": "NONE",
+        "userInteraction": "NONE",
+        "source": "cve@mitre.org"
+      },
+      "epss": {
+        "score": 0.00315,
+        "percentile": 0.1686,
+        "date": "2026-11-25"
+      },
+      "affectedVersions": null,
+      "fixedVersions": null,
+      "cwes": [
+        "CWE-434"
+      ],
+      "nvdStatus": "Undergoing Analysis",
+      "priority": "emergency",
+      "rationale": "Exploitation confirmed by CISA KEV; CVSS 3.1 5.3; network-reachable without authentication.",
+      "sources": [
+        {
+          "label": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "label": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-133275"
+        },
+        {
+          "label": "FIRST EPSS",
+          "url": "https://www.first.org/epss/"
+        },
+        {
+          "label": "KEV reference",
+          "url": "https://www.mitel.com/support/security-advisories/mitel-product-security-advisory-misa-2026-0012"
+        }
+      ],
+      "unknown": [
+        "Affected versions",
+        "Fixed versions",
+        "Exploit maturity"
+      ]
+    },
+    {
+      "cve": "CVE-2023-25915",
+      "vendor": "Danfoss",
+      "product": "AK-SM 800A Series",
+      "name": "Danfoss AK-SM 800A Series Improper Input Validation Vulnerability",
+      "description": "Danfoss AK-SM 800A Series contains an improper input validation vulnerability that could allow a remote attacker to run arbitrary commands on the affected system.",
+      "kev": {
+        "dateAdded": "2026-11-25",
+        "dueDate": "2026-11-28",
+        "ransomware": "unknown",
+        "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "exploitation": {
+        "status": "Confirmed exploited",
+        "basis": "Listed in CISA KEV (dateAdded is the listing date, not first exploitation)."
+      },
+      "exploitMaturity": null,
+      "cvss": {
+        "version": "3.1",
+        "score": 8.8,
+        "severity": "HIGH",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+        "attackVector": "NETWORK",
+        "privileges": "LOW",
+        "userInteraction": "NONE",
+        "source": "nvd@nist.gov"
+      },
+      "epss": {
+        "score": 0.01431,
+        "percentile": 0.73235,
+        "date": "2026-11-25"
+      },
+      "affectedVersions": null,
+      "fixedVersions": null,
+      "cwes": [
+        "CWE-20"
+      ],
+      "nvdStatus": "Analyzed",
+      "priority": "urgent",
+      "rationale": "Exploitation confirmed by CISA KEV; CVSS 3.1 8.8.",
+      "sources": [
+        {
+          "label": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "label": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-25915"
+        },
+        {
+          "label": "FIRST EPSS",
+          "url": "https://www.first.org/epss/"
+        },
+        {
+          "label": "KEV reference",
+          "url": "https://www.danfoss.com/en/service-and-support/coordinated-vulnerability-disclosure/danfoss-security-advisories/dsa-2023-08-01"
+        }
+      ],
+      "unknown": [
+        "Affected versions",
+        "Fixed versions",
+        "Exploit maturity"
+      ]
+    },
+    {
+      "cve": "CVE-2023-25914",
+      "vendor": "Danfoss",
+      "product": "AK-SM 800A Series",
+      "name": "Danfoss AK-SM 800A Series Path Traversal Vulnerability",
+      "description": "Danfoss AK-SM 800A Series contains a path traversal vulnerability that could allow an attacker to access and read underlying server system files via the XML interface.",
+      "kev": {
+        "dateAdded": "2026-11-25",
+        "dueDate": "2026-11-28",
+        "ransomware": "unknown",
+        "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "exploitation": {
+        "status": "Confirmed exploited",
+        "basis": "Listed in CISA KEV (dateAdded is the listing date, not first exploitation)."
+      },
+      "exploitMaturity": null,
+      "cvss": {
+        "version": "3.1",
+        "score": 8.8,
+        "severity": "HIGH",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+        "attackVector": "NETWORK",
+        "privileges": "LOW",
+        "userInteraction": "NONE",
+        "source": "nvd@nist.gov"
+      },
+      "epss": {
+        "score": 0.01078,
+        "percentile": 0.64585,
+        "date": "2026-11-25"
+      },
+      "affectedVersions": null,
+      "fixedVersions": null,
+      "cwes": [
+        "CWE-22"
+      ],
+      "nvdStatus": "Analyzed",
+      "priority": "urgent",
+      "rationale": "Exploitation confirmed by CISA KEV; CVSS 3.1 8.8.",
+      "sources": [
+        {
+          "label": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "label": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-25914"
+        },
+        {
+          "label": "FIRST EPSS",
+          "url": "https://www.first.org/epss/"
+        },
+        {
+          "label": "KEV reference",
+          "url": "https://www.danfoss.com/en/service-and-support/coordinated-vulnerability-disclosure/danfoss-security-advisories/dsa-2023-08-01"
+        }
+      ],
+      "unknown": [
         "Affected versions",
         "Fixed versions",
         "Exploit maturity"
@@ -312,11 +839,18 @@
   "remediation": {
     "groups": {
       "emergency": [
-        "CVE-2026-131914"
+        "CVE-2026-133323",
+        "CVE-2026-133469",
+        "CVE-2026-103406",
+        "CVE-2026-133303",
+        "CVE-2025-41450",
+        "CVE-2026-133324",
+        "CVE-2026-133311",
+        "CVE-2026-133275"
       ],
       "urgent": [
-        "CVE-2026-132224",
-        "CVE-2026-132165"
+        "CVE-2023-25915",
+        "CVE-2023-25914"
       ],
       "routine": [],
       "monitor": []
@@ -330,61 +864,516 @@
   },
   "changes": [
     {
-      "cve": "CVE-2026-131914",
+      "cve": "CVE-2026-133323",
       "type": "kev_added",
-      "detail": "Added to CISA KEV on 2026-11-24."
+      "detail": "Added to CISA KEV on 2026-11-25."
     },
     {
-      "cve": "CVE-2026-132224",
+      "cve": "CVE-2026-133469",
       "type": "kev_added",
-      "detail": "Added to CISA KEV on 2026-11-24."
+      "detail": "Added to CISA KEV on 2026-11-25."
     },
     {
-      "cve": "CVE-2026-132165",
+      "cve": "CVE-2026-103406",
       "type": "kev_added",
-      "detail": "Added to CISA KEV on 2026-11-24."
+      "detail": "Added to CISA KEV on 2026-11-25."
+    },
+    {
+      "cve": "CVE-2026-133303",
+      "type": "kev_added",
+      "detail": "Added to CISA KEV on 2026-11-25."
+    },
+    {
+      "cve": "CVE-2025-41450",
+      "type": "kev_added",
+      "detail": "Added to CISA KEV on 2026-11-25."
+    },
+    {
+      "cve": "CVE-2026-133324",
+      "type": "kev_added",
+      "detail": "Added to CISA KEV on 2026-11-25."
+    },
+    {
+      "cve": "CVE-2026-133311",
+      "type": "kev_added",
+      "detail": "Added to CISA KEV on 2026-11-25."
+    },
+    {
+      "cve": "CVE-2026-133275",
+      "type": "kev_added",
+      "detail": "Added to CISA KEV on 2026-11-25."
+    },
+    {
+      "cve": "CVE-2023-25915",
+      "type": "kev_added",
+      "detail": "Added to CISA KEV on 2026-11-25."
+    },
+    {
+      "cve": "CVE-2023-25914",
+      "type": "kev_added",
+      "detail": "Added to CISA KEV on 2026-11-25."
+    },
+    {
+      "cve": "CVE-2026-34486",
+      "type": "epss_change",
+      "detail": "EPSS fell from 0.99 to 0.07 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-33824",
+      "type": "epss_change",
+      "detail": "EPSS fell from 0.77 to 0.02 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-28318",
+      "type": "epss_change",
+      "detail": "EPSS fell from 0.87 to 0.19 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-25089",
+      "type": "epss_change",
+      "detail": "EPSS fell from 0.76 to 0.04 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-21962",
+      "type": "epss_change",
+      "detail": "EPSS fell from 0.73 to 0.01 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-21589",
+      "type": "epss_change",
+      "detail": "EPSS fell from 0.91 to 0.04 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-20316",
+      "type": "epss_change",
+      "detail": "EPSS fell from 0.35 to 0.01 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-20262",
+      "type": "epss_change",
+      "detail": "EPSS fell from 0.29 to 0.01 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-20253",
+      "type": "epss_change",
+      "detail": "EPSS fell from 0.97 to 0.15 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-20245",
+      "type": "epss_change",
+      "detail": "EPSS fell from 0.25 to 0.01 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-20230",
+      "type": "epss_change",
+      "detail": "EPSS fell from 0.89 to 0.01 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-20079",
+      "type": "epss_change",
+      "detail": "EPSS fell from 0.89 to 0.12 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-19490",
+      "type": "epss_change",
+      "detail": "EPSS fell from 0.33 to 0.01 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-18556",
+      "type": "epss_change",
+      "detail": "EPSS fell from 0.44 to 0.08 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-16232",
+      "type": "epss_change",
+      "detail": "EPSS rose from 0.04 to 0.80 (score date 2026-11-25)."
     },
     {
       "cve": "CVE-2026-133968",
       "type": "epss_change",
-      "detail": "EPSS rose from 0.04 to 0.50 (score date 2026-11-24)."
+      "detail": "EPSS fell from 0.50 to 0.27 (score date 2026-11-25)."
     },
     {
       "cve": "CVE-2026-129448",
       "type": "epss_change",
-      "detail": "EPSS rose from 0.05 to 0.40 (score date 2026-11-24)."
+      "detail": "EPSS fell from 0.40 to 0.24 (score date 2026-11-25)."
     },
     {
-      "cve": "CVE-2026-59310",
+      "cve": "CVE-2026-12569",
       "type": "epss_change",
-      "detail": "EPSS rose from 0.62 to 0.88 (score date 2026-11-24)."
+      "detail": "EPSS fell from 0.46 to 0.02 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-124194",
+      "type": "epss_change",
+      "detail": "EPSS fell from 0.25 to 0.01 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-123158",
+      "type": "epss_change",
+      "detail": "EPSS fell from 0.96 to 0.14 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-116606",
+      "type": "epss_change",
+      "detail": "EPSS fell from 0.75 to 0.14 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-111560",
+      "type": "epss_change",
+      "detail": "EPSS fell from 0.64 to 0.11 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-111497",
+      "type": "epss_change",
+      "detail": "EPSS fell from 1.00 to 0.33 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-110447",
+      "type": "epss_change",
+      "detail": "EPSS fell from 0.76 to 0.33 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-109619",
+      "type": "epss_change",
+      "detail": "EPSS fell from 1.00 to 0.21 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-109618",
+      "type": "epss_change",
+      "detail": "EPSS fell from 1.00 to 0.45 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-10520",
+      "type": "epss_change",
+      "detail": "EPSS fell from 1.00 to 0.61 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-105134",
+      "type": "epss_change",
+      "detail": "EPSS fell from 0.82 to 0.55 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-105133",
+      "type": "epss_change",
+      "detail": "EPSS fell from 0.84 to 0.09 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-104935",
+      "type": "epss_change",
+      "detail": "EPSS fell from 0.93 to 0.25 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-102895",
+      "type": "epss_change",
+      "detail": "EPSS fell from 0.19 to 0.09 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-102764",
+      "type": "epss_change",
+      "detail": "EPSS fell from 0.58 to 0.03 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-102489",
+      "type": "epss_change",
+      "detail": "EPSS fell from 0.50 to 0.15 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-0770",
+      "type": "epss_change",
+      "detail": "EPSS fell from 0.63 to 0.41 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2025-68686",
+      "type": "epss_change",
+      "detail": "EPSS fell from 0.29 to 0.01 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2025-67038",
+      "type": "epss_change",
+      "detail": "EPSS fell from 0.21 to 0.03 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2025-62593",
+      "type": "epss_change",
+      "detail": "EPSS fell from 0.60 to 0.03 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2024-21182",
+      "type": "epss_change",
+      "detail": "EPSS fell from 0.74 to 0.04 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2023-49105",
+      "type": "epss_change",
+      "detail": "EPSS fell from 0.47 to 0.36 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2021-27137",
+      "type": "epss_change",
+      "detail": "EPSS rose from 0.04 to 0.16 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-97229",
+      "type": "epss_change",
+      "detail": "EPSS fell from 0.74 to 0.12 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-94127",
+      "type": "epss_change",
+      "detail": "EPSS fell from 0.27 to 0.01 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-93616",
+      "type": "epss_change",
+      "detail": "EPSS fell from 0.92 to 0.21 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-90817",
+      "type": "epss_change",
+      "detail": "EPSS fell from 0.34 to 0.19 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-88779",
+      "type": "epss_change",
+      "detail": "EPSS fell from 0.11 to 0.01 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-88772",
+      "type": "epss_change",
+      "detail": "EPSS fell from 0.77 to 0.01 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-88771",
+      "type": "epss_change",
+      "detail": "EPSS fell from 0.82 to 0.02 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-87902",
+      "type": "epss_change",
+      "detail": "EPSS fell from 0.96 to 0.27 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-86950",
+      "type": "epss_change",
+      "detail": "EPSS fell from 0.27 to 0.01 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-86218",
+      "type": "epss_change",
+      "detail": "EPSS fell from 0.15 to 0.04 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-86060",
+      "type": "epss_change",
+      "detail": "EPSS rose from 0.06 to 0.36 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-85706",
+      "type": "epss_change",
+      "detail": "EPSS fell from 0.97 to 0.09 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-85102",
+      "type": "epss_change",
+      "detail": "EPSS fell from 0.54 to 0.10 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-82078",
+      "type": "epss_change",
+      "detail": "EPSS fell from 0.61 to 0.04 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-81578",
+      "type": "epss_change",
+      "detail": "EPSS fell from 0.84 to 0.04 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-8037",
+      "type": "epss_change",
+      "detail": "EPSS fell from 1.00 to 0.70 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-76504",
+      "type": "epss_change",
+      "detail": "EPSS fell from 0.39 to 0.01 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-76461",
+      "type": "epss_change",
+      "detail": "EPSS fell from 0.40 to 0.03 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-76460",
+      "type": "epss_change",
+      "detail": "EPSS fell from 0.76 to 0.12 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-75650",
+      "type": "epss_change",
+      "detail": "EPSS fell from 0.99 to 0.35 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-73570",
+      "type": "epss_change",
+      "detail": "EPSS fell from 0.77 to 0.12 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-72898",
+      "type": "epss_change",
+      "detail": "EPSS fell from 0.99 to 0.19 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-71362",
+      "type": "epss_change",
+      "detail": "EPSS fell from 0.92 to 0.24 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-65400",
+      "type": "epss_change",
+      "detail": "EPSS fell from 0.18 to 0.02 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-63077",
+      "type": "epss_change",
+      "detail": "EPSS fell from 0.94 to 0.10 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-56291",
+      "type": "epss_change",
+      "detail": "EPSS rose from 0.15 to 0.81 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-56164",
+      "type": "epss_change",
+      "detail": "EPSS fell from 0.27 to 0.01 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-55040",
+      "type": "epss_change",
+      "detail": "EPSS fell from 0.70 to 0.18 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-5430",
+      "type": "epss_change",
+      "detail": "EPSS fell from 0.79 to 0.06 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-50751",
+      "type": "epss_change",
+      "detail": "EPSS fell from 0.85 to 0.06 (score date 2026-11-25)."
     },
     {
       "cve": "CVE-2026-50522",
       "type": "epss_change",
-      "detail": "EPSS rose from 0.82 to 0.99 (score date 2026-11-24)."
+      "detail": "EPSS fell from 0.99 to 0.22 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-48939",
+      "type": "epss_change",
+      "detail": "EPSS rose from 0.20 to 0.91 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-48908",
+      "type": "epss_change",
+      "detail": "EPSS fell from 0.88 to 0.15 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-48907",
+      "type": "epss_change",
+      "detail": "EPSS fell from 0.85 to 0.16 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-48710",
+      "type": "epss_change",
+      "detail": "EPSS fell from 0.70 to 0.07 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-48558",
+      "type": "epss_change",
+      "detail": "EPSS fell from 0.80 to 0.06 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-48356",
+      "type": "epss_change",
+      "detail": "EPSS fell from 0.82 to 0.08 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-46817",
+      "type": "epss_change",
+      "detail": "EPSS fell from 0.12 to 0.01 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-46300",
+      "type": "epss_change",
+      "detail": "EPSS fell from 0.17 to 0.03 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-45659",
+      "type": "epss_change",
+      "detail": "EPSS fell from 0.80 to 0.03 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-45247",
+      "type": "epss_change",
+      "detail": "EPSS fell from 0.82 to 0.19 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-42271",
+      "type": "epss_change",
+      "detail": "EPSS fell from 0.91 to 0.07 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-40217",
+      "type": "epss_change",
+      "detail": "EPSS fell from 0.83 to 0.20 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-39808",
+      "type": "epss_change",
+      "detail": "EPSS fell from 0.93 to 0.47 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-35273",
+      "type": "epss_change",
+      "detail": "EPSS fell from 0.97 to 0.09 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-34910",
+      "type": "epss_change",
+      "detail": "EPSS fell from 0.90 to 0.46 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-34909",
+      "type": "epss_change",
+      "detail": "EPSS fell from 0.69 to 0.02 (score date 2026-11-25)."
+    },
+    {
+      "cve": "CVE-2026-34908",
+      "type": "epss_change",
+      "detail": "EPSS fell from 0.89 to 0.15 (score date 2026-11-25)."
     }
   ],
   "sources": [
     {
       "name": "CISA Known Exploited Vulnerabilities",
       "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
-      "version": "2026.11.24",
-      "released": "2026-11-24T17:47:46.199Z",
-      "fetchedAt": "2026-11-24T20:54:41Z",
+      "version": "2026.11.25",
+      "released": "2026-11-25T19:48:12.4344Z",
+      "fetchedAt": "2026-11-25T20:15:26Z",
       "status": "ok"
     },
     {
       "name": "FIRST EPSS",
       "url": "https://www.first.org/epss/",
-      "fetchedAt": "2026-11-24T20:54:41Z",
+      "fetchedAt": "2026-11-25T20:15:26Z",
       "status": "ok",
       "note": "Probability estimate; not evidence of exploitation."
     },
     {
       "name": "NVD CVE API 2.0",
       "url": "https://nvd.nist.gov/",
-      "fetchedAt": "2026-11-24T20:54:41Z",
+      "fetchedAt": "2026-11-25T20:15:26Z",
       "status": "ok",
       "note": "Enrichment can lag publication by days."
     }
@@ -402,8 +1391,6 @@
     ],
     "unknownFields": [
       "Affected versions",
-      "CVSS",
-      "EPSS",
       "Exploit maturity",
       "Fixed versions"
     ],
@@ -419,8 +1406,8 @@
       "DAILY ENTERPRISE CYBERSECURITY",
       "THREAT INTELLIGENCE BRIEF"
     ],
-    "dateLabel": "Tuesday, November 24, 2026",
-    "window": "Reporting window: November 23-24, 2026",
+    "dateLabel": "Wednesday, November 25, 2026",
+    "window": "Reporting window: November 24-25, 2026",
     "prepared": "Automated edition, issued 7:00 AM ET",
     "sourceNote": "This brief is compiled automatically from public sources (CISA KEV, NVD, FIRST EPSS, Google Project Zero, ENISA EUVD, Metasploit, Exploit-DB, PoC-in-GitHub, MITRE ATT&CK). Exploitation statuses reflect what those sources report; anything they do not establish is stated as not established or not verified.",
     "sections": [
@@ -432,7 +1419,7 @@
         "blocks": [
           {
             "type": "p",
-            "text": "The leading newly prioritized issue is **CVE-2026-131914 (Idunno AntiCsrf)**, a critical unsafe deserialization flaw; it is listed in CISA KEV on 2026-11-24 (exploitation confirmed by CISA) and reported exploited by ENISA EUVD since 2026-11-24. A vendor fix reference is available. **CVE-2026-132165 (Drupal Core)** is another important newly highlighted issue; it is listed in CISA KEV on 2026-11-24 (exploitation confirmed by CISA)."
+            "text": "The leading newly prioritized issue is **CVE-2025-34035 (Engeniustech Esr600 Firmware)**, a critical OS command injection flaw; it is reported exploited by ENISA EUVD since 2026-11-25. No fixed release is mapped in NVD data yet. **CVE-2026-133323 (Mitel MiCollab)** is another important newly highlighted issue; it is listed in CISA KEV on 2026-11-25 (exploitation confirmed by CISA)."
           },
           {
             "type": "table",
@@ -443,33 +1430,33 @@
             "rows": [
               [
                 "Newly prioritized CVEs",
-                "7: Idunno AntiCsrf, Drupal Core, Optimizely Web Experimentation, CVE-2026-129514, TOTOLINK A7100RU, OAuth API and 1 more"
+                "17: Engeniustech Esr600 Firmware, Mitel MiCollab, Vates Xen Orchestra, Hewlett Packard Enterprise (HPE) Juniper Session Smart Conductor and Session Smart Router, Danfoss AK-SM 800A Series, Danfoss AK-SM 800A Series and 11 more"
               ],
               [
                 "Latest KEV baseline",
-                "1,795 (catalog version 2026.11.24, released 2026-11-24)"
+                "1,805 (catalog version 2026.11.25, released 2026-11-25)"
               ],
               [
                 "New KEV additions",
-                "CVE-2026-131914 (Idunno AntiCsrf), CVE-2026-132165 (Drupal Core) and CVE-2026-132224 (Optimizely Web Experimentation)"
+                "CVE-2026-133323 (Mitel MiCollab), CVE-2026-133469 (Vates Xen Orchestra), CVE-2026-103406 (Hewlett Packard Enterprise (HPE) Juniper Session Smart Conductor and Session Smart Router), CVE-2025-41450 (Danfoss AK-SM 800A Series), CVE-2023-25915 (Danfoss AK-SM 800A Series) and 5 more"
               ],
               [
                 "New zero-day / in-the-wild reports",
-                "CVE-2026-131914 (Idunno AntiCsrf), CVE-2026-132224 (Optimizely Web Experimentation) and CVE-2026-129514 (CVE-2026-129514)"
+                "CVE-2025-34035 (Engeniustech Esr600 Firmware), CVE-2026-133469 (Vates Xen Orchestra), CVE-2026-103406 (Hewlett Packard Enterprise (HPE) Juniper Session Smart Conductor and Session Smart Router) and CVE-2025-49931 (Crocoblock JetSearch)"
               ],
               [
                 "Emergency candidates",
-                "4 newly highlighted: exposed Idunno AntiCsrf, Drupal Core, exposed Optimizely Web Experimentation and exposed CVE-2026-129514"
+                "14 newly highlighted: exposed Engeniustech Esr600 Firmware, exposed Mitel MiCollab, exposed Vates Xen Orchestra and exposed Hewlett Packard Enterprise (HPE) Juniper Session Smart Conductor and Session Smart Router"
               ],
               [
                 "Complete worldwide High/Critical count",
-                "Not established; 500 High/Critical CVEs published to NVD in the window (NVD-scored only)"
+                "Not established; 535 High/Critical CVEs published to NVD in the window (NVD-scored only)"
               ]
             ]
           },
           {
             "type": "p",
-            "text": "**Top five actions:** (1) Isolate or patch exposed Idunno AntiCsrf (CVE-2026-131914); (2) apply the vendor fix for Drupal Core (CVE-2026-132165); (3) isolate or patch exposed Optimizely Web Experimentation (CVE-2026-132224); (4) close previously reported Project MONAI MONAI Label and N-able MailAssure KEV exposure; (5) examine Idunno AntiCsrf hosts for unexpected child processes and outbound connections."
+            "text": "**Top five actions:** (1) Isolate or patch exposed Engeniustech Esr600 Firmware (CVE-2025-34035); (2) isolate or patch exposed Mitel MiCollab (CVE-2026-133323); (3) isolate or patch exposed Vates Xen Orchestra (CVE-2026-133469); (4) close previously reported Project MONAI MONAI Label, N-able MailAssure, Idunno AntiCsrf and Drupal Core KEV exposure; (5) examine Engeniustech Esr600 Firmware hosts for unexpected child processes and outbound connections."
           }
         ]
       },
@@ -481,7 +1468,7 @@
         "blocks": [
           {
             "type": "p",
-            "text": "**CVE-2026-131914 - Idunno AntiCsrf unsafe deserialization (CVSS 9.3).** Deserialization of untrusted data in double-submit cookie vs. form field validation in Idunno.AntiCsrf versions through 0.9.1 Beta on ASP.NET allows remote unauthenticated attackers to execute code via object injection. Affected releases (NVD): anticsrf = 0.9.0; anticsrf = 0.9.1. Fixed package release: not mapped in NVD ranges; 1 vendor patch or advisory reference available. Attack path: network-accessible; no authentication required; no user interaction required."
+            "text": "**CVE-2025-34035 - Engeniustech Esr600 Firmware OS command injection (CVSS 10).** An OS command injection vulnerability exists in EnGenius EnShare Cloud Service version 1.4.11 and earlier. The usbinteract.cgi script fails to properly sanitize user input passed to the path parameter, allowing unauthenticated remote attackers to inject arbitrary shell commands. The injected commands are executed with root privileges, leading to full system compromise. Affected releases (NVD): esr300 firmware = 1.1.0.28; esr300 firmware = 1.3.1.42; esr300 firmware = 1.4.0; +22 more. Fixed package release: none identified in tracked sources. Attack path: network-accessible; no authentication required; no user interaction required."
           },
           {
             "type": "table",
@@ -492,29 +1479,29 @@
             "rows": [
               [
                 "EPSS / percentile",
-                "0.6% probability / 50th percentile (FIRST EPSS)"
+                "23.3% probability / 98th percentile (FIRST EPSS)"
               ],
               [
                 "CISA KEV",
-                "Listed 2026-11-24; federal due date 2026-11-27"
+                "Not listed in latest verified baseline"
               ],
               [
                 "Exploitation",
-                "Listed in CISA KEV on 2026-11-24 (exploitation confirmed by CISA) and reported exploited by ENISA EUVD since 2026-11-24; independently corroborated victim evidence not established"
+                "Reported exploited by ENISA EUVD since 2026-11-25; independently corroborated victim evidence not established"
               ],
               [
                 "Public exploit",
-                "Public exploit code referenced: 4 unvetted GitHub repositories; weaponized exploit not verified"
+                "Public exploit code referenced: 1 Exploit-DB entry; weaponized exploit not verified"
               ],
               [
                 "Mitigation",
-                "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk guidance and CISA’s “Forensics Triage Requirements”. Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable."
+                "Apply the vendor fix or mitigation; remove untrusted network reachability until patched; place the service behind authentication or a VPN; investigate for signs of prior compromise"
               ]
             ]
           },
           {
             "type": "p",
-            "text": "**CVE-2026-132165 - Drupal Core remote code execution.** Drupal Core contains a not failing securely vulnerability that could allow an unauthenticated attacker to take over an existing site or execute arbitrary code via the Drupal installer. Under specific conditions, the attacker can use install.php to attempt to reinstall Drupal on the site. Affected releases: not yet published in NVD configuration data. Fixed package release: none identified in tracked sources. Attack path: not established (no CVSS vector published yet)."
+            "text": "**CVE-2026-133323 - Mitel MiCollab OS command injection (CVSS 10).** A vulnerability in the Audio, Web, and Video Conferencing (AWV) component of Mitel MiCollab through 10.3 (10.3.0.18) could allow an unauthenticated attacker to conduct a blind command injection attack due to insufficient parameter sanitization. A successful exploit could allow an attacker to execute arbitrary commands within the context of the system. This is MTLVULN-1864. Affected releases: not yet published in NVD configuration data. Fixed package release: none identified in tracked sources. Attack path: network-accessible; no authentication required; no user interaction required."
           },
           {
             "type": "table",
@@ -525,15 +1512,15 @@
             "rows": [
               [
                 "EPSS / percentile",
-                "Not verified"
+                "2.5% probability / 85th percentile (FIRST EPSS)"
               ],
               [
                 "CISA KEV",
-                "Listed 2026-11-24; federal due date 2026-11-27"
+                "Listed 2026-11-25; federal due date 2026-11-28"
               ],
               [
                 "Exploitation",
-                "Listed in CISA KEV on 2026-11-24 (exploitation confirmed by CISA); independently corroborated victim evidence not established"
+                "Listed in CISA KEV on 2026-11-25 (exploitation confirmed by CISA); independently corroborated victim evidence not established"
               ],
               [
                 "Public exploit",
@@ -547,7 +1534,7 @@
           },
           {
             "type": "p",
-            "text": "**CVE-2026-132224 - Optimizely Web Experimentation Optimizely Web Experimentation External Control of Critical State Data Vulnerability (CVSS 7.1).** Optimizely Web Experimentation before 2026-11-17 mishandles the account signup flow, leading to presence of attacker-controlled code in the projectJS (aka Project JavaScript) field of certain cdn.optimizely.com assets. Affected releases (NVD): web experimentation < 2026-11-17. Fixed version (first unaffected release per NVD ranges): web experimentation 2026-11-17. Attack path: network-accessible; low-privileged authentication required; no user interaction required."
+            "text": "**CVE-2026-133469 - Vates Xen Orchestra authentication bypass (CVSS 9.8).** XO (Xen Orchestra) is a solution to visualize, manage, backup and delegate your XCP-ng (or XenServer) infrastructure. Prior to 6.9.2 and 6.10.1, REST cookie parsing turns authenticationToken=j:%7B%7D into {}. REST authentication passes that object to the XO token provider without requiring a string. The token collection treats {} as an unfiltered lookup and returns its first token;. Affected releases: not yet published in NVD configuration data. Fixed package release: none identified in tracked sources. Attack path: network-accessible; no authentication required; no user interaction required."
           },
           {
             "type": "table",
@@ -558,15 +1545,114 @@
             "rows": [
               [
                 "EPSS / percentile",
-                "0.4% probability / 35th percentile (FIRST EPSS)"
+                "1.1% probability / 65th percentile (FIRST EPSS)"
               ],
               [
                 "CISA KEV",
-                "Listed 2026-11-24; federal due date 2026-11-27"
+                "Listed 2026-11-25; federal due date 2026-11-28"
               ],
               [
                 "Exploitation",
-                "Listed in CISA KEV on 2026-11-24 (exploitation confirmed by CISA) and reported exploited by ENISA EUVD since 2026-11-24; independently corroborated victim evidence not established"
+                "Listed in CISA KEV on 2026-11-25 (exploitation confirmed by CISA); independently corroborated victim evidence not established"
+              ],
+              [
+                "Public exploit",
+                "Public exploit code referenced: 1 unvetted GitHub repository; weaponized exploit not verified"
+              ],
+              [
+                "Mitigation",
+                "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk guidance and CISA’s “Forensics Triage Requirements”. Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable."
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "**CVE-2026-103406 - Hewlett Packard Enterprise (HPE) Juniper Session Smart Conductor and Session Smart Router OS command injection (CVSS 9.8).** An Improper Neutralization of Special Elements used in an OS Command vulnerability in the AutomatedProvisioner in Juniper Networks Session Smart Conductor allows a remote attacker to execute arbitrary commands as root via a specially crafted salt minion ID. Affected releases (NVD): session smart conductor < 7.0.5-14-lts; session smart conductor >= 7.1.0-50r1, < 7.1.7-15-sts; session smart conductor >= 7.2.0-29r1, < 7.2.3-8r2. Fixed version (first unaffected release per NVD ranges): session smart conductor 7.0.5-14-lts, session smart conductor 7.1.7-15-sts, session smart conductor 7.2.3-8r2. Attack path: network-accessible; no authentication required; no user interaction required."
+          },
+          {
+            "type": "table",
+            "columns": [
+              "Field",
+              "Status"
+            ],
+            "rows": [
+              [
+                "EPSS / percentile",
+                "0.9% probability / 56th percentile (FIRST EPSS)"
+              ],
+              [
+                "CISA KEV",
+                "Listed 2026-11-25; federal due date 2026-11-28"
+              ],
+              [
+                "Exploitation",
+                "Listed in CISA KEV on 2026-11-25 (exploitation confirmed by CISA) and reported exploited by ENISA EUVD since 2026-11-25; independently corroborated victim evidence not established"
+              ],
+              [
+                "Public exploit",
+                "Public exploit code referenced: 1 unvetted GitHub repository; weaponized exploit not verified"
+              ],
+              [
+                "Mitigation",
+                "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk guidance and CISA’s “Forensics Triage Requirements”. Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable."
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "**CVE-2025-41450 - Danfoss AK-SM 800A Series Danfoss AK-SM 800A Series Improper Authentication Vulnerability (CVSS 8.2).** Improper Authentication vulnerability in Danfoss AKSM8xxA Series.This issue affects Danfoss AK-SM 8xxA Series prior to version 4.2. Affected releases: not yet published in NVD configuration data. Fixed package release: none identified in tracked sources. Attack path: network-accessible; no authentication required; user interaction required."
+          },
+          {
+            "type": "table",
+            "columns": [
+              "Field",
+              "Status"
+            ],
+            "rows": [
+              [
+                "EPSS / percentile",
+                "0.5% probability / 37th percentile (FIRST EPSS)"
+              ],
+              [
+                "CISA KEV",
+                "Listed 2026-11-25; federal due date 2026-12-09"
+              ],
+              [
+                "Exploitation",
+                "Listed in CISA KEV on 2026-11-25 (exploitation confirmed by CISA); independently corroborated victim evidence not established"
+              ],
+              [
+                "Public exploit",
+                "Public exploit code referenced: 3 unvetted GitHub repositories; weaponized exploit not verified"
+              ],
+              [
+                "Mitigation",
+                "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk guidance and CISA’s “Forensics Triage Requirements”. Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable."
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "**CVE-2023-25915 - Danfoss AK-SM 800A Series input-validation (CVSS 8.8).** Due to improper input validation, an authenticated remote attacker could execute arbitrary commands on the target system. Affected releases (NVD): ak-sm 800a firmware <= 3.3. Fixed package release: none identified in tracked sources. Attack path: network-accessible; low-privileged authentication required; no user interaction required."
+          },
+          {
+            "type": "table",
+            "columns": [
+              "Field",
+              "Status"
+            ],
+            "rows": [
+              [
+                "EPSS / percentile",
+                "1.4% probability / 73rd percentile (FIRST EPSS)"
+              ],
+              [
+                "CISA KEV",
+                "Listed 2026-11-25; federal due date 2026-11-28"
+              ],
+              [
+                "Exploitation",
+                "Listed in CISA KEV on 2026-11-25 (exploitation confirmed by CISA); independently corroborated victim evidence not established"
               ],
               [
                 "Public exploit",
@@ -580,56 +1666,7 @@
           },
           {
             "type": "p",
-            "text": "**CVE-2026-129514 - CVE-2026-129514 unsafe deserialization (CVSS 10).** Deserialization of Untrusted Data vulnerability in the application/vnd.hex+erlang request body parser in hexpm hexpm allows an unauthenticated remote attacker to execute operating system commands via a crafted Erlang external term format request body. This vulnerability was actively exploited against the hex.pm service on 2026-11-23. Affected releases: not yet published in NVD configuration data. Fixed package release: none identified in tracked sources. Attack path: network-accessible; no authentication required; no user interaction required."
-          },
-          {
-            "type": "table",
-            "columns": [
-              "Field",
-              "Status"
-            ],
-            "rows": [
-              [
-                "EPSS / percentile",
-                "Not verified"
-              ],
-              [
-                "CISA KEV",
-                "Not listed in latest verified baseline"
-              ],
-              [
-                "Exploitation",
-                "Described in its CVE record as exploited in the wild (not yet corroborated by CISA KEV, Project Zero, EUVD or VulnCheck); independently corroborated victim evidence not established"
-              ],
-              [
-                "Public exploit",
-                "No public exploit or proof-of-concept identified in tracked sources"
-              ],
-              [
-                "Mitigation",
-                "Apply the vendor fix or mitigation; remove untrusted network reachability until patched; place the service behind authentication or a VPN; investigate for signs of prior compromise"
-              ]
-            ]
-          },
-          {
-            "type": "p",
-            "text": "**CVE-2026-134882 - TOTOLINK A7100RU command injection (CVSS 10).** A weakness has been identified in TOTOLINK A7100RU 7.4cu.2313_B20191024. This issue affects the function exportOvpn of the file /cgi-bin/cstecgi.cgi of the component CGI Handler. This manipulation of the argument Username causes os command injection. The attack is possible to be carried out remotely. Affected releases: not yet published in NVD configuration data. Fixed package release: none identified in tracked sources. Attack path: network-accessible; no authentication required; no user interaction required."
-          },
-          {
-            "type": "p",
-            "text": "EPSS: 2.5% probability / 85th percentile (FIRST EPSS). CISA KEV: Not listed in latest verified baseline. Exploitation: No malicious exploitation confirmed by tracked sources. Public exploit code referenced: 1 unvetted GitHub repository; weaponized exploit not verified. Mitigation: Apply the vendor fix or mitigation; remove untrusted network reachability until patched; place the service behind authentication or a VPN; monitor for exploitation."
-          },
-          {
-            "type": "p",
-            "text": "**CVE-2026-120382 - OAuth API arbitrary file write (CVSS 9.8).** An improper neutralization of argument delimiters in a command vulnerability in the OAuth API in Synology DiskStation Manager (DSM) before 7.1.1-42962-10, 7.2.1-69057-14, 7.2.2-72806-11, 7.3.2-86009-6, and 7.4.1-90080-2 allows remote attackers to read or write arbitrary files and conduct denial-of-service attacks. Affected releases: not yet published in NVD configuration data. Fixed package release: none identified in tracked sources. Attack path: network-accessible; no authentication required; no user interaction required."
-          },
-          {
-            "type": "p",
-            "text": "EPSS: 1.2% probability / 69th percentile (FIRST EPSS). CISA KEV: Not listed in latest verified baseline. Exploitation: No malicious exploitation confirmed by tracked sources. Public exploit code referenced: 1 unvetted GitHub repository; weaponized exploit not verified. Mitigation: Apply the vendor fix or mitigation; remove untrusted network reachability until patched; place the service behind authentication or a VPN; monitor for exploitation."
-          },
-          {
-            "type": "p",
-            "text": "Also prioritized: CVE-2026-135211 (BISHENG, urgent). Details are in the Vulnerability Validation catalog."
+            "text": "Also prioritized: CVE-2023-25914 (Danfoss AK-SM 800A Series, emergency); CVE-2025-49931 (Crocoblock JetSearch, emergency); CVE-2026-3496 (JetBooking WordPress plugin, emergency); CVE-2026-133303 (Mitel MiCollab, emergency); CVE-2026-133324 (Mitel MiCollab, emergency); CVE-2026-133311 (Mitel MiCollab, emergency); CVE-2026-133275 (Mitel MiCollab, emergency); CVE-2026-133335 (CVE-2026-133335, emergency); CVE-2026-135202 (CVE-2026-135202, urgent); CVE-2026-136404 (CVE-2026-136404, urgent); CVE-2026-136411 (BusyBox, urgent). Details are in the Vulnerability Validation catalog."
           }
         ]
       },
@@ -641,15 +1678,15 @@
         "blocks": [
           {
             "type": "p",
-            "text": "CVE-2026-131914 (Idunno AntiCsrf): listed in CISA KEV on 2026-11-24 (exploitation confirmed by CISA) and reported exploited by ENISA EUVD since 2026-11-24. No named actor, verified victim count or campaign is established in tracked sources. CVE-2026-132224 (Optimizely Web Experimentation): listed in CISA KEV on 2026-11-24 (exploitation confirmed by CISA) and reported exploited by ENISA EUVD since 2026-11-24. No named actor, verified victim count or campaign is established in tracked sources. No campaign-specific IP addresses, hashes or domains are collected by ThreatWatch's automated feeds."
+            "text": "CVE-2025-34035 (Engeniustech Esr600 Firmware): reported exploited by ENISA EUVD since 2026-11-25. No named actor, verified victim count or campaign is established in tracked sources. CVE-2026-103406 (Hewlett Packard Enterprise (HPE) Juniper Session Smart Conductor and Session Smart Router): listed in CISA KEV on 2026-11-25 (exploitation confirmed by CISA) and reported exploited by ENISA EUVD since 2026-11-25. No named actor, verified victim count or campaign is established in tracked sources. No campaign-specific IP addresses, hashes or domains are collected by ThreatWatch's automated feeds."
           },
           {
             "type": "p",
-            "text": "CISA added 3 vulnerabilities to the KEV catalog in the reporting window: Idunno AntiCsrf, Optimizely Web Experimentation and Drupal Core. The federal remediation deadline is **November 27, 2026**. This deadline applies to covered federal agencies under applicable requirements; it is not a universal private-sector mandate."
+            "text": "CISA added 10 vulnerabilities to the KEV catalog in the reporting window: Mitel MiCollab, Vates Xen Orchestra, Hewlett Packard Enterprise (HPE) Juniper Session Smart Conductor and Session Smart Router, Mitel MiCollab, Danfoss AK-SM 800A Series and Mitel MiCollab and others. The federal remediation deadline is **November 28, 2026** (latest December 9, 2026). This deadline applies to covered federal agencies under applicable requirements; it is not a universal private-sector mandate."
           },
           {
             "type": "p",
-            "text": "**Defensive hunting:** for Idunno AntiCsrf (CVE-2026-131914), inspect unexpected child processes of the service, new scheduled jobs or services, and unusual outbound connections from the host; for Drupal Core (CVE-2026-132165), inspect unexpected child processes of the service, new scheduled jobs or services, and unusual outbound connections from the host; for Optimizely Web Experimentation (CVE-2026-132224), review the affected service's logs for unusual requests and changes around the disclosure date; for CVE-2026-129514 (CVE-2026-129514), inspect unexpected child processes of the service, new scheduled jobs or services, and unusual outbound connections from the host."
+            "text": "**Defensive hunting:** for Engeniustech Esr600 Firmware (CVE-2025-34035), inspect unexpected child processes of the service, new scheduled jobs or services, and unusual outbound connections from the host; for Mitel MiCollab (CVE-2026-133323), inspect unexpected child processes of the service, new scheduled jobs or services, and unusual outbound connections from the host; for Vates Xen Orchestra (CVE-2026-133469), review administrative logins, newly created accounts or API tokens, and configuration changes made without a matching change record; for Hewlett Packard Enterprise (HPE) Juniper Session Smart Conductor and Session Smart Router (CVE-2026-103406), inspect unexpected child processes of the service, new scheduled jobs or services, and unusual outbound connections from the host."
           }
         ]
       },
@@ -668,31 +1705,31 @@
             "rows": [
               [
                 "Healthcare / medical imaging",
-                "Possible CVE-2026-129514, Idunno AntiCsrf and OAuth API exposure; targeting unknown"
+                "Possible Danfoss AK-SM 800A Series, Engeniustech Esr600 Firmware and Hewlett Packard Enterprise (HPE) Juniper Session Smart Conductor and Session Smart Router exposure; targeting unknown"
               ],
               [
                 "Education / research",
-                "Possible CVE-2026-129514, Idunno AntiCsrf and OAuth API exposure; targeting unknown"
+                "Possible Danfoss AK-SM 800A Series, Engeniustech Esr600 Firmware and Hewlett Packard Enterprise (HPE) Juniper Session Smart Conductor and Session Smart Router exposure; targeting unknown"
               ],
               [
                 "Technology / software",
-                "Potential CVE-2026-129514, Drupal Core, Idunno AntiCsrf and OAuth API dependency exposure"
+                "Potential Danfoss AK-SM 800A Series, Engeniustech Esr600 Firmware, Hewlett Packard Enterprise (HPE) Juniper Session Smart Conductor and Session Smart Router and Mitel MiCollab dependency exposure"
               ],
               [
                 "Government / defense",
-                "Possible CVE-2026-129514, Idunno AntiCsrf and OAuth API exposure; no new sector-specific targeting confirmed"
+                "Possible Danfoss AK-SM 800A Series, Engeniustech Esr600 Firmware and Hewlett Packard Enterprise (HPE) Juniper Session Smart Conductor and Session Smart Router exposure; no new sector-specific targeting confirmed"
               ],
               [
                 "Financial services",
-                "Possible CVE-2026-129514, Idunno AntiCsrf and OAuth API exposure; targeting unknown"
+                "Possible Danfoss AK-SM 800A Series, Engeniustech Esr600 Firmware and Hewlett Packard Enterprise (HPE) Juniper Session Smart Conductor and Session Smart Router exposure; targeting unknown"
               ],
               [
                 "Manufacturing / energy / utilities",
-                "Possible CVE-2026-129514, Idunno AntiCsrf and OAuth API exposure; targeting unknown"
+                "Possible Danfoss AK-SM 800A Series, Engeniustech Esr600 Firmware and Hewlett Packard Enterprise (HPE) Juniper Session Smart Conductor and Session Smart Router exposure; targeting unknown"
               ],
               [
                 "Retail / transportation",
-                "Possible CVE-2026-129514, Idunno AntiCsrf and OAuth API exposure; targeting unknown"
+                "Possible Danfoss AK-SM 800A Series, Engeniustech Esr600 Firmware and Hewlett Packard Enterprise (HPE) Juniper Session Smart Conductor and Session Smart Router exposure; targeting unknown"
               ]
             ]
           },
@@ -716,34 +1753,34 @@
             ],
             "rows": [
               [
-                "Idunno AntiCsrf operators",
+                "Engeniustech Esr600 Firmware operators",
                 "Unknown. Exploitation reported; identity, motivation and geographic targeting not established."
               ],
               [
-                "Drupal Core operators",
+                "Mitel MiCollab operators",
                 "Unknown. Exploitation reported; identity, motivation and geographic targeting not established."
               ],
               [
-                "Optimizely Web Experimentation operators",
+                "Vates Xen Orchestra operators",
                 "Unknown. Exploitation reported; identity, motivation and geographic targeting not established."
               ],
               [
-                "CVE-2026-129514 operators",
+                "Hewlett Packard Enterprise (HPE) Juniper Session Smart Conductor and Session Smart Router operators",
                 "Unknown. Exploitation reported; identity, motivation and geographic targeting not established."
               ],
               [
-                "TOTOLINK A7100RU operators",
-                "No confirmed malicious exploitation or attribution."
+                "Danfoss AK-SM 800A Series operators",
+                "Unknown. Exploitation reported; identity, motivation and geographic targeting not established."
               ],
               [
-                "OAuth API operators",
-                "No confirmed malicious exploitation or attribution."
+                "Danfoss AK-SM 800A Series operators",
+                "Unknown. Exploitation reported; identity, motivation and geographic targeting not established."
               ]
             ]
           },
           {
             "type": "p",
-            "text": "**MITRE ATT&CK defensive mapping:** T1190 (Exploit Public-Facing Application) may be relevant to exposed Idunno AntiCsrf, Optimizely Web Experimentation, CVE-2026-129514 and TOTOLINK A7100RU services. These mappings support defensive detection and do not establish actor attribution."
+            "text": "**MITRE ATT&CK defensive mapping:** T1190 (Exploit Public-Facing Application) may be relevant to exposed Engeniustech Esr600 Firmware, Mitel MiCollab, Vates Xen Orchestra and Hewlett Packard Enterprise (HPE) Juniper Session Smart Conductor and Session Smart Router services. These mappings support defensive detection and do not establish actor attribution."
           }
         ]
       },
@@ -763,38 +1800,38 @@
             "rows": [
               [
                 "Emergency",
-                "Idunno AntiCsrf (CVE-2026-131914) reachable from untrusted networks",
+                "Engeniustech Esr600 Firmware (CVE-2025-34035) reachable from untrusted networks",
                 "Isolate immediately; investigate and mitigate within 24 hours"
               ],
               [
                 "Emergency",
-                "Drupal Core (CVE-2026-132165) on exposed hosts",
+                "Mitel MiCollab (CVE-2026-133323) reachable from untrusted networks",
                 "Isolate immediately; investigate and mitigate within 24 hours"
               ],
               [
                 "Emergency",
-                "Optimizely Web Experimentation (CVE-2026-132224) reachable from untrusted networks",
+                "Vates Xen Orchestra (CVE-2026-133469) reachable from untrusted networks",
                 "Isolate immediately; investigate and mitigate within 24 hours"
               ],
               [
                 "Emergency",
-                "CVE-2026-129514 reachable from untrusted networks",
+                "Hewlett Packard Enterprise (HPE) Juniper Session Smart Conductor and Session Smart Router (CVE-2026-103406) reachable from untrusted networks",
                 "Isolate immediately; investigate and mitigate within 24 hours"
               ],
               [
                 "Emergency",
-                "Unremediated confirmed-exploited N-able MailAssure or Project MONAI MONAI Label exposure",
+                "Danfoss AK-SM 800A Series (CVE-2025-41450) reachable from untrusted networks",
+                "Isolate immediately; investigate and mitigate within 24 hours"
+              ],
+              [
+                "Emergency",
+                "Danfoss AK-SM 800A Series (CVE-2023-25915) reachable from untrusted networks",
+                "Isolate immediately; investigate and mitigate within 24 hours"
+              ],
+              [
+                "Emergency",
+                "Unremediated confirmed-exploited Drupal Core, Idunno AntiCsrf, N-able MailAssure, Optimizely Web Experimentation or Project MONAI MONAI Label exposure",
                 "Immediate containment and applicable forensic triage"
-              ],
-              [
-                "Urgent",
-                "Vulnerable TOTOLINK A7100RU (CVE-2026-134882)",
-                "Apply applicable vendor fix in 24-72 hours"
-              ],
-              [
-                "Urgent",
-                "Vulnerable OAuth API (CVE-2026-120382)",
-                "Apply applicable vendor fix in 24-72 hours"
               ],
               [
                 "Routine",
@@ -828,44 +1865,44 @@
             ],
             "rows": [
               [
-                "CVE-2026-133469 CVE-2026-133469",
-                "No significant new development established since November 23"
+                "Idunno AntiCsrf CVE-2026-131914",
+                "No significant new development established since November 24"
+              ],
+              [
+                "Drupal Core CVE-2026-132165",
+                "Public exploit references rose to 5"
+              ],
+              [
+                "Optimizely Web Experimentation CVE-2026-132224",
+                "No significant new development established since November 24"
+              ],
+              [
+                "CVE-2026-129514 CVE-2026-129514",
+                "Public exploit code now referenced"
+              ],
+              [
+                "TOTOLINK A7100RU CVE-2026-134882",
+                "No significant new development established since November 24"
+              ],
+              [
+                "OAuth API CVE-2026-120382",
+                "No significant new development established since November 24"
+              ],
+              [
+                "BISHENG CVE-2026-135211",
+                "No significant new development established since November 24"
+              ],
+              [
+                "Vates Xen Orchestra CVE-2026-133469",
+                "Added to CISA KEV on 2026-11-25"
               ],
               [
                 "N-able MailAssure CVE-2026-134624",
-                "Public exploit code now referenced; fixed-version or patch reference added"
+                "No significant new development established since November 23"
               ],
               [
                 "CVE-2026-134815 CVE-2026-134815",
                 "No significant new development established since November 23"
-              ],
-              [
-                "CVE-2026-134814 CVE-2026-134814",
-                "No significant new development established since November 23"
-              ],
-              [
-                "Weblate CVE-2026-134838",
-                "No significant new development established since November 23"
-              ],
-              [
-                "Project MONAI MONAI Label CVE-2026-133968",
-                "Fixed-version or patch reference added; EPSS rose from 0.04 to 0.50"
-              ],
-              [
-                "WhatsApp for Android CVE-2026-102769",
-                "No significant new development established since November 22"
-              ],
-              [
-                "Restrictions for BuddyPress WordPress plugin CVE-2026-120539",
-                "No significant new development established since November 22"
-              ],
-              [
-                "D-Link DIR-600L CVE-2026-133993",
-                "Public exploit code now referenced"
-              ],
-              [
-                "Nexter Blocks Pro WordPress plugin CVE-2026-125294",
-                "Public exploit code now referenced"
               ]
             ]
           }
@@ -874,36 +1911,32 @@
     ],
     "references": [
       {
-        "label": "Idunno AntiCsrf vendor advisory",
-        "url": "https://github.com/mandiant/Vulnerability-Disclosures/blob/master/2026/MNDT-2026-0048.md"
+        "label": "CVE-2025-34035 NVD record",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-34035"
       },
       {
-        "label": "CVE-2026-131914 NVD record",
-        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-131914"
+        "label": "CVE-2026-133323 NVD record",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-133323"
       },
       {
-        "label": "CVE-2026-132165 NVD record",
-        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-132165"
+        "label": "CVE-2026-133469 NVD record",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-133469"
       },
       {
-        "label": "Optimizely Web Experimentation vendor advisory",
-        "url": "https://pages.optimizely.com/rs/947-RKE-048/images/Security%20Incident%20Report%20-%20Optimizely%20Web%20Experimentation%20-%20Nov%2017%202026.pdf"
+        "label": "Hewlett Packard Enterprise (HPE) Juniper Session Smart Conductor and Session Smart Router vendor advisory",
+        "url": "https://supportportal.juniper.net/JSA112183"
       },
       {
-        "label": "CVE-2026-132224 NVD record",
-        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-132224"
+        "label": "CVE-2026-103406 NVD record",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-103406"
       },
       {
-        "label": "CVE-2026-129514 NVD record",
-        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-129514"
+        "label": "CVE-2025-41450 NVD record",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-41450"
       },
       {
-        "label": "CVE-2026-134882 NVD record",
-        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-134882"
-      },
-      {
-        "label": "CVE-2026-120382 NVD record",
-        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120382"
+        "label": "CVE-2023-25915 NVD record",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-25915"
       },
       {
         "label": "CISA KEV catalog",
@@ -914,17 +1947,27 @@
         "url": "https://www.first.org/epss/"
       }
     ],
-    "footer": "Enterprise Cyber Threat Intelligence | 24 Nov 2026",
+    "footer": "Enterprise Cyber Threat Intelligence | 25 Nov 2026",
     "reviewedBy": null,
-    "generatedAt": "2026-11-24T20:57:10Z",
+    "generatedAt": "2026-11-25T20:19:42Z",
     "prioritized": [
-      "CVE-2026-131914",
-      "CVE-2026-132165",
-      "CVE-2026-132224",
-      "CVE-2026-129514",
-      "CVE-2026-134882",
-      "CVE-2026-120382",
-      "CVE-2026-135211"
+      "CVE-2025-34035",
+      "CVE-2026-133323",
+      "CVE-2026-133469",
+      "CVE-2026-103406",
+      "CVE-2025-41450",
+      "CVE-2023-25915",
+      "CVE-2023-25914",
+      "CVE-2025-49931",
+      "CVE-2026-3496",
+      "CVE-2026-133303",
+      "CVE-2026-133324",
+      "CVE-2026-133311",
+      "CVE-2026-133275",
+      "CVE-2026-133335",
+      "CVE-2026-135202",
+      "CVE-2026-136404",
+      "CVE-2026-136411"
     ]
   }
 }

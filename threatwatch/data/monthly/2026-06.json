@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "month": "2026-06",
   "complete": true,
-  "updatedAt": "2026-11-24T20:54:41Z",
+  "updatedAt": "2026-11-25T20:15:25Z",
   "metrics": [
     {
       "id": "kev_added",
@@ -11,7 +11,7 @@
       "rule": "CVE entries whose CISA dateAdded falls in the month.",
       "source": "CISA KEV",
       "window": "2026-06-01 to 2026-06-30 (dateAdded, ET calendar)",
-      "updatedAt": "2026-11-24T20:54:41Z"
+      "updatedAt": "2026-11-25T20:15:25Z"
     },
     {
       "id": "vendors",
@@ -20,7 +20,7 @@
       "rule": "Unique vendorProject values among the month’s KEV entries.",
       "source": "CISA KEV",
       "window": "2026-06-01 to 2026-06-30 (dateAdded, ET calendar)",
-      "updatedAt": "2026-11-24T20:54:41Z"
+      "updatedAt": "2026-11-25T20:15:25Z"
     },
     {
       "id": "ransomware",
@@ -29,16 +29,16 @@
       "rule": "Month’s KEV entries where CISA sets knownRansomwareCampaignUse = Known.",
       "source": "CISA KEV",
       "window": "2026-06-01 to 2026-06-30 (dateAdded, ET calendar)",
-      "updatedAt": "2026-11-24T20:54:41Z"
+      "updatedAt": "2026-11-25T20:15:25Z"
     },
     {
       "id": "epss90",
       "label": "EPSS ≥ 90th percentile",
-      "value": 19,
-      "rule": "Month’s KEV entries with EPSS percentile ≥ 0.90 (scores as of 2026-11-24).",
+      "value": 12,
+      "rule": "Month’s KEV entries with EPSS percentile ≥ 0.90 (scores as of 2026-11-25).",
       "source": "FIRST EPSS",
       "window": "2026-06-01 to 2026-06-30 (dateAdded, ET calendar)",
-      "updatedAt": "2026-11-24T20:54:41Z"
+      "updatedAt": "2026-11-25T20:15:25Z"
     }
   ],
   "notice": "These are CISA KEV catalog counts, not a count of total cyber incidents.",
@@ -50,7 +50,7 @@
       "product": "WebLogic Server",
       "concern": "Oracle WebLogic Server Unspecified Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.9949,
+      "epssPercentile": 0.91548,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -61,7 +61,7 @@
       "product": "Kernel",
       "concern": "Linux Kernel Improper Authentication Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.92931,
+      "epssPercentile": 0.8892,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -72,7 +72,7 @@
       "product": "Framework",
       "concern": "Android Framework Integer Overflow Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.8111,
+      "epssPercentile": 0.04351,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -83,7 +83,7 @@
       "product": "Mirasvit Full Page Cache Warmer",
       "concern": "Mirasvit Full Page Cache Warmer Deserialization of Untrusted Data Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.99666,
+      "epssPercentile": 0.97881,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -94,7 +94,7 @@
       "product": "Serv-U",
       "concern": "SolarWinds Serv-U Uncontrolled Resource Consumption Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.99753,
+      "epssPercentile": 0.97846,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -105,7 +105,7 @@
       "product": "LiteLLM",
       "concern": "BerriAI LiteLLM Command Injection Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.99814,
+      "epssPercentile": 0.95127,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -116,7 +116,7 @@
       "product": "Security Gateway",
       "concern": "Check Point Security Gateway Improper Authentication Vulnerability",
       "ransomware": "known",
-      "epssPercentile": 0.99721,
+      "epssPercentile": 0.94465,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -127,7 +127,7 @@
       "product": "Chromium V8",
       "concern": "Google Chromium V8 Out-of-Bounds Read and Write Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.84885,
+      "epssPercentile": 0.64554,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -138,7 +138,7 @@
       "product": "Catalyst SD-WAN Manager",
       "concern": "Cisco Catalyst SD-WAN Manager Improper Encoding or Escaping of Output Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.97973,
+      "epssPercentile": 0.68258,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -149,7 +149,7 @@
       "product": "Extensible Operating System",
       "concern": "Arista Extensible Operating System Incomplete Comparison with Missing Factors Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.66548,
+      "epssPercentile": 0.45719,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -160,7 +160,7 @@
       "product": "Sentry",
       "concern": "Ivanti Sentry OS Command Injection Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.99968,
+      "epssPercentile": 0.99374,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -171,7 +171,7 @@
       "product": "PeopleSoft Enterprise PeopleTools",
       "concern": "Oracle PeopleSoft Enterprise PeopleTools Missing Authentication for Critical Function Vulnerability",
       "ransomware": "known",
-      "epssPercentile": 0.99882,
+      "epssPercentile": 0.96154,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -182,7 +182,7 @@
       "product": "Catalyst SD-WAN Manager",
       "concern": "Cisco Catalyst SD-WAN Manager Directory or Path Traversal Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.98195,
+      "epssPercentile": 0.5723,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -193,7 +193,7 @@
       "product": "cPanel Plugin",
       "concern": "LiteSpeed cPanel Plugin UNIX Symbolic Link (Symlink) Following Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.73712,
+      "epssPercentile": 0.53651,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -204,7 +204,7 @@
       "product": "Joomla Content Editor",
       "concern": "Widget Factory Joomla Content Editor Improper Access Control Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.99724,
+      "epssPercentile": 0.9756,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -215,7 +215,7 @@
       "product": "Enterprise",
       "concern": "Splunk Enterprise Missing Authentication for Critical Function Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.99888,
+      "epssPercentile": 0.97402,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -226,7 +226,7 @@
       "product": "EDS5000",
       "concern": "Lantronix EDS5000 Code Injection Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.97627,
+      "epssPercentile": 0.85812,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -237,7 +237,7 @@
       "product": "UniFi OS",
       "concern": "Ubiquiti UniFi OS Improper Access Control Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.99779,
+      "epssPercentile": 0.97435,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -248,7 +248,7 @@
       "product": "UniFi OS",
       "concern": "Ubiquiti UniFi OS Path Traversal Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.99364,
+      "epssPercentile": 0.79335,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -259,7 +259,7 @@
       "product": "UniFi OS",
       "concern": "Ubiquiti UniFi OS Improper Input Validation Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.99794,
+      "epssPercentile": 0.99095,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -270,7 +270,7 @@
       "product": "Windchill and FlexPLM",
       "concern": "PTC Windchill and FlexPLM Improper Input Validation Vulnerability",
       "ransomware": "known",
-      "epssPercentile": 0.9883,
+      "epssPercentile": 0.76176,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -281,7 +281,7 @@
       "product": "Unified Communications Manager",
       "concern": "Cisco Unified Communications Manager Server-Side Request Forgery (SSRF) Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.99773,
+      "epssPercentile": 0.71529,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -292,7 +292,7 @@
       "product": "SimpleHelp",
       "concern": "SimpleHelp Authentication Bypass Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.99623,
+      "epssPercentile": 0.93914,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     }
@@ -317,7 +317,7 @@
         "blocks": [
           {
             "type": "p",
-            "text": "CISA added **23 vulnerabilities** to the KEV catalog in June 2026, spanning 18 vendors. CISA flags known ransomware use for 3 of them. The highest-likelihood additions by EPSS were **CVE-2026-10520 (Ivanti Sentry)** and **CVE-2026-20253 (Splunk Enterprise)**."
+            "text": "CISA added **23 vulnerabilities** to the KEV catalog in June 2026, spanning 18 vendors. CISA flags known ransomware use for 3 of them. The highest-likelihood additions by EPSS were **CVE-2026-10520 (Ivanti Sentry)** and **CVE-2026-34910 (Ubiquiti UniFi OS)**."
           },
           {
             "type": "table",
@@ -340,7 +340,7 @@
               ],
               [
                 "EPSS ≥ 90th percentile",
-                "19 of the month's KEV entries"
+                "12 of the month's KEV entries"
               ],
               [
                 "Exploited or zero-day outside KEV",
@@ -362,7 +362,7 @@
           },
           {
             "type": "p",
-            "text": "**Top five actions:** (1) Isolate or patch exposed Ivanti Sentry (CVE-2026-10520); (2) isolate or patch exposed Splunk Enterprise (CVE-2026-20253); (3) isolate or patch exposed Oracle PeopleSoft Enterprise PeopleTools (CVE-2026-35273); (4) isolate or patch exposed BerriAI LiteLLM (CVE-2026-42271); (5) examine Ivanti Sentry hosts for unexpected child processes and outbound connections."
+            "text": "**Top five actions:** (1) Isolate or patch exposed Ivanti Sentry (CVE-2026-10520); (2) isolate or patch exposed Ubiquiti UniFi OS (CVE-2026-34910); (3) isolate or patch exposed Mirasvit Full Page Cache Warmer (CVE-2026-45247); (4) isolate or patch exposed SolarWinds Serv-U (CVE-2026-28318); (5) examine Ivanti Sentry hosts for unexpected child processes and outbound connections."
           }
         ]
       },
@@ -388,46 +388,46 @@
                 "CISA KEV 2026-06-11; ENISA EUVD; EPSS 99th pct; public exploit"
               ],
               [
-                "CVE-2026-20253",
-                "Splunk Enterprise",
-                "missing authentication",
-                "CISA KEV 2026-06-18; ENISA EUVD; EPSS 99th pct; public exploit"
-              ],
-              [
-                "CVE-2026-35273",
-                "Oracle PeopleSoft Enterprise PeopleTools",
-                "missing authentication",
-                "CISA KEV 2026-06-12; ENISA EUVD; EPSS 99th pct; public exploit"
-              ],
-              [
-                "CVE-2026-42271",
-                "BerriAI LiteLLM",
-                "command injection",
-                "CISA KEV 2026-06-08; ENISA EUVD; EPSS 99th pct; public exploit"
-              ],
-              [
                 "CVE-2026-34910",
                 "Ubiquiti UniFi OS",
                 "command injection",
                 "CISA KEV 2026-06-23; ENISA EUVD; EPSS 99th pct; public exploit"
               ],
               [
-                "CVE-2026-34908",
-                "Ubiquiti UniFi OS",
-                "improper access control",
-                "CISA KEV 2026-06-23; ENISA EUVD; EPSS 99th pct; public exploit"
-              ],
-              [
-                "CVE-2026-20230",
-                "Cisco Unified Communications Manager",
-                "server-side request forgery",
-                "CISA KEV 2026-06-25; ENISA EUVD; EPSS 99th pct; public exploit"
+                "CVE-2026-45247",
+                "Mirasvit Full Page Cache Warmer",
+                "unsafe deserialization",
+                "CISA KEV 2026-06-03; ENISA EUVD; EPSS 97th pct; public exploit"
               ],
               [
                 "CVE-2026-28318",
                 "SolarWinds Serv-U",
                 "resource exhaustion",
-                "CISA KEV 2026-06-05; ENISA EUVD; EPSS 99th pct; public exploit"
+                "CISA KEV 2026-06-05; ENISA EUVD; EPSS 97th pct; public exploit"
+              ],
+              [
+                "CVE-2026-48907",
+                "Widget Factory Joomla Content Editor",
+                "improper access control",
+                "CISA KEV 2026-06-16; ENISA EUVD; EPSS 97th pct; public exploit"
+              ],
+              [
+                "CVE-2026-34908",
+                "Ubiquiti UniFi OS",
+                "improper access control",
+                "CISA KEV 2026-06-23; ENISA EUVD; EPSS 97th pct; public exploit"
+              ],
+              [
+                "CVE-2026-20253",
+                "Splunk Enterprise",
+                "missing authentication",
+                "CISA KEV 2026-06-18; ENISA EUVD; EPSS 97th pct; public exploit"
+              ],
+              [
+                "CVE-2026-35273",
+                "Oracle PeopleSoft Enterprise PeopleTools",
+                "missing authentication",
+                "CISA KEV 2026-06-12; ENISA EUVD; EPSS 96th pct; public exploit"
               ]
             ]
           },
@@ -437,11 +437,11 @@
           },
           {
             "type": "p",
-            "text": "**CVE-2026-20253 - Splunk Enterprise missing authentication (CVSS 9.8).** In Splunk Enterprise 10.2 versions below 10.2.4 and 10 versions below 10.0.7, an unauthenticated user could create or truncate arbitrary files through a PostgreSQL sidecar service endpoint. Fixed version (first unaffected release per NVD ranges): splunk 10.0.7, splunk 10.2.4. Attack path: network-accessible; no authentication required; no user interaction required."
+            "text": "**CVE-2026-34910 - Ubiquiti UniFi OS command injection (CVSS 10).** A malicious actor with access to the network could exploit an Improper Input Validation vulnerability found in UniFi OS devices to execute a Command Injection. Fixed version (first unaffected release per NVD ranges): unifi os server 5.0.8, unifi cloud gateway industrial firmware 5.1.12, unifi dream machine firmware 5.1.12, unifi dream machine pro firmware 5.1.12. Attack path: network-accessible; no authentication required; no user interaction required."
           },
           {
             "type": "p",
-            "text": "**CVE-2026-35273 - Oracle PeopleSoft Enterprise PeopleTools missing authentication (CVSS 9.8).** Vulnerability in the PeopleSoft Enterprise PeopleTools product of Oracle PeopleSoft (component: Updates Environment Management). Supported versions that are affected are 8.61 and 8.62. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise PeopleSoft Enterprise PeopleTools. Fixed package release: not mapped in NVD ranges; 1 vendor patch or advisory reference available. Attack path: network-accessible; no authentication required; no user interaction required."
+            "text": "**CVE-2026-45247 - Mirasvit Full Page Cache Warmer unsafe deserialization (CVSS 9.3).** Mirasvit Full Page Cache Warmer for Magento 2 before version 1.11.12 contains a PHP object injection vulnerability that allows unauthenticated attackers to achieve remote code execution by supplying a crafted serialized PHP object in the CacheWarmer cookie. Fixed version (first unaffected release per NVD ranges): full page cache warmer 1.11.12. Attack path: network-accessible; no authentication required; no user interaction required."
           }
         ]
       },
@@ -544,31 +544,31 @@
             "rows": [
               [
                 "Healthcare / medical imaging",
-                "Possible BerriAI LiteLLM, Cisco Unified Communications Manager and Ivanti Sentry exposure; targeting unknown"
+                "Possible Ivanti Sentry, Mirasvit Full Page Cache Warmer and Oracle PeopleSoft Enterprise PeopleTools exposure; targeting unknown"
               ],
               [
                 "Education / research",
-                "Possible BerriAI LiteLLM, Cisco Unified Communications Manager and Ivanti Sentry exposure; targeting unknown"
+                "Possible Ivanti Sentry, Mirasvit Full Page Cache Warmer and Oracle PeopleSoft Enterprise PeopleTools exposure; targeting unknown"
               ],
               [
                 "Technology / software",
-                "Potential BerriAI LiteLLM, Cisco Unified Communications Manager, Ivanti Sentry and Oracle PeopleSoft Enterprise PeopleTools dependency exposure"
+                "Potential Ivanti Sentry, Mirasvit Full Page Cache Warmer, Oracle PeopleSoft Enterprise PeopleTools and SolarWinds Serv-U dependency exposure"
               ],
               [
                 "Government / defense",
-                "Possible BerriAI LiteLLM, Cisco Unified Communications Manager and Ivanti Sentry exposure; no new sector-specific targeting confirmed"
+                "Possible Ivanti Sentry, Mirasvit Full Page Cache Warmer and Oracle PeopleSoft Enterprise PeopleTools exposure; no new sector-specific targeting confirmed"
               ],
               [
                 "Financial services",
-                "Possible BerriAI LiteLLM, Cisco Unified Communications Manager and Ivanti Sentry exposure; targeting unknown"
+                "Possible Ivanti Sentry, Mirasvit Full Page Cache Warmer and Oracle PeopleSoft Enterprise PeopleTools exposure; targeting unknown"
               ],
               [
                 "Manufacturing / energy / utilities",
-                "Possible BerriAI LiteLLM, Cisco Unified Communications Manager and Ivanti Sentry exposure; targeting unknown"
+                "Possible Ivanti Sentry, Mirasvit Full Page Cache Warmer and Oracle PeopleSoft Enterprise PeopleTools exposure; targeting unknown"
               ],
               [
                 "Retail / transportation",
-                "BerriAI LiteLLM relevant to this sector; confirmed sector targeting not established"
+                "Mirasvit Full Page Cache Warmer relevant to this sector; confirmed sector targeting not established"
               ]
             ]
           },
@@ -789,20 +789,16 @@
         "url": "https://hub.ivanti.com/s/article/Security-Advisory-Ivanti-Sentry-CVE-2026-10520-CVE-2026-10523?language=en_US"
       },
       {
-        "label": "Splunk Enterprise vendor advisory",
-        "url": "https://advisory.splunk.com/advisories/SVD-2026-0603"
-      },
-      {
-        "label": "Oracle PeopleSoft Enterprise PeopleTools vendor advisory",
-        "url": "https://www.oracle.com/security-alerts/alert-cve-2026-35273.html"
-      },
-      {
-        "label": "BerriAI LiteLLM vendor advisory",
-        "url": "https://github.com/BerriAI/litellm/security/advisories/GHSA-v4p8-mg3p-g94g"
-      },
-      {
         "label": "Ubiquiti UniFi OS vendor advisory",
         "url": "https://community.ui.com/releases/Security-Advisory-Bulletin-064-064/84811c09-4cf4-42ab-bd61-cc994445963b"
+      },
+      {
+        "label": "SolarWinds Serv-U vendor advisory",
+        "url": "https://www.solarwinds.com/trust-center/security-advisories/CVE-2026-28318"
+      },
+      {
+        "label": "Widget Factory Joomla Content Editor vendor advisory",
+        "url": "https://www.joomlacontenteditor.net/news/jce-security-update-and-a-free-patch-for-older-sites"
       },
       {
         "label": "CISA KEV catalog",
@@ -814,6 +810,6 @@
       }
     ],
     "footer": "Enterprise Cyber Threat Intelligence | June 2026",
-    "generatedAt": "2026-11-24T20:57:11Z"
+    "generatedAt": "2026-11-25T20:19:42Z"
   }
 }
