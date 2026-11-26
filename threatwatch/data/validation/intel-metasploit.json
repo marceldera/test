@@ -1,6 +1,6 @@
 {
   "source": "Metasploit module metadata",
-  "count": 548,
+  "count": 549,
   "data": {
     "CVE-2020-1472": [
       {
@@ -388,7 +388,7 @@
         "url": "https://github.com/rapid7/metasploit-framework/blob/master/modules/auxiliary/admin/sap/cve_2020_6287_ws_add_user.rb"
       }
     ],
-    "CVE-2017-0146": [
+    "CVE-2017-0147": [
       {
         "name": "MS17-010 EternalRomance/EternalSynergy/EternalChampion SMB Remote Windows Command Execution",
         "module": "auxiliary/admin/smb/ms17_010_command",
@@ -482,7 +482,7 @@
         "url": "https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/windows/smb/smb_doublepulsar_rce.rb"
       }
     ],
-    "CVE-2017-0147": [
+    "CVE-2017-0146": [
       {
         "name": "MS17-010 EternalRomance/EternalSynergy/EternalChampion SMB Remote Windows Command Execution",
         "module": "auxiliary/admin/smb/ms17_010_command",
@@ -911,7 +911,7 @@
         "url": "https://github.com/rapid7/metasploit-framework/blob/master/modules/auxiliary/gather/qnap_lfi.rb"
       }
     ],
-    "CVE-2019-7195": [
+    "CVE-2019-7194": [
       {
         "name": "QNAP QTS and Photo Station Local File Inclusion",
         "module": "auxiliary/gather/qnap_lfi",
@@ -922,7 +922,7 @@
         "url": "https://github.com/rapid7/metasploit-framework/blob/master/modules/auxiliary/gather/qnap_lfi.rb"
       }
     ],
-    "CVE-2019-7194": [
+    "CVE-2019-7195": [
       {
         "name": "QNAP QTS and Photo Station Local File Inclusion",
         "module": "auxiliary/gather/qnap_lfi",
@@ -955,7 +955,7 @@
         "url": "https://github.com/rapid7/metasploit-framework/blob/master/modules/auxiliary/gather/roundcube_auth_file_read.rb"
       }
     ],
-    "CVE-2020-11652": [
+    "CVE-2020-11651": [
       {
         "name": "SaltStack Salt Master Server Root Key Disclosure",
         "module": "auxiliary/gather/saltstack_salt_root_key",
@@ -975,7 +975,7 @@
         "url": "https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/linux/misc/saltstack_salt_unauth_rce.rb"
       }
     ],
-    "CVE-2020-11651": [
+    "CVE-2020-11652": [
       {
         "name": "SaltStack Salt Master Server Root Key Disclosure",
         "module": "auxiliary/gather/saltstack_salt_root_key",
@@ -1072,35 +1072,6 @@
         "url": "https://github.com/rapid7/metasploit-framework/blob/master/modules/auxiliary/scanner/http/apache_flink_jobmanager_traversal.rb"
       }
     ],
-    "CVE-2014-6278": [
-      {
-        "name": "Apache mod_cgi Bash Environment Variable Injection (Shellshock) Scanner",
-        "module": "auxiliary/scanner/http/apache_mod_cgi_bash_env",
-        "type": "auxiliary",
-        "rank": "normal",
-        "check": true,
-        "disclosed": "2014-09-24",
-        "url": "https://github.com/rapid7/metasploit-framework/blob/master/modules/auxiliary/scanner/http/apache_mod_cgi_bash_env.rb"
-      },
-      {
-        "name": "Apache mod_cgi Bash Environment Variable Code Injection (Shellshock)",
-        "module": "exploit/multi/http/apache_mod_cgi_bash_env_exec",
-        "type": "exploit",
-        "rank": "excellent",
-        "check": true,
-        "disclosed": "2014-09-24",
-        "url": "https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/multi/http/apache_mod_cgi_bash_env_exec.rb"
-      },
-      {
-        "name": "CUPS Filter Bash Environment Variable Code Injection (Shellshock)",
-        "module": "exploit/multi/http/cups_bash_env_exec",
-        "type": "exploit",
-        "rank": "excellent",
-        "check": true,
-        "disclosed": "2014-09-24",
-        "url": "https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/multi/http/cups_bash_env_exec.rb"
-      }
-    ],
     "CVE-2014-6271": [
       {
         "name": "Apache mod_cgi Bash Environment Variable Injection (Shellshock) Scanner",
@@ -1191,6 +1162,35 @@
         "check": false,
         "disclosed": "2014-09-24",
         "url": "https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/unix/smtp/qmail_bash_env_exec.rb"
+      }
+    ],
+    "CVE-2014-6278": [
+      {
+        "name": "Apache mod_cgi Bash Environment Variable Injection (Shellshock) Scanner",
+        "module": "auxiliary/scanner/http/apache_mod_cgi_bash_env",
+        "type": "auxiliary",
+        "rank": "normal",
+        "check": true,
+        "disclosed": "2014-09-24",
+        "url": "https://github.com/rapid7/metasploit-framework/blob/master/modules/auxiliary/scanner/http/apache_mod_cgi_bash_env.rb"
+      },
+      {
+        "name": "Apache mod_cgi Bash Environment Variable Code Injection (Shellshock)",
+        "module": "exploit/multi/http/apache_mod_cgi_bash_env_exec",
+        "type": "exploit",
+        "rank": "excellent",
+        "check": true,
+        "disclosed": "2014-09-24",
+        "url": "https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/multi/http/apache_mod_cgi_bash_env_exec.rb"
+      },
+      {
+        "name": "CUPS Filter Bash Environment Variable Code Injection (Shellshock)",
+        "module": "exploit/multi/http/cups_bash_env_exec",
+        "type": "exploit",
+        "rank": "excellent",
+        "check": true,
+        "disclosed": "2014-09-24",
+        "url": "https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/multi/http/cups_bash_env_exec.rb"
       }
     ],
     "CVE-2026-119618": [
@@ -1516,7 +1516,7 @@
         "url": "https://github.com/rapid7/metasploit-framework/blob/master/modules/auxiliary/scanner/http/tvt_nvms_traversal.rb"
       }
     ],
-    "CVE-2026-63030": [
+    "CVE-2026-60137": [
       {
         "name": "WordPress Core wp2shell Unauthenticated SQL Injection via REST Batch Route Confusion",
         "module": "auxiliary/scanner/http/wordpress_wp2shell_sqli",
@@ -1536,7 +1536,7 @@
         "url": "https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/multi/http/wp_batch_desync_rce.rb"
       }
     ],
-    "CVE-2026-60137": [
+    "CVE-2026-63030": [
       {
         "name": "WordPress Core wp2shell Unauthenticated SQL Injection via REST Batch Route Confusion",
         "module": "auxiliary/scanner/http/wordpress_wp2shell_sqli",
@@ -1660,7 +1660,7 @@
         "url": "https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/windows/smb/smb_doublepulsar_rce.rb"
       }
     ],
-    "CVE-2017-0145": [
+    "CVE-2017-0148": [
       {
         "name": "MS17-010 SMB RCE Detection",
         "module": "auxiliary/scanner/smb/smb_ms17_010",
@@ -1689,7 +1689,7 @@
         "url": "https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/windows/smb/smb_doublepulsar_rce.rb"
       }
     ],
-    "CVE-2017-0148": [
+    "CVE-2017-0145": [
       {
         "name": "MS17-010 SMB RCE Detection",
         "module": "auxiliary/scanner/smb/smb_ms17_010",
@@ -2022,7 +2022,7 @@
         "url": "https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/linux/http/cisco_fmc_auth_bypass_rce.rb"
       }
     ],
-    "CVE-2021-1497": [
+    "CVE-2021-1498": [
       {
         "name": "Cisco HyperFlex HX Data Platform Command Execution",
         "module": "exploit/linux/http/cisco_hyperflex_hx_data_platform_cmd_exec",
@@ -2033,7 +2033,7 @@
         "url": "https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/linux/http/cisco_hyperflex_hx_data_platform_cmd_exec.rb"
       }
     ],
-    "CVE-2021-1498": [
+    "CVE-2021-1497": [
       {
         "name": "Cisco HyperFlex HX Data Platform Command Execution",
         "module": "exploit/linux/http/cisco_hyperflex_hx_data_platform_cmd_exec",
@@ -2306,6 +2306,17 @@
         "url": "https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/linux/http/ibm_drm_rce.rb"
       }
     ],
+    "CVE-2023-46805": [
+      {
+        "name": "Ivanti Connect Secure Unauthenticated Remote Code Execution",
+        "module": "exploit/linux/http/ivanti_connect_secure_rce_cve_2023_46805",
+        "type": "exploit",
+        "rank": "excellent",
+        "check": true,
+        "disclosed": "2024-01-10",
+        "url": "https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/linux/http/ivanti_connect_secure_rce_cve_2023_46805.rb"
+      }
+    ],
     "CVE-2024-21887": [
       {
         "name": "Ivanti Connect Secure Unauthenticated Remote Code Execution",
@@ -2324,17 +2335,6 @@
         "check": true,
         "disclosed": "2024-01-31",
         "url": "https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/linux/http/ivanti_connect_secure_rce_cve_2024_21893.rb"
-      }
-    ],
-    "CVE-2023-46805": [
-      {
-        "name": "Ivanti Connect Secure Unauthenticated Remote Code Execution",
-        "module": "exploit/linux/http/ivanti_connect_secure_rce_cve_2023_46805",
-        "type": "exploit",
-        "rank": "excellent",
-        "check": true,
-        "disclosed": "2024-01-10",
-        "url": "https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/linux/http/ivanti_connect_secure_rce_cve_2023_46805.rb"
       }
     ],
     "CVE-2024-21893": [
@@ -2480,7 +2480,7 @@
         "url": "https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/linux/http/nable_ncentral_unauth_rce_cve_2026_86218.rb"
       }
     ],
-    "CVE-2021-25298": [
+    "CVE-2021-25297": [
       {
         "name": "Nagios XI 5.5.6 to 5.7.5 - ConfigWizards Authenticated Remote Code Exection",
         "module": "exploit/linux/http/nagios_xi_configwizards_authenticated_rce",
@@ -2491,7 +2491,7 @@
         "url": "https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/linux/http/nagios_xi_configwizards_authenticated_rce.rb"
       }
     ],
-    "CVE-2021-25297": [
+    "CVE-2021-25298": [
       {
         "name": "Nagios XI 5.5.6 to 5.7.5 - ConfigWizards Authenticated Remote Code Exection",
         "module": "exploit/linux/http/nagios_xi_configwizards_authenticated_rce",
@@ -2786,7 +2786,7 @@
         "url": "https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/linux/http/trueonline_p660hn_v1_rce.rb"
       }
     ],
-    "CVE-2020-5849": [
+    "CVE-2020-5847": [
       {
         "name": "Unraid 6.8.0 Auth Bypass PHP Code Execution",
         "module": "exploit/linux/http/unraid_auth_bypass_exec",
@@ -2797,7 +2797,7 @@
         "url": "https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/linux/http/unraid_auth_bypass_exec.rb"
       }
     ],
-    "CVE-2020-5847": [
+    "CVE-2020-5849": [
       {
         "name": "Unraid 6.8.0 Auth Bypass PHP Code Execution",
         "module": "exploit/linux/http/unraid_auth_bypass_exec",
@@ -2951,7 +2951,7 @@
         "url": "https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/linux/http/zimbra_mboximport_cve_2022_27925.rb"
       }
     ],
-    "CVE-2019-9670": [
+    "CVE-2019-9621": [
       {
         "name": "Zimbra Collaboration Autodiscover Servlet XXE and ProxyServlet SSRF",
         "module": "exploit/linux/http/zimbra_xxe_rce",
@@ -2962,7 +2962,7 @@
         "url": "https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/linux/http/zimbra_xxe_rce.rb"
       }
     ],
-    "CVE-2019-9621": [
+    "CVE-2019-9670": [
       {
         "name": "Zimbra Collaboration Autodiscover Servlet XXE and ProxyServlet SSRF",
         "module": "exploit/linux/http/zimbra_xxe_rce",
@@ -3303,6 +3303,17 @@
         "url": "https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/linux/smtp/barracuda_esg_tarfile_rce.rb"
       }
     ],
+    "CVE-2026-123158": [
+      {
+        "name": "OpenSSH musl-libc crypt() Authentication Bypass",
+        "module": "exploit/linux/ssh/openssh_musl_crypt_bypass",
+        "type": "exploit",
+        "rank": "excellent",
+        "check": true,
+        "disclosed": "2026-11-05",
+        "url": "https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/linux/ssh/openssh_musl_crypt_bypass.rb"
+      }
+    ],
     "CVE-2025-32433": [
       {
         "name": "Erlang OTP Pre-Auth RCE Scanner and Exploit",
@@ -3631,7 +3642,7 @@
         "url": "https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/multi/http/apache_couchdb_erlang_rce.rb"
       }
     ],
-    "CVE-2024-38856": [
+    "CVE-2024-32113": [
       {
         "name": "Apache OFBiz forgotPassword/ProgramExport RCE",
         "module": "exploit/multi/http/apache_ofbiz_forgot_password_directory_traversal",
@@ -3642,7 +3653,7 @@
         "url": "https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/multi/http/apache_ofbiz_forgot_password_directory_traversal.rb"
       }
     ],
-    "CVE-2024-32113": [
+    "CVE-2024-38856": [
       {
         "name": "Apache OFBiz forgotPassword/ProgramExport RCE",
         "module": "exploit/multi/http/apache_ofbiz_forgot_password_directory_traversal",
@@ -3763,7 +3774,7 @@
         "url": "https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/multi/http/confluence_widget_connector.rb"
       }
     ],
-    "CVE-2024-1709": [
+    "CVE-2024-1708": [
       {
         "name": "ConnectWise ScreenConnect Unauthenticated Remote Code Execution",
         "module": "exploit/multi/http/connectwise_screenconnect_rce_cve_2024_1709",
@@ -3774,7 +3785,7 @@
         "url": "https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/multi/http/connectwise_screenconnect_rce_cve_2024_1709.rb"
       }
     ],
-    "CVE-2024-1708": [
+    "CVE-2024-1709": [
       {
         "name": "ConnectWise ScreenConnect Unauthenticated Remote Code Execution",
         "module": "exploit/multi/http/connectwise_screenconnect_rce_cve_2024_1709",
@@ -3851,6 +3862,17 @@
         "url": "https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/multi/http/gitlab_cicd_regexp_rce_cve_2026_97229.rb"
       }
     ],
+    "CVE-2021-22205": [
+      {
+        "name": "GitLab Unauthenticated Remote ExifTool Command Injection",
+        "module": "exploit/multi/http/gitlab_exif_rce",
+        "type": "exploit",
+        "rank": "excellent",
+        "check": true,
+        "disclosed": "2021-04-14",
+        "url": "https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/multi/http/gitlab_exif_rce.rb"
+      }
+    ],
     "CVE-2021-22204": [
       {
         "name": "GitLab Unauthenticated Remote ExifTool Command Injection",
@@ -3871,15 +3893,15 @@
         "url": "https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/unix/fileformat/exiftool_djvu_ant_perl_injection.rb"
       }
     ],
-    "CVE-2021-22205": [
+    "CVE-2025-4427": [
       {
-        "name": "GitLab Unauthenticated Remote ExifTool Command Injection",
-        "module": "exploit/multi/http/gitlab_exif_rce",
+        "name": "Ivanti EPMM Authentication Bypass for Expression Language Remote Code Execution",
+        "module": "exploit/multi/http/ivanti_epmm_rce_cve_2025_4427_4428",
         "type": "exploit",
         "rank": "excellent",
         "check": true,
-        "disclosed": "2021-04-14",
-        "url": "https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/multi/http/gitlab_exif_rce.rb"
+        "disclosed": "2025-05-13",
+        "url": "https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/multi/http/ivanti_epmm_rce_cve_2025_4427_4428.rb"
       }
     ],
     "CVE-2025-4428": [
@@ -3893,18 +3915,7 @@
         "url": "https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/multi/http/ivanti_epmm_rce_cve_2025_4427_4428.rb"
       }
     ],
-    "CVE-2025-4427": [
-      {
-        "name": "Ivanti EPMM Authentication Bypass for Expression Language Remote Code Execution",
-        "module": "exploit/multi/http/ivanti_epmm_rce_cve_2025_4427_4428",
-        "type": "exploit",
-        "rank": "excellent",
-        "check": true,
-        "disclosed": "2025-05-13",
-        "url": "https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/multi/http/ivanti_epmm_rce_cve_2025_4427_4428.rb"
-      }
-    ],
-    "CVE-2018-1000861": [
+    "CVE-2019-1003029": [
       {
         "name": "Jenkins ACL Bypass and Metaprogramming RCE",
         "module": "exploit/multi/http/jenkins_metaprogramming",
@@ -3915,7 +3926,7 @@
         "url": "https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/multi/http/jenkins_metaprogramming.rb"
       }
     ],
-    "CVE-2019-1003029": [
+    "CVE-2018-1000861": [
       {
         "name": "Jenkins ACL Bypass and Metaprogramming RCE",
         "module": "exploit/multi/http/jenkins_metaprogramming",
@@ -4613,6 +4624,17 @@
         "url": "https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/multi/http/vmware_vcenter_uploadova_rce.rb"
       }
     ],
+    "CVE-2020-14882": [
+      {
+        "name": "Oracle WebLogic Server Administration Console Handle RCE",
+        "module": "exploit/multi/http/weblogic_admin_handle_rce",
+        "type": "exploit",
+        "rank": "excellent",
+        "check": true,
+        "disclosed": "2020-10-20",
+        "url": "https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/multi/http/weblogic_admin_handle_rce.rb"
+      }
+    ],
     "CVE-2020-14750": [
       {
         "name": "Oracle WebLogic Server Administration Console Handle RCE",
@@ -4625,17 +4647,6 @@
       }
     ],
     "CVE-2020-14883": [
-      {
-        "name": "Oracle WebLogic Server Administration Console Handle RCE",
-        "module": "exploit/multi/http/weblogic_admin_handle_rce",
-        "type": "exploit",
-        "rank": "excellent",
-        "check": true,
-        "disclosed": "2020-10-20",
-        "url": "https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/multi/http/weblogic_admin_handle_rce.rb"
-      }
-    ],
-    "CVE-2020-14882": [
       {
         "name": "Oracle WebLogic Server Administration Console Handle RCE",
         "module": "exploit/multi/http/weblogic_admin_handle_rce",
@@ -4798,17 +4809,6 @@
         "url": "https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/multi/php/ignition_laravel_debug_rce.rb"
       }
     ],
-    "CVE-2021-27878": [
-      {
-        "name": "Veritas Backup Exec Agent Remote Code Execution",
-        "module": "exploit/multi/veritas/beagent_sha_auth_rce",
-        "type": "exploit",
-        "rank": "excellent",
-        "check": true,
-        "disclosed": "2021-03-01",
-        "url": "https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/multi/veritas/beagent_sha_auth_rce.rb"
-      }
-    ],
     "CVE-2021-27876": [
       {
         "name": "Veritas Backup Exec Agent Remote Code Execution",
@@ -4821,6 +4821,17 @@
       }
     ],
     "CVE-2021-27877": [
+      {
+        "name": "Veritas Backup Exec Agent Remote Code Execution",
+        "module": "exploit/multi/veritas/beagent_sha_auth_rce",
+        "type": "exploit",
+        "rank": "excellent",
+        "check": true,
+        "disclosed": "2021-03-01",
+        "url": "https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/multi/veritas/beagent_sha_auth_rce.rb"
+      }
+    ],
+    "CVE-2021-27878": [
       {
         "name": "Veritas Backup Exec Agent Remote Code Execution",
         "module": "exploit/multi/veritas/beagent_sha_auth_rce",
@@ -5029,7 +5040,7 @@
         "url": "https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/unix/smtp/cisco_secure_email_gateway_smime_sqli_rce.rb"
       }
     ],
-    "CVE-2010-4344": [
+    "CVE-2010-4345": [
       {
         "name": "Exim4 string_format Function Heap Buffer Overflow",
         "module": "exploit/unix/smtp/exim4_string_format",
@@ -5040,7 +5051,7 @@
         "url": "https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/unix/smtp/exim4_string_format.rb"
       }
     ],
-    "CVE-2010-4345": [
+    "CVE-2010-4344": [
       {
         "name": "Exim4 string_format Function Heap Buffer Overflow",
         "module": "exploit/unix/smtp/exim4_string_format",
@@ -5062,7 +5073,7 @@
         "url": "https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/unix/smtp/opensmtpd_mail_from_rce.rb"
       }
     ],
-    "CVE-2024-51378": [
+    "CVE-2024-51567": [
       {
         "name": "CyberPanel Multi CVE Pre-auth RCE",
         "module": "exploit/unix/webapp/cyberpanel_preauth_rce_multi_cve",
@@ -5073,7 +5084,7 @@
         "url": "https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/unix/webapp/cyberpanel_preauth_rce_multi_cve.rb"
       }
     ],
-    "CVE-2024-51567": [
+    "CVE-2024-51378": [
       {
         "name": "CyberPanel Multi CVE Pre-auth RCE",
         "module": "exploit/unix/webapp/cyberpanel_preauth_rce_multi_cve",
@@ -5128,7 +5139,7 @@
         "url": "https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/unix/webapp/phpmyadmin_config.rb"
       }
     ],
-    "CVE-2018-20062": [
+    "CVE-2019-9082": [
       {
         "name": "ThinkPHP Multiple PHP Injection RCEs",
         "module": "exploit/unix/webapp/thinkphp_rce",
@@ -5139,7 +5150,7 @@
         "url": "https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/unix/webapp/thinkphp_rce.rb"
       }
     ],
-    "CVE-2019-9082": [
+    "CVE-2018-20062": [
       {
         "name": "ThinkPHP Multiple PHP Injection RCEs",
         "module": "exploit/unix/webapp/thinkphp_rce",
@@ -5627,7 +5638,7 @@
         "url": "https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/windows/browser/msxml_get_definition_code_exec.rb"
       }
     ],
-    "CVE-2021-1675": [
+    "CVE-2021-34527": [
       {
         "name": "Print Spooler Remote DLL Injection",
         "module": "exploit/windows/dcerpc/cve_2021_1675_printnightmare",
@@ -5638,7 +5649,7 @@
         "url": "https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/windows/dcerpc/cve_2021_1675_printnightmare.rb"
       }
     ],
-    "CVE-2021-34527": [
+    "CVE-2021-1675": [
       {
         "name": "Print Spooler Remote DLL Injection",
         "module": "exploit/windows/dcerpc/cve_2021_1675_printnightmare",
@@ -5975,17 +5986,6 @@
         "url": "https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/windows/http/exchange_proxylogon_rce.rb"
       }
     ],
-    "CVE-2022-41082": [
-      {
-        "name": "Microsoft Exchange ProxyNotShell RCE",
-        "module": "exploit/windows/http/exchange_proxynotshell_rce",
-        "type": "exploit",
-        "rank": "excellent",
-        "check": true,
-        "disclosed": "2022-09-28",
-        "url": "https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/windows/http/exchange_proxynotshell_rce.rb"
-      }
-    ],
     "CVE-2022-41040": [
       {
         "name": "Microsoft Exchange ProxyNotShell RCE",
@@ -5997,15 +5997,15 @@
         "url": "https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/windows/http/exchange_proxynotshell_rce.rb"
       }
     ],
-    "CVE-2021-34473": [
+    "CVE-2022-41082": [
       {
-        "name": "Microsoft Exchange ProxyShell RCE",
-        "module": "exploit/windows/http/exchange_proxyshell_rce",
+        "name": "Microsoft Exchange ProxyNotShell RCE",
+        "module": "exploit/windows/http/exchange_proxynotshell_rce",
         "type": "exploit",
         "rank": "excellent",
         "check": true,
-        "disclosed": "2021-04-06",
-        "url": "https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/windows/http/exchange_proxyshell_rce.rb"
+        "disclosed": "2022-09-28",
+        "url": "https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/windows/http/exchange_proxynotshell_rce.rb"
       }
     ],
     "CVE-2021-31207": [
@@ -6020,6 +6020,17 @@
       }
     ],
     "CVE-2021-34523": [
+      {
+        "name": "Microsoft Exchange ProxyShell RCE",
+        "module": "exploit/windows/http/exchange_proxyshell_rce",
+        "type": "exploit",
+        "rank": "excellent",
+        "check": true,
+        "disclosed": "2021-04-06",
+        "url": "https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/windows/http/exchange_proxyshell_rce.rb"
+      }
+    ],
+    "CVE-2021-34473": [
       {
         "name": "Microsoft Exchange ProxyShell RCE",
         "module": "exploit/windows/http/exchange_proxyshell_rce",
@@ -6206,7 +6217,7 @@
         "url": "https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/windows/http/sharepoint_data_deserialization.rb"
       }
     ],
-    "CVE-2023-24955": [
+    "CVE-2023-29357": [
       {
         "name": "Sharepoint Dynamic Proxy Generator Unauth RCE",
         "module": "exploit/windows/http/sharepoint_dynamic_proxy_generator_auth_bypass_rce",
@@ -6217,7 +6228,7 @@
         "url": "https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/windows/http/sharepoint_dynamic_proxy_generator_auth_bypass_rce.rb"
       }
     ],
-    "CVE-2023-29357": [
+    "CVE-2023-24955": [
       {
         "name": "Sharepoint Dynamic Proxy Generator Unauth RCE",
         "module": "exploit/windows/http/sharepoint_dynamic_proxy_generator_auth_bypass_rce",
@@ -6239,7 +6250,7 @@
         "url": "https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/windows/http/sharepoint_toolpane_rce.rb"
       }
     ],
-    "CVE-2025-53770": [
+    "CVE-2025-49704": [
       {
         "name": "Microsoft SharePoint Server ToolPane Unauthenticated Remote Code Execution (aka ToolShell)",
         "module": "exploit/windows/http/sharepoint_toolpane_rce",
@@ -6250,7 +6261,7 @@
         "url": "https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/windows/http/sharepoint_toolpane_rce.rb"
       }
     ],
-    "CVE-2025-49704": [
+    "CVE-2025-53770": [
       {
         "name": "Microsoft SharePoint Server ToolPane Unauthenticated Remote Code Execution (aka ToolShell)",
         "module": "exploit/windows/http/sharepoint_toolpane_rce",
@@ -6294,7 +6305,7 @@
         "url": "https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/windows/http/ssrs_navcorrector_viewstate.rb"
       }
     ],
-    "CVE-2019-18935": [
+    "CVE-2017-11317": [
       {
         "name": "Telerik UI ASP.NET AJAX RadAsyncUpload Deserialization",
         "module": "exploit/windows/http/telerik_rau_deserialization",
@@ -6305,7 +6316,7 @@
         "url": "https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/windows/http/telerik_rau_deserialization.rb"
       }
     ],
-    "CVE-2017-11317": [
+    "CVE-2019-18935": [
       {
         "name": "Telerik UI ASP.NET AJAX RadAsyncUpload Deserialization",
         "module": "exploit/windows/http/telerik_rau_deserialization",
@@ -6404,7 +6415,7 @@
         "url": "https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/windows/local/appxsvc_hard_link_privesc.rb"
       }
     ],
-    "CVE-2019-1322": [
+    "CVE-2019-1405": [
       {
         "name": "Microsoft UPnP Local Privilege Elevation Vulnerability",
         "module": "exploit/windows/local/comahawk",
@@ -6415,7 +6426,7 @@
         "url": "https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/windows/local/comahawk.rb"
       }
     ],
-    "CVE-2019-1405": [
+    "CVE-2019-1322": [
       {
         "name": "Microsoft UPnP Local Privilege Elevation Vulnerability",
         "module": "exploit/windows/local/comahawk",
@@ -6512,7 +6523,7 @@
         "url": "https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/windows/local/cve_2021_40449.rb"
       }
     ],
-    "CVE-2021-1732": [
+    "CVE-2022-21882": [
       {
         "name": "Win32k ConsoleControl Offset Confusion",
         "module": "exploit/windows/local/cve_2022_21882_win32k",
@@ -6523,7 +6534,7 @@
         "url": "https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/windows/local/cve_2022_21882_win32k.rb"
       }
     ],
-    "CVE-2022-21882": [
+    "CVE-2021-1732": [
       {
         "name": "Win32k ConsoleControl Offset Confusion",
         "module": "exploit/windows/local/cve_2022_21882_win32k",

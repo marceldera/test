@@ -1,0 +1,527 @@
+{
+  "schemaVersion": 1,
+  "edition": "2026-11-26",
+  "publishedAt": "2026-11-26T19:51:51Z",
+  "window": {
+    "start": "2026-11-25T20:15:25Z",
+    "end": "2026-11-26T19:51:51Z",
+    "note": "KEV additions not present in the previous edition’s catalog snapshot."
+  },
+  "executive": {
+    "summary": "CISA published no new Known Exploited Vulnerabilities since the previous edition. That does not mean no new threats emerged — KEV is one confirmed-exploitation source, and campaigns or zero-days outside it are not covered by today’s automated feeds.",
+    "summarySource": "generated",
+    "counts": {
+      "kevAdded": 0,
+      "kevRansomware": 0,
+      "emergency": 0,
+      "urgent": 0,
+      "criticalHigh": 0,
+      "materialChanges": 2,
+      "kevTotal": 1805
+    },
+    "developments": [
+      "CVE-2026-133469: EPSS rose from 0.01 to 0.32 (score date 2026-11-26).",
+      "CVE-2026-97229: EPSS rose from 0.12 to 0.74 (score date 2026-11-26)."
+    ]
+  },
+  "kevLatest": {
+    "date": "2026-11-25",
+    "dueDate": "2026-11-28",
+    "catalogVersion": "2026.11.25",
+    "released": "2026-11-25T19:48:12.4344Z",
+    "items": [
+      {
+        "cve": "CVE-2023-25914",
+        "vendor": "Danfoss",
+        "product": "AK-SM 800A Series"
+      },
+      {
+        "cve": "CVE-2023-25915",
+        "vendor": "Danfoss",
+        "product": "AK-SM 800A Series"
+      },
+      {
+        "cve": "CVE-2025-41450",
+        "vendor": "Danfoss",
+        "product": "AK-SM 800A Series"
+      },
+      {
+        "cve": "CVE-2026-103406",
+        "vendor": "Hewlett Packard Enterprise (HPE)",
+        "product": "Juniper Session Smart Conductor and Session Smart Router"
+      },
+      {
+        "cve": "CVE-2026-133275",
+        "vendor": "Mitel",
+        "product": "MiCollab"
+      },
+      {
+        "cve": "CVE-2026-133303",
+        "vendor": "Mitel",
+        "product": "MiCollab"
+      },
+      {
+        "cve": "CVE-2026-133311",
+        "vendor": "Mitel",
+        "product": "MiCollab"
+      },
+      {
+        "cve": "CVE-2026-133323",
+        "vendor": "Mitel",
+        "product": "MiCollab"
+      },
+      {
+        "cve": "CVE-2026-133324",
+        "vendor": "Mitel",
+        "product": "MiCollab"
+      },
+      {
+        "cve": "CVE-2026-133469",
+        "vendor": "Vates",
+        "product": "Xen Orchestra"
+      }
+    ]
+  },
+  "actions": [],
+  "cves": [],
+  "overflow": 0,
+  "campaigns": {
+    "status": "not_covered",
+    "items": [],
+    "note": "No reviewed, source-linked intelligence for this section in today’s edition."
+  },
+  "industries": {
+    "status": "not_covered",
+    "items": [],
+    "note": "No reviewed, source-linked intelligence for this section in today’s edition."
+  },
+  "actors": {
+    "status": "not_covered",
+    "items": [],
+    "note": "No reviewed, source-linked intelligence for this section in today’s edition."
+  },
+  "remediation": {
+    "groups": {
+      "emergency": [],
+      "urgent": [],
+      "routine": [],
+      "monitor": []
+    },
+    "guidance": {
+      "emergency": "Mitigate exposed instances within 24–72 hours (guidance, not policy).",
+      "urgent": "Remediate within the CISA due date or your next emergency change window.",
+      "routine": "Remediate in the normal patch cycle; prerequisites limit exposure.",
+      "monitor": "Track for exploitation or scope changes."
+    }
+  },
+  "changes": [
+    {
+      "cve": "CVE-2026-133469",
+      "type": "epss_change",
+      "detail": "EPSS rose from 0.01 to 0.32 (score date 2026-11-26)."
+    },
+    {
+      "cve": "CVE-2026-97229",
+      "type": "epss_change",
+      "detail": "EPSS rose from 0.12 to 0.74 (score date 2026-11-26)."
+    }
+  ],
+  "sources": [
+    {
+      "name": "CISA Known Exploited Vulnerabilities",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+      "version": "2026.11.25",
+      "released": "2026-11-25T19:48:12.4344Z",
+      "fetchedAt": "2026-11-26T19:51:52Z",
+      "status": "ok"
+    },
+    {
+      "name": "FIRST EPSS",
+      "url": "https://www.first.org/epss/",
+      "fetchedAt": "2026-11-26T19:51:52Z",
+      "status": "ok",
+      "note": "Probability estimate; not evidence of exploitation."
+    },
+    {
+      "name": "NVD CVE API 2.0",
+      "url": "https://nvd.nist.gov/",
+      "fetchedAt": "2026-11-26T19:51:52Z",
+      "status": "no data",
+      "note": "Enrichment can lag publication by days."
+    }
+  ],
+  "coverage": {
+    "covered": [
+      "CISA KEV additions",
+      "FIRST EPSS",
+      "NVD CVSS and references"
+    ],
+    "notCovered": [
+      "Campaign, threat actor and industry analysis (requires reviewed editorial input)",
+      "Zero-days not yet in CISA KEV",
+      "Vendor-specific fixed-version validation"
+    ],
+    "unknownFields": [],
+    "editorial": {
+      "present": false,
+      "reviewedBy": null,
+      "reviewedAt": null
+    }
+  },
+  "report": {
+    "version": 1,
+    "title": [
+      "DAILY ENTERPRISE CYBERSECURITY",
+      "THREAT INTELLIGENCE BRIEF"
+    ],
+    "dateLabel": "Thursday, November 26, 2026",
+    "window": "Reporting window: November 25-26, 2026",
+    "prepared": "Automated edition, issued 7:00 AM ET",
+    "sourceNote": "This brief is compiled automatically from public sources (CISA KEV, NVD, FIRST EPSS, Google Project Zero, ENISA EUVD, Metasploit, Exploit-DB, PoC-in-GitHub, MITRE ATT&CK). Exploitation statuses reflect what those sources report; anything they do not establish is stated as not established or not verified.",
+    "sections": [
+      {
+        "id": "summary",
+        "num": 1,
+        "title": "Executive Intelligence Summary",
+        "source": "generated",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "The leading newly prioritized issue is **CVE-2026-77230 (Camunda)**, a critical unsafe deserialization flaw. Malicious exploitation was not confirmed by tracked sources. No fixed release is mapped in NVD data yet. **CVE-2026-135150 (In Eclipse Ditto)** is another important newly highlighted issue; malicious exploitation was not confirmed."
+          },
+          {
+            "type": "table",
+            "columns": [
+              "Metric",
+              "Assessment"
+            ],
+            "rows": [
+              [
+                "Newly prioritized CVEs",
+                "3: Camunda, In Eclipse Ditto and WP Media WP Rocket"
+              ],
+              [
+                "Latest KEV baseline",
+                "1,805 (catalog version 2026.11.25, released 2026-11-25)"
+              ],
+              [
+                "New KEV additions",
+                "None verified in reporting window"
+              ],
+              [
+                "Emergency candidates",
+                "None newly highlighted"
+              ],
+              [
+                "Complete worldwide High/Critical count",
+                "Not established; 433 High/Critical CVEs published to NVD in the window (NVD-scored only)"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "**Top five actions:** (1) Apply the vendor fix for Camunda (CVE-2026-77230); (2) apply the vendor fix for In Eclipse Ditto (CVE-2026-135150); (3) apply the vendor fix for WP Media WP Rocket (CVE-2026-125812); (4) close previously reported Project MONAI MONAI Label, Vates Xen Orchestra, N-able MailAssure and Idunno AntiCsrf KEV exposure; (5) examine Camunda hosts for unexpected child processes and outbound connections."
+          }
+        ]
+      },
+      {
+        "id": "critical",
+        "num": 2,
+        "title": "Critical Vulnerability Intelligence",
+        "source": "generated",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "**CVE-2026-77230 - Camunda unsafe deserialization (CVSS 9.2).** Camunda 8.8.0 before 8.8.47, 8.9.0 before 8.9.29, 8.10.0 before 8.10.10, and 8.11.0-alpha1 contain an insecure deserialization vulnerability in the persistent web session feature, which stores session attributes as Java-serialized data in secondary storage and deserializes them via an ObjectInputStream without an ObjectInputFilter. Affected releases: not yet published in NVD configuration data. Fixed package release: none identified in tracked sources. Attack path: network-accessible; no authentication required; no user interaction required."
+          },
+          {
+            "type": "table",
+            "columns": [
+              "Field",
+              "Status"
+            ],
+            "rows": [
+              [
+                "EPSS / percentile",
+                "1.6% probability / 76th percentile (FIRST EPSS)"
+              ],
+              [
+                "CISA KEV",
+                "Not listed in latest verified baseline"
+              ],
+              [
+                "Exploitation",
+                "No malicious exploitation confirmed by tracked sources"
+              ],
+              [
+                "Public exploit",
+                "Public exploit code referenced: 1 unvetted GitHub repository; weaponized exploit not verified"
+              ],
+              [
+                "Mitigation",
+                "Apply the vendor fix or mitigation; remove untrusted network reachability until patched; place the service behind authentication or a VPN; monitor for exploitation"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "**CVE-2026-135150 - In Eclipse Ditto authentication bypass (CVSS 9.1).** In Eclipse Ditto versions 1.1.0 to 3.9.9, the nginx reverse proxy configurations shipped with Ditto (Helm chart, Docker Compose, Kubernetes and OpenShift deployment files) forward a client-supplied `x-ditto-pre-authenticated` header to the Ditto gateway on locations that do not apply nginx authentication, such as `/api/2/connections`. Affected releases: not yet published in NVD configuration data. Fixed package release: none identified in tracked sources. Attack path: network-accessible; no authentication required; no user interaction required."
+          },
+          {
+            "type": "p",
+            "text": "EPSS: 1.3% probability / 70th percentile (FIRST EPSS). CISA KEV: Not listed in latest verified baseline. Exploitation: No malicious exploitation confirmed by tracked sources. Public exploit code referenced: 1 unvetted GitHub repository; weaponized exploit not verified. Mitigation: Apply the vendor fix or mitigation; remove untrusted network reachability until patched; place the service behind authentication or a VPN; monitor for exploitation."
+          },
+          {
+            "type": "p",
+            "text": "**CVE-2026-125812 - WP Media WP Rocket path traversal (CVSS 9.8).** Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') vulnerability in WP Media WP Rocket wp-rocket allows Path Traversal.This issue affects WP Rocket: from n/a before 3.24.2. Affected releases: not yet published in NVD configuration data. Fixed package release: none identified in tracked sources. Attack path: network-accessible; no authentication required; no user interaction required."
+          },
+          {
+            "type": "p",
+            "text": "EPSS: 1.0% probability / 62nd percentile (FIRST EPSS). CISA KEV: Not listed in latest verified baseline. Exploitation: No malicious exploitation confirmed by tracked sources. Public exploit code referenced: 1 unvetted GitHub repository; weaponized exploit not verified. Mitigation: Apply the vendor fix or mitigation; remove untrusted network reachability until patched; place the service behind authentication or a VPN; monitor for exploitation."
+          }
+        ]
+      },
+      {
+        "id": "exploitation",
+        "num": 3,
+        "title": "Active Exploitation and Threat Campaigns",
+        "source": "generated",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "No new zero-day or in-the-wild exploitation reports beyond CISA KEV were identified for newly prioritized CVEs in tracked sources (Google Project Zero, ENISA EUVD, VulnCheck KEV). No reliable campaign-specific IP addresses, hashes or domains were identified."
+          },
+          {
+            "type": "p",
+            "text": "No new CISA KEV additions were verified in the reporting window. The latest additions remain the 10 entries added November 25, 2026: Danfoss AK-SM 800A Series, Danfoss AK-SM 800A Series, Danfoss AK-SM 800A Series, Hewlett Packard Enterprise (HPE) Juniper Session Smart Conductor and Session Smart Router, Mitel MiCollab and Mitel MiCollab. The federal remediation deadline for those entries is **November 28, 2026**. This deadline applies to covered federal agencies under applicable requirements; it is not a universal private-sector mandate."
+          },
+          {
+            "type": "p",
+            "text": "**Defensive hunting:** for Camunda (CVE-2026-77230), inspect unexpected child processes of the service, new scheduled jobs or services, and unusual outbound connections from the host; for In Eclipse Ditto (CVE-2026-135150), review administrative logins, newly created accounts or API tokens, and configuration changes made without a matching change record; for WP Media WP Rocket (CVE-2026-125812), inspect unexpected file writes outside the application's data directories, new web-accessible files, modified application code, altered SSH authorized_keys files and suspicious scheduled jobs."
+          }
+        ]
+      },
+      {
+        "id": "industry",
+        "num": 4,
+        "title": "Industry and Market Threat Landscape",
+        "source": "generated",
+        "blocks": [
+          {
+            "type": "table",
+            "columns": [
+              "Industry / market",
+              "Observed activity vs. possible exposure"
+            ],
+            "rows": [
+              [
+                "Healthcare / medical imaging",
+                "Possible Camunda, In Eclipse Ditto and WP Media WP Rocket exposure; targeting unknown"
+              ],
+              [
+                "Education / research",
+                "Possible Camunda, In Eclipse Ditto and WP Media WP Rocket exposure; targeting unknown"
+              ],
+              [
+                "Technology / software",
+                "Potential Camunda, In Eclipse Ditto and WP Media WP Rocket dependency exposure"
+              ],
+              [
+                "Government / defense",
+                "Possible Camunda, In Eclipse Ditto and WP Media WP Rocket exposure; no new sector-specific targeting confirmed"
+              ],
+              [
+                "Financial services",
+                "Possible Camunda, In Eclipse Ditto and WP Media WP Rocket exposure; targeting unknown"
+              ],
+              [
+                "Manufacturing / energy / utilities",
+                "Possible Camunda, In Eclipse Ditto and WP Media WP Rocket exposure; targeting unknown"
+              ],
+              [
+                "Retail / transportation",
+                "Possible Camunda, In Eclipse Ditto and WP Media WP Rocket exposure; targeting unknown"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "Geography and organization-size targeting were not reliably established. Product use indicates possible exposure, not observed attacker selection."
+          }
+        ]
+      },
+      {
+        "id": "actors",
+        "num": 5,
+        "title": "Threat Actor Intelligence",
+        "source": "generated",
+        "blocks": [
+          {
+            "type": "table",
+            "columns": [
+              "Actor / cluster",
+              "Attribution and activity"
+            ],
+            "rows": [
+              [
+                "Camunda operators",
+                "No confirmed malicious exploitation or attribution."
+              ],
+              [
+                "In Eclipse Ditto operators",
+                "No confirmed malicious exploitation or attribution."
+              ],
+              [
+                "WP Media WP Rocket operators",
+                "No confirmed malicious exploitation or attribution."
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "**MITRE ATT&CK defensive mapping:** T1190 (Exploit Public-Facing Application) may be relevant to exposed Camunda, In Eclipse Ditto and WP Media WP Rocket services. These mappings support defensive detection and do not establish actor attribution."
+          }
+        ]
+      },
+      {
+        "id": "remediation",
+        "num": 6,
+        "title": "Enterprise Risk and Remediation Decisions",
+        "source": "generated",
+        "blocks": [
+          {
+            "type": "table",
+            "columns": [
+              "Priority",
+              "Scenario",
+              "Suggested window"
+            ],
+            "rows": [
+              [
+                "Emergency",
+                "Unremediated confirmed-exploited Danfoss AK-SM 800A Series, Drupal Core, Hewlett Packard Enterprise (HPE) Juniper Session Smart Conductor and Session Smart Router, Idunno AntiCsrf or Mitel MiCollab exposure",
+                "Immediate containment and applicable forensic triage"
+              ],
+              [
+                "Urgent",
+                "Vulnerable Camunda (CVE-2026-77230)",
+                "Apply applicable vendor fix in 24-72 hours"
+              ],
+              [
+                "Urgent",
+                "Vulnerable In Eclipse Ditto (CVE-2026-135150)",
+                "Apply applicable vendor fix in 24-72 hours"
+              ],
+              [
+                "Urgent",
+                "Vulnerable WP Media WP Rocket (CVE-2026-125812)",
+                "Apply applicable vendor fix in 24-72 hours"
+              ],
+              [
+                "Routine",
+                "Affected but effectively restricted software",
+                "Controlled maintenance window"
+              ],
+              [
+                "Monitor",
+                "Verified fixed or nonaffected software",
+                "Watch for material new evidence"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "Response windows are recommendations, not mandatory policy. No organization-specific exposure, compromise, asset criticality or patch status was established."
+          }
+        ]
+      },
+      {
+        "id": "changes",
+        "num": 7,
+        "title": "Significant Changes to Previously Reported Issues",
+        "source": "generated",
+        "blocks": [
+          {
+            "type": "table",
+            "columns": [
+              "Issue",
+              "Material development"
+            ],
+            "rows": [
+              [
+                "Engeniustech Esr600 Firmware CVE-2025-34035",
+                "No significant new development established since November 25"
+              ],
+              [
+                "Mitel MiCollab CVE-2026-133323",
+                "Exploitation now reported by ENISA EUVD; fixed-version or patch reference added"
+              ],
+              [
+                "Hewlett Packard Enterprise (HPE) Juniper Session Smart Conductor and Session Smart Router CVE-2026-103406",
+                "No significant new development established since November 25"
+              ],
+              [
+                "Danfoss AK-SM 800A Series CVE-2025-41450",
+                "Exploitation now reported by ENISA EUVD; fixed-version or patch reference added"
+              ],
+              [
+                "Danfoss AK-SM 800A Series CVE-2023-25915",
+                "Exploitation now reported by ENISA EUVD"
+              ],
+              [
+                "Danfoss AK-SM 800A Series CVE-2023-25914",
+                "Exploitation now reported by ENISA EUVD"
+              ],
+              [
+                "Crocoblock JetSearch CVE-2025-49931",
+                "No significant new development established since November 25"
+              ],
+              [
+                "JetBooking WordPress plugin CVE-2026-3496",
+                "No significant new development established since November 25"
+              ],
+              [
+                "Mitel MiCollab CVE-2026-133303",
+                "Exploitation now reported by ENISA EUVD; fixed-version or patch reference added"
+              ],
+              [
+                "Mitel MiCollab CVE-2026-133324",
+                "Exploitation now reported by ENISA EUVD; fixed-version or patch reference added"
+              ]
+            ]
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "label": "CVE-2026-77230 NVD record",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-77230"
+      },
+      {
+        "label": "CVE-2026-135150 NVD record",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-135150"
+      },
+      {
+        "label": "CVE-2026-125812 NVD record",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-125812"
+      },
+      {
+        "label": "CISA KEV catalog",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+      },
+      {
+        "label": "FIRST EPSS",
+        "url": "https://www.first.org/epss/"
+      }
+    ],
+    "footer": "Enterprise Cyber Threat Intelligence | 26 Nov 2026",
+    "reviewedBy": null,
+    "generatedAt": "2026-11-26T19:53:56Z",
+    "prioritized": [
+      "CVE-2026-77230",
+      "CVE-2026-135150",
+      "CVE-2026-125812"
+    ]
+  }
+}

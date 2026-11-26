@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "month": "2026-06",
   "complete": true,
-  "updatedAt": "2026-11-25T20:15:25Z",
+  "updatedAt": "2026-11-26T19:51:51Z",
   "metrics": [
     {
       "id": "kev_added",
@@ -11,7 +11,7 @@
       "rule": "CVE entries whose CISA dateAdded falls in the month.",
       "source": "CISA KEV",
       "window": "2026-06-01 to 2026-06-30 (dateAdded, ET calendar)",
-      "updatedAt": "2026-11-25T20:15:25Z"
+      "updatedAt": "2026-11-26T19:51:51Z"
     },
     {
       "id": "vendors",
@@ -20,7 +20,7 @@
       "rule": "Unique vendorProject values among the month’s KEV entries.",
       "source": "CISA KEV",
       "window": "2026-06-01 to 2026-06-30 (dateAdded, ET calendar)",
-      "updatedAt": "2026-11-25T20:15:25Z"
+      "updatedAt": "2026-11-26T19:51:51Z"
     },
     {
       "id": "ransomware",
@@ -29,16 +29,16 @@
       "rule": "Month’s KEV entries where CISA sets knownRansomwareCampaignUse = Known.",
       "source": "CISA KEV",
       "window": "2026-06-01 to 2026-06-30 (dateAdded, ET calendar)",
-      "updatedAt": "2026-11-25T20:15:25Z"
+      "updatedAt": "2026-11-26T19:51:51Z"
     },
     {
       "id": "epss90",
       "label": "EPSS ≥ 90th percentile",
       "value": 12,
-      "rule": "Month’s KEV entries with EPSS percentile ≥ 0.90 (scores as of 2026-11-25).",
+      "rule": "Month’s KEV entries with EPSS percentile ≥ 0.90 (scores as of 2026-11-26).",
       "source": "FIRST EPSS",
       "window": "2026-06-01 to 2026-06-30 (dateAdded, ET calendar)",
-      "updatedAt": "2026-11-25T20:15:25Z"
+      "updatedAt": "2026-11-26T19:51:51Z"
     }
   ],
   "notice": "These are CISA KEV catalog counts, not a count of total cyber incidents.",
@@ -50,7 +50,7 @@
       "product": "WebLogic Server",
       "concern": "Oracle WebLogic Server Unspecified Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.91548,
+      "epssPercentile": 0.91554,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -61,7 +61,7 @@
       "product": "Kernel",
       "concern": "Linux Kernel Improper Authentication Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.8892,
+      "epssPercentile": 0.88928,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -83,7 +83,7 @@
       "product": "Mirasvit Full Page Cache Warmer",
       "concern": "Mirasvit Full Page Cache Warmer Deserialization of Untrusted Data Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.97881,
+      "epssPercentile": 0.97882,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -94,7 +94,7 @@
       "product": "Serv-U",
       "concern": "SolarWinds Serv-U Uncontrolled Resource Consumption Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.97846,
+      "epssPercentile": 0.97847,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -105,7 +105,7 @@
       "product": "LiteLLM",
       "concern": "BerriAI LiteLLM Command Injection Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.95127,
+      "epssPercentile": 0.95141,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -116,7 +116,7 @@
       "product": "Security Gateway",
       "concern": "Check Point Security Gateway Improper Authentication Vulnerability",
       "ransomware": "known",
-      "epssPercentile": 0.94465,
+      "epssPercentile": 0.94468,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -127,7 +127,7 @@
       "product": "Chromium V8",
       "concern": "Google Chromium V8 Out-of-Bounds Read and Write Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.64554,
+      "epssPercentile": 0.6458,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -138,7 +138,7 @@
       "product": "Catalyst SD-WAN Manager",
       "concern": "Cisco Catalyst SD-WAN Manager Improper Encoding or Escaping of Output Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.68258,
+      "epssPercentile": 0.68273,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -149,7 +149,7 @@
       "product": "Extensible Operating System",
       "concern": "Arista Extensible Operating System Incomplete Comparison with Missing Factors Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.45719,
+      "epssPercentile": 0.45739,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -171,7 +171,7 @@
       "product": "PeopleSoft Enterprise PeopleTools",
       "concern": "Oracle PeopleSoft Enterprise PeopleTools Missing Authentication for Critical Function Vulnerability",
       "ransomware": "known",
-      "epssPercentile": 0.96154,
+      "epssPercentile": 0.96156,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -182,7 +182,7 @@
       "product": "Catalyst SD-WAN Manager",
       "concern": "Cisco Catalyst SD-WAN Manager Directory or Path Traversal Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.5723,
+      "epssPercentile": 0.57257,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -193,7 +193,7 @@
       "product": "cPanel Plugin",
       "concern": "LiteSpeed cPanel Plugin UNIX Symbolic Link (Symlink) Following Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.53651,
+      "epssPercentile": 0.53672,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -204,7 +204,7 @@
       "product": "Joomla Content Editor",
       "concern": "Widget Factory Joomla Content Editor Improper Access Control Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.9756,
+      "epssPercentile": 0.97561,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -215,7 +215,7 @@
       "product": "Enterprise",
       "concern": "Splunk Enterprise Missing Authentication for Critical Function Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.97402,
+      "epssPercentile": 0.97404,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -226,7 +226,7 @@
       "product": "EDS5000",
       "concern": "Lantronix EDS5000 Code Injection Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.85812,
+      "epssPercentile": 0.85824,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -237,7 +237,7 @@
       "product": "UniFi OS",
       "concern": "Ubiquiti UniFi OS Improper Access Control Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.97435,
+      "epssPercentile": 0.97438,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -248,7 +248,7 @@
       "product": "UniFi OS",
       "concern": "Ubiquiti UniFi OS Path Traversal Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.79335,
+      "epssPercentile": 0.79351,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -270,7 +270,7 @@
       "product": "Windchill and FlexPLM",
       "concern": "PTC Windchill and FlexPLM Improper Input Validation Vulnerability",
       "ransomware": "known",
-      "epssPercentile": 0.76176,
+      "epssPercentile": 0.76195,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -281,7 +281,7 @@
       "product": "Unified Communications Manager",
       "concern": "Cisco Unified Communications Manager Server-Side Request Forgery (SSRF) Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.71529,
+      "epssPercentile": 0.7155,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -292,7 +292,7 @@
       "product": "SimpleHelp",
       "concern": "SimpleHelp Authentication Bypass Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.93914,
+      "epssPercentile": 0.93919,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     }
@@ -810,6 +810,6 @@
       }
     ],
     "footer": "Enterprise Cyber Threat Intelligence | June 2026",
-    "generatedAt": "2026-11-25T20:19:42Z"
+    "generatedAt": "2026-11-26T19:53:56Z"
   }
 }

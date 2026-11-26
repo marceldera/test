@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "month": "2026-11",
   "complete": false,
-  "updatedAt": "2026-11-25T20:15:25Z",
+  "updatedAt": "2026-11-26T19:51:51Z",
   "metrics": [
     {
       "id": "kev_added",
@@ -10,8 +10,8 @@
       "value": 39,
       "rule": "CVE entries whose CISA dateAdded falls in the month.",
       "source": "CISA KEV",
-      "window": "2026-11-01 to 2026-11-25 (dateAdded, ET calendar)",
-      "updatedAt": "2026-11-25T20:15:25Z"
+      "window": "2026-11-01 to 2026-11-26 (dateAdded, ET calendar)",
+      "updatedAt": "2026-11-26T19:51:51Z"
     },
     {
       "id": "vendors",
@@ -19,8 +19,8 @@
       "value": 30,
       "rule": "Unique vendorProject values among the month’s KEV entries.",
       "source": "CISA KEV",
-      "window": "2026-11-01 to 2026-11-25 (dateAdded, ET calendar)",
-      "updatedAt": "2026-11-25T20:15:25Z"
+      "window": "2026-11-01 to 2026-11-26 (dateAdded, ET calendar)",
+      "updatedAt": "2026-11-26T19:51:51Z"
     },
     {
       "id": "ransomware",
@@ -28,17 +28,17 @@
       "value": 1,
       "rule": "Month’s KEV entries where CISA sets knownRansomwareCampaignUse = Known.",
       "source": "CISA KEV",
-      "window": "2026-11-01 to 2026-11-25 (dateAdded, ET calendar)",
-      "updatedAt": "2026-11-25T20:15:25Z"
+      "window": "2026-11-01 to 2026-11-26 (dateAdded, ET calendar)",
+      "updatedAt": "2026-11-26T19:51:51Z"
     },
     {
       "id": "epss90",
       "label": "EPSS ≥ 90th percentile",
-      "value": 13,
-      "rule": "Month’s KEV entries with EPSS percentile ≥ 0.90 (scores as of 2026-11-25).",
+      "value": 18,
+      "rule": "Month’s KEV entries with EPSS percentile ≥ 0.90 (scores as of 2026-11-26).",
       "source": "FIRST EPSS",
-      "window": "2026-11-01 to 2026-11-25 (dateAdded, ET calendar)",
-      "updatedAt": "2026-11-25T20:15:25Z"
+      "window": "2026-11-01 to 2026-11-26 (dateAdded, ET calendar)",
+      "updatedAt": "2026-11-26T19:51:51Z"
     }
   ],
   "notice": "These are CISA KEV catalog counts, not a count of total cyber incidents.",
@@ -50,7 +50,7 @@
       "product": "WordPress Core",
       "concern": "WordPress WordPress Core Time-of-check Time-of-use (TOCTOU) Race Condition Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.8277,
+      "epssPercentile": 0.82782,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -61,7 +61,7 @@
       "product": "Multiple Products",
       "concern": "Apple Multiple Products Improper Authentication Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.52767,
+      "epssPercentile": 0.52791,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -72,7 +72,7 @@
       "product": "SonicOS SSLVPN",
       "concern": "SonicWall SonicOS SSLVPN Use of Single-factor Authentication Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.3892,
+      "epssPercentile": 0.38931,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -83,7 +83,7 @@
       "product": "GPUStack",
       "concern": "GPUStack Improper Authentication Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.95807,
+      "epssPercentile": 0.95811,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -105,7 +105,7 @@
       "product": "OpenSSH",
       "concern": "OpenBSD OpenSSH Unexpected Status Code or Return Value Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.9724,
+      "epssPercentile": 0.97242,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -116,7 +116,7 @@
       "product": "Aspera Faspex",
       "concern": "IBM Aspera Faspex Incorrect Authorization Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.52399,
+      "epssPercentile": 0.52425,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -127,7 +127,7 @@
       "product": "Multiple Products",
       "concern": "Barracuda Networks Multiple Products OS Command Injection Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.96563,
+      "epssPercentile": 0.96569,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -138,7 +138,7 @@
       "product": "Webtop Media Transcoder",
       "concern": "Openwave Messaging Limited Webtop Media Transcoder Incorrect Resource Transfer Between Spheres Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.61156,
+      "epssPercentile": 0.61178,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -149,7 +149,7 @@
       "product": "Barracuda Email Security Gateway (ESG)",
       "concern": "Barracuda Networks Email Security Gateway (ESG) Authentication Bypass Using an Alternate Path or Channel Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.9718,
+      "epssPercentile": 0.97181,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -160,7 +160,7 @@
       "product": "Office",
       "concern": "Microsoft Office Outlook Missing User Interaction for Potentially Unsafe Action Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.6332,
+      "epssPercentile": 0.63348,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -171,7 +171,7 @@
       "product": "Chromium",
       "concern": "Google Chromium Use-After-Free Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.9476,
+      "epssPercentile": 0.94767,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -182,7 +182,7 @@
       "product": "BroadWorks",
       "concern": "Cisco BroadWorks Improper Restriction of XML External Entity Reference Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.70508,
+      "epssPercentile": 0.70527,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -193,7 +193,7 @@
       "product": "UnrealIRCd",
       "concern": "UnrealIRCd Improper Neutralization of Delimiters Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.71648,
+      "epssPercentile": 0.96402,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -204,7 +204,7 @@
       "product": "Multiple Products",
       "concern": "Check Point Multiple Products Incorrect Permission Assignment for Critical Resource Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.08425,
+      "epssPercentile": 0.0841,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -215,7 +215,7 @@
       "product": "Puppet Enterprise",
       "concern": "Perforce Puppet Enterprise Deserialization of Untrusted Data Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.96928,
+      "epssPercentile": 0.9693,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -226,7 +226,7 @@
       "product": "DiskStation Manager (DSM)",
       "concern": "Synology DiskStation Manager (DSM) Improper Encoding or Escaping of Output Vulnerability",
       "ransomware": "known",
-      "epssPercentile": 0.86985,
+      "epssPercentile": 0.86996,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -237,7 +237,7 @@
       "product": "LiteLLM",
       "concern": "BerriAI LiteLLM Unprotected Alternate Channel Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.98011,
+      "epssPercentile": 0.98012,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -248,7 +248,7 @@
       "product": "Axis",
       "concern": "Apache Axis Unsafe Reflection Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.86635,
+      "epssPercentile": 0.86645,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -259,7 +259,7 @@
       "product": "Research Electronic Data Capture (REDCap)",
       "concern": "Vanderbilt University Research Electronic Data Capture (REDCap) Code Injection Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.97862,
+      "epssPercentile": 0.97863,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -270,7 +270,7 @@
       "product": "NetWeaver",
       "concern": "SAP NetWeaver Improper Neutralization of Special Elements in Data Query Logic Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.65286,
+      "epssPercentile": 0.65308,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -281,7 +281,7 @@
       "product": "VMware vCenter",
       "concern": "VMWare vCenter Authentication Bypass Using an Alternate Path or Channel Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.93012,
+      "epssPercentile": 0.93017,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -303,7 +303,7 @@
       "product": "Expressway Series",
       "concern": "Cisco Expressway Series Use of Hard-coded Credentials Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.65685,
+      "epssPercentile": 0.6571,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -314,7 +314,7 @@
       "product": "MONAI Label",
       "concern": "Project MONAI MONAI Label Path Traversal Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.98495,
+      "epssPercentile": 0.98498,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -325,7 +325,7 @@
       "product": "MailAssure",
       "concern": "N-able MailAssure (SpamExperts) Server-Side Request Forgery (SSRF) Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.78889,
+      "epssPercentile": 0.78906,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -336,7 +336,7 @@
       "product": "AntiCsrf",
       "concern": "Idunno AntiCsrf Deserialization of Untrusted Data Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.9189,
+      "epssPercentile": 0.91897,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -347,7 +347,7 @@
       "product": "Core",
       "concern": "Drupal Core Remote Code Execution Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": null,
+      "epssPercentile": 0.96627,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -358,7 +358,7 @@
       "product": "Web Experimentation",
       "concern": "Optimizely Web Experimentation External Control of Critical State Data Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.52543,
+      "epssPercentile": 0.63822,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -369,7 +369,7 @@
       "product": "AK-SM 800A Series",
       "concern": "Danfoss AK-SM 800A Series Path Traversal Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.64585,
+      "epssPercentile": 0.79569,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -380,7 +380,7 @@
       "product": "AK-SM 800A Series",
       "concern": "Danfoss AK-SM 800A Series Improper Input Validation Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.73235,
+      "epssPercentile": 0.85331,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -391,7 +391,7 @@
       "product": "AK-SM 800A Series",
       "concern": "Danfoss AK-SM 800A Series Improper Authentication Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.37031,
+      "epssPercentile": 0.91857,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -402,7 +402,7 @@
       "product": "Juniper Session Smart Conductor and Session Smart Router",
       "concern": "Hewlett Packard Enterprise (HPE) Juniper Session Smart Conductor and Session Smart Router OS Command Injection Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.56019,
+      "epssPercentile": 0.75157,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -413,7 +413,7 @@
       "product": "MiCollab",
       "concern": "Mitel MiCollab Unrestricted Upload of File with Dangerous Type Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.1686,
+      "epssPercentile": 0.52058,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -424,7 +424,7 @@
       "product": "MiCollab",
       "concern": "Mitel MiCollab XML Injection Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.37111,
+      "epssPercentile": 0.71078,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -435,7 +435,7 @@
       "product": "MiCollab",
       "concern": "Mitel MiCollab Weak Authentication Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.2537,
+      "epssPercentile": 0.61187,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -446,7 +446,7 @@
       "product": "MiCollab",
       "concern": "Mitel MiCollab OS Command Injection Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.85725,
+      "epssPercentile": 0.93713,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -457,7 +457,7 @@
       "product": "MiCollab",
       "concern": "Mitel MiCollab Not Failing Securely Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.273,
+      "epssPercentile": 0.54808,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     },
@@ -468,7 +468,7 @@
       "product": "Xen Orchestra",
       "concern": "Vates Xen Orchestra Improper Validation of Specified Type of Input Vulnerability",
       "ransomware": "unknown",
-      "epssPercentile": 0.65258,
+      "epssPercentile": 0.987,
       "confidence": "Exploitation confirmed (CISA KEV); attribution not assessed",
       "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
     }
@@ -481,7 +481,7 @@
       "THREAT INTELLIGENCE SUMMARY"
     ],
     "dateLabel": "November 2026",
-    "window": "Reporting period: November 1-25, 2026 (month to date)",
+    "window": "Reporting period: November 1-26, 2026 (month to date)",
     "prepared": "Automated summary, refreshed daily at 7:00 AM ET",
     "sourceNote": "Compiled automatically from CISA KEV, NVD, FIRST EPSS, Google Project Zero, ENISA EUVD, VulnCheck, Metasploit, Exploit-DB, PoC-in-GitHub and MITRE ATT&CK. Counts are catalog counts, not a count of cyber incidents; anything the sources do not establish is stated as not established.",
     "sections": [
@@ -493,7 +493,7 @@
         "blocks": [
           {
             "type": "p",
-            "text": "CISA added **39 vulnerabilities** to the KEV catalog in November 2026 (month to date through November 25, 2026), spanning 30 vendors. CISA flags known ransomware use for 1 of them. The highest-likelihood additions by EPSS were **CVE-2026-116779 (SignalWire FreeSwitch)** and **CVE-2026-133968 (Project MONAI MONAI Label)**. Outside KEV, 4 further CVEs were reported exploited or tracked as zero-days by Google Project Zero, ENISA EUVD or VulnCheck."
+            "text": "CISA added **39 vulnerabilities** to the KEV catalog in November 2026 (month to date through November 26, 2026), spanning 30 vendors. CISA flags known ransomware use for 1 of them. The highest-likelihood additions by EPSS were **CVE-2026-116779 (SignalWire FreeSwitch)** and **CVE-2026-133469 (Vates Xen Orchestra)**. Outside KEV, 4 further CVEs were reported exploited or tracked as zero-days by Google Project Zero, ENISA EUVD or VulnCheck."
           },
           {
             "type": "table",
@@ -516,7 +516,7 @@
               ],
               [
                 "EPSS ≥ 90th percentile",
-                "13 of the month's KEV entries"
+                "18 of the month's KEV entries"
               ],
               [
                 "Exploited or zero-day outside KEV",
@@ -528,7 +528,7 @@
               ],
               [
                 "CVEs published to NVD",
-                "14,400 (7,062 High/Critical)"
+                "15,018 (7,342 High/Critical)"
               ]
             ]
           },
@@ -538,7 +538,7 @@
           },
           {
             "type": "p",
-            "text": "**Top five actions:** (1) Isolate or patch exposed SignalWire FreeSwitch (CVE-2026-116779); (2) isolate or patch exposed Project MONAI MONAI Label (CVE-2026-133968); (3) isolate or patch exposed Apache Roller (CVE-2026-129448); (4) isolate or patch exposed BerriAI LiteLLM (CVE-2026-40217); (5) examine SignalWire FreeSwitch hosts for unexpected child processes and outbound connections."
+            "text": "**Top five actions:** (1) Isolate or patch exposed SignalWire FreeSwitch (CVE-2026-116779); (2) isolate or patch exposed Vates Xen Orchestra (CVE-2026-133469); (3) isolate or patch exposed Project MONAI MONAI Label (CVE-2026-133968); (4) isolate or patch exposed Apache Roller (CVE-2026-129448); (5) examine SignalWire FreeSwitch hosts for unexpected child processes and outbound connections."
           }
         ]
       },
@@ -562,6 +562,12 @@
                 "SignalWire FreeSwitch",
                 "command injection",
                 "CISA KEV 2026-11-09; ENISA EUVD; EPSS 99th pct; public exploit"
+              ],
+              [
+                "CVE-2026-133469",
+                "Vates Xen Orchestra",
+                "authentication bypass",
+                "CISA KEV 2026-11-25; ENISA EUVD; EPSS 98th pct; public exploit"
               ],
               [
                 "CVE-2026-133968",
@@ -600,12 +606,6 @@
                 "CISA KEV 2026-11-10; ENISA EUVD; EPSS 97th pct; public exploit"
               ],
               [
-                "CVE-2026-115731",
-                "Perforce Puppet Enterprise",
-                "unsafe deserialization",
-                "CISA KEV 2026-11-17; ENISA EUVD; EPSS 96th pct; public exploit"
-              ],
-              [
                 "CVE-2026-127057",
                 "CVE-2026-127057",
                 "vulnerability",
@@ -625,11 +625,11 @@
           },
           {
             "type": "p",
-            "text": "**CVE-2026-133968 - Project MONAI MONAI Label path traversal (CVSS 9.8).** monailabel (aka MONAI Label) before 0.8.6 allows directory traversal, with resultant remote code execution, via the image parameter to the PUT /datastore/image endpoint, as exploited in the wild starting in September 2026. Fixed version (first unaffected release per NVD ranges): monai label 0.8.6. Attack path: network-accessible; no authentication required; no user interaction required."
+            "text": "**CVE-2026-133469 - Vates Xen Orchestra authentication bypass (CVSS 9.8).** XO (Xen Orchestra) is a solution to visualize, manage, backup and delegate your XCP-ng (or XenServer) infrastructure. Prior to 6.9.2 and 6.10.1, REST cookie parsing turns authenticationToken=j:%7B%7D into {}. REST authentication passes that object to the XO token provider without requiring a string. Fixed version (first unaffected release per NVD ranges): xen orchestra server 5.211.2, xen orchestra server 5.213.1, xen orchestra 6.9.2, xen orchestra 6.10.1. Attack path: network-accessible; no authentication required; no user interaction required."
           },
           {
             "type": "p",
-            "text": "**CVE-2026-129448 - Apache Roller unsafe deserialization (CVSS 9.8).** Deserialization of Untrusted Data in Apache Roller versions 4.0.0 through 6.1.4 allows an unauthenticated remote attacker to execute arbitrary code. The XML-RPC endpoint accepts vendor extension types and deserializes them before authenticating the requester. Fixed version (first unaffected release per NVD ranges): roller 6.1.5. Attack path: network-accessible; no authentication required; no user interaction required."
+            "text": "**CVE-2026-133968 - Project MONAI MONAI Label path traversal (CVSS 9.8).** monailabel (aka MONAI Label) before 0.8.6 allows directory traversal, with resultant remote code execution, via the image parameter to the PUT /datastore/image endpoint, as exploited in the wild starting in September 2026. Fixed version (first unaffected release per NVD ranges): monai label 0.8.6. Attack path: network-accessible; no authentication required; no user interaction required."
           }
         ]
       },
@@ -683,7 +683,7 @@
           },
           {
             "type": "p",
-            "text": "**Defensive hunting focus:** unexpected child processes and outbound connections (13 CVEs); unusual requests and changes (12 CVEs); unauthorized administrative access and configuration changes (10 CVEs)."
+            "text": "**Defensive hunting focus:** unexpected child processes and outbound connections (12 CVEs); unusual requests and changes (12 CVEs); unauthorized administrative access and configuration changes (11 CVEs)."
           }
         ]
       },
@@ -1178,6 +1178,10 @@
         "url": "https://github.com/signalwire/freeswitch/commit/7015f6a73ab3d67fed5fbfc277ecfb88a74c2a86"
       },
       {
+        "label": "Vates Xen Orchestra vendor advisory",
+        "url": "https://docs.vates.tech/security-advisories/advisories/2026/vates-sa-2026-062"
+      },
+      {
         "label": "Project MONAI MONAI Label vendor advisory",
         "url": "https://github.com/Project-MONAI/MONAILabel/security/advisories/GHSA-qc22-rmgc-vg94"
       },
@@ -1188,10 +1192,6 @@
       {
         "label": "BerriAI LiteLLM vendor advisory",
         "url": "https://www.x41-dsec.de/lab/advisories/x41-2026-001-litellm/"
-      },
-      {
-        "label": "OpenBSD OpenSSH vendor advisory",
-        "url": "https://marc.info/?l=openssh-unix-dev&m=179388064263131&w=2"
       },
       {
         "label": "CISA KEV catalog",
@@ -1207,6 +1207,6 @@
       }
     ],
     "footer": "Enterprise Cyber Threat Intelligence | November 2026",
-    "generatedAt": "2026-11-25T20:19:42Z"
+    "generatedAt": "2026-11-26T19:53:56Z"
   }
 }

@@ -1,8 +1,8 @@
 {
   "repo": "projectdiscovery/nuclei-templates",
-  "commit": "573b82a",
-  "indexedAt": "2026-11-25T20:15:36Z",
-  "count": 4871,
+  "commit": "eb28249",
+  "indexedAt": "2026-11-26T19:51:53Z",
+  "count": 4873,
   "templates": {
     "CVE-2014-0160": [
       {
@@ -74326,6 +74326,24 @@
         "reviewNote": null
       }
     ],
+    "CVE-2026-116207": [
+      {
+        "method": "nuclei",
+        "id": "CVE-2026-116207",
+        "name": "YesWiki - SQL Injection",
+        "path": "http/cves/2026/CVE-2026-116207.yaml",
+        "protocol": "http",
+        "publisher": "ProjectDiscovery nuclei-templates (community)",
+        "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2026/CVE-2026-116207.yaml",
+        "templateSeverity": "high",
+        "upstreamVerified": true,
+        "invasiveness": "safe-probe",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
     "CVE-2026-116366": [
       {
         "method": "nuclei",
@@ -74822,6 +74840,24 @@
         "publisher": "ProjectDiscovery nuclei-templates (community)",
         "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2026/CVE-2026-120735.yaml",
         "templateSeverity": "high",
+        "upstreamVerified": true,
+        "invasiveness": "safe-probe",
+        "outOfBand": false,
+        "reviewStatus": "unreviewed",
+        "lastReviewed": null,
+        "reviewNote": null
+      }
+    ],
+    "CVE-2026-12122": [
+      {
+        "method": "nuclei",
+        "id": "CVE-2026-12122",
+        "name": "Kirki - Unauthenticated Symbol Metadata Disclosure",
+        "path": "http/cves/2026/CVE-2026-12122.yaml",
+        "protocol": "http",
+        "publisher": "ProjectDiscovery nuclei-templates (community)",
+        "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2026/CVE-2026-12122.yaml",
+        "templateSeverity": "medium",
         "upstreamVerified": true,
         "invasiveness": "safe-probe",
         "outOfBand": false,

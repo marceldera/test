@@ -1,11 +1,61 @@
 {
   "source": "ENISA EUVD exploited",
-  "count": 1816,
+  "count": 1826,
   "data": {
+    "CVE-2026-133303": {
+      "euvdId": "EUVD-2026-130376",
+      "exploitedSince": "2026-11-25",
+      "url": "https://euvd.enisa.europa.eu/vulnerability/EUVD-2026-130376"
+    },
+    "CVE-2026-133311": {
+      "euvdId": "EUVD-2026-130381",
+      "exploitedSince": "2026-11-25",
+      "url": "https://euvd.enisa.europa.eu/vulnerability/EUVD-2026-130381"
+    },
+    "CVE-2023-25915": {
+      "euvdId": "EUVD-2023-29803",
+      "exploitedSince": "2026-11-25",
+      "url": "https://euvd.enisa.europa.eu/vulnerability/EUVD-2023-29803"
+    },
+    "CVE-2023-25914": {
+      "euvdId": "EUVD-2023-29802",
+      "exploitedSince": "2026-11-25",
+      "url": "https://euvd.enisa.europa.eu/vulnerability/EUVD-2023-29802"
+    },
+    "CVE-2026-133275": {
+      "euvdId": "EUVD-2026-130372",
+      "exploitedSince": "2026-11-25",
+      "url": "https://euvd.enisa.europa.eu/vulnerability/EUVD-2026-130372"
+    },
+    "CVE-2026-133324": {
+      "euvdId": "EUVD-2026-130384",
+      "exploitedSince": "2026-11-25",
+      "url": "https://euvd.enisa.europa.eu/vulnerability/EUVD-2026-130384"
+    },
+    "CVE-2026-133323": {
+      "euvdId": "EUVD-2026-130382",
+      "exploitedSince": "2026-11-25",
+      "url": "https://euvd.enisa.europa.eu/vulnerability/EUVD-2026-130382"
+    },
+    "CVE-2025-41450": {
+      "euvdId": "EUVD-2025-13996",
+      "exploitedSince": "2026-11-25",
+      "url": "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-13996"
+    },
+    "CVE-2026-133469": {
+      "euvdId": "EUVD-2026-133254",
+      "exploitedSince": "2026-11-25",
+      "url": "https://euvd.enisa.europa.eu/vulnerability/EUVD-2026-133254"
+    },
     "CVE-2026-103406": {
       "euvdId": "EUVD-2026-112215",
       "exploitedSince": "2026-11-25",
       "url": "https://euvd.enisa.europa.eu/vulnerability/EUVD-2026-112215"
+    },
+    "CVE-2026-132165": {
+      "euvdId": "EUVD-2026-135952",
+      "exploitedSince": "2026-11-24",
+      "url": "https://euvd.enisa.europa.eu/vulnerability/EUVD-2026-135952"
     },
     "CVE-2026-131914": {
       "euvdId": "EUVD-2026-129432",
