@@ -1,7 +1,32 @@
 {
   "source": "ENISA EUVD exploited",
-  "count": 1826,
+  "count": 1827,
   "data": {
+    "CVE-2026-136716": {
+      "euvdId": "EUVD-2026-135954",
+      "exploitedSince": "2026-11-27",
+      "url": "https://euvd.enisa.europa.eu/vulnerability/EUVD-2026-135954"
+    },
+    "CVE-2026-132165": {
+      "euvdId": "EUVD-2026-135952",
+      "exploitedSince": "2026-11-24",
+      "url": "https://euvd.enisa.europa.eu/vulnerability/EUVD-2026-135952"
+    },
+    "CVE-2026-111497": {
+      "euvdId": "EUVD-2026-108169",
+      "exploitedSince": "2026-10-27",
+      "url": "https://euvd.enisa.europa.eu/vulnerability/EUVD-2026-108169"
+    },
+    "CVE-2020-13927": {
+      "euvdId": "EUVD-2020-0037",
+      "exploitedSince": "2022-01-18",
+      "url": "https://euvd.enisa.europa.eu/vulnerability/EUVD-2020-0037"
+    },
+    "CVE-2020-11978": {
+      "euvdId": "EUVD-2020-0032",
+      "exploitedSince": "2022-01-18",
+      "url": "https://euvd.enisa.europa.eu/vulnerability/EUVD-2020-0032"
+    },
     "CVE-2026-133303": {
       "euvdId": "EUVD-2026-130376",
       "exploitedSince": "2026-11-25",
@@ -52,11 +77,6 @@
       "exploitedSince": "2026-11-25",
       "url": "https://euvd.enisa.europa.eu/vulnerability/EUVD-2026-112215"
     },
-    "CVE-2026-132165": {
-      "euvdId": "EUVD-2026-135952",
-      "exploitedSince": "2026-11-24",
-      "url": "https://euvd.enisa.europa.eu/vulnerability/EUVD-2026-135952"
-    },
     "CVE-2026-131914": {
       "euvdId": "EUVD-2026-129432",
       "exploitedSince": "2026-11-24",
@@ -81,11 +101,6 @@
       "euvdId": "EUVD-2026-131722",
       "exploitedSince": "2026-11-23",
       "url": "https://euvd.enisa.europa.eu/vulnerability/EUVD-2026-131722"
-    },
-    "CVE-2026-111497": {
-      "euvdId": "EUVD-2026-108169",
-      "exploitedSince": "2026-10-27",
-      "url": "https://euvd.enisa.europa.eu/vulnerability/EUVD-2026-108169"
     },
     "CVE-2026-109619": {
       "euvdId": "EUVD-2026-107265",
@@ -6512,11 +6527,6 @@
       "exploitedSince": "2021-11-03",
       "url": "https://euvd.enisa.europa.eu/vulnerability/EUVD-2020-11934"
     },
-    "CVE-2020-11978": {
-      "euvdId": "EUVD-2020-0032",
-      "exploitedSince": "2022-01-18",
-      "url": "https://euvd.enisa.europa.eu/vulnerability/EUVD-2020-0032"
-    },
     "CVE-2020-17496": {
       "euvdId": "EUVD-2020-9444",
       "exploitedSince": "2021-11-03",
@@ -6676,11 +6686,6 @@
       "euvdId": "EUVD-2020-20425",
       "exploitedSince": "2021-11-03",
       "url": "https://euvd.enisa.europa.eu/vulnerability/EUVD-2020-20425"
-    },
-    "CVE-2020-13927": {
-      "euvdId": "EUVD-2020-0037",
-      "exploitedSince": "2022-01-18",
-      "url": "https://euvd.enisa.europa.eu/vulnerability/EUVD-2020-0037"
     },
     "CVE-2020-17530": {
       "euvdId": "EUVD-2022-1073",

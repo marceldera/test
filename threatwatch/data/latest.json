@@ -1,89 +1,285 @@
 {
   "schemaVersion": 1,
-  "edition": "2026-11-26",
-  "publishedAt": "2026-11-26T19:51:51Z",
+  "edition": "2026-11-27",
+  "publishedAt": "2026-11-27T19:41:32Z",
   "window": {
-    "start": "2026-11-25T20:15:25Z",
-    "end": "2026-11-26T19:51:51Z",
+    "start": "2026-11-26T19:51:51Z",
+    "end": "2026-11-27T19:41:32Z",
     "note": "KEV additions not present in the previous edition’s catalog snapshot."
   },
   "executive": {
-    "summary": "CISA published no new Known Exploited Vulnerabilities since the previous edition. That does not mean no new threats emerged — KEV is one confirmed-exploitation source, and campaigns or zero-days outside it are not covered by today’s automated feeds.",
+    "summary": "CISA added 3 vulnerabilities to the Known Exploited Vulnerabilities catalog since the previous edition, affecting OSGeo, Drupal. 1 meet the emergency criteria (confirmed exploitation plus critical severity or unauthenticated network exposure).",
     "summarySource": "generated",
     "counts": {
-      "kevAdded": 0,
+      "kevAdded": 3,
       "kevRansomware": 0,
-      "emergency": 0,
-      "urgent": 0,
-      "criticalHigh": 0,
-      "materialChanges": 2,
-      "kevTotal": 1805
+      "emergency": 1,
+      "urgent": 2,
+      "criticalHigh": 1,
+      "materialChanges": 3,
+      "kevTotal": 1808
     },
     "developments": [
-      "CVE-2026-133469: EPSS rose from 0.01 to 0.32 (score date 2026-11-26).",
-      "CVE-2026-97229: EPSS rose from 0.12 to 0.74 (score date 2026-11-26)."
+      "CVE-2026-136716 — Drupal Core: Drupal Core Improper Check for Unusual or Exceptional Conditions Vulnerability (emergency)",
+      "CVE-2026-120705 — OSGeo GeoServer: OSGeo GeoServer XML Injection Vulnerability (urgent)",
+      "CVE-2026-129243 — OSGeo GeoServer: OSGeo GeoServer Incorrect Authorization Vulnerability (urgent)",
+      "CVE-2026-123158: EPSS rose from 0.14 to 0.90 (score date 2026-11-27).",
+      "CVE-2026-111497: EPSS rose from 0.33 to 1.00 (score date 2026-11-27)."
     ]
   },
   "kevLatest": {
-    "date": "2026-11-25",
-    "dueDate": "2026-11-28",
-    "catalogVersion": "2026.11.25",
-    "released": "2026-11-25T19:48:12.4344Z",
+    "date": "2026-11-27",
+    "dueDate": "2026-11-30",
+    "catalogVersion": "2026.11.27",
+    "released": "2026-11-27T18:03:12.5733Z",
     "items": [
       {
-        "cve": "CVE-2023-25914",
-        "vendor": "Danfoss",
-        "product": "AK-SM 800A Series"
+        "cve": "CVE-2026-120705",
+        "vendor": "OSGeo",
+        "product": "GeoServer"
       },
       {
-        "cve": "CVE-2023-25915",
-        "vendor": "Danfoss",
-        "product": "AK-SM 800A Series"
+        "cve": "CVE-2026-129243",
+        "vendor": "OSGeo",
+        "product": "GeoServer"
       },
       {
-        "cve": "CVE-2025-41450",
-        "vendor": "Danfoss",
-        "product": "AK-SM 800A Series"
-      },
-      {
-        "cve": "CVE-2026-103406",
-        "vendor": "Hewlett Packard Enterprise (HPE)",
-        "product": "Juniper Session Smart Conductor and Session Smart Router"
-      },
-      {
-        "cve": "CVE-2026-133275",
-        "vendor": "Mitel",
-        "product": "MiCollab"
-      },
-      {
-        "cve": "CVE-2026-133303",
-        "vendor": "Mitel",
-        "product": "MiCollab"
-      },
-      {
-        "cve": "CVE-2026-133311",
-        "vendor": "Mitel",
-        "product": "MiCollab"
-      },
-      {
-        "cve": "CVE-2026-133323",
-        "vendor": "Mitel",
-        "product": "MiCollab"
-      },
-      {
-        "cve": "CVE-2026-133324",
-        "vendor": "Mitel",
-        "product": "MiCollab"
-      },
-      {
-        "cve": "CVE-2026-133469",
-        "vendor": "Vates",
-        "product": "Xen Orchestra"
+        "cve": "CVE-2026-136716",
+        "vendor": "Drupal",
+        "product": "Core"
       }
     ]
   },
-  "actions": [],
-  "cves": [],
+  "actions": [
+    {
+      "rank": 1,
+      "cve": "CVE-2026-136716",
+      "priority": "emergency",
+      "title": "Patch or mitigate Drupal Core (CVE-2026-136716)",
+      "why": "Exploitation confirmed by CISA KEV; CVSS 3.1 9.8; network-reachable without authentication.",
+      "steps": [
+        "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+        "Identify internet-facing and internal Drupal Core instances.",
+        "Confirm fixed versions in the vendor advisory before closing the action.",
+        "CISA due date for federal agencies: 2026-11-30."
+      ],
+      "evidence": [
+        "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+        "https://nvd.nist.gov/vuln/detail/CVE-2026-136716",
+        "https://www.first.org/epss/"
+      ]
+    },
+    {
+      "rank": 2,
+      "cve": "CVE-2026-120705",
+      "priority": "urgent",
+      "title": "Patch or mitigate OSGeo GeoServer (CVE-2026-120705)",
+      "why": "Exploitation confirmed by CISA KEV; CVSS not yet available from NVD.",
+      "steps": [
+        "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+        "Identify internet-facing and internal OSGeo GeoServer instances.",
+        "Confirm fixed versions in the vendor advisory before closing the action.",
+        "CISA due date for federal agencies: 2026-11-30."
+      ],
+      "evidence": [
+        "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+        "https://geoserver.org/vulnerability/2026/11/23/cve-update.html",
+        "https://github.com/geoserver/geoserver/security/advisories/GHSA-39mw-5chv-jh47"
+      ]
+    },
+    {
+      "rank": 3,
+      "cve": "CVE-2026-129243",
+      "priority": "urgent",
+      "title": "Patch or mitigate OSGeo GeoServer (CVE-2026-129243)",
+      "why": "Exploitation confirmed by CISA KEV; CVSS not yet available from NVD.",
+      "steps": [
+        "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+        "Identify internet-facing and internal OSGeo GeoServer instances.",
+        "Confirm fixed versions in the vendor advisory before closing the action.",
+        "CISA due date for federal agencies: 2026-11-30."
+      ],
+      "evidence": [
+        "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+        "https://geoserver.org/vulnerability/2026/11/23/cve-update.html",
+        "https://github.com/geoserver/geoserver/security/advisories/GHSA-rv5g-g2r9-58rj"
+      ]
+    }
+  ],
+  "cves": [
+    {
+      "cve": "CVE-2026-136716",
+      "vendor": "Drupal",
+      "product": "Core",
+      "name": "Drupal Core Improper Check for Unusual or Exceptional Conditions Vulnerability",
+      "description": "Drupal Core contains an improper check for unusual or exceptional conditions vulnerability that allows an unauthenticated remote attacker to take over a site via the exposed Drupal installer when the site is in one of the affected unusual or incomplete installation states.",
+      "kev": {
+        "dateAdded": "2026-11-27",
+        "dueDate": "2026-11-30",
+        "ransomware": "unknown",
+        "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "exploitation": {
+        "status": "Confirmed exploited",
+        "basis": "Listed in CISA KEV (dateAdded is the listing date, not first exploitation)."
+      },
+      "exploitMaturity": null,
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "severity": "CRITICAL",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+        "attackVector": "NETWORK",
+        "privileges": "NONE",
+        "userInteraction": "NONE",
+        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+      },
+      "epss": {
+        "score": 0.01212,
+        "percentile": 0.68449,
+        "date": "2026-11-27"
+      },
+      "affectedVersions": null,
+      "fixedVersions": null,
+      "cwes": [
+        "CWE-754"
+      ],
+      "nvdStatus": "Undergoing Analysis",
+      "priority": "emergency",
+      "rationale": "Exploitation confirmed by CISA KEV; CVSS 3.1 9.8; network-reachable without authentication.",
+      "sources": [
+        {
+          "label": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "label": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-136716"
+        },
+        {
+          "label": "FIRST EPSS",
+          "url": "https://www.first.org/epss/"
+        },
+        {
+          "label": "KEV reference",
+          "url": "https://www.drupal.org/sa-core-2026-019"
+        }
+      ],
+      "unknown": [
+        "Affected versions",
+        "Fixed versions",
+        "Exploit maturity"
+      ]
+    },
+    {
+      "cve": "CVE-2026-120705",
+      "vendor": "OSGeo",
+      "product": "GeoServer",
+      "name": "OSGeo GeoServer XML Injection Vulnerability",
+      "description": "OsGeo GeoServer contains an XML injection vulnerability that allows an unauthenticated remote attacker to cause the server to read local text files accessible to the GeoServer process or fetch attacker-specified HTTP or HTTPS URLs via a crafted ID parameter in the WFS 2.0 GetFeatureById stored query. This vulnerability can be chained with CVE-2026-129244, CVE-2026-129243, CVE-2026-129245, and CVE-2026-129242 to achieve unauthenticated remote code execution on an affected GeoServer instance.",
+      "kev": {
+        "dateAdded": "2026-11-27",
+        "dueDate": "2026-11-30",
+        "ransomware": "unknown",
+        "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "exploitation": {
+        "status": "Confirmed exploited",
+        "basis": "Listed in CISA KEV (dateAdded is the listing date, not first exploitation)."
+      },
+      "exploitMaturity": null,
+      "cvss": null,
+      "epss": null,
+      "affectedVersions": null,
+      "fixedVersions": null,
+      "cwes": [
+        "CWE-91",
+        "CWE-611",
+        "CWE-918"
+      ],
+      "nvdStatus": null,
+      "priority": "urgent",
+      "rationale": "Exploitation confirmed by CISA KEV; CVSS not yet available from NVD.",
+      "sources": [
+        {
+          "label": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "label": "KEV reference",
+          "url": "https://geoserver.org/vulnerability/2026/11/23/cve-update.html"
+        },
+        {
+          "label": "KEV reference",
+          "url": "https://github.com/geoserver/geoserver/security/advisories/GHSA-39mw-5chv-jh47"
+        },
+        {
+          "label": "KEV reference",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120705"
+        }
+      ],
+      "unknown": [
+        "CVSS",
+        "EPSS",
+        "Affected versions",
+        "Fixed versions",
+        "Exploit maturity"
+      ]
+    },
+    {
+      "cve": "CVE-2026-129243",
+      "vendor": "OSGeo",
+      "product": "GeoServer",
+      "name": "OSGeo GeoServer Incorrect Authorization Vulnerability",
+      "description": "GeoServer contains an incorrect authorization vulnerability that allows an unauthenticated remote attacker to bypass service-level role checks and invoke operations protected solely by those checks via a request with a prefixed service parameter. This vulnerability can be chained with CVE-2026-129244, CVE-2026-120705, CVE-2026-129245, and CVE-2026-129242 to achieve unauthenticated remote code execution on an affected GeoServer instance.",
+      "kev": {
+        "dateAdded": "2026-11-27",
+        "dueDate": "2026-11-30",
+        "ransomware": "unknown",
+        "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines."
+      },
+      "exploitation": {
+        "status": "Confirmed exploited",
+        "basis": "Listed in CISA KEV (dateAdded is the listing date, not first exploitation)."
+      },
+      "exploitMaturity": null,
+      "cvss": null,
+      "epss": null,
+      "affectedVersions": null,
+      "fixedVersions": null,
+      "cwes": [
+        "CWE-863"
+      ],
+      "nvdStatus": null,
+      "priority": "urgent",
+      "rationale": "Exploitation confirmed by CISA KEV; CVSS not yet available from NVD.",
+      "sources": [
+        {
+          "label": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "label": "KEV reference",
+          "url": "https://geoserver.org/vulnerability/2026/11/23/cve-update.html"
+        },
+        {
+          "label": "KEV reference",
+          "url": "https://github.com/geoserver/geoserver/security/advisories/GHSA-rv5g-g2r9-58rj"
+        },
+        {
+          "label": "KEV reference",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-129243"
+        }
+      ],
+      "unknown": [
+        "CVSS",
+        "EPSS",
+        "Affected versions",
+        "Fixed versions",
+        "Exploit maturity"
+      ]
+    }
+  ],
   "overflow": 0,
   "campaigns": {
     "status": "not_covered",
@@ -102,8 +298,13 @@
   },
   "remediation": {
     "groups": {
-      "emergency": [],
-      "urgent": [],
+      "emergency": [
+        "CVE-2026-136716"
+      ],
+      "urgent": [
+        "CVE-2026-120705",
+        "CVE-2026-129243"
+      ],
       "routine": [],
       "monitor": []
     },
@@ -116,37 +317,57 @@
   },
   "changes": [
     {
-      "cve": "CVE-2026-133469",
-      "type": "epss_change",
-      "detail": "EPSS rose from 0.01 to 0.32 (score date 2026-11-26)."
+      "cve": "CVE-2026-136716",
+      "type": "kev_added",
+      "detail": "Added to CISA KEV on 2026-11-27."
     },
     {
-      "cve": "CVE-2026-97229",
+      "cve": "CVE-2026-120705",
+      "type": "kev_added",
+      "detail": "Added to CISA KEV on 2026-11-27."
+    },
+    {
+      "cve": "CVE-2026-129243",
+      "type": "kev_added",
+      "detail": "Added to CISA KEV on 2026-11-27."
+    },
+    {
+      "cve": "CVE-2026-123158",
       "type": "epss_change",
-      "detail": "EPSS rose from 0.12 to 0.74 (score date 2026-11-26)."
+      "detail": "EPSS rose from 0.14 to 0.90 (score date 2026-11-27)."
+    },
+    {
+      "cve": "CVE-2026-111497",
+      "type": "epss_change",
+      "detail": "EPSS rose from 0.33 to 1.00 (score date 2026-11-27)."
+    },
+    {
+      "cve": "CVE-2026-93616",
+      "type": "epss_change",
+      "detail": "EPSS rose from 0.21 to 0.92 (score date 2026-11-27)."
     }
   ],
   "sources": [
     {
       "name": "CISA Known Exploited Vulnerabilities",
       "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
-      "version": "2026.11.25",
-      "released": "2026-11-25T19:48:12.4344Z",
-      "fetchedAt": "2026-11-26T19:51:52Z",
+      "version": "2026.11.27",
+      "released": "2026-11-27T18:03:12.5733Z",
+      "fetchedAt": "2026-11-27T19:41:33Z",
       "status": "ok"
     },
     {
       "name": "FIRST EPSS",
       "url": "https://www.first.org/epss/",
-      "fetchedAt": "2026-11-26T19:51:52Z",
+      "fetchedAt": "2026-11-27T19:41:33Z",
       "status": "ok",
       "note": "Probability estimate; not evidence of exploitation."
     },
     {
       "name": "NVD CVE API 2.0",
       "url": "https://nvd.nist.gov/",
-      "fetchedAt": "2026-11-26T19:51:52Z",
-      "status": "no data",
+      "fetchedAt": "2026-11-27T19:41:33Z",
+      "status": "ok",
       "note": "Enrichment can lag publication by days."
     }
   ],
@@ -161,7 +382,13 @@
       "Zero-days not yet in CISA KEV",
       "Vendor-specific fixed-version validation"
     ],
-    "unknownFields": [],
+    "unknownFields": [
+      "Affected versions",
+      "CVSS",
+      "EPSS",
+      "Exploit maturity",
+      "Fixed versions"
+    ],
     "editorial": {
       "present": false,
       "reviewedBy": null,
@@ -174,8 +401,8 @@
       "DAILY ENTERPRISE CYBERSECURITY",
       "THREAT INTELLIGENCE BRIEF"
     ],
-    "dateLabel": "Thursday, November 26, 2026",
-    "window": "Reporting window: November 25-26, 2026",
+    "dateLabel": "Friday, November 27, 2026",
+    "window": "Reporting window: November 26-27, 2026",
     "prepared": "Automated edition, issued 7:00 AM ET",
     "sourceNote": "This brief is compiled automatically from public sources (CISA KEV, NVD, FIRST EPSS, Google Project Zero, ENISA EUVD, Metasploit, Exploit-DB, PoC-in-GitHub, MITRE ATT&CK). Exploitation statuses reflect what those sources report; anything they do not establish is stated as not established or not verified.",
     "sections": [
@@ -187,7 +414,7 @@
         "blocks": [
           {
             "type": "p",
-            "text": "The leading newly prioritized issue is **CVE-2026-77230 (Camunda)**, a critical unsafe deserialization flaw. Malicious exploitation was not confirmed by tracked sources. No fixed release is mapped in NVD data yet. **CVE-2026-135150 (In Eclipse Ditto)** is another important newly highlighted issue; malicious exploitation was not confirmed."
+            "text": "The leading newly prioritized issue is **CVE-2026-136716 (Drupal Core)**, a critical security flaw; it is listed in CISA KEV on 2026-11-27 (exploitation confirmed by CISA) and reported exploited by ENISA EUVD since 2026-11-27. No fixed release is mapped in NVD data yet. **CVE-2026-120705 (OSGeo GeoServer)** is another important newly highlighted issue; it is listed in CISA KEV on 2026-11-27 (exploitation confirmed by CISA)."
           },
           {
             "type": "table",
@@ -198,29 +425,33 @@
             "rows": [
               [
                 "Newly prioritized CVEs",
-                "3: Camunda, In Eclipse Ditto and WP Media WP Rocket"
+                "6: Drupal Core, OSGeo GeoServer, OSGeo GeoServer, VMware Directory Service, TOTOLINK N350RT and CVE-2026-133336"
               ],
               [
                 "Latest KEV baseline",
-                "1,805 (catalog version 2026.11.25, released 2026-11-25)"
+                "1,808 (catalog version 2026.11.27, released 2026-11-27)"
               ],
               [
                 "New KEV additions",
-                "None verified in reporting window"
+                "CVE-2026-136716 (Drupal Core), CVE-2026-120705 (OSGeo GeoServer) and CVE-2026-129243 (OSGeo GeoServer)"
+              ],
+              [
+                "New zero-day / in-the-wild reports",
+                "CVE-2026-136716 (Drupal Core)"
               ],
               [
                 "Emergency candidates",
-                "None newly highlighted"
+                "3 newly highlighted: exposed Drupal Core, OSGeo GeoServer and OSGeo GeoServer"
               ],
               [
                 "Complete worldwide High/Critical count",
-                "Not established; 433 High/Critical CVEs published to NVD in the window (NVD-scored only)"
+                "Not established; 383 High/Critical CVEs published to NVD in the window (NVD-scored only)"
               ]
             ]
           },
           {
             "type": "p",
-            "text": "**Top five actions:** (1) Apply the vendor fix for Camunda (CVE-2026-77230); (2) apply the vendor fix for In Eclipse Ditto (CVE-2026-135150); (3) apply the vendor fix for WP Media WP Rocket (CVE-2026-125812); (4) close previously reported Project MONAI MONAI Label, Vates Xen Orchestra, N-able MailAssure and Idunno AntiCsrf KEV exposure; (5) examine Camunda hosts for unexpected child processes and outbound connections."
+            "text": "**Top five actions:** (1) Isolate or patch exposed Drupal Core (CVE-2026-136716); (2) apply the vendor fix for OSGeo GeoServer (CVE-2026-120705); (3) apply the vendor fix for OSGeo GeoServer (CVE-2026-129243); (4) close previously reported Project MONAI MONAI Label, Vates Xen Orchestra, N-able MailAssure and Idunno AntiCsrf KEV exposure; (5) examine Drupal Core hosts for unusual requests and changes."
           }
         ]
       },
@@ -232,7 +463,7 @@
         "blocks": [
           {
             "type": "p",
-            "text": "**CVE-2026-77230 - Camunda unsafe deserialization (CVSS 9.2).** Camunda 8.8.0 before 8.8.47, 8.9.0 before 8.9.29, 8.10.0 before 8.10.10, and 8.11.0-alpha1 contain an insecure deserialization vulnerability in the persistent web session feature, which stores session attributes as Java-serialized data in secondary storage and deserializes them via an ObjectInputStream without an ObjectInputFilter. Affected releases: not yet published in NVD configuration data. Fixed package release: none identified in tracked sources. Attack path: network-accessible; no authentication required; no user interaction required."
+            "text": "**CVE-2026-136716 - Drupal Core Drupal Core Improper Check for Unusual or Exceptional Conditions Vulnerability (CVSS 9.8).** Improper Check for Unusual or Exceptional Conditions vulnerability in Drupal Drupal core allows Forceful Browsing. This issue affects Drupal core versions: from 0.0.0 to 10.6.23, from 11.0.0 to 11.3.23, from 11.4.0 to 11.4.14. Affected releases: not yet published in NVD configuration data. Fixed package release: none identified in tracked sources. Attack path: network-accessible; no authentication required; no user interaction required."
           },
           {
             "type": "table",
@@ -243,15 +474,15 @@
             "rows": [
               [
                 "EPSS / percentile",
-                "1.6% probability / 76th percentile (FIRST EPSS)"
+                "1.2% probability / 68th percentile (FIRST EPSS)"
               ],
               [
                 "CISA KEV",
-                "Not listed in latest verified baseline"
+                "Listed 2026-11-27; federal due date 2026-11-30"
               ],
               [
                 "Exploitation",
-                "No malicious exploitation confirmed by tracked sources"
+                "Listed in CISA KEV on 2026-11-27 (exploitation confirmed by CISA) and reported exploited by ENISA EUVD since 2026-11-27; independently corroborated victim evidence not established"
               ],
               [
                 "Public exploit",
@@ -259,25 +490,99 @@
               ],
               [
                 "Mitigation",
-                "Apply the vendor fix or mitigation; remove untrusted network reachability until patched; place the service behind authentication or a VPN; monitor for exploitation"
+                "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk guidance and CISA’s “Forensics Triage Requirements”. Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable."
               ]
             ]
           },
           {
             "type": "p",
-            "text": "**CVE-2026-135150 - In Eclipse Ditto authentication bypass (CVSS 9.1).** In Eclipse Ditto versions 1.1.0 to 3.9.9, the nginx reverse proxy configurations shipped with Ditto (Helm chart, Docker Compose, Kubernetes and OpenShift deployment files) forward a client-supplied `x-ditto-pre-authenticated` header to the Ditto gateway on locations that do not apply nginx authentication, such as `/api/2/connections`. Affected releases: not yet published in NVD configuration data. Fixed package release: none identified in tracked sources. Attack path: network-accessible; no authentication required; no user interaction required."
+            "text": "**CVE-2026-120705 - OSGeo GeoServer XML external entity.** OsGeo GeoServer contains an XML injection vulnerability that allows an unauthenticated remote attacker to cause the server to read local text files accessible to the GeoServer process or fetch attacker-specified HTTP or HTTPS URLs via a crafted ID parameter in the WFS 2.0 GetFeatureById stored query. Affected releases: not yet published in NVD configuration data. Fixed package release: none identified in tracked sources. Attack path: not established (no CVSS vector published yet)."
+          },
+          {
+            "type": "table",
+            "columns": [
+              "Field",
+              "Status"
+            ],
+            "rows": [
+              [
+                "EPSS / percentile",
+                "Not verified"
+              ],
+              [
+                "CISA KEV",
+                "Listed 2026-11-27; federal due date 2026-11-30"
+              ],
+              [
+                "Exploitation",
+                "Listed in CISA KEV on 2026-11-27 (exploitation confirmed by CISA); independently corroborated victim evidence not established"
+              ],
+              [
+                "Public exploit",
+                "No public exploit or proof-of-concept identified in tracked sources"
+              ],
+              [
+                "Mitigation",
+                "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk guidance and CISA’s “Forensics Triage Requirements”. Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable."
+              ]
+            ]
           },
           {
             "type": "p",
-            "text": "EPSS: 1.3% probability / 70th percentile (FIRST EPSS). CISA KEV: Not listed in latest verified baseline. Exploitation: No malicious exploitation confirmed by tracked sources. Public exploit code referenced: 1 unvetted GitHub repository; weaponized exploit not verified. Mitigation: Apply the vendor fix or mitigation; remove untrusted network reachability until patched; place the service behind authentication or a VPN; monitor for exploitation."
+            "text": "**CVE-2026-129243 - OSGeo GeoServer incorrect authorization.** GeoServer contains an incorrect authorization vulnerability that allows an unauthenticated remote attacker to bypass service-level role checks and invoke operations protected solely by those checks via a request with a prefixed service parameter. Affected releases: not yet published in NVD configuration data. Fixed package release: none identified in tracked sources. Attack path: not established (no CVSS vector published yet)."
+          },
+          {
+            "type": "table",
+            "columns": [
+              "Field",
+              "Status"
+            ],
+            "rows": [
+              [
+                "EPSS / percentile",
+                "Not verified"
+              ],
+              [
+                "CISA KEV",
+                "Listed 2026-11-27; federal due date 2026-11-30"
+              ],
+              [
+                "Exploitation",
+                "Listed in CISA KEV on 2026-11-27 (exploitation confirmed by CISA); independently corroborated victim evidence not established"
+              ],
+              [
+                "Public exploit",
+                "No public exploit or proof-of-concept identified in tracked sources"
+              ],
+              [
+                "Mitigation",
+                "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk guidance and CISA’s “Forensics Triage Requirements”. Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable."
+              ]
+            ]
           },
           {
             "type": "p",
-            "text": "**CVE-2026-125812 - WP Media WP Rocket path traversal (CVSS 9.8).** Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') vulnerability in WP Media WP Rocket wp-rocket allows Path Traversal.This issue affects WP Rocket: from n/a before 3.24.2. Affected releases: not yet published in NVD configuration data. Fixed package release: none identified in tracked sources. Attack path: network-accessible; no authentication required; no user interaction required."
+            "text": "**CVE-2026-123903 - VMware Directory Service authentication bypass (CVSS 9.8).** VMware vCenter contains an authentication bypass vulnerability in the VMware Directory Service. Broadcom has evaluated the severity of this issue to be in the Critical severity range with a maximum CVSSv3 base score of 9.8. Affected releases: not yet published in NVD configuration data. Fixed package release: none identified in tracked sources. Attack path: network-accessible; no authentication required; no user interaction required."
+          },
+          {
+            "type": "p",
+            "text": "EPSS: 2.4% probability / 85th percentile (FIRST EPSS). CISA KEV: Not listed in latest verified baseline. Exploitation: No malicious exploitation confirmed by tracked sources. Public exploit code referenced: 2 unvetted GitHub repositories; weaponized exploit not verified. Mitigation: Apply the vendor fix or mitigation; remove untrusted network reachability until patched; place the service behind authentication or a VPN; monitor for exploitation."
+          },
+          {
+            "type": "p",
+            "text": "**CVE-2026-137043 - TOTOLINK N350RT authorization bypass (CVSS 9.3).** A security vulnerability has been detected in TOTOLINK N350RT 9.3.5u.6468_B20250827/9.3.5u.6466_B20250825. The affected element is the function setLanguageCfg of the file /cgi-bin/cstecgi.cgi. Such manipulation of the argument lang leads to authorization bypass. The attack can be executed remotely. The exploit has been disclosed publicly and may be used. Affected releases: not yet published in NVD configuration data. Fixed package release: none identified in tracked sources. Attack path: network-accessible; no authentication required; no user interaction required."
           },
           {
             "type": "p",
             "text": "EPSS: 1.0% probability / 62nd percentile (FIRST EPSS). CISA KEV: Not listed in latest verified baseline. Exploitation: No malicious exploitation confirmed by tracked sources. Public exploit code referenced: 1 unvetted GitHub repository; weaponized exploit not verified. Mitigation: Apply the vendor fix or mitigation; remove untrusted network reachability until patched; place the service behind authentication or a VPN; monitor for exploitation."
+          },
+          {
+            "type": "p",
+            "text": "**CVE-2026-133336 - CVE-2026-133336 unrestricted file upload (CVSS 9.5).** Joomla Extension - chronoengine.com - Unauthenticated arbitrary file upload in ChronoForms extension 8.0.0-8.0.53 - When the Filename Provider option of a file field is used, the file extension check is performed against the original client filename instead of the final stored filename, allowing unauthenticated users to upload files with dangerous extensions. Fixed in 8.0.54. Affected releases: not yet published in NVD configuration data. Fixed package release: none identified in tracked sources. Attack path: network-accessible; no authentication required; no user interaction required."
+          },
+          {
+            "type": "p",
+            "text": "EPSS: 0.8% probability / 51st percentile (FIRST EPSS). CISA KEV: Not listed in latest verified baseline. Exploitation: No malicious exploitation confirmed by tracked sources. Public exploit code referenced: 1 unvetted GitHub repository; weaponized exploit not verified. Mitigation: Apply the vendor fix or mitigation; remove untrusted network reachability until patched; place the service behind authentication or a VPN; monitor for exploitation."
           }
         ]
       },
@@ -289,15 +594,15 @@
         "blocks": [
           {
             "type": "p",
-            "text": "No new zero-day or in-the-wild exploitation reports beyond CISA KEV were identified for newly prioritized CVEs in tracked sources (Google Project Zero, ENISA EUVD, VulnCheck KEV). No reliable campaign-specific IP addresses, hashes or domains were identified."
+            "text": "CVE-2026-136716 (Drupal Core): listed in CISA KEV on 2026-11-27 (exploitation confirmed by CISA) and reported exploited by ENISA EUVD since 2026-11-27. No named actor, verified victim count or campaign is established in tracked sources. No campaign-specific IP addresses, hashes or domains are collected by ThreatWatch's automated feeds."
           },
           {
             "type": "p",
-            "text": "No new CISA KEV additions were verified in the reporting window. The latest additions remain the 10 entries added November 25, 2026: Danfoss AK-SM 800A Series, Danfoss AK-SM 800A Series, Danfoss AK-SM 800A Series, Hewlett Packard Enterprise (HPE) Juniper Session Smart Conductor and Session Smart Router, Mitel MiCollab and Mitel MiCollab. The federal remediation deadline for those entries is **November 28, 2026**. This deadline applies to covered federal agencies under applicable requirements; it is not a universal private-sector mandate."
+            "text": "CISA added 3 vulnerabilities to the KEV catalog in the reporting window: Drupal Core, OSGeo GeoServer and OSGeo GeoServer. The federal remediation deadline is **November 30, 2026**. This deadline applies to covered federal agencies under applicable requirements; it is not a universal private-sector mandate."
           },
           {
             "type": "p",
-            "text": "**Defensive hunting:** for Camunda (CVE-2026-77230), inspect unexpected child processes of the service, new scheduled jobs or services, and unusual outbound connections from the host; for In Eclipse Ditto (CVE-2026-135150), review administrative logins, newly created accounts or API tokens, and configuration changes made without a matching change record; for WP Media WP Rocket (CVE-2026-125812), inspect unexpected file writes outside the application's data directories, new web-accessible files, modified application code, altered SSH authorized_keys files and suspicious scheduled jobs."
+            "text": "**Defensive hunting:** for Drupal Core (CVE-2026-136716), review the affected service's logs for unusual requests and changes around the disclosure date; for OSGeo GeoServer (CVE-2026-120705), inspect unexpected child processes of the service, new scheduled jobs or services, and unusual outbound connections from the host; for OSGeo GeoServer (CVE-2026-129243), inspect unexpected child processes of the service, new scheduled jobs or services, and unusual outbound connections from the host; for VMware Directory Service (CVE-2026-123903), review administrative logins, newly created accounts or API tokens, and configuration changes made without a matching change record."
           }
         ]
       },
@@ -316,31 +621,31 @@
             "rows": [
               [
                 "Healthcare / medical imaging",
-                "Possible Camunda, In Eclipse Ditto and WP Media WP Rocket exposure; targeting unknown"
+                "Possible CVE-2026-133336, Drupal Core and TOTOLINK N350RT exposure; targeting unknown"
               ],
               [
                 "Education / research",
-                "Possible Camunda, In Eclipse Ditto and WP Media WP Rocket exposure; targeting unknown"
+                "Possible CVE-2026-133336, Drupal Core and TOTOLINK N350RT exposure; targeting unknown"
               ],
               [
                 "Technology / software",
-                "Potential Camunda, In Eclipse Ditto and WP Media WP Rocket dependency exposure"
+                "Potential CVE-2026-133336, Drupal Core, OSGeo GeoServer and TOTOLINK N350RT dependency exposure"
               ],
               [
                 "Government / defense",
-                "Possible Camunda, In Eclipse Ditto and WP Media WP Rocket exposure; no new sector-specific targeting confirmed"
+                "Possible CVE-2026-133336, Drupal Core and TOTOLINK N350RT exposure; no new sector-specific targeting confirmed"
               ],
               [
                 "Financial services",
-                "Possible Camunda, In Eclipse Ditto and WP Media WP Rocket exposure; targeting unknown"
+                "Possible CVE-2026-133336, Drupal Core and TOTOLINK N350RT exposure; targeting unknown"
               ],
               [
                 "Manufacturing / energy / utilities",
-                "Possible Camunda, In Eclipse Ditto and WP Media WP Rocket exposure; targeting unknown"
+                "Possible CVE-2026-133336, Drupal Core and TOTOLINK N350RT exposure; targeting unknown"
               ],
               [
                 "Retail / transportation",
-                "Possible Camunda, In Eclipse Ditto and WP Media WP Rocket exposure; targeting unknown"
+                "Possible CVE-2026-133336, Drupal Core and TOTOLINK N350RT exposure; targeting unknown"
               ]
             ]
           },
@@ -364,22 +669,34 @@
             ],
             "rows": [
               [
-                "Camunda operators",
+                "Drupal Core operators",
+                "Unknown. Exploitation reported; identity, motivation and geographic targeting not established."
+              ],
+              [
+                "OSGeo GeoServer operators",
+                "Unknown. Exploitation reported; identity, motivation and geographic targeting not established."
+              ],
+              [
+                "OSGeo GeoServer operators",
+                "Unknown. Exploitation reported; identity, motivation and geographic targeting not established."
+              ],
+              [
+                "VMware Directory Service operators",
                 "No confirmed malicious exploitation or attribution."
               ],
               [
-                "In Eclipse Ditto operators",
+                "TOTOLINK N350RT operators",
                 "No confirmed malicious exploitation or attribution."
               ],
               [
-                "WP Media WP Rocket operators",
+                "CVE-2026-133336 operators",
                 "No confirmed malicious exploitation or attribution."
               ]
             ]
           },
           {
             "type": "p",
-            "text": "**MITRE ATT&CK defensive mapping:** T1190 (Exploit Public-Facing Application) may be relevant to exposed Camunda, In Eclipse Ditto and WP Media WP Rocket services. These mappings support defensive detection and do not establish actor attribution."
+            "text": "**MITRE ATT&CK defensive mapping:** T1190 (Exploit Public-Facing Application) may be relevant to exposed Drupal Core, VMware Directory Service, TOTOLINK N350RT and CVE-2026-133336 services. These mappings support defensive detection and do not establish actor attribution."
           }
         ]
       },
@@ -399,22 +716,37 @@
             "rows": [
               [
                 "Emergency",
+                "Drupal Core (CVE-2026-136716) reachable from untrusted networks",
+                "Isolate immediately; investigate and mitigate within 24 hours"
+              ],
+              [
+                "Emergency",
+                "OSGeo GeoServer (CVE-2026-120705) on exposed hosts",
+                "Isolate immediately; investigate and mitigate within 24 hours"
+              ],
+              [
+                "Emergency",
+                "OSGeo GeoServer (CVE-2026-129243) on exposed hosts",
+                "Isolate immediately; investigate and mitigate within 24 hours"
+              ],
+              [
+                "Emergency",
                 "Unremediated confirmed-exploited Danfoss AK-SM 800A Series, Drupal Core, Hewlett Packard Enterprise (HPE) Juniper Session Smart Conductor and Session Smart Router, Idunno AntiCsrf or Mitel MiCollab exposure",
                 "Immediate containment and applicable forensic triage"
               ],
               [
                 "Urgent",
-                "Vulnerable Camunda (CVE-2026-77230)",
+                "Vulnerable VMware Directory Service (CVE-2026-123903)",
                 "Apply applicable vendor fix in 24-72 hours"
               ],
               [
                 "Urgent",
-                "Vulnerable In Eclipse Ditto (CVE-2026-135150)",
+                "Vulnerable TOTOLINK N350RT (CVE-2026-137043)",
                 "Apply applicable vendor fix in 24-72 hours"
               ],
               [
                 "Urgent",
-                "Vulnerable WP Media WP Rocket (CVE-2026-125812)",
+                "Vulnerable CVE-2026-133336 (CVE-2026-133336)",
                 "Apply applicable vendor fix in 24-72 hours"
               ],
               [
@@ -449,12 +781,24 @@
             ],
             "rows": [
               [
+                "Camunda CVE-2026-77230",
+                "No significant new development established since November 26"
+              ],
+              [
+                "In Eclipse Ditto CVE-2026-135150",
+                "No significant new development established since November 26"
+              ],
+              [
+                "WP Media WP Rocket CVE-2026-125812",
+                "No significant new development established since November 26"
+              ],
+              [
                 "Engeniustech Esr600 Firmware CVE-2025-34035",
                 "No significant new development established since November 25"
               ],
               [
                 "Mitel MiCollab CVE-2026-133323",
-                "Exploitation now reported by ENISA EUVD; fixed-version or patch reference added"
+                "No significant new development established since November 25"
               ],
               [
                 "Hewlett Packard Enterprise (HPE) Juniper Session Smart Conductor and Session Smart Router CVE-2026-103406",
@@ -462,31 +806,19 @@
               ],
               [
                 "Danfoss AK-SM 800A Series CVE-2025-41450",
-                "Exploitation now reported by ENISA EUVD; fixed-version or patch reference added"
+                "No significant new development established since November 25"
               ],
               [
                 "Danfoss AK-SM 800A Series CVE-2023-25915",
-                "Exploitation now reported by ENISA EUVD"
+                "No significant new development established since November 25"
               ],
               [
                 "Danfoss AK-SM 800A Series CVE-2023-25914",
-                "Exploitation now reported by ENISA EUVD"
+                "No significant new development established since November 25"
               ],
               [
                 "Crocoblock JetSearch CVE-2025-49931",
                 "No significant new development established since November 25"
-              ],
-              [
-                "JetBooking WordPress plugin CVE-2026-3496",
-                "No significant new development established since November 25"
-              ],
-              [
-                "Mitel MiCollab CVE-2026-133303",
-                "Exploitation now reported by ENISA EUVD; fixed-version or patch reference added"
-              ],
-              [
-                "Mitel MiCollab CVE-2026-133324",
-                "Exploitation now reported by ENISA EUVD; fixed-version or patch reference added"
               ]
             ]
           }
@@ -495,16 +827,28 @@
     ],
     "references": [
       {
-        "label": "CVE-2026-77230 NVD record",
-        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-77230"
+        "label": "CVE-2026-136716 NVD record",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-136716"
       },
       {
-        "label": "CVE-2026-135150 NVD record",
-        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-135150"
+        "label": "CVE-2026-120705 NVD record",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120705"
       },
       {
-        "label": "CVE-2026-125812 NVD record",
-        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-125812"
+        "label": "CVE-2026-129243 NVD record",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-129243"
+      },
+      {
+        "label": "CVE-2026-123903 NVD record",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123903"
+      },
+      {
+        "label": "CVE-2026-137043 NVD record",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-137043"
+      },
+      {
+        "label": "CVE-2026-133336 NVD record",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-133336"
       },
       {
         "label": "CISA KEV catalog",
@@ -515,13 +859,16 @@
         "url": "https://www.first.org/epss/"
       }
     ],
-    "footer": "Enterprise Cyber Threat Intelligence | 26 Nov 2026",
+    "footer": "Enterprise Cyber Threat Intelligence | 27 Nov 2026",
     "reviewedBy": null,
-    "generatedAt": "2026-11-26T19:53:56Z",
+    "generatedAt": "2026-11-27T19:43:23Z",
     "prioritized": [
-      "CVE-2026-77230",
-      "CVE-2026-135150",
-      "CVE-2026-125812"
+      "CVE-2026-136716",
+      "CVE-2026-120705",
+      "CVE-2026-129243",
+      "CVE-2026-123903",
+      "CVE-2026-137043",
+      "CVE-2026-133336"
     ]
   }
 }

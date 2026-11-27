@@ -1,7 +1,7 @@
 {
   "repo": "nmap/nmap",
   "commit": "4568fbc",
-  "indexedAt": "2026-11-26T19:51:53Z",
+  "indexedAt": "2026-11-27T19:41:37Z",
   "count": 55,
   "scripts": {
     "CVE-2010-0533": [
